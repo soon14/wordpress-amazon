@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="../src/themes/lincoln-financial-calc/js/lib/angular.min.js"></script>
+		<script src="../src/themes/lincoln-financial-calc/js/lib/angular-route.min.js"></script>
+		<script src="../src/themes/lincoln-financial-calc/js/financialCalculator.js"></script>
+		<script src="../src/themes/lincoln-financial-calc/js/constant/routeConstants.js"></script>
+		<script src="../src/themes/lincoln-financial-calc/js/config/config.js"></script>
+
+	</head>
+	<body>
+		<div class="subnav-wrap">
+			<div id="subnav">
+				<h1>
+					Payment Estimator
+				</h1>
+			</div>
+		</div>
+		<div id="body">
+			<div id="content" data-ng-view></div>
+		</div>
+		<script type="text/ng-template" id="lfc-model-series-template">
+			<div>
+				<div lfc-user-progress="">
+				</div>
+			</div>
+
+		</script>
+		<script type="text/ng-template" id="lfc-user-progress-template">
+	        <div class="cal-progress">
+	            <div class="step"
+	                ng-repeat="step in appValue.steps"
+	                ng-class="{
+	                    'active': (appValue.currentStep >= $index),
+	                    'step-1':(step.label === 'select'),
+	                    'step-2':(step.label === 'calculate'),
+	                    'step-3':(step.label === 'apply')}">
+	                <span>{{$index + 1}}</span>
+	                <h3 data-ng-show="step.label === 'select'">Select</h3>
+					<h3 data-ng-show="step.label === 'calculate'">Calculate</h3>
+					<h3 data-ng-show="step.label === 'apply'">Apply</h3>
+	            </div>
+	        </div>
+    	</script>
+	</body>
+</html>
