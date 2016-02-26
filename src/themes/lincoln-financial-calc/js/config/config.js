@@ -6,4 +6,4 @@ financialCalculator.config(['$routeProvider','routeConstants',function($routePro
 		}).otherwise({
 			redirectTo:routeConstants.home.path
 		});
-}])
+}]);

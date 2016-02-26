@@ -1,0 +1,14 @@
+financialCalculator.value('appValue',{
+	currentStep:0,
+	steps:[
+	{
+		label:'select'
+	},
+	{
+		label:'calculate'
+	},
+	{
+		label:'apply'
+	}
+	]
+})
