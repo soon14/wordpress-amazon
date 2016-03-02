@@ -1,0 +1,43 @@
+[
+{
+"analyticsCategory" : "cars",
+"analyticsName" : "lincoln mkz",
+"category" : "Urban Activity Vehicles",
+"financialCalculatorImageUrl" : "http:\/\/www.lincoln.com.cn\/servlet\/Satellite?blobtable=DFYImage&blobcol=urlpicture&blobheadervalue1=max-age%253D1000&ssbinary=true&blobheadername1=Cache-Control&blobwhere=1249128740822&blobkey=id",
+"gforceCatalogId" : "2015_CC9_1007_WSPAD_C_DFYP_null",
+"id" : "1248856069281",
+"imageMidResURL" : "",
+"imageURL" : "http:\/\/www.lincoln.com.cn\/servlet\/Satellite?blobtable=DFYImage&blobcol=urlpicture&blobheadervalue1=max-age%253D1000&ssbinary=true&blobheadername1=Cache-Control&blobwhere=1248856390661&blobkey=id",
+"makeCode" : "",
+"makeId" : "1248856069247",
+"makeName" : "Lincoln",
+"message" : "<p>The Lincoln MKZ is designed to indulge your needs and reflect your taste for unique sophistication. With a brilliantly engineered, fully retractable panoramic roof; an interior that provides a multi-sensory experience of comfort and luxury; and human-centric technology throughout that anticipates your needs and provides ultimate control, the MKZ makes every journey more memorable.\r\n<\/p>",
+"modelLine" : "CC9",
+"modelYear" : "2015",
+"name" : "Lincoln MKZ",
+"order" : "1",
+"price" : "315800.0",
+"thumbnailURL" : "http:\/\/www.lincoln.com.cn\/servlet\/Satellite?blobtable=DFYImage&blobcol=urlthumbnail&blobheadervalue1=max-age%253D1000&ssbinary=true&blobheadername1=Cache-Control&blobwhere=1248856390661&blobkey=id"
+}
+,
+{
+"analyticsCategory" : "suvs",
+"analyticsName" : "lincoln mkc",
+"category" : "Urban Activity Vehicles",
+"financialCalculatorImageUrl" : "http:\/\/www.lincoln.com.cn\/servlet\/Satellite?blobtable=DFYImage&blobcol=urlpicture&blobheadervalue1=max-age%253D1000&ssbinary=true&blobheadername1=Cache-Control&blobwhere=1249128740839&blobkey=id",
+"gforceCatalogId" : "2015_TME_1007_WSPAD_C_DFYP_null",
+"id" : "1248856373087",
+"imageMidResURL" : "",
+"imageURL" : "http:\/\/www.lincoln.com.cn\/servlet\/Satellite?blobtable=DFYImage&blobcol=urlpicture&blobheadervalue1=max-age%253D1000&ssbinary=true&blobheadername1=Cache-Control&blobwhere=1248856489846&blobkey=id",
+"makeCode" : "",
+"makeId" : "1248856069247",
+"makeName" : "Lincoln",
+"message" : "<p>The Lincoln MKC was designed from the ground up to be as comfortable as it is adventurous. \r\nIts sculpted, forward-looking exterior is an outward expression of the intuitive, dynamic control you feel inside, no matter where the road takes you. Every interaction with the MKC is both an inspiration and an invitation to experience more.\r\n<\/p>",
+"modelLine" : "TME",
+"modelYear" : "2015",
+"name" : "Lincoln MKC",
+"order" : "2",
+"price" : "339800.0",
+"thumbnailURL" : "http:\/\/www.lincoln.com.cn\/servlet\/Satellite?blobtable=DFYImage&blobcol=urlthumbnail&blobheadervalue1=max-age%253D1000&ssbinary=true&blobheadername1=Cache-Control&blobwhere=1248856489846&blobkey=id"
+}
+]

@@ -8,6 +8,7 @@
 		<script src="../src/themes/lincoln-financial-calc/js/financialCalculator.js"></script>
 		<script src="../src/themes/lincoln-financial-calc/js/constant/routeConstants.js"></script>
 		<script src="../src/themes/lincoln-financial-calc/js/value/appValue.js"></script>
+		<script src="../src/themes/lincoln-financial-calc/js/service/webAPI.js"></script>
 		<script src="../src/themes/lincoln-financial-calc/js/directive/userProgress.js"></script>
 		<script src="../src/themes/lincoln-financial-calc/js/controller/modelSeries.js"></script>
 		<script src="../src/themes/lincoln-financial-calc/js/config/config.js"></script>
@@ -29,6 +30,20 @@
 			<div>
 				<div lfc-user-progress="">
 				</div>
+
+		        <div class="cal-section">
+		        	<div>
+		        		<div ng-repeat="model in appValue.models">
+		        			<div>
+		        				<img ng-src="{{model.financialCalculatorImageUrl}}" />
+		        			</div>
+		        			<div>
+		        				<input type="radio" name="model" id="{{model.id}}"  ng-click="selectModel(model)"/>
+		        			</div>
+		        		</div>
+		        	</div>
+		        </div>
+
 			</div>
 
 		</script>
