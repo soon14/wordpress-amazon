@@ -17,7 +17,10 @@ financialCalculator.factory('webAPI',['$http','$q','appValue',function($http,$q,
 				return services.get('../rest/financialcalc/models.json','models');
 			},
 			getSeries: function(model){
-				return services.get('../rest/financialcalc/series.json','series');
+				return services.get('../rest/financialcalc/derivatives.json','series');
+			},
+			getGMFV: function(model,series) {
+				return services.get('../rest/financialcalc/gmfv.json','gmfv');
 			}
 		};
 

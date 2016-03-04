@@ -11,6 +11,7 @@
 		<script src="../src/themes/lincoln-financial-calc/js/service/webAPI.js"></script>
 		<script src="../src/themes/lincoln-financial-calc/js/directive/userProgress.js"></script>
 		<script src="../src/themes/lincoln-financial-calc/js/controller/modelSeries.js"></script>
+		<script src="../src/themes/lincoln-financial-calc/js/controller/calculator.js"></script>
 		<script src="../src/themes/lincoln-financial-calc/js/config/config.js"></script>
 		<script src="../src/themes/lincoln-financial-calc/js/financialCalculatorBootstrap.js"></script>
 		
@@ -38,10 +39,25 @@
 		        				<img ng-src="{{model.financialCalculatorImageUrl}}" />
 		        			</div>
 		        			<div>
-		        				<input type="radio" name="model" id="{{model.id}}"  ng-click="selectModel(model)"/>
+		        				<input type="radio" name="model" id="{{model.id}}"  ng-click="selectModel(model)" />
 		        			</div>
 		        		</div>
 		        	</div>
+		        </div>
+		        <div class="cal-section">
+		        	<div ng-show="appValue.series !=null && appValue.series.length>0">
+		        		<div ng-repeat="derivative in appValue.series" >
+		        			<div>
+		        				<img ng-src="{{derivative.financialCalculatorImageUrl}}"/>
+		        			</div>
+		        			<div>
+		        				<input type="radio" name="series" id="{{derivative.id}}" ng-click="selectDerivative(derivative)" />
+		        			</div>
+		        		</div>
+		        	</div>
+		        </div>
+		        <div class="cal-section">
+		        	<input type="button" value="Continue" ng-click="gotoCalculatePage()" ng-disabled="continueButtonDisabled"/>
 		        </div>
 
 			</div>
@@ -62,6 +78,29 @@
 					<h3 data-ng-show="step.label === 'apply'">Apply</h3>
 	            </div>
 	        </div>
+    	</script>
+    	<script type="text/ng-template" id="lfc-calculate-template">
+    		<div>
+    			<div lfc-user-progress></div>
+    		</div>
+    		<div class="cal-section">
+    			<a href="#" ng-click="changeModel($event)">Change Model</a>
+    		</div>
+    		<div class="cal-section">
+    			
+    					<a href="#" ng-click="changeState('standard',$event)">Standard option</a>
+    					<br>
+    					<a href="#" ng-click="changeState('rco',$event)">RCO option</a>
+    		</div>
+    		<div class="cal-section">
+    			<p> MSRP   {{vehiclePrice}}</p>
+    			<span> Down Payment</span>
+    			<input type="number" ng-model="appValue.downPayment" ng-change="calculateDownPaymentPercentage()" />
+    			<span> {{appValue.downPaymentPercentage}}%</span>
+    			<p ng-if="isNaN(appValue.downPayment)||appValue.downPayment>vehiclePrice"> invalid downPayment</p>
+    		</div>
+
+
     	</script>
 	</body>
 </html>

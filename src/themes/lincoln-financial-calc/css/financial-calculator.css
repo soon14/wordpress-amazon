@@ -1,7 +1,9 @@
 #content{width:500px;}
+.cal-progress {margin:50px auto;display:block;height:100px;}
 .cal-progress .step{position:relative;float:left;height:30px;width:30px;z-index:2;}
 .cal-progress .step span{background:transparent url("../img/cal-step-bg.png");width:30px;height:30px;display:block;text-align:center;float:right;}
 .cal-progress .step h3{position:absolute;top:35px;right:-10px;}
 .cal-progress .step.active span{background-position:center -70px;}
 .cal-progress .step + .step{background:transparent url("../img/cal-step-line.png");background-repeat: no-repeat;    background-position: center;width:50%;margin-left:-15px;z-index:1;}
 .cal-progress .step.active + .step{background:transparent url("../img/cal-step-line-active.png");background-repeat: no-repeat;    background-position: center;}
+.cal-section {margin:50px auto;display:block;text-align:center;}

@@ -3,6 +3,9 @@ financialCalculator.config(['$routeProvider','routeConstants',function($routePro
 		.when(routeConstants.home.path,{
 			template:routeConstants.home.template,
 			controller:routeConstants.home.controller
+		}).when(routeConstants.calculate.path,{
+			template:routeConstants.calculate.template,
+			controller:routeConstants.calculate.controller
 		}).otherwise({
 			redirectTo:routeConstants.home.path
 		});
