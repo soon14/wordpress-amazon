@@ -7,3 +7,6 @@
 .cal-progress .step + .step{background:transparent url("../img/cal-step-line.png");background-repeat: no-repeat;    background-position: center;width:50%;margin-left:-15px;z-index:1;}
 .cal-progress .step.active + .step{background:transparent url("../img/cal-step-line-active.png");background-repeat: no-repeat;    background-position: center;}
 .cal-section {margin:50px auto;display:block;text-align:center;}
+#slider{height:40px;border:none;}
+#slider  .ui-slider-range{height:40px;background:#4f4c43;height:100%;}
+#slider  .ui-slider-handle{background:url("../img/cal-payment-arrow.png") right; height:40px;top:0;border:none;font:white;}
