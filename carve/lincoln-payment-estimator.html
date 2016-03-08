@@ -112,6 +112,9 @@
     	<script type="text/ng-template" id="lfc-slider-template">
     		<div>
     			<div class="slide-block">
+    				<div class="slide">
+    					<div class="block" data-value="term.term" ng-repeat="term in appValue.gmfv.products[0]['sub-products'][0]['term-rates']" slider-on-finish-render> {{term.term}}</div>
+    				</div>    			
     				<div id="slider"></div>
     			</div>
     		</div>
