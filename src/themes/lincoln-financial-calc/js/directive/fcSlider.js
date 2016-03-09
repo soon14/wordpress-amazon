@@ -3,7 +3,8 @@ financialCalculator.directive('lfcSlider',[function(){
 		template: function() {
 			return $('#lfc-slider-template').html();
 		},
-		link: function(scope) {
+		require:'ngModel',
+		link: function(scope, element, attr, ngModel) {
 			$('#slider').slider({
 				orientation:"horizontal",
 				range:"min",
@@ -13,6 +14,7 @@ financialCalculator.directive('lfcSlider',[function(){
 				value:0,
 				slide: function(event, ui) {
 					if (ui.value>=0) {
+						ngModel.$setViewValue(ui.value);
 						$('.ui-slider-handle', $('#slider')).html(scope.appValue.gmfv.products[0]['sub-products'][0]['term-rates'][ui.value].term);
 
 					}

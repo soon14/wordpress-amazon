@@ -47,6 +47,11 @@ financialCalculator.controller('calculatorController',['$scope','routeConstants'
 		if (!isNaN(appValue.downPayment) && appValue.downPayment<=$scope.vehiclePrice) {
 			appValue.downPaymentPercentage = Math.round((appValue.downPayment/$scope.vehiclePrice)*100);
 		}
+	};
+	$scope.calculateSelectedTerm = function() {
+		appValue.selectedTerm=appValue.gmfv.products[0]['sub-products'][0]['term-rates'][appValue.sliderValue].term;
+		appValue.selectedTermRate = appValue.gmfv.products[0]['sub-products'][0]['term-rates'][appValue.sliderValue].rate;
+		
 	}
 	fetchModelAndSeries();
 	
