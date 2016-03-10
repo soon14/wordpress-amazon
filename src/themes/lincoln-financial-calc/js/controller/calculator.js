@@ -42,16 +42,29 @@ financialCalculator.controller('calculatorController',['$scope','routeConstants'
 	};
 	$scope.changeState = function(stateVal,event) {
 		event.preventDefault();
+		appValue.stateVal=stateVal;
 	};
 	$scope.calculateDownPaymentPercentage = function() {
 		if (!isNaN(appValue.downPayment) && appValue.downPayment<=$scope.vehiclePrice) {
 			appValue.downPaymentPercentage = Math.round((appValue.downPayment/$scope.vehiclePrice)*100);
+			$scope.calculate();
 		}
 	};
 	$scope.calculateSelectedTerm = function() {
 		appValue.selectedTerm=appValue.gmfv.products[0]['sub-products'][0]['term-rates'][appValue.sliderValue].term;
 		appValue.selectedTermRate = appValue.gmfv.products[0]['sub-products'][0]['term-rates'][appValue.sliderValue].rate;
+		$scope.calculate();
 		
+	}
+	$scope.calculate = function() {
+		var amountFinanced = ($scope.vehiclePrice - appValue.downPayment),
+            rc=	appValue.selectedTermRate/1200,
+			rcPlus1ToPowerOfSelectedTerm = Math.pow((1 + rc), appValue.selectedTerm),
+            rcPlus1ToPowerOfSelectedTermMinus1 = Math.pow((1 + rc), (appValue.selectedTerm-1));
+            appValue.totalMonthlyPayment =
+                    amountFinanced *
+                    ((rc * rcPlus1ToPowerOfSelectedTerm) / (rcPlus1ToPowerOfSelectedTerm - 1));
+
 	}
 	fetchModelAndSeries();
 	

@@ -106,12 +106,15 @@
     		<div class="cal-section">
     			<div lfc-slider ng-model="appValue.sliderValue" ng-change="calculateSelectedTerm()"></div> 
     		</div>
+    		<div class="cal-section">
+    			<p> Monthly Payment {{appValue.totalMonthlyPayment}}</p>
+    		</div>
 
 
     	</script>
     	<script type="text/ng-template" id="lfc-slider-template">
     		<div>
-    			<div class="slide-block">
+    			<div class="slide-block" ng-show="appValue.stateVal!='rco'">
     				<div class="slide">
     					<div class="block" data-value="term.term" ng-repeat="term in appValue.gmfv.products[0]['sub-products'][0]['term-rates']" slider-on-finish-render> {{term.term}}</div>
     				</div>    			
