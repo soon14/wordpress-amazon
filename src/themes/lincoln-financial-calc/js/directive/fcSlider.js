@@ -54,4 +54,15 @@ financialCalculator.directive('sliderOnFinishRender',['$timeout',function($timeo
 			}
 		}
 	}
+}]);
+financialCalculator.directive('flagOnRender',['$timeout',function($timeout){
+	return{
+		link: function(scope,element){
+			if(scope.$first ==true) {
+				$timeout(function(){
+					$(element).trigger('click');
+				});
+			}
+		}
+	}
 }])

@@ -120,6 +120,9 @@
     				</div>    			
     				<div id="slider"></div>
     			</div>
+    			<div class="flag-block" ng-if="appValue.stateVal=='rco'">
+    				<div class="block" ng-repeat="term in appValue.gmfv.products[1]['sub-products'][1]['term-rates']" ng-click="setFlagValue($index,$event)" flag-on-render>{{term.term}}</div>
+    			</div>
     		</div>
     	</script>
 	</body>

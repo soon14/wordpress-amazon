@@ -43,6 +43,7 @@ financialCalculator.controller('calculatorController',['$scope','routeConstants'
 	$scope.changeState = function(stateVal,event) {
 		event.preventDefault();
 		appValue.stateVal=stateVal;
+		appValue.downPayment=$scope.vehiclePrice*0.2;
 	};
 	$scope.calculateDownPaymentPercentage = function() {
 		if (!isNaN(appValue.downPayment) && appValue.downPayment<=$scope.vehiclePrice) {
@@ -55,7 +56,14 @@ financialCalculator.controller('calculatorController',['$scope','routeConstants'
 		appValue.selectedTermRate = appValue.gmfv.products[0]['sub-products'][0]['term-rates'][appValue.sliderValue].rate;
 		$scope.calculate();
 		
-	}
+	};
+	$scope.setFlagValue = function(i,e) {
+		$(e.target).parent().children().removeClass('active');
+		$(e.target).addClass('active');
+		appValue.selectedTerm=appValue.gmfv.products[1]['sub-products'][1]['term-rates'][i].term;
+		appValue.selectedTermRate = appValue.gmfv.products[1]['sub-products'][1]['term-rates'][i].rate;
+		$scope.calculate();
+	};
 	$scope.calculate = function() {
 		var amountFinanced = ($scope.vehiclePrice - appValue.downPayment),
             rc=	appValue.selectedTermRate/1200,
@@ -65,7 +73,7 @@ financialCalculator.controller('calculatorController',['$scope','routeConstants'
                     amountFinanced *
                     ((rc * rcPlus1ToPowerOfSelectedTerm) / (rcPlus1ToPowerOfSelectedTerm - 1));
 
-	}
+	};
 	fetchModelAndSeries();
 	
 }]);

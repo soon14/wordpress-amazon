@@ -14,3 +14,7 @@
 .slide-block #slider  .ui-slider-range{height:40px;background:#4f4c43;height:100%;border-radius:0;}
 .slide-block #slider  .ui-slider-handle{background:url("../img/cal-payment-arrow.png") right; height:40px;top:0;margin-left:0;border:none;border-radius:0;color:white;width:11.1%;}
 .slide-block #slider  .ui-slider-handle:focus{outline:none;}
+.flag-block{height:40px;white-space:nowrap;}
+.flag-block .block{display:inline-block;width: 40px;height: 40px;background: black;border-right: 1px solid;color: white;}
+.flag-block .block.active{background:red;}
+.flag-block .block.active:after{width:0;height:0;border-top:20px solid red;border-left:20px solid transparent;border-right:20px solid transparent; content:" ";top:22px;position:relative;display:block;}
