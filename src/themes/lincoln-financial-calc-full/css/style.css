@@ -1,0 +1,77 @@
+header{width:960px;position:relative;margin:10px auto;}
+.logo{position:absolute;top:0;left:0;}
+.logo>a{background:url("../img/lincoln_logo.png") no-repeat;width:150px;height:50px;display:block;}
+ul{list-style:none;margin:0;padding:0;}
+a{text-decoration:none;}
+.eyebrow{text-align:right;}
+.eyebrow>ul>li{display:inline-block;margin:10px;}
+.eyebrow a{font-size:12px;color:gray;}
+.eyebrow input[type="text"]{width:15px;width:50px;border:1px solid gray;}
+.eyebrow input[type="submit"]{text-indent:-999em;width:15px;height:15px;border:none;background:url("../img/search.png") no-repeat;}
+.menu{text-align:right;}
+.menu>ul>li{display:inline-block;margin:10px;font-size:16px;text-align:left;}
+.menu>ul>li>span{background:url("../img/arrow_down.png") no-repeat;}
+.mega-menu{position:absolute;top:100px;left:0;display:none;width:960px;background-color:white;text-align:center;}
+.mega-menu>li{display:inline-block;border:1px solid gray;width:45%;}
+.sub-menu img{width:400px;}
+.menu>ul>li:hover .mega-menu{display:block;}
+.sub-nav{display:none;position:absolute;top:100px;border:1px solid gray;background-color:white;}
+.menu>ul>li:hover .sub-nav{display:block;}
+.menu a{font-size:12px;color:gray;}
+
+main{width:960px;margin:10px auto;overflow:hidden;}
+.subject{width:100%;border-bottom:1px solid gray;height:20px;line-height:20px;}
+.subject p{font-size:16px;}
+.progress{width:600px;margin:10px auto;}
+.progress>.step{text-align:right;width:40%;height:45px;display:inline-block;margin-left:-10px;}
+.progress>.step:first-child{width:45px;}
+.progress>.step>span{width:45px;height:100%;background:url("../img/cal-step-bg.png") no-repeat ;display:inline-block;width:30px;height:30px;}
+.progress>.step.active>span{background:url("../img/cal-step-bg.png") no-repeat 0% 100%;}
+.progress>.step+.step{height:30px;background:url("../img/cal-step-line.png") no-repeat center;}
+.model{width:100%;margin:25px 0;text-align:center;}
+.model>li{display:inline-block;width:45%;}
+.sel-model{width:100%;}
+.sel-model img{width:400px;border:1px solid gray;}
+
+.next-section{width:100%;padding:10px;border-bottom:2px solid black;overflow:hidden;}
+.next-section .continue{float:right;background-color:black;width:150px;height:30px;font-size:16px;font-weight:bold;color:white;display:block;}
+.cal-section{width:100%;padding:20px;overflow:hidden;}
+.cal-section>img{width:100%;border:1px solid black;}
+.cal-section>.price{text-align:center;line-height:50px;width:100%;height:50px;background-color:black;font-size:16px;font-weight:bold;color:white;font-weight:bold;}
+.cal-section>.change-model{width:100%;overflow:hidden;}
+.change-model{padding:10px;overflow:hidden;}
+.change-model>.desc{width:60%;float:left;}
+.change-model>.link{width:35%;float:right;}
+.tabs{border-bottom:1px solid gray;}
+.tabs>li{line-height:35px;display:inline-block;margin-right:1px;width:150px;height:35px;background-color:gray;font-size:16px;}
+.tabs>li.active{background-color:black;color:white;}
+.tabs a{font-size:16px;color:black;text-align:center;}
+.tabs>li.active a{color:white;}
+.calculator{width:60%;float:left;overflow:hidden;}
+.calculator .content{overflow:hidden; margin:10px 0;}
+.calculator .sign{width:20%;height:25px;background-color:black;color:white;float:left;display:inline-block;margin-top:15px;}
+.calculator .amount{width:75%;float:right;background-color:gray;height:25px;display:inline-block;margin-top:15px;}
+#slider{width:75%;float:right;}
+.slider-blocks{width:33.33%;height:40px;float:left;}
+.slider-blocks .block{width:40px;height:100%;border:1px black solid;float:left;box-sizing:border-box;}
+.slider{position:absolute;background:url("../img/cal-payment-arrow.png") no-repeat right;width:40px;float:left;height:40px;}
+#flags{width:75%;float:right;position:relative;height:70px;}
+#flags .block{width:40px;height:40px;display:inline-block;margin-right:5px;background-color:black;float:left;}
+#flags .block.active{background-color:orange;}
+#flags .block.active:after{border-top:20px solid orange;border-left: 20px solid transparent;border-right:20px solid transparent;content:" ";position:relative;top:40px;}
+.summary{width:35%;float:right;}
+.summary .table{border:1px solid black;background-color:gray;padding:5px;overflow:hidden;}
+.table .left-col{width:50%;float:left;}
+.table .right-col{width:45%;float:right;}
+
+.cal-list{width:100%;padding:25px;}
+.cal-list>ul>li{display:inline-block;margin:15px;}
+.cal-list>ul{text-align:center;}
+.cal-list a{background:url("../img/call.png") no-repeat;width:150px;height:150px;display:inline-block;}
+
+footer{width:100%;height:50px;position:absolute;background-color:black;}
+footer>ul{width:960px;margin:10px auto;}
+footer>ul>li{display:inline-block;margin:10px;}
+footer>ul>li:last-child{float:right;}
+footer a{font-size:12px;color:white;display:inline-block;}
+

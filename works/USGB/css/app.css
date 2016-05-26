@@ -1,0 +1,21 @@
+.content{padding: 0 5%;display:block;margin:0 auto;}
+.content ul{margin:0;padding:0;min-height: 40px;line-height: 40px;}
+.content ul li{list-style:none;display:inline-block;text-align:center;}
+.content a{text-decoration:none;}
+.content .search-box{text-align:right;padding:10px 0;position: relative;}
+.content .search-box .text-search{height:40px;width:20%;}
+.content .search-box .btn-search{float: right;position: relative;background: url("../img/search_icon.png") transparent;text-indent: -999em;width: 24px;height: 24px;border: none;top:15px;right:25px;}
+.content .filter-box{padding:10px 0;}
+.content .filter-box>ul>li{min-width:15%;height:60px;line-height:60px;background:#f4f4f3;border:none;margin-right:2px;border-radius: 7px;color:#228B22;font-size:20px;font-weight:bold;} 
+.content .filter-box>ul>li.active{    background: transparent;    border: 2px #228B22 solid;}
+.content article  ul.even{background-color:#f4f4f3;}
+.content article  ul li{height:60px;line-height:60px;font-size:18px;color:#616161;}
+.content article  ul li a{color:#228B22;}
+.content article  header  ul li{color:#000;font-weight:bold;}
+.content article  ul li.c-1{width:7%;}
+.content article  ul li.c-2{width:18%;}
+.content article  ul li.c-3{width:18%;}
+.content article  ul li.c-4{width:18%;}
+.content article  ul li.c-5{width:18%;}
+.content article  ul li.c-6{width:18%;}
+

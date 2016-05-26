@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="../src/themes/lincoln-financial-calc-full/css/style.css" />
+	<script src="../src/themes/lincoln-financial-calc-full/js/lib/angular.min.js" ></script>
+	<script src="../src/themes/lincoln-financial-calc-full/js/lib/angular-route.min.js" ></script>
+	<script src="../src/themes/lincoln-financial-calc-full/js/lib/angular-sanitize.min.js" ></script>
+	<script src="../src/themes/lincoln-financial-calc-full/js/lib/jquery-1.8.3.js" ></script>
+	<script src="../src/themes/lincoln-financial-calc-full/js/lib/jquery.ui.touch-punch.min.js" ></script>
+	<script src="../src/themes/lincoln-financial-calc-full/js/lib/jquery-ui.js" ></script>
+	<script src="../src/themes/lincoln-financial-calc-full/js/financialCalculator.js" ></script>
+
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="#"></a>
+		</div>
+		<ul class="nav">
+			<li class="eyebrow">
+				<ul>
+					<li><a href="#">Sign in/Register</a>
+					</li>
+					<li>
+						<form>
+							<input type="text" />
+							<input type="submit" />
+					</li>
+				</ul>
+			</li>
+			<li class="menu">
+				<ul>
+					<li>Vehicles<span></span>
+						<ul class="mega-menu">
+							<li>
+								<ul class="sub-menu">
+									<li>
+										<img src="../src/themes/lincoln-financial-calc-full/img/mkc.jpg" />
+									</li>
+									<li><a href="#">MKC</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="sub-menu">
+									<li>
+										<img src="../src/themes/lincoln-financial-calc-full/img/mkz.jpg" />
+									</li>
+									<li><a href="#">MKZ</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>Lincoln Story<span></span>
+						<ul class="sub-nav">
+							<li><a href="#">Lincoln Story</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</header>
+	<main role="main">
+		<div id="content" data-ng-view></div>
+
+		<div class="cal-list">
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+		</div>
+	</main>
+	<footer>
+		<ul>
+			<li><a href="#">Contact Us</a></li>
+			<li><a href="#">Privacy</a></li>
+			<li><a href="#">Terms & Conditions</a></li>
+			<li><a href="#">ICP 05031283-2</a></li>
+		</ul>
+	</footer>
+	<script type="text/ng-template" id="lfc-model-series-template">
+
+		<div class="subject">
+			<p>Payment Estimator</p>
+		</div>
+		<ul class="progress">
+			<li class="step"  ng-class={'active':appValue.currentStep===1}><span>1</span></li>
+			<li class="step"  ng-class={'active':appValue.currentStep===2}><span>2</span></li>
+			<li class="step"  ng-class={'active':appValue.currentStep===3}><span>3</span></li>
+		</ul>
+		<div class="subject">
+			<p>Select Model</p>
+		</div>
+		<ul class="model">
+			<li ng-repeat="model in appValue.models">
+				<ul class="sel-model">
+					<li><img ng-src="{{model.financialCalculatorImageUrl}}" />
+					</li>
+					<li><input type="radio" name="modelRadios" ng-click="selectModel(model)"/>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="subject">
+			<p>Select Derivative</p>
+		</div>
+		<ul class="model">
+			<li ng-repeat="derivative in appValue.derivatives">
+				<ul class="sel-model">
+					<li><img ng-src="{{derivative.financialCalculatorImageUrl}}" />
+					</li>
+					<li><input type="radio" name="derivativeRadios" ng-click="selectDerivative(derivative)"/>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="next-section">
+			<span class="continue" ng-click="gotoCalculatePage()">CONTINUE</span>
+		</div>
+		</script>
+		<script type="text/ng-template" id="lfc-calculate-template">
+		<div class="subject">
+			<p>Lincoln-MKC Presidential</p>
+		</div>
+		<div class="cal-section">
+			<img src="../src/themes/lincoln-financial-calc-full/img/mkc-car.jpg" />
+			<div class="price">
+				<span>{{appValue.selectedDerivative.price}}</span>
+			</div>
+			<div class="change-model">
+				<div class="desc">Payment Estimator</div>
+				<div class="link">
+					<a href="#">Change model</a>
+				</div>
+			</div>
+			<ul class="tabs">
+				<li class="active" ng-click="changeProduct(0,$event)"><a href="#">Standard Option</a></li>
+				<li><a href="#" ng-click="changeProduct(1,$event)">Red Carpet Option</a></li>
+			</ul>
+			<div class="calculator">
+				<div class="subject">
+					<p>Vehicle Price(MSRP)</p>
+				</div>
+				<div class="content">
+					<span class="sign">RMB</span>
+					<span class="amount">{{appValue.selectedDerivative.price}}</span>
+				</div>
+				<div class="subject">
+					<p>Monthly Payment</p>
+				</div>
+				<div class="content">
+					<span class="sign">Term (Months)</span>
+					<div id="slider">
+						<div class="slider-blocks">
+							<div class="block">12</div>
+							<div class="block">24</div>
+							<div class="block">36</div>
+						</div>
+					<div class="slider"></div>
+					</div>
+				</div>
+				<div class="content">
+					<span class="sign">Term (Months)</span>
+					<div id="flags">
+						<div class="block active" data-value="12" ng-click="changeFlag($event)">12</div>
+						<div class="block" data-value="24"  ng-click="changeFlag($event)">24</div>
+						<div class="block" data-value="36"  ng-click="changeFlag($event)">36</div>
+					</div>
+				</div>
+			</div>
+			<div class="summary">
+				<div class="subject">
+					<p>Summary</p>
+				</div>
+				<div class="table">
+					<span class="left-col">Vehicle Price(MSRP)</span>
+					<span class="right-col">{{appValue.selectedDerivative.price}}</span>
+					<span class="left-col">Down Payment 20%</span>
+					<span class="right-col">{{appValue.downPayment}}</span>
+					<span class="left-col">Monthly Payment</span>
+					<span class="right-col">{{appValue.monthlyPayment}}</span>
+				</div>
+				<div class="next-section">
+					<span class="continue">Apply for Credit</span>
+				</div>
+			</div>
+		</div>
+		</script>
+</body>
+</html>
+
+
+
+
+
+

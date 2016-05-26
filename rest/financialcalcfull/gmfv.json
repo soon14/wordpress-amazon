@@ -1,0 +1,86 @@
+{
+  "products" : [ {
+    "model" : "MKZ Select",
+    "product-code" : "STANDARD",
+    "sub-products" : [ {
+      "msrp" : 0,
+      "sub-code" : "BASIC",
+      "pcv-code" : "",
+      "term-rates" : [ {
+        "term" : 12,
+        "rate" : 11.89
+      }, {
+        "term" : 18,
+        "rate" : 11.89
+      }, {
+        "term" : 24,
+        "rate" : 11.89
+      }, {
+        "term" : 30,
+        "rate" : 11.89
+      }, {
+        "term" : 36,
+        "rate" : 11.89
+      }, {
+        "term" : 42,
+        "rate" : 11.89
+      }, {
+        "term" : 48,
+        "rate" : 11.89
+      }, {
+        "term" : 54,
+        "rate" : 11.89
+      }, {
+        "term" : 60,
+        "rate" : 11.89
+      } ]
+    } ]
+  }, {
+    "model" : "MKZ Select",
+    "product-code" : "RCO",
+    "sub-products" : [ {
+      "msrp" : 0,
+      "sub-code" : "BASIC",
+      "pcv-code" : "",
+      "term-rates" : [ {
+        "term" : 12,
+        "rate" : 11.89
+      }, {
+        "term" : 18,
+        "rate" : 11.89
+      }, {
+        "term" : 24,
+        "rate" : 11.89
+      }, {
+        "term" : 30,
+        "rate" : 11.89
+      }, {
+        "term" : 36,
+        "rate" : 11.89
+      }, {
+        "term" : 42,
+        "rate" : 11.89
+      }, {
+        "term" : 48,
+        "rate" : 11.89
+      }, {
+        "term" : 54,
+        "rate" : 11.89
+      }, {
+        "term" : 60,
+        "rate" : 11.89
+      } ]
+    }, {
+      "msrp" : 316800,
+      "sub-code" : "GMFV",
+      "pcv-code" : "MKZ201605",
+      "term-rates" : [ {
+        "term" : 24,
+        "rate" : 50
+      }, {
+        "term" : 36,
+        "rate" : 43
+      } ]
+    } ]
+  } ]
+}
