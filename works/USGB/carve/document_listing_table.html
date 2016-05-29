@@ -13,67 +13,43 @@
 					<input type="submit" class="btn-search">
 				</form>
 			</div>
-			<div class="filter-box">
-				<ul>
-					<li class="active">View All</li>
-					<li>Quality</li>
-					<li>Environment</li>
-					<li>Safety</li>
-				</ul>
+			<div id="filter-box">
+				<script id="filter-box-template" type="text/x-jquery-tmpl">
+						<p class="filter-value">${All}</p>
+						<ul class="filter-list">
+							<li class="filter-btn active" data-category="${All}">${All}</li>
+							<li class="filter-btn" data-category="${color}">${color}</li>
+							<li class="filter-btn" data-category="${summer}">${summer}</li>
+						</ul>
+				</script>
 			</div>
 
 			<article>
-				<header>
-					<ul class="even">
-						<li class="c-1">No</li>
-						<li class="c-2">Product Name</li>
-						<li class="c-3">Testing Laboratory</li>
-						<li class="c-4">Test Item</li>
-						<li class="c-5">Acquisition Date</li>
-						<li class="c-6">View File</li>
-					</ul>
+				<header id="list-header">
+					<script id="list-header-template" type="text/x-jquery-tmpl">
+						<ul class="even c-${len}">
+							<li class="c-id">${No}</li>
+							<li >${ProductName}</li>
+							<li >${TestingLaboratory}</li>
+							<li >${TestItem}</li>
+							<li >${AcquisitionDate}</li>
+							<li >${DownloadCopy}</li>
+						</ul>
+					</script>
 				</header>
 				<section id="search-items">
-					<ul class="odd">
-						<li class="c-1">1</li>
-						<li class="c-2">Product Name</li>
-						<li class="c-3">Testing Laboratory</li>
-						<li class="c-4">Test Item</li>
-						<li class="c-5">Acquisition Date</li>
-						<li class="c-6"><a href="#">PDF</a></li>
-					</ul>
-					<ul class="even">
-						<li class="c-1">1</li>
-						<li class="c-2">Product Name</li>
-						<li class="c-3">Testing Laboratory</li>
-						<li class="c-4">Test Item</li>
-						<li class="c-5">Acquisition Date</li>
-						<li class="c-6"><a href="#">PDF</a></li>
-					</ul>
-					<ul class="odd">
-						<li class="c-1">1</li>
-						<li class="c-2">Product Name</li>
-						<li class="c-3">Testing Laboratory</li>
-						<li class="c-4">Test Item</li>
-						<li class="c-5">Acquisition Date</li>
-						<li class="c-6"><a href="#">PDF</a></li>
-					</ul>
-					<ul class="even">
-						<li class="c-1">1</li>
-						<li class="c-2">Product Name</li>
-						<li class="c-3">Testing Laboratory</li>
-						<li class="c-4">Test Item</li>
-						<li class="c-5">Acquisition Date</li>
-						<li class="c-6"><a href="#">PDF</a></li>
-					</ul>
-					<ul class="odd">
-						<li class="c-1">1</li>
-						<li class="c-2">Product Name</li>
-						<li class="c-3">Testing Laboratory</li>
-						<li class="c-4">Test Item</li>
-						<li class="c-5">Acquisition Date</li>
-						<li class="c-6"><a href="#">PDF</a></li>
-					</ul>
+					<script id="search-template" type="text/x-jquery-tmpl">						
+						{{if !filter}}
+							<ul class="${rowclass}">
+								<li class="c-id">${ID}</li>
+								<li>${ProductName}</li>
+								<li>${TestingLaboratory}</li>
+								<li>${TestItem}</li>
+								<li>${AcquisitionDate}</li>
+								<li><a href="${Path}">${DownloadCopy}</a></li>
+							</ul>
+						{{/if}}
+					</script>
 				</section>
 				<div class="pagination">
 				</div>
