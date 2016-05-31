@@ -41,16 +41,26 @@ Dependencies: jQuery
 					filterData(docListTable.resp,keywords,category);
 					docListTable.renderFilterTempalte(true, docListTable.resp);
 					docListTable.renderSearchListTemplate(true, docListTable.resp);
-					docListTable.setSliderBtn();
+					$(".error-msg", this.templateWrap).hide();
+					$(".search-box",this.templateWrap).show();
+					$("#filter-box",this.templateWrap).show();
 				},
 				function(url,e,extStatus){
 					docListTable.resp={};
+					$(".error-msg", this.templateWrap).show();
+					$(".search-box",this.templateWrap).hide();
+					$("#filter-box",this.templateWrap).hide();
 				});
 			}
 			else {
 				filterData(docListTable.resp,keywords,category);
 				docListTable.renderSearchListTemplate(true, docListTable.resp);
-				docListTable.setSliderBtn();
+				setTimeout(function(){
+					docListTable.setSliderBtn();
+					$(window).on('resize',function(){
+						docListTable.setSliderBtn();
+					});
+				},100);
 			}
 			
 			function filterData(data,keywords,category) {
@@ -106,6 +116,7 @@ Dependencies: jQuery
 					if(data&&data.Items&&data.Items.length >0 ) {
 						onSuccess(data);
 					} else {
+						onError();
 
 					}
 				},
@@ -116,13 +127,14 @@ Dependencies: jQuery
 		},
 		renderFilterTempalte:function(success, data, e) {
 			if(success) {
-				$("#filter-box ul",this.templateWrap).remove();
+				$("#filter-group li",this.templateWrap).remove();
 				$("#list-header ul",this.templateWrap).remove();
 				// $("#list-header-template").tmpl(data.Subject).appendTo("#list-header",this.templateWrap);
 				$("#list-header",this.templateWrap).loadTemplate("#list-header-template",data.Subject);
 				if(data.ShowFilters) {
 					// $("#filter-box-template").tmpl(data.Categories).appendTo("#filter-box",this.templateWrap);				
-					$("#filter-box",this.templateWrap).loadTemplate("#filter-box-template",data.Categories);
+					// $("#filter-box",this.templateWrap).loadTemplate("#filter-box-template",data.Categories);
+					$("#filter-group",this.templateWrap).loadTemplate("#filter-group-template",data.Categories);
 					var filterButton = $("#filter-box .filter-list .filter-btn", docListTable.templateWrap);
 					$("#filter-box .filter-value",docListTable.templateWrap).on('click',function(e){
 						e.preventDefault();
@@ -139,6 +151,15 @@ Dependencies: jQuery
 						docListTable.runSearch(searchText,category);
 
 					});
+					var btnAll = filterButton[0];
+					$.each(filterButton,function(index,btn){
+						if ($(btn).data('category').toLowerCase==='all') {
+							btnAll=btn;
+							return;
+						}
+					});
+					btnAll.click();
+					$("#filter-group",this.templateWrap).removeClass('expand');
 				}
 				
 			}
@@ -166,51 +187,64 @@ Dependencies: jQuery
 						listcontent = $("article ul", this.templateWrap),
 						leftbtn=$("#filter-box .page-slide .slide-left",this.tempalteWrap),
 						rightbtn=$("#filter-box .page-slide .slide-right",this.tempalteWrap),
-						attval=listhead.css('width').replace('px',''),
-						w=0;
-					$.each($("article #list-header>ul>li",this.templateWrap),function(index,l){
-						w+=Number($(l).css('width').replace('px',''));
+						attval=listhead.width(),
+						w=0,
+						listswrap=$("article", this.templateWrap),
+						wival=listswrap.width();
+					listcontent.css('left',0);
+					$.each($("article #list-header>ul>li",this.templateWrap),function(index,lis){
+						w+=$(lis).width();
 					});
-					if (w>Number($("article #list-header>ul",this.templateWrap).css('width').replace('px',''))) {
-						
-
+					if (w>$("article #list-header>ul",this.templateWrap).width()) {
 						$.each($("article ul", this.templateWrap),function(index,u){
-							$(u).css("width",Number(w)+'px');
+							$(u).width(w);
 						});
 					}
-
-					
-
-						if(Number(listhead.css('left').replace('px',''))*-1>Number(attval)) {
-									rightbtn.addClass('disable');
-						}
-						else{
-									rightbtn.removeClass('disable');
-						}
-						if(Number(listhead.css('left').replace('px',''))>=0) {
-									leftbtn.addClass('disable');
-						}
-						else{
-									leftbtn.removeClass('disable');
-						}
+					attval=listhead.width();
+					resetBtn(listhead,attval,wival,rightbtn,leftbtn);
 
 					$("#filter-box .page-slide>div", this.templateWrap).on('click',function(e){
-						var posval=listhead.css('left').replace('px','');
-						e.preventDefault();
-						if($(e.target).hasClass('slide-right')) {
-							if(Number(posval)*-1<=Number(attval)){
-								listcontent.css("left",(Number(posval)-Number(attval)*0.25)+'px');
-
+						slides(e);
+					});
+					function slides(event) {
+						var lhead=$("article #list-header>ul",this.templateWrap),
+							lcontent = $("article ul", this.templateWrap),
+							lbtn=$("#filter-box .page-slide .slide-left",this.tempalteWrap),
+							rbtn=$("#filter-box .page-slide .slide-right",this.tempalteWrap),
+							aval=lhead.width(),
+							listwrap=$("article", this.templateWrap),
+							wval=listwrap.width();
+						if ($(event.target).hasClass('disable')) return;
+						var posval=lhead.css('left').replace('px','');
+						event.preventDefault();
+						event.stopPropagation()
+						if($(event.target).hasClass('slide-right')) {
+							if(Number(posval)*-1<=Number(aval)){
+								if(Number(aval)*0.25>(aval-wval+Number(posval))){
+									lcontent.css("left",(wval-aval)+'px');
+								}	
+								else{
+									lcontent.css("left",(Number(posval)-Number(aval)*0.25)+'px');
+								}	
 							}
 							
 						}
-						else if($(e.target).hasClass('slide-left')&&Number(posval)<0) {
-							listcontent.css("left",(Number(posval)+Number(attval)*0.25)+'px');
+						else if($(event.target).hasClass('slide-left')&&Number(posval)<0) {
+							if(Number(posval)*-1<Number(aval)*0.25) {
+								lcontent.css("left",0);
+							}
+							else {
+								lcontent.css("left",(Number(posval)+Number(aval)*0.25)+'px');
+							}
+							
 						}
+						resetBtn(lhead,aval,wval,rbtn,lbtn);
 
 
-						if(Number(listhead.css('left').replace('px',''))*-1>Number(attval)) {
-									rightbtn.addClass('disable');
+					};
+					function resetBtn(listhead,attval,wival,rightbtn,leftbtn){
+						if(Number(listhead.css('left').replace('px',''))*-1>=attval-wival) {
+								rightbtn.addClass('disable');
 						}
 						else{
 									rightbtn.removeClass('disable');
@@ -221,8 +255,7 @@ Dependencies: jQuery
 						else{
 									leftbtn.removeClass('disable');
 						}
-
-					});
+					}
 		}
 	};
 	$(function(){

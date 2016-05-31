@@ -14,22 +14,24 @@
 				</form>
 			</div>
 			<div id="filter-box">
-				<script id="filter-box-template" type="text/x-jquery-tmpl">
-						<div class="filter-value"><p data-content="All"></p></div>
-						<ul class="filter-list">
-							<li class="filter-btn active" data-category="All" data-content="All"></li>
-							<li class="filter-btn" data-category="Safty" data-content="Safty"></li>
-							<li class="filter-btn" data-category="Quality" data-content="Quality"></li>
-							<li class="filter-btn" data-category="Environment" data-content="Environment"></li>
-						</ul>
-						<div class="page-slide">
-							<div class="slide-left"><</div>
-							<div class="slide-right">></div>
-						</div>
-				</script>
+				<div class="filter-value"><p></p></div>
+				<ul class="filter-list" id="filter-group">
+				</ul>
+				<div class="page-slide">
+					<div class="slide-left"><</div>
+					<div class="slide-right">></div>
+				</div>
 			</div>
+			<script id="filter-group-template" type="text/x-query-tmpl">
+			
+				<li class="filter-btn" data-template-bind='[{"attribute": "content", "value":"label"},{"attribute": "data-category", "value":"value"}]'></li>
+
+			</script>
 
 			<article>
+				<div class="error-msg">
+					<p>Please check your connection</p>
+				</div>
 				<header id="list-header">
 					<script id="list-header-template" type="text/x-jquery-tmpl">
 						<ul data-template-bind='{"attribute":"class","value":"rowclass"}'>

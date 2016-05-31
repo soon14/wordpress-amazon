@@ -14,14 +14,15 @@ body{overflow-x:hidden;}
 .content #filter-box .page-slide{text-align:right;cursor:pointer;}
 .content #filter-box .page-slide>div{display:inline-block;display: inline-block;    width: 25px;    height: 25px;line-height:25px;    background: #228B22;color:#FFF;    text-align: center;}
 .content #filter-box .page-slide>div.disable{background:#f4f4f3;}
-.content #filter-box>ul>li{min-width:15%;height:40px;line-height:40px;background:#FFF;border:none;margin-right:2px;border-radius: 7px;color:#228B22;font-size:18px;font-weight:bold;display:block;text-align: left;    padding: 0 20px;} 
+.content #filter-box>ul>li{min-width:15%;height:40px;line-height:40px;background:#FFF;border:none;margin-right:2px;border-radius: 7px;color:#228B22;font-size:18px;font-weight:bold;display:block;text-align: left;    padding: 0 20px; box-sizing: border-box;} 
 .content #filter-box>ul>li:hover{cursor:pointer;background:transparent;border:2px #228B22 solid;}
 .content #filter-box>ul>li.active{ display:none; }
 .content article  {overflow-x:hidden;}
+.content article  .error-msg{text-align:center;font-size:18px;display:none;}
 .content article  #search-items{min-height:240px;}
 .content article  ul{position:relative;left:0;}
 .content article  ul.even{background-color:#f4f4f3;}
-.content article  ul li{height:40px;line-height:40px;font-size:14px;color:#616161;min-width:150px;text-align:left;}
+.content article  ul li{height:50px;line-height:25px;font-size:14px;color:#616161;min-width:150px;text-align:left;vertical-align: middle;}
 .content article  ul li a{color:#228B22;}
 .content article  ul.c-1 li{width:90%;}
 .content article  ul.c-2 li{width:45%;}
@@ -50,6 +51,5 @@ body{overflow-x:hidden;}
 .content #filter-box .page-slide{display:none;}
 .content #filter-box>ul>li{display:inline-block;background:#f4f4f3;text-align:center;}
 .content #filter-box>ul>li.active{  background: transparent;    border: 2px #228B22 solid;display:inline-block;}
-.content article  ul li{height:50px;line-height:50px;}
 
 }

@@ -1,1 +1,47 @@
-{"ShowFilters":true,"Pagination":2,"Categories":{"All":"All","Safty":"Safty Title","Quality":"Quality Title","Environment":"Environment Title"},"Subject":{"No":"No","ProductName":"Product Name","TestingLaboratory":"Testing Laboratory ","TestItem":"Test Item","AcquisitionDate":"Acquisition Date ","DownloadCopy":"View File"},"Items":[{"ProductName":"BR-12FEW-F","TestingLaboratory":"건축물의 비내력벽","TestItem":"석고보드제품(울산)","AcquisitionDate":"2015.05.11 ~ 2017.05.10","DownloadCopy":"PDF","Path":"/content/dam/usgboral/DocmentTable/내화_BR-12FEW-F.pdf","Category":"Safty"},{"ProductName":"내력용 스틸스","TestingLaboratory":"내력용 스틸스터드 구조벽(외벽)","TestItem":"내력용 스틸스터드 구조벽(외벽)","AcquisitionDate":"2016.09.08","DownloadCopy":"PDF","Path":"/content/dam/usgboral/DocmentTable/내화_BR-19DB-FEH-F.pdf","Category":"Quality"},{"ProductName":"BR-12W-FM","TestingLaboratory":"건축물의 비내력벽","TestItem":"건축물의 비내력벽","AcquisitionDate":"2016.09.08","DownloadCopy":"PDF","Path":"/content/dam/usgboral/DocmentTable/safty/내화_BR-12FEW-FM.pdf","Category":"Environment"}]}
+{
+  "ShowFilters": true,
+  "Pagination": 2,
+  "Categories": [
+                {"value":"All","label":"All"},
+                {"value":"Safty","label":"Safty Title"},
+                {"value":"Quality","label":"Quality Title"},
+                {"value":"Environment","label":"Environment Title"}
+              ],
+  "Subject": {
+    "No": "No",
+    "ProductName": "Product Name",
+    "TestingLaboratory": "Testing Laboratory ",
+    "TestItem": "Test Item",
+    "AcquisitionDate": "Acquisition Date ",
+    "DownloadCopy": "View File"
+  },
+  "Items": [
+    {
+      "ProductName": "BR-12FEW-F",
+      "TestingLaboratory": "건축물의 비내력벽",
+      "TestItem": "석고보드제품(울산)",
+      "AcquisitionDate": "2015.05.11 ~ 2017.05.10",
+      "DownloadCopy": "PDF",
+      "Path": "/content/dam/usgboral/DocmentTable/내화_BR-12FEW-F.pdf",
+      "Category": "Safty"
+    },
+    {
+      "ProductName": "내력용 스틸스",
+      "TestingLaboratory": "내력용 스틸스터드 구조벽(외벽)",
+      "TestItem": "내력용 스틸스터드 구조벽(외벽)",
+      "AcquisitionDate": "2016.09.08",
+      "DownloadCopy": "PDF",
+      "Path": "/content/dam/usgboral/DocmentTable/내화_BR-19DB-FEH-F.pdf",
+      "Category": "Quality"
+    },
+    {
+      "ProductName": "BR-12W-FM",
+      "TestingLaboratory": "건축물의 비내력벽",
+      "TestItem": "건축물의 비내력벽",
+      "AcquisitionDate": "2016.09.08",
+      "DownloadCopy": "PDF",
+      "Path": "/content/dam/usgboral/DocmentTable/safty/내화_BR-12FEW-FM.pdf",
+      "Category": "Environment"
+    }
+  ]
+}
