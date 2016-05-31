@@ -1,5 +1,3 @@
-//Ford chooses to use jQuery tmpl and its associated components under the MIT License.
-(function(a){var r=a.fn.domManip,d="_tmplitem",q=/^[^<]*(<[\w\W]+>)[^>]*$|\{\{\! /,b={},f={},e,p={key:0,data:{}},h=0,c=0,l=[];function g(e,d,g,i){var c={data:i||(d?d.data:{}),_wrap:d?d._wrap:null,tmpl:null,parent:d||null,nodes:[],calls:u,nest:w,wrap:x,html:v,update:t};e&&a.extend(c,e,{nodes:[],parent:d});if(g){c.tmpl=g;c._ctnt=c._ctnt||c.tmpl(a,c);c.key=++h;(l.length?f:b)[h]=c}return c}a.each({appendTo:"append",prependTo:"prepend",insertBefore:"before",insertAfter:"after",replaceAll:"replaceWith"},function(f,d){a.fn[f]=function(n){var g=[],i=a(n),k,h,m,l,j=this.length===1&&this[0].parentNode;e=b||{};if(j&&j.nodeType===11&&j.childNodes.length===1&&i.length===1){i[d](this[0]);g=this}else{for(h=0,m=i.length;h<m;h++){c=h;k=(h>0?this.clone(true):this).get();a.fn[d].apply(a(i[h]),k);g=g.concat(k)}c=0;g=this.pushStack(g,f,i.selector)}l=e;e=null;a.tmpl.complete(l);return g}});a.fn.extend({tmpl:function(d,c,b){return a.tmpl(this[0],d,c,b)},tmplItem:function(){return a.tmplItem(this[0])},template:function(b){return a.template(b,this[0])},domManip:function(d,l,j){if(d[0]&&d[0].nodeType){var f=a.makeArray(arguments),g=d.length,i=0,h;while(i<g&&!(h=a.data(d[i++],"tmplItem")));if(g>1)f[0]=[a.makeArray(d)];if(h&&c)f[2]=function(b){a.tmpl.afterManip(this,b,j)};r.apply(this,f)}else r.apply(this,arguments);c=0;!e&&a.tmpl.complete(b);return this}});a.extend({tmpl:function(d,h,e,c){var j,k=!c;if(k){c=p;d=a.template[d]||a.template(null,d);f={}}else if(!d){d=c.tmpl;b[c.key]=c;c.nodes=[];c.wrapped&&n(c,c.wrapped);return a(i(c,null,c.tmpl(a,c)))}if(!d)return[];if(typeof h==="function")h=h.call(c||{});e&&e.wrapped&&n(e,e.wrapped);j=a.isArray(h)?a.map(h,function(a){return a?g(e,c,d,a):null}):[g(e,c,d,h)];return k?a(i(c,null,j)):j},tmplItem:function(b){var c;if(b instanceof a)b=b[0];while(b&&b.nodeType===1&&!(c=a.data(b,"tmplItem"))&&(b=b.parentNode));return c||p},template:function(c,b){if(b){if(typeof b==="string")b=o(b);else if(b instanceof a)b=b[0]||{};if(b.nodeType)b=a.data(b,"tmpl")||a.data(b,"tmpl",o(b.innerHTML));return typeof c==="string"?(a.template[c]=b):b}return c?typeof c!=="string"?a.template(null,c):a.template[c]||a.template(null,q.test(c)?c:a(c)):null},encode:function(a){return(""+a).split("<").join("&lt;").split(">").join("&gt;").split('"').join("&#34;").split("'").join("&#39;")}});a.extend(a.tmpl,{tag:{tmpl:{_default:{$2:"null"},open:"if($notnull_1){_=_.concat($item.nest($1,$2));}"},wrap:{_default:{$2:"null"},open:"$item.calls(_,$1,$2);_=[];",close:"call=$item.calls();_=call._.concat($item.wrap(call,_));"},each:{_default:{$2:"$index, $value"},open:"if($notnull_1){$.each($1a,function($2){with(this){",close:"}});}"},"if":{open:"if(($notnull_1) && $1a){",close:"}"},"else":{_default:{$1:"true"},open:"}else if(($notnull_1) && $1a){"},html:{open:"if($notnull_1){_.push($1a);}"},"=":{_default:{$1:"$data"},open:"if($notnull_1){_.push($.encode($1a));}"},"!":{open:""}},complete:function(){b={}},afterManip:function(f,b,d){var e=b.nodeType===11?a.makeArray(b.childNodes):b.nodeType===1?[b]:[];d.call(f,b);m(e);c++}});function i(e,g,f){var b,c=f?a.map(f,function(a){return typeof a==="string"?e.key?a.replace(/(<\w+)(?=[\s>])(?![^>]*_tmplitem)([^>]*)/g,"$1 "+d+'="'+e.key+'" $2'):a:i(a,e,a._ctnt)}):e;if(g)return c;c=c.join("");c.replace(/^\s*([^<\s][^<]*)?(<[\w\W]+>)([^>]*[^>\s])?\s*$/,function(f,c,e,d){b=a(e).get();m(b);if(c)b=j(c).concat(b);if(d)b=b.concat(j(d))});return b?b:j(c)}function j(c){var b=document.createElement("div");b.innerHTML=c;return a.makeArray(b.childNodes)}function o(b){return new Function("jQuery","$item","var $=jQuery,call,_=[],$data=$item.data;with($data){_.push('"+a.trim(b).replace(/([\\'])/g,"\\$1").replace(/[\r\t\n]/g," ").replace(/\$\{([^\}]*)\}/g,"{{= $1}}").replace(/\{\{(\/?)(\w+|.)(?:\(((?:[^\}]|\}(?!\}))*?)?\))?(?:\s+(.*?)?)?(\(((?:[^\}]|\}(?!\}))*?)\))?\s*\}\}/g,function(m,l,j,d,b,c,e){var i=a.tmpl.tag[j],h,f,g;h=i._default||[];if(c&&!/\w$/.test(b)){b+=c;c=""}if(b){b=k(b);e=e?","+k(e)+")":c?")":"";f=c?b.indexOf(".")>-1?b+c:"("+b+").call($item"+e:b;g=c?f:"(typeof("+b+")==='function'?("+b+").call($item):("+b+"))"}else g=f=h.$1||"null";d=k(d);return"');"+i[l?"close":"open"].split("$notnull_1").join(b?"typeof("+b+")!=='undefined' && ("+b+")!=null":"true").split("$1a").join(g).split("$1").join(f).split("$2").join(d?d.replace(/\s*([^\(]+)\s*(\((.*?)\))?/g,function(d,c,b,a){a=a?","+a+")":b?")":"";return a?"("+c+").call($item"+a:d}):h.$2||"")+"_.push('"})+"');}return _;")}function n(c,b){c._wrap=i(c,true,a.isArray(b)?b:[q.test(b)?b:a(b).html()]).join("")}function k(a){return a?a.replace(/\\'/g,"'").replace(/\\\\/g,"\\"):null}function s(b){var a=document.createElement("div");a.appendChild(b.cloneNode(true));return a.innerHTML}function m(o){var n="_"+c,k,j,l={},e,p,i;for(e=0,p=o.length;e<p;e++){if((k=o[e]).nodeType!==1)continue;j=k.getElementsByTagName("*");for(i=j.length-1;i>=0;i--)m(j[i]);m(k)}function m(j){var p,i=j,k,e,m;if(m=j.getAttribute(d)){while(i.parentNode&&(i=i.parentNode).nodeType===1&&!(p=i.getAttribute(d)));if(p!==m){i=i.parentNode?i.nodeType===11?0:i.getAttribute(d)||0:0;if(!(e=b[m])){e=f[m];e=g(e,b[i]||f[i],null,true);e.key=++h;b[h]=e}c&&o(m)}j.removeAttribute(d)}else if(c&&(e=a.data(j,"tmplItem"))){o(e.key);b[e.key]=e;i=a.data(j.parentNode,"tmplItem");i=i?i.key:0}if(e){k=e;while(k&&k.key!=i){k.nodes.push(j);k=k.parent}delete e._ctnt;delete e._wrap;a.data(j,"tmplItem",e)}function o(a){a=a+n;e=l[a]=l[a]||g(e,b[e.parent.key+n]||e.parent,null,true)}}}function u(a,d,c,b){if(!a)return l.pop();l.push({_:a,tmpl:d,item:this,data:c,options:b})}function w(d,c,b){return a.tmpl(a.template(d),c,b,this)}function x(b,d){var c=b.options||{};c.wrapped=d;return a.tmpl(a.template(b.tmpl),b.data,c,b.item)}function v(d,c){var b=this._wrap;return a.map(a(a.isArray(b)?b.join(""):b).filter(d||"*"),function(a){return c?a.innerText||a.textContent:a.outerHTML||s(a)})}function t(){var b=this.nodes;a.tmpl(null,null,null,this).insertBefore(b[0]);a(b).remove()}})(jQuery);
 /*
 Author: Joel Wang
 Description:
@@ -10,6 +8,8 @@ Dependencies: jQuery
 		init: function(){
 			if(!$(".content").length) return;
 			this.templateWrap = $(".content");
+			// this.restServices = $("#rest-services").embeddedData();
+			this.restServices = location.origin+restfulurl;
 			this.filteredItems=[];
 			this.resp={};
 			this.searchData();
@@ -28,11 +28,12 @@ Dependencies: jQuery
 		formSubmit: function(){
 			var searchContainer = $(".search-box"),
 				searchText = $(".text-search", searchContainer).val(),
-				serachCategory = docListTable.resp.showFilters?$("#filter-box .filter-list .filter-btn.active", docListTable.templateWrap).data('category'):'All';
+				serachCategory = docListTable.resp.ShowFilters?$("#filter-box .filter-list .filter-btn.active", docListTable.templateWrap).data('category'):'All';
 			docListTable.runSearch(searchText,serachCategory);
 		},
 		runSearch:function(keywords,category){
-			var restURL = "json/test.json";
+			// var restURL = this.restServices["url"];
+			var restURL = this.restServices;
 			if($.isEmptyObject(docListTable.resp)){
 				docListTable.fetchData(restURL,
 				function(data){
@@ -40,6 +41,7 @@ Dependencies: jQuery
 					filterData(docListTable.resp,keywords,category);
 					docListTable.renderFilterTempalte(true, docListTable.resp);
 					docListTable.renderSearchListTemplate(true, docListTable.resp);
+					docListTable.setSliderBtn();
 				},
 				function(url,e,extStatus){
 					docListTable.resp={};
@@ -48,36 +50,51 @@ Dependencies: jQuery
 			else {
 				filterData(docListTable.resp,keywords,category);
 				docListTable.renderSearchListTemplate(true, docListTable.resp);
+				docListTable.setSliderBtn();
 			}
 			
 			function filterData(data,keywords,category) {
-				var id=0;
-				docListTable.filteredItems=[];
-				$.each(data.items,function(index, item){
-					docListTable.filteredItems.push({filter:true,len:0});
-					if(item.Category.toLowerCase()===category.toLowerCase()||category.toLowerCase()==='all'){
+				var id=0,
+					i=0,
+					filteredItems=[];
+				$.each(data.Items,function(index, item){
+					filteredItems.push({filter:true,len:0});
+					if(!item.Category||item.Category.toLowerCase()===category.toLowerCase()||category.toLowerCase()==='all'){
 						$.each(item,function(j,node){
 							data.Subject.len=0;
 							$.each(data.Subject,function(k,subject){
+								if(!item[k]) item[k]="";
 								if(k.toLowerCase()!=='no'&&k.toLowerCase()!=='len') {
 									data.Subject.len++;
 									if(j.toLowerCase()===k.toLowerCase()){
-										docListTable.filteredItems[index][j]=node;
-										if(k.toLowerCase()==='downloadcopy') {docListTable.filteredItems[index].Path=item.Path;}
-										docListTable.filteredItems[index].len++;
-										if (typeof(keywords)==="undefined"||keywords.trim()===''||typeof(node)==='string'&&node.toLowerCase().indexOf(keywords.toLowerCase())>-1) docListTable.filteredItems[index].filter=false;
+										filteredItems[index][j]=node;
+										if(k.toLowerCase()==='downloadcopy') {filteredItems[index].Path=item.Path;}
+										if(k.toLowerCase()!=='rowclass') {
+											filteredItems[index].len++;
+										}
+										if (typeof(keywords)==="undefined"||keywords.trim()===''||typeof(node)==='string'&&node.toLowerCase().indexOf(keywords.toLowerCase())>-1) filteredItems[index].filter=false;
 									}
 								}
 								
 							});
+							data.Subject.rowclass="even c-"+ (data.Subject.len-1);
 						});
 					}
 					
-					if(!docListTable.filteredItems[index].filter) {
-						docListTable.filteredItems[index].ID = ++id;
-						docListTable.filteredItems[index].rowclass = id%2===0?"even c-" + docListTable.filteredItems[index].len:"odd c-" + docListTable.filteredItems[index].len;
+					if(!filteredItems[index].filter) {
+						filteredItems[index].ID = ++id;
+						filteredItems[index].rowclass = id%2===0?"even c-" + filteredItems[index].len:"odd c-" + filteredItems[index].len;
 					}
 				});
+				if (filteredItems.length>0) {
+					docListTable.filteredItems=[];
+					$.each(filteredItems,function(index,item){
+						if(!item.filter) {
+							docListTable.filteredItems[i]=item;
+							i++;
+						}
+					});
+				}
 			}
 		},
 		fetchData: function(url,onSuccess, onError){
@@ -86,7 +103,7 @@ Dependencies: jQuery
 				async:true,
 				dataType:"json",
 				success:function(data){
-					if(data&&data.items&&data.items.length >0 ) {
+					if(data&&data.Items&&data.Items.length >0 ) {
 						onSuccess(data);
 					} else {
 
@@ -101,9 +118,11 @@ Dependencies: jQuery
 			if(success) {
 				$("#filter-box ul",this.templateWrap).remove();
 				$("#list-header ul",this.templateWrap).remove();
-				$("#list-header-template").tmpl(data.Subject).appendTo("#list-header",this.templateWrap);
-				if(data.showFilters) {
-					$("#filter-box-template").tmpl(data.Categories).appendTo("#filter-box",this.templateWrap);				
+				// $("#list-header-template").tmpl(data.Subject).appendTo("#list-header",this.templateWrap);
+				$("#list-header",this.templateWrap).loadTemplate("#list-header-template",data.Subject);
+				if(data.ShowFilters) {
+					// $("#filter-box-template").tmpl(data.Categories).appendTo("#filter-box",this.templateWrap);				
+					$("#filter-box",this.templateWrap).loadTemplate("#filter-box-template",data.Categories);
 					var filterButton = $("#filter-box .filter-list .filter-btn", docListTable.templateWrap);
 					$("#filter-box .filter-value",docListTable.templateWrap).on('click',function(e){
 						e.preventDefault();
@@ -114,7 +133,7 @@ Dependencies: jQuery
 						searchText = $(".search-box .text-search",this.templateWrap).val();
 						$("#filter-box .filter-list", docListTable.templateWrap).toggleClass('expand');
 						e.preventDefault();
-						$("#filter-box .filter-value",docListTable.templateWrap).html(category);
+						$("#filter-box .filter-value p",docListTable.templateWrap).html(category);
 						filterButton.removeClass('active');
 						$(e.target).addClass('active');
 						docListTable.runSearch(searchText,category);
@@ -127,10 +146,11 @@ Dependencies: jQuery
 		renderSearchListTemplate: function(success, data, e) {
 			if(success) {
 				$("#search-items ul",this.templateWrap).remove();			
-				$("#search-template").tmpl(docListTable.filteredItems).appendTo("#search-items",this.templateWrap);
-				if(data.pagination&&data.pagination>0) {
+				// $("#search-template").tmpl(docListTable.filteredItems).appendTo("#search-items",this.templateWrap);
+				$("#search-items",this.templateWrap).loadTemplate("#search-template",docListTable.filteredItems);
+				if(data.Pagination&&data.Pagination>0) {
 					$("div.pagination").pagination({
-					 	 perPage:data.pagination,
+					 	 perPage:data.Pagination,
 					 	 callback : function(pages, items) {
 					 	 	$(".pagination .pag-previous", this.templateWrap).html("<");
 					 	 	$(".pagination .pag-next", this.templateWrap).html(">");
@@ -138,12 +158,71 @@ Dependencies: jQuery
 	                    }
 					});	
 				};
-				
-
-			
-
 			}
 
+		},
+		setSliderBtn: function(){
+					var listhead=$("article #list-header>ul",this.templateWrap),
+						listcontent = $("article ul", this.templateWrap),
+						leftbtn=$("#filter-box .page-slide .slide-left",this.tempalteWrap),
+						rightbtn=$("#filter-box .page-slide .slide-right",this.tempalteWrap),
+						attval=listhead.css('width').replace('px',''),
+						w=0;
+					$.each($("article #list-header>ul>li",this.templateWrap),function(index,l){
+						w+=Number($(l).css('width').replace('px',''));
+					});
+					if (w>Number($("article #list-header>ul",this.templateWrap).css('width').replace('px',''))) {
+						
+
+						$.each($("article ul", this.templateWrap),function(index,u){
+							$(u).css("width",Number(w)+'px');
+						});
+					}
+
+					
+
+						if(Number(listhead.css('left').replace('px',''))*-1>Number(attval)) {
+									rightbtn.addClass('disable');
+						}
+						else{
+									rightbtn.removeClass('disable');
+						}
+						if(Number(listhead.css('left').replace('px',''))>=0) {
+									leftbtn.addClass('disable');
+						}
+						else{
+									leftbtn.removeClass('disable');
+						}
+
+					$("#filter-box .page-slide>div", this.templateWrap).on('click',function(e){
+						var posval=listhead.css('left').replace('px','');
+						e.preventDefault();
+						if($(e.target).hasClass('slide-right')) {
+							if(Number(posval)*-1<=Number(attval)){
+								listcontent.css("left",(Number(posval)-Number(attval)*0.25)+'px');
+
+							}
+							
+						}
+						else if($(e.target).hasClass('slide-left')&&Number(posval)<0) {
+							listcontent.css("left",(Number(posval)+Number(attval)*0.25)+'px');
+						}
+
+
+						if(Number(listhead.css('left').replace('px',''))*-1>Number(attval)) {
+									rightbtn.addClass('disable');
+						}
+						else{
+									rightbtn.removeClass('disable');
+						}
+						if(Number(listhead.css('left').replace('px',''))>=0) {
+									leftbtn.addClass('disable');
+						}
+						else{
+									leftbtn.removeClass('disable');
+						}
+
+					});
 		}
 	};
 	$(function(){
@@ -151,6 +230,24 @@ Dependencies: jQuery
 	});
 
 })(jQuery);
+
+(function($){
+	$.fn.embeddedData = function(prop){
+		var xJson = this.data('x-json');
+		
+		if( !xJson && this.attr('type') === 'text/x-json' ) {
+			xJson = $.parseJSON( this.html() );
+			this.data( 'x-json', xJson );
+		}	
+		
+		if( prop ) {
+			return xJson[prop] || null;
+		} else {
+			return xJson || {};
+		}
+	};
+})(jQuery);
+
 
 (function($, window, document, undefined) {
 
@@ -585,3 +682,528 @@ Dependencies: jQuery
   	};
 
 })(jQuery, window, document);
+
+(function ($) {
+    "use strict";
+    var templates = {},
+        queue = {},
+        formatters = {};
+
+    function loadTemplate(template, data, options) {
+        var $that = this,
+            $template,
+            isFile,
+            settings;
+
+        data = data || {};
+
+        settings = $.extend(true, {
+            // These are the defaults.
+            async: true,
+            overwriteCache: false,
+            complete: null,
+            success: null,
+            error: function () {
+                $(this).each(function () {
+                    $(this).html(settings.errorMessage);
+                });
+            },
+            errorMessage: "There was an error loading the template.",
+            paged: false,
+            pageNo: 1,
+            elemPerPage: 10,
+            append: false,
+            prepend: false,
+            beforeInsert: null,
+            afterInsert: null,
+            bindingOptions: {
+                ignoreUndefined: false,
+                ignoreNull: false,
+                ignoreEmptyString: false
+            }
+        }, options);
+
+        if ($.type(data) === "array") {
+            return processArray.call(this, template, data, settings);
+        }
+
+        if (!containsSlashes(template)) {
+            $template = $(template);
+            if (typeof template === 'string' && template.indexOf('#') === 0) {
+                settings.isFile = false;
+            }
+        }
+
+        isFile = settings.isFile || (typeof settings.isFile === "undefined" && (typeof $template === "undefined" || $template.length === 0));
+
+        if (isFile && !settings.overwriteCache && templates[template]) {
+            prepareTemplateFromCache(template, $that, data, settings);
+        } else if (isFile && !settings.overwriteCache && templates.hasOwnProperty(template)) {
+            addToQueue(template, $that, data, settings);
+        } else if (isFile) {
+            loadAndPrepareTemplate(template, $that, data, settings);
+        } else {
+            loadTemplateFromDocument($template, $that, data, settings);
+        }
+        return this;
+    }
+
+    function addTemplateFormatter(key, formatter) {
+        if (formatter) {
+            formatters[key] = formatter;
+        } else {
+            formatters = $.extend(formatters, key);
+        }
+    }
+
+    function containsSlashes(str) {
+        return typeof str === "string" && str.indexOf("/") > -1;
+    }
+
+    function processArray(template, data, settings) {
+        settings = settings || {};
+        var $that = this,
+            todo = data.length,
+            doPrepend = settings.prepend && !settings.append,
+            done = 0,
+            success = 0,
+            errored = false,
+            newOptions;
+
+        if (settings.paged) {
+            var startNo = (settings.pageNo - 1) * settings.elemPerPage;
+            data = data.slice(startNo, startNo + settings.elemPerPage);
+            todo = data.length;
+        }
+
+        newOptions = $.extend(
+            {},
+            settings,
+            {
+                complete: function () {
+                    if (this.html) {
+                        if (doPrepend) {
+                            $that.prepend(this.html());
+                        } else {
+                            $that.append(this.html());
+                        }
+                    }
+                    done++;
+                    if (done === todo || errored) {
+                        if (errored && settings && typeof settings.error === "function") {
+                            settings.error.call($that);
+                        }
+                        if (settings && typeof settings.complete === "function") {
+                            settings.complete();
+                        }
+                    }
+                },
+                success: function () {
+                    success++;
+                    if (success === todo) {
+                        if (settings && typeof settings.success === "function") {
+                            settings.success();
+                        }
+                    }
+                },
+                error: function () {
+                    errored = true;
+                }
+            }
+        );
+
+        if (!settings.append && !settings.prepend) {
+            $that.html("");
+        }
+
+        if (doPrepend) data.reverse();
+        $(data).each(function () {
+            var $div = $("<div/>");
+            loadTemplate.call($div, template, this, newOptions);
+            if (errored) {
+                return false;
+            }
+        });
+
+        return this;
+    }
+
+    function addToQueue(template, selection, data, settings) {
+        if (queue[template]) {
+            queue[template].push({ data: data, selection: selection, settings: settings });
+        } else {
+            queue[template] = [{ data: data, selection: selection, settings: settings}];
+        }
+    }
+
+    function prepareTemplateFromCache(template, selection, data, settings) {
+        var $templateContainer = templates[template].clone();
+
+        prepareTemplate.call(selection, $templateContainer, data, settings);
+        if (typeof settings.success === "function") {
+            settings.success();
+        }
+    }
+
+    function uniqueId() {
+        return new Date().getTime();
+    }
+
+    function urlAvoidCache(url) {
+        if (url.indexOf('?') !== -1) {
+            return url + "&_=" + uniqueId();
+        }
+        else {
+            return url + "?_=" + uniqueId();
+        }
+    }
+
+    function loadAndPrepareTemplate(template, selection, data, settings) {
+        var $templateContainer = $("<div/>");
+
+        templates[template] = null;
+        var templateUrl = template;
+        if (settings.overwriteCache) {
+            templateUrl = urlAvoidCache(templateUrl);
+        }
+        $.ajax({
+            url: templateUrl,
+            async: settings.async,
+            success: function (templateContent) {
+                $templateContainer.html(templateContent);
+                handleTemplateLoadingSuccess($templateContainer, template, selection, data, settings);
+            },
+            error: function () {
+                handleTemplateLoadingError(template, selection, data, settings);
+            }
+        });
+    }
+
+    function loadTemplateFromDocument($template, selection, data, settings) {
+        var $templateContainer = $("<div/>");
+
+        if ($template.is("script") || $template.is("template")) {
+            $template = $.parseHTML($.trim($template.html()));
+        }
+
+        $templateContainer.html($template);
+        prepareTemplate.call(selection, $templateContainer, data, settings);
+
+        if (typeof settings.success === "function") {
+            settings.success();
+        }
+    }
+
+    function prepareTemplate(template, data, settings) {
+        bindData(template, data, settings);
+
+        $(this).each(function () {
+            var $templateHtml = $(template.html());
+            if (settings.beforeInsert) {
+                settings.beforeInsert($templateHtml);
+            }
+            if (settings.append) {
+
+                $(this).append($templateHtml);
+            } else if (settings.prepend) {
+                $(this).prepend($templateHtml);
+            } else {
+                $(this).html($templateHtml);
+            }
+            if (settings.afterInsert) {
+                settings.afterInsert($templateHtml);
+            }
+        });
+
+        if (typeof settings.complete === "function") {
+            settings.complete.call($(this));
+        }
+    }
+
+    function handleTemplateLoadingError(template, selection, data, settings) {
+        var value;
+
+        if (typeof settings.error === "function") {
+            settings.error.call(selection);
+        }
+
+        $(queue[template]).each(function (key, value) {
+            if (typeof value.settings.error === "function") {
+                value.settings.error.call(value.selection);
+            }
+        });
+
+        if (typeof settings.complete === "function") {
+            settings.complete.call(selection);
+        }
+
+        while (queue[template] && (value = queue[template].shift())) {
+            if (typeof value.settings.complete === "function") {
+                value.settings.complete.call(value.selection);
+            }
+        }
+
+        if (typeof queue[template] !== 'undefined' && queue[template].length > 0) {
+            queue[template] = [];
+        }
+    }
+
+    function handleTemplateLoadingSuccess($templateContainer, template, selection, data, settings) {
+        var value;
+
+        templates[template] = $templateContainer.clone();
+        prepareTemplate.call(selection, $templateContainer, data, settings);
+
+        if (typeof settings.success === "function") {
+            settings.success.call(selection);
+        }
+
+        while (queue[template] && (value = queue[template].shift())) {
+            prepareTemplate.call(value.selection, templates[template].clone(), value.data, value.settings);
+            if (typeof value.settings.success === "function") {
+                value.settings.success.call(value.selection);
+            }
+        }
+    }
+
+    function bindData(template, data, settings) {
+        data = data || {};
+
+        processElements("data-content", template, data, settings, function ($elem, value) {
+            $elem.html(applyFormatters($elem, value, "content", settings));
+        });
+
+        processElements("data-content-append", template, data, settings, function ($elem, value) {
+            $elem.append(applyFormatters($elem, value, "content", settings));
+        });
+
+        processElements("data-content-prepend", template, data, settings, function ($elem, value) {
+            $elem.prepend(applyFormatters($elem, value, "content", settings));
+        });
+
+        processElements("data-content-text", template, data, settings, function ($elem, value) {
+            $elem.text(applyFormatters($elem, value, "content", settings));
+        });
+
+        processElements("data-src", template, data, settings, function ($elem, value) {
+            $elem.attr("src", applyFormatters($elem, value, "src", settings));
+        }, function ($elem) {
+            $elem.remove();
+        });
+        
+        processElements("data-href", template, data, settings, function ($elem, value) {
+            $elem.attr("href", applyFormatters($elem, value, "href", settings));
+        }, function ($elem) {
+            $elem.remove();
+        });
+
+        processElements("data-alt", template, data, settings, function ($elem, value) {
+            $elem.attr("alt", applyFormatters($elem, value, "alt", settings));
+        });
+
+        processElements("data-id", template, data, settings, function ($elem, value) {
+            $elem.attr("id", applyFormatters($elem, value, "id", settings));
+        });
+
+        processElements("data-value", template, data, settings, function ($elem, value) {
+            $elem.attr("value", applyFormatters($elem, value, "value", settings));
+        });
+
+        processElements("data-link", template, data, settings, function ($elem, value) {
+            var $linkElem = $("<a/>");
+            $linkElem.attr("href", applyFormatters($elem, value, "link", settings));
+            $linkElem.html($elem.html());
+            $elem.html($linkElem);
+        });
+
+        processElements("data-link-wrap", template, data, settings, function ($elem, value) {
+            var $linkElem = $("<a/>");
+            $linkElem.attr("href", applyFormatters($elem, value, "link-wrap", settings));
+            $elem.wrap($linkElem);
+        });
+
+        processElements("data-options", template, data, settings, function ($elem, value) {
+            $(value).each(function () {
+                var $option = $("<option/>");
+                $option.attr('value', this).text(this).appendTo($elem);
+            });
+        });
+
+        processAllElements(template, data, settings);
+    }
+
+    function processElements(attribute, template, data, settings, dataBindFunction, noDataFunction) {
+        $("[" + attribute + "]", template).each(function () {
+            var $this = $(this),
+                param = $this.attr(attribute),
+                value = getValue(data, param);
+
+            if (!valueIsAllowedByBindingOptions($this, value, settings)) {
+                $this.remove();
+                return;
+            }
+
+            $this.removeAttr(attribute);
+
+            if (typeof value !== 'undefined' && dataBindFunction) {
+                dataBindFunction($this, value);
+            } else if (noDataFunction) {
+                noDataFunction($this);
+            }
+        });
+        return;
+    }
+
+    function valueIsAllowedByBindingOptions(bindingOptionsContainer, value, settings) {
+
+        var bindingOptions = getBindingOptions(bindingOptionsContainer, settings);
+
+        if (bindingOptions.ignoreUndefined && typeof value === "undefined") {
+            return false;
+
+        } else if (bindingOptions.ignoreNull && value === null) {
+            return false;
+
+        } else if (bindingOptions.ignoreEmptyString && value === "") {
+            return false;
+
+        } else {
+            return true;
+        }
+    }
+
+    function getBindingOptions(bindingOptionsContainer, settings) {
+
+        var bindingOptions = {};
+
+        // binding options passed as template attribute, i.e. 'data-binding-options'
+        if (bindingOptionsContainer instanceof jQuery && bindingOptionsContainer.attr("data-binding-options")) {
+
+            bindingOptions = $.parseJSON(bindingOptionsContainer.attr("data-binding-options"));
+            bindingOptionsContainer.removeAttr("data-binding-options");
+
+            // binding options defined in a "data-template-bind" attribute
+        } else if (typeof bindingOptionsContainer === "object" && bindingOptionsContainer.hasOwnProperty('bindingOptions')) {
+            bindingOptions = bindingOptionsContainer.bindingOptions;
+        }
+
+        // extend general bindingOptions with specific settings
+        return $.extend({}, settings.bindingOptions, bindingOptions);
+    }
+
+    function processAllElements(template, data, settings) {
+        $("[data-template-bind]", template).each(function () {
+            var $this = $(this),
+                param = $.parseJSON($this.attr("data-template-bind"));
+
+            $this.removeAttr("data-template-bind");
+
+            $(param).each(function () {
+                var value;
+
+                if (typeof (this.value) === 'object') {
+                    value = getValue(data, this.value.data);
+                } else {
+                    value = getValue(data, this.value);
+                }
+                if (this.attribute) {
+
+                    if (!valueIsAllowedByBindingOptions(this, value, settings)) {
+                        $this.remove();
+                        return;
+                    }
+
+                    switch (this.attribute) {
+                        case "content":
+                            $this.html(applyDataBindFormatters($this, value, this));
+                            break;
+                        case "contentAppend":
+                            $this.append(applyDataBindFormatters($this, value, this));
+                            break;
+                        case "contentPrepend":
+                            $this.prepend(applyDataBindFormatters($this, value, this));
+                            break;
+                        case "contentText":
+                            $this.text(applyDataBindFormatters($this, value, this));
+                            break;
+                        case "options":
+                            var optionsData = this;
+                            $(value).each(function () {
+                                var $option = $("<option/>");
+                                $option
+                                    .attr('value', this[optionsData.value.value])
+                                    .text(applyDataBindFormatters($this, this[optionsData.value.content], optionsData))
+                                    .attr('selected', typeof this[optionsData.value.selected] == undefined ? false : this[optionsData.value.selected])
+                                    .appendTo($this);
+                            });
+                            break;
+                        default:
+                            $this.attr(this.attribute, applyDataBindFormatters($this, value, this));
+                    }
+                }
+            });
+        });
+    }
+
+    function applyDataBindFormatters($elem, value, data, settings) {
+        if (data.formatter && formatters[data.formatter]) {
+            return (function (formatterSettings) {
+                return formatters[data.formatter].call($elem, value, data.formatOptions, formatterSettings);
+            })(settings);
+        }
+        return value;
+    }
+
+    function getValue(data, param) {
+        if (param === "this") {
+            return data;
+        }
+        var paramParts = param.split('.'),
+            part,
+            value = data;
+
+        while ((part = paramParts.shift()) && typeof value !== "undefined" && value != null) {
+            value = value[part];
+        }
+
+        return value;
+    }
+
+    function applyFormatters($elem, value, attr, settings) {
+        var formatterTarget = $elem.attr("data-format-target"),
+            formatter;
+
+        if (formatterTarget === attr || (!formatterTarget && attr === "content")) {
+            formatter = $elem.attr("data-format");
+            if (formatter && typeof formatters[formatter] === "function") {
+                var formatOptions = $elem.attr("data-format-options");
+                return (function (formatterSettings) {
+                    return formatters[formatter].call($elem[0], value, formatOptions, $.extend({}, formatterSettings));
+                })(settings);
+            }
+        }
+
+        return value;
+    }
+    addTemplateFormatter("nestedTemplateFormatter", function (value, options, internalSettings) {
+        if (!options) {
+            return;
+        }
+
+        if (typeof options === "string" && options[0] === "{") {
+            options = $.parseJSON(options);
+        }
+
+        var parentElement = options.parentElement || "div";
+        var template = options.template || options;
+        
+        //If a parent is specified, return it; otherwise only return the generated children.
+        if(options.parentElement)
+            return $("<" + parentElement + "/>").loadTemplate(template, value, internalSettings);
+        else
+            return $("<" + parentElement + "/>").loadTemplate(template, value, internalSettings).children();
+    });
+    $.fn.loadTemplate = loadTemplate;
+    $.addTemplateFormatter = addTemplateFormatter;
+
+})(jQuery);

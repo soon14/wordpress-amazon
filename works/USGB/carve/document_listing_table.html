@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+		<script src="../js/jquery.js"></script>
 		<script src="../js/t6.js"></script>
 		<link rel="stylesheet" href="../css/app.css" />
 	</head>
@@ -15,46 +15,59 @@
 			</div>
 			<div id="filter-box">
 				<script id="filter-box-template" type="text/x-jquery-tmpl">
-						<p class="filter-value">${All}</p>
+						<div class="filter-value"><p data-content="All"></p></div>
 						<ul class="filter-list">
-							<li class="filter-btn active" data-category="${All}">${All}</li>
-							<li class="filter-btn" data-category="${color}">${color}</li>
-							<li class="filter-btn" data-category="${summer}">${summer}</li>
+							<li class="filter-btn active" data-category="All" data-content="All"></li>
+							<li class="filter-btn" data-category="Safty" data-content="Safty"></li>
+							<li class="filter-btn" data-category="Quality" data-content="Quality"></li>
+							<li class="filter-btn" data-category="Environment" data-content="Environment"></li>
 						</ul>
+						<div class="page-slide">
+							<div class="slide-left"><</div>
+							<div class="slide-right">></div>
+						</div>
 				</script>
 			</div>
 
 			<article>
 				<header id="list-header">
 					<script id="list-header-template" type="text/x-jquery-tmpl">
-						<ul class="even c-${len}">
-							<li class="c-id">${No}</li>
-							<li >${ProductName}</li>
-							<li >${TestingLaboratory}</li>
-							<li >${TestItem}</li>
-							<li >${AcquisitionDate}</li>
-							<li >${DownloadCopy}</li>
+						<ul data-template-bind='{"attribute":"class","value":"rowclass"}'>
+							<li class="c-id" data-content="No"></li>
+							<li data-content="ProductName"></li>
+							<li data-content="TestingLaboratory"></li>
+							<li data-content="TestItem"></li>
+							<li data-content="AcquisitionDate"></li>
+							<li data-content="DownloadCopy"></li>
 						</ul>
 					</script>
 				</header>
 				<section id="search-items">
-					<script id="search-template" type="text/x-jquery-tmpl">						
-						{{if !filter}}
-							<ul class="${rowclass}">
-								<li class="c-id">${ID}</li>
-								<li>${ProductName}</li>
-								<li>${TestingLaboratory}</li>
-								<li>${TestItem}</li>
-								<li>${AcquisitionDate}</li>
-								<li><a href="${Path}">${DownloadCopy}</a></li>
-							</ul>
-						{{/if}}
-					</script>
+					
 				</section>
+				<script id="search-template" type="text/x-jquery-tmpl">	
+							<ul data-template-bind='{"attribute":"class","value":"rowclass"}'>
+								<li class="c-id" data-content="ID"></li>
+								<li data-content="ProductName"></li>
+								<li data-content="TestingLaboratory"></li>
+								<li data-content="TestItem"></li>
+								<li data-content="AcquisitionDate"></li>
+								<li ><a data-content="DownloadCopy" data-href="Path"></a></li>
+							</ul>
+						
+				</script>
 				<div class="pagination">
 				</div>
 
 			</article>
+			<script type="text/javascript">
+			 	var restfulurl="/wordpress-amazon/works/USGB/carve/json/test.json";
+			</script>
+			<script id="rest-services" type="text/x-json">
+			{
+				"url": "/wordpress-amazon/works/USGB/carve/json/test.json"
+			}
+			</script>
 		</div>
 	</body>
 </html>
