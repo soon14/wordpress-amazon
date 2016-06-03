@@ -131,6 +131,9 @@ Dependencies: jQuery
 				$("#list-header ul",this.templateWrap).remove();
 				// $("#list-header-template").tmpl(data.Subject).appendTo("#list-header",this.templateWrap);
 				$("#list-header",this.templateWrap).loadTemplate("#list-header-template",data.Subject);
+				$.each($("#list-header ul li", this.templateWrap),function(index,l){
+					if($(l).html()=='') $(l).remove();
+				});
 				if(data.ShowFilters) {
 					// $("#filter-box-template").tmpl(data.Categories).appendTo("#filter-box",this.templateWrap);				
 					// $("#filter-box",this.templateWrap).loadTemplate("#filter-box-template",data.Categories);
@@ -169,6 +172,9 @@ Dependencies: jQuery
 				$("#search-items ul",this.templateWrap).remove();			
 				// $("#search-template").tmpl(docListTable.filteredItems).appendTo("#search-items",this.templateWrap);
 				$("#search-items",this.templateWrap).loadTemplate("#search-template",docListTable.filteredItems);
+				$.each($("#search-items ul li", this.templateWrap),function(index,l){
+					if($(l).html()=='') $(l).remove();
+				});
 				if(data.Pagination&&data.Pagination>0) {
 					$("div.pagination").pagination({
 					 	 perPage:data.Pagination,
@@ -203,7 +209,7 @@ Dependencies: jQuery
 					attval=listhead.width();
 					resetBtn(listhead,attval,wival,rightbtn,leftbtn);
 
-					$("#filter-box .page-slide>div", this.templateWrap).on('click',function(e){
+					$("#filter-box .page-slide>div", this.templateWrap).unbind('click').on('click',function(e){
 						slides(e);
 					});
 					function slides(event) {

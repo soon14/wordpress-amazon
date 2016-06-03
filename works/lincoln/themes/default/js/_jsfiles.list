@@ -1,0 +1,37 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# These files are concatenated in this order into live/dev.debug.js and then minified into live/prod.min.js
+#	- dev.debug.js is for Developer Debugging 
+#	- prod.min.js is for Production
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+## Preface (You should edit project name in this file)
+intro.js
+
+#### Files in correct order that reside in /themes/default/js/lib
+#### PLEASE NOTE: jquery is not included here, it is sourced by default from the CDN.
+#### PLEASE NOTE: modernizr is not included here, it has to be referenced in the <head> as a seperate file.
+
+## Fix console.log errors (this is excellent)
+lib/logging.js
+
+##  Optional Library includes
+# lib/swfobject.min.js
+# lib/jquery.swfobject.min.js
+# lib/basepath.js
+# lib/jquery.scrollorama.js
+# lib/jquery.nicescroll.min.js
+lib/jquery.overscroll.js
+
+#### Project files in correct order that reside in /themes/default/js (this come after lib's)
+
+# eg-module.js
+# eg-other-module.js
+# eg-that-module.js
+# eg-this-module.js
+# ProgressiveImageSequence.class.js
+ND.vignettePlayer.js
+ND.browserCheck.js
+ND.fillScreen.js
+ND.expandFromCenter.js
+# ND.macIconDock.js
+global.js

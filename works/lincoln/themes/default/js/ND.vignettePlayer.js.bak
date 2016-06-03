@@ -1,0 +1,446 @@
+var ND = (function(ND, $) {
+	
+	ND.vignettePlayer = function () {
+		var element;
+		return {
+
+			init: function( elem, options ) { 
+				element = $(elem || "#vignetteWrapper");
+				if( !element || !element.size() ) { return this; }
+				var defaults = {
+					imgCount:			209,
+					videoCount:			9,
+					currentVideo:		0,
+					videoImgWidth:		1440,
+					videoImgHeight:		758,
+					windowMinHeight:	484,
+					shortcutMinHeight:	50,
+					skipMinHeight:		56,
+					speed:				1,
+					statementHeightRatio:2.24,
+					statementTextWidth:		650,
+					statementTextHeight:	500,
+					videoContainer:		'.vignette',
+					videos:				'.vignette > img',
+					statements:			'.statements',
+					bracket:			'.bracket',
+					openStatement:		'.open-statement',
+					closeStatement:		'.close-statement',
+					// bodycopy:			'.bodycopy',
+					shortcut:			'.shortcut',
+					mailto:				'.mail',
+					loading:			'#loading',
+					loadingBar:			'.loading-bar DIV',
+					path:				'media/vignettes/{currentVideo}/',
+					openStatementPath: 	'open-statement.png',
+					closeStatementPath: 'close-statement.png',
+					// bodycopyPath: 		'bodycopy.png',
+					vignettePath:		'preview{index}.jpg'
+				};
+				var o =  $.extend(defaults,options);
+				var $win = $(window),
+					windowHeight, windowWidth,
+					scrollHeight, fullHeight, videoWidth,
+					statementWidth, statementRatioLH = o.statementTextWidth / o.statementTextHeight,
+					currentPosition = -1/5000, targetPosition = 0,
+					currentSrc, currentVideo = o.currentVideo,
+					transferstart = false, transfering = false, transferend = true, transferStartPosition;
+				
+				var $videoContainer = $(o.videoContainer),
+					$videos = $(o.videos, element);
+				var video = $videos[0], videoNext;
+				
+				var statements = $(o.statements,element);
+				var openStatement= $(o.openStatement,statements),
+					openStatementText = $("IMG",openStatement ),
+					closeStatement = $(o.closeStatement,statements),
+					closeStatementText = $("IMG",closeStatement),
+					// bodycopy = $(o.bodycopy,element),
+					// bodycopyText = $("IMG",bodycopy),
+					mailto = $(o.mailto, element);
+				var bracket = $(o.bracket,statements);
+				var bracketHeight = bracket.height(),
+					bracketWidth = bracket.width();
+
+					
+				var loading = $(o.loading),
+					loadingBar = loading.find(o.loadingBar);
+					
+				var shortcut = $(o.shortcut,element),
+					skip = shortcut.prev();
+				var shortcutWidth = shortcut.width(), shortcutHeight = shortcut.height(),
+					skipHeight = skip.height(), skipWidth = skip.width(),
+					skipOuterHeight = skip.outerHeight(true),
+					skipMarginsVertical = skipOuterHeight - skipHeight,
+					shortcutRatioWH = shortcutWidth / shortcutHeight * ( o.videoCount - 1 ),
+					skipRatioWH = skipWidth / skipHeight;
+					
+					
+				var myCanvas = document.getElementById("myCanvas");
+				
+				var ctx = myCanvas.getContext("2d"); 
+				var myImg = new Image();
+				var myImgNext = new Image();
+					
+				
+				function calculateDimensions() {
+					windowWidth = $win.width();
+					windowHeight = $win.height();
+					$("body").width( windowWidth ).height( windowHeight );
+					var fullHeight = windowHeight + o.imgCount*10;
+					scrollHeight = fullHeight - windowHeight;
+					element.height( fullHeight );
+					
+					//Resize video
+					var scale = Math.max( windowHeight/o.videoImgHeight , windowWidth/o.videoImgWidth );
+					var videoHeight = scale * o.videoImgHeight;
+					videoWidth = scale * o.videoImgWidth;
+					$videoContainer
+							 .width(videoWidth).height(videoHeight)
+							 .css('left',(windowWidth-videoWidth)/2+'px')
+							 .css('top',(windowHeight-videoHeight)/2+'px');
+					myCanvas.width = videoWidth;
+					myCanvas.height = videoHeight;
+					ctx.fillRect(0,0,myCanvas.width,myCanvas.height);
+
+					
+					
+					//Resize the navigation
+					var skipNewHeight = windowHeight < o.windowMinHeight ? o.skipMinHeight :  windowHeight / ( skipOuterHeight + shortcutHeight ) * skipOuterHeight - skipMarginsVertical;
+					var shortcutNewHeight = windowHeight - skipNewHeight - skipMarginsVertical;
+					var showShortcutCount = Math.min( Math.floor( shortcutNewHeight / o.shortcutMinHeight ), o.videoCount - 1);
+					var shortcutNewHeightEach = shortcutNewHeight / showShortcutCount;
+					var shortcutNewWidth = shortcutRatioWH * shortcutNewHeightEach ;
+					skip.css({
+						height: skipNewHeight,
+						width: skipRatioWH * skipNewHeight
+					});
+					shortcut.find("A").animate({
+						width: shortcutNewWidth,
+						height: shortcutNewHeightEach
+					});
+					shortcut.parent().width( shortcutNewWidth );
+					
+					//Resize the bracket elements
+					bracket.height( windowHeight );
+					bracket.width( Math.ceil( bracketWidth / bracketHeight * windowHeight ));
+					
+					statementWidth = windowWidth - shortcutNewWidth;
+					statementTextHeight = windowHeight / ( windowHeight < o.windowMinHeight ? 1 : o.statementHeightRatio);
+					statementTextWidth =  statementRatioLH * statementTextHeight;
+					statementOffsetHorizental = (statementWidth - statementTextWidth)/2; 
+					statementOffsetVertical = (windowHeight - statementTextHeight)/2;
+					openStatementText.css({
+						width:	statementTextWidth,
+						height:	statementTextHeight,
+						left:	statementOffsetHorizental,
+						top:	statementOffsetVertical
+					});
+					closeStatementText.css({
+						width:	statementTextWidth,
+						height:	statementTextHeight,
+						right:	statementOffsetHorizental,
+						top:	statementOffsetVertical
+					});
+					
+					//Resize the loading bar
+					
+					//Resize the mailto logo
+				}
+				
+				function handleResize() {
+					calculateDimensions();
+					$win.scrollTop( targetPosition * scrollHeight );
+					animloop();
+				}
+				
+				function handleScroll() {
+					targetPosition = $win.scrollTop() / scrollHeight;
+					
+					$videos.hide();
+					
+					animloop();
+				}
+				
+				window.requestAnimFrame = (function(){
+				  return  window.requestAnimationFrame       ||
+						  window.webkitRequestAnimationFrame ||
+						  window.mozRequestAnimationFrame    ||
+						  window.oRequestAnimationFrame      ||
+						  window.msRequestAnimationFrame     ||
+						  function(/* function */ callback, /* DOMElement */ element){
+							window.setTimeout(callback, 1000 / 60);
+						  };
+				})();
+
+
+				function animloop(){
+					if ( Math.round(currentPosition*5000) != Math.floor(targetPosition*5000) ) {
+						currentPosition += (targetPosition - currentPosition) / 5;
+						render( currentPosition );
+						requestAnimFrame(animloop);
+					}
+					//Goto the prev vignette
+					if ( Math.floor(currentPosition*5000) == 0 && Math.floor(targetPosition*5000) == 0 ) {
+						gotoVideo( currentVideo - 1 );
+					}
+				}
+
+				var loadCounterForIE = 0;
+				// for( var i =0 ; i < o.videoCount; i++ ){
+					// imageSeqLoader[i] = new ProgressiveImageSequence( getPath( o.vignettePath, i ), o.imgCount , {
+						// indexSize: 3,
+						// initialStep: 16,
+						// onProgress: handleLoadProgress,
+						// onComplete: handleLoadComplete,
+						// stopAt: 1
+					// } );
+					// imageSeqLoader[i].loadPosition(currentPosition,function(){
+						// if ( loadCounterForIE == 1 ) {
+							// renderVideo(currentPosition);
+							// imageSeqLoader[i].load();
+						// }
+					// });
+				// }
+				var imageSeqLoader = new ProgressiveImageSequence( getPath( o.vignettePath ), o.imgCount , {
+					indexSize: 3,
+					initialStep: 16,
+					onProgress: handleLoadProgress,
+					onComplete: handleLoadComplete,
+					stopAt: 1
+				} );
+				imageSeqLoader.loadPosition(currentPosition,function(){
+					loadCounterForIE++;
+					if ( loadCounterForIE == 1 ) {
+						renderVideo(currentPosition);
+						imageSeqLoader.load();
+					}
+				});
+				var imageSeqLoaderNext;
+				
+				
+				function render(position){
+					renderBracket(position);
+					renderVideo(position);
+				}
+				
+				function renderBracket(position) {
+					var totalPhrase = currentVideo == 0 || currentVideo == o.videoCount - 1 ? 4 : 5 ,
+						currentPhrase = Math.max( Math.floor( position * totalPhrase ), 0 );
+					var	bracketPosition = position * totalPhrase - currentPhrase,
+						openPosition = bracketPosition , closePosition = 1- bracketPosition;
+					if( currentVideo == 0 ) { currentPhrase++; }
+					switch( currentPhrase ){
+						case 1: openStatementText.show(); closeStatementText.hide(); break;
+						case 2: closeStatementText.show(); openStatementText.show(); break;
+						case 3: openStatementText.hide(); closeStatementText.show(); break;
+						case 4:	closeStatementText.hide(); transfering = true;
+								if( bracketPosition < 0.1 || bracketPosition > 0.9 ){ transferstart = true; }
+					}
+					if( currentPhrase % 2 == 0){
+						openPosition = closePosition;
+						closePosition = bracketPosition;
+					}
+					var openWidth = openPosition * (statementWidth - bracketWidth),
+						closeWidth = closePosition * (statementWidth - bracketWidth);
+					// console.log( position+"\t"+ currentPhrase+"\t"+openWidth+"\t"+closeWidth);
+					openStatement.width( openWidth );
+					closeStatement.width( closeWidth );
+					if( transfering ){ renderTransfer( position, -closeWidth ); }
+				}
+				
+				function renderTransfer( position, prevPosition ){
+					if( transferstart && imageSeqLoaderNext == null ){
+						transferstart = false;
+						transferend = false;
+						currentNextIndex = 0;
+						transferStartPosition = $win.scrollTop();
+						
+						videoNext = $videos[ ++currentVideo ];
+						// $(video).css({
+							// position:	"absolute",
+							// zindex:		2,
+							// top:		0,
+							// left:		0
+						// });
+						// $(videoNext).css({
+							// position:	"absolute",
+							// zindex:		2,
+							// top:		0,
+							// left:		videoWidth
+						// });
+
+						imageSeqLoaderNext = new ProgressiveImageSequence( getPath( o.vignettePath ) , o.imgCount , {
+							indexSize: 3,
+							initialStep: 16,
+							onProgress: handleLoadProgress,
+							onComplete: handleLoadComplete,
+							stopAt: 1
+						} );
+						imageSeqLoaderNext.loadPosition( 0 ,function(){
+							if ( loadCounterForIE == 1 ) {
+								renderNextVideo( 0 );
+								imageSeqLoaderNext.load();
+							}
+						});
+					}
+					if( transferend ){
+						// $(video).css({
+							// position:"static"
+						// });
+						// $(videoNext).css({
+							// position:"static"
+						// });
+						imageSeqLoader.reset();
+						imageSeqLoader = imageSeqLoaderNext;
+						imageSeqloaderNext.reset();
+						imageSeqLoaderNext = null;
+						$(video).hide();
+						video = videoNext;
+						$win.scrollTop( scrollHeight - transferStartPosition );
+						console.log("transferend,"+$win.scrollTop());
+						transferend = true;
+						tranfering = false;
+					}
+					else{
+						// $(video).css("left", prevPosition );
+						// $(videoNext).css("left", ( videoWidth + windowWidth )/2 - shortcut.width() + prevPosition);
+						renderNextVideo( position, ( videoWidth + windowWidth )/2 - shortcut.width() + prevPosition );
+						if( prevPosition + bracketWidth >= statementWidth ){ transferend = true; }
+					}
+				}
+
+				var currentIndex = 0;
+				function renderVideo(position, left /*,videoIndex*/) {
+					// if( !videoIndex ){ videoIndex = currentVideo; }
+					var canvasLeft = 0;
+					if( !!left ){ canvasLeft = left; }
+					myImg.src = imageSeqLoader.getNearest( Math.round( position * (imageSeqLoader.length-1) ) );
+					var nearestIndex = imageSeqLoader.nearestIndex;
+					// myImg.src = imageSeqLoader[videoIndex].getNearest( Math.round( position * (imageSeqLoader.length-1) ) );
+					// var nearestIndex = imageSeqLoader[videoIndex].nearestIndex;
+					if ( nearestIndex < 0 ) nearestIndex = 0;
+					if ( currentIndex != nearestIndex ) {
+						myImg.onload = function(){
+							ctx.drawImage(myImg,canvasLeft,0,myCanvas.width,myCanvas.height);
+						}
+						currentIndex = nearestIndex;
+					}
+				}
+								
+				var currentIndexNext = 0;
+				function renderNextVideo( position, left ) {
+					var canvasLeft = 0;
+					if( !!left ){ canvasLeft = left; }
+					myImgNext.src = imageSeqLoaderNext.getNearest( Math.round( (1 - position) * (imageSeqLoaderNext.length-1) ) );
+					var nearestIndex = imageSeqLoaderNext.nearestIndex;
+					if ( nearestIndex < 0 ) nearestIndex = 0;
+					if ( currentIndexNext != nearestIndex ) {
+						myImgNext.onload = function(){
+							ctx.drawImage(myImgNext,canvasLeft,0,myCanvas.width,myCanvas.height);
+						}
+						currentNextIndex = nearestIndex;
+					}
+				}
+				
+
+				function gotoVideo( videoIndex ){
+					if( videoIndex >= 0 && videoIndex < o.videoCount ){
+						currentPosition = -1/5000;
+						targetPosition = 0;
+						currentVideo = videoIndex;
+						$win.scrollTop(0);
+						//render(0);
+
+						openStatementText.attr("src",getPath( o.openStatementPath ));
+						closeStatementText.attr("src",getPath( o.closeStatementPath ));
+						
+						if( videoIndex == o.videoCount - 1 ) { mailto.show();}
+						else{ mailto.hide();}
+						imageSeqLoader.reset();
+						imageSeqLoader = new ProgressiveImageSequence( getPath( o.vignettePath ), o.imgCount , {
+							indexSize: 3,
+							initialStep: 16,
+							onProgress: handleLoadProgress,
+							onComplete: handleLoadComplete,
+							stopAt: 1
+						} );
+						imageSeqLoader.loadPosition(currentPosition,function(){
+							if ( loadCounterForIE == 1 ) {
+								renderVideo(currentPosition);
+								imageSeqLoader.load();
+							}
+						});
+					}
+				}
+				
+				function handleLoadProgress() {
+					// var progress = imageSeqLoader[ currentVideo ].getLoadProgress() * 100;
+					// loadingBar.css({width:progress+'%'});
+				}
+
+				function handleLoadComplete() {
+					// loading.addClass("complete");
+					//element.css("visibility","visible");
+				}
+				
+				function getPath( path, videoIndex ){
+					if( !videoIndex ){ videoIndex = currentVideo; }
+					return o.path.replace('{currentVideo}', videoIndex + 1 ) + path;
+				}
+				
+				$win.resize( handleResize );
+				$win.scroll( handleScroll );
+				
+				var scrollControler = $("body").overscroll({
+					// hoverThumbs: true,
+					persistThumbs: 	true,
+					showThumbs: 	true,
+					wheelDelta: 	o.speed * 20,
+					scrollDelta:	o.speed * 5
+				}).on('overscroll:drifting overscroll:dragging oversroll:dragstart overscroll:dragend overscroll:driftstart overscroll:driftend', function(e){
+					console.log( e.type);
+					if (e.type == "overscroll:drifting" || e.type == "overscroll:dragging") {
+						//handleScroll();
+					}
+				});
+				
+				//var calScale, touch, drifting = false;
+				// $win.on("touchstart",function(e){
+					// touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+					// touchTop = touch.pageY - touch.clientY;
+					// calScale = touchTop == 0 ? 0 : $win.scrollTop() / touchTop;
+				// }).on("touchmove",function(e){
+					// targetPosition = ( touch.pageY - touch.clientY ) * calScale / scrollHeight ;
+					// animloop();
+				// });
+				
+				skip.on("click",function(e){
+					gotoVideo( o.videoCount - 1 );
+					e.preventDefault();
+				}).find("IMG").on("mouseenter",function(){
+					this.src = this.src.replace('logo.png',"logo-glow.png");
+				}).on("mouseleave",function(){
+					this.src = this.src.replace('logo-glow.png',"logo.png");
+				});
+				
+				shortcut.on("mouseenter","A",function(){
+					$("IMG",$(this)).fadeIn();
+				}).on("mouseleave","A",function(){
+					$("IMG",$(this)).fadeOut();
+				}).on("click","A",function(e){
+					var targetVideo = shortcut.find("A").index( $(this) );
+					gotoVideo( targetVideo );
+					e.preventDefault();
+				});
+				
+				calculateDimensions();
+				//animloop();
+				return this;		
+			}
+		};	
+	};
+	
+	return ND;	
+
+}(window.ND || {}, jQuery));

@@ -22,7 +22,7 @@ body{overflow-x:hidden;}
 .content article  #search-items{min-height:240px;}
 .content article  ul{position:relative;left:0;}
 .content article  ul.even{background-color:#f4f4f3;}
-.content article  ul li{height:50px;line-height:25px;font-size:14px;color:#616161;min-width:150px;text-align:left;vertical-align: middle;}
+.content article  ul li{height:50px;line-height:25px;font-size:14px;color:#616161;min-width:150px;text-align:left;vertical-align: middle;padding:0 5px;}
 .content article  ul li a{color:#228B22;}
 .content article  ul.c-1 li{width:90%;}
 .content article  ul.c-2 li{width:45%;}
@@ -30,7 +30,7 @@ body{overflow-x:hidden;}
 .content article  ul.c-4 li{width:22.5%;}
 .content article  ul.c-5 li{width:18%;}
 .content article  ul.c-6 li{width:15%;}
-.content article  ul li.c-id{width:5%;min-width:80px;text-align:center;}
+.content article  ul li.c-id{width:5%;min-width:50px;text-align:center;}
 .content article  header  ul li{color:#000;font-weight:bold;text-align:left;font-size:16px;}
 .content .pagination{text-align:right;padding:15px 0;float: right;}
 .content .pagination a{width:24px;height:24px;line-height:24px;background:#228B22;font-size:12px;color:#FFF;display:inline-block;margin:1px;text-align:center;}
