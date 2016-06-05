@@ -164,7 +164,7 @@
         position.y = event.pageY;
         position.time = time();
         position.index = index;
-		
+        
         return position;
     },
 
@@ -335,9 +335,9 @@
         }
 
         moveThumbs(thumbs, sizing, target.scrollLeft, target.scrollTop);
-		
-		
-		triggerEvent('dragging', data.target);
+        
+        
+        triggerEvent('dragging', data.target);
     },
 
     // sends the overscrolled element into a drift
@@ -395,8 +395,8 @@
                 }
                 moveThumbs(thumbs, sizing, target.scrollLeft, target.scrollTop);
                 compat.animate(render);
-				triggerEvent('drifting', data.target);
-		} else {                
+                triggerEvent('drifting', data.target);
+        } else {                
                 triggerEvent('driftend', data.target);
                 callback(data);                
             }            

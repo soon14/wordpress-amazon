@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+}
+
+#overscroll {
+    width: 1440px;
+    height: 768px;
+    overflow: hidden;
+    position: relative;
+}
+
+#overscroll ul {
+    width: 1440px;
+    margin: 0;
+    padding: 0;
+}
+
+#overscroll li {
+    display: block;
+    float: left;
+    width: 1440px;
+    height: 768px;
+    background-color: #FFF;
+}
+
+#overscroll li.alt {
+    background-color: #C00;
+}
+
+#overscroll li.no-drag {
+    background-color: #000;
+    color: #FFF;
+}
+
+#overscroll li.last {
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+}
