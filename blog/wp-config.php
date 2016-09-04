@@ -85,3 +85,11 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+$home='http://'.$_SERVER['HTTP_HOST'].'/blog/';
+
+$siteurl='http://'.$_SERVER['HTTP_HOST'].'/blog';
+
+define('WP_HOME',$home);
+
+define('WP_SITEURL',$siteurl);
