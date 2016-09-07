@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R 644 /var/www/html
+sudo chmod -R 4777 /var/www/html
