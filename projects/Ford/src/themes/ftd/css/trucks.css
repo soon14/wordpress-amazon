@@ -1,0 +1,475 @@
+body{
+
+	background: transparent url('../img/trucks/bg.gif') !important;
+}
+body.light{
+
+	background: #FFF !important;
+}
+a {
+    color: #6098ff;
+}
+.ltr.dark ul > li {
+
+	background: url('../img/trucks/bullet.png') 6px 0.6em no-repeat;
+}
+#nav {
+	
+	background: transparent url('../img/trucks/nav.gif') no-repeat left top !important;
+}
+
+
+#nav li.current .nav-item>span {
+	background: transparent url('../img/trucks/nav.gif') no-repeat left -50px !important;
+}
+
+#nav li.current .nav-item {
+	background: transparent url('../img/trucks/nav.gif') no-repeat right -50px !important;
+}
+
+#footer-wrapper {
+   clear: both;
+   background: #e4e4e4 url('../img/trucks/footer.gif') repeat-x;
+}
+.model-select span {
+	
+	color: #FFF;
+}
+tbody td {
+ 	border: 1px solid #fff !important;
+}
+
+tbody .even th {
+	background-color: #f6f6f8;
+}
+
+#footer-links a ,#footer-links p {
+
+	color: #5f6978;
+}
+#nav li .nav-item {
+
+	color: #333333;
+}
+#nav li.active .nav-item {
+
+	z-index: 1;
+    position: relative;
+}
+
+#nav-footer a {
+
+	color: #ffffff;
+}
+#nav-footer a:hover {
+
+	color: #6596f5;
+	text-decoration: none;
+}
+#nav-footer h4, #nav-footer h4>a{
+
+	color: #6c7678;
+	font-weight: bold;
+}
+#footer .rss-addthis {
+
+	top: 5px;
+}
+#footer-links {
+
+	top:62px;
+}
+.hotspot .inner h2 a{
+
+	color: #cb0704;
+}
+.hotspot .foot A {
+
+	color: #0e295c;
+}
+.hotspot P{
+
+	color: #333333 !important;
+}
+.featurecarousel P {
+	color:#b9babc !important;
+}
+#coloriser LABEL {
+	height:22px;
+}
+#badge a {
+
+	height: 40px;
+}
+#badge {
+
+	top: 5px;
+	left:2px !important;
+	
+}
+#badge-footer {
+
+	right: 25px !important;
+}
+.dark .gallery .tooltip p{
+	color: #5f6062;
+}
+.dark .specification-table TH {
+	background-position: 0 -100px; 
+	padding-left: 5px; 
+} 
+
+.hotspots .hotspot {
+
+	background: transparent url('../img/trucks/hotspots.png') no-repeat 0 0;
+}
+.hotspots .hotspot .inner {
+
+	background: transparent url('../img/trucks/hotspots.png') no-repeat -241px bottom;
+}
+
+.hotspot.double {
+
+	background: transparent url('../img/trucks/hotspots.png') no-repeat -482px 0;
+}
+.hotspot.double .inner {
+
+	background: transparent url('../img/trucks/hotspots.png') no-repeat -966px bottom;
+}
+.hotspot .head,.hotspot:hover .head{
+
+    background: transparent url('../img/trucks/hotspots.png') no-repeat -1450px 0;
+}
+.hotspot .head H2,.hotspot:hover .head H2 {
+
+    background: transparent url('../img/trucks/hotspots.png') no-repeat -1681px bottom;
+}
+.ltr #nav li.active .nav-item > span {
+	background:transparent url('../img/trucks/nav.gif') no-repeat left -150px !important;
+	color: #FFF !important;
+	}
+.ltr #nav li.active .nav-item {
+	background:transparent url('../img/trucks/nav.gif') no-repeat right -150px !important;
+	}
+#nav .mega-menu {
+
+	background: #ffffff url(../img/trucks/megamenu-top-border.png) no-repeat 0 0;
+}
+#nav .mega-menu > div {
+
+    background: url(../img/trucks/megamenu-bottom-border.png) no-repeat 0 bottom;
+}
+#nav .menu {
+
+	border: 2px solid #FFF;
+	background: transparent url('../img/trucks/bg.gif') !important;
+}
+#nav .menu ul li a,#nav .mega-menu .items h4,#nav .mega-menu .items h4>a,#nav .mega-menu .items .item p,.mega-menu .close-button a  {
+
+	color: #FFF;
+}
+#nav .mega-menu .bottom ul .model{
+
+	width: auto;
+}
+#nav .mega-menu .bottom ul {
+
+	padding: 0 0 4px 10px;
+}
+
+.model-select span {
+	
+	background: url("../img/select-box-dropdown.gif") no-repeat scroll 100% 0 transparent;
+}
+#nav .mega-menu .bottom {
+
+
+	background: url(../img/megamenu-bottom.png) repeat-x 0 10px;
+}
+.ltr #nav .mega-menu .bottom ul .label {
+
+	padding: 40px 5px 0 0;
+}
+
+.rtl .model-select span {
+    background-position: 0 bottom;
+}
+
+.dark .cms h4,.dark .cms h1,.dark .cms h2,.dark .cms h3,.dark .cms h5,.dark p,.dark  h4,.dark  h1,.dark  h2,.dark  h3,.dark  h5{
+	
+	color: #FFF;
+}
+
+.dark .specs .row LABEL,.dark .dealer-results-controls LI strong,.dark .cms li,.dark .cms p,.dark label,.dealer-results-controls LI.label,dealer-results-controls LI,.dealer-results-controls LI,.dark dd  {
+	
+	color: #FFF;
+}
+.dark .dealer-results-controls LI{
+	
+	color: #E82505;
+}
+#aside .section H2 {
+	
+	background: transparent url('../img/trucks/aside.png') no-repeat 0 0;
+}
+#aside .section H2 SPAN {
+	
+	background: transparent url('../img/trucks/aside.png') no-repeat -250px bottom;
+}
+.dark .dealer-results-controls ul li form button {
+	
+	color: #6098FF;
+}
+.dark .map-directions TD.dist {
+
+	padding: 2px 4px;
+}
+.button-white > div {
+	
+	background: transparent url('../img/trucks/buttons.png') no-repeat right -50px;
+}
+.button-white {
+
+	background: transparent url('../img/trucks/buttons.png') no-repeat 0 0;
+}
+
+.dark .map-directions{
+	
+	background: #FFF;
+}
+.dark .fbform INPUT, .dark .fbform SELECT, .dark .fbform TEXTAREA{
+	
+	-webkit-box-shadow: none;
+    box-shadow: none;
+}
+.dark .fbform INPUT.buttonleft:hover, .dark .fbform INPUT.buttonright:hover, .dark .fbform a.buttonleft:hover, .dark .fbform a.buttonright:hover{
+	
+	
+	background:#CB0704;
+	background-image: -webkit-linear-gradient(top , #e3221f, #CB0704);
+	background-image: -moz-linear-gradient(top , #e3221f, #CB0704);
+	background-image: -ms-linear-gradient(top , #e3221f, #CB0704);
+	background-image: linear-gradient(top , #e3221f, #CB0704);
+}
+.dark .pagination-dots li, .rtl.dark .pagination-dots li, .ltr.dark .pagination-dots li {
+	
+	background: transparent url('../img/trucks/carousel_trucks.png') no-repeat 0 -250px;
+}
+
+.dark .pagination-dots li.current {
+	background-position: 0 -190px;
+}
+
+.dark .map-directions td{
+	
+	border: 1px solid #ccc !important;
+}
+.dark tbody th,.dark .map-directions th,.dark .map-directions td,.dark .map-directions,.dark .dealer-results-map TABLE TBODY, .dark .dealer-results-map tbody td,.dark .dealer-results-map TABLE TR TD.last,.dark tbody td{
+	
+	border: none !important;
+	border-right: none !important;
+	border-left:none !important;
+	
+}
+.ltr #nav .mega-menu .bottom ul .model .details,.ltr #nav .mega-menu .bottom ul .model.last .details {
+
+	padding: 36px 0 0 3px;
+}
+#nav .mega-menu .bottom {
+
+	background: url(../img/trucks/megamenu-bottom.png) repeat-x 0 10px;
+}
+#nav .mega-menu .items .item .head:hover h3 a {
+    color:#000000;
+	background-position:  -250px 0;
+}
+.dark SPAN.ast {
+	
+	color: #6098FF;
+}
+#nav .mega-menu .items .item .head:hover h3 {
+
+   background-position: 0  bottom;
+}
+
+#nav .mega-menu .items .item .head h3  {
+	background: transparent url('../img/trucks/models.png') no-repeat -500px bottom;
+}
+#nav .mega-menu .items .item .head h3 a{
+	color:#ffffff;
+	background: transparent url('../img/trucks/models.png') no-repeat -750px 0; 
+}
+#disclaimer p, #site-disclaimer p, p.disc,.feature-sections .feature-content .feature-disclaimer P {
+
+	color: #999999;
+}
+#subnav A:hover {
+	color: #6098ff !important;
+}
+#coloriser {
+    bottom:15px;
+	background: transparent url('../img/trucks/coloriser.png') no-repeat 0 0;
+}
+#coloriser UL {
+
+	height:27px;
+	background: transparent url('../img/trucks/coloriser.png') no-repeat right -35px;
+}
+#coloriser UL LI {
+
+	color: #333333;
+	font-weight: bold;
+}
+.ltr #coloriser UL LI.label {
+
+	padding: 4px 20px 0 4px;
+}
+#coloriser UL LI A SPAN {
+   height:21px;
+   background: transparent url('../img/trucks/coloriser.png') no-repeat -1px -70px;
+}
+
+#coloriser UL LI A:hover SPAN, #coloriser UL LI.current A SPAN {
+
+	background: transparent url('../img/trucks/coloriser.png') no-repeat 0 -100px;
+}
+#coloriser UL LI A {
+
+	top:3px;
+	width: 29px;
+	height: 21px;
+}
+#coloriser UL LI A:hover, #coloriser UL LI.current A  {
+
+	top: 1px !important;
+}
+#coloriser UL LI .tooltip SPAN {
+
+	color:#FFF;
+	background: transparent url('../img/trucks/coloriser.png') no-repeat center -150px;
+}
+.view360-button{
+
+	height:40px;
+	background: transparent url('../img/trucks/360.png') no-repeat center top !important;
+}
+.view360-button:hover{
+
+	background: transparent url('../img/trucks/360.png') no-repeat center bottom !important;
+}
+.view360-button DIV,.view360-button A  {
+
+	padding: 0 !important;
+	background: none !important;
+	text-indent: -999999px;
+}
+.view360-button A{
+
+	display: block;
+	width: 64px;
+	height: 40px;
+}
+.ltr .principal-content .view360-button {
+
+	left: 224px;
+}
+.featurecarousel-wrapper {
+
+	background: transparent url('../img/trucks/carousel.png') no-repeat 0 -495px;
+}
+.featurecarousel {
+
+    background: transparent url('../img/trucks/carousel.png') no-repeat -1000px bottom;
+}
+.principal-content .view360-button {
+
+   bottom: 18px;
+}
+.featurecarousel .items LI:hover {
+
+	background-color: #7f848a;
+}
+.featurecarousel .items LI  A:hover ,.featurecarousel .items LI:hover A{
+
+	color: #FFF !important;
+}
+.ltr .featurecarousel .controls .next A {
+
+	background: transparent url('../img/trucks/carousel.png') no-repeat -25px -100px;
+}
+button.vr-toggle {
+
+	border-radius: 4px;
+	padding:8px;
+	right:40px;
+	background: #e52727;
+	border: 1px solid #000;
+}
+h1.page-title,#breadcrumb LI.last {
+
+	color: #FFF;
+}
+#breadcrumb LI a{
+
+	color: #6098ff;
+}
+#subnav li.current a{
+
+	color: #e82505 !important;
+}
+#subnav UL LI.current {
+    background: transparent url('../img/trucks/redarrow.png') no-repeat center bottom;
+}
+.derivative .body P {
+
+	color: #FFF;
+}
+.derivative .head H3 A {
+  
+    background: transparent url('../img/trucks/derivatives.png') no-repeat -750px 0;
+}
+.derivative .head:hover H3 A {
+    color:#000000;
+	background-position: -250px 0;
+}
+
+.derivative .head H3 {
+
+	background: transparent url('../img/trucks/derivatives.png') no-repeat -500px bottom;
+}
+
+.derivative .head:hover H3 {
+    background-position: 0px bottom;
+}
+.light.ltr #badge a {
+
+	background-position: 0 0;
+}
+.dark .feature-content h3, .dark .feature-content p{
+
+	color: #FFF;
+}
+.light #nav-footer a {
+
+	color: #5f6062;
+}
+.slider .position {
+	
+	height: 640px;
+}
+.light #nav-footer a:hover {
+
+	color: #6596f5;
+}
+#coloriser LABEL {
+	color:#333333;
+	background: transparent url('../img/trucks/coloriser.png') no-repeat 0 -35px;
+}
+.light h1.page-title, .light #breadcrumb LI.last {
+
+	color: #000;
+}
+
+.light #nav .mega-menu > div {
+background: url(../img/trucks/megamenu-bottom-border-light.png) no-repeat 0 bottom;
+}

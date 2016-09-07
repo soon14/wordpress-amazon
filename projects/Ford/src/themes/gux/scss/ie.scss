@@ -1,0 +1,26 @@
+// Global Foundation Settings
+@import "common/common";
+@charset "GBK";
+
+body{*text-align:center;}			
+.nosupport{*top : 0; *left : 0; width : 100%; *height : 100%; *position : absolute;}
+.nosupport .white-overlay-bg{*top : 0; *left : 0; width : 100%; *height : 100%; *position : absolute; *background : white;}
+.nosupport .overlay-bg{*top : 0; *left : 0; width : 100%; *height : 100%; *overflow:hidden; *display:block; *position : absolute; *background : black; filter:alpha(opacity=80);}
+.nosupport .content-holder{*top:5%; *bottom:-300px; position:relative; *background : #FFF; margin: 0 auto; width : 1024px; *min-width:1024px; height:90%; max-height:730px; max-width:1300px; filter:none; *display:inline-block;}
+.nosupport .content-holder .inner .close-icon{display:block; position:absolute; *top:0; *right:20px; *left:auto;}
+.nosupport .content-holder .inner{margin:100px auto auto;  filter:none; display:inline-block; *height:auto; vertical-align:middle; overflow:hidden;}
+.nosupport .content-holder .inner img{
+	display:block;
+	margin:20px auto;
+	z-index:10;
+	position:relative;
+	behavior: expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:((this.runtimeStyle.backgroundImage = "none",
+    this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",
+    this.src = "/themes/gux/img/transparent.gif")),this.pngSet=true));
+}
+.nosupport .content-holder .title{text-align:center; color:#616161;}
+.nosupport .content-holder .title h1,p{font-family: $font-ie6;}
+.nosupport .content-holder table {text-align:center; margin:50px auto;}
+.nosupport .content-holder table td {width:100px; text-align:center;}
+.nosupport .content-holder table img, .nosupport .content-holder table span{display:block; color:#616161;}
+

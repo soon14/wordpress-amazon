@@ -1,0 +1,84 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# These files are concatenated in this order into live/dev.debug.js and then minified into live/prod.min.js
+#       - dev.debug.js is for Developer Debugging 
+#       - prod.min.js is for Production
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+../../ftd/js/lib/modernizr.custom.js
+
+
+../../gux/js/lib/jquery-1.11.1.min.js
+../../gux/js/lib/jquery-migrate-1.2.1.js
+../../gux/js/lib/underscore.js
+../../gux/js/lib/fastclick.js
+../../gux/js/lib/jquery.tinypubsub.js
+../../gux/js/lib/brightcoveExperiences.js
+lib/bind.js
+../../gux/js/lib/jquery.flexslider.js
+../../gux/js/lib/picturefill.min.js
+../../ftd/js/lib/jquery.cookie.js
+lib/qln-catalyst.org.min.js
+
+
+../../gux/js/lib/jquery.uniform.min.js
+../../gux/js/modules/cookie.js
+../../gux/js/lib/googleMaps.js
+
+
+
+
+##### Foundation Modules ####
+../../gux/js/lib/foundation/foundation.js
+../../gux/js/lib/foundation/foundation.equalizer.js
+../../gux/js/lib/foundation/foundation.reveal.js
+
+
+##### Modules ####
+modules/foundationInit.js
+modules/tools.js
+modules/embeddedData.js
+modules/viewport.js
+modules/navigation.js
+modules/textExpand.js
+modules/revealModal.js
+modules/revealTooltip.js
+modules/shares.js
+modules/carousel.js
+
+modules/uniform.js
+
+
+
+
+
+
+# tracking
+../../gux/js/personalisation/personalisation.js
+../../ftd/js/analytics-fps-impl.js
+../../ftd/js/analytics-omniture-impl.js
+../../ftd/js/analytics.js
+../../gux/js/modules/tracking.js
+../../ftd/js/analytics-tag.js
+../../ftd/js/brightcoveTrack.js
+../../gux/js/modules/video.js
+modules/brightcove.js
+# gux dealer locator to motorcraft
+../../gux/js/modules/cookie.js
+
+../../gux/js/lib/googleMaps.js
+#../../gux/js/modules/bingMapController.js
+../../gux/js/modules/dealerlocator.js
+modules/dealerlocator-alt.js
+../../gux/js/modules/googleMapController.js
+../../gux/js/modules/tools.js
+../../gux/js/modules/viewport.js
+../../gux/js/modules/locationAware.js
+../../gux/js/modules/commonMapController.js
+../../gux/js/modules/uniform.js
+../../gux/js/modules/underscoreInterpolate.js
+
+../../gux/js/modules/mapcontroller.js
+../../gux/js/personalisation/component-locate-dealer.js
+../../gux/js/personalisation/component-locate-dealer-alt.js
+
+modules/storeLocator.js

@@ -1,0 +1,37 @@
+/* reveal foundation modal
+sizing(customized):
+            .fixed-tiny: 490px
+            .fixed-small: 655px
+            .fixed-medium: 980px
+            .fixed-large: 1310px
+            .fixed-xlarge: 1470px
+            */
+
+$fixed-tiny: 490px;
+$fixed-small: 655px;
+$fixed-medium: 980px;
+$fixed-large: 1310px;
+$fixed-xlarge: 1470px;
+
+.reveal-modal-bg{background-color:#000; @include opacity(0.8);z-index: 9999;}
+
+.reveal-modal{
+    
+
+    .close-reveal-modal{top:25px;right:20px;}
+    &.open {z-index:10000;}
+    &.full {top:0 !important; position:fixed;width:100%;height:100%;overflow:auto;}
+    .icon-close{color:$cta-blue;font-size:rem-calc(38);}
+    .uniform {
+        input[type="text"] {font-size:1rem;color:$dark-blue;height:50px;padding: 0 15px;font-style:normal;margin:0;box-shadow:none;}
+    }
+
+    @media #{$large-up} {
+            &.fixed-tiny {width:$fixed-tiny; margin-left:-$fixed-tiny/2;}
+            &.fixed-small {width:$fixed-small; margin-left:-$fixed-small/2;}
+            &.fixed-medium {width:$fixed-medium; margin-left:-$fixed-medium/2;}
+            &.fixed-large {width:$fixed-large; margin-left:-$fixed-large/2;}
+            &.fixed-xlarge {width:$fixed-xlarge; margin-left:-$fixed-xlarge/2;}
+    }
+
+}

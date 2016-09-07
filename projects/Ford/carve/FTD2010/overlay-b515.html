@@ -1,0 +1,129 @@
+<div class="overlayslide">
+	<ul>
+		<li>
+			<img src="http://wwwedu.dragonfly.ford.com/servlet/Satellite?blobcol=urlpicture&blobheader=image%2Fjpeg&blobheadername1=Cache-Control&blobheadername2=Content-Disposition&blobheadername3=Content-Length&blobheadervalue1=max-age%3D1000&blobheadervalue2=inline%3B+filename%3D1248930957360.jpg&blobheadervalue3=278578&blobkey=id&blobtable=DFYImage&blobwhere=1248930957360&ssbinary=true" />
+		</li>
+		<li>
+			<img src="http://wwwedu.dragonfly.ford.com/servlet/Satellite?blobcol=urlpicture&blobheader=image%2Fjpeg&blobheadername1=Cache-Control&blobheadername2=Content-Disposition&blobheadername3=Content-Length&blobheadervalue1=max-age%3D1000&blobheadervalue2=inline%3B+filename%3D1248930957377.jpg&blobheadervalue3=252511&blobkey=id&blobtable=DFYImage&blobwhere=1248930957377&ssbinary=true" />
+		</li>
+		<li>
+			<img src="http://wwwedu.dragonfly.ford.com/servlet/Satellite?blobcol=urlpicture&blobheader=image%2Fjpeg&blobheadername1=Cache-Control&blobheadername2=Content-Disposition&blobheadername3=Content-Length&blobheadervalue1=max-age%3D1000&blobheadervalue2=inline%3B+filename%3D1248930957384.jpg&blobheadervalue3=279704&blobkey=id&blobtable=DFYImage&blobwhere=1248930957384&ssbinary=true" />
+		</li>
+		<li>
+			<img src="http://wwwedu.dragonfly.ford.com/servlet/Satellite?blobcol=urlpicture&blobheader=image%2Fjpeg&blobheadername1=Cache-Control&blobheadername2=Content-Disposition&blobheadername3=Content-Length&blobheadervalue1=max-age%3D1000&blobheadervalue2=inline%3B+filename%3D1248930957397.jpg&blobheadervalue3=237844&blobkey=id&blobtable=DFYImage&blobwhere=1248930957397&ssbinary=true" />
+		</li>
+		<li>
+			<img src="http://wwwedu.dragonfly.ford.com/servlet/Satellite?blobcol=urlpicture&blobheader=image%2Fjpeg&blobheadername1=Cache-Control&blobheadername2=Content-Disposition&blobheadername3=Content-Length&blobheadervalue1=max-age%3D1000&blobheadervalue2=inline%3B+filename%3D1248930957404.jpg&blobheadervalue3=254984&blobkey=id&blobtable=DFYImage&blobwhere=1248930957404&ssbinary=true" />
+		</li>
+	</ul>
+
+	<div class="arl">
+		<a href="#">
+		<img src="http://wwwedu.dragonfly.ford.com/servlet/Satellite?blobcol=urlpicture&blobheader=image%2Fjpeg&blobheadername1=Cache-Control&blobheadername2=Content-Disposition&blobheadername3=Content-Length&blobheadervalue1=max-age%3D1000&blobheadervalue2=inline%3B+filename%3Dleft.png&blobheadervalue3=1374&blobkey=id&blobtable=DFYLink&blobwhere=1248930957494&ssbinary=true" />
+		</a>
+	</div>
+	<div class="arr">
+		<a href="#">
+		<img src="http://wwwedu.dragonfly.ford.com/servlet/Satellite?blobcol=urlpicture&blobheader=image%2Fjpeg&blobheadername1=Cache-Control&blobheadername2=Content-Disposition&blobheadername3=Content-Length&blobheadervalue1=max-age%3D1000&blobheadervalue2=inline%3B+filename%3Dright.png&blobheadervalue3=1384&blobkey=id&blobtable=DFYLink&blobwhere=1248930957510&ssbinary=true" />
+		</a>
+	</div>
+</div>
+<script type="text/javascript">
+$wait(function(){
+
+//Bind Image Switter: carousel
+$(".overlayslide ul").jcarousel({wrap:'circular',scroll: 1});
+$(".overlayslide .arl a").click(function(e){
+	e.preventDefault();
+	$(".jcarousel-prev").trigger("click");
+});
+$(".overlayslide .arr a").click(function(e){
+	e.preventDefault();
+	$(".jcarousel-next").trigger("click");
+});
+
+});
+</script>
+
+<style type="text/css">
+/*banner image*/
+#banner{
+	height:603px;
+}
+
+/*three hotspots*/
+#content {
+	margin:2px 0 40px;
+	position:relative;
+	width:960px;
+}
+#body .switch li{
+	margin:0 2px;
+}
+
+/*social media*/
+.ltr .socialmedia-wrapper {
+	background:none;
+	left:auto;
+	opacity:0.7;
+	position:absolute;
+	right:1px;
+	top:305px;
+	width:auto;
+}
+.ltr .socialmedia {
+	background:none repeat scroll 0 0 #333333;
+	border-radius:5px 5px 5px 5px;
+	float:left;
+	padding-left:24px;
+	width:160px;
+}
+.socialmedia p{
+	font-size:12px;
+	margin:10px 0 0;
+}
+
+/*buttons*/
+.ltr #footer .rss-addthis {
+	left: auto;
+	right: 12px;
+	top: -905px;
+	z-index: 20;
+}
+.ltr .overlay-box DIV.close-button {
+	top: 10px;
+	right: 10px;
+}
+#vehiclematrix p{
+	color:#fff;
+	font-size:13px;
+	font-weight:700;
+}
+
+/*overlay image switter*/
+.overlay-box{
+	overflow: hidden;
+}
+.overlayslide{
+	width:953px;
+	height:423px;
+	overflow:hidden;
+}
+.overlayslide ul, .overlayslide ul li{
+	padding:0;
+}
+.overlayslide .arl, .overlayslide .arr{
+	position:absolute;
+	top:44%;
+	left:3px;
+}
+.overlayslide .arr{
+	left:auto;
+	right:3px;
+}
+
+.overlayslide li img{
+	width:953px;
+	height:423px;
+}
+</style>

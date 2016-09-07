@@ -1,0 +1,482 @@
+<project name="dragonfly" basedir="." default="webserver">
+
+	<property name="build.sysclasspath" value="ignore" />
+
+	<target name="describe" description="Description of this build file.">
+		<echo message="Targets for building and deploying Ford Dragonfly artifacts." />
+	</target>
+
+	<target name="init" description="Create required properties and paths">
+
+		<!-- fundamental properties -->
+		<property name="base.dir" location="." />
+		<property name="src.dir" location="${base.dir}/src/java" />
+		<property name="build.dir" location="${base.dir}/build" />
+		<property name="lib.dir" location="${base.dir}/lib" />
+		<property name="test.dir" location="${base.dir}/test" />
+      <property name="dist.dir" location="${base.dir}/dist" />
+		<property name="weblib.dir" location="${base.dir}/src/envfiles/common/appserver/war/WEB-INF/lib" />
+		<property name="resources.dir" location="${base.dir}/src/html/resources" />
+		<property name="properties.dir" location="${base.dir}/properties" />
+		<property name="tools.dir" location="${base.dir}/tools" />
+		<property name="doc.dir" location="${base.dir}/doc" />
+		<property name="report.dir" location="${doc.dir}/reports" />
+		<property name="build.classes" location="${build.dir}/classes" />
+		<property name="build.webserver" location="${base.dir}/build-webserver" />
+		<property name="build.cmdlineutils" location="${base.dir}/build-cmdlineutils" />
+		<property name="instrumented.classes" location="${build.dir}/instrumented-classes" />
+		<property name="build.local" location="${base.dir}/build-local" />
+		
+
+		<!-- ant contrib binaries path -->
+		<path id="ant.contrib.path">
+			<fileset dir="${base.dir}/tools/ant-contrib">
+				<include name="*.jar" />
+			</fileset>
+		</path>
+
+		<taskdef classpathref="ant.contrib.path" resource="net/sf/antcontrib/antlib.xml" />
+
+      <mkdir dir="${build.webserver}" />
+      <mkdir dir="${build.webserver}/dist" />
+
+	</target>
+
+	<!-- Initialise dependencies for building deployables. -->
+	<target name="init-svn">
+		<!-- svnant lib -->
+		<property name="svnant.lib" value="tools/svnAnt" />
+
+      <property name="ant.build.javac.target" value="1.5">
+      </property>
+      <property name="ant.build.javac.source" value="1.5">
+      </property>
+
+    <!-- path to the svnant libraries. Usually they will be located in ANT_HOME/lib -->
+		<path id="svn.ant.classpath">
+			<fileset dir="${svnant.lib}">
+				<include name="**/*.jar" />
+			</fileset>
+		</path>
+
+		<!-- load the svn task -->
+		<typedef resource="org/tigris/subversion/svnant/svnantlib.xml" classpathref="svn.ant.classpath" />
+
+		<!-- svn repo url -->
+		<property name="svn.rtb.url" value="http://subversion.corp.nextdigital.com/NextDigital/java/dragonfly/rtb" />
+
+	</target>
+
+	<!-- Create a string (${svnBranch}) to specify what branch is used in a SVN
+   command. Use HEAD if no branch is given so that the command will still work:
+   it will just get whatever is in the trunk. -->
+	<target name="init-svnBranchIsGiven" if="branch">
+		<property name="svnBranch" value="branches/${branch}" />
+	</target>
+	<target name="init-svnBranchIsNotGiven" unless="branch">
+		<fail message="You have to specify either branch or tag"></fail>
+	</target>
+	<target name="init-setSvnBranch" depends="init-svnBranchIsGiven,init-svnBranchIsNotGiven">
+		<echo>Using svnBranch: ${svnBranch}.</echo>
+	</target>
+
+	<!--
+      A target can depend on this to ensure user sets tag.
+   -->
+	<target name="init-failWithoutTag">
+		<fail unless="tag" message="You must set tag e.g. -Dtag=vTP07_MgtClean18." />
+	</target>
+
+	<!-- Create a tag in SVN for TP07 branch or any other branch specified by -branch=yourbranch. -->
+	<target name="tag" depends="init,init-failWithoutTag,init-setSvnBranch,init-svn" description="Create a tag in SVN for branch or any other branch specified by -branch=yourbranch.">
+		<echo>Creating SVN tag: ${tag} from: ${svn.rtb.url}/${svnBranch}</echo>
+		<svn>
+			<copy srcUrl="${svn.rtb.url}/${svnBranch}" destUrl="${svn.rtb.url}/tags/${tag}" message="Tagging the rtb project for release ${tag}" revision="HEAD" />
+		</svn>
+	</target>
+
+	<!--
+      A target can depend on this to ensure user sets target.environment.
+   -->
+	<target name="init-failWithoutEnvironment">
+		<fail unless="environment" message="Environment not set e.g. -Denvironment=nddev, allowed values[nddev|ndmgt|ndprod|nadev|int|qa|mgt|prod]." />
+	</target>
+
+	<!-- Initialise dependencies for building deployables. -->
+	<target name="init-buildDeployable">
+		<!-- Subversion ant tasks -->
+		<typedef resource="org/tigris/subversion/svnant/svnantlib.xml" classpath="tools/svnAnt/*.jar" />
+
+		<!-- Properties for building deployables. -->
+		<property name="base.dir" location="." />
+
+	</target>
+
+	<!-- Create a string to specify what location is used in an SVN command for
+   build targets.
+      1) Use branch (-Dbranch) for location.
+      2) If no branch is given, use tag (-Dtag).
+      3) If no branch or tag is given, use trunk.
+
+      Checkout wiki: Tag Build Deploy
+      http://sharepoint/Developer/Dev%20Wiki/FatWire%20-%20Ford%20Dragonfly%20-%20Tag%20Build%20Deploy.aspx#TP07
+   -->
+	<target name="init-forBuildTargets-tagIsGiven" if="tag">
+		<property name="svnLoc" value="tags/${tag}">
+		</property>
+	</target>
+	<target name="init-forBuildTargets-branchIsGiven" if="branch">
+		<property name="svnLoc" value="branches/${branch}">
+		</property>
+	</target>
+	<target name="init-forBuildTargets-locIsNotGiven" unless="svnLoc">
+		<property name="svnLoc" value="trunk">
+		</property>
+	</target>
+
+
+	<!-- Due to the way ANT logic has to be structured, this target runs this like this:
+      1) First run "init-forBuildTargets-tagIsGiven".
+         Set svnLoc from tags/${tag} if -Dtag is given.
+      2) Second, run "init-forBuildTargets-branchIsGiven".
+         Set svnLoc from branches/${branch} if -Dbranch is given (overriding value from
+            tag if tag was given as well).
+      3) Third, run "init-forBuildTargets-locIsNotGiven".
+         Set svnLoc to "trunk" if svnLoc has no value by this point.
+      -->
+	<target name="init-setLoc-forBuildTargets" depends="init-forBuildTargets-tagIsGiven,init-forBuildTargets-branchIsGiven,init-forBuildTargets-locIsNotGiven">
+	</target>
+
+	<target name="copyOtherScripts">
+		<copy todir="${build.webapp}/jar" overwrite="true" verbose="true">
+			<fileset dir="${build.dir}/scripts/${environment}">
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="cacheSvnCredentials" depends="init,init-svn" description="Cache SVN username and password from user entered data.">
+		<input message="Please enter subversion username:" addproperty="username" />
+		<input message="Please enter subversion password for ${username}:" addproperty="password" />
+		<svn username="${username}" password="${password}">
+			<info target="http://subversion.corp.nextdigital.com/NextDigital/java/dragonfly/rtb/tags">
+			</info>
+		</svn>
+	</target>
+
+	<target name="cacheSvnCredentialsFromSystemParams" depends="init,init-svn" description="Cache SVN username and password from system parameters.">
+		<fail unless="svnusername" message="username and password are required to copy files to the server. Please use -Dsvnusername=XXXXX -Dsvnpassword=XXXXX" />
+		<fail unless="svnpassword" message="username and password are required to copy files to the server. Please use -Dsvnusername=XXXXX -Dsvnpassword=XXXXX" />
+		<svn username="${svnusername}" password="${svnpassword}">
+			<info target="http://subversion.corp.nextdigital.com/NextDigital/java/dragonfly/rtb/tags">
+			</info>
+		</svn>
+	</target>
+	
+	<target name="compile-js">
+		<property environment="env" />
+
+		<echo>Compressing JS files ...</echo>
+	
+		<java fork="true" maxmemory="512m" failonerror="true" dir="${build.webserver}/carve" classname="org.mozilla.javascript.tools.shell.Main">
+			<classpath refid="compress.classpath" />
+			<arg value="lib-carve/js/build.js" />
+		</java>
+
+		<!-- copy to a main package folder together -->
+		<copy todir="${build.webserver}/dist" overwrite="true">
+			<fileset dir="${build.webserver}/carve/">
+				<include name="themes/**/*.*" />
+			</fileset>
+		</copy>	
+	</target>
+
+	<target name="compile-sass">
+		<for list="${sass.themes}" param="folder">
+			<sequential>
+				<echo>Compiling SASS for theme @{folder} ...</echo>
+
+				<!--
+				
+				compiles scss to css COMPRESSED
+				
+				the java task executes the following command line:
+				java -jar tools/jruby-1.7.13/complete/jruby-complete-1.7.13.jar ./tools/jruby-1.7.13/bin/compass compile -s compressed ./build-webserver/carve/themes/gux/
+				
+				-->
+				<java classname="org.jruby.Main" dir="${basedir}" failonerror="true" fork="true">
+					<classpath refid="ruby.classpath" />
+					<arg value="${compass.command}"/>
+					<arg value="compile" />
+					<arg value="-s" />
+					<arg value="compressed" />
+					<arg value="${build.webserver}/carve/themes/@{folder}"/>
+				</java>
+				
+				<mkdir dir="${build.webserver}/dist/themes/@{folder}" />
+				<!-- copy to a main package folder together -->
+ 				<copy todir="${build.webserver}/dist/themes/@{folder}" overwrite="true">
+ 					<fileset dir="${build.webserver}/carve/themes/@{folder}">
+ 						<include name="**/*.css" />
+ 						<include name="**/*.gif" />
+ 						<include name="**/*.png" />
+ 						<include name="**/*.jpeg" />
+ 						<include name="**/*.jpg" />
+ 						<include name="**/*.ttf" />
+ 						<include name="**/*.eot" />
+ 						<include name="**/*.woff" />
+ 						<include name="**/*.svg" />
+ 					</fileset>
+ 				</copy>
+			</sequential>
+		</for>
+	</target>
+
+	<target name="init-webserver" depends="init-failWithoutEnvironment,init,init-svn,init-setLoc-forBuildTargets">
+
+		<!-- default details of the server -->
+		<property name="default-server" value="10.1.1.86" />
+		<property name="default-dir" value="/opt/IBM/HTTPServer/htdocs/en_US/" />
+
+		<!-- the themes which require SASS compile -->
+		<property name="sass.themes" value="gux,latest-offers,quicklane" />
+		
+		<!-- other compass and jruby properties -->
+		<property name="jruby.home" value="${basedir}/tools/jruby-1.7.13" />
+		<property name="compass.command" value="${jruby.home}/bin/compass" />
+	
+		<path id="ruby.classpath">
+			<pathelement location="${jruby.home}/complete/jruby-complete-1.7.13.jar" />
+		</path>
+
+		<path id="compress.classpath">
+			<pathelement location="${basedir}/src/lib-carve/js/js.jar" />
+			<pathelement location="${basedir}/src/lib-carve/js/compiler.jar" />
+		</path>
+	</target>
+
+   <target name="clean" depends="init" description="Indescriminately scoure all builds output">
+      <delete dir="${base.dir}/build" />
+      <delete dir="${build.local}" />
+      <delete dir="${build.webserver}" />
+      <delete dir="${basedir}/.sass-cache" />
+      <delete dir="${doc.dir}" />
+      <delete file="${cobertura.ser}" />
+   </target>
+
+   <target name="cleandist" depends="init">
+      <delete dir="${dist.dir}"/>
+      <mkdir dir="${dist.dir}"/>
+   </target>
+
+	<target name="webserver-build" depends="init-webserver">
+
+		<!-- init -->
+      <delete dir="${build.webserver}" />
+		<mkdir dir="${build.webserver}" />
+		<mkdir dir="${build.webserver}/dist" />
+
+		<!-- export all static files from common folder -->
+		<echo message="Exporting ${svn.rtb.url}/${svnLoc}/server/src/envfiles/common/webserver/htdocs" />
+		<svn>
+			<export srcUrl="${svn.rtb.url}/${svnLoc}/server/src/envfiles/common/webserver/htdocs" destPath="${build.webserver}/env-common" />
+		</svn>
+
+		<!-- export all static files from env specific folder -->
+		<echo message="Exporting ${svn.rtb.url}/${svnLoc}/server/src/envfiles/${environment}/webserver/htdocs" />
+		<svn>
+			<export srcUrl="${svn.rtb.url}/${svnLoc}/server/src/envfiles/${environment}/webserver/htdocs" destPath="${build.webserver}/env" />
+		</svn>
+
+		<!-- export client source -->
+		<echo message="Exporting ${svn.rtb.url}/${svnLoc}/client/src/ to ${build.webserver}/carve" />
+		<svn>
+			<export srcUrl="${svn.rtb.url}/${svnLoc}/client/src/" destPath="${build.webserver}/carve" />
+		</svn>
+		
+		<!-- copy static stuff -->
+		<copy todir="${build.webserver}/dist" overwrite="true">
+			<fileset dir="${build.webserver}/env-common">
+				<include name="**/*.*" />
+			</fileset>
+			<fileset dir="${build.webserver}/env">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+
+		<!-- compress JS and copy -->
+		<antcall target="compile-sass" inheritrefs="true"/>
+		<antcall target="compile-js" inheritrefs="true"/>
+		
+	</target>
+
+   <target name="buildDeployable" depends="webserver-build,webserver-jar">
+      <!-- move generated web server jar file to a name that includes the environment -->
+      <copy file="${dist.dir}/${web-jar-name}" overwrite="true" tofile="${dist.dir}/${web-jar-name-env}"/>
+      <delete file="${dist.dir}/${web-jar-name}"/>
+   </target>
+
+   <target name="webserver-jar" depends="init-webserver,set-web-jar-name">
+
+		<jar jarfile="${build.webserver}/${web-jar-name}">
+			<manifest>
+				<attribute name="Built-By" value="${user.name}" />
+				<attribute name="Built-For" value="${environment}" />
+				<attribute name="Build-Time" value="${build.time}" />
+				<attribute name="Build-Tag" value="${svnLoc}" />
+			</manifest>
+			<fileset dir="${build.webserver}/dist" includes="**/*.*" />
+		</jar>
+
+		<copy file="${build.webserver}/${web-jar-name}" todir="${dist.dir}">
+		</copy>
+
+		<echo message="------------------------------------------------------------">
+		</echo>
+		<echo message="-- ">
+		</echo>
+		<echo message="-- WebServer JAR written to ${dist.dir}/${web-jar-name}">
+		</echo>
+		<echo message="-- ">
+		</echo>
+		<echo message="------------------------------------------------------------">
+		</echo>
+
+	</target>
+
+	<target name="set-web-jar-name" unless="web-jar-name">
+		<tstamp>
+			<format property="jar.time" pattern="yyyyMMddkkmm" />
+		</tstamp>
+
+		<property name="web-jar-name" value="webserver-${jar.time}.jar" />
+      <property name="web-jar-name-env" value="webserver-${environment}-${jar.time}.jar" />
+	</target>
+
+	<target name="set-scp-server" unless="server">
+		<property name="server" value="${default-server}">
+		</property>
+		<echo message="Setting server to ${server}">
+		</echo>
+	</target>
+
+	<target name="set-scp-dir" unless="dir">
+		<property name="dir" value="${default-dir}">
+		</property>
+		<echo message="Setting web root directory to ${dir}">
+		</echo>
+	</target>
+
+	<target name="webserver-copy-to-server" depends="init-webserver,set-scp-dir,set-scp-server">
+
+		<fail unless="username" message="username and password are required to copy files to the server. Please use -Dusername=XXXXX -Dpassword=XXXXX" />
+		<fail unless="password" message="username and password are required to copy files to the server. Please use -Dusername=XXXXX -Dpassword=XXXXX" />
+
+		<echo message="------------------------------------------------------------">
+		</echo>
+		<echo message="-- Copying files to the server.">
+		</echo>
+		<echo message="---- Have you copied jar file from tools/jsch to your ant/lib directory?">
+		</echo>
+		<echo message="-- ">
+		</echo>
+		<echo message="-- Username:  ${username} ">
+		</echo>
+		<echo message="-- Server:    ${server}">
+		</echo>
+		<echo message="-- Directory: ${dir}">
+		</echo>
+		<echo message="------------------------------------------------------------">
+		</echo>
+		<scp todir="${username}:${password}@${server}:${dir}" trust="true">
+			<fileset dir="${build.webserver}/dist">
+				<include name="**/*.*" />
+			</fileset>
+		</scp>
+
+	</target>
+
+	<target name="webserver-local" description="Builds local jar file with web server content.">
+		<antcall target="webserver-build">
+		</antcall>
+		<antcall target="webserver-jar">
+		</antcall>
+	</target>
+
+	<!--
+		main target calling all other targets
+	-->
+	<target name="webserver" depends="webserver-build" description="Deploys theme and static files to webserver.">
+		<antcall target="webserver-copy-to-server">
+		</antcall>
+	</target>
+
+
+	<!-- ==============================================================================
+	==	 
+	==	WEBSERVER targets END
+	==	
+	================================================================================ -->
+
+
+	<target name="test-qunit" depends="init,phantomjs-not-defined" description="Executes JS qunit tests">
+
+
+		<for list="${sass.themes}" param="folder">
+			<sequential>
+				<echo>Runing QUnit tests in @{folder} ...</echo>
+
+				<!-- check if test folder is available -->
+				<if>
+					<available file="${base.dir}/src/carve/@{folder}/test" />
+					<then>
+
+						<!-- find all *-qunit.html test case files -->
+						<for param="file" keepgoing="true">
+
+							<path>
+								<fileset dir="${base.dir}/src/carve/@{folder}/test" includes="**/*-qunit.html" />
+							</path>
+
+							<sequential>
+
+								<!-- convert the file full path to a relative. phantomjs fails when passing absolute paths -->
+								<propertyregex property="relative" override="true" input="@{file}" regexp="(@{folder}\\test)([^\.]*)" select="\2" />
+								<var name="qunit-test-file" value=".${relative}.html" />
+
+								<echo message="Running qunit test file ${qunit-test-file}">
+								</echo>
+
+								<exec executable="${phantomjs-home}/phantomjs" dir="${base.dir}/src/carve/@{folder}/test" failonerror="true">
+									<arg value="${phantomjs-home}/examples/run-qunit.js" />
+									<arg value="${qunit-test-file}" />
+								</exec>
+							</sequential>
+						</for>
+
+					</then>
+					<else>
+						<echo message="No test folder available for @{folder}">
+						</echo>
+					</else>
+				</if>
+
+			</sequential>
+		</for>
+	</target>
+
+	<target name="phantomjs-not-defined" unless="phantomjs-home">
+		<fail message="Missing required phantomjs-home system property. Add -Dphantomjs-home=[directory] parameter to your ant call." />
+	</target>
+
+	<!-- webserver-build 
+	<target name="jsdoc" depends="init-webserver">
+		<mkdir dir="${doc.dir}/jsdoc" />
+		<jsdoc jsdochome="${jsdoc.dir}" to="${docs.dir}" >
+            <fileset dir="${build.webserver}/carve/FTD2010/themes/ftd/js" id="id">
+                <include name="*.js"/>
+            </fileset>
+		</jsdoc>
+	</target>
+	-->
+
+</project>

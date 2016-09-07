@@ -1,0 +1,153 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# These files are concatenated in this order into live/dev.debug.js and then minified into live/prod.min.js
+#	- dev.debug.js is for Developer Debugging
+#	- prod.min.js is for Production
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+## Preface (You should edit project name in this file)
+
+#### Files in correct order that reside in /themes/default/js/lib
+
+##  Optional Library includes
+
+
+#### Project files in correct order that reside in /themes/default/js (this come after lib's)
+
+#original libs, previously included directly from html head
+
+##Missing IE 8 functions
+../../ftd/js/lib/missingIEFunctions.js
+
+../../ftd/js/ready.js
+../../ftd/js/lib/jquery-1.8.3.js
+#../../rad/js/lib/custom.modernizr.min.js
+../../ftd/js/lib/es5-shim-parts.js
+../../ftd/js/lib/jquery.cookie.js
+../../ftd/js/lib/jquery.bxslider.js
+../../ftd/js/lib/uuid.js
+
+## templates
+#../../ftd/js/lib/jquery.tmpl.min.js
+
+## Fix console.log errors (this is excellent)
+../../lincoln-common/js/lib/logging.js
+
+## menu
+../../lincoln-responsive/js/multi-platform-links.js
+#../../ftd/js/megamenu.js
+#../../ftd/js/lib/polyfiller.js
+
+##360 overlay
+#../../ftd/js/lib/jquery.swfobject.1-1-1.js
+#../../ftd/js/lib/jquery.jcarousel.js
+#../../ftd/js/lib/jquery.ui.position.js
+../../ftd/js/lib/jquery.tinypubsub.js
+
+#../../ftd/js/lib/jquery.bbq.js
+
+#../../ftd/js/lib/jquery.validate.min.js
+
+#../../lincoln-common/js/lib/jquery.reel.js
+../../ftd/js/lib/jquery.touchwipe.1.1.1.js
+
+#../../lincoln-common/js/overlay-fullscreen.js
+
+#../../ftd/js/popup.js
+#../../ftd/js/slider.js
+../../ftd/js/mini-plugins.js
+#../../ftd/js//global-all-platforms.js
+../../ftd/js/global-all-platforms.js
+../../ftd/js/allplatforms-backbutton.js
+
+#../../lincoln-common/js/isEmptyObject.js
+../../lincoln-common/js/overlay.js
+#../../lincoln-common/js/video.js
+../../lincoln-common/js/loadimage.js
+#../../lincoln-common/js/checkbox.js
+../../lincoln-common/js/welcome-bar.js
+
+
+#../../lincoln-common/js/menu-alignment.js
+#../../lincoln-common/js/rotating-banner.js
+#../../lincoln-common/js/row-expander.js
+#../../lincoln-common/js/load-mask.js
+
+#the following js files is only for RAD site
+
+../../lincoln-responsive/js/menu-toggle.js
+#form-validation.js
+#form-service-validation.js
+#form-related.js
+../../lincoln-responsive/js/rad-overlay.js
+../../lincoln-responsive/js/common-overlay-links.js
+
+#libs from FTD2010/themes/ftd
+../../ftd/js/lib/site-catalyst.org.min.js
+
+#files from web version ( from FTD2010/themes/ftd)
+../../ftd/js/tracking.js
+../../gux/js/personalisation/personalisation.js
+../../ftd/js/analytics-fps-impl.js
+../../ftd/js/analytics-omniture-impl.js
+../../ftd/js/analytics.js
+../../ftd/js/analytics-tag.js
+../../ftd/js/util.js
+../../ftd/js/context.js
+
+#newer versions of underscore and backbone
+lib/underscore.js
+lib/backbone.js
+
+../../ftd/js/priceformatter.js
+
+../../tools/js/common/custom-backbone.js
+
+
+common/lincoln-custom-backbone.js
+
+common/events.js
+common/constants.js
+common/utils.js
+common/globals.js
+
+
+##<!--common model/collections !-->
+common/models.js
+common/collections.js
+
+###<!--module model/collections !-->
+modules/nameplate/models.js
+modules/nameplate/collections.js
+
+modules/series/models.js
+modules/series/collections.js
+
+modules/accessories/models.js
+modules/accessories/collections.js
+
+modules/summary/models.js
+modules/summary/collections.js
+
+modules/reload/models.js
+
+common/builder.js
+
+lincoln-build-and-price.js
+
+###<!--common & module views !-->
+modules/nameplate/views.js
+modules/series/views.js
+modules/accessories/views.js
+modules/summary/views.js
+common/views.js
+
+###<!--modules !-->
+modules/nameplate/nameplate.js
+modules/series/series.js
+modules/accessories/accessories.js
+modules/summary/summary.js
+modules/reload/reload.js
+
+common/analytics.js
+
+common/comparison-overlay.js

@@ -1,0 +1,331 @@
+body.forms, .forms .content, .forms .content-banner{background-color: #fff;}
+A {color: #000;}
+.forms #footer-wrapper, .forms #badge{display: none;}
+.forms .section{margin: 0px 5px;background: #fff;border-top: 1px solid #A9A9A9;border-bottom: 1px solid #A9A9A9;}
+.forms .section:last-child{padding-bottom: 40px;}
+.forms.thankyou .section:last-child{padding-bottom: 8px;}
+.heading-description > .title{font-size: 1.8em;font-family:"Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif;}
+.forms .headings P {padding-top: 10px; padding-bottom: 0;}
+.forms .headings P:first-child {padding-top: 0;}
+
+/*KMI forms*/
+body.forms form select {font-size: 1.2em; color: #2D2D2D;}
+body.forms form input[type="text"],
+body.forms form input[type="password"],
+body.forms form input[type="email"],
+body.forms form input[type="number"],
+body.forms form input[type="tel"],
+body.forms form input{height: 37px; font-size: 1.2em; padding: 2px 2.8em 2px 0.8em; border-radius: 0;}
+	body.rtl.forms form input{padding: 2px 0.8em 2px 2.8em;}
+body.forms form .submit-col input[type="submit"]{font-size: 1.7em; border-radius: 0; float:right; margin-top:20px;}
+	body.rtl.forms form .submit-col input[type="submit"]{float:left;}
+body.forms, .forms #position{min-width: 0;}
+body.forms .valification-code {padding: 0;}
+body.forms .valification-code SPAN, body.forms .row P {line-height: 16px;}
+body.thankyou div{text-align: center;}
+.forms .preferences .row.radio{padding-top: 10px;}
+.forms .preferences .row.radio{margin-top: 10px !important;}
+.forms .user-vehicle .state-edit > div.row, .forms .user-vehicle .state-readonly > div.row, .forms .user-vehicle .flexfield.grey.row{margin-bottom: 60px !important;}
+.forms .user-vehicle .icon-add{background: none;background-color: #48acdf;border-radius: 3px;color: #fff;float: left;font-size: 0.75em;margin: 7px 0 20px 0;padding: 6px 34px;text-transform: uppercase;height: 24px;line-height: 14px;font-weight: normal;}
+.forms #body{background: #FFFFFF;}
+.forms #page{width: 100%;}
+.forms #captchareload{color: #B45F1A;text-decoration: none;vertical-align: bottom; font-size: 1.2em;}
+.forms #header{height: 100%;width: 100%;margin-bottom: 0;padding: 0;}
+.actions{height: 52px; clear: both;}
+
+.forms #content, .thankyou .block{padding: 0 5px;}
+form label,
+form .columns .row > p.label,
+form .columns .row:first-child P.label{color: #000000; margin-bottom: 7px; padding: 0; display: block;font-size: 1.6em;line-height: 15px; cursor: pointer;font-family: "Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif;}
+
+form .columns .row > div > label{display: block;}
+form .columns .row > div > label + div.lux_tip {margin-top: 1.2em;}
+form .columns .row > div > textarea.fullwidth{width: 100%;resize:vertical;margin-top: 2em;height: 150px;}
+
+.forms .content-banner img{height: auto;border: 0;padding: 5px;width: 100%;}
+.forms .headings {line-height: 1.5em; background: #fff; padding: 9px 0 15px;}
+.forms .section .form-bg, .forms .content-banner .description{padding: 17px 15px;}
+form .row .labelfield{margin-top: 20px;}
+form .row .ast, .headings .ast{color: #EE1111; font-size: 16px; line-height: 0;}
+form .valification-code p{color: #A9A9A9;}
+form .valification-code img{padding: 10px 5px 5px 0;border: 0;}
+	.rtl form .valification-code img{padding: 10px 0 5px 5px;}
+form .valification-description{font-size: 0.75em;display: block;margin-top: 5px;}
+
+.thankyou H3, .thankyou P, .thankyou SPAN {font-size: 1.6em; color: #4F4C43; font-family: "Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif;}
+.thankyou H3{font-size: 2em; padding:0;}
+.thankyou .arrow-btn SPAN {color: #FFFFFF;}
+.thankyou .arrow-btn.close SPAN {padding-right: 20px; background: none repeat scroll 0 0 #4F4C43;}
+	.rtl.thankyou .arrow-btn.close SPAN {padding-left: 20px;}
+.forms.thankyou .section{border: none;padding: 15px 15px 0 15px;}
+.thankyou .block .section:last-child{padding: 0 15px 15px 15px;}
+.thankyou .row{text-align: center;}
+.thankyou .row p{padding: 16px 0;}
+body.forms .row p{line-height:24px;}
+.thankyou .content > .section:first-child > .row:first-child{margin: 15px 0;}
+.thankyou .section .logo img{width: 68px;height: 82px;border: none;display: block;margin: 0 auto;}
+.thankyou .img-btns .row{padding: 10px 0;}
+.thankyou .section .logo{height: auto;}
+.dealer .content > .row .large-centered{text-align: center;padding: 10px 0;background: #FFF;}
+.dealer .action-btns{background: #FFF;padding: 20px 15px 0 15px;line-height: normal;}
+.action-btns{display: none;}
+.action-btns{padding: 0 15px 15px 15px;}
+.action-btns .actions{float: left;clear: none;padding-right: 30px;}
+	.rtl .action-btns .actions{float: right;padding-left: 30px;padding-right: 0;}
+
+.forms .submit-col {padding-left: 0; padding-right: 0;}
+.forms .submit-col input[type=submit] {width: auto; padding: 0 40px 3px 20px;}
+	.rtl.forms .submit-col input[type=submit] {padding: 0 20px 3px 40px;}
+.terms .content p{padding: 6px 12px;}
+.text-large {font-size: 14px; font-family: "Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif;}
+.text-center {text-align: center;}
+
+/* lincoln profile forms */
+.title-center{text-align: center;padding: 1em 0;font-size: 20px;}
+.lcnforms.terms .content span{background: #625d55;display: block;width: 100%;padding: 6px 12px;font-size: 18px;color: #FFF;font-weight: normal;}
+.lcnforms .errormsg p{padding: 0 0 10px 0; color: red; font-size: 14px;}
+.lcnforms .errormsg {margin-top: 20px;}
+.lcnforms p.desc {padding-top: 30px;}
+.lcnforms h2{font-size: 1.8em; font-family: "Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif;font-weight: normal;padding: 1em 0 0.3em 0;}
+.lcnforms .social-title {text-align: center;}
+.lcnforms .social-title .social-title-msg {display: none;}
+.lcnforms .social-title .landing-msg{text-decoration: underline; cursor: pointer; display: inline-block;}
+.lcnforms .form-title{float: left;}
+	.rtl .lcnforms .form-title{float: right;}
+.lcnforms label{font-size: 1.2em;font-family: "ProximaNova-Reg-Roman",Arial,SimSun,宋体,STSong,"华文宋体",sans-serif;margin-bottom: 15px;}
+.lcnforms .checkbox{}
+.lcnforms input[type="submit"],
+.lcnforms input[type="reset"]{height: 43px;padding: 0;text-align: center;width: 100%;font-size: 2em;color: #FFF;padding-bottom: 1px; background: url("../../lincoln-responsive/img/LincolnID-button.png") no-repeat scroll right bottom;}
+	.rtl .lcnforms input[type="submit"],
+	.rtl .lcnforms input[type="reset"]{height: 43px;padding: 0;text-align: center;width: 100%;font-size: 2em;color: #FFF;padding-bottom: 1px; background: url("../../lincoln-responsive/img/LincolnID-button-rtl.png") no-repeat scroll left bottom;}
+.lcnforms p{font-size: 12px;color: #000;padding: 0 0 1em;}
+.lcnforms p.form-description{font-size: 1.4em; font-family: "ProximaNova-Reg-Roman",Arial,SimSun,宋体,STSong,"华文宋体",sans-serif;font-weight: normal;padding: 1em 0 0.3em 0;}
+.lcnforms #captchaimage{border: none;}
+.lcnforms #captchareload{font-size: 1.4em;line-height: 50px;text-decoration: none;color: #000;border-bottom: 1px solid #dcdbda;}
+.lcnforms #captchatip{font-size: 1.2em;padding: 0;}
+
+
+.lcnforms .weibo_login_link {display: inline-block; background: url("../img/icon-social.png") no-repeat; min-height: 26px;line-height: 26px;padding-left: 38px;font-size: 1.2em;text-decoration: none;color: #000;}
+	.rtl .lcnforms .weibo_login_link {padding-right: 38px; padding-left: 0;background: url("../img/icon-social-rtl.png") right 0 no-repeat;}
+.lcnforms .weibo_login_link:hover {background-position: 0 -34px;}
+	.rtl .lcnforms .weibo_login_link:hover {background-position: right -34px;}
+.lcnforms .weibo_login_link{background: url("../img/weibosign_login.jpg") no-repeat;}
+
+.lcnforms .qq_link,
+.lcnforms .weibo_link {display: inline-block; margin:0 12px 30px 0; width: 26px; height: 26px; background: url("../img/icon-social.png") no-repeat 0 0;}
+	.rtl .lcnforms .weibo_link,
+	.rtl .lcnforms .weibo_link{margin:0 0 30px 12px;}
+
+.lcnforms .qq_link {background-position: 0 -68px;}
+
+.lcnforms .weibo_link:hover {background-position: 0 -34px;}
+.lcnforms .qq_link:hover {background-position: 0 -102px;}
+
+.row.multi-btns{margin-left: -10px;margin-right: -10px;}
+
+.lcnforms .row.morespace,
+.lcnforms .columns.morespace{margin: 0.5em 0;}
+
+.lcnforms a.link-right{float: right;padding-top: 22px;font-size: 14px;color: #942d00;}
+	.rtl .lcnforms a.link-right{float: left;}
+.lcnforms h3,
+.lcnforms h4{font-size: 1.6em;font-family: "ProximaNova-Reg-Roman",Arial,SimSun,宋体,STSong,"华文宋体",sans-serif;float: left;padding: 1em 0;}
+
+.lcnforms a.back-btn{font-size: 1.6em;color: #942d00;}
+.lcnforms.regform #captchalabel{color: #000;}
+.lcnforms.regform #captcha{margin-top: 0.5em;}
+.lcnforms.regform input.css-checkbox[type="checkbox"] + label {margin-bottom: 0;}
+.lcnforms .row.split-line{border-bottom: 1px solid #a9a9a9;}
+.lcnforms a.resendacode{color: #7a1318;font-size: 1.6em;display: block;width: 100%;text-align: center;background-color: #f1f1f1;padding: 12px 0;}
+.lcnforms a.resendacode:hover{color: #000;}
+.lcnforms > .service-form .service-info{padding-left: 2em;}
+
+.forms-car-config {padding: 25px 0;}
+.forms-car-config h2 {padding-bottom: 11px;}
+.forms-car-config ul {list-style: none;margin: 0;padding: 0;}
+.forms-car-config ul li {width:100%;}
+.forms-car-config ul li a {color: #000; text-decoration: none; margin-bottom: 2px; display: block;}
+.forms-car-config ul li span {margin-bottom: 8px; display: inline-block;}
+.forms-car-config ul li img {width:100%; border:1px solid #b7b5b5; padding: 5px; margin-bottom: 8px;}
+.forms-car-config .divide {border-bottom: 1px solid #b5b5b5; padding-bottom: 34px; margin: 0 0 26px;}
+.lcnforms .buttom-line{line-height: 1px;height: 1px;background: #908156;display: block; margin: 10px 10px 0 10px;}
+.btn-group {padding: 0;}
+.lcnforms .arrow-btn{width: 100%;}
+.lcnforms .arrow-btn span{width: 100%;text-align: center;padding-left: 25px;padding-right: 25px;}
+.border-bottom{border-bottom: 1px #A6A6A6 solid;}
+.date-field label{float: left;width: 34%;display: inline-block;margin-top: 12px;}
+	.rtl .date-field label {float: right;}
+.date-field input{float: left;width: 31% !important;font-size: 14px !important;margin-left: 2% !important;padding-right: .8em !important;text-align: center !important;}
+	.rtl .date-field input {padding-left: .8em !important;margin-right: 2% !important;margin-left: 0 !important;}
+.lcnforms .state-readonly {padding: 10px 0;}
+.lcnforms .state-readonly > .columns > .row {padding-bottom: 26px;}
+.lcnforms .state-readonly label {color: #942d00; font-size: 1.6em; margin: 0 0 8px 0; cursor: text;}
+.lcnforms .state-readonly p {color: #4f4c43; font-size: 1.6em;  padding: 0; line-height: 1.2em;}
+.lcnforms h4.sub-title {float: none; width: 100%; color: #942d00;}
+.state-edit{display: none;}
+.lcnforms.lcn-change-psw{border-top: 1px solid #a9a9a9;}
+.lcnforms .section {margin-bottom: 20px;}
+.lcnforms .success-info {display: none;}
+.lcnforms .success-info p {font-size: 1.6em; text-align: center; padding:18px 0; color: #B45F1A;}
+.lcnforms .error-info {padding:18px 0;}
+.lcnforms .error-info p {font-size: 1.6em; text-align: center; padding:5px 0; color: #ff0000;}
+select:disabled {background-color: #f0f0f0;}
+.ie8 .styled-select select,
+.ie8 .styled-select input {background-color: #f0f0f0;}
+input[name=birth_date_m] + span.error-box {float: right; width: 68%;}
+	.rtl input[name=birth_date_m] + span.error-box {float: left;}
+
+div.scn-cover {display: none; position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 9999; background: transparent url("../img/loading-bg.png") repeat;}
+div.scn-cover .loading-gif {background: url("../img/loading2.gif") center center no-repeat; position: fixed; height: 100%; width: 100%;}
+
+
+/* Welcome Bar */
+.welcome-bar {background: #3b3b3b; border-bottom: 1px solid #a93f05; display: none; overflow: hidden; padding: 9px 0;}
+.welcome-bar ul {float: right; font-size: 1.4em; list-style: none; overflow: hidden; padding: 0; margin: 0 6px;}
+	.rtl .welcome-bar ul {float: left;}
+.welcome-bar ul li {background: url("../../lincoln-common/img/welcome-bar-divide.png") left 4px no-repeat; -ms-word-break: break-all; word-break: break-all; word-break: break-word; padding: 0 5px 0 9px; color: #fff; float: left; font-family: "Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif; text-align: right;}
+	.rtl .welcome-bar ul li {float: right; padding: 0 9px 0 5px; background: url("../../lincoln-common/img/welcome-bar-divide-rtl.png") no-repeat right 4px;}
+.welcome-bar ul li:first-child {background: none;}
+.welcome-bar ul li a {color: #fff; font-family: "Miller-B-Roman", "Times New Roman", SimHei, "黑体", STHeiti, "华文黑体", serif; text-decoration: none;}
+.welcome-bar ul li a:hover, .welcome-bar ul li a:focus {color: #d3d3d3;}
+.welcome-bar .welcome-bar-inner {max-width: 960px; margin: 0 auto;}
+
+/* ford korean */
+.koreanstate form label[for=dealer-by-statecity-city],
+.koreanstate form label[for="dealer-by-statecity-city"] + .styled-select,
+.koreanstate form label[for="dealer-by-statecity-city"] + .styled-select + span {display: none;}
+
+.lcnforms > .row > .large-6, .lcnforms > .row > .indent{padding: 0 50px;}
+.lcnforms > .row > .large-6 > div > h2{postion: relative; margin-left: -0.38em;}
+.lcnforms > .service-form{margin-top: 3em;}
+.lcnforms > .service-form h2{margin-bottom: 1em;}
+.lcnforms > .service-form .multi-btns .right-btn{position: relative; left: 50%;}
+
+/*Form Builder Forms*/
+@media only screen{
+	#captcha{margin: 0 auto 0px;display: block;}
+	#captchaimage{width: 60%;}
+	#captchaerror, #captchasystemerror{color: red;}
+
+	/* error styling*/
+	.ws-errorbox{display: none !important;}
+	.error-box{visibility: hidden;opacity: 1;display: block;}
+	.ws-invalid .error-box,
+	.ws-invalid ~ .error-box,
+	.ws-invalid #captchaerror SPAN,
+	input.user-error ~ .error-box {visibility: visible;}
+
+	.error-box span,
+	#captchaerror span,
+	#captchasystemerror span{display: block; color: #e11;font-size: 1.2em; min-height: 24px; padding: 4px 0; text-align: left;}
+		.rtl .error-box span,
+		.rtl #captchaerror span,
+		.rtl #captchasystemerror span{text-align: right;}
+	.lcnforms .error-box span{margin-left: 12px; line-height: 14px;}
+		.rtl .lcnforms .error-box span{margin-right: 12px; margin-left: 0;}
+
+	/* ajax validation - custom error msg */
+	input.cus-error {border-color: #e46868 !important;}
+	input.cus-error ~ .error-box {visibility: visible;}
+	input.cus-error ~ .error-box span {display: none;}
+	input.cus-error ~ .error-box span.custom-msg {display: block;}
+
+	input[type=text].user-success, input[type=email].user-success, input[type=tel].user-success{background-position: right -168px !important;}
+	input[type=text].user-error, input[type=email].user-error, input[type=tel].user-error, input[type=password].user-error{background-position: right -111px !important;outline: none;}
+	input[type=text].user-error, input[type=email].user-error, input[type=tel].user-error, .styled-select.ws-invalid{border-color: #e46868;}
+	input[type=text].user-error, input[type=email].user-error, input[type=tel].user-error, input[type=password].user-error, .styled-select.ws-invalid{border-color: #e46868 !important;}
+	input[type=text], input[type=submit], input[type=reset], input[type=password], input[type=email], input[type=tel], input[type=number] {-webkit-appearance: none; -webkit-border-radius: 0;}
+
+
+	/*KMI forms*/
+	body.forms, .forms .content{background-color: #656261;}
+	.forms #captcha{margin-top:10px;}
+	.forms #header{min-height: 40px;}
+	.forms #badge{float: left;margin: 10px 0 0 0;padding: 0;border-bottom: 0;height: 34px;}
+	.forms .content{background: #FFFFFF;padding: 0;}
+	.forms .large-6{position: relative;}
+	.forms.content-page > .content{padding-bottom: 0;}
+	.forms .headings .heading-description{padding: 0 15px;}
+	.forms h4{background: transparent;text-align: center;width: 96%;border-bottom: 1px solid #cdcccc;color: #333;padding-bottom: 8px;margin: 0 0 9px;padding: 0 0 8px;font-weight: normal;}
+	.forms .content .row, .forms .content .row .columns, .forms .content .row .columns .row{background: none;}
+	.forms .content .row{background: #fff;box-shadow: none;}
+	.forms .content .row .row{padding: 0;margin: 0;}
+	.forms input[type="checkbox"] + label{float: none; color: #000000;}
+	.forms input{font-size: 1.3em;}
+	.forms .content .row.radio{margin-bottom: 0;}
+	.forms #badge-footer{height: 69px;margin: 0 auto;position: static;right: 0;top: 0;width: 119px;display: block;}
+	.forms #badge-footer a{background-size: auto auto;background-repeat: no-repeat;height: 69px;width: 119px;display: block;background-image: url("../img/formbottomlogo.jpeg");}
+	.forms #footer-wrapper{background: no-repeat;padding-bottom: 30px}
+	.forms #footer{background: #fff;max-width: 960px !important;min-height: 113px;padding: 0;}
+	.forms .content .row .columns .columns:first-child, .desktop.forms .content .row .columns .columns{padding-top: 0;margin-top: 0;border-top: none;}
+
+	/*.forms .opt-radio-header {color: #A35254; font-size: 12px; font-weight: bold; font-family: ProximaNova-Reg-Roman, Arial, SimSun, 宋体, STSong, 华文宋体, sans-serif;}*/
+	.forms .opt-radio-element > input {height: auto; margin: 0; display: none;}
+	.forms .opt-radio-element {display: inline-block; width: auto; padding: 2px 0;}
+	.forms .opt-radio-element > label {font-family: ProximaNova-Reg-Roman, Arial, SimSun, 宋体, STSong, 华文宋体, sans-serif; font-size: 12px;}
+	.forms .opt-radio-element > input[type="radio"] + label {background: url("../../lincoln-common/img/radio-bg.png") no-repeat 0 -34px; padding: 0 14px 0 21px; background-size: 14px;}
+	.forms .opt-radio-element > input[type="radio"].checked + label {background-position: 0 0;}
+
+
+	/* lincoln profile forms */
+	.lcnforms input::-webkit-input-placeholder{/* WebKit browsers*/color: #942d00;opacity: 1;font-weight: normal;}
+	.lcnforms input:-moz-placeholder{/* Mozilla Firefox 4 to 18*/color: #942d00;opacity: 1;font-weight: normal;}
+	.lcnforms input::-moz-placeholder{/* Mozilla Firefox 19+*/color: #942d00;opacity: 1;font-weight: normal;}
+	.lcnforms input:-ms-input-placeholder{/* Internet Explorer 10+*/color: #942d00;opacity: 1;font-weight: normal;}
+	.lcnforms select {color: #942d00;padding: 8px 0.8em 9px 0.6em;}
+		.rtl .lcnforms select {padding: 8px 0.6em 9px 0.8em;}
+	.lcnforms .error-box span,.lcnforms #captchaerror span, #captchasystemerror span{color: #FF0000;}
+}
+/* Styles for screens that are at least 768px*/
+@media only screen and (min-width: 48em){
+	/* lincoln profile forms */
+	.lcnforms{width: 75%;margin: 0 auto; padding: 16px 60px 0;}
+	.lcnforms .state-readonly {padding: 30px 0;}
+	.lcnforms .errormsg {margin-top: 0;}
+
+	/*KMI forms*/
+	.forms form{width: 75%;margin: 0 auto;}
+	.forms .submit-col input[type="submit"]{float: right;}
+
+	.forms-car-config {padding: 19px 8px;}
+	.forms-car-config h2 {margin-top: 6px;}
+	.forms-car-config ul {margin: 0 -5px;}
+	.forms-car-config ul li {position: relative; width: 25%; float: left; padding-left: 5px; padding-right: 5px;}
+		.rtl .forms-car-config ul li {float: right;}
+	.forms-car-config ul li img {margin-bottom: 12px;}
+	.forms-car-config ul li span {font-size: 1.167em}
+	.forms-car-config .divide {margin: 0 -8px 18px;padding-bottom: 12px;}
+
+	input[name=birth_date_m] + span.error-box {width: 67%;}
+
+}
+/* Styles for screens that are at least 977px (960px + 17px to cater for FF/IE adding the scrolbar to the pixel count)*/
+@media only screen and (min-width: 62.1em){
+
+	/*KMI forms*/
+	.forms form{width: 100%;}
+	.forms form .submit-col{width: auto;float: right;}
+		.rtl.forms form .submit-col{float: left;}
+	.forms .content .large-10{width: 91.6667%;}/*override foundation style to make large-10 to large-11. due to reused template, 'large-10' can not be changed to 'large-11 in carve'*/
+	.forms #page{width: 660px;}
+	.forms #header, .forms .content-banner, .forms .content, .forms .headings{max-width: 660px;margin: 0 auto;}
+	form .submit-col{text-align: right;}
+	form > .columns.large-6{width: 48%}/*override foundation style to make large-6 to smaller. due to reused template, 'large-6' can not be changed to 'large-5 in carve'*/
+	form .form-bg .actions{float: right;}
+	.action-btns{display: block;}
+
+	/* lincoln profile forms */
+	.forms form .submit-col.one-col {width: 100%;}
+	.lcnforms{width: 100%;}
+	.lcnforms .buttom-line{background: #a9a9a9;margin: 10px 0 0 0;}
+	.lcnforms .large-one-col {width: 36%;}
+
+	.lcnforms .error-info p {padding-left: 47px; text-align: left;}
+		.rtl .lcnforms .error-info p {padding-right: 47px; padding-left: 0; text-align: right;}
+
+	.forms-car-config ul {margin: 0 -10px;}
+	.forms-car-config ul li {padding-left: 10px; padding-right: 10px;}
+
+	input[name=birth_date_m] + span.error-box {width: 68%;}
+
+}

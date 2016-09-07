@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Build and Price</title>
+		<link rel="stylesheet" href="themes/tools/bp/css/jquery-ui-1.8.20.custom.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="themes/tools/bp/css/shoppingtool.css">
+		<script type="text/javascript" src="themes/tools/bp/js/lib/jquery-1.8.3.js"></script>
+		<script type="text/javascript" src="themes/tools/bp/js/lib/lazyload.js"></script>
+		<script type="text/javascript" src="themes/tools/bp/js/lib/jquery-ui-1.8.20.custom.min.js"></script>
+		<script type="text/javascript" src="themes/tools/bp/js/lib/json2.js"></script>
+		<script type="text/javascript" src="themes/tools/bp/js/lib/underscore.js"></script>
+		<script type="text/javascript" src="themes/tools/bp/js/lib/backbone.js"></script>
+		<script type="text/javascript" src="themes/tools/bp/js/backbone.localstorage.min.js"></script>
+		<script type="text/javascript" src="themes/tools/bp/js/views.js"></script>
+		<script>
+			var urls = {
+				'modelListURL' :  'test/tools/bp/ModelsList.json',
+				'derivativeListURL' : 'test/tools/bp/DerivativeList.json?modelId=',
+				'packageListURL' : 'test/tools/bp/PackageList.json?modelId=',
+				'derivativeDetailURL' :	'test/tools/bp/DerivativeDetails.json?id=',
+				'categoryListURL' : 'test/tools/bp/CategoryList.json?catId=',
+				'colorTrimListURL' :'test/tools/bp/ColorTrimList.json?derivativeId=',
+				'engineListURL' : 'test/tools/bp/EngineTransmission.json?derivativeId='
+			};
+			
+			/**
+			 * List of local storage file names
+			 */
+			var localStorageNames = {
+				'MODEL': 'bp-model',
+				'PATH' : 'bp-path',
+				'DERIVATIVE': 'bp-derivative',
+				'ENGINE': 'bp-engine',
+				'COLOR': 'bp-color',
+				'TRIM': 'bp-trim',
+				'FEATURE': 'bp-features'
+			};
+		
+		</script>
+		<script type="text/javascript" src="themes/tools/bp/js/models.js"></script>
+		<script type="text/javascript" src="themes/tools/bp/js/collections.js"></script>
+		<script type="text/javascript" src="themes/tools/bp/js/shopping-tool.js"></script>
+		
+	</head>
+	<body>
+		<div id="logo">
+			
+		</div>
+		<div id="header-container">
+			<div id="stepTabs"></div>
+			<div id="user-postcode"></div>	
+		</div>
+		<div style="clear: both"></div>
+		<div id="body">
+			
+			<div id="select-model" class="container">
+				<div id="vehicleList">
+				
+				</div>
+				<div id="bp-footer">
+		
+				</div>
+			</div>
+			
+		</div>
+		
+		<div id="dialog">
+		</div>
+		
+		<script type="text/template" id="bp-derivative-detail-template">
+			<div class="category-content">
+				<div id="tab-groups">
+					<div id="gallery">
+						
+					</div>
+					<div id="interior-exterior-toggle">&nbsp;</div>
+				</div>
+			</div>
+		</script>
+		
+		<script type="text/template" id="bp-model-list-item-template">
+			<div class="bp-model-list-item {{selected ? 'selected' : ''}}">
+				<a href="#{{ id }}" class="model-item">
+					<img src="media/tools/bp/ajax-loader.gif" data-original="{{ thumbnailURL}}" class="lazy"></img>
+				</a>
+ 				<p> From ${{ price }}</p>
+				<p>{{ name }}</p>
+			</div>
+		</script>
+		
+		<script type="text/template" id="bp-path-list-item-template">
+			<div class="bp-path-item {{selected ? 'selected' : ''}}">
+				<a href="#{{ pathURL }}">{{ name }}</a>
+				<br/>
+				<img src="{{ imageURL }}"></img>
+			</div>
+		</script>
+		
+		
+		<script type="text/template" id="bp-derivative-list-template">
+			<div id="derivative-list"></div>
+			<div id="engine-overlay"></div>
+		</script>
+		
+		<script type="text/template" id="bp-derivative-list-item-template">
+			<div class="derivative-item images {{selected ? 'selected' : ''}}">
+				<img src="media/tools/bp/ajax-loader.gif" data-original="{{imageURL}}" class="lazy"></img>
+				<div class="derivative-name">
+					<h4> {{ name }}</h4>
+				</div>
+			</div>
+		</script>
+		
+		<script type="text/template" id="bp-category-list-item-template">
+			<a href="#">{{ name }}</a>
+		</script>
+		
+		<script type="text/template" id="bp-cat-group-header-item-template">
+			<a href="#cat-group-{{ order }}" class="category-group-item">{{ name }}</a>
+		</script>
+		
+<!-- 		<script type="text/template" id="bp-cat-group-body-item-template"> -->
+<!-- 			<div acc -->
+<!-- 		</script> -->
+		
+		<script type="text/template" id="bp-header-list-item-template">
+			<h4> {{heading}}</h4>
+			<a href="{{url}}" class="header-item {{enabled ? '' : 'disabled'}} {{isCurrent ? 'current' : ''}}" >{{ step }}</a>
+		</script>
+		
+		<script type="text/template" id="bp-footer-template">
+			<div>
+				<div id="bp-your-config" class="bp-footer-item">
+					<h4>bpt-ur-config</h4>
+					<div class="bp-derivative-name">{{derivativeName}} </div>
+					<div>{{engine}} </div>
+					<div>{{transmission}} </div>
+				</div>
+				<div id="bp-drive-away-price" class="bp-footer-item">
+					<h4>bpt-drive-away-price</h4>
+					<div>{{price}}</div>
+				</div>
+				<div id="bp-next-nav" class="bp-footer-item">
+					<a class="{{nextEnabled ? '' : 'disabled'}}" href="#{{nextButtonURL}}" id="bp-next-nav-button">{{nextButtonText}}</a>
+				</div>
+			</div>
+			<div id="bp-prev-nav">
+				<a href="#{{prevButtonURL}}" id="bp-prev-nav-button">{{prevButtonText}}</a>
+			</div>
+		</script>
+		
+		<script type="text/template" id="bp-color-name-template">
+			{{ selected ? name : '' }}
+		</script>
+		
+		<script type="text/template" id="bp-color-list-item-template">
+			<div class="color {{selected ? 'selected' : ''}}">
+				<div style="background-color: {{majorValue}};" class="color-item  color_sprite_{{id}}" id="{{ id }}"> </div>
+			</div>
+		</script>
+		
+		<script type="text/template" id="bp-trim-list-template">
+			{{ selected ? name : '' }}
+		</script>
+		
+		<script type="text/template" id="bp-trim-list-item-template">
+			<div class="{{selected ? 'selected' : ''}} trim-item">
+				<a href='#'><img id="img_{{ id }}" src="{{thumbnailURL}}"></img></a>
+			</div>
+		</script>
+		
+		<script type="text/template" id="bp-feature-list-item-template">
+			<input type="checkbox" id="feature_{{ id }}" {{selected ? 'checked="true"' : ''}}/>
+			<div class="feature-checkbox"> 
+				<img src="{{ thumbnailURL }}"></img>
+			</div>
+			<div class="feature-details">
+				<p>{{ name }} ${{ price }}	<a href="#">Details</a></p>
+			</div>
+		</script>
+		
+		<script type="text/template" id="bp-engine-list-item-template">
+			<div class="engine">
+				<div> 
+					<input type="radio" name="engine" href='#{{ id }}' {{selected ? 'checked' : ''}}/>{{name}}
+				</div>
+			</div>
+		</script>
+		<script type="text/template" id="bp-color-list-template">
+			<div id="color-name"></div>
+			<div id="color-list"></div>
+			<div id="trim-name"></div>
+			<div id="trim-list"></div>
+		</script>
+		
+		<script type="text/tamplate" id="bp-gallery-template">
+			<div  id="gallery-prev" class="prev_button"></div>
+			<div id="gallery-content"></div>
+			<div id="gallery-next" class="next_button"></div>
+		</script>
+		
+		<script type="text/template" id="bp-gallery-image-item-template">
+			<div class="{{ visible ? '' : 'hidden' }} sprite {{className}}" style="background: url('{{imageURL}}') 0 0 no-repeat; opacity: 1; background-position: {{slideYpos}}px 0px;"></div>
+		</script>
+		
+		<script type="text/template" id="bp-dialog-template">
+			<div title="{{title}}">
+				<p>{{message}}</p>
+			</div>
+		</script>
+		
+		<script type="text/template" id="bp-interior-exterior-switch-template">
+			<input type="radio" name="interior-exterior" id="interior" {{view == 'interior' ? 'checked' : ''}}/>Interior View
+			<input type="radio" name="interior-exterior" id="exterior" {{view == 'exterior' ? 'checked' : ''}}/>Exterior View
+		</script>
+		
+		<script type="text/template" id="bp-postcode-template">
+			bpt-your-location
+			bpt-postcode: <a href="#" id="change-postcode">{{postcode == '' ? 'bpt-set-region' : ''}}</a>
+		</script>
+		
+		
+</body>
+</html>

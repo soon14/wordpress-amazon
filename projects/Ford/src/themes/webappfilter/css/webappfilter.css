@@ -1,0 +1,125 @@
+/* Styles for all devices */
+header, section, footer, aside, nav, main, article, figure{display: block;}
+html{height: 100%;width:100%;}
+body {margin:0; padding:0; font-family: "Antenna-Regular", Arial, Helvetica, sans-serif; height: 100%; width: 100%;}
+/* Typography */
+body, h1, h2, h3, h4, h5, h6{font-family: "Antenna-Regular", Arial, Helvetica, sans-serif;}
+/* Header */
+#header{background: #fff;overflow: hidden; position:relative;}
+#header h1{color: #4C5C66; font: 1.188em/1.211em "ford_antennasemibold", Arial, Helvetica, sans-serif; padding: 7px 0 12px 100px; width:302px; position:relative; left:50%; margin:0.5em 0 0.5em -107px;}
+#badge{border-bottom: 0;color: #fff;margin: 3px 0 0;width: 147px; position:absolute; left:50%; top:10px; margin:5px 0 0 -107px;}
+#badge span{display: block; height: 30px; overflow: hidden; text-indent: -99em;width: 85px; margin:0 0 20px;}
+.header-text { padding: 1.5% 0% 0% 45%;color:#4C5C66;font-weight:bold;}
+.refresh-button {background:url(../img/refresh.png) no-repeat; cursor:pointer; border:none; width:31px;height:29px;position:absolute; top:-47px; right:10px; z-index:1111;}
+.terms {position:absolute; top:-41px; left:10px; z-index:1; color:#4c5c66; font:0.875em/1.286em 'ford_antennasemibold';}
+.refresh-button:active { background:url(../img/refresh.png) no-repeat;} /*should be: refresh2*/
+button:hover, button:focus, .button:hover, .button:focus {background-color: #FFF;} 
+/* Content */
+.content{background: #fff;padding: 0;-webkit-box-shadow: 0 -2px 3px 2px rgba(0,0,0,.2);box-shadow: 0 -2px 3px 2px rgba(0,0,0,.2); position:relative;}
+.content .row .columns{background-color: transparent;}
+.content .row {margin:0; max-width:100%;}
+.question-area {background: #3C3939; position: relative;}
+ul{list-style-type:none; margin:0; width:100%; padding:0; }
+ul li{ float:left;}
+.question-table {background:url(../img/border1.png) repeat-x 0 100%; padding: 17px 14px 19px;width:100%;color: #9FB9C3;}
+.question-table:last-child {background:none;}
+.question-string {margin:0 0 32px 8px;}
+.question-slider {height: 30px; width:100%; position:relative;}
+.question-slider:after{content:""; position:absolute; top:-1px; left:9px; background:url(../img/dot.png) no-repeat; width:8px; height:7px;}
+.question-answer {height: 19px; width:100%;}
+.question-answer .five.wagon {margin:0 0 0 28px;}
+.question-answer .five.utility {margin:0 0 0 30px;}
+.question-table h2 {display: inline-block; vertical-align:middle; margin:0 6px 0 0; font-size: 0.938em; color: #9FB9C3; background:url(../img/bg-list2.png) no-repeat 100% 50%; padding:0 10px 0 0;}
+.question-table .sub-title {display:inline-block; vertical-align:middle; font-size: 0.688em; font-family: 'ford_antennalight';}
+.question-table ul {margin-left: 5px; overflow:hidden;}
+.question-table h3 {float: left; margin-right: 8px; font-size: 0.5em; color: #9FB9C3; font-weight:bold;}
+.question-table p {margin-top: 1px; float:left; font-size: 0.5em;}
+.question-table ul li {font-size: 0.6252em; margin:0 0 0 50px; font-family: 'ford_antennasemibold';}
+.question-table ul li.five.sedan{margin:0 0 0 43px;}
+.question-table ul li.five.justme{margin:0 0 0 46px;}
+.question-table ul li.five.digit-two{margin:0 0 0 48px;}
+.question-table ul li.three {margin:0 0 0 112px;}
+.question-table ul li.three.counter{margin:0 0 0 91px;}
+.question-table ul li.three.friendly{margin:0 0 0 82px;}
+.question-table ul li.four.surfboard {margin:0 0 0 46px;}
+.question-table ul li.four.kitchen {margin:0 0 0 42px;}
+.five.digit-six, .five.digit-five {margin:0 0 0 65px;}
+.question-table ul li.four.trailer{margin:0 0 0 53px;}
+.question-table ul li.three.user {margin:0 0 0 108px;}
+.question-table ul li.four.caravan {margin:0 0 0 47px;}
+.question-table ul li.three.forests {margin:0 0 0 77px;}
+.question-table ul li.three.town {margin:0 0 0 107px;}
+.question-table ul li.four {margin:0 0 0 66px;}
+.question-table ul li.four.bikerack {margin:0 0 0 68px;}
+.question-table ul .two {overflow:hidden;}
+.question-table ul .two li {float:left; width:50%;}
+.question-table ul .two li:last-child {float:right; margin:0; width:50%;}
+.question-table ul .two li:last-child input {text-align:right; -webkit-appearance:none; color:#9fb9c3;}
+.question-table ul .two li #amount7 {padding:0; margin:-3px 0 0 0; background: none; font-size:10px; line-height:14px; border:none;}
+.question-answer ul div li:first-child {margin:0;}
+.ui-slider-horizontal {width: 86%;margin-left: 10px; background:url(../img/bg-slider.png) repeat-x;}
+.price-disable {background-color: #3C3939;width: 115px;border-color: #3C3939;color: #9FB9C3;}
+.car-filter-area {overflow:hidden; height:100%; padding:3px 0 0 0;} /*#314C75 #25416D*/
+.view-two, .view-one {width: 50%; height:126px; float:left; background:#fff; color:#4C5C66; padding:3px 3px 3px 0; background:url(../img/bg-results.png); margin:-3px 0 0 0; }
+.view-two .holder, .view-one .holder {background:#fff; padding:10px 10px 10px 20px;}
+.view-two .image-area, .view-one .image-area {display:inline-block; vertical-align:middle; width:48%; margin:0 10px 0 0;}
+.view-two-desc, .view-one-desc{display:inline-block; vertical-align:middle; font-family: 'ford_antennasemibold'; width:47%; overflow:hidden; font-size:0.625em;}
+.view-two-desc {font-size:1.125em; line-height: 1.25em;}
+.view-one-desc h2{color: #4C5C66; font-size: 1.800em; font-family: 'ford_antennasemibold'; margin:0; text-transform:capitalize;}
+.view-one-desc p {margin-bottom:0;}
+.view-two .name {font-size:1.111em; padding:0 7px 0 0; display:block; margin:0 0 5px; font-family: 'ford_antennasemibold'}
+.view-three .name {padding:0 7px 0 0; float:left; background:url(../img/bg-list.png) no-repeat 100% 2px; margin:0 10px 0 0; padding:0 10px 0 0; font:1.250em/1.200em 'ford_antenna_regularbold'; }
+.view-three .category, .view-two .category {font-family: 'ford_antennalight';}
+.view-three .category{font:1.125em/1.135em 'ford_antennalight';}
+.view-two .top-links{color: #4C5C66;}
+.view-two .details-area {font-size: 0.625em; color: #4C5C66; padding: 5px 0px 0px 15px;}
+.view-three{width:100%; background-color:#fff; background-image:url(../img/bg-results.png); background-repeat:repeat-x; background-position:0 100%; overflow:hidden; margin:0 0 5px; padding:0 0 25px;}
+.view-three:last-child {background-image:none;}
+#view-three-car-name-desc{padding: 15px 0px 0px 15px;color:#4C5C66; margin:0 0 10px;}
+.view-three-image {display:inline-block; vertical-align:middle; width:25%; margin:0 0 0 3%;}
+.view-two .image-area img, .view-one .image-area img, .view-three-image img{display:block; width:150px; height:100px;}
+.view-three-spec-features {display:inline-block; vertical-align:middle; width:71%;}
+.view-three-spec-features .view-three-spec-detail {min-height:65px;}
+.view-three-spec-header{background-color:#2FC5E6;color:#FFF;padding:5px 10px; font-weight:bold; font-size:0.875em; margin:0 3px 0 0;}
+.view-three-spec-detail{background-color:#D6EBFB;color:#EBF9FD; overflow:hidden; margin:0 3px 0 0;}
+.view-three-spec-inner-holder {background-color:#D6EBFB;float:left;font-size:0.500em;text-align:center;overflow:hidden; width:20%; border-right:3px solid #fff; padding:10px 0 0; height:82px;}
+.view-three-spec-image {margin:0 0 8px;}
+.view-three-spec-text {font-family: 'ford_antennamedium'; line-height:12px; color:#58585b; padding:0 10%;}
+.view-three-spec-image img {display:block; max-width:60px; max-height:34px; margin:0 auto;}
+.view-three-spec-vertical-space {background-color:#F4F4F4;float:left;width: 2px;height: 70px;}
+.view-three-spec-horizontal-space {background-color:#F4F4F4; width:306px; height:2px; float:left;}
+.results-area .arrow-up, .search-area .arrow-up{background: url(../img/arrow-up.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; cursor:pointer; border:none; width: 100%; height:53px; position:absolute; z-index: 10;top: 0; left: 0; text-indent:-9999px; overflow:hidden;}
+.results-area .arrow-up {background:url(../img/arrow-up2.png) no-repeat; width:47px; height:47px; right:29.3%; z-index:11; left:auto; top:5px;}
+.results-area  .arrow-down, .search-area  .arrow-down {background: url(../img/arrow-down.png) no-repeat; cursor:pointer; border:none; width: 100%; height:47px;position:absolute; z-index: 10;left: 0; text-indent:-9999px; overflow:hidden;}
+.results-area .arrow-down {background:url(../img/arrow-down2.png) no-repeat; width:47px; height:47px; right:29.3%; z-index:11; left:auto;}
+.ui-slider-horizontal .ui-slider-handle {top:-0.8em;}
+.row .small-4.search-area{width:380px; z-index:11; overflow-y:scroll; position:relative;}
+.row .small-8.results-area{float:left; width:100%; margin-left:-380px; overflow-y:scroll; position:relative;}
+.row .small-8.results-area .inner-results {margin-left:380px; overflow:hidden;}
+.view-three-spec-holder {overflow:hidden; margin:0 -3px 0 0;}
+.loading, .row .not-found {font-family: "Antenna-Light"; display:table; background: url(../img/bg-not-found.png); color:#fff; width:100%; font-size:1.563em; padding:3px 27px 0 55px; margin:-3px 0 0 -3px;}
+.loading {background:url(../img/bg-loading.png); position:absolute; top:0; right:0; width:100%; height:100.5%; padding:0; z-index:9999;}
+.loading .holder, .row .not-found .holder{display:table-cell; vertical-align:middle;}
+.loading .holder {text-align:center; font-size:1.400em; line-height:1.143em; font-family: 'ford_antennasemibold';}
+#myModal {display:none;}
+.reveal-modal{top:-10px !important;}
+#myModal h2 {font-size:1.250em; line-height:1.250em; font-weight:600; color:#394a5a; text-align:center;}
+#myModal .text-area {font-size:0.875em; line-height:1.357em; height:500px; overflow:auto;}
+#myModal .text-area p{margin:0 0 23px; color:#394a5a;}
+.reveal-modal .close-reveal-modal {background:url(../img/btn-close.png) no-repeat; width:22px; height:21px; text-indent:-9999px; overflow:hidden;}
+.reveal-modal {display:block; }
+.ui-widget-content {border:none; height:7px;}
+.view-three-holder {overflow:hidden;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {z-index:1;}
+@media only screen and (max-width: 1023px) {
+	#myModal .text-area {height:600px;}
+	.view-two .image-area, .view-one .image-area {width:42%; display:inline-block; vertical-align:middle;}
+	.view-two, .view-one {width:100.7%; height:auto;}
+	.view-three-spec-image {font-size:0.5em;}
+	#myModal .text-area {padding:0 25px 0 0;}
+	.results-area .arrow-down, .results-area .arrow-up {right:20%;}
+	.view-three .name {float:none; margin:0 0 10px; display:block; background:none;}
+	.view-three-image {display:block; width:100%; margin:0 0 20px 3%;}
+	.view-three-spec-features {display:block; width:100%;}
+	#arrow-up-car, #arrow-down-car {display:none !important;}
+}

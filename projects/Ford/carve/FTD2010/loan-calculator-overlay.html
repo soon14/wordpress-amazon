@@ -1,0 +1,44 @@
+<!-- 
+    Doris: Content of the following tag will be filled automatically by javascript
+    <span class="symbol"></span>
+    <span class="price"></span>
+    <span class="location"></span>
+-->
+
+<div class="loan-calc-overlay jScrollPaneContainer jScrollPaneScrollable">
+	
+	<div class="column">
+		<div class="title">
+			<p>Price: <span class="symbol"></span> <span class="price"></span></p>
+		</div>
+		<div class="row">
+			<label for="rate">Interest Rate (%)</label>
+			<input type="text" id="rate" name="rate" />
+			<p class="error">invalid</p>
+		</div>
+		<div class="row short">
+			<label for="duration">Loan Duration</label>
+			<input type="text" id="duration" name="duration" /><span>years</span>
+			<p class="error">invalid</p>
+		</div>
+		<div class="row">
+			<label for="payment">Down Payment</label>
+			<input type="text" id="payment" name="payment" />
+			<p class="error">invalid</p>
+		</div>
+	</div>
+	<div class="column">
+		<div class="title location">
+			<p>Location</p>			
+		</div>
+		<p class="loc">Based on pricing for: <span class="location"></span></p>
+		<div class="result">
+			<span>Your Monthly Installment:</span>
+			<span class="symbol"></span>
+			<span class="price"></span>
+		</div>
+	</div>
+	<div class="disclaimer">
+		<p>Disclaimer: The estimated price is based on a vehicle being garaged in region chosen.</p>
+	</div>
+</div>

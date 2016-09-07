@@ -1,0 +1,91 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# These files are concatenated in this order into live/dev.debug.js and then minified into live/prod.min.js
+#	- dev.debug.js is for Developer Debugging 
+#	- prod.min.js is for Production
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+#../../ftd/js/lib/modernizr-1.5.min.js
+../../gux/js/lib/modernizr.js
+../../ftd/js/lib/jquery-1.8.3.js
+#../../gux/js/lib/jquery-1.11.1.js
+
+#../../webappfilter/js/lib/jquery-ui.js
+../../gux/js/lib/jquery-ui.js
+../../ftd/js/lib/jquery.ui.touch-punch.min.js
+../../gux/js/lib/jquery.flexslider.js
+../../gux/js/lib/matchMedia.js
+../../gux/js/lib/picturefill.min.js
+#../../latest-offers/js/lib/jquery.collapsible.js
+../../rad/js/accordion.js
+# Dawood: custom.js will be deleted in the end
+#custom.js
+
+#../../rad/js/lib/foundation.js
+../../gux/js/lib/foundation/foundation.js
+../../gux/js/lib/foundation/foundation.tab.js
+../../gux/js/lib/foundation/foundation.reveal.js
+
+../../ftd/js/lib/jquery.cookie.js
+
+## Fix console.log errors (this is excellent)
+../../lincoln-common/js/lib/logging.js
+
+#underscore and backbone
+../../tools/js/lib/underscore.js
+../../tools/js/lib/backbone.js
+
+#shoppref
+../../ftd/js/lib/es5-shim-parts.js
+../../ftd/js/global-all-platforms.js
+../../ftd/js/shoppref.js
+
+#######################################################################
+common/latest-offers-custom-backbone.js
+common/events.js
+common/constants.js
+common/function.js
+
+##<!--common model/collections !-->
+#common/models.js
+#common/collections.js
+
+###<!--module model/collections !-->
+modules/filter/models.js
+modules/filter/collections.js
+
+modules/offer/models.js
+modules/offer/collections.js
+
+#common/builder.js
+
+#latest-offers.js
+
+###<!--common & module views !-->
+modules/filter/views.js
+modules/offer/views.js
+
+
+###<!--modules !-->
+#modules/filter/filter.js
+#modules/offer/offer.js
+#######################################################################
+#Omniture
+../../ftd/js/lib/jquery.tinypubsub.js
+../../ftd/js/lib/site-catalyst.org.min.js
+
+#context
+../../ftd/js/context.js
+
+#tracking
+../../ftd/js/analytics-fps-impl.js
+../../ftd/js/analytics-omniture-impl.js
+../../ftd/js/analytics.js
+../../ftd/js/tracking.js
+../../ftd/js/analytics-tag.js
+
+#../../ftd/js/lib/jquery.tmpl.min.js
+#../../ftd/js/mini-plugins.js
+#global.js
+
+#######################
+latest-offers.js

@@ -1,0 +1,112 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# These files are concatenated in this order into live/dev.debug.js and then minified into live/prod.min.js
+#	- dev.debug.js is for Developer Debugging 
+#	- prod.min.js is for Production
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+## Preface (You should edit project name in this file)
+#intro.js
+
+#### Files in correct order that reside in /themes/default/js/lib
+#### PLEASE NOTE: jquery is not included here, it is sourced by default from the CDN.
+#### PLEASE NOTE: modernizr is not included here, it has to be referenced in the <head> as a seperate file.
+
+##  Optional Library includes
+../../ftd/js/ready.js
+
+../../ftd/js/lib/jquery-1.8.3.js
+../../lincoln-common/js/lib/jquery-ui.min.js
+../../lincoln-common/js/lib/jQuery.XDomainRequest.js
+../../rad/js/lib/custom.modernizr.min.js
+../../ftd/js/lib/es5-shim-parts.js
+../../ftd/js/lib/jquery.cookie.js
+../../ftd/js/lib/jquery.bxslider.js
+../../ftd/js/lib/uuid.js
+../../ftd/js/mini-plugins.js
+../../ftd/js/lib/jquery.tinypubsub.js
+
+## templates
+../../ftd/js/lib/jquery.tmpl.min.js
+
+##global setting
+../../lincoln-common/js/initial.js
+
+## Fix console.log errors (this is excellent)
+../../lincoln-common/js/lib/logging.js
+
+## menu
+multi-platform-links.js
+../../ftd/js/megamenu.js
+../../ftd/js/lib/polyfiller.js
+
+# Omniture
+../../ftd/js/lib/site-catalyst.org.min.js
+../../gux/js/personalisation/personalisation.js
+../../ftd/js/analytics-fps-impl.js
+../../ftd/js/analytics-omniture-impl.js
+../../ftd/js/analytics.js
+
+##360 overlay
+../../ftd/js/lib/jquery.swfobject.1-1-1.js
+../../ftd/js/lib/jquery.jcarousel.js
+../../ftd/js/lib/jquery.ui.position.js
+../../ftd/js/lib/jquery.bbq.js
+../../ftd/js/lib/jquery.validate.min.js
+../../lincoln-common/js/lib/jquery.reel.js
+../../ftd/js/lib/jquery.touchwipe.1.1.1.js
+#../../lincoln-common/js/overlay-fullscreen.js
+../../ftd/js/popup.js
+../../ftd/js/slider.js
+#../../ftd/js/global.js
+##form close btn
+../../ftd/js/global-all-platforms.js
+../../ftd/js/allplatforms-backbutton.js
+
+# context needs to be after app.js as it relies on shoppref.js
+../../ftd/js/context.js
+../../lincoln-common/js/lincolnContext.js
+../../ftd/js/tracking.js
+../../ftd/js/analytics-tag.js
+
+../../form-builder/js/statecitymap.js
+../../form-builder/js/formbuilder-dealer.js
+
+../../lincoln-common/js/overlay.js
+../../lincoln-common/js/video.js
+../../lincoln-common/js/loadimage.js
+../../lincoln-common/js/welcome-bar.js
+../../lincoln-common/js/rotating-banner.js
+../../lincoln-common/js/row-expander.js
+../../lincoln-common/js/load-mask.js
+
+#the following js files is only for RAD site
+
+menu-toggle.js
+form-validation.js
+isexist-validation.js
+form-related.js
+rad-overlay.js
+save-buildandprice-config.js
+common-overlay-links.js
+calendar.js
+hideCloseBar.js
+
+# gux dealer locator to lincoln
+../../gux/js/lib/jquery.uniform.min.js
+../../gux/js/lib/underscore.js
+../../gux/js/modules/cookie.js
+
+../../gux/js/lib/googleMaps.js
+#../../gux/js/modules/bingMapController.js
+../../gux/js/modules/dealerlocator.js
+../../gux/js/modules/dealerlocator-alt.js
+../../gux/js/modules/googleMapController.js
+../../gux/js/modules/tools.js
+../../gux/js/modules/viewport.js
+../../gux/js/modules/locationAware.js
+../../gux/js/modules/commonMapController.js
+../../gux/js/modules/uniform.js
+../../gux/js/modules/underscoreInterpolate.js
+../../gux/js/modules/placeholder.js
+
+

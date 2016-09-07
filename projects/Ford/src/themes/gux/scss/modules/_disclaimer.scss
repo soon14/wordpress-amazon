@@ -1,0 +1,39 @@
+.disclaimer {
+
+	.accordion {
+		dd {
+			> a {background:#fff; border-bottom:1px solid #CCC; border-top:1px solid #CCC; color:$cta-blue; font-size:rem-calc(14); padding:20px 40px 20px 20px; position:relative; line-height:1.5;
+				.icon {background-position:right -218px; width:20px; height:10px; top:50%; position:absolute; margin-top:-5px; right:25px;}
+			}
+			> .content {margin-bottom: 10px; padding:40px 14%; max-height:240px; overflow-y: auto; background:#F7F7F7; scrollbar-face-color:#42a0d2; scrollbar-track-color:#e5e5e5; scrollbar-arrow-color:#e5e5e5;
+				&::-webkit-scrollbar {width:12px;}
+				&::-webkit-scrollbar-track {background:#e5e5e5;}
+				&::-webkit-scrollbar-thumb {background:#42a0d2;}
+				&.noscroll {max-height:none;}
+			}
+			&.active {
+				> a {
+					.icon {background-position:right -170px;}
+				}
+			}
+		}
+		.disclaimer-text {color:$text-gray; list-style:none; font-family:$font-family-regular; font-size:rem-calc(12); margin:0 auto 30px;
+			li {position:relative; padding-bottom:6px;
+				span {position:absolute; left:-23px;}
+			}
+		}
+	}
+
+	@media #{$large-up} {
+
+		.accordion {
+			dd {
+				> a {text-align:center;
+					.icon {display:inline-block; margin-left:14px; position:static; margin-top:0;}
+				}
+			}
+			.noscroll .disclaimer-text {margin:0 auto;}
+		}
+
+	}
+}

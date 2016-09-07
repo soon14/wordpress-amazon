@@ -1,0 +1,177 @@
+<section class="model-compare" data-ng-controller="CompareCtrl">
+
+  <div data-ng-class="(selectedModels.length >= 3) ? 'mw-wrapper compare-3-models' : 'mw-wrapper compare-2-models'">
+    <div class="row fullwidth mw-header">
+      <div class="large-12 columns">
+        <div class="large-6 small-12 columns">
+          <h1>Compare Models</h1>
+        </div>
+        <div class="large-6 small-12 columns end">
+          <p>Prices for {{formattedDate}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row fullwidth mw-content">
+      <div class="large-12 columns">
+        <section class="selected-sticky" sticky-headers>
+          <div class="model-hero">
+              <div class="columns">
+                  <div data-ng-class="(selectedModels.length >= 3) ? 'model-container model-add small-3 large-3 columns' : 'model-container model-add small-6 large-4 columns'">
+                      <div class="model-data columns">
+                          <div class="columns buttons">
+                              <a href="#" class="button alt" itemprop="url" reveal-fix="add">Add Model</a>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div data-ng-repeat="compareModel in compareModels" data-ng-class="(selectedModels.length >= 3) ? 'model-container small-3 large-3 columns' : 'model-container small-6 large-4 columns'">
+                      <div class="model-data columns">
+                          <span data-ng-class="(selectedModels.length >= 3) ? 'icon icon-remove show-for-large-up' : 'icon icon-remove hide'" data-ng-click="discardModel(compareModel.derivativeId);"></span>
+                          <h2 data-ng-bind-html="renderHtml(compareModel.name)"></h2>
+                          <img class="show-for-large-up" data-ng-src="{{compareModel.showroomImageThumbnailURL}}" alt="{{compareModel.name | htmlToPlainText}}" itemprop="image" />
+                          <a class="show-for-large-up" href="#" data-ng-click="isChangeModel(compareModel.derivativeId);" reveal-fix="change">Change Model</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+        
+        <section class="selected-sticky change-sticky" sticky-headers>
+          <div class="model-hero">
+            <div class="columns">
+
+                <div data-ng-repeat="compareModel in compareModels" data-ng-class="(selectedModels.length >= 3) ? 'model-container small-3 large-3 columns' : 'model-container small-6 large-4 columns'">
+                      <div class="model-data columns">
+                          <a href="#" class="change" data-ng-click="isChangeModel(compareModel.derivativeId);" reveal-fix="change">Change Model</a>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+        </section>
+
+        <section class="model-hero">
+
+            <div data-ng-class="(selectedModels.length >= 3) ? 'model-container model-add small-4 large-3 columns' : 'model-container model-add small-6 large-4 columns'">
+                <div class="model-data columns">
+                    <img data-ng-src="{{imageUrl}}" alt="image 2" itemprop="image" />
+                    <div class="columns buttons">
+                        <a href="#" class="button alt" itemprop="url" reveal-fix="add">Add Model</a>
+                    </div>
+                </div>
+            </div>
+
+            <div data-ng-repeat="compareModel in compareModels" data-ng-class="(selectedModels.length >= 3) ? 'model-container small-4 large-3 columns' : 'model-container small-6 large-4 columns'">
+                <div class="model-data columns">
+                    <span data-ng-class="(selectedModels.length >= 3) ? 'icon icon-remove show-for-large-up' : 'icon icon-remove hide'" data-ng-click="discardModel(compareModel.derivativeId);"></span>
+                    <h2 class="show-for-large-up" data-ng-bind-html="renderHtml(compareModel.name)"></h2>
+                    <img data-ng-src="{{compareModel.showroomImageThumbnailURL}}" alt="{{compareModel.name | htmlToPlainText}}" itemprop="image" />
+                    <div class="large-12 columns model-content">
+                        <ul class="columns">
+                            <li class="small-12 xxlarge-6 columns">Starting price <span itemscope="" itemtype="http://schema.org/PriceSpecification" itemprop="price"><sup>$</sup>{{compareModel.price | priceFormatter}}</span></li>
+                            <li class="small-12 xxlarge-6 columns">EPA est. mpg {{compareModel.metadata.fuel['city'].name}}/{{compareModel.metadata.fuel['hwy'].name}}<span>{{compareModel.metadata.fuel['city'].value}}/{{compareModel.metadata.fuel['hwy'].value}}</span></li>
+                            <li class="small-12 xxlarge-6 columns end">{{compareModel.metadata.seating.name}} for<span>{{compareModel.metadata.seating.value}}</span></li>
+                            <!-- li class="small-12 large-6 columns">
+                                <p><span itemprop="price">$225 for 39 Months </span><a href="#"><span class="icon icon-info"></span></a></p>
+                                <a href="#" class="view">View all offers <span class="icon icon-view-more"></span></a>
+                            </li -->
+                        </ul>
+                        <div class="kba-buttons columns show-for-large-up">
+                            <a href="#" class="small-12 xxlarge-6 columns link-cta">
+                                <span class="icon icon-build-price"></span>
+                                <span class="label-link">Build &amp; Price</span>
+                            </a>
+                            <a href="#" class="small-12 xxlarge-6 columns link-cta">
+                                <span class="icon icon-search-inventory"></span>
+                                <span class="label-link">Search Inventory</span>
+                            </a>
+                        </div>
+                        <div class="change-button columns buttons show-for-large-up">
+                            <a href="#" class="button alt" itemprop="url" data-ng-click="isChangeModel(compareModel.derivativeId);" reveal-fix="change">Change</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+      </div>
+    </div>
+
+    <div class="row fullwidth accordion-block model-walk-accordion">
+        <form class="uniform">
+
+            <div class="tab-item" data-ng-repeat="group in groups" data-ng-init="$groupIndex = $index">
+          
+                <h2 data-ng-class="{open:$first}" class="tab-nav" accordion-tab>{{group.name}}
+                   <div class="icon-holder">
+                     <span class="icon icon-acc-arrow"></span>
+                  </div>
+                </h2>
+
+                <div data-ng-if="$first" data-ng-style="{'display':'block'}" class="tab-contents">
+                  <div class="tab-data">
+
+                    <div class="option">
+                      <input id="grp1-difference" class="square" type="checkbox" name="difference" data-ng-click="differencesGrp1 = !differencesGrp1;" ng-modal="differencesGrp1"/>
+                      <label for="grp1-difference">Compare by differences</label>
+                    </div>
+
+                    <div class="column-holder columns title-waypoint" data-ng-repeat="category in group.categories" data-ng-init="$categoryIndex = $index">
+
+                      <div data-ng-class="(selectedModels.length >= 3) ? 'title-holder small-12 large-3 columns' : 'title-holder small-12 large-4 columns'">
+                        <h2 class="title-text">{{category.name}}</h2>
+                      </div>
+
+                      <div data-ng-class="(selectedModels.length >= 3) ? 'table-holder small-12 large-9 columns' : 'table-holder small-12 large-8 columns'">
+                        <table>
+                          <tr data-ng-repeat="feature in category.features" data-ng-init="$featureIndex = $index" ng-show="toggleDiff(differencesGrp1, $groupIndex, $categoryIndex,$featureIndex);">
+                            <td data-ng-repeat="compareModel in compareModels">
+                              <p>{{(compareModels[$index].groups[$groupIndex].categories[$categoryIndex].features[$featureIndex].name) || compareModels[$index].groups[$groupIndex].categories[$categoryIndex].features[$featureIndex].value}}</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                <div data-ng-if="!$first" class="tab-contents">
+                  <div class="tab-data">
+
+                    <div class="option">
+                      <input id="in-difference" class="square" type="checkbox" name="difference" data-ng-click="differencesGrp2 = !differencesGrp2;" ng-modal="differencesGrp2"/>
+                      <label for="in-difference">Compare by differences</label>
+                    </div>
+
+                    <div class="column-holder columns title-waypoint" data-ng-repeat="category in group.categories" data-ng-init="$categoryIndex = $index" sticky-title>
+
+                      <div data-ng-class="(selectedModels.length >= 3) ? 'title-holder small-12 large-3 columns' : 'title-holder small-12 large-4 columns'">
+                        <h2 class="title-text">{{category.name}}</h2>
+                      </div>
+
+                      <div data-ng-class="(selectedModels.length >= 3) ? 'table-holder small-12 large-9 columns' : 'table-holder small-12 large-8 columns'">
+                        <table>
+                          <tr data-ng-repeat="feature in category.features" data-ng-init="$featureIndex = $index" ng-show="toggleDiff(differencesGrp2, $groupIndex, $categoryIndex,$featureIndex);">
+                            <td data-ng-repeat="compareModel in compareModels">
+                              <p>{{(compareModels[$index].groups[$groupIndex].categories[$categoryIndex].features[$featureIndex].name) || compareModels[$index].groups[$groupIndex].categories[$categoryIndex].features[$featureIndex].value}}</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+            </div>
+        </form>
+    </div> 
+
+  </div>
+
+</section>

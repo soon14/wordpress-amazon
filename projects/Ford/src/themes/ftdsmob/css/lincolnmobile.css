@@ -1,0 +1,600 @@
+/****************************************
+	
+	Lincoln Smart Mobile Styles 2012
+
+****************************************/
+
+body {
+	background-color: #fff;
+}
+a {
+	color: #6C6C6C;
+}
+.ui-body-c a.ui-link:hover {
+	color: #6C6C6C;
+}
+.ui-bar-c a.ui-link:hover {
+	color: #fff;
+}
+
+
+/******	Typography		******/
+
+h3 {
+	font-size: 18px;
+}
+h5 {
+	color: #666;
+}
+.article h3 {
+	color: #bb5517;
+	font-weight: bold;
+	margin: 0.2em 0 0.5em;
+}
+.dealerinfo h3 {
+	color: #bb5517;
+	margin-bottom: 0.45em;
+}
+.article h5 {
+	color: #333;
+	font-size: 15px;
+	font-weight: bold;
+}
+div[data-role="content"] > h5 {
+	color: #000;
+}
+.disclaimer {
+	font-size: 10px;
+}
+.notify {
+	color: #033333;
+	font-size: 13px;
+}
+.nobold {
+	font-weight: 400;
+}
+sup {
+	font-size: 8px;
+}
+
+
+/******	Icons			******/
+
+.icon-dealer, .icon-showroom, .icon-assist, .icon-benefits, .icon-promo, .icon-newsroom, .icon-next, .icon-alert, .icon-brochures, .icon-testdrive, .icon-dealer, .icon-quote, .icon-owners, .icon-certified, .icon-share, .icon-support  {
+	background: url("../img/lincoln/icons.png") 0 0 no-repeat;
+	display: block;
+	height: 20px;
+	margin: 2px auto;
+	width: 20px;
+}
+.icon-showroom {
+	background-position: 0 -57px;
+}
+.icon-assist {
+	background-position: 0 -113px;
+}
+.icon-benefits {
+	background-position: 0 -176px;
+}
+.icon-testdrive {
+	background-position: 0 -1259px;
+}
+.icon-brochures {
+	background-position: 0 -1317px;
+}
+.icon-quote {
+	background-position: 0 -1373px;
+}
+.icon-next {
+	background-position: 0 -355px;
+}
+.icon-owners {
+	background-position: 1px -1422px;
+}
+.icon-certified {
+	background-position: 0 -238px;
+}
+.icon-share {
+	background-position: 2px -1480px;
+}
+.icon-support {
+	background-position: 1px -301px;
+}
+.video .icon {
+	background-position: 0 -760px;
+}
+.video:hover .icon {
+	background-position: 0 -849px;
+}
+
+/******	Header			******/
+
+.ui-header {
+	background: #6b5428;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#4f4730),to(#6b5428));
+	background-image: -webkit-linear-gradient(#4f4730,#6b5428);
+	background-image: -moz-linear-gradient(#4f4730,#6b5428);
+	background-image: -ms-linear-gradient(#4f4730,#6b5428);
+	background-image: -o-linear-gradient(#4f4730,#6b5428);
+	background-image: linear-gradient(#4f4730,#6b5428);
+}
+.ui-header:first-child {
+	margin: 0;
+	padding: 0.5em 0 0.2em;
+}
+.ui-header .ui-btn-text {
+	font-size: 11px;
+}
+.ui-header .ui-btn-up-c {
+	border: 1px solid #495c5f;
+	color: #4a5e62;
+}
+.ui-header .back {
+	background: none;
+	border: none;
+}
+.ui-btn-up-c.ui-shadow {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.ui-header .ui-title {
+	margin: 0 40px 0;
+}
+.ui-header .ui-btn-right {
+	top: 15px;
+}
+.ui-btn-up-b {
+	border: 1px solid #4b5e62;
+	background: #5f7272;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 0 -1px 1px #586b6b;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#728a8a),to(#5f7272));
+	background-image: -webkit-linear-gradient(#728a8a,#5f7272);
+	background-image: -moz-linear-gradient(#728a8a,#5f7272);
+	background-image: -ms-linear-gradient(#728a8a,#5f7272);
+	background-image: -o-linear-gradient(#728a8a,#5f7272);
+	background-image: linear-gradient(#728a8a,#5f7272);
+}
+.ui-header .ui-btn-hover-b, .ui-controlgroup-horizontal .ui-btn-active {
+	background: #596b6b;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#4a5959),to(#596b6b));
+	background-image: -webkit-linear-gradient(#4a5959,#596b6b);
+	background-image: -moz-linear-gradient(#4a5959,#596b6b);
+	background-image: -ms-linear-gradient(#4a5959,#596b6b);
+	background-image: -o-linear-gradient(#4a5959,#596b6b);
+	background-image: linear-gradient(#4a5959,#596b6b);
+}
+ .ui-header .ui-controlgroup-horizontal .ui-btn-inner {
+	border: 1px solid #46585c;
+	font-size: 11px;
+}
+.ui-header .ui-controlgroup-horizontal .ui-btn-inner.ui-corner-left {
+	border-left: none;
+}
+.back.ui-btn-left {
+	left: 9px;
+	top: 17px;
+}
+.back.ui-btn-left .ui-btn-inner {
+	border: none;
+	color: #fff;
+	padding-left: 17px;
+	text-indent: 0;
+	text-shadow: none;
+}
+a:hover.ui-btn-hover-c {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.back .ui-btn-inner .ui-btn-text {
+	font-size: 13px;
+}
+.ui-icon-back-btn {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: url("../img/lincoln/icons.png") 0 -1537px no-repeat;
+	border-radius: 0;
+}
+.ui-header .ui-btn-icon-left .ui-btn-inner .ui-icon{
+	left:4px;
+}
+
+/******	Content			******/
+
+.black {
+	background: #576969;
+	font-size: 18px;
+	padding: 6px 15px;
+	text-shadow: 0 -1px 1px #2b3434;
+}
+.gray {
+	background-color: #f3f0e8;
+	color: #646e77;
+	font-size: 15px;
+	padding: 6px 0 6px 13px;
+}
+.article {
+	font-size: 15px;
+}
+.article ul {
+	margin: 0 0 1em;
+}
+.article li {
+	padding-bottom: 5px;
+}
+.color {
+	margin: 0 0 12px;
+}
+.colors {
+	margin: 8px 0 20px;
+}
+.pager {
+	color: #666;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+
+/******	Nav Buttons		******/
+
+.btn.alcenter .ui-btn-text {
+	color: #4c4c4c;
+}
+div[data-role="content"] > .ui-controlgroup .ui-btn-inner {
+	padding: 9px 12px;
+}
+div[data-role="content"] > .ui-controlgroup {
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,.3);
+	box-shadow: 0 0 3px rgba(0,0,0,.3);
+}
+.ui-corner-top {
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	border-top-left-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-top-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.ui-corner-bottom {
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.navbtns a.ui-btn-up-b, .btn a.ui-btn-up-b, .fbform .buttons .ui-btn-up-c .ui-btn-inner, .submit .ui-btn-up-b {
+	border: 1px solid #81411d;
+	background: #6e6656;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 0 -1px 1px #73695d;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#928678),to(#6e6656));
+	background-image: -webkit-linear-gradient(#928678,#6e6656);
+	background-image: -moz-linear-gradient(#928678,#6e6656);
+	background-image: -ms-linear-gradient(#928678,#6e6656);
+	background-image: -o-linear-gradient(#928678,#6e6656);
+	background-image: linear-gradient(#928678,#6e6656);
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.3);
+	box-shadow: 0 1px 4px rgba(0,0,0,.3);
+}
+.navbtns a.ui-btn-up-b .ui-icon {
+	background: url("../img/lincoln/icons.png") 0 -1581px no-repeat;
+}
+.navbtns .ui-btn-hover-b, .btn a.ui-btn-hover-b, .fbform .buttons .ui-btn-hover-c .ui-btn-inner, .submit .ui-btn-hover-b {
+	border: 1px solid #81411d;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#6e6656),to(#928678));
+	background-image: -webkit-linear-gradient(#6e6656,#928678);
+	background-image: -moz-linear-gradient(#6e6656,#928678);
+	background-image: -ms-linear-gradient(#6e6656,#928678);
+	background-image: -o-linear-gradient(#6e6656,#928678);
+	background-image: linear-gradient(#6e6656,#928678);
+	text-shadow: 0 -1px 1px #73695d;
+}
+.navbtns .ui-btn-hover-b .ui-icon-arrow-r {
+	background: url("../img/lincoln/icons.png") 0 -1581px no-repeat;
+}
+
+
+/******	Dealer Locator	******/
+
+.ui-body-c {
+	color: #404040;
+}
+.dealerlist {
+	font-size: 15px;
+}
+.dealerlist .title button, .dealerlist .title a.ui-link {
+	color: #bb5517;
+	font-size: 15px;
+}
+.dealerlist .title button:hover {
+	border-bottom: 1px solid #bb5517;
+}
+.dealer h2 {
+	color: #404040;
+	font-size: 18px;
+}
+.dealer input {
+	font-size: 15px;
+}
+.dealer .ui-field-contain .ui-btn-inner {
+	padding: 9px 10px;
+	font-weight: 400;
+	text-align: left;
+}
+
+
+/******	Showlists		******/
+
+.showlist li {
+	border-bottom: 1px solid #e3e3e3;
+}
+.showlist li:last-child {
+	border-bottom: none;
+}
+.showlist img {
+	margin-right: 13px;
+}
+.showlist b, .showlist strong {
+	color: #404040;
+	display: block;
+	font-size: 15px;
+	margin: 1.45em 0 0;
+}
+.showlist .hot {
+	background-color: #576969;
+}
+.showlist h2 {
+	color: #404040;
+}
+
+
+/******	Dialog Menu		******/
+
+.ui-body-a, .ui-dialog.ui-overlay-a {
+	border: none;
+	background: #695328;
+	color: #fff;
+	text-shadow: 0 1px 0 #000;
+	font-weight: normal;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#53492f),to(#695328));
+	background-image: -webkit-linear-gradient(#53492f,#695328);
+	background-image: -moz-linear-gradient(#53492f,#695328);
+	background-image: -ms-linear-gradient(#53492f,#695328);
+	background-image: -o-linear-gradient(#53492f,#695328);
+	background-image: linear-gradient(#53492f,#695328);
+}
+.ui-dialog .wrapper {
+	background: none;
+}
+.ui-dialog .share {
+	box-shadow: 0px 2px 2px #ccc inset, 0 1px 3px #392d17;
+	margin-bottom: .5em;
+	padding-bottom: .4em;
+}
+.ui-dialog .share .txtbtn {
+	font-size: 15px;
+}
+.ui-dialog .share .navbtns {
+	margin: .6em auto 0;
+}
+.ui-dialog .ui-btn-text {
+	font-size: 13px;
+}
+.share .txtbtn .ui-btn-inner {
+	padding: 0.4em 0.5em 0.5em;
+}
+.navbtns .ui-btn-inner, .btn a.ui-btn .ui-btn-inner {
+	border-radius: 5px;
+	padding: 9px 10px;
+	text-indent: 0;
+}
+.navbtns .ui-btn-text span {
+	margin-right: 0.35em;
+}
+.share .navbtns .ui-btn-up-g, .share .navbtns .ui-btn-hover-g {
+	margin: 0.35em 0.4em;
+}
+.navbtns .ui-btn {
+	border-radius: 5px;
+	margin: 0.2em 5px;
+}
+.navbtns .ui-btn-icon-left .ui-btn-inner {
+	padding: 8px 10px;
+}
+
+
+/******	Home			******/
+
+.imglink .ui-btn {
+	border-bottom: 1px solid #cbcecf;
+	box-shadow: 0px 4px 6px #dcdee0;
+}
+.imglink .ui-btn-text {
+	color: #333;
+	font-size: 15px;
+}
+.imglink .ui-btn-text span {
+	color: #333;
+	font-size: 13px;
+	font-weight: normal;
+}
+.imglink .ui-btn-inner {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	border-top: 1px solid #a6a291;
+	padding: 0.6em 10px;
+}
+.imglink .icon-next {
+	width: 10px;
+}
+
+
+/******	Form			******/
+
+.ui-btn-inner, .fbform .ui-btn-inner {
+	padding: 9px 10px;
+}
+
+input.ui-input-text, textarea.ui-input-text {
+	font-size: 15px;
+	padding: 6px 10px;
+}
+.hardpanel .fbform {
+	font-size: 15px;
+	margin: 2em 14px;
+}
+.fbform label {
+	font-size: 15px;
+	padding: 0;
+}
+.fbform input.ui-input-text, .fbform .ui-checkbox label {
+	border-radius: 0.3em;
+	margin: .5em 0;
+}
+.fbform .ui-checkbox + label {
+	margin: -37px 20px 20px 45px;
+}
+.fbform > p.mandatory {
+	font-size: 13px;
+	margin: 20px 0;
+}
+.fbform .ui-btn {
+	border-radius: 0.3em;
+	margin: .5em 0;
+}
+.fbform .ui-select {
+	width: 100%;
+}
+.fbform .buttons .ui-btn-up-a {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: 1px solid #ccc;
+	background: #eee;
+	font-weight: bold;
+	color: #444;
+	text-shadow: 0 1px 1px #f6f6f6;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#fdfdfd),to(#eee));
+	background-image: -webkit-linear-gradient(#fdfdfd,#eee);
+	background-image: -moz-linear-gradient(#fdfdfd,#eee);
+	background-image: -ms-linear-gradient(#fdfdfd,#eee);
+	background-image: -o-linear-gradient(#fdfdfd,#eee);
+	background-image: linear-gradient(#fdfdfd,#eee);
+}
+.fbform .buttons .ui-btn-hover-a {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: 1px solid #bbb;
+	background: #eee;
+	font-weight: bold;
+	color: #101010;
+	text-shadow: 0 1px 1px #fff;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#ededed),to(#dadada));
+	background-image: -webkit-linear-gradient(#ededed,#dadada);
+	background-image: -moz-linear-gradient(#ededed,#dadada);
+	background-image: -ms-linear-gradient(#ededed,#dadada);
+	background-image: -o-linear-gradient(#ededed,#dadada);
+	background-image: linear-gradient(#ededed,#dadada);
+}
+.fbform .buttons .ui-btn-down-a {
+	border: 1px solid #808080;
+	background: #fdfdfd;
+	font-weight: bold;
+	color: #111;
+	text-shadow: 0 1px 1px #fff;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#fdfdfd));
+	background-image: -webkit-linear-gradient(#eee,#fdfdfd);
+	background-image: -moz-linear-gradient(#eee,#fdfdfd);
+	background-image: -ms-linear-gradient(#eee,#fdfdfd);
+	background-image: -o-linear-gradient(#eee,#fdfdfd);
+	background-image: linear-gradient(#eee,#fdfdfd);
+}
+.fbform .buttons .ui-btn-up-a .ui-btn-inner, .fbform .buttons .ui-btn-hover-a .ui-btn-inner {
+	border: none;
+	background: none;
+	font-weight: bold;
+	color: #4c4c4c;
+	text-shadow: 0 1px 1px #f6f6f6;
+}
+.ui-focus {
+	-moz-box-shadow: 0 0 12px #999;
+	-webkit-box-shadow: 0 0 12px #999;
+	box-shadow: 0 0 12px #999;
+	outline: none;
+}
+.dealer {
+	font-size: 15px;
+	margin: 1em 14px;
+	text-indent: 0;
+}
+.dealer .ui-field-contain label {
+	font-size: 15px;
+	margin-left: 0;
+}
+.dealer input {
+	border-radius: 0.3em;
+	margin-left: 0;
+	text-indent: 0;
+}
+.dealer .ui-btn {
+	border-radius: 0.3em;
+}
+.dealer .ui-field-contain .ui-btn, .submit .ui-btn {
+	margin: .5em 0;
+}
+
+
+/******	Footer			******/
+
+.ui-footer .dark {
+	background: none;
+	font-size: 9px;
+	margin: 0 12px;
+	padding: .8em 0;
+	text-align: left;
+	width: 100%;
+}
+.ui-footer {
+	background: #6b5428;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#4f4730),to(#6b5428));
+	background-image: -webkit-linear-gradient(#4f4730,#6b5428);
+	background-image: -moz-linear-gradient(#4f4730,#6b5428);
+	background-image: -ms-linear-gradient(#4f4730,#6b5428);
+	background-image: -o-linear-gradient(#4f4730,#6b5428);
+	background-image: linear-gradient(#4f4730,#6b5428);
+	border: none;
+	margin: 30px 0 0;
+	text-align:  center;
+}
+.ui-footer ul {
+	border-bottom: none;
+	margin: 0 auto;
+	padding: .6em 0 0;
+	text-align: left;
+}
+.ui-footer p {
+	border-bottom: 1px solid #fff;
+	margin: 0.6em 12px 0;
+	padding-bottom: 0.8em;
+}
+.ui-bar-c {
+	text-shadow: none;
+}
+.ui-footer a.ui-link, .ui-footer a.ui-link:visited {
+	color: #fff;
+	font-size: 13px;
+	font-weight: normal;
+}
+.ui-footer img {
+	padding: 12px 0 15px;
+}

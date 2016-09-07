@@ -1,0 +1,232 @@
+{
+  "model": {
+    "vehicleAssetId": 1234567890123,
+    "nameplateName": "新福克斯",
+    "modelName": "三厢1.6手动舒适型",
+    "year": 2015,
+    "price": 59999,
+    "programs": [
+      {
+        "name": "经销商特惠方案",
+        "type": 3,
+        "products": [
+          {
+            "name": "安心无忧含延保贷",
+            "type": 3,
+            "terms": [
+              {
+                "term": 12,
+                "isDefault": true,
+                "productCode": "R41",
+                "customerRate": 7.99,
+                "baseRate": 11.33,
+                "oemSubvention": 0,
+                "ewPackage": 
+                 {
+                    "name": "至尊关爱",
+                    "price": 5800
+                  }
+              },
+              {
+                "term": 24,
+                "isDefault": false,
+                "productCode": "R42",
+                "customerRate": 6.99,
+                "baseRate": 10.33,
+                "oemSubvention": 0,
+                "ewPackage": 
+                  {
+                    "name": "精选关爱",
+                    "price": 3700
+                  }
+              }
+            ]
+          },
+          {
+            "name": "等额本息便利贷",
+            "type": 1,
+            "terms": [
+              {
+                "term": 12,
+                "isDefault": true,
+                "productCode": "FY2",
+                "customerRate": 7.88,
+                "baseRate": 11.03,
+                "oemSubvention": 0
+              },
+              {
+                "term": 24,
+                "isDefault": false,
+                "productCode": "FY3",
+                "customerRate": 6.88,
+                "baseRate": 10.03,
+                "oemSubvention": 0
+              }
+            ]
+          },
+          {
+            "name": "半付半贷",
+            "type": 2,
+            "terms": [
+              {
+                "term": 12,
+                "isDefault": true,
+                "productCode": "HY1",
+                "customerRate": 0,
+                "baseRate": 10.03,
+                "oemSubvention": 0
+              }
+            ]
+          }          
+        ]
+      },{
+        "name": "限时特惠方案",
+        "type": 1,
+        "products": [
+          {
+            "name": "安心无忧含延保贷",
+            "type": 3,
+            "terms": [
+              {
+                "term": 12,
+                "isDefault": true,
+                "productCode": "R41",
+                "customerRate": 7.99,
+                "baseRate": 11.33,
+                "oemSubvention": 0,
+                "ewPackage": 
+                  {
+                    "name": "至尊关爱",
+                    "price": 5800
+                  }
+              },
+              {
+                "term": 24,
+                "isDefault": false,
+                "productCode": "R42",
+                "customerRate": 6.99,
+                "baseRate": 10.33,
+                "oemSubvention": 0,
+                "ewPackage": 
+                  {
+                    "name": "精选关爱",
+                    "price": 3700
+                  }
+              }
+            ]
+          },
+          {
+            "name": "等额本息便利贷",
+            "type": 1,
+            "terms": [
+              {
+                "term": 12,
+                "isDefault": true,
+                "productCode": "FY2",
+                "customerRate": 7.88,
+                "baseRate": 11.03,
+                "oemSubvention": 0
+              },
+              {
+                "term": 24,
+                "isDefault": false,
+                "productCode": "FY3",
+                "customerRate": 6.88,
+                "baseRate": 10.03,
+                "oemSubvention": 0
+              }
+            ]
+          },
+          {
+            "name": "半付半贷",
+            "type": 2,
+            "terms": [
+              {
+                "term": 12,
+                "isDefault": true,
+                "productCode": "HY1",
+                "customerRate": 0,
+                "baseRate": 10.03,
+                "oemSubvention": 0
+              }
+            ]
+          }          
+        ]
+      },
+       {
+        "name": "标准金融方案",
+        "type": 2,
+        "products": [
+          {
+            "name": "等额本息便利贷",
+            "type": 1,
+            "terms": [
+              {
+                "term": 12,
+                "isDefault": false,
+                "productCode": "FY2",
+                "customerRate": 7.88,
+                "baseRate": 11.03,
+                "oemSubvention": 0
+              },
+              {
+                "term": 24,
+                "isDefault": true,
+                "productCode": "FY3",
+                "customerRate": 6.88,
+                "baseRate": 10.03,
+                "oemSubvention": 0
+              }
+            ]
+          },
+          {
+            "name": "半付半贷",
+            "type": 2,
+            "terms": [
+              {
+                "term": 12,
+                "isDefault": true,
+                "productCode": "HY1",
+                "customerRate": 0,
+                "baseRate": 10.03,
+                "oemSubvention": 0
+              }
+            ]
+          },
+          {
+            "name": "安心无忧含延保贷",
+            "type": 3,
+            "terms": [
+              {
+                "term": 12,
+                "isDefault": true,
+                "productCode": "R41",
+                "customerRate": 7.99,
+                "baseRate": 11.33,
+                "oemSubvention": 0,
+                "ewPackage": 
+                  {
+                    "name": "至尊关爱",
+                    "price": 5800
+                  }
+              },
+              {
+                "term": 24,
+                "isDefault": false,
+                "productCode": "R42",
+                "customerRate": 6.99,
+                "baseRate": 10.33,
+                "oemSubvention": 0,
+                "ewPackage": 
+                  {
+                    "name": "精选关爱",
+                    "price": 3700
+                  }
+              }
+            ]
+          }
+        ]
+      }     
+    ]
+  }
+}

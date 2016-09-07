@@ -1,0 +1,138 @@
+#header{ position: relative; z-index: 10;
+	
+	.header-wrapper{ background: $secondary-blue; width: 100%; height: 75px;
+		.burger-menu-wrapper{ padding-left: 0;}
+		.burger-menu{ padding: 14px 17px 17px; display: inline-block; background: $tertiary-blue; height:75px; color: #FFF;
+			.icon-bar{ height: 21px; width: 30px; position: relative;
+				span{ width: 100%; height: 3px; position: absolute; left: 0; background: #FFF; display: block; border-radius: 2px; @include transform(rotate(0deg)); @include single-transition(all, 0.3s,ease-in);
+					&:nth-child(1) {top: 0px;}
+					&:nth-child(2) {top: 9px;}
+					&:nth-child(3) {top: 18px;}
+				}
+			}
+			.menu-text{ font-size: rem-calc(10px); text-transform: uppercase; margin-top: 7px;}
+		}
+		h1{ margin: 0; display: inline-block; vertical-align: top; float: right;}
+	    .logo{ background: no-repeat; width: 218px; height: 65px; padding-top: 10px; display: block; text-indent: 100%; white-space: nowrap; overflow: hidden; position: relative; top: 0; text-indent: -9999em;}
+	    .user-action-links{ height: 75px; margin: 0; margin: 0 auto 1.0625rem auto;
+    	    	.language-selector{ margin-right: 20px;
+	    		a{ height: 75px; font-size: rem-calc(18px); color: #FFF; font-weight: 500; padding: 20px 15px 0px;}
+	    		&.show-language-list{ background-color: #FFF;
+					a{ color: $primary-blue;}
+					.language-selector-list a{ font-size: rem-calc(16px);}
+	    		}
+	    	}
+	    	.search-box{ position: relative; max-width: 170px; margin-top: 14px;
+				.input{ font-size: rem-calc(18px); padding: 9px 35px 9px 9px; color: #767179; border-radius: 4px; margin: 0; width: 100%;
+					&:focus{ background: #FFF;}
+				}
+				.btn{ padding: 3px; border-radius: 4px; position: absolute; right: 5px; top: 0; margin-top: 6px; text-align: center; background: $primary-orange; border: none; cursor: pointer;}
+				.magnifier-icon{ background: url('#{$img-path}/icons.png') no-repeat; background-position: -22px -24px; display: block; height: 19px; width: 19px;}
+	    	}
+	    }
+	}
+
+	.wide-col{min-width: 80%;}
+
+	nav{ background: #FFF; position: absolute; left: 0; top: 75px; width: 100%; display: block;/* @include transform(translate(-100%,0));*/ width: 0; overflow:visible; @include single-transition(all, 0.6s,ease-out); 
+		ul{ padding: 0; margin: 0; @include single-transition(all, 0.3s,ease-out);  @include opacity(0);
+			li{ display: block; list-style-type: none; border-bottom: 1px solid $secondary-grey;
+				>a{ color: $tertiary-orange; font-size: rem-calc(19px); line-height: 60px; font-weight: bold; letter-spacing: 1px; display: block; padding: 0 10px;
+					&:hover{ color: $nav-hover-blue;}
+				}
+				.nav-panel{ display: none;}
+			}
+			.language-selector{
+				&> a {position: relative;
+					.arrow-icon{ position: absolute; right: 20px; top: 50%; margin-top: -11px; background: url("#{$img-path}/arrows.png") 6px -24px no-repeat $primary-orange; width: 22px; height: 22px; border-radius: 11px; @include single-transition(background-color, 0.3s,ease-out); }
+				}
+				.language-selector-list{ display: none;
+					li { padding-left: 30px; border-top: 1px solid $secondary-grey; border-bottom: none;}					
+				}
+				&.show-language-list{
+					a {
+						.arrow-icon{ background-position: 6px 3px; background-color: #909195;}
+					}
+				}
+			}
+		}
+	}
+
+	&.show{
+		nav{/* @include transform(translate(0,0));*/ width: 100%;  
+			ul{@include opacity(1);}
+		}
+		.burger-menu{
+			.icon-bar {
+				span { 
+					&:nth-child(1) { top: 9px; @include transform(rotate(-45deg));}
+					&:nth-child(2) { opacity: 0;}
+					&:nth-child(3) { top: 9px; @include transform(rotate(45deg));}
+				}
+			}
+		}
+	}
+
+	@media #{$large-up}{
+
+		nav{ 
+			ul{@include opacity(1);}
+		}
+
+		.header-wrapper{
+			h1{ float: none;}
+			.user-action-links{ float: right; margin: 0; padding: 0;
+				li{ display: block; float: left;}
+				.language-selector{ position: relative;
+					a{ display: block;}
+					.language-selector-list{ background: #FFF; width: 160px; position: absolute; left: -27px; top: 75px; margin: 0; list-style: none; display: none; z-index: 1; box-shadow: 6px 7px 0px $box-shadow; border-left: 1px solid #efefef; border-bottom: 1px solid #efefef;  padding: 10px 0;
+						li a{color: $primary-orange; height: auto; padding: 5px 30px; margin: 0;}
+					}
+				}
+			}
+		}
+
+
+		
+		nav{ background: $primary-orange; width: 100%; position: static; transition: none; @include transform(translate(0,0)); display: block;
+			ul{ position: relative;
+				li{ float: left; display: inline-block; border-left: 1px solid $border-orange; border-top: 0; padding: 0; border-bottom: none;
+					a{ color: #FFF; font-size: rem-calc(19px); text-transform: uppercase; padding: 0 32px;}
+					&.active{ background: #FFF;
+						& a{ color: $nav-hover-blue; }
+						.nav-panel{ display: block; position: absolute; box-shadow: 6px 7px 0px $box-shadow; border-left: 1px solid #efefef; border-bottom: 1px solid #efefef; left: 0; max-width: 80%; padding: 34px; background: #FFF;
+							h2{ color: $primary-blue;}
+							ul{
+								li{ float: none; display: block; margin: 0 0 20px 0; font-weight: 500; border: 0; padding: 0;
+									&:last-child{ margin-bottom: 0;}
+									a{ font-size: rem-calc(18px); color: $tertiary-orange; line-height: 1.5; text-transform: none; font-weight: 500; padding: 0;}
+								}
+							}
+							
+							.row .panel-col{ padding-left: 0; padding-right: 40px;}
+							.row .panel-col:last-child{ padding-left: 0; padding-right: 0px;}
+
+							.store-locator-form{ margin-bottom: -40px;
+								a { font-size: rem-calc(18px); color: $tertiary-orange; text-transform: none; font-weight: 500;  padding: 10px 0 15px 0; display: block;}
+								.input-box { margin-right: 15px; padding: 0;
+									&:last-child{ margin: 0; padding-right: 5px; width:182px; }
+								}
+								select{ height: 50px;}								
+								.dropdown{ border: none; width: 120px;
+									span{ line-height: 34px; height: 50px; overflow: hidden;}
+									.city-select{ width: 148px;}
+								}
+								.btn{ color: #FFF; padding: 0; margin: 0; height: 38px; margin-top: 5px; font-weight: bold;}
+
+								&.uniform{
+									.dropdown:after{ background-image: none;}
+								}
+							}
+						}
+					}
+				}
+				.language-selector{ display: none;}
+			}
+			h2{ font-size:rem-calc(24); font-weight: 800; font-family: $font-gotham;}}
+	}
+}

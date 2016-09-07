@@ -1,0 +1,30 @@
+table{border:none; border-collapse:collapse;
+	&.table-layout{
+		h2{font-size:rem-calc(24);}
+		thead{background:none; 
+			th{padding:20px; color:$dark-blue; font-weight:bold; padding-bottom:16px;
+				&:first-child{padding-left:0px;}
+			}
+		}
+		tbody{
+			tr{
+
+				td{padding:20px;  font-color:$text-gray;
+					&:first-child{padding-left:0px;}
+				}
+			}
+		}
+	}
+	&.table-border{
+		thead{ border-bottom:1px solid $border-gray;
+			th{border-right:1px solid $border-gray;
+				&:last-child{border-right:none;}
+			}
+		}
+		tbody{
+			td{border-right:1px solid $border-gray;
+				&:last-child{border-right:none;}
+			}
+		}
+	}
+}

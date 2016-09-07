@@ -1,0 +1,13 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# These files are concatenated in this order into live/dev.debug.js and then minified into live/prod.min.js
+#	- dev.debug.js is for Developer Debugging 
+#	- prod.min.js is for Production
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# Files in correct order that reside in /themes/default/js/lib
+
+lib/intro.js
+lib/LAB.min.js
+lib/hasflash.js
+lib/ready.js
+apploader.src.js

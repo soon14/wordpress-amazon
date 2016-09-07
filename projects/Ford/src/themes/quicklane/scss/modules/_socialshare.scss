@@ -1,0 +1,35 @@
+.social-share{ display: none;
+	h2{ font-size: rem-calc(20px);}
+	.socials{ margin: 0; padding: 0; list-style: none; margin-top: 30px;
+		li{ display: block; margin-bottom: 1px;}
+		a{ display: block; padding: 18px; padding-left: 25px; background: $primary-orange; color: #FFF; font-weight: 500;}
+	}
+	.icon{ display: inline-block; background-image: url("#{$img-path}/icons.png"); background-repeat: no-repeat; width: 25px; height: 25px; vertical-align: middle; margin-top: 4px;}
+}
+
+#social-share-tooltip-content{ display: none;}
+
+.social-share-tooltip{ background: #FFF; padding: 10px 12px; border-radius: 4px; box-shadow: 0 0 4px rgba(0,0,0,0.6);
+	.icon{ display: inline-block; background-image: url("#{$img-path}/icons.png"); background-repeat: no-repeat; width: 25px; height: 25px; vertical-align: middle; margin-top: 4px;}
+	.socials{ margin: 0; padding: 0; list-style: none;
+		li{ float: left; margin-left: 5px;
+			&:first-child{ margin: 0;}
+			a{border-radius: 39px; height: 39px; width: 39px; display: block; background-color: #0777b4; text-align: center; line-height: 39px; @include single-transition(all, 0.2s,ease-in);}
+			a:hover{ background-color: $tertiary-orange;}
+		}
+	}	
+	.tip{ position: absolute; overflow: hidden; width: 40px; height: 15px; top: -15px; right: 25px;
+		&:after{ content: ""; position: absolute;
+    background: #fff; width: 20px; height: 20px; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); top: 7px; left: 8px; box-shadow: -1px -1px 10px -2px rgba(0,0,0,0.6);}
+	}
+	.tip-bottom{ bottom: -15px; top: inherit;
+		&:after{ bottom: 7px; top: inherit;}
+	}
+	.tip-left{ left: 25px; right: inherit;}
+}
+
+.icon-email{ background-position: -2px -128px;}
+.icon-facebook{ background-position: 0 -155px;}
+.icon-twitter{ background-position: 0 -208px;}
+.icon-google_plusone_share{ background-position: 0 -181px;}
+.icon-instagram{ background-position: -41px -251px;}

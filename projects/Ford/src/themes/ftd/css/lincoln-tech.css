@@ -1,0 +1,38 @@
+#body {overflow:hidden; width:960px; margin:0 auto;}
+.banner-large #principal{min-height:525px;}
+.tech-section .filter {width:99%;}
+#nav-footer .nav-footer-col {width:175px;}
+.tech-section .sticky {border:none; -webkit-appearance:none; box-shadow:none;}
+#page:after {content:"";display:block; clear:both;}
+.tech-heading .btn, .tech-heading p.sub, .tech-heading p, .tech-section .filter li, .tech-section .element p, .tech-section .element .overlay p, .tech-section {font-family:proxima-nova,Arial,sans-serif;}
+.tech-heading {padding-top:235px;}
+#principal #banner {min-height:500px;}
+.tech-section .filter a {background:url("../img/tech-section/tech-sprite.png") no-repeat 0 1px;}
+.tech-section .filter li a.all:hover {background-position:0 -1527px;}
+.tech-section .filter li.active a.all {background-position:0 -1135px;}
+.tech-section .filter a.fuel-economy {background-position:0 -74px;}
+.tech-section .filter li a.fuel-economy:hover {background-position:0 -1617px;}
+.tech-section .filter li.active a.fuel-economy {background-position:0 -1201px;}
+.tech-section .filter a.safety {background-position:0 -154px;}
+.tech-section .filter li a.safety:hover {background-position:0 -1689px;}
+.tech-section .filter li.active a.safety {background-position:0 -1273px;}
+.tech-section .filter a.driving-dynamics {background-position:0 -235px;}
+.tech-section .filter li a.driving-dynamics:hover {background-position:0 -1760px;}
+.tech-section .filter a.simplicity {background-position:0 -300px;}
+.tech-section .filter li a.simplicity:hover {background-position:0 -1822px;}
+.rtl .tech-section .filter a.fuel-economy {background-position:right -75px;}
+.rtl .tech-section .filter li a.fuel-economy:hover {background-position:right -1618px;}
+.rtl .tech-section .filter a.safety {background-position:right -154px;}
+.rtl .tech-section .filter li a.safety:hover {background-position:right -1689px;}
+.rtl .tech-section .filter li.active a.all{background-position:right -1135px;}
+.overlay-wrap .overlay-content .controls a, .overlay-wrap .motorlist h4, .overlay-wrap .overlay-content .section .title, .overlay-wrap .social p, .overlay-wrap .overlay-content .article h2, .overlay-wrap .overlay-content .section .title, .overlay-wrap .overlay-content .intro h1, .overlay-wrap .hotspots .spot h4 {font-family: 'miller-banner-semi-bold';}
+.overlay-wrap .overlay-content .intro p, .overlay-wrap .hotspots .spot p {font-family:Arial, Helvetica, sans-serif;}
+.overlay-wrap .overlay-content .controls .backToTop, .overlay-wrap .top-close a span, .overlay-wrap .overlay-content .controls .close {font-family: 'proxima-nova'; font-weight:bold;}
+.ie8 .overlay-wrap .overlay-content .deeper .know, .ie9 .overlay-wrap .overlay-content .deeper .know {padding:200px 0 0 80px;}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .banner-large .tech-heading {padding-top:168px;}
+    .banner-large #principal{min-height:425px;}
+    .banner-large #principal #banner {min-height:400px;}
+    .banner-large #principal .principal-content {min-height:400px;}
+}

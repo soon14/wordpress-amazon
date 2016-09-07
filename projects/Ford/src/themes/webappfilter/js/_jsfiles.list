@@ -1,0 +1,21 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# These files are concatenated in this order into live/dev.debug.js and then minified into live/prod.min.js
+#	- dev.debug.js is for Developer Debugging 
+#	- prod.min.js is for Production
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+
+# Files in correct order that reside in /themes/form-builder/js/
+
+../../ftd/js/lib/modernizr-1.5.min.js
+../../ftd/js/lib/jquery-1.8.3.js
+lib/jquery-ui.js
+../../rad/js/lib/foundation.js
+#../../rad/js/lib/foundation.reveal.js
+lib/foundation.reveal.js
+../../ftd/js/lib/jquery.ui.touch-punch.min.js
+../../ftd/js/lib/jquery.tmpl.min.js
+../../ftd/js/mini-plugins.js
+global.js
+webappfilter.js

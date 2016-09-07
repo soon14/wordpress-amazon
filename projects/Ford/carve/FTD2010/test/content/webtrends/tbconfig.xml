@@ -1,0 +1,52 @@
+<?xml version='1.0' standalone='yes'?>
+<!-- Webtrends Tag Builder Configuration File (DO NOT MODIFY) -->
+<!-- Tag Builder Version: 3.2 -->
+<!-- Created: 9/7/2011 1:58:01 AM -->
+<configuration>
+  <general>
+    <dcsid>dcs3e9phnuz5bdfu8tzlamfrh_8n7o</dcsid>
+    <domain>statse.webtrendslive.com</domain>
+    <timezone>10</timezone>
+    <fpcdomainsingle>true</fpcdomainsingle>
+    <fpcdomainmultiple>false</fpcdomainmultiple>
+    <fpcdomain>.intpublish.dragonfly.ford.com</fpcdomain>
+    <jsincludepath>/scripts/</jsincludepath>
+    <zipfilesuffix>dcs3e9phnuz5bdfu8tzlamfrh_8n7o</zipfilesuffix>
+  </general>
+  <eventtracking>
+    <download>true</download>
+    <downloadfiletypes>xls,doc,pdf,txt,csv,zip,docx,xlsx</downloadfiletypes>
+    <anchor>true</anchor>
+    <javascript>true</javascript>
+    <mailto>true</mailto>
+    <offsite>true</offsite>
+    <formbutton>true</formbutton>
+    <imagemap>true</imagemap>
+    <onsitedomainnames />
+    <onsitedomainnamesregex>false</onsitedomainnamesregex>
+    <downloadrightclick>true</downloadrightclick>
+  </eventtracking>
+  <miscellaneous>
+    <fpc>false</fpc>
+    <fpcname />
+    <adsearch>false</adsearch>
+    <adsearchparam />
+    <custommetatag>false</custommetatag>
+    <custommetatagnames />
+    <dcsidoverride>false</dcsidoverride>
+    <dcsidoverridedomainnames />
+    <dcsidoverridedcsid />
+    <smartviewttp>true</smartviewttp>
+    <assignqueryparams>false</assignqueryparams>
+    <ombcompliant>false</ombcompliant>
+    <evi>false</evi>
+    <evicookie />
+    <eviqp />
+    <evicrumb>false</evicrumb>
+    <evicrumbname />
+    <evicrumbsep />
+    <vtid>standard</vtid>
+    <vtidfrom>param</vtidfrom>
+    <vtidname />
+  </miscellaneous>
+</configuration>

@@ -1,0 +1,19 @@
+@mixin fontFace($family,$src){
+	@font-face {
+		font-family: $family;
+		src: url("#{$font-path}/#{$family}/#{$src}-2.eot");
+		src: url("#{$font-path}/#{$family}/#{$src}-2.eot?#iefix") format("embedded-opentype"),
+			 url("#{$font-path}/#{$family}/#{$src}-3.woff") format("woff"),
+			 url("#{$font-path}/#{$family}/#{$src}-1.ttf") format("truetype"),
+			 url("#{$font-path}/#{$family}/#{$src}-4.svg##{$family}") format("svg");
+	}
+}
+
+@include fontFace("Antenna-Regular","a249ec5c-51a0-4581-a866-722ded577e7d");
+@include fontFace("Antenna-Black","6ebeaee8-40be-4da2-aff0-39b367cc450a");
+@include fontFace("Antenna-Light","39ab3e39-bb44-43df-a570-b883a82bfbaf");
+@include fontFace("Antenna-Extra-Light","c31531a7-e1a6-4867-aaf0-4148cf0a58fa");
+@include fontFace("Antenna-RE","5cd8f1c2-1c5f-4606-82c5-09101d12b8f7");
+@include fontFace("Antenna-RE-Bold","7e1290d3-4834-4cdc-9242-d41b96db6fd1");
+@include fontFace("Antenna-Medium","c03da8b6-e888-4718-9c24-e25cc55c95d7");
+@include fontFace("Antenna-Bold","85bf2123-24cb-4bfd-a720-efe63c68c84d");

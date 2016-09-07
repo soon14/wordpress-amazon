@@ -1,0 +1,4604 @@
+/*lincoln microsite CSS - 2013*/
+
+/*lincoln font embed*/
+/* This CSS resource incorporates links to font software which is the valuable copyrighted property of Webtype LLC and/or its suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact Webtype with any questions regarding Web Fonts:  http://www.webtype.com */
+
+@font-face {
+	font-family: 'miller-banner-semi-bold-italic';
+	src:url('../fonts/lincoln/LincolnMillerDSemiboldItalic/8f88db4e-c7ad-487d-baf8-663d3b25c4f6-2.eot');/*IE9 Compatibility Mode*/
+	src:url('../fonts/lincoln/LincolnMillerDSemiboldItalic/8f88db4e-c7ad-487d-baf8-663d3b25c4f6-2.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/lincoln/LincolnMillerDSemiboldItalic/8f88db4e-c7ad-487d-baf8-663d3b25c4f6-3.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/lincoln/LincolnMillerDSemiboldItalic/8f88db4e-c7ad-487d-baf8-663d3b25c4f6-1.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/lincoln/LincolnMillerDSemiboldItalic/8f88db4e-c7ad-487d-baf8-663d3b25c4f6-4.svg#miller-banner-semi-bold-italic') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'miller-banner-semi-bold';
+	src:url('../fonts/lincoln/Lincoln-Miller-B-Semibold/80be4536-da87-4f7e-b495-ed7b41b7af51-2.eot'); /*IE9 Compatibility Mode*/
+	src:url('../fonts/lincoln/Lincoln-Miller-B-Semibold/80be4536-da87-4f7e-b495-ed7b41b7af51-2.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/lincoln/Lincoln-Miller-B-Semibold/80be4536-da87-4f7e-b495-ed7b41b7af51-3.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/lincoln/Lincoln-Miller-B-Semibold/80be4536-da87-4f7e-b495-ed7b41b7af51-1.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/lincoln/Lincoln-Miller-B-Semibold/80be4536-da87-4f7e-b495-ed7b41b7af51-4.svg#miller-banner-semi-bold') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'miller-banner-light';
+	src:url('../fonts/lincoln/Lincoln-Miller-B-Light/8cf8e715-1a29-462c-bf2b-bd34f9ed76ab-2.eot'); /*IE9 Compatibility Mode*/
+	src:url('../fonts/lincoln/Lincoln-Miller-B-Light/8cf8e715-1a29-462c-bf2b-bd34f9ed76ab-2.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/lincoln/Lincoln-Miller-B-Light/8cf8e715-1a29-462c-bf2b-bd34f9ed76ab-3.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/lincoln/Lincoln-Miller-B-Light/8cf8e715-1a29-462c-bf2b-bd34f9ed76ab-1.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/lincoln/Lincoln-Miller-B-Light/8cf8e715-1a29-462c-bf2b-bd34f9ed76ab-4.svg#miller-banner-light') format('svg'); /* Legacy iOS */
+}
+
+
+
+@font-face {
+	font-family: 'proxima-nova-light';
+	src:url('../fonts/lincoln/proximanova_light_macroman/ProximaNova-Light-webfont.eot'); /*IE9 Compatibility Mode*/
+	src:url('../fonts/lincoln/proximanova_light_macroman/ProximaNova-Light-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/lincoln/proximanova_light_macroman/ProximaNova-Light-webfont.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/lincoln/proximanova_light_macroman/ProximaNova-Light-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/lincoln/proximanova_light_macroman/ProximaNova-Light-webfont.svg#proxima-nova-light') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'proxima-nova';
+	src:url('../fonts/lincoln/proximanova_regular_macroman/ProximaNova-Reg-webfont.eot'); /*IE9 Compatibility Mode*/
+	src:url('../fonts/lincoln/proximanova_regular_macroman/ProximaNova-Reg-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/lincoln/proximanova_regular_macroman/ProximaNova-Reg-webfont.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/lincoln/proximanova_regular_macroman/ProximaNova-Reg-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/lincoln/proximanova_regular_macroman/ProximaNova-Reg-webfont.svg#proxima-nova') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'proxima-nova-italic';
+	src:url('../fonts/lincoln/proximanova_italic_macroman/ProximaNova-RegIt-webfont.eot'); /*IE9 Compatibility Mode*/
+	src:url('../fonts/lincoln/proximanova_italic_macroman/ProximaNova-RegIt-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/lincoln/proximanova_italic_macroman/ProximaNova-RegIt-webfont.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/lincoln/proximanova_italic_macroman/ProximaNova-RegIt-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/lincoln/proximanova_italic_macroman/ProximaNova-RegIt-webfont.svg#proxima-nova-italic') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'proxima-nova-bold';
+	src:url('../fonts/lincoln/proximanova_bold_macroman/ProximaNova-Bold-webfont.eot'); /*IE9 Compatibility Mode*/
+	src:url('../fonts/lincoln/proximanova_bold_macroman/ProximaNova-Bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/lincoln/proximanova_bold_macroman/ProximaNova-Bold-webfont.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/lincoln/proximanova_bold_macroman/ProximaNova-Bold-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/lincoln/proximanova_bold_macroman/ProximaNova-Bold-webfont.svg#proxima-nova-bold') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'proxima-nova-semi-bold';
+	src:url('../fonts/lincoln/proximanova_semibold_macroman/ProximaNova-Sbold-webfont.eot'); /*IE9 Compatibility Mode*/
+	src:url('../fonts/lincoln/proximanova_semibold_macroman/ProximaNova-Sbold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/lincoln/proximanova_semibold_macroman/ProximaNova-Sbold-webfont.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/lincoln/proximanova_semibold_macroman/ProximaNova-Sbold-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/lincoln/proximanova_semibold_macroman/ProximaNova-Sbold-webfont.svg#proxima-nova-semi-bold') format('svg'); /* Legacy iOS */
+}
+
+
+
+@font-face {
+	font-family: 'miller-banner-light-italic';
+	src:url('../fonts/lincoln/LincolnMillerDLightItalic/7f7bfa5d-16e7-478a-8ebc-fe641df58957-2.eot'); /*IE9 Compatibility Mode*/
+	src:url('../fonts/lincoln/LincolnMillerDLightItalic/7f7bfa5d-16e7-478a-8ebc-fe641df58957-2.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/lincoln/LincolnMillerDLightItalic/7f7bfa5d-16e7-478a-8ebc-fe641df58957-3.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/lincoln/LincolnMillerDLightItalic/7f7bfa5d-16e7-478a-8ebc-fe641df58957-1.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/lincoln/LincolnMillerDLightItalic/7f7bfa5d-16e7-478a-8ebc-fe641df58957-4.svg#miller-banner-light-italic') format('svg'); /* Legacy iOS */
+}
+
+
+
+@font-face {
+	font-family: 'miller-banner';
+	src:url('../fonts/lincoln/LincolnMillerDisplayRoman/90e9b990-2a29-46ef-9fb0-93bd1292cb0f-2.eot'); /*IE9 Compatibility Mode*/
+	src:url('../fonts/lincoln/LincolnMillerDisplayRoman/90e9b990-2a29-46ef-9fb0-93bd1292cb0f-2.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/lincoln/LincolnMillerDisplayRoman/90e9b990-2a29-46ef-9fb0-93bd1292cb0f-3.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/lincoln/LincolnMillerDisplayRoman/90e9b990-2a29-46ef-9fb0-93bd1292cb0f-1.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/lincoln/LincolnMillerDisplayRoman/90e9b990-2a29-46ef-9fb0-93bd1292cb0f-4.svg#miller-banner') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'miller-banner-italic';
+	src:url('../fonts/lincoln/LincolnMillerDItalic/ae52e07b-9663-44a2-81a5-d5632e8aa29a-2.eot'); /*IE9 Compatibility Mode*/
+	src:url('../fonts/lincoln/LincolnMillerDItalic/ae52e07b-9663-44a2-81a5-d5632e8aa29a-2.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/lincoln/LincolnMillerDItalic/ae52e07b-9663-44a2-81a5-d5632e8aa29a-3.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/lincoln/LincolnMillerDItalic/ae52e07b-9663-44a2-81a5-d5632e8aa29a-1.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/lincoln/LincolnMillerDItalic/ae52e07b-9663-44a2-81a5-d5632e8aa29a-4.svg#miller-banner-italic') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Lincoln-Miller-B-Roman';
+	src:url('../fonts/lincoln/Lincoln-Miller-B-Roman/Lincoln-Miller-B-Roman.eot'); /*IE9 Compatibility Mode*/
+	src:url('../fonts/lincoln/Lincoln-Miller-B-Roman/Lincoln-Miller-B-Roman.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/lincoln/Lincoln-Miller-B-Roman/Lincoln-Miller-B-Roman.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/lincoln/Lincoln-Miller-B-Roman/Lincoln-Miller-B-Roman.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/lincoln/Lincoln-Miller-B-Roman/Lincoln-Miller-B-Roman.svg#Lincoln-Miller-B-Roman') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'NanumGothic';
+  src: url('C:/xampp/htdocs/q2+gv3/client/src/themes/ftd/fonts/lincoln/NanumGothic/NanumGothic-Regular.eot');
+  src: url('../fonts/lincoln/NanumGothic/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'),
+      /* url('../fonts/lincoln/NanumGothic/NanumGothic-Regular.woff') format('woff'),*/
+       url('../fonts/lincoln/NanumGothic/NanumGothic-Regular.ttf') format('truetype'),
+       url('../fonts/lincoln/NanumGothic/NanumGothic-Regular.svg#NanumGothic') format('svg');
+}
+
+@font-face {
+  font-family: 'NanumGothic-Bold';
+  src: url('../fonts/lincoln/NanumGothic/NanumGothic-Bold.eot');
+  src: url('../fonts/lincoln/NanumGothic/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'),
+      /* url('../fonts/lincoln/NanumGothic/NanumGothic-Bold.woff') format('woff'),*/
+       url('../fonts/lincoln/NanumGothic/NanumGothic-Bold.ttf') format('truetype'),
+       url('../fonts/lincoln/NanumGothic/NanumGothic-Bold.svg#NanumGothic-Bold') format('svg');
+}
+
+
+/*end font embed*/
+/*font-family update*/
+
+body {
+	font-family: "NanumGothic"; 
+}
+
+h1, h2 {
+	font-weight: normal;
+}
+#nav li .nav-item>span{
+	
+	font-size: 18px !important;
+	font-family: "NanumGothic-Bold", miller-banner-semi-bold;
+	text-transform: none;
+}
+#nav .mega-menu .items .item .head h3 a{
+	
+	font-family: "NanumGothic", proxima-nova;
+	font-style: italic;
+    font-size: 13pt;
+    font-weight: normal;
+}
+
+#nav-footer h4 {
+	
+	font-family: "NanumGothic-Bold", proxima-nova-bold,Arial,sans-serif;
+	font-size: 14px;
+}
+
+#nav-footer a{
+	font-family: "NanumGothic",proxima-nova,Arial,sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+}
+#nav .mega-menu .items .item p.price {
+	font-family: "NanumGothic", proxima-nova,Arial,sans-serif;
+	
+	font-weight: normal;
+}
+#vehiclematrix .pricing strong, #vehiclematrix .pricing strong.small{
+	
+	font-family:"NanumGothic", miller-banner;
+}
+
+.lincoln_models thead th,.lincoln_spec thead th,.lincolnaspage .gallerylist h2 {
+	
+	font-family: "NanumGothic", miller-banner;
+	font-size: 21px !important;
+}
+.derivative .body p > span {
+	
+	font-family: "NanumGothic", miller-banner;
+	font-size: 16px;
+}
+.lcpricing .cms li h3,.lcpricing .cms li h4 ,.lcpricing .cms li h5 {
+	
+	font-family: "NanumGothic", miller-banner;
+}
+.lincoln_reviews #aside .section h2 span {
+	
+	font-family: "NanumGothic", miller-banner;
+}
+
+.lincoln_feature #principal.fullwidth h4 {
+	
+	font-family: "NanumGothic-Bold", proxima-nova-semi-bold;
+}
+.lincoln_feature #principal.fullwidth h3,.lincoln_feature .feature-sections .feature-content .guidelinks h3,.lincoln_feature .feature-sections .feature-content h3{
+	
+	font-family: "NanumGothic", miller-banner;
+	font-size: 20px;
+}
+.lincolnaspage .gallerylist h3 {
+	
+	font-family: "NanumGothic", proxima-nova;
+}
+.lcpricing .cms li h2 {
+	font-family: proxima-nova-italic;
+}
+.lincoln_reviews .tabtitle h2 span {
+	
+	font-family: "NanumGothic", miller-banner;
+}
+
+.cms h2,.lcpricing.ltr .cms > div h1  {
+	
+	font-family: "NanumGothic", miller-banner;
+	font-size: 18px;
+}
+.lincoln_spec tbody .nobackground a {
+	
+	font-family: proxima-nova-semi-bold!important;
+	font-size: 21px;
+}
+.lincolnaspage .gallerylist a {
+	
+	font-family: "NanumGothic-Bold", proxima-nova-semi-bold;
+	font-size: 14px !important;
+}
+/*end font-family update*/
+body {
+	background:#fff;
+}
+
+p, dt, dd, blockquote {
+	color: #000;
+	line-height: 1.6em;
+	font-size: 1.3em;
+}
+
+a {
+    color: #B45F1a;
+    text-decoration: none;
+}
+
+.page-title {
+	position: relative;
+	margin: 18px 0 20px 0;
+	font-size: 2.7em;
+	font-family: "NanumGothic", miller-banner;
+}
+
+
+
+h1 {
+	font-size: 2.4em;
+}
+
+#header {
+	height: 120px;
+}
+
+#content {
+    margin-bottom: 30px;
+    width: 960px;
+}
+
+#badge {
+	float:left;  
+	margin: 45px 0 0; 
+	position: static; 
+	width:183px;
+}
+
+.ltr  #badge {
+	float:left;
+}
+
+.rtl #badge {
+	float:right;
+}
+
+#badge a{
+	display:block; 
+	width:183px; 
+	height:50px; 
+	text-indent:-999em; 
+	text-decoration:none; 
+	background-position: 11px 0
+}
+
+.light.ltr #badge a {
+	background-position: 0 0;
+}
+
+.rtl #badge a, .light.rtl #badge a {
+    background-position: right 0;
+}
+
+#nav {
+	position:static; 
+	float:right; 
+	clear:both; 
+	bottom:0; 
+	width:auto; 
+	height:30px; 
+	margin: -4px 0 0; 
+	font-size:13px;
+}
+
+.ltr #nav{
+	float:right; 
+	padding:0; 
+	background:none; 
+	height:auto;
+}
+
+.rtl #nav {
+	float:left; 
+	padding:0; 
+	background:none
+}
+
+.ltr #nav li {
+	float: left;
+	padding:0; 
+	background: none
+}
+
+.rtl #nav li { 
+	float:right;
+	padding:0; 
+	background: none
+}
+
+.ltr ul > li {
+	background: none;
+}
+
+#nav li:first-child .nav-item{
+	display: none;
+}
+
+.ltr #nav li.current .nav-item, .rtl #nav li.current .nav-item, .ltr #nav li.current .nav-item span, .rtl #nav li.current .nav-item span {
+	background:none;
+}
+
+#eyebrow {
+	font-size: 1.1em;
+	margin:10px 0 0 0; color: #cccccc; 
+}
+
+#eyebrow li {
+	padding: 0 0 0 20px;
+}
+
+.rtl #eyebrow li {
+	padding: 0 20px 0 0;
+}
+
+#eyebrow li a, .light #eyebrow li a {
+	color:#9C9C9C;
+}
+
+#eyebrow li a:hover, .light #eyebrow li a:hover {
+	color: #000
+}
+
+.ltr #nav li {
+  background: transparent;
+}
+
+#body .switch li {
+    background: none repeat scroll 0 0 transparent;
+    float: left;
+    margin-right: 14px;
+    padding: 0;
+}
+
+.rtl #body .switch li {
+	float: right;
+}
+
+.rtl #body .switch li:first-child {
+	margin-right:0;
+}
+
+.ltr #body .switch li:last-child {
+	margin-right:0;
+}
+
+.ltr.banner-large #body .hotspots {
+	margin: -41px -12px 0 0;
+}
+
+.rtl.banner-large #body .hotspots {
+	margin: -41px 0 0 -12px;
+}
+
+#nav .mega-menu {
+	margin:0; 
+	top:120px; 
+	border-top:1px solid #d0d0d0; 
+	z-index:900;
+    background: #FFFFFF;
+    border-bottom: 1px solid #CCD7D9;
+    border-left: 1px solid #CCD7D9;
+    border-right: 1px solid #CCD7D9;
+    display: none;
+    padding: 0;
+    position: absolute;
+    width: 1008px;
+}
+
+.ltr #nav .mega-menu {
+	left: -30px;
+}
+
+#nav .mega-menu > div {
+	background: none;
+	width:99%;
+}
+
+#nav .mega-menu .items .item .head {
+	border:1px solid #fff;
+}
+
+#nav .mega-menu .items .item .head h3 {
+	border-bottom: 1px solid #DEDEDE;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    padding: 0 0 5px;
+    text-transform: uppercase;
+    width: 147px;
+}
+
+#nav .mega-menu .items .item .head h3 a, #nav .mega-menu .items .item .head:hover h3 a, #nav .mega-menu .items .item .head h3, #nav .mega-menu .items .item .head:hover h3, #nav .mega-menu .items .item .head:hover div  {
+	background:none;
+	color: #000;
+}
+
+#nav .mega-menu .items .item .head:hover {
+	background:none;
+	border:1px solid #dedede;
+}
+
+.ltr .mega-menu .close-button {
+	right: 10px;
+}
+
+.rtl .mega-menu .close-button {
+	left: 10px;
+}
+
+#nav .menu {
+	top:120px; 
+	border-top:1px solid #d0d0d0;
+	border-bottom:1px solid #d0d0d0;
+	border-right:1px solid #d0d0d0;
+	border-left:1px solid #d0d0d0;
+	width:192px;
+}
+
+.ltr #nav .menu, .rtl #nav .menu {
+    margin: 0;
+}
+
+#nav li .nav-item, .ltr #nav li .nav-item  {
+	display: block;
+	height:47px; 
+	outline:none; 
+	color:#000; 
+	text-transform:uppercase; 
+	font-weight:normal; 
+	font-size: 14px; 
+	padding:0 0 0 15px;
+}
+
+.rtl #nav li .nav-item {
+	padding:0 15px 0 0;
+}
+
+#nav li .nav-item:hover {
+	text-decoration:none; 
+	color: #b45f1a
+}
+
+#nav li.active .nav-item > span, #nav li.active .nav-item > span:hover {
+	color:#b45f1a !important;
+	background:none!important;
+}
+
+.ltr #nav li .nav-item > span {
+	background: url("../img/lincoln/lincolnmenuarrow.png") no-repeat scroll right 10px !important;
+    font-size: 14px;
+    padding: 4px 14px 0 19px;
+}
+
+.ltr #nav li.active .nav-item > span {
+	background: url("../img/lincoln/lincolnmenuarrowatv.png") no-repeat scroll right 10px!important;
+	 padding: 4px 14px 0 19px;
+}
+
+.rtl #nav li .nav-item > span, .rtl #nav li .nav-item > span:hover,  .rtl #nav li.active .nav-item > span, .rtl #nav li.active .nav-item > span:hover {
+
+	padding:4px 14px 0 14px;
+	background: transparent url('../img/lincoln/lincolnmenuarrow.png') no-repeat 3px 10px !important;
+}
+
+.ltr #nav li.active .nav-item, .rtl #nav li.active .nav-item {
+	background: none!important;
+}
+
+#nav li.active .nav-item > span div {
+	border-bottom:1px solid #b45f1a; 
+	height:43px; z-index: 999; 
+	position: relative;
+}
+
+#nav .menu ul li a {
+    color: #3C443a;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+#subnav {
+	margin-left: -120px;  
+	border-top:1px solid #d0d0d0; 
+	border-bottom:1px solid #d0d0d0; 
+	position: static!important; 
+	height:36px;
+	min-height: auto;
+	padding:0;
+	width: 1200px;
+	z-index: 35;
+}
+
+#subnav h1, .light #subnav h1, .dark #subnav h1 {
+	font-size: 1.4em;
+	line-height: 1.8em;
+	margin-left: 122px;
+    color:#525151;
+    padding: 6px 0 0;
+    font-weight: normal
+}
+
+.rtl #subnav h1 {
+	margin-left:0; 
+	margin-right: 132px;
+}
+
+#subnav a, .light #subnav a, .dark #subnav a {
+	color:#525151;
+	line-height: 1.65em;
+}
+
+#subnav a:hover, .light #subnav a:hover, .dark #subnav a:hover {
+	color:#000;
+}
+
+#subnav ul {
+	position: relative; 
+	z-index: 4;
+	padding:8px 0 0 0;
+}
+
+#subnav ul li {
+	padding: 0 0 7px;
+	font-weight: normal;
+}
+
+#subnav ul li.current {
+	border-bottom: 1px solid #b45f1a;
+	background:none;
+}
+
+#subnav ul li.current a {
+	color: #000;
+}
+
+#leftnav {
+	background: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#leftnav ul {
+    background: none;
+    font-size: 1.3em;
+    font-weight: normal;
+    padding: 0;
+    width: 100%;
+}
+
+.ltr #leftnav ul {
+    float: left;
+}
+
+.rtl #leftnav ul {
+    float: right;
+}
+
+#leftnav ul li {
+	border:none;
+	padding: 0;
+	width: 100%;
+}
+
+.rtl #leftnav ul li {
+    float: right;
+}
+
+ #leftnav ul li a {
+ 	background-color: #000;
+ 	color: #bcbcbc;
+ 	width:237px;
+ }
+
+ .ltr #leftnav ul li a {
+ 	background: url("../img/lincoln/bits.png") no-repeat scroll 10px -1078px #000;
+    float: left;
+ }
+
+.rtl #leftnav ul li a {
+	background: url("../img/lincoln/bits-rtl.png") no-repeat scroll 173px -1129px #000;
+}
+
+#leftnav ul li.current a {
+	background-color: #3a3a3a;
+	color:#fff;
+}
+
+.ltr #leftnav ul li.current a {
+	background: url("../img/lincoln/bits.png") no-repeat scroll 10px -1041px #3a3a3a;
+}
+
+.rtl #leftnav ul li.current a {
+	background: #3a3a3a url('../img/lincoln/bits-rtl.png') no-repeat 173px -1166px;
+}
+
+#leftnav ul li a:hover {
+	text-decoration: none;
+	background-color: #000;
+	color: #FFFFFF;
+}
+
+.ltr #leftnav ul li a:hover {
+ 	background-position: 10px -1041px;
+ }
+
+.rtl #leftnav ul li a:hover {
+	background-position: 173px -1166px;
+}
+
+.smallnavsize #leftnav {
+	width: 160px;
+}
+
+.smallnavsize #leftnav ul li a {
+	width: 110px;
+}
+
+.smallnavsize #leftnav ul li {
+	width: 160px;
+}
+
+#breadcrumb {
+	display: none;
+}
+
+.ltr .icon {
+    background-image: url("../img/lincoln/lincolnicons.png") !important;
+    padding-left: 20px !important;
+}
+
+.rtl .icon {
+    background-image: url("../img/lincoln/lincolnicons_rtl.png") !important;
+    padding-right: 20px !important;
+}
+
+.ltr .icon-lincolnnow {
+    background-position: 0 6px !important;
+}
+
+.ltr .icon-articles {
+    background-position: 1px -92px !important;
+}
+
+.ltr .icon-photos {
+    background-position: 0 -192px !important;
+}
+
+.ltr .icon-video {
+    background-position: 0 -292px !important;
+}
+
+.ltr .icon-brochures {
+    background-position: 0 -393px !important;
+}
+
+.ltr .icon-buildprice {
+    background-position: -2px -493px !important;
+}
+
+.ltr .icon-testdrive {
+    background-position: 1px -593px !important;
+}
+
+.ltr .icon-dealer {
+    background-position: 0 -693px !important;
+}
+
+.ltr .icon-quote {
+    background-position: 0 -894px !important;
+}
+
+.rtl .icon-quote {
+    background-position: right -874px !important;
+}
+
+.ltr .icon-getupdates {
+    background-position: 0 -992px !important;
+}
+
+.rtl .icon-getupdates {
+    background-position: right -974px !important;
+}
+
+.rtl .icon-lincolnnow {
+    background-position: right 6px !important;
+}
+
+.rtl .icon-articles {
+    background-position: right -92px !important;
+}
+
+.rtl .icon-photos {
+    background-position: right -192px !important;
+}
+
+.rtl .icon-video {
+    background-position: right -292px !important;
+}
+
+.rtl .icon-brochures {
+    background-position: right -393px !important;
+}
+
+.rtl .icon-buildprice {
+    background-position: right -493px !important;
+}
+
+.rtl .icon-testdrive {
+    background-position: right -593px !important;
+}
+
+.rtl .icon-dealer {
+    background-position: right -693px !important;
+}
+
+.actions > li span{
+	display: block;
+	min-height: 15px;
+	cursor: pointer;
+}
+
+#body.has-aside #aside {
+	width:160px;
+}
+
+.banner-fullwidth #aside {
+    clear: both;
+    float: left;
+    height: 0;
+    width: 285px;
+    position: relative;
+    z-index: 20;
+    margin-top:10px;
+}
+
+.banner-fullwidth.rtl #aside {
+	float: right;
+}
+
+#body.has-aside #content {
+	width:778px;
+}
+
+
+#principal {
+    float: left;
+    position: relative;
+}
+
+.banner-large .principal-content {
+    min-height: 502px;
+}
+
+#principal.banner-flash {
+	float:left;
+}
+
+#principal #banner {
+	left:-120px; 
+	right:-120px;
+	top:0;
+}
+
+.banner-small .principal-content {
+    margin-top: 21px;
+    min-height: 380px;
+}
+
+#language {
+	margin-top:9px;
+}
+
+.countrytab {
+	margin: 6px 0 0 12px;
+}
+
+.light .countrytab > h3, .dark .countrytab > h3, .countrytab > h3 {
+	color: #000!important;
+}
+
+.rtl .icon-getupdates { 
+	background-position: right -992px !important;
+}
+
+.rss-addthis {
+	padding:25px 0 20px 0; 
+}
+
+#footer .rss-addthis {
+    margin-top: 0;
+    padding: 0;
+    position: absolute;
+    top: -30px;
+}
+
+#nav-footer {
+    background: url("../img/lincoln/footer_bg.jpg") no-repeat scroll left top transparent;
+    clear: both;
+    left: -120px;
+    padding: 15px 120px 40px;
+    position: relative;
+    right: -120px;
+    width: 960px;
+}
+
+#footer-wrapper {
+    background: #000;
+    clear: both;
+    height: 44px;
+    margin: 0 auto 0;
+    width: 1200px;
+    display: inline-block;
+}
+
+#footer {
+    min-height: 30px;
+}
+
+.ltr #footer-links {
+    float: left;
+    left: 10px;
+    position: absolute;
+    top: 15px;
+    vertical-align: middle;
+}
+
+.rtl #footer-links {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    vertical-align: middle;
+}
+
+.rtl #footer-links ul {
+    float: right;
+    position: absolute;
+    right: 200px;
+    width: 960px;
+}
+
+.ltr #footer-links ul {
+    float: left;
+    left: 200px;
+    position: absolute;
+    width: 960px;
+}
+
+#badge-footer {
+    height: 36px;
+    position: absolute;
+    top: 4px;
+    width: 87px;
+}
+
+.ltr #badge-footer {
+	right:0;
+}
+
+#badge-footer a {
+    background-repeat: no-repeat;
+    display: block;
+    height: 36px;
+    text-decoration: none;
+    text-indent: -999em;
+    width: 87px;
+}
+
+#nav-footer h4 {
+    background: none repeat scroll 0 0 transparent;
+    border:none;
+    border-bottom: 1px solid #E3E3E3;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: normal;
+    padding: 14px;
+    text-transform: uppercase;
+}
+
+#nav-footer a, #nav-footer h4 {
+    color: #FFFFFF;
+}
+
+.ltr #badge-footer {
+    right: 0;
+}
+
+.rtl #badge-footer {
+    left: 0;
+    width: 37px;
+}
+
+/*disclaimer*/
+#disclaimer {
+	padding-bottom:5px;
+}
+
+#site-disclaimer {
+    background: none repeat scroll 0 0 #000000;
+    left: -120px;
+    padding: 10px 110px 50px 118px;
+    position: relative;
+    right: -120px;
+    width: 972px;
+}
+
+.dark #vehiclematrix  p a {
+	color: #000;
+} 
+
+#site-disclaimer p {
+	color: #fff;
+    padding: 0;
+}
+
+#disclaimer p, p.disc {
+    color: #949494;
+    padding: 0;
+}
+
+#disclaimer p, #site-disclaimer p, p.disc {
+    color: #949494;
+    padding: 0;
+}
+
+.rtl #site-disclaimer {
+    float: right;
+    padding: 10px 118px 50px 110px;
+}
+
+.ltr .has-aside #site-disclaimer, .rtl .has-aside #site-disclaimer, .rtl .has-aside #site-disclaimer, .rtl .has-aside #site-disclaimer {
+    background: none repeat scroll 0 0 transparent;
+    clear: both;
+    float: left;
+    padding: 5px 0;
+    position: static;
+}
+
+.ltr .has-aside #disclaimer, .rtl .has-aside #disclaimer {
+    float: none;
+}
+
+/*feature page*/
+.lincoln_feature #principal.fullwidth {
+	float: right;
+	width:611px;
+	height: auto;
+	background-color:#fff;
+	padding:10px 0 0 10px;
+    margin-right: 20px;
+}
+
+.lincoln_feature.rtl #principal.fullwidth {
+	float: left;
+    margin-left: 20px;
+}
+
+.lincoln_feature #principal.fullwidth h3{
+	color:#3c443a;
+	font-size:2.6em;
+	font-weight:normal;
+	padding:0;
+}
+
+.lincoln_feature #principal.fullwidth h4{
+	color:#ba5517;
+	font-size:1.8em;
+	font-weight:normal;
+	padding:0;
+}
+
+.lincoln_feature.rtl #principal.fullwidth h4, .rtl.lincoln_feature #principal.fullwidth h3 {
+    padding: 0 10px 0 0;
+}
+
+.lincoln_feature .principal-content {
+	border: 1px solid #E3E0E0;
+	padding:12px;
+}
+
+.rtl .principal-content {
+    float: right;
+}
+
+.lincoln_feature #principal.fullwidth .principal-content .principal-hero {
+	width: auto;
+	height: auto;
+	min-height: 100px;
+}
+
+.lincoln_feature.rtl .principal-content .principal-hero {
+	float:left;
+}
+
+.rtl.lincoln_feature .feature-content.twocolumnwidth .img {
+	padding: 0 0 0 40px;
+}
+
+.feature-sections .feature-content {
+	float: left;
+	width: 300px;
+	padding: 0 10px 0 10px;	
+}
+
+.ltr .feature-sections .feature-content:first-child, .rtl .feature-sections .feature-content:last-child{
+	padding: 0 20px 0 0;	
+}
+
+.rtl .feature-sections .feature-content:first-child, .ltr .feature-sections .feature-content:last-child{
+	padding: 0 0 0 20px;	
+}
+
+.feature-sections .feature-content.last{
+	padding:0;
+}
+.rtl .feature-sections .feature-content {
+	float: right;
+}
+.feature-sections .feature-content h4 {
+	font-size: 1.2em;
+}
+
+.lincoln_feature .feature-sections .feature-content.fullwidth {
+	float: left;
+	width: 960px;
+	padding: 0;
+}
+
+.lincoln_feature .feature-sections .feature-content h3{
+	font-weight:normal;
+	border-bottom: 1px solid #DCDCDC;
+    color: #000000;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.lincoln_feature .feature-sections .feature-content h4{
+	color: #B45F1a;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.lincoln_feature .feature-sections .feature-content .guidelinks{
+	width:280px;
+	height:194px;
+	padding:10px;
+	background:#fff;
+	margin: 0;
+}
+
+.lincoln_feature .feature-sections .feature-content .guidelinks h3 {
+	margin-bottom: 0;
+	padding-bottom:10px;
+}
+
+.lincoln_feature .feature-sections .feature-content .guidelinks > div {
+	width: 280px;
+	padding:0;
+	background: none;
+}
+
+.lincoln_feature .feature-sections .feature-content .guidelinks .actions{
+	width:280px;
+}
+
+.lincoln_feature #vehiclematrix .actions li, .guidelinks .actions li, .lincoln_feature #aside .actions li, .guidelinks .actions li{
+	width:280px;
+	border-top:0;
+	padding:10px 0;
+	margin:0;
+	background: url("../img/lincoln/divider-blur-280.png") no-repeat scroll left top transparent !important;
+}
+
+.lincoln_feature .feature-sections .feature-content .guidelinks .actions li.last{
+	border:0;
+}
+
+.lincoln_feature .feature-sections .feature-content .guidelinks .actions li a{
+	width:280px;
+	font-weight:normal;
+	background: none;
+	color: #767676;
+}
+
+.lincoln_feature .feature-sections .feature-content .guidelinks .actions li a:hover {
+	color: #000;
+}
+
+.lincoln_feature .feature-sections .feature-content.twocolumnwidth .cms {
+	float: left;
+	width: 610px;
+	padding: 10px;
+}
+
+.lincoln_feature .feature-content .cms {
+	background-color: #FFFFFF;
+    border: 1px solid #E3E0E0;
+    float: left;
+    padding: 12px;
+    width: auto;
+}
+
+.feature-content .cms h3 {
+	font-size: 1.6em;
+}
+
+
+.feature-content .cms h4 {
+	font-size: 1.3em;
+}
+
+.lincoln_feature .feature-content .cms .image-left {
+	background-color: #FFF;
+}
+
+.featuregeneric .feature-sections .feature-content .cms .img.large-right {
+    background-color: #FFFFFF;
+    float: right;
+    margin: 0;
+    padding: 0;
+    width: 640px;
+}
+
+.featuregeneric.rtl .feature-sections .feature-content .cms .img.large-right {
+	float: left;
+}
+
+.sfeature-contentnomarl {
+    padding: 0 10px !important;
+}
+
+.actions > li span {
+	border-bottom: none !important;
+	padding-top: 9px !important;
+}
+
+.feature-overlay .action{
+	display: inline-block;
+}
+
+.feature-overlay .action li {
+	background: none !important;
+	padding-left: 0px !important;
+	min-width: 160px;
+}
+
+.rtl .feature-overlay .action li {
+	padding-right:0 !important;
+}
+
+.ltr .feature-overlay .action .icon-getaquote {
+	padding-left: 20px;
+	background: url("../img/getquotet.png") no-repeat left 0;
+}
+
+.ltr .feature-overlay .action .icon-serachdealer {
+	padding-left: 20px;	
+	background: url("../img/serachbtn.png") no-repeat left 0;
+}
+
+.ltr .feature-overlay .action .icon-buildprice,.ltr .feature-overlay .action .icon-buildprice{
+	padding-left: 20px;	
+	background: url("../img/bprice.png") no-repeat left 0;	
+}
+
+.rtl .feature-overlay .action .icon-getaquote {
+	padding-right: 20px;
+	background: url("../img/getquotet.png") no-repeat right 0;
+}
+
+.rtl .feature-overlay .action .icon-serachdealer {
+	padding-right: 20px;	
+	background: url("../img/serachbtn.png") no-repeat right 0;
+}
+
+.rtl .feature-overlay .action .icon-buildprice ,.rtl .feature-overlay .action .icon-buildprice{
+	padding-right: 20px;	
+	background: url("../img/bprice.png") no-repeat right 0;
+}
+
+.feature-overlay .action  span{
+	color: #40708d;
+	display: block;
+	vertical-align: middle;
+}
+
+.feature-overlay .action li{
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+.feature-overlay .action li:hover{
+	background-color: #f0f1ec !important;
+}
+
+.feature-overlay .action a:hover{
+	text-decoration: none;
+}
+
+.rtl.lincoln_feature .actions .icon {
+	background-image: url("../img/lincoln/lincolnicons_rtl.png")!important;
+}
+
+.rtl.lincoln_feature .principal-content .principal-hero {
+	float: right;
+	padding: 0 0 10px;
+}
+
+.rtl.lincoln_feature #principal.twocolumnwidth h4,.rtl.lincoln_feature  #principal.twocolumnwidth h3 {
+	padding-right: 10px;
+}
+
+.rtl.lincoln_feature .feature-content .cms .image-left {
+	padding: 0 0px 0 40px;
+}
+
+.rtl.lincoln_feature  .feature-sections .feature-content {
+	float: right;
+}
+
+.lincoln_feature .feature-sections .row {
+	clear: both;
+	float: left;
+    padding: 30px 0 0;
+    width: 960px;
+}
+
+.rtl.lincoln_feature .feature-sections .feature-content.last {
+	padding: 0;
+}
+
+.rtl.lincoln_feature .feature-sections .feature-content.feature-guidelinks {
+	padding-left: 0;
+	padding-right: 0;
+	width: 229px;
+}
+
+.rtl.lincoln_feature .feature-sections .feature-content.twocolumnwidth {
+	width: 630px;
+	padding: 0 0 0 10px;
+}
+
+.lincoln_feature .feature-sections .feature-content.twocolumnwidth {
+	width: 630px;
+	padding: 0 10px 0 0;
+}
+
+.lincoln_feature .feature-sections .feature-content.fullwidth .cms {
+	width: 940px;
+}
+
+.lincoln_feature.rtl #principal.fullwidth h4,.lincoln_feature.rtl #principal.fullwidth h3  {
+	padding: 0;
+	padding-right: 10px;
+}
+
+.lincoln_feature .feature-content.twocolumnwidth .img{
+	background-color: white;
+	padding: 0 40px 0 0;
+	width:auto;
+}
+
+.featuregeneric .feature-sections .feature-content .cms .img {
+	width:auto;
+	padding-top:0;
+}
+
+/*accessories*/
+
+.lincolnaspage #content > div{
+	padding-left: 1em;
+	padding-right: 1em;
+	background:#FFFFFF;
+}
+
+.lincolnaspage .gallerylist h2 {
+	border-bottom: 1px solid #E3E3E3;
+    color: #000000;
+    font-size: 1.8em;
+    font-weight: normal;
+}
+
+.lincolnaspage .gallerylist h3 {
+	font-size: 13px;
+	color: #000;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	max-width: 230px;
+}
+
+.lincolnaspage .gallerylist a {
+	font-size: 13px;
+	color: #b45f1a;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+    cursor: pointer;
+    display: block;
+    text-transform: uppercase;
+}
+
+.ltr.lincolnaspage .gallerylist  .arw_link {
+	/*background: transparent url('../img/lincoln/bits.png') no-repeat 76px -1084px;*/
+}
+
+.rtl.lincolnaspage .gallerylist .arw_link {
+	width: 178px;
+	/*background: transparent url('../img/lincoln/bits-rtl.png') no-repeat 0px -1136px;*/
+}
+
+
+.lincolnaspage .gallerylist li {
+	padding-top: 1.5em;
+}
+
+.ltr.lincolnaspage .gallerylist h2 {
+	padding-left: 1.2em;
+}
+
+.rtl.lincolnaspage .gallerylist h2 {
+	padding-right: 1.2em;
+}
+
+.lincolnaspage .gallerylist img{
+	border: 3px solid #bbc4cb;
+	margin-bottom: 10px;
+	width: 224px;
+	height: 124px;
+}
+
+.lincolnaspage .gallerylist li {
+	background:none;
+}
+
+.ltr.lincolnaspage .gallerylist li {
+	float: left;
+	padding-left: 1.2em;
+}
+
+.rtl.lincolnaspage .gallerylist li {
+	float: right;
+	padding-right: 1.2em;
+	display: block;
+}
+
+.lincolnaspage .gallerylist > div{
+	clear: both;
+	padding-bottom: 2em;
+}
+
+.lincolnaspage .gallerylist ul{
+	display: inline-block;
+    padding-left: 9px;
+    padding-right: 9px;
+    width: 743px;
+}
+
+.lincolnaspage .banner2 img{
+	padding-bottom: 2em;
+}
+
+
+/*pricing*/
+
+.lincoln_full.lcpricing .cms a {
+    color: #B45F1A;
+    display: inline-block;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    position: relative;
+    text-transform: uppercase;
+}
+.lcpricing.ltr .cms a {
+    float: right;
+}
+.lcpricing.rtl .cms a {
+    float: left;
+}
+.lcpricing .cms > div {
+    clear: both;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.lcpricing .cms ul {
+    clear: both;
+    display: block;
+    padding: 0;
+}
+.lcpricing .cms > div h1 {
+    color: #000000;
+    font-size: 1.6em;
+    font-weight: normal;
+    width: 25%;
+}
+.lcpricing.ltr .cms > div h1 {
+    float: left;
+}
+.lcpricing.rtl .cms > div h1 {
+    float: right;
+}
+.lcpricing .cms ul li {
+    background: none repeat scroll 0 0 transparent;
+    border-top: 1px solid #E3E3E3;
+    clear: both;
+    display: inline-block;
+    padding: 8px 10px 12px;
+    position: relative;
+    width: 908px;
+}
+.lcpricing .cms ul li > div {
+    position: relative;
+    width: 25%;
+}
+.lcpricing.ltr .cms ul li > div {
+    float: left;
+}
+.lcpricing.rtl .cms ul li > div {
+    float: right;
+}
+.lcpricing .cms li a {
+    color: #40708D;
+    font-size: 13px;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+.lcpricing.ltr .cms ul a {
+    float: left;
+    width: 180px;
+}
+.lcpricing.rtl .cms ul a {
+    background: url("../img/bits-rtl.png") no-repeat scroll 0 0 transparent;
+    float: right;
+    width: 180px;
+}
+.lcpricing.ltr .cms .iconview {
+    background-position: 174px -1084px;
+}
+.lcpricing.ltr .cms .iconlearn {
+    background-position: 78px -1084px;
+}
+.lcpricing.ltr .cms .iconquote {
+    background-position: 148px -1084px;
+}
+.lcpricing.rtl .cms .iconview {
+    background-position: -94px -1136px;
+}
+.lcpricing.rtl .cms .iconlearn {
+    background-position: 0 -1136px;
+}
+.lcpricing.rtl .cms .iconquote {
+    background-position: -68px -1136px;
+}
+.lcpricing .cms li h2 {
+    font-size: 16px;
+    font-weight: normal;
+}
+.lcpricing .cms li h3 {
+    color: #000000;
+    font-size: 28px;
+    font-weight: normal;
+    padding-top: 13px;
+}
+.lcpricing .cms li p {
+    color: #3C443A;
+    font-size: 11px;
+}
+.lcpricing .cms li h4 {
+    color: #3C443A;
+    font-size: 22px;
+    font-weight: normal;
+    padding-bottom: 12px;
+    padding-top: 20px;
+}
+.lcpricing .cms li h5 {
+    color: #3C443A;
+    font-size: 22px;
+    font-weight: normal;
+    padding-bottom: 12px;
+    padding-top: 20px;
+}
+.lincoln_finance .cms {
+    padding: 16px 16px 16px 0;
+    width: 630px;
+}
+.lincoln_finance.rtl .cms {
+    padding: 16px 0 16px 16px;
+}
+.lincoln_full.lincoln_finance #content > div {
+    padding: 0;
+}
+.lincoln_finance .has-sidebar .sidebar {
+    width: 297px;
+}
+
+.lincoln_finance.ltr .sidebar ul {
+	border-top: 1px solid #CCCCCC;
+    padding: 12px 0 0;
+}
+
+.lincoln_finance .sidebar ul a {
+	color: #726D68;
+}
+
+.lincoln_finance.ltr .sidebar ul a {
+    background: url("../img/lincoln/bits.png") no-repeat scroll left -1088px ;
+    padding-left: 8px;
+}
+
+.lincoln_finance.rtl .sidebar ul a {
+    background: url("../img/lincoln/bits-rtl.png") no-repeat scroll right -1138px;
+    padding-right: 8px;
+}
+
+.lincoln_finance.ltr .sidebar li {
+	padding-left:0;
+}
+
+.lincoln_finance.rtl .sidebar li {
+	padding-right:0;
+}
+
+.lincoln_finance.rtl .sidebar li {
+	background: 0;
+}
+
+.lincoln_finance .sidebar h2 {
+    color: #BA5517;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.lincoln_finance .cms ul {
+    clear: inherit;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    max-width: 300px;
+    padding: 0;
+    position: relative;
+}
+.lincoln_finance.ltr .cms ul {
+    float: left;
+    margin-right: 10px;
+}
+.lincoln_finance.rtl .cms ul {
+    float: right;
+    margin-left: 10px;
+}
+.lincoln_finance .cms ul h3 {
+    clear: both;
+    display: block;
+    font-size: 13px;
+    position: relative;
+}
+.lincoln_finance.ltr .cms ul li {
+    background: url("../img/bullet.png") no-repeat scroll 6px 0.6em transparent;
+    color: #000000;
+}
+.lincoln_finance.rtl .cms ul li {
+    background: url("../img/bullet-rtl.png") no-repeat scroll right 0.6em transparent;
+    color: #000000;
+}
+.lincoln_finance .cms h3 {
+    clear: both;
+    display: block;
+    font-size: 13px;
+    position: relative;
+}
+.lincoln_finance .cms h4 {
+    clear: both;
+    display: block;
+    font-size: 15px;
+    font-weight: normal;
+    position: relative;
+}
+.lincoln_finance .cms h2 {
+    clear: both;
+    display: block;
+    font-size: 24px;
+    position: relative;
+}
+.lincoln_finance .cms .blue {
+    color: #B45F1A;
+}
+.lincoln_finance .cms p {
+    clear: both;
+    color: #000000;
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    position: relative;
+}
+.lincoln_finance .syncpanel {
+    background: none repeat scroll 0 0 transparent;
+    padding: 35px 0 0 50px;
+}
+.lincoln_finance .syncpanel .panel-inner {
+    background: none repeat scroll 0 0 transparent;
+    border-left: medium none;
+    border-right: medium none;
+}
+.lincoln_finance .syncpanel .panel-inner h2 {
+    background: none repeat scroll 0 0 transparent;
+    border-left: medium none;
+    border-right: medium none;
+    color: #BA5517;
+    font-size: 16px;
+    padding: 5px 0 15px !important;
+}
+.lincoln_finance .syncpanel .body {
+    padding: 15px 0 0;
+}
+
+
+/*reviews*/
+
+.lincoln_reviews #body.has-aside #content {
+    width: 665px;
+}
+.lincoln_reviews #body {
+    background-color: white;
+    clear: both;
+    display: inline-block;
+    margin-bottom: 30px;
+    position: relative;
+    width: 960px;
+}
+.lincoln_reviews #body.has-aside #aside {
+    padding-top: 10px;
+    width: 255px;
+}
+
+
+.lincoln_reviews.rtl #body.has-aside #content {
+    padding: 0 16px 0 0;
+}
+
+.lincoln_reviews .article-wrapper {
+    border: medium none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.lincoln_reviews .tabtitle h2 span {
+    border: medium none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 8px 0;
+}
+.lincoln_reviews .tabtitle h2 {
+    background-color: transparent;
+}
+.lincoln_reviews .article-wrapper a {
+    color: #B45F1A;
+    font-weight: bold;
+}
+
+.lincoln_reviews .article-wrapper h3 a {
+	color: #000;
+}
+
+.lincoln_reviews .article .date a {
+    color: #40708D;
+    font-weight: normal;
+}
+.lincoln_reviews .article a.btn-readmore {
+    background: none repeat scroll 0 0 transparent;
+    padding: 0 10px 0 0;
+    text-transform: uppercase;
+}
+.lincoln_reviews .article a.btn-readmore em {
+    background: none repeat scroll 0 0 transparent;
+    padding: 0;
+}
+.lincoln_reviews.ltr .pagination {
+    text-align: right;
+}
+.lincoln_reviews.rtl .pagination {
+    text-align: left;
+}
+.lincoln_reviews .tabtitle {
+    width: 100%;
+}
+.lincoln_reviews #aside .section h2 {
+    background: none repeat scroll 0 0 transparent;
+}
+.lincoln_reviews #aside .section h2 span {
+    background: none repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #DCDCDC;
+    color: #3C443A;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 5px 0 10px;
+    width: 255px;
+}
+.lincoln_reviews #aside .section .noboder {
+    border-bottom: medium none;
+}
+.lincoln_reviews.ltr .tabtitle h2 {
+    border-bottom: 1px solid #DCDCDC;
+    float: left;
+    width: 100%;
+}
+.lincoln_reviews.rtl .tabtitle h2 {
+    float: right;
+}
+.lincoln_full.lincoln_reviews #content > div {
+    padding: 0;
+}
+.lincoln_reviews .article {
+    border-bottom: 1px solid #DCDCDC;
+    padding: 10px 0;
+}
+
+.lincoln_reviews .pagination li a {
+	font-size:1.2em;
+}
+
+.lincoln_reviews.ltr .pagination li:first-child a {
+    background: url("../img/arr_left.png") no-repeat scroll left center transparent;
+    padding-left: 6px;
+}
+.lincoln_reviews.ltr .pagination li:last-child a {
+    background: url("../img/arr_right.png") no-repeat scroll right center transparent;
+    padding-right: 6px;
+}
+.lincoln_reviews.rtl .pagination li:first-child a {
+    background: url("../img/arr_right.png") no-repeat scroll right center transparent;
+    padding-right: 6px;
+}
+.lincoln_reviews.rtl .pagination li:last-child a {
+    background: url("../img/arr_left.png") no-repeat scroll left center transparent;
+    padding-left: 6px;
+}
+.lincoln_reviews.ltr .pagination .disableleft {
+    background: url("../img/dsarr_left.png") no-repeat scroll left center transparent !important;
+    color: #000;
+    padding-left: 6px;
+}
+.lincoln_reviews.ltr .pagination .disableright {
+    background: url("../img/dsarr_right.png") no-repeat scroll right center transparent !important;
+    color: #000;
+    padding-right: 6px;
+}
+.lincoln_reviews.rtl .pagination .disableleft {
+    background: url("../img/dsarr_right.png") no-repeat scroll right center transparent !important;
+    color: #000;
+    padding-right: 6px;
+}
+.lincoln_reviews.rtl .pagination .disableright {
+    background: url("../img/dsarr_left.png") no-repeat scroll left center transparent !important;
+    color: #000;
+    padding-left: 6px;
+}
+
+/*dealer locator*/
+
+.lincoln_binmap #body{
+	display: inline-block;
+    position: relative;
+    background-color: white;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    width:100%;
+}
+
+.lincoln_binmap #body.has-aside #content {
+	width: 660px;
+}
+
+.lincoln_binmap #body.has-aside #aside {
+	width: 255px;
+}
+
+.lincoln_binmap #aside .fbform input {
+	width: 230px;
+	
+}
+
+.fbform input.buttonright, .fbform input.buttonleft {
+    background:none;
+    background-color: #000000;
+    border: medium none;
+    border-radius: 0 0 0 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    width: auto !important;
+}
+
+
+.lincoln_binmap #aside .fbform input#dealer-search-button:hover, .fbform input.buttonright:hover, .fbform input.buttonleft:hover, .lincoln_binmap div.dealer-results-map .print:hover {
+	background:none; background-color: #1e1a1a!important; 
+}
+
+.lincoln_binmap.lincoln_full #content > div{
+	padding: 0;
+}
+
+.lincoln_binmap .dealer-results-map table {
+    width: 660px;
+}
+
+.ltr div.dealer-map {
+    float: left;
+    padding: 0;
+}
+
+.rtl div.dealer-map {
+    float: right;
+    padding: 0;
+}
+
+.lincoln_binmap.ltr .fbform input.buttonright {
+    float: left;
+    margin-left: 10px;
+}
+
+.lincoln_binmap .mini-dealer-form {
+    margin-top: 0 !important;
+}
+
+.lincoln_binmap.rtl .fbform input.buttonright {
+    float: right;
+    margin-right: 0;
+}
+
+.lincoln_binmap .fbform input.buttonleft, .lincoln_binmap .fbform input.buttonright {
+    background-color: #000000;
+    border: medium none;
+    font-weight: bold;
+    height: auto !important;
+    padding: 10px;
+    width: auto !important;
+}
+
+.lincoln_binmap .fbform input.buttonleft:hover, .lincoln_binmap .fbform input.buttonright:hover {
+    background-color: #1D1a1a;
+}
+
+.lincoln_binmap thead th, .lincoln_binmap thead td {
+    background: none repeat scroll 0 0 #000000;
+    font-weight: normal;
+}
+
+
+.lincoln_binmap tbody .odd td, .lincoln_binmap tbody .odd th {
+    background: none repeat scroll 0 0 transparent;
+}
+
+.lincoln_binmap .dealer-results-controls h2 {
+    color: #000000;
+    font-weight: normal;
+}
+
+.lincoln_binmap .dealer-results-map table tr td {
+    background-color: #FFFFFF;
+    color: #3C443a;
+    font-size: 1.3em;
+}
+
+.lincoln_binmap .dealer-results-map table tr.hover td {
+    background-color: #FFFFFF;
+}
+.lincoln_binmap .dealer-results-map table tr td.dealername {
+    color: #000000;
+    font-weight: bold;
+}
+.lincoln_binmap .dealer-results-map a {
+    color: #B45F1a;
+}
+.lincoln_binmap .dealer-results-controls li {
+    border-right: 1px solid #B45F1a;
+    color: #000;
+    font-weight: bold;
+}
+.lincoln_binmap .dealer-results-controls p {
+    color: #3C443a;
+}
+
+.lincoln_binmap .dealer-results-controls ul li form button {
+	color: #b45f1a;
+	font-weight: bold;
+}
+
+
+.lincoln_binmap .dealer-results-controls ul li form button:hover {
+    border-bottom: 1px solid #B45F1a;
+}
+
+.dealer-results-controls p {
+	color: #3c443a;
+}
+
+.lincoln_binmap div.dealer-results-map .print {
+    background-color: #000000;
+    border: medium none;
+    font-weight: bold;
+    margin-right: 31px;
+    padding: 10px 20px;
+    width: auto !important;
+    margin-left: 31px;
+    position: static;
+}
+
+
+
+/*spec */
+.lincoln_spec #body {
+    background-color: white;
+    display: inline-block;
+    margin-bottom: 30px;
+    position: relative;
+}
+.lincoln_spec .specsnav ul li a span, .lincoln_spec .specsnav ul li a {
+    background: none repeat scroll 0 0 transparent;
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.lincoln_spec .specsnav ul li a {
+    color: #FFFFFF;
+}
+.lincoln_spec .specsnav ul li {
+    background-color: #3C3C3C;
+    border-left: 1px solid #A5ACB1;
+    border-top: 1px solid #A5ACB1;
+    height: 32px;
+    margin-top: 3px;
+    padding: 0;
+    position: inherit;
+    vertical-align: bottom;
+}
+.lincoln_spec .specsnav ul li:last-child {
+    border-right: 1px solid #A5ACB1;
+}
+.lincoln_spec .specsnav ul li a:hover {
+    background-color: #000000;
+    border: medium none;
+    color: #FFFFFF;
+}
+.lincoln_spec .specsnav ul li.active a {
+    background-color: #FFFFFF;
+    color: #000000;
+    padding-top: 3px;
+}
+.lincoln_spec .specsnav ul li.active a:hover {
+    background-color: #FFFFFF;
+    color: #B45F1A;
+    padding-top: 3px;
+}
+.lincoln_spec .specsnav ul li.active {
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    border-left: 1px solid #51574E;
+    border-right: 1px solid #51574E;
+    border-top: 1px solid #51574E;
+    height: 35px;
+    margin-top: 0;
+}
+.lincoln_spec .specsnav ul li.active a span {
+    border-bottom: 3px solid #BA5517;
+}
+.lincoln_spec .specsnav ul li.active a {
+}
+.lincoln_spec .specsnav {
+    border-bottom: 1px solid #51574E;
+}
+.lincoln_spec .specsnav ul {
+    height: 37px;
+    vertical-align: baseline;
+}
+.lincoln_spec thead th, .lincoln_spec thead td {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #DCDCDC;
+    color: #000000;
+    font-size: 18px;
+    font-weight: normal;
+    padding-bottom: 15px;
+}
+.lincoln_spec td, th, caption {
+    padding: 1.2em 10px;
+}
+.lincoln_spec table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 10px 0 0.5em;
+}
+.lincoln_spec td, th {
+    color: #000000;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+.lincoln_spec tbody th, .lincoln_spec tbody td {
+    border: medium none;
+}
+.lincoln_spec tbody .even td, .lincoln_spec tbody .even th {
+    background-color: #FFFFFF;
+}
+.lincoln_spec tbody .odd td, .lincoln_spec tbody .odd th {
+    background-color: #FBFBF8;
+}
+.lincoln_spec tbody .nobackground td, .lincoln_spec tbody .nobackground th {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #CCCCCC;
+    color: #000000;
+    font-size: 16px;
+    font-weight: normal;
+}
+.lincoln_spec tbody .nobackground td:first-child {
+    width: 320px;
+}
+.lincoln_spec tbody .nobackground a {
+    clear: both;
+    color: #B45F1A;
+    display: block;
+    font-weight: bold;
+}
+
+
+.expandall{
+	cursor: pointer;
+}
+
+.collapseall{
+	cursor: pointer;
+}
+
+/*BaCK TO TOP*/
+
+.ltr #content > span{
+	float: right;
+	padding-right: 15px;
+	padding-top: 15px;
+	color: #40708d;
+}
+
+.rtl #content > span{
+	float: left;
+	padding-left: 30px;
+	padding-top: 15px;
+	color: #40708d;
+}
+
+#content > span > a{
+	color: #40708d;
+	font-size: 13px;
+}
+
+
+
+.back-to-top {
+	background: none repeat scroll 0 0 #000000;
+    border: medium none !important;
+    font-weight: bold;
+    padding: 10px 20px !important;
+    width: auto !important;
+}
+
+.back-to-top:hover {
+	 background:#1e1a1a;
+}
+
+.back-to-top a {
+    color: #FFFFFF !important;
+    font-weight: normal !important;
+    font-size: 1.4em;
+}
+
+.back-to-top a:hover {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+
+}
+
+.back-to-top:hover a {
+    color: #FFFFFF !important;
+   
+}
+
+.button-white > div {
+	background: none !important;
+}
+
+.ltr .back-to-top a {
+	background: none !important;
+	padding: 0 !important;
+}
+
+.rtl .back-to-top a {
+	background: none !important;
+	padding: 0 !important;
+}
+
+.rtl .button-white > div {
+	padding: 0 !important;
+}
+
+.back-to-top a {
+	font-weight: normal !important;
+	color: #fff !important;
+}
+
+.back-to-top a:hover {
+	color: #FFF !important;
+	text-decoration: none !important;
+}
+
+.back-to-top:hover a{
+	color: #FFF !important;
+}
+
+.ltr .button-white > div {
+	padding: 0 !important;
+}
+
+.rtl .back-to-top a {
+	padding: 0;
+	background: none !important;
+}
+
+
+
+/*lincoln model*/
+
+.derivatives > .row {
+	width: 928px;
+	position: relative;
+	text-align: center;
+	display: inline-block;
+}
+
+.derivatives{
+	width: 928px;
+}
+
+.derivative {
+	position: relative;
+	display: inline-block;
+	width: 202px;
+	padding: 20px 8px;
+	vertical-align: top;
+}
+
+.ltr .derivative{
+	float: none;
+}
+
+.rtl .derivative{
+	float: none;
+}
+
+.derivative .head h3 a {
+	background: none;
+	width: 182px;
+	background-color: transparent;
+	font-weight: normal;
+	font-size: 16px;
+	color: #728a8a;
+}
+
+.derivative .head h3 a:hover {
+	color:#FFF;
+}
+
+.derivative .head h3:hover {
+	background-color: #728a8a;
+}
+
+.derivative .head h3:hover a{
+	color:#FFF;
+}
+
+.derivative .head h3 {
+	background: none;
+	width: 202px;
+	background-color: #FFF;
+	color: #728a8a;
+	border: 1px solid #728a8a;
+}
+
+.derivative .head div {
+	padding: 0;
+	width: auto;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+}
+
+.derivative .head {
+	width: 202px;
+}
+
+.derivative .head:hover {
+	background: none;
+}
+
+.derivative .head:hover div{
+	background: none;
+}
+
+.ltr .derivative,.rtl .derivative {
+	border: none;
+}
+
+.ltr .derivative .head img,.rtl .derivative .head img  {
+	float: none;
+}
+
+.derivative .head img {
+	margin: 0 0 20px;
+}
+
+.derivative .body {
+	width: 204px;
+	padding: 0;
+}
+
+.derivative .body .pricing{
+	border-bottom: 1px solid #f0f1ec;
+	border-top: 1px solid #f0f1ec;
+	display: inline-block;
+	position: relative;
+	width: 202px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	color: #000;
+}
+
+.ltr .derivative .body .pricing>p>span :first-child{
+	float: left;
+}
+
+.ltr .derivative .body .pricing>p>span:last-child{
+	float: right;
+}
+
+.rtl .derivative .body .pricing>p>span :first-child{
+	float: right;
+}
+
+.rtl .derivative .body .pricing>p>span:last-child{
+	float: left;
+}
+
+.ltr .derivative .body h3,.ltr .derivative .body a {
+	padding-left: 4px;
+}
+
+.rtl .derivative .body h3,.rtl .derivative .body a  {
+	padding-right: 4px;
+}
+
+.derivative .body h3 {
+	padding-top: 8px;
+	font-size: 16px;
+	font-weight: normal;
+	color: #ba5517;
+}
+
+.derivative .body p > span {
+	color: #000;
+}
+.derivative .body p {
+	font-size: 13px;
+	color: #40708d;
+}
+
+.derivative .body a {
+	color: #40708d;
+	display: inline-block;
+}
+
+.derivative .body a {
+	font-size: 13px;
+}
+
+.derivative .body > a{
+	
+	margin-top: 10px;
+	padding-top: 15px;
+	border-top: 1px solid #F0F1EC;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #F0F1EC;
+}
+
+
+/*models*/
+
+.lincoln_model .derivative .body h3 {
+    color: #000000;
+}
+
+.lincoln_model .derivative .head h3 {
+    border: medium none;
+    padding: 0;
+}
+
+.lincoln_model .derivative .head h3 a {
+    background: none repeat scroll 0 0 #000000;
+    color: #FFFFFF;
+    padding: 9px 10px 8px;
+}
+
+.lincoln_model .derivative .head h3 a {
+    background: none repeat scroll 0 0 #000000;
+    color: #FFFFFF;
+    padding: 9px 10px 8px;
+}
+
+.lincoln_model .derivative .head h3 a:hover {
+    background-color: #1D1A1A;
+}
+
+.lincoln_model .derivative .body a {
+    font-size: 13px;
+}
+
+.lincoln_model .derivative .body a span.arrowr-icon {
+    background: none repeat scroll 0 0 transparent !important;
+}
+
+.lincoln_model .derivative .body p {
+    color: #3C443A;
+}
+
+.lincoln_model .derivative .body > a {
+    border-bottom: 1px solid #F0F1EC;
+    border-top: 1px solid #F0F1EC;
+    color: #B45F1A;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-transform: uppercase;
+}
+
+.lincoln_full .model-select{
+	background: none repeat scroll 0 0 #FFFFFF;
+    clear: both;
+    top:270px;
+    padding: 0;
+    position: absolute;
+}
+
+.lincoln_models .principal-content .principal-hero {
+	background: #FFFFFF;
+}
+
+.lincoln_models .principal-content {
+	background: #FFFFFF;
+}
+
+.lincoln_models.banner-principal #vehiclematrix {
+	position: absolute;
+}
+
+.lincoln_models .principal-content {
+	padding: 18px 0 5px;
+}
+
+.lincoln_models.ltr.banner-principal #vehiclematrix {
+	margin: 0 0 0.5em -4px;
+}
+
+.lincoln_models table thead th.first{
+	cursor: pointer;
+	width:300px;
+}
+
+.rgba.borderradius .lincoln_models.banner-principal #vehiclematrix .pricing {
+	background-color:rgba(255,255,255, 0.9);
+	color: #3c443a !important;
+}
+
+.no-borderradius .lincoln_models #vehiclematrix .pricing, .lincoln_models #vehiclematrix .pricing {
+	background: none !important;
+	background-color: #FFF !important;
+	color: #3c443a !important;
+}
+
+.no-borderradius .lincoln_models #vehiclematrix .pricing > div {
+	background: transparent !important;
+}
+
+.lincoln_models #vehiclematrix .pricing .inner p {
+	color: #3c443a;
+	font-size: 13px;
+}
+
+.lincoln_models #vehiclematrix .pricing .inner h1 {
+	font-size:32px;
+	font-weight: normal;
+}
+
+.lincoln_models #vehiclematrix  h2 {
+	font-size:16px;
+	font-weight: normal;
+}
+
+.lincoln_models #vehiclematrix .pricing > div {
+	padding: 0;
+	background: none !important;
+	background-color: #FFF !important;
+	color: #3c443a !important;
+}
+
+.lincoln_models.banner-principal #vehiclematrix {
+	color: #3c443a;
+	border: none;
+	background-color: #FFF;
+}
+
+.lincoln_models.banner-principal #vehiclematrix .actions li a{
+	color: #40708d;
+}
+
+.lincoln_models.banner-principal #vehiclematrix .actions li:first-child{
+	border-top: 1px solid #DCDCDC;
+}
+
+.lincoln_models.banner-principal #vehiclematrix .actions li{
+	border-top: 1px solid #f0f1ec;
+	padding: 12px 0 12px;
+}
+
+
+.rtl.lincoln_models .model-select span {
+	background-position: 0 top ;
+}
+
+.lincoln_models.rtl .model-select ul {
+	right: 10px;
+}
+
+.lincoln_models.rtl .actions .icon {
+	background-image: url('../img/lincolnicons_rtl.png') !important;
+}
+
+.lincoln_models.rtl.banner-principal #vehiclematrix {
+	margin: 38px 0px 4px 0.5em;
+}
+
+.lincoln_models #content{
+	padding: 16px;
+	width: 928px;
+}
+
+.lincoln_models #content h2{
+	font-weight: 1.6em;
+	color: #000;
+	font-weight: normal;
+}
+
+.lincoln_models #content>ul li{
+	padding: 10px 10px 15px 10px;
+}
+
+.ltr.lincoln_models #content>ul li{
+	margin-right: 25px;
+}
+
+.rtl.lincoln_models #content>ul li{
+	margin-left: 15px;
+}
+
+.lincoln_models #content>ul li:hover{
+	background-color:#f0f1ec;
+}
+
+.lincoln_models #content ul a img{
+	width: 95px;
+	height: 58px;
+}
+
+.lincoln_models #content ul a p{
+	max-width: 156px;
+	color: #40708d;
+	padding-left: 10px;
+	line-height: normal;
+}
+
+.ltr.lincoln_models #content>ul a img,.ltr.lincoln_models #content>ul a p{
+	float: left;
+}
+
+.rtl.lincoln_models #content>ul a img,.rtl.lincoln_models #content>ul a p{
+	float: right;
+}
+
+.rtl.lincoln_models #content>ul a p{
+	padding-right: 10px;
+}
+
+.ltr.lincoln_models #content>ul li{
+	float: left;
+}
+
+.rtl.lincoln_models #content>ul li{
+	float: right;
+}
+
+.lincoln_models.lincoln_spec #content > div {
+	padding: 0;
+	padding-top: 30px;
+}
+
+.lincoln_models .specs p{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 15px;
+	color: #000;
+}
+
+.lincoln_models .specs p > a{
+	font-size: 13px;
+}
+
+.space_line{
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #999999;
+}
+
+.lincoln_models thead th, .lincoln_models thead td {
+	font-size: 16px;
+	color: #000;
+	font-weight: normal;
+	padding: 12px;
+}
+
+.lincoln_models tbody  th:hover, .lincoln_models tbody  td:hover {
+	background-color: #e3e8e8;
+	text-decoration: underline;
+}
+
+.config_option{
+	color: #b45f1a;
+}
+
+ .lincoln_models thead td:last-child{
+	text-align: center;
+	color: #b45f1a;
+}
+
+.lincoln_models thead th, .lincoln_models thead td {
+	border-bottom: 1px solid #DCDCDC;
+}
+
+.lincoln_models .featurepanel .items {
+	padding:0;
+}
+
+.lincoln_models .featurepanel .items li .img {
+	width: 95px;
+}
+
+.lincoln_models .featurepanel .items li h4 {
+	max-width: 156px;
+	width: auto;
+	color: #40708D;
+    padding-left: 10px;
+    line-height: normal;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+.lincoln_models .featurepanel .items li h4 a{
+	color: #000;
+}
+
+.lincoln_models .featurepanel .items li:hover{
+	background-color: #F0F1EC;
+}
+
+.lincoln_models .featurepanel .items li h4 a:hover{
+	text-decoration: none;
+}
+
+.lincoln_models .featurepanel .items li{
+	background: none repeat scroll 0 0 transparent;
+    border: 1px solid #DEDEDE;
+    margin-bottom: 30px;
+    min-height: 190px;
+    padding: 10px;
+    width: 262px;
+}
+
+.lincoln_models .featurepanel .items li > div {
+	width: 271px;
+	background: none;
+	min-height: 30px;
+	padding: 0;
+}
+
+.ltr.lincoln_models .featurepanel .items li {
+	margin-right: 25px;
+}
+
+.rtl.lincoln_models .featurepanel .items li {
+	margin-left: 25px;
+}
+
+.lincoln_models #content h2 {
+	clear:both;
+}
+
+
+
+/*pdf icon*/
+.ltr.lincoln_models .principal-content > span{
+	float: right;
+	padding-right: 15px;
+	padding-top: 0px;
+}
+
+.rtl.lincoln_models .principal-content > span{
+	float: left;
+	padding-left: 30px;
+	padding-top: 0px;
+}
+
+.lincoln_models .icon-pdf {
+	display: block;
+	padding-left: 30px;
+	background: transparent url('../img/lincoln/pdficon.png') no-repeat 15px 0px ;
+}
+
+.lincoln_models .icon-pdf a{
+	color: #40708d;
+}
+
+.lincoln_models .model-select span {
+	font-weight: normal;
+	padding: 6px 25px 7px 15px;
+	background: url("../img/lincoln/dropdown.gif") no-repeat scroll 100% 0 transparent;
+} 
+
+.lincoln_models .model-select ul {
+	width: 121px;
+	top: 35px;
+}
+
+.lincoln_models .model-select ul li a {
+	width: 101px;
+	border-bottom: none;
+	color: #006699;
+	padding: 0.5em 10px;
+}
+
+.icon-pdf {
+    background: url("../img/lincoln/pdficon.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    margin-top: -30px;
+    padding-left: 15px;
+}
+
+
+span.icon-pdf > a {
+    color: #40708D;
+    font-size: 13px;
+}
+
+.ltr span.icon-pdf {
+    color: #40708D;
+    float: right;
+    margin-left:10px;
+    padding-right:0;
+    padding-top:0;
+}
+
+.ltr #content span.icon-pdf {
+    padding-right: 0;
+    padding-top: 0;
+}
+
+.rtl span.icon-pdf {
+    color: #40708D;
+    float: left;
+    padding-right:0;
+    padding-top:0;
+    margin-right:0;
+}
+
+.ltr #content .icon-pdf span, .rtl #content .icon-pdf span {
+	padding-top:0;
+}
+
+.rtl #content span.icon-pdf {
+    padding-left: 0;
+    padding-top: 0;
+}
+
+
+
+/*aRROW*/
+
+span.arrowr-icon-down {
+	display:inline !important; 
+	height:auto !important;
+}
+
+.ltr span.arrowr-icon-down {
+	padding:0 0 0 12px !important; 
+	background:transparent url('../img/lincoln/arr_down.png') no-repeat 0 8px !important;
+}
+
+.rtl span.arrowr-icon-down {
+	padding:0 12px 0 0 !important; 
+	background:transparent url('../img/lincoln/arr_down.png') no-repeat 0 8px !important;
+	margin-left:5px;
+}
+
+.ie7 span.arrowr-icon-down {
+	display:inline-block !important;
+}
+
+span.arrowr-icon {
+	display:inline !important; 
+	height:auto !important;
+}
+
+.ltr span.arrowr-icon {
+	padding:0 0 0 12px !important; 
+	background:transparent url('../img/lincoln/arr_right.png') no-repeat 0 6px !important;
+}
+
+.rtl span.arrowr-icon {
+	padding:0 12px 0 0 !important; 
+	background:transparent url('../img/lincoln/arr_left.png') no-repeat 0 6px !important;
+	margin-left:5px;
+}
+
+.ie7 span.arrowr-icon {
+	display:inline-block !important;
+}
+
+/*showroom*/
+.showroom .item .head {
+	border: 1px solid #fff;
+}
+.showroom .item .head:hover div {
+	background:none;
+}
+
+.showroom .item .head:hover {
+	background:none;
+	border: 1px solid #dedede;
+}
+
+.showroom .item .head h3, .showroom .item .head h3 a {
+	background:none;
+}
+
+.showroom .item .head:hover h3 a {
+	color: #000;
+}
+
+/* Social media */
+.socialmedia-wrapper {
+	position: absolute;
+	width: 169px;
+	padding: 5px 0 0 5px;
+	bottom: 50px;
+	background: none;
+	margin:6px 0;
+}
+
+.ltr .socialmedia-wrapper {
+	right:0;
+	left:auto;
+}
+
+.rtl .socialmedia-wrapper {
+	left:0px;
+	right: auto;
+}
+
+
+.socialmedia {
+	background:none;
+	padding:0;
+	width:auto;
+}
+
+.socialmedia p {
+    color: #576969;
+}
+
+
+/* vehicle matrix sidebar */
+ 
+#vehiclematrix {
+    background: #FFFFFF;
+    border: medium none;
+    margin:0;
+}
+
+#vehiclematrix > div {
+	background:none;
+	padding: 4px 4px 0;
+    width: 166px;
+}
+
+.ltr #vehiclematrix > div {
+    float: left;
+}
+
+.rtl #vehiclematrix > div {
+    float: right;
+}
+
+.lincoln_models.banner-principal.ltr #vehiclematrix {
+	right: 0;
+}
+
+.lincoln_models.banner-principal.rtl #vehiclematrix {
+	left: 0;
+}
+
+
+.ltr #vehiclematrix .pricing, .ltr #vehiclematrix .pricing > div {
+    float: right;
+}
+
+.rtl #vehiclematrix .pricing, .ltr #vehiclematrix .pricing > div {
+    float: left;
+}
+
+#vehiclematrix .pricing strong, #vehiclematrix .pricing strong.small {
+	font-size: 2.4em;
+}
+
+#vehiclematrix .pricing > div {
+    padding: 0 5px;
+    width: 156px;
+}
+
+ #vehiclematrix .matrix ul{
+	padding: 0;
+}
+
+ #vehiclematrix .matrix li div {
+	width: 160px;
+	height: auto;
+	padding: 0;
+	color: white;
+	text-align: left;
+	font-weight: normal;
+	background: transparent;
+	float: left;
+}
+
+.ltr #vehiclematrix .matrix li div > img{
+	float: left;
+}
+
+.ltr #vehiclematrix .matrix li div > p{
+	float: left;
+	clear: none;
+	
+}
+
+.rtl #vehiclematrix .matrix li div > img{
+	float: right;
+}
+
+.rtl #vehiclematrix .matrix li div > p{
+	float: right;
+	clear: none;
+	
+}
+
+ #vehiclematrix .matrix li {
+	background: none;
+	width: 160px;
+	padding: 0;
+	margin: 0;
+	color: #FFF;
+	padding-right: 5px;
+}
+
+.ltr #vehiclematrix .matrix {
+	padding: 5px 0 0 4px;
+}
+
+#vehiclematrix .pricing strong {
+	font-size: 2.4em;
+}
+
+#vehiclematrix .actions {
+    font-size: 1.2em;
+}
+
+ul.actions li {
+    background: none;
+}
+
+.ltr #vehiclematrix .actions, .ltr #aside .actions, .ltr .guidelinks .actions {
+	float: left;
+}
+
+.rtl #vehiclematrix .actions, .rtl #aside .actions, .rtl .guidelinks .actions {
+	float: right;
+}
+
+.rtl #vehiclematrix .actions li{
+	padding-right: 5px;
+}
+
+
+
+.ltr #vehiclematrix .actions li, .ltr #aside .actions li, .ltr .guidelinks .actions li {
+    float: left;
+}
+
+#vehiclematrix .actions li, #aside .actions li {
+    background: url("../img/lincoln/divider-blur.png") no-repeat scroll left top;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    margin: 0 0 3px;
+    padding: 0 0 4px;
+    width: 166px;
+}
+
+#vehiclematrix .actions li:hover, #aside .actions li:hover {
+	background: url("../img/lincoln/divider-blur.png") no-repeat scroll left top;
+	
+}
+
+#vehiclematrix .actions li a, #aside .actions li a, .guidelinks .actions li a {
+    color: #767676;
+    background:none;
+}
+
+#vehiclematrix .actions li a:hover, #aside .actions li a:hover, .guidelinks .actions li a:hover {
+	color: #000;
+}
+
+.ltr #vehiclematrix .actions li a, .ltr #aside .actions li a, .ltr .guidelinks .actions li a {
+    float: left;
+}
+
+.rtl #vehiclematrix .actions li a, .rtl #aside .actions li a, .rtl .guidelinks .actions li a {
+    float: right;
+}
+
+#vehiclematrix .actions li a {
+    font-weight: normal;
+}
+
+/*colouriser*/
+
+#coloriser {
+    background: none;
+    bottom: 12px;
+    padding: 0 0 0 5px;
+    position: absolute;
+}
+.ie7.rtl #coloriser {
+    width: 355px;
+}
+.ltr #coloriser {
+    left: -51px;
+}
+.rtl #coloriser {
+    right: 0;
+}
+#coloriser > div {
+    float: left;
+    height: 25px;
+}
+#coloriser ul {
+    background: none;
+    clear: both;
+    float: left;
+    font-size: 1.1em;
+    height: 25px;
+    padding: 0 10px 0 0;
+}
+.ie7.rtl #coloriser ul {
+    width: 345px;
+}
+#coloriser ul li {
+    background: none;
+    color: #666;
+    height: 25px;
+    padding: 0;
+    position: relative;
+    width: 36px;
+}
+.ltr #coloriser ul li {
+    float: left;
+}
+.rtl #coloriser ul li {
+    float: right;
+}
+#coloriser label {
+    background: none;
+    color: #576969;
+    float: left;
+    font-weight: bold;
+    height: 20px;
+    padding: 5px 10px 0 4px;
+}
+.ltr #coloriser ul li.label {
+    padding: 4px 10px 0 4px;
+}
+.rtl #coloriser ul li.label {
+    padding: 4px 4px 0 10px;
+}
+#coloriser ul li a {
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    text-decoration: none;
+    text-indent: -999em;
+    top: 4px;
+    width: 36px;
+}
+.rtl #coloriser ul li a {
+    overflow: hidden;
+}
+#coloriser ul li a span {
+      background: url("../img/lincoln/coloriser.png") no-repeat scroll 0 -71px transparent;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 36px;
+}
+#coloriser ul li.two-color a {
+    height: 9px;
+}
+#coloriser ul li.two-color a span {
+    background-image: none;
+    height: 18px;
+    top: 9px;
+    width: 36px;
+}
+#coloriser ul li.two-color a span span {
+    background: url("../img/lincoln/coloriser.png") no-repeat scroll 0 -70px transparent;
+    display: block;
+    height: 20px;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    top: -9px;
+    width: 30px;
+}
+#coloriser ul li a:focus {
+    outline: medium none;
+}
+#coloriser ul li a:hover, #coloriser ul li.current a {
+    height: 25px;
+    left: 0;
+    top: 1px;
+    width: 36px;
+}
+
+#coloriser ul li a:hover span, #coloriser ul li.current a span {
+    background: url("../img/lincoln/coloriser.png") no-repeat scroll 0 -70px transparent;
+    height: 25px;
+    left: -1px;
+    top: -1px;
+    width: 36px;
+}
+#coloriser ul li .tooltip {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: -25px;
+    white-space: nowrap;
+    color:#fff;
+}
+#coloriser ul li .tooltip span {
+    background: url("../img/lincoln/coloriser.png") no-repeat scroll center -70px rgba(0, 0, 0, 0.5);
+    margin-left: -35%;
+    padding: 4px 7px;
+}
+#coloriser ul li:hover .tooltip {
+    display: inline-block;
+}
+#coloriser ul li.two-color a:hover, #coloriser ul li.two-color.current a {
+    height: 12px;
+    left: 1px;
+    top: -1px;
+    width: 27px;
+}
+#coloriser ul li.two-color a:hover span, #coloriser ul li.two-color.current a span {
+    background-image: none;
+    height: 11px;
+    left: 0;
+    top: 12px;
+    width: 27px;
+}
+#coloriser ul li.two-color a:hover span span, #coloriser ul li.two-color.current a span span {
+    background: url("../img/coloriser.png") no-repeat scroll 0 -100px transparent;
+    height: 26px;
+    left: -1px;
+    top: -13px;
+    width: 30px;
+}
+#pickerLoader {
+    background: url("../img/loading-colourpicker.gif") no-repeat scroll 0 0 transparent;
+    bottom: 20px;
+    height: 10px;
+    position: absolute;
+    width: 50px;
+}
+.ltr #pickerLoader {
+    left: 250px;
+}
+.rtl #pickerLoader {
+    right: 250px;
+}
+
+/*carousel*/
+.featurecarousel-wrapper {
+    margin: 0 0 40px;
+}
+
+.featurecarousel-wrapper, .featurecarousel {
+	background:none;
+}
+
+.featurecarousel p {
+	color: #666;
+}
+
+.ltr .featurecarousel H4, .ltr .featurecarousel p {
+	padding: 0 0 0 2px;
+}
+
+.rtl .featurecarousel H4, .rtl .featurecarousel p {
+	padding: 0 2px 0 0;
+}
+
+ .featurecarousel .items li:hover {
+	background-color: #ededed;
+}
+
+.featurecarousel .items li h4 > a {
+	color: #576969;
+}
+
+.featurecarousel .items li:hover h4 > a {
+	color: #b45f1a;
+}
+
+.featurecarousel .items li {
+	padding: 0;
+	margin:0 4px 0 3px;
+	word-wrap: break-word;
+}
+
+.featurecarousel .items li .img img{
+	width: 133px;
+	height: 83px; 
+}
+
+.rtl .featurecarousel .items li .img {
+	float:right;
+}
+
+.ltr .featurecarousel .items li .img {
+	float:left;
+}
+
+.featurecarousel .controls .page {
+	background:none;
+    background-color: #e46b08;
+    display: inline-block;
+    height: 3px;
+    margin: 0 3px;
+    position: relative;
+    width: 28px;
+}
+
+.featurecarousel .controls .page.current {
+	background:none;
+    background-color: #b45f1a;
+}
+
+.featurecarousel .controls .page a {
+    height: 3px;
+    position: absolute;
+    width: 28px;
+}
+
+.featurecarousel .controls .page:hover {
+	background:none;
+    background-color: #b45f1a;
+}
+
+.featurecarousel .controls .page.current {
+	background:none;
+    background-color: #b45f1a;
+}
+
+.gallery-fullscreen  .featurecarousel .controls .previous, .gallery-fullscreen  .featurecarousel .controls .next {
+	position: absolute;
+    top: 5px;
+}
+
+.ltr .featurecarousel .controls .previous A {
+    background: url("../img/lincoln/carousel.png") no-repeat scroll 0 -10px transparent;
+}
+
+.rtl .featurecarousel .controls .previous A {
+    background: url("../img/lincoln/carousel.png") no-repeat scroll 0 -100px transparent;
+}
+
+.ltr .featurecarousel .controls .next A {
+    background: url("../img/lincoln/carousel.png") no-repeat scroll 0 -100px transparent;
+}
+
+.rtl .featurecarousel .controls .next A {
+    background: url("../img/lincoln/carousel.png") no-repeat scroll 0 -10px transparent;
+}
+
+.ltr .featurecarousel .controls .next {
+    right: 23px;
+}
+
+.ltr .featurecarousel .controls .previous {
+	left:24px
+}
+
+.rtl .featurecarousel .controls .next {
+    left: 23px;
+}
+
+.rtl .featurecarousel .controls .previous {
+    left: 24px;
+}
+
+div.gallery-fullscreen .featurecarousel .controls a {
+    display: block;
+    height: 101px;
+    width: 25px;
+}
+
+.ltr div.gallery-fullscreen .featurecarousel .controls .previous a {
+    background: url("../img/lincoln/carouselfull.png") no-repeat scroll -11px -5px;
+}
+
+.rtl div.gallery-fullscreen .featurecarousel .controls .previous a {
+    background: url("../img/lincoln/carouselfull.png") no-repeat scroll -78px -5px transparent;
+}
+
+.ltr div.gallery-fullscreen .featurecarousel .controls .previous a:hover {
+    background: url("../img/lincoln/carouselfull.png") no-repeat scroll -11px -247px;
+}
+
+.rtl div.gallery-fullscreen .featurecarousel .controls .previous a:hover {
+    background: url("../img/lincoln/carouselfull.png") no-repeat scroll -78px -247px;
+}
+
+.ltr div.gallery-fullscreen .featurecarousel .controls .next a {
+    background: url("../img/lincoln/carouselfull.png") no-repeat scroll -78px -5px;
+}
+
+.rtl div.gallery-fullscreen .featurecarousel .controls .next a {
+    background: url("../img/lincoln/carouselfull.png") no-repeat scroll -11px -5px transparent;
+}
+
+.ltr div.gallery-fullscreen .featurecarousel .controls .next a:hover {
+    background: url("../img/lincoln/carouselfull.png") no-repeat scroll -78px -247px;
+}
+
+.rtl div.gallery-fullscreen .featurecarousel .controls .next a:hover {
+    background: url("../img/lincoln/carouselfull.png") no-repeat scroll -11px -247px;
+}
+
+
+/*galleries*/
+
+.gallery {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 0;
+    position: relative;
+    width: auto;
+}
+.ltr .gallery {
+    float: left;
+    margin-left: 0;
+    margin-right: 9px;
+    padding-top: 9px;
+}
+.rtl .gallery {
+    float: right;
+    margin-left: 9px;
+    margin-right: 0;
+    padding-top: 9px;
+}
+.gallery LaBEL {
+    font-size: 1.2em;
+    padding: 0 0 0.8em;
+    width: 100%;
+}
+.ltr .gallery LaBEL {
+    float: left;
+}
+.rtl .gallery LaBEL {
+    float: right;
+}
+.gallery SELECT {
+    font-size: 1.2em;
+    margin: 0 0 1em;
+}
+.ltr .gallery SELECT {
+    clear: both;
+    float: left;
+}
+.rtl .gallery SELECT {
+    clear: both;
+    float: right;
+}
+.gallery .row {
+    padding: 0 0 0;
+    width: 100%;
+}
+.ltr .gallery .row {
+    float: left;
+}
+.rtl .gallery .row {
+    float: right;
+}
+.gallery .row .item {
+    display: inline;
+    height: auto;
+    width: 170px;
+}
+.ltr .gallery .row .item {
+    float: left;
+    margin: 0 9px 0 0;
+}
+.rtl .gallery .row .item {
+    float: right;
+    margin: 0 0 0 9px;
+}
+.ltr .gallery .row .item.last {
+    margin-right: 0;
+}
+.rtl .gallery .row .item.last {
+    margin-left: 0;
+}
+.gallery .row .item a {
+    height: 101px;
+    margin: 0 0 5px;
+    width: 183px;
+}
+.ltr .gallery .row .item a {
+    float: left;
+}
+.rtl .gallery .row .item a {
+    float: right;
+}
+.gallery .row .item a IMG {
+    cursor: pointer;
+}
+.ltr .gallery .row .item a IMG {
+    float: left;
+}
+.rtl .gallery .row .item a IMG {
+    float: right;
+}
+.gallery .row .item:hover a {
+    border: medium none;
+    height: 87px;
+    width: 162px;
+}
+.gallery .row .item:hover a IMG {
+    margin: -3px;
+}
+.gallery .row .item:hover a span {
+    border: 3px solid #b45f1a;
+    display: block;
+    height: 97px;
+    overflow: hidden;
+    width: 177px;
+}
+.ltr .gallery .row .item:hover a span {
+    float: left;
+}
+.rtl .gallery .row .item:hover a span {
+    float: right;
+}
+.gallery .row .item h4 {
+    clear: both;
+    font-size: 1.1em;
+    padding: 0;
+}
+.gallery .row .item p {
+    font-size: 1.1em;
+    padding: 0 0 0.3em;
+}
+.gallery .item {
+    display: inline;
+    height: 103px;
+    position: relative;
+    width: 183px;
+}
+.ltr .gallery .item {
+    float: left;
+    margin: 0 0 9px 9px;
+}
+.rtl .gallery .item {
+    float: right;
+    margin: 0 9px 9px 0;
+}
+.ltr .gallery .large-left {
+    float: left;
+    height: 214px;
+    width: 376px;
+}
+.rtl .gallery .large-left {
+    float: right;
+    height: 214px;
+    width: 376px;
+}
+.ltr .gallery .large-right {
+    float: right;
+    height: 216px;
+    right: 9px;
+    width: 376px;
+}
+.rtl .gallery .large-right {
+    float: left;
+    height: 216px;
+    left: 8px;
+    width: 376px;
+}
+.gallery .item a {
+    height: 101px;
+    margin: 0 0 5px;
+    width: 183px;
+}
+.gallery .large-left a, .gallery .large-right a {
+    height: 216px;
+    width: 376px;
+}
+.ltr .gallery .item a {
+    float: left;
+}
+.rtl .gallery .item a {
+    float: right;
+}
+.gallery .item a IMG {
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    height: 101px;
+    width: 181px;
+}
+.gallery .large-left a IMG, .gallery .large-right a IMG {
+    height: 214px;
+    width: 374px;
+}
+.ltr .gallery .item a IMG {
+    float: left;
+}
+.rtl .gallery .item a IMG {
+    float: right;
+}
+.gallery .item:hover a {
+    border: medium none;
+    height: 93px;
+    width: 173px;
+}
+.gallery .large-left:hover a, .gallery .large-right:hover a {
+    height: 206px;
+    width: 366px;
+}
+.gallery .item:hover a IMG {
+    margin: -3px;
+}
+.gallery .item:hover a span {
+    border: 3px solid #b45f1a;
+    display: block;
+    height: 97px;
+    overflow: hidden;
+    width: 177px;
+}
+.gallery .large-left:hover a span, .gallery .large-right:hover a span {
+    height: 208px;
+    width: 368px;
+}
+.ltr .gallery .item:hover a span {
+    float: left;
+}
+.rtl .gallery .item:hover a span {
+    float: right;
+}
+.gallery .item h4 {
+    clear: both;
+    font-size: 1.1em;
+    padding: 0;
+}
+.gallery .item p {
+    font-size: 1.1em;
+    padding: 0 0 0.3em;
+}
+.gallery .view-gallery {
+    display: none;
+}
+div.tooltip {
+    padding: 16px 0 0;
+    position: absolute;
+    width: 271px;
+    z-index: 1000;
+}
+.ltr div.tooltip {
+    background: url("../img/tooltip.png") no-repeat scroll 0 0 transparent;
+    margin: 0 0 0 -5px;
+}
+.rtl div.tooltip {
+    background: url("../img/tooltip.png") no-repeat scroll -600px 0 transparent;
+    margin: 0 -5px 0 0;
+}
+div.tooltip > div {
+    background: url("../img/tooltip.png") no-repeat scroll -300px bottom transparent;
+    padding: 5px 15px 15px;
+    width: 241px;
+}
+div.tooltip H5 {
+    border-bottom: 1px solid #CBCCCE;
+    color: #949494;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0 0 0.8em;
+    padding: 0 0 0.2em;
+}
+div.tooltip p {
+    font-size: 1.1em;
+    line-height: 1.2em;
+}
+.gallery .item div.tooltip {
+    clear: both;
+    display: none;
+    margin-top: 101px;
+}
+.gallery .large-left div.tooltip, .gallery .large-right div.tooltip {
+    margin-top: 214px;
+}
+.gallery .item.hover:hover div.tooltip {
+    display: block;
+}
+.ltr .gallery .item.last div.tooltip {
+    background-position: -600px 0;
+    margin-left: -95px;
+}
+.rtl .gallery .item.last div.tooltip {
+    background-position: 0 0;
+    margin-right: -95px;
+}
+.ltr .gallery .large-right.last div.tooltip {
+    margin-left: 107px;
+}
+.rtl .gallery .large-right.last div.tooltip {
+    margin-right: 107px;
+}
+.ltr div.tooltip-top {
+    background-position: -910px bottom;
+    padding: 0 0 16px;
+}
+.ltr div.tooltip-top > div {
+    background-position: -1210px top;
+    padding-top: 15px;
+}
+.gallery .item div.tooltip-top {
+    margin-top: -92px;
+}
+.ltr .gallery .item.last div.tooltip-top {
+    background-position: -1510px bottom;
+}
+
+.rtl div.tooltip-top {
+    background-position: -1510px bottom;
+    padding: 0 0 16px;
+}
+.rtl div.tooltip-top > div {
+    background-position: -1210px top;
+    padding-top: 15px;
+}
+.rtl .gallery .item.last div.tooltip-top {
+    background-position: -910px bottom;
+}
+.gallery .item a span.btn-video-play {
+    background: url("../img/videoplayer.png") no-repeat scroll left top transparent;
+    border: 1px solid transparent;
+    display: inline;
+    height: 33px;
+    left: 72px;
+    position: absolute;
+    top: 33px;
+    width: 33px;
+}
+.gallery .item a:hover span.btn-video-play {
+    background-position: left bottom;
+}
+.gallery .row .item:hover a span.btn-video-play {
+    display: inline;
+    height: 33px;
+    overflow: hidden;
+    width: 33px;
+}
+.gallery .accessories-container {
+    float: left;
+    width: 708px;
+}
+.gallery .accessories-container .model-accessory-container {
+    float: left;
+    width: 708px;
+}
+.ie7 .gallery .item div.tooltip {
+    margin-top: -5px;
+}
+.ie7 div.tooltip-top {
+    margin-top: -213px !important;
+}
+.ie7 .gallery .large-left div.tooltip, .ie7 .gallery .large-right div.tooltip {
+    margin-top: -5px !important;
+}
+.ie7 .gallery .large-left div.tooltip-top, .ie7 .gallery .large-right div.tooltip-top {
+    margin-top: -316px !important;
+}
+
+
+.gallery-popup {background: none;}
+
+
+div.gallery-fullscreen div.close-window {
+    background: none repeat scroll 0 0;
+    float: right;
+    padding: 0 0 7px;
+    width: 500px;
+}
+
+.ltr div.gallery-fullscreen div.close-window span {
+    background: url("../img/icons.png") no-repeat scroll right -1797px;
+    margin-right: 0;
+}
+
+.rtl div.gallery-fullscreen div.close-window {
+    background: url("../img/icons-rtl.png") no-repeat scroll left -1797px transparent;
+    float: left;
+    padding-left: 22px;
+}
+
+div.gallery-fullscreen div.close-window span {
+    display: block;
+    height: 25px;
+}
+
+.ltr div.gallery-fullscreen div.close-window a {
+    padding: 0;
+    position: relative;
+    right: 18px;
+    text-align: right;
+}
+
+.rtl div.gallery-fullscreen div.close-window a {
+    margin-left: -23px;
+    padding: 0 5px 0 20px;
+    text-align: left;
+}
+
+.rtl div.gallery-fullscreen div.close-window span {
+	background:none;
+	margin:0;
+}
+
+div.gallery-fullscreen div.close-window a {
+    color: #000000;
+    display: block;
+    font-size: 1.1em;
+    height: 25px;
+    line-height: 23px;
+    width: 500px;
+}
+
+div.gallery-fullscreen div.head {
+    float: left;
+    margin-top: 14px;
+    width: 700px;
+}
+
+div.gallery-fullscreen div.head h1 {
+    color: #Ba5517;
+    font-size: 1.8em;
+    padding: 0;
+}
+
+.ltr .gallery, .rtl .gallery {
+	padding-top:0; margin:0;
+}
+
+
+.rtl.gallery-popup, .ltr.gallery-popup{
+	height: 0px;
+}
+
+.rtl .overlay-box div.view-gallery {
+	left: 290px;
+	
+}
+
+div.gallery-fullscreen div.carousel-wrapper div.featurecarousel .items li {
+    border:none;
+    min-height: 101px;
+    padding: 0;
+    width: 181px !important;
+}
+
+
+div.gallery-fullscreen div.controls ul li a {
+    background: url("../img/lincoln/bits.png") no-repeat scroll -30px -244px transparent;
+    display: block;
+    height: 31px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 36px;
+}
+
+
+
+.ltr div.gallery-fullscreen div.controls ul li.previous a, .rtl div.gallery-fullscreen div.controls ul li.next a {
+    background-position: -33px -1229px;
+    text-decoration: none;
+}
+
+.ltr div.gallery-fullscreen div.controls ul li.next a, .rtl div.gallery-fullscreen div.controls ul li.previous a {
+    background-position: -30px -1177px;
+    text-decoration: none;
+}
+
+.ltr div.gallery-fullscreen div.controls ul li.next a:hover, .rtl div.gallery-fullscreen div.controls ul li.previous a:hover {
+	background-position: -30px -1346px;
+}
+
+.ltr div.gallery-fullscreen div.controls ul li.previous a:hover, .rtl div.gallery-fullscreen div.controls ul li.next a:hover {
+	background-position: -33px -1291px;
+}
+
+
+.ltr div.gallery-fullscreen div.controls ul li.next.disabled a, .ltr div.gallery-fullscreen div.controls ul li.next.disabled a:hover, .rtl div.gallery-fullscreen div.controls ul li.previous.disabled a, .rtl div.gallery-fullscreen div.controls ul li.previous.disabled a:hover {
+    background-color: transparent;
+    background-position: -30px -1346px;
+    text-decoration: none;
+}
+
+.ltr div.gallery-fullscreen div.controls ul li.previous.disabled a, .ltr div.gallery-fullscreen div.controls ul li.previous.disabled a:hover, .rtl div.gallery-fullscreen div.controls ul li.next.disabled a, .rtl div.gallery-fullscreen div.controls ul li.next.disabled a:hover {
+    background-color: transparent;
+    background-position: -33px -1291px;
+}
+
+div.gallery-fullscreen div.carousel-wrapper div.featurecarousel .items li div.img > a > img {
+    height: 101px;
+    width: 181px;
+}
+
+div.gallery-fullscreen div.image-info {
+    background: url("../img/lincoln/icon-info.gif") no-repeat scroll 0 0 transparent;
+    padding: 10px;
+    margin-top:10px;
+   
+}
+
+div.gallery-fullscreen div.controls ul li.pagination P {
+    color: #000;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 0 0;
+}
+
+
+.ltr div.gallery-fullscreen div.controls ul li {
+    float: left;
+    margin-left: 10px;
+}
+
+
+.lincoln_videogry .gallery .row .item {
+	width: 183px;
+    height: 150px;
+    border: none;
+}
+
+.lincoln_videogry.ltr .row .item {
+    margin: 0 0 9px 9px;
+}
+
+.lincoln_videogry .gallery .row .item h3{
+	color:#40708d;
+}
+
+.lincoln_videogry .gallery .row .item h3,.lincoln_videogry .gallery .row .item h4{
+	font-weight: normal;
+	font-size: 1.2em;
+}
+
+.lincoln_videogry .gallery .row .item a:hover{
+	text-decoration:none;
+}
+
+.ltr.lincoln_videogry .row .item{
+	margin: 0 0px 9px 9px;
+}
+
+.rtl.lincoln_videogry .row .item{
+	margin: 0 9px 9px 0px;
+}
+
+/*360 button*/
+
+.principal-content .view360-button {
+    background: url("../img/lincoln/bg-360-view.gif") 0 2px no-repeat #000000;
+    width: 170px;
+    bottom: 14px;
+}
+
+.ltr .view360-button a, .rtl .view360-button a {
+	background: none
+}
+
+.ltr .view360-button a {
+	padding: 0 0 0 24px;
+}
+
+.rtl .view360-button a {
+	padding: 0 24px 0 0;
+}
+
+
+.ltr .principal-content .view360-button {
+    right: 0;
+    left:auto;
+}
+
+.rtl .principal-content .view360-button {
+    left: 0;
+    right:auto;
+}
+
+.ltr .view360-button div, .rtl .view360-button div {
+	background:none;
+}
+
+/*overlay*/
+
+.overlay-box {
+    background: none repeat scroll 0 0 transparent;
+    border-radius: 0 0 0 0;
+    height: 380px;
+    left: -9999px;
+    position: fixed !important;
+    top: 140px !important;
+    width: 300px;
+    z-index: 1000;
+}
+.overlay-sync, .overlay-light {
+    background-color: transparent;
+}
+.overlay-box .overlay-box-inner {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 2px solid #999999;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    padding: 0;
+}
+.ie8 .overlay-box .overlay-box-inner {
+    border: 2px solid #838383;
+}
+.ltr .overlay-box .overlay-box-inner {
+    float: left;
+}
+.rtl .overlay-box .overlay-box-inner {
+    float: right;
+}
+.overlay-box.view-360 {
+    background-position: -2020px 0;
+}
+.overlay-box.view-360 .overlay-box-inner {
+    background-position: -2980px bottom;
+}
+.overlay-box.view-360 div.loading {
+    background-color: #FFFFFF;
+}
+.overlay-box.view-360 div.loading p {
+    color: #323334;
+}
+.overlay-box div.loading {
+    background-color: #FFFFFF;
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+.overlay-box div.loading div.image {
+    background: url("../img/loading.gif") no-repeat scroll 0 0 transparent;
+    height: 48px;
+    left: 50%;
+    margin: -24px 0 0 -24px;
+    position: absolute;
+    top: 50%;
+    width: 48px;
+}
+.overlay-box div.loading p {
+    color: #000000;
+    left: 50%;
+    margin-left: -100px;
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    width: 200px;
+}
+.overlay-box.loading div.loading {
+    display: block;
+}
+.overlay-box div.close-button {
+    display: inline;
+    position: absolute;
+    top: 5px;
+    z-index: 2;
+}
+.ltr .overlay-box div.close-button {
+    background: none repeat scroll 0 0 transparent;
+    right: 10px;
+}
+.rtl .overlay-box div.close-button {
+    background: none repeat scroll 0 0 transparent;
+    left: 10px;
+    margin-left:0;
+}
+.overlay-box div.close-button span {
+    display: block;
+    height: 25px;
+}
+.ltr .overlay-box div.close-button span {
+    background: url("../img/icons.png") no-repeat scroll right -1797px transparent;
+    padding-right: 22px;
+    margin-right:0;
+}
+.rtl .overlay-box div.close-button span {
+    background: url("../img/icons-rtl.png") no-repeat scroll left -1797px transparent;
+    margin-left:0;
+}
+.overlay-box div.close-button a {
+    color: #686868;
+    display: block;
+    font-size: 1.1em;
+    height: 25px;
+    line-height: 21px;
+}
+.ltr .overlay-box div.close-button a {
+    margin-right: -23px;
+    padding: 0 20px 0 10px;
+}
+.rtl .overlay-box div.close-button a {
+    margin-left: -23px;
+    padding: 0 10px 0 40px;
+}
+.overlay-box div.controls {
+    position: absolute;
+    top: 22px;
+}
+.ltr .overlay-box div.controls {
+    right: 292px;
+}
+.rtl .overlay-box div.controls {
+    left: 292px;
+}
+.ie7.rtl .overlay-box div.controls {
+    width: 160px;
+}
+.overlay-box div.controls ul {
+    padding: 0;
+}
+.overlay-box div.controls ul li {
+    background: none repeat scroll 0 0 transparent;
+    padding: 0;
+}
+.ltr .overlay-box div.controls ul li {
+    float: left;
+    margin-left: 10px;
+}
+.rtl .overlay-box div.controls ul li {
+    float: right;
+    margin-right: 10px;
+}
+.overlay-box div.controls ul li.pagination {
+    min-width: 46px;
+}
+.overlay-box div.controls ul li.pagination p {
+    color: #000000;
+    font-size: 0.9em;
+    font-weight: normal;
+    padding: 8px 0 0;
+}
+.ie7.rtl .overlay-box div.controls ul li.pagination p {
+    height: 18px;
+    width: 58px;
+}
+.rtl .overlay-box div.controls ul li.pagination p span.total {
+    float: left;
+    padding-right: 0;
+}
+.ie7.rtl .overlay-box div.controls ul li.pagination p span.total {
+    margin-top: -18px;
+}
+.overlay-box div.controls ul li a {
+    background: url("../img/lincoln/bits.png") no-repeat scroll -30px -244px transparent;
+    display: block;
+    height: 31px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 36px;
+}
+.ltr .overlay-box div.controls ul li.previous a, .rtl .overlay-box div.controls ul li.next a {
+    background-position: -33px -1229px;
+    text-decoration: none;
+}
+.ltr .overlay-box div.controls ul li.previous a:hover, .rtl .overlay-box div.controls ul li.next a:hover {
+    background-position: -33px -1291px;
+}
+.ltr .overlay-box div.controls ul li.previous.disabled a, .ltr .overlay-box div.controls ul li.previous.disabled a:hover, .rtl .overlay-box div.controls ul li.next.disabled a, .rtl .overlay-box div.controls ul li.next.disabled a:hover {
+    background-position: -33px -1291px;
+    background-color: #fff;
+}
+.ltr .overlay-box div.controls ul li.next a, .rtl .overlay-box div.controls ul li.previous a {
+    background-position: -30px -1177px;
+    text-decoration: none;
+}
+.ltr .overlay-box div.controls ul li.next a:hover, .rtl .overlay-box div.controls ul li.previous a:hover {
+    background-position: -30px -1346px;
+}
+.ltr .overlay-box div.controls ul li.next.disabled a, .ltr .overlay-box div.controls ul li.next.disabled a:hover, .rtl .overlay-box div.controls ul li.previous.disabled a, .rtl .overlay-box div.controls ul li.previous.disabled a:hover {
+    background-position: -30px -1346px;
+    background-color: #fff;
+    text-decoration: none;
+}
+.ext-disc p a{
+	color:#000000;
+}
+.feature-overlay {
+    min-height: 385px;
+    width: 901px;
+}
+.feature-overlay h4 {
+    color: #BA5517 !important;
+    font-size: 1.8em;
+    font-weight: normal;
+}
+.feature-overlay .body p {
+    font-size: 1.3em;
+}
+.feature-overlay .foot p a.links {
+    background: url("../img/lincoln/lincolnicons.png") no-repeat scroll 0 -1195px transparent;
+    color: #40708D;
+    display: block;
+    padding-left: 10px;
+}
+.feature-overlay .foot p a.links-button {
+    background: url("../img/lincoln/lincolnicons.png") no-repeat scroll 20px -1286px #728A8A;
+    color: #FFFFFF;
+    display: block;
+    font-size: 14px;
+    height: 28px;
+    padding: 8px 0 0 30px;
+    width: 213px;
+}
+.feature-overlay .foot p.links-button {
+    padding: 0;
+}
+.has-videolist {
+    background-color: #1C1D1F !important;
+    min-height: 498px;
+}
+.feature-overlay div.primary {
+    padding: 9px 22px 39px 9px;
+    width: 593px;
+}
+.ltr .feature-overlay div.primary {
+    float: left;
+}
+.rtl .feature-overlay div.primary {
+    float: right;
+}
+.feature-overlay div.primary .head {
+    min-height: 50px;
+    position: relative;
+}
+.feature-overlay div.primary h1 {
+    bottom: 10px;
+    color: #BA5517;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.1em;
+    padding: 0;
+    position: absolute;
+    width: 600px;
+}
+.ltr .feature-overlay div.primary h1 {
+    float: left;
+    left: 0;
+}
+.rtl .feature-overlay div.primary h1 {
+    float: right;
+    right: 0;
+}
+.pagination-enabled div.primary h1 {
+    width: 450px;
+}
+.feature-overlay div.secondary {
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+    min-height: 345px;
+    position: relative;
+    width: 262px;
+}
+.ltr .feature-overlay div.secondary {
+    float: right;
+    padding: 60px 10px 10px 0;
+}
+.rtl .feature-overlay div.secondary {
+    float: left;
+    padding: 60px 0 10px 10px;
+}
+.feature-overlay div.secondary * {
+    color: #3C443A;
+}
+.feature-overlay div.secondary div.body {
+    max-height: 285px;
+    min-height: 200px;
+    overflow: auto;
+    width: 262px;
+}
+.ltr .feature-overlay div.secondary ul {
+    padding-left: 0;
+}
+.rtl .feature-overlay div.secondary ul {
+    padding-right: 0;
+}
+.ltr .feature-overlay div.secondary ul li {
+    background: url("../img/bullet.png") no-repeat scroll 6px 0.6em transparent;
+    padding-left: 15px;
+}
+.rtl .feature-overlay div.secondary ul li {
+    background: url("../img/bullet-rtl.png") no-repeat scroll right 0.6em transparent;
+    padding-right: 15px;
+}
+.feature-overlay div.secondary div.downloads p {
+    font-weight: bold;
+    padding-bottom: 0;
+}
+.feature-overlay div.secondary div.downloads ul li {
+    background: none repeat scroll 0 0 transparent;
+}
+.feature-overlay div.secondary div.downloads ul li a {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.feature-overlay div.secondary div.foot {
+    padding-top: 20px;
+    width: 262px;
+}
+.feature-overlay .share {
+    left: 7px;
+    position: absolute;
+    top: 0;
+}
+.feature-overlay .share .fb-like {
+    float: left;
+    padding: 10px 0 0 11px;
+}
+.feature-overlay .share .addthis {
+    float: left;
+    padding: 12px 0 0 11px;
+}
+.rtl .feature-overlay .share {
+    left: auto;
+    right: 7px;
+}
+.overlay-box div.view-gallery {
+    height: 15px;
+    left: 586px;
+    position: absolute;
+    top: 430px;
+    width: 19px;
+}
+.overlay-box div.view-gallery a.btn-fullscreen {
+    background: url("../img/lincoln/btn-fullscreen.png") no-repeat scroll left top;
+    display: block;
+    height: 15px;
+    width: 19px;
+}
+.overlay-box div.view-gallery a.btn-fullscreen:hover {
+    background-position: left bottom;
+}
+.fullview-overlay {
+    height: 430px;
+    width: 954px;
+}
+
+
+/* VR 360 View */
+.vr-container {
+	width: 954px;
+	height: 423px;
+}
+
+.vr-container span.car-info {
+	position: relative;
+	top: -30px;
+	left: 20px;
+	font-size: 11px;
+	font-family: "NanumGothic", arial;
+	text-shadow: 1px 1px 0px #BBB;
+	display: none;
+}
+
+.overlay-box-inner .arrow-left, .overlay-box-inner .arrow-right {
+	width: 38px;
+	height: 38px;
+	display: block;
+	background: url("../img/360arrows2.png") transparent;
+	position: absolute;
+	top: 200px;
+}
+
+.overlay-box-inner .arrow-left {
+	left: 10px;
+}
+
+.overlay-box-inner .arrow-right {
+	background-position: 0 38px;
+	right: 10px;
+}
+
+button.vr-toggle {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	min-width: 130px;
+	padding: 8px;
+	padding-left: 18px;
+	padding-right: 10px;
+	text-align: left;
+	background: #728a8a;
+	border: 1px solid #728a8a;
+	border-radius: 0px;
+	color: #ffffff;
+	font-weight: bold;
+	/*box-shadow: 0 0px 5px #333;*/
+	background: #728a8a url("../img/lincoln/lincoln/bits.png") no-repeat 10px -1042px;
+}
+
+button.vr-toggle:hover, button.vr-toggle:active {
+	background:  #576969 url("../img/lincoln/bits.png") no-repeat 10px -1042px;
+	cursor: pointer;
+}
+
+.overlay-box.view-360 .close-button{
+	background-color: #e6e8ea !important;
+	border: 1px solid #cdcdcd;
+	padding-right:4px;
+}
+
+
+.ltr .overlay-box.view-360 .close-button{
+	right: 1px !important;
+}
+
+.rtl .overlay-box.view-360 .close-button{
+	left: 1px !important;
+}
+
+.ltr #overlay .secondary .foot .actions>li{
+	padding-left: 0px;
+}
+
+.rtl #overlay .secondary .foot .actions > li{
+	background:none;
+	padding-right: 0px;
+}
+
+#overlay .secondary .foot .actions > li span{
+	
+	border-bottom: 1px solid #E3E3E3;
+	width: 60%;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.actions > li{
+	list-style: none !important;
+}
+
+.seeall{
+	position:relative;
+	width: 210px;
+	padding: 8px;
+	padding-left: 18px;
+	padding-right: 10px;
+	text-align: left;
+	background: #728a8a;
+	border: 1px solid #728a8a;
+	border-radius: 0px;
+	color: white;
+	font-weight: bold;
+	background: #728a8a url("../img/lincoln/bits.png") no-repeat 10px -1042px;
+}
+
+.seeall > a{
+	color: #FFF !important;
+	font-size: 14px !important;
+}
+
+.seeall:hover{
+	background: #576969 url("../img/lincoln/bits.png") no-repeat 10px -1042px;
+}
+
+.seeall > a:hover{
+	text-decoration: none;
+	color: #FFF !important;
+}
+
+.rtl .icon-quote{background-position: right -894px !important}
+
+/*country overlay*/
+.country-overlay .column h2 {color: #000}
+
+/*country*/
+.cselect .country {
+    font-weight: 700;
+    left: 160px;
+    position: absolute;
+    top: 168px;
+    z-index: 10;
+}
+
+.countrytab .country {
+	min-width: 350px !important;
+}
+
+.cselect #content {
+    margin-bottom: 0 !important;
+}
+
+.country {
+    font-weight: 700;
+    position: absolute;
+    top: 28px;
+    z-index: 10;
+}
+#content .country{
+
+	top:168px;
+}
+.country.right {
+    left: auto;
+    right: 160px;
+    text-align: right;
+}
+
+.country p {
+    color: #000000;
+    font-size: 140%;
+    padding: 1em 0;
+    clear:both;
+}
+
+.country h1 {
+    color: #000;
+    font-size: 240%;
+    padding: 1em 0 0;
+     float:right;
+}
+
+.country.right h1 {
+    float:left;
+}
+
+.rtl .country h1 {
+    float:left;
+}
+
+.rtl  .country.right h1 {
+    float:right;
+}
+
+
+.country ul li {
+    background: none repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    list-style: none outside none;
+    padding: 0;
+}
+
+.country li a {
+    color: #201812 !important;
+    font-size: 110%;
+}
+
+.light .country li a {
+    color: #BA5517;
+}
+
+.rtl .country.right {
+    left: 160px;
+    right: auto;
+}
+
+.rtl .country.right ul li, .rtl .country.right p {
+    text-align: left;
+}
+
+.rtl.cselect .country {
+    right: 160px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	#principal {width:904px; padding:0 40px;}
+	#principal img {width:980px; height:auto;}
+	#content {width:984px;}
+	#page {padding:0; width:982px; border:1px; overflow: hidden;}
+	#banner, #banner-clone {max-width: 984px; min-width: 0; left:0!important; right:0!important; }
+	#position {min-height:100%;}
+	#footer {margin: 0 0 0 20px; width:930px;}
+	#footer-wrapper {display: block; padding-bottom:6px; width:984px;}
+	.ltr.banner-large #body .hotspots, .ltr #body .hotspots, #body .hotspots { margin:-41px 0 0 14px; width:962px;}
+	.rtl.banner-large #body .hotspots, .rtl #body .hotspots, #body .hotspots { margin:-41px 14px 0 0; width:962px;}
+	#header {margin-left:40px; width:910px;}
+	#nav .mega-menu {width:964px;}
+	#nav-footer {left:0; right:auto; padding: 15px 45px 40px 20px; width:919px;}
+	#site-disclaimer {left:0; right:auto; padding:10px 20px 50px 20px; width:944px;}
+	#disclaimer {padding-left:20px;}
+	.ltr #footer-links ul, .rtl #footer-links ul {min-width: 600px; width:auto;}
+	.page-title {padding:0.2em 0 0.5em 40px;}
+	.rss-addthis {padding:25px 30px 20px 0px;}
+	.ltr #footer .rss-addthis, .rtl #footer .rss-addthis {padding:0;} {padding:0;}
+	#content .showroom {padding: 0 40px; width:904px;}
+	.ltr #body.has-aside #aside { margin-left: 39px; width:233px;}
+	.rtl #body.has-aside #aside { margin-right: 39px; width:233px;}
+	.ltr #body.has-aside #content {padding: 0 0 0 5px;}
+	.rtl #body.has-aside #content {padding: 0 5px 0 0;}
+	.ltr  #body.has-aside #aside img, .rtl  #body.has-aside #aside img {max-width:233px;}
+	.smallnavsize.ltr #body.has-aside #aside {width:160px;}
+	.lincoln_binmap #body.has-aside #content {width:694px;}
+	.banner-small #subnav {position:relative;}
+	#subnav {margin-left:0; width:984px;}
+	#subnav h1, .light #subnav h1, .dark #subnav h1 {margin-left:40px;}
+	.banner-alternative #subnav li a, .dark #subnav a, #eyebrow li a, .light #eyebrow li a { text-shadow: none;}
+	.ltr #subnav ul {float:right; margin-right:40px;}
+	.rtl #subnav ul {float:left; margin-left:40px;}
+	.ltr #content span.icon-pdf {padding-right:40px}
+	.rtl #content span.icon-pdf {padding-left:40px}
+
+
+	/*colouriser*/
+	.ltr #coloriser {left:8px;}
+	.rtl #coloriser {left:auto; right:8px;}
+	#coloriser ul {height:38px; }
+	#coloriser > div {height: 38px;}
+	#coloriser ul li {height: 30px; width: 43px;}
+	#coloriser ul li a:hover, #coloriser ul li.current a {height: 30px; width: 35px;}
+	#coloriser ul li a {padding:0; height: 30px; width: 35px; }
+	#coloriser ul li a span, #coloriser ul li.two-color a span span {background:url("../img/coloriser-tablet.png") no-repeat scroll 0 -100px transparent; height: 30px; width: 35px;}
+	#coloriser ul li a:hover span, #coloriser ul li.current a span, #coloriser ul li.two-color a:hover span span, #coloriser ul li.two-color.current a span span {background: url("../img/coloriser-tablet.png") no-repeat scroll 0 -140px transparent; height: 30px; width: 35px;  left: 0; top: 0;}
+	#coloriser ul li.two-color a, #coloriser ul li.two-color a:hover, #coloriser ul li.two-color.current a {height:17px; width:35px}
+	#coloriser ul li.two-color a span, #coloriser UL LI.two-color A:hover span, #coloriser UL LI.two-color.current A span  {height:15px; width:35px; }
+
+	/*carousel*/
+	.featurecarousel .controls .page {width:12px; height:12px; }
+	.featurecarousel .controls .page a {width:15px; height:15px;  }
+	.featurecarousel .controls .page.current {height:12px;}
+	.featurecarousel-wrapper {padding-bottom:50px; margin:0;}
+	.featurecarousel .controls .page {margin:0 10px;}
+	.featurecarousel .items li {margin: 0 4px 0 0; padding: 4px 10px 0 0;}
+	.featurecarousel-scroller {width: 841px;}
+
+
+	/*360*/
+	.reeldirections p.rightDirection {font-size:1.2em;}
+
+	/*models*/
+	.lincoln_full .model-select {left:40px;}
+	.lincoln_models #content {width:984px; padding:0;}
+	.lincoln_models #content  h2 {padding-left:40px;}
+	.lincoln_models .featurepanel .items {width: 900px; margin:0 auto;}
+	.lincoln_models .featurepanel .items li {width:253px;}
+	.derivatives, .derivatives > .row {width:984px;}
+
+	/*specs*/
+	.specs {width:924px; padding:5px 30px;}
+	.lincoln_models.lincoln_spec div.specs {padding:5px 30px!important;}
+	.lincoln_models.lincoln_spec .specs img {max-width:900px;}
+	.lincoln_spec .principal-content .principal-hero {min-width:653px;}
+
+	.lincoln_models .featurepanel .items li {min-height: 243px;}
+	.lincoln_models .featurepanel .items li h4 {width: 145px;}
+
+
+	/*gallery*/
+	.overlay-box div.view-gallery {top:462px;}
+	.overlay-box div.view-gallery a.btn-fullscreen {height:8px}
+	.overlay-box div.close-button {top:15px;}
+	div.gallery-fullscreen {width:984px;}
+	div.gallery-fullscreen div.close-window {padding:30px;}
+	div.gallery-fullscreen div.controls {padding-right:20px;}
+	#content div.gallery-fullscreen div.image-container, #content div.gallery-fullscreen .preview-image, .large-image-scroller {width:984px; max-width:984px;}
+	div.gallery-fullscreen div.head {margin-left:20px;}
+	div.gallery-fullscreen .featurecarousel .controls .previous, div.gallery-fullscreen .featurecarousel .controls .next {top:10px;}
+	div.gallery-fullscreen div.image-info {margin-top:20px; margin-left:20px;}
+	div.gallery-fullscreen div.image-container div.caption {width:100%;}
+
+	/*feature*/
+	.lincoln_feature .principal-content .principal-hero {min-width: 0}
+	.lincoln_feature.banner-fullwidth #aside {margin-left:40px;}
+	.lincoln_feature #principal-hero {margin-right:40px;}
+	.lincoln_feature #content {width:904px; padding: 0 40px;}
+	.lincoln_feature .feature-sections, .lincoln_feature .feature-sections .row {width:944px;}
+	.lincoln_feature .feature-sections .feature-content.twocolumnwidth {width:613px;}
+	.lincoln_feature .feature-sections .feature-content {width:278px;}
+
+	/*accessories*/
+	#content img {max-width:778px;}
+	.feature-overlay div.primary .head {height:auto; min-height:75px;}
+	.feature-overlay div.primary h1 {bottom:auto; margin-top:14px;}
+
+	/*pricing*/ 
+	.lcpricing .cms {padding:0 40px;}
+	.lcpricing #content .cms img {max-width: 904px;}
+	.lcpricing .cms ul li {width: 898px;}
+	.lcpricing .cms ul li li {width:600px;}
+
+	/*form*/
+	.content-high {width:904px; padding:0 40px;}
+
+}

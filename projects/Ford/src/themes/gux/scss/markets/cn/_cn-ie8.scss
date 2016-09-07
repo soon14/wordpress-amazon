@@ -1,0 +1,213 @@
+.hotspots .header-text h1,
+.expandedfeatures .heading-text h1,
+.feature-detail .header-text h1,
+.gallery-trigger h1,
+.rotate-slider h1,
+.features-single .caption h1,
+.video-carousel .heading h1,
+.features article .heading h1,
+.reveal-slider .slider-intro h1,
+.colorizer h1,
+.you-might-also-like h1{font-size:40px;}
+
+.image-carousel .carousel-fader .slides li .carousel-slide h1 {font-size:40px;}
+
+.hotspots .header-text,
+.expandedfeatures .heading-text,
+.feature-detail .header-text,
+.image-carousel .carousel-fader .slides li .carousel-slide,
+.performance-package .heading,
+.gallery-trigger h1,
+.feature-trigger .heading-text,
+.features article .heading h1 {max-width:90%;}
+
+.hotspots .header-text p,
+.expandedfeatures .heading-text p,
+.feature-detail .header-text p,
+.image-carousel .carousel-fader .slides li .carousel-slide .content,
+.performance-package .heading .title-content,
+.expandedfeatures .heading-text p {max-width:65%;}
+
+.top-space {padding-top:8em;}
+.gux-payment-presenter {
+                .inner-popup {top:200px;}
+                .model-container{margin-top:80px;
+                    .nameplate-holder{ padding-left:80px;background:white;
+                        .nameplate-content{
+                            .change-model{background:white;
+                                .sort-area {width:80%;
+                                    .sort-dropdown{background:white; font-size:14px;text-align:left;     
+                                        .dropdown-list{background:white;width:100%;
+                                            a {font-size:14px;}
+                                            li {
+                                                a{padding:10px 0;}
+                                                }                                       
+                                            }
+                                        .context{width:80%; text-align:left;padding-top:10px;
+                                            a {padding:20px 0 0 0;}
+                                            }
+                                    }
+                                }
+                                label {font-size:18px;}
+                            }
+                            .model-title {text-align:left;
+                                h1 {color:$text-gray;}
+                            }
+                            .change-nameplate {margin-top:80px;text-align:left;
+                                a  {background:white;}
+                                .button {border:1px solid $cta-blue;box-shadow:0 2px 3px 0 rgba(0, 0, 0, 0.15);width:145px;height:45px;font-size:15px;padding-top:10px;}
+                            }
+                        }
+                    }
+                    .model-image {margin:0; padding:0;background:white;}
+                    .model-options{background:white;
+                                    ul {
+                                        li {
+                                            span.model-header  {font-size:18px;}
+                                            span.model-details {font-size:30px;}
+                                            }
+                                        }
+                                    }      
+                }         
+                .tabs-wrap{
+                    .tabs-switch {
+                        .tab-options {
+                                .options {min-height:55px;
+                                        .programs { display: inline-block; width:initial;
+                                            ul {padding-top:10px;
+                                                p { color:$cta-blue;font-size:17px;padding:15px 30px 15px 30px; @include single-transition(all,100ms);display:inline-block; }
+                                                p:hover, p.active { color:$dark-blue; display:inline-block; border-bottom:4px solid $dark-blue;cursor:pointer;}
+                                            }
+                                            &.active .icon {display:none;}
+                                            }
+                                }
+                        }
+                    }
+                    .tabs-content{padding-top:15px;
+                        .tab-content{
+                            .financial-options{
+                                .title{padding:0;
+                                    label,.error-msg,.icon-d-info {font-size:14px;}
+                                    }
+                                input {font-size:14px;padding:15px;min-height:0;}
+                                .left-column {padding-left:150px;min-height:100px;}
+                                .middle-column {padding-left:75px;padding-right:75px;min-height:100px;
+                                    .percentage{padding-left:15px;
+                                        >span{font-size:14px;padding-left:15px;}
+                                        }
+                                    }
+                                .right-column {padding-right:150px;min-height:100px;}
+                                .sort-area{min-height:60px;
+                                    .sort-dropdown { border:1px solid $border-gray;margin-left:0;
+                                        .text {min-height:60px;
+                                            p{font-size:14px;padding:22px 0 8px 15px;}
+                                            span {margin-top:0;height:35px;}
+                                            }
+                                        .dropdown-list {
+                                            li{
+                                                span{font-size:14px;padding:10px 15px;}
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                
+                            }
+                        }
+                    }
+                    .pet-carousel{
+                            .carousel-holder{margin-left:125px;margin-right:125px;
+                                ul{ 
+                                    li {                           
+                                        .item{width:340px;
+                                                .header{
+                                                    span{font-size:20px;}
+                                                }
+                                                .payment-terms,.fix-rate {min-width:150px;
+                                                        > span{font-size:14px;padding:0 0 0 15px;
+                                                            &.price{font-size:32px; padding:0 0 0 15px;
+                                                                sup{font-size:10px;}
+                                                            }
+                                                        } 
+                                                }
+                                                .ewpackage {font-size: 14px;}
+                                        }
+                                    }
+                                }
+                            }
+                            .flex-control-nav{bottom:10px;}
+                            .flex-viewport{padding-bottom:50px;}
+                            .flex-control-paging {
+                            li {
+                                a{width:18px;height:18px;}
+                                }
+                            }
+                        }
+                }
+                .credits-accordion {
+                    .tab-item {
+                        .tab-nav {font-size:23px;padding:25px 6.597%;}
+                        .tab-contents{ 
+                                .content-holder{padding:0 50px;
+                                    .payment-details{
+                                        .price-holder{font-size:17px;}
+                                        .amount-holder{font-size:17px;}
+                                        ul {margin-bottom:20px;
+                                            li{ padding:20px 15px 0 40px;font-size:17px; }
+                                        }
+                                        
+                                    }
+                                }
+                        }
+                    }
+                }
+                .model-compare{ padding: 60px 15px 10px 15px;
+                    .container{ padding: 10px;
+                        .img{min-height:130px;height:auto;width:auto;}
+                        .head{font-size:19px; padding:10px;
+							&>div{
+									&>:first-child{
+										span:first-child {font-size:12px;}
+										}
+									}
+                            .configure{font-size:16px;}
+                            .add{font-size:23px;}
+                            }
+                        .package{font-size:18px; margin:10px 30px;min-height:80px;padding:5px 5px 5px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+                            a {font-size:34px;}
+                        }
+                        .content{font-size:13px;min-height:404px;padding: 0 0 10px 35px;
+                            .node{padding: 10px 5px;
+                                span{line-height:38px;font-size:22px;margin:0;}
+                            }
+                        }
+                        .remove-button{ padding: 0 0 0 60px;
+                            a{font-size:15px;}}
+                        }
+
+                }
+                .preserve-container {padding: 0  15%;border-top:1px solid $border-gray;border-bottom:1px solid $border-gray;margin-left:0;
+                    .action-holder{ text-align:center;
+                        li{ display:inline-block; border-right:1px solid $border-gray; padding: 0 100px; margin:20px 0;
+                            .font-icon{height:auto;
+                                [class^="icon-"]{margin:0 auto; @include icon-size(60);padding:5px;}
+                            }
+                            &:first-child{border-bottom:none; border-left:1px solid $border-gray;}
+                            h3{vertical-align:middle; font-size:16px;}
+                        }
+                    }
+                }
+                //jqueryui slider start             
+                .ui-slider .ui-slider-handle {
+                    width: 1.1em;
+                    height: 1.1em;
+                }
+                .ui-slider-horizontal .ui-slider-range {
+                    top: 0;
+                    height: 200%;
+                }
+                .ui-slider-horizontal .ui-slider-handle {
+                    top: -.5em;
+                }
+                //jqueryui slider end
+}

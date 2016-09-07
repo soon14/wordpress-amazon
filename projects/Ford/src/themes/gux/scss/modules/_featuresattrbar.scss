@@ -1,0 +1,137 @@
+.attribute-bar {border-bottom:1px solid $border-gray; box-shadow:0px 2px 3px 0px rgba(0,0,0,0.15); position:relative; border-top:1px solid $border-gray;
+	.row{
+		.wrap{width:auto; height:auto; border-bottom:1px solid $border-gray; 
+			.price{padding:15px 20px; 
+				p{margin:0; color:$dark-blue; font-size:rem-calc(21); line-height: 21px; white-space:nowrap;
+					> sup {line-height: 16px; vertical-align: top; font-size: rem-calc(15); font-weight: normal;}
+					span {font-weight: normal;}
+					&:first-child{margin-bottom:0; color:$text-gray; font-size:rem-calc(14);}
+				}
+			}
+			.derivative-price {
+				.price {padding:0;
+					.blockStyle {font-size:rem-calc(21); line-height:21px; font-family:$header-font-family; margin:0; color:$dark-blue; display:block;
+						.citation sup {font-size:rem-calc(13);}
+					}
+					.offers {display:none;}
+				}
+			}
+			.offers{padding-left:20px; padding-right:20px; 
+				p{margin-bottom:0; color:$text-gray;
+					&:first-child{
+						span{color:$dark-blue;}
+					}
+					a {display:inline-block;
+						span {vertical-align:bottom;}
+					}
+				}
+				> a {display:block; padding:15px 0; font-size:rem-calc(12);
+					span {margin-left:5px; vertical-align:middle;}
+				}
+				.need-price {padding-bottom:15px;
+					.get-postcode-usage {margin-left:0;}
+					span {vertical-align:baseline;}
+				}
+			}
+		}
+		
+		.details{padding:15px 20px 15px 20px;
+			.primary{padding-right:20px;
+				p{font-size:rem-calc(12);
+					> span{font-weight:normal;}
+				}
+			}
+			.secondary{
+				p {float:left; white-space:nowrap; width:100%;
+					> span {font-size:rem-calc(18); text-align:right; font-weight:normal; white-space:nowrap;
+						&:first-child{text-align:left; font-size:rem-calc(14); line-height:27px;}
+						sup {line-height:0;}
+					}
+				}
+			}
+		}
+		.seat{padding:20px; border-top:1px solid $border-gray;
+			p {
+				> span{text-align:right; font-size:rem-calc(18); font-weight:normal; white-space:nowrap;
+					&:first-child{text-align:left; font-size:rem-calc(12);}
+				}
+			}
+		}
+	}
+	
+
+	@media #{$medium-up}{
+		.row{
+			.wrap{
+				.price{
+					p{margin:0; color:$dark-blue; font-size:rem-calc(31); line-height: 31px;
+						> sup {line-height: 25px; vertical-align: top; font-size: rem-calc(22)}
+					}
+				}
+				.derivative-price {
+					.price {
+						.blockStyle {margin:0; color:$dark-blue; font-size:rem-calc(31); line-height: 31px;
+							.citation sup {position:relative; top:-6px;}
+						}
+						.offers {}
+					}
+				}
+				.offers{padding-top:20px;
+					 > a {display:block; padding-top:10px; font-size:rem-calc(14);}
+				}
+			}
+			.details{ padding:10px 20px 0 20px; border-right:1px solid $border-gray; margin-top:0;
+				.primary{
+					p{font-size:rem-calc(14);}
+				}
+				.secondary{
+					p{display:inline-block; width:48%;
+						> span{display:block; text-align:left; font-size:rem-calc(31);
+							&:first-child{text-align:left; font-size:rem-calc(12); line-height:normal;}
+						}
+					}
+				}
+			}
+			.seat{padding:10px 20px 0 20px; border-top:none;
+				p{
+					> span{text-align:left; font-size:rem-calc(31);
+						&:first-child{font-family:$font-family-light; line-height:16px; font-size:rem-calc(14);}
+					}
+				}
+			}
+		}
+	}
+
+	@media #{$large-up}{
+	}
+	
+	@media #{$xxlarge-up}{
+		.row{
+			> div {float:left;}
+			.wrap{width:53%; border:none;
+				.price{width:49%; padding-right:0; padding-left:37px;
+					p {
+					 	sup, span {font-weight: normal;}
+					}
+				}
+				.offers{width:49%; margin-top:0; padding-top:20px; padding-right:0;}
+			}
+			.details{width:30%; border-left:1px solid $border-gray; padding-top:20px;
+				.secondary{
+					p{font-weight:normal;
+						> span{
+							&:first-child{font-size:rem-calc(14);}
+						}
+					}
+				}
+			}
+			.seat{width:17%; padding-top:20px; 
+				p{
+					> span{text-align:left; font-weight:normal;
+						&:first-child{font-weight:normal;}
+					}
+				}
+			} 
+		}
+	}
+}

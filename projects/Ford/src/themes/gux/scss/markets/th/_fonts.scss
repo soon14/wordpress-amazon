@@ -1,0 +1,14 @@
+@mixin fontFaceTH($family,$src){
+	@font-face {
+		font-family: $family;
+		src: url("#{$font-path}/#{$family}/#{$src}.eot");
+		src: url("#{$font-path}/#{$family}/#{$src}.eot?#iefix") format("embedded-opentype"),
+			 url("#{$font-path}/#{$family}/#{$src}.woff") format("woff"),
+			 url("#{$font-path}/#{$family}/#{$src}.ttf") format("truetype"),
+			 url("#{$font-path}/#{$family}/#{$src}.svg##{$family}") format("svg");
+	}
+}
+
+@include fontFaceTH("Superstore-Light","Superstore.Light-webfont");
+@include fontFaceTH("Superstore-Regular","Superstore.Regular-webfont");
+@include fontFaceTH("Superstore-Bold","Superstore.Bold-webfont");

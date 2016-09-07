@@ -1,0 +1,6 @@
+#header{height: 82px;}
+#header a{background:transparent none no-repeat 0 0; height: 42px;}	
+
+.dealer-locator .save-dealer-btn{
+  display: none !important;
+}

@@ -1,0 +1,386 @@
+<!--#include file="common/head-service-calculator.html" -->
+
+<!--[if IE 8]><body class="service-booking ie8"><![endif]-->
+<!--[if IE 9 ]><body class="service-booking ie9"><![endif]-->
+<!--[if !IE]><!--><body class="service-booking"><!--<![endif]-->
+
+<div id="jumplinks">
+	<p>Welcome, skip to the <a href="#content" title="Skip to content">content</a>.</p>
+</div>
+
+<div id="page-wrapper">
+	<!--#include file="common/noscript.html" -->
+	<!--#include file="common/page-header.html" -->
+
+	<div id="navigation">
+		<!-- Start of Secondary Navigation -->
+		<!--#include file="common/secondary-navigation-services.html" -->
+		<!-- End of Secondary Navigation -->
+	</div>
+
+	<div id="content">
+
+		<!-- Start of Service Calculator -->
+		<section class="service-calc">
+			<div class="loading"></div>
+			<div class="row fullwidth show-for-large-up">
+				<div class="large-12 columns">
+					<div class="heading">
+						<h1>FORD SERVICE <span>CALCULATOR</span></h1>
+					</div>
+					<img src="media/service-calc-banner.jpg" alt="service calculator" itemprop="image" />
+				</div>
+			</div>
+			<div class="row fullwidth">
+				<div class="large-12 columns">
+					<div class="page-title">
+						<h2>Service Price Promise Calculator</h2>
+						<p>With Ford's Service Price Promise*, Ford will publish the maximum price <span class="hiddenContent">you will pay for a Standard A or B logbook service at a Participating Authorised Ford Dealer. Ford's Service Price Promise covers all vehicles built since 2007 for the life of the vehicle!</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="row fullwidth">
+				<div class="large-12 columns">
+					<form id="service-dropdowns" action="#" class="uniform">
+						<div class="group">
+							<label for="year">YEAR</label>
+							<select id="year" name="year">
+								<option value="default">loading...</option>
+							</select>
+						</div>
+						<div class="group">
+							<label for="model">MODEL</label>
+							<select id="model" name="model">
+								<option value="default">loading...</option>
+							</select>
+						</div>
+						<div class="group">
+							<label for="style">STYLE</label>
+							<select id="style" name="style">
+								<option value="default">loading...</option>
+							</select>
+						</div>
+						<div class="group">
+							<label for="engine">ENGINE</label>
+							<select id="engine" name="engine">
+								<option value="default">loading...</option>
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="book-service">
+				<p>or you can go straight to booking your service</p>
+				<div class="buttons">
+					<div class="small-12 large-6 columns">
+						<a href="../FTD2011Mob/smart_service-booking-search.html" class="service-booking-btn button xtime-mobile-link" data-sb-keyword="servicecalculator">
+							<span class="icon icon-link"></span>
+							<span class="label-link">Book Service</span>
+						</a>
+						<a href="service-booking-modal-dealers.html" class="button service-booking-overlay trackable xtime-desktop-link" data-sb-url="service-booking-xtime.html" data-sb-keyword="servicecalculator" data-type="o" data-name="service:calculator:popup" data-onclicks="service:calculator:book service">
+							<span class="icon icon-link"></span>
+							<span class="label-link">Book Service</span>
+						</a>
+					</div>
+					<div class="small-12 large-6 columns">
+						<a href="../FTD2011Mob/smart_service-booking-search.html" class="service-booking-btn button xtime-mobile-link" data-sb-keyword="servicecalculator">
+							<span class="icon icon-link"></span>
+							<span class="label-link">Call Your Dealer</span>
+						</a>
+						<a href="service-booking-modal-dealers.html" class="button service-booking-overlay trackable xtime-desktop-link" data-sb-url="service-booking-xtime.html" data-sb-keyword="servicecalculator" data-type="o" data-name="service:calculator:popup" data-onclicks="service:calculator:call dealer">
+							<span class="icon icon-link"></span>
+							<span class="label-link">Call Your Dealer</span>
+						</a>
+					</div>
+				</div>
+				<a href="http://www.ford.com.au/service/t-and-c" target="_blank">Terms and Conditions</a>
+			</div>
+		</section>
+
+		<section class="service-calc service-results">
+			<div class="cover"></div>
+			<div class="row fullwidth">
+
+				<form id="recommended-service" action="#" class="uniform">
+					<div class="vehicle-registration">
+						<div class="small-12 large-5 xlarge-4 columns">
+							<div class="group estimated-km">
+								<div class="small-12 columns">
+									<label for="estimatedkm">ESTIMATED KILOMETRES TO DATE <a class="citation fill-by-text" data-title="this is a title"><span class="icon icon-info"></span><span class="text">this is a paragrah</span></a></label>
+								</div>
+								<div class="small-12 columns">
+									<input type="tel" name="estimatedkm" id="estimatedkm" maxlength="7" />
+									<span class="error-text">Kilometres to date is required.</span>
+								</div>
+							</div>
+						</div>
+						<div class="small-12 large-4 xlarge-4 columns">
+							<div class="group">
+								<div class="small-12 columns">
+									<label for="regmonth">FIRST REGISTRATION TO DATE <a class="citation fill-by-text" data-title="this is a title"><span class="icon icon-info"></span><span class="text">this is a paragrah</span></a></label>
+								</div>
+								<div class="small-12 large-6 columns reg-month">
+									<select id="regmonth" name="regmonth"></select>
+								</div>
+								<div class="small-12 large-6 columns">
+									<select id="regyear" name="regyear"></select>
+								</div>
+							</div>
+						</div>
+						<div class="small-12 large-3 xlarge-4 columns">
+							<div class="group calculate-btn">
+								<button disabled="disabled" class="button calculate alt">Calculate</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="vehicle-services">
+						<div class="service-links">
+							<div class="small-6 large-4 columns prev">
+								<a href="#">
+									<div class="font-icon">
+										<span class="icon-chevron-thin-left"></span>
+									</div>
+									<div class="font-icon icon-recommended">
+										<span class="icon-service-calculator"></span>
+									</div>
+									<span class="wrap">
+										<span class="js-kms"></span> kms<br />
+										(<span class="js-years"></span>) service
+									</span>
+								</a>
+							</div>
+							<div class="show-for-large-up large-4 columns active">
+								<a href="#">
+									<div class="font-icon icon-recommended">
+										<span class="icon-service-calculator"></span>
+									</div>
+									<span class="wrap">
+										<span class="js-kms"></span> kms<br />
+										(<span class="js-years"></span>) service
+									</span>
+								</a>
+							</div>
+							<div class="small-6 large-4 columns next">
+								<a href="#">
+									<div class="font-icon">
+										<span class="icon-chevron-thin-right"></span>
+									</div>
+									<div class="font-icon icon-recommended">
+										<span class="icon-service-calculator"></span>
+									</div>
+									<span class="wrap">
+										<span class="js-kms"></span> kms<br />
+										(<span class="js-years"></span>) service
+									</span>
+								</a>
+							</div>
+							<div class="hide-for-large-up small-12 columns active">
+								<a href="#">
+									<div class="font-icon icon-recommended">
+										<span class="icon-service-calculator"></span>
+									</div>
+									<span class="wrap">
+										<span class="js-kms"></span> kms<br />
+										(<span class="js-years"></span>) service
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="active-service">
+							<div class="base-section">
+								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+								<h2>Standard Service Price</h2>
+
+								<div class="fullwidth baseprice-wrap">
+									<div class="small-9 columns">
+										<p>The estimated price for your <span class="js-kms"></span> kms (<span class="js-years"></span>) service is:</p>
+									</div>
+									<div class="small-3 columns baseprice">
+										<p>$<span class="js-baseprice"></span></p>
+									</div>
+								</div>
+
+								<div class="view-roadside-assist"><a href="#" class="view-roadside-assist">This service comes with 12 months free roadside assistance</a><span class="citation"><sup data-disclosure="2">2</sup></span></div>
+							</div>
+							
+							<div class="options-wrap">
+
+								<div class="options-inner">
+									<h2>Additional Service Options</h2>
+									<ul class="options-list"></ul>
+
+									<script type='text/template' id="options-template">
+										<@ _.each(options, function(option, i) { @>
+											<li><input class="round" type="checkbox" value="" id="option<@= option['id'] @>" />
+                                        			
+												<label for="option<@= option['id'] @>"><@= option["name"] @> <@ if (option["agetext"]) { @>(<@= option["agetext"] @>)<@ } @></label><span class="option-price">$<span class="js-price"><@= option["price"] @></span></span>
+											</li>
+										<@ }); @>
+									</script>
+
+									<p>If you are unsure if you need any of the above additional service options, please discuss this with your dealer.</p>
+								</div>
+
+							</div>
+
+							<div class="total-section">
+
+								<div class="fullwidth total">
+									<div class="small-12 large-9 columns">
+										<p>Total Service Price:</p>
+									</div>
+									<div class="small-12 large-3 columns">
+										<p>$<span class="js-totalprice"></span>*</p>
+										<p class="gst">incl. GST</p>
+									</div>
+								</div>
+
+								<div class="price-conditions">
+									<p>Published quote valid until <span class="valid-date"></span></p>
+									<a href="http://www.ford.com.au/service/t-and-c" target="_blank">*Terms and Conditions</a>
+								</div>
+
+							</div>
+
+							<div class="buttons">
+								<div class="small-12 large-4 columns left-col">
+									<a href="../FTD2011Mob/smart_service-booking-search.html" class="service-booking-btn button xtime-mobile-link" data-sb-keyword="servicecalculator">
+										<span class="icon icon-link"></span>
+										<span class="label-link">Book Service</span>
+									</a>
+									<a href="service-booking-modal-dealers.html" class="button service-booking-overlay trackable xtime-desktop-link" data-sb-url="service-booking-xtime.html" data-sb-keyword="servicecalculator" data-type="o" data-name="service:calculator:popup" data-onclicks="service:calculator:book service">
+										<span class="icon icon-link"></span>
+										<span class="label-link">Book Service</span>
+									</a>
+								</div>
+								<div class="small-12 large-4 columns middle-col">
+									<a href="../FTD2011Mob/smart_service-booking-search.html" class="service-booking-btn button xtime-mobile-link" data-sb-keyword="servicecalculator">
+										<span class="icon icon-link"></span>
+										<span class="label-link">Call Your Dealer</span>
+									</a>
+									<a href="service-booking-modal-dealers.html" class="button service-booking-overlay trackable xtime-desktop-link" data-sb-url="service-booking-xtime.html" data-sb-keyword="servicecalculator" data-type="o" data-name="service:calculator:popup" data-onclicks="service:calculator:call dealer">
+										<span class="icon icon-link"></span>
+										<span class="label-link">Call Your Dealer</span>
+									</a>
+								</div>
+								<div class="small-12 large-4 columns right-col">
+									<a class="button print-pdf" href="#">
+										<span class="icon icon-link"></span>
+										<span class="label-link">View PDF</span>
+									</a>
+								</div>
+							</div>
+
+						</div>
+						<div class="last-service">
+							<p><span class="icon-d-warning"></span>Last Service - Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+							<div class="buttons">
+								<div class="small-12 large-6 columns">
+									<a href="../FTD2011Mob/smart_service-booking-search.html" class="service-booking-btn button xtime-mobile-link" data-sb-keyword="servicecalculator">
+										<span class="icon icon-link"></span>
+										<span class="label-link">Book Service</span>
+									</a>
+									<a href="service-booking-modal-dealers.html" class="button service-booking-overlay trackable xtime-desktop-link" data-sb-url="service-booking-xtime.html" data-sb-keyword="servicecalculator" data-type="o" data-name="service:calculator:popup" data-onclicks="service:calculator:book service">
+										<span class="icon icon-link"></span>
+										<span class="label-link">Book Service</span>
+									</a>
+								</div>
+								<div class="small-12 large-6 columns">
+									<a href="../FTD2011Mob/smart_service-booking-search.html" class="service-booking-btn button xtime-mobile-link" data-sb-keyword="servicecalculator">
+										<span class="icon icon-link"></span>
+										<span class="label-link">Call Your Dealer</span>
+									</a>
+									<a href="service-booking-modal-dealers.html" class="button service-booking-overlay trackable xtime-desktop-link" data-sb-url="service-booking-xtime.html" data-sb-keyword="servicecalculator" data-type="o" data-name="service:calculator:popup" data-onclicks="service:calculator:call dealer">
+										<span class="icon icon-link"></span>
+										<span class="label-link">Call Your Dealer</span>
+									</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="roadside-assistance" data-services-shown="7">
+						<p class="title">Free State Auto Club Membership including roadside assistance with the first seven standard services</p>
+						<p>With standard servicing at the Participating Auto Club Authorised Ford Dealers, retail and Blue <span class="hiddenContent">Business Fleet customers recieve State Auto Club Roadside Assistance and Membership~ for up to 7 years/105,000kms. In addition to this, Ford also offers a range of other benefits and services such as a Free Loan Car with every scheduled service^, factory trained technicians and specialised diagnostic equipment. </span></p>
+						<picture>
+                          <!--[if IE 9]><video style="display: none;"><![endif]-->
+                          <source srcset="media/service-calc-logos-desktop.jpg" media="(min-width: 768px)">
+                          <source srcset="media/service-calc-logos-mobile.jpg">
+                          <!--[if IE 9]></video><![endif]-->
+
+                          <!--[if lt IE 9]>
+                          <img src="media/service-calc-logos-desktop.jpg" alt="Free State Auto Club Membership logos. NRMA, RACV, RACQ, RAA, RAC, RACT, AA">
+                          <![endif]-->
+
+                          <!--[if !lt IE 9]> <!-->
+                          <img src="media/service-calc-logos-mobile.jpg" alt="Free State Auto Club Membership logos. NRMA, RACV, RACQ, RAA, RAC, RACT, AA">
+                          <!-- <![endif]-->
+                      </picture>
+					</div>
+				</form>
+				
+			</div>
+		</section>
+		<!-- End of Service Calculator -->
+
+		<!-- Start of Disclaimer -->
+			<!--#include file="common/disclaimer.html" -->
+		<!-- End of Disclaimer -->
+
+	</div>
+
+	<!--#include file="common/page-footer.html" -->
+
+</div>
+
+<!--#include file="common/json/rest-services-service-calc.html" -->
+
+<!--#include file="common/json/service-calc-services.html" -->
+
+<!--#include file="common/json/common-config.html" -->
+
+<!--#include file="common/json/mpz-config.html" -->
+
+<script id="controlTexts" type="text/x-json">
+{
+  "more": "...More",
+  "less": "...Less"
+}
+</script>
+
+<!-- Start of popup modal -->
+<div id="modalWrap" class="modal" tabindex="-1" role="dialog" itemscope itemtype="http://schema.org/ImageGallery">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<a href="#" class="icon icon-close">close</a>
+			<div class="row fullwidth">
+				<div class="large-12 columns">
+					<div class="modal-body"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End of popup modal -->
+
+<!-- Reveal Content Modal -->
+<div id="content-modal" class="reveal-modal">
+	<div class="content"></div>
+	<a class="close-reveal-modal" href="#">Close</a>
+</div>
+
+<script id="inner-popup" type="text/template">
+	<div class="inner-popup">
+		<a class="close-popup" href="#"></a>
+			<div class="header">
+				<h5>Disclosure</h5>
+			</div>
+		<div class="content"></div>
+	</div>
+</script>
+
+</body>

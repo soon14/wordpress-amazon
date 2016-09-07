@@ -1,0 +1,20 @@
+.search-results{ padding: 20px 0 60px;
+	.showing{ margin-top: -15px;}
+	.results{list-style: none; list-style-position: outside; margin: 0; padding: 0;
+		li{ font-weight: 500;
+			&::before{ content: ">"; color: $tertiary-orange;}
+			a{ color: $tertiary-orange;}
+		}
+	}
+	.pagination{ 
+		.controller{ text-align: center; margin-top: 32px;
+			a{ color: $quaternary-grey; font-weight: 500; font-size: rem-calc(14px);}
+			.page-box{ border: 1px solid $quaternary-grey; padding: 5px 10px; background: #f7f7f7; margin: 0 10px;}
+		}
+
+
+		@media #{$medium-up}{ border-top: 1px solid $secondary-grey; padding-top: 15px;
+			.controller{ text-align: center; margin-top: 0px; float: right;}
+		}
+	}
+}

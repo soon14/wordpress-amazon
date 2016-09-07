@@ -1,0 +1,48 @@
+.menusel input {
+	background-color: #e0e2e1;
+	color: #da0501;
+}
+
+.menutop {
+	background: #274c80;
+	border-color: #274c80;
+}
+
+.dark{
+	background-color: #0c2b3f;
+}
+
+.menu ul {
+	background-color: #325784;
+}
+
+.copy .dark,.black{
+	background-color: #e00000;
+	color: #FFFFFF;
+}
+.showlist b {
+
+	color: #505050;
+}
+.gray {
+
+	background-color:#e8e8e8;
+	color: #404040;
+}
+.showlist li {
+
+	border-color: #e8e8e8;
+}
+.showlist a ,.note p{
+
+	color: #666666;
+}
+
+.article h3>b {
+
+	color: #404040;
+}
+.article {
+
+	color: #505050;
+}

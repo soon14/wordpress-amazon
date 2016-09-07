@@ -1,0 +1,20 @@
+.store-locator-widget{ text-align: center; padding: 30px;
+	.advanced-search{margin-top: 30px;
+		.input{ background: transparent; border: none; box-shadow: none; outline: 0; font-size: rem-calc(16px); height: 46px;}
+		.button{ cursor: pointer; box-shadow: none; background: $primary-orange; border-radius: 2px; font-size: rem-calc(16px); line-height: 2.4; width: 51px; height: 46px; padding: 0;}
+		.cta-link{ display:block; margin-top: 10px;}
+	}
+
+	.store-locator-form{
+		.input-box { margin-right: 15px; padding: 0;
+			&:last-child{ margin: 0; padding-right: 5px;}
+		}
+		select{ height: 50px;}								
+		.dropdown{ border: none; width: 100%; text-align: left;
+			span{ width: 100%; height: 50px; overflow: hidden;}
+		}
+		&.uniform{
+			.dropdown:after{ background-image: none;}
+		}
+	}
+}

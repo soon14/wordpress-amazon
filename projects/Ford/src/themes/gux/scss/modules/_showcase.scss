@@ -1,0 +1,76 @@
+.showcase {padding:10% 0 25% 0;
+	.heading {padding-bottom:4%; text-align:center;
+		h2 {font-size:rem-calc(16);}
+	}
+	
+	.showcase-items {
+		.carousel {padding:0 5%; overflow:hidden; position:static; 
+			.video-play {display:none;}
+			.item.video {position:relative;
+				.image {position:relative;
+					.video-play {display:block; position:absolute; top:50%; left:50%; @include transform(translateX(-50%) translateY(-50%) scale(0.75,0.75));}
+				}
+			}
+			img {width:100%;}
+			.flex-control-nav {display:block; width:88%; bottom:-50px;}
+		}
+		.caption {
+			.sub-title {display:none;}
+			h3 {margin-top:10px; font-size:rem-calc(14); text-align:center; font-family:$font-family-light;}
+		}
+
+		.link-cta {display:none !important;}
+	}
+
+	.cta {display:none;}
+
+	@media #{$medium-up}{
+		.showcase-items {
+			.caption {
+				h3 {font-size:rem-calc(16);}
+			}
+		}
+	}
+	
+	@media #{$large-up}{padding:5% 0 5% 0;
+		.heading {padding:0;
+			h2 {font-size:rem-calc(15);}
+		}
+		.showcase-items {
+			.carousel {
+				.slides {width:100% !important; height:100%; @include translate3d(0,0,0,isImportant); margin-left:0 !important; text-align:center;
+					.clone {display:none !important;}
+					> li {display:inline-block !important; float:none !important; vertical-align:top; width:24% !important; height:100%;
+						.item {padding:0 5%;}
+						.video {
+							.video-play {top:45%; @include transform(translateX(-50%) translateY(-50%) scale(0.8,0.8));}
+						}
+					}
+				}
+				.flex-control-nav {display:none;}
+			}
+			.caption {
+				.sub-title {display:block; padding-bottom:5px; margin:15px 0 0 0; font-size:rem-calc(12); text-transform:uppercase; border-bottom:1px solid #DADADA;height: 50px;}
+				h3 {color:$cta-blue;}
+			}
+			
+			.link-cta {display:inline-block !important;
+				span {}
+			}
+		}
+		.cta {display:block; text-align:center; margin-top:40px;}
+	}
+
+	@media #{$xlarge-up}{
+		.heading {
+			h2 {font-size:rem-calc(17);}
+		}
+		.showcase-items {
+			
+			.caption {
+				.sub-title {font-size:rem-calc(14);}
+			}
+		}
+	}
+
+}

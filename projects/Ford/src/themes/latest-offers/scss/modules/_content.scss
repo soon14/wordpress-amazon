@@ -1,0 +1,240 @@
+.disclaimer {display:block; margin:0 0 25px; font-size:11px; line-height:15px; color:#41a9df;}
+.no-results-found {overflow:hidden; text-align:center; text-transform:uppercase; padding:0 0 20px;
+	p {margin: 0 0 5px; font-size:20px;}
+	a {display:block; text-align:center; color:$primary-blue; text-transform:uppercase; font-size:12px;}
+}
+.no-offer-found {text-align:center; display:table; color:red; text-transform:uppercase; width:100%; height:600px; background:rgba(180,180,180, .5);
+	p{display:table-cell; vertical-align:middle; font-size:22px;}
+}
+#search { overflow:hidden; margin:0 0 50px; }
+.filter-options {display:block; background:$primary-blue url(../img/icon-filter-options.png) no-repeat 10px 11px; padding:15px 0; display:none; text-align:center; color:#fff; font:15px/20px; margin:0 0 10px;
+	&:hover {color:#fff;}
+}
+.back-to-main {display:inline-block; font:15px/19px "Antenna-Extra-Light"; background:url(../img/arrow4.png) no-repeat 0 50%; margin:0 0 14px; padding:0 0 0 19px;}
+.results-area {padding:0 0 0 11px;
+	.no-search-results {overflow:hidden; text-align:center; padding:0 2%; margin:0 0 20px;
+		.text {display:block; text-transform:uppercase; font-size:30px; line-height:35px; margin:0 0 10px;}
+		.clear-filters {display:inline-block; color:$primary-blue; text-transform:uppercase;}
+	}
+	.sorting {overflow:hidden; list-style:none; margin:0;
+		li {float:left; background:#f4f4f3; border: 1px solid #e0e0de; float:left; font-size:15px;
+			&:first-child {color: #fff; font-size:15px; line-height:20px; padding:7px 11px; background:#425968; border:none;}
+		}
+		li.active a {color:#2495CF;}
+		.price-filter {background:#f4f4f3 url(../img/arrow3.png) no-repeat 85px 8px; border-right:none; border-left:none; width:110px;
+			a {display:block; color:#626466; padding:5px 0 3px; text-align:center; }
+		}
+		.price-filter.downarrow {background:#f4f4f3 url(../img/arrow3down.png) no-repeat 85px 10px; }
+		.default-filter {width:110px; background:#f4f4f3; border-left:none;
+			a {display:block; color:#626466; padding:5px 0 3px; text-align:center; }
+		}
+	}
+	.holder {overflow:hidden; width:105%; padding:38px 0 0; margin:0;}
+	.single-result {display:inline-block; vertical-align:top; width:29.4%; text-align:center; margin:0 3% 20px 0; line-height:21px; color:#666; border:1px solid #fff; padding:10px 0 20px 0;
+		&:hover {border:1px solid #e0e0de;}
+		a {color:#666;}
+		img {display:block; margin:0 auto 7px; width:221px; /*height:95px;*/ height:auto;}
+		span {display:block; font-size:13px; line-height:18px;}
+		span.name {font-size:15px; line-height:19px; color:$primary-blue; margin:0 0 6px; text-transform:uppercase;}
+	}
+	.note {display:block;
+		 p{font:11px/16px "Antenna-Extra-Light";}
+	}
+}
+.search-filter {border:1px solid #dadada;
+	form {margin:0;}
+	.tab-area {margin:0 0 15px;
+		span {display:block; width:100%; color:$primary-blue; font-size:20px; line-height:24px; cursor:pointer; background:url(../img/arrow2.png) no-repeat 91% 50%;}
+	}
+	.price-range .tab-area {padding:0 0 0 14px;}
+	div input[type="checkbox"] { display:inline-block; vertical-align:middle; margin:0 10px 0 0;}
+	.custom-checkbox{width: 24px; height: 24px; display: inline-block; position: relative; z-index: 1; top: 6px; margin:0 13px 0 0; background: url("../img/bg-checkbox.png") no-repeat 0 -24px transparent; }
+	.custom-checkbox.selected{background-position: 0 0;}
+	.custom-checkbox input[type="checkbox"]{ margin: 0; position: absolute; z-index: 2; cursor: pointer; outline: none; opacity: 0; left:-16px; top:0; }
+	.all-offers {padding:9px 14px 17px; overflow:hidden; background:#f4f4f3;
+		label {color:$primary-blue; font-size:15px; overflow:hidden;}
+	}
+	.reset {display:block; width:100%; background:#1bbc9b; text-align:center; border:none; padding:7px 0; color:#fff; font-size:15px; line-height:20px; margin:0 0 16px; cursor:pointer; -webkit-appearance:none; border-radius:0;}
+	.clear-models {display:block; width:100%; background:#1bbc9b; text-align:center; border:none; padding:7px 0; color:#fff; font-size:15px; line-height:20px; margin:0 0 16px;}
+	.ui-widget-content {background:$primary-blue; margin:0 0 20px;}
+	.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {border-radius:0; border:none;}
+	.ui-widget-header {background:none;}
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {background:$primary-blue;}
+	.ui-slider .ui-slider-handle {width:12px; height:29px;}
+	.ui-slider-horizontal {height:3px;}
+	.ui-slider-horizontal .ui-slider-handle {top:-13px;}
+	input[type="text"][disabled] {background:none; border:none; border-top:1px solid #dcdcdc; box-shadow:none; text-align:right; font-size:15px; line-height:20px; color:$primary-blue; padding:0;}
+	.close-update {background:$primary-blue; padding:10px 0; text-align:center; display:none; color:#fff; font-size:20px; line-height:25px;
+		&:hover {color:#fff;}
+	}
+}
+.reveal-modal { width:70%; box-shadow:none; border-color:$primary-blue; padding-top:60px;
+	.postcode-form {float:left; width:60%;
+	.error {font-weight:bold; font-style:normal; padding:10px;}
+		.input-holder {overflow:hidden; margin:0 0 10px; padding:0 0 3px;
+			label {display:inline-block; vertical-align:middle; width:30%;}
+			input.postcode{display:inline-block; vertical-align:middle; width:69.4%; margin:0; background:#fff; border:1px solid $primary-blue; box-shadow:none;}
+		}
+		input[type="submit"]{float:right; width:69.5%; background:$primary-blue; color:#fff; font:20px/24px "Antenna-Light"; text-align:center; border:none; padding:10px 0; cursor:pointer;}
+	}
+	h2 {font:30px/35px "Antenna-Extra-Light"; color:$primary-blue; text-transform:uppercase;}
+	.close-reveal-modal{text-indent:-9999px; overflow:hidden; background:url(../img/btn-close.png) no-repeat; width:23px; height:23px; top:20px; right:20px;}
+}
+.ui-dialog {width:940px !important; left:50% !important; margin:0 0 0 -470px;}
+.ui-widget-content {background:#fff; border:1px solid $primary-blue;}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-top, .ui-corner-left, .ui-corner-right, {border-bottom-right-radius:0;}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-top, .ui-corner-left, .ui-corner-right, {border-bottom-left-radius:0;}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-top, .ui-corner-left, .ui-corner-right, {border-top-right-radius:0;}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-top, .ui-corner-left, .ui-corner-right, {border-top-left-radius:0;}
+.ui-widget-header {background:none; border:none;}
+.ui-dialog .ui-dialog-titlebar-close {width:23px; height:23px; margin:0;}
+.ui-state-default .ui-icon{background:#fff url(../img/btn-close.png) no-repeat; width:23px; height:23px;margin-left:0; margin-top:0; left:0; top:0;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {border:none; background:none;}
+.ui-dialog .ui-dialog-titlebar {padding:20px 0; cursor:default;}
+.ui-dialog .ui-dialog-title {display:none;}
+#offer-details {margin:-6px 0 0; position:relative;
+	&:after {content:""; display:block; clear:both;}
+	.tabs-area {float:left; width:67.5%;}
+	.tabs {position:relative; z-index:2;
+		li:first-child {border-right:none;}
+	}
+	.tab-links {position:absolute; left:350px; list-style:none; overflow:hidden; z-index:3; margin:12px 0 0;
+		li {float:left; padding:0 14px; text-transform:uppercase; width:150px;
+			a {display:block; background:url(../img/icon6.png) no-repeat 0 50%; padding:0 0 0 34px; line-height:15px;}
+		}
+		li.down-brochure a{display:block; background:url(../img/icon7.png) no-repeat 0 50%;}
+	}
+	.mobile-tabs {display:none;}
+	.tabs dd, .tabs .tab-title {border:1px solid #e0e0de; border-bottom:none; width:175px;}
+	.tabs-content {position:relative; top:-2px; left:-10px; border:1px solid #e0e0de; width:102%; margin-bottom:18px; border-right:none;}
+	h2 {margin:9px 0 20px 28px; color:$primary-blue; }
+	h3 {font:20px/25px "Antenna-Light"; margin:-4px 0 14px 29px;}
+	.featured-image {display:block; width:99.5%; margin:0 0 51px;}
+	.main-image {display:block; width:100%;  margin:0 0 15px;}
+	.text-holder {padding:0 34px 0 29px; margin:0 0 24px;
+		p {margin:0 0 13px;}
+	}
+	.heading-two {margin:0 0 14px 28px; color:$primary-blue;}
+	.feature-details {margin:0 0 23px; padding:0 38px 0 29px;
+		h3 {margin:0 0 10px;}
+	}
+	.tabs dd > a, .tabs .tab-title > a {font:20px/25px "Antenna-Extra-Light"; padding:13px 19px; color:#626466;}
+	.featured-image {display:block; margin:0 0 50px;}
+	.details-list {margin:0 0 0 25px; list-style:none; padding:0 20px 0 0;
+		li {margin:0 0 18px; background:url(../img/bg-list.png) no-repeat 0 6px; padding:0 0 0 20px;}
+	}
+	.aside {float:right; width:32.3%; margin:50px 0 0; border:1px solid #e0e0de; position:relative; z-index:1;
+		li.ford-dealer .tab-area {border-bottom:1px solid #dcdcdc;}
+		.tab-area span {padding:17px 20px; font:20px/25px "Antenna-Extra-Light"; display:block; color:$primary-blue; cursor:pointer; background:#f4f4f3 url(../img/arrow2.png) no-repeat 94% 50%;}
+		.accordion-panel ul li.active .tab-area span{background:url(../img/arrow.png) no-repeat 94% 50%;}
+		.no-dealer-found {display:block; padding:20px 20px 0; color:$primary-blue;
+			a {font-weight:bold; text-decoration:underline;}
+		}
+		.outer { padding:0 0 0 10px; margin:0 0 24px;
+			h3 {margin:15px 0 10px 10px; font:15px/20px "Antenna-Extra-Light"; color:#1bbc9b;}
+			ul {margin:0 0 10px; padding:0 10px 0 0; list-style:none; font-family: "Antenna-Extra-Light";
+				li {margin:0 0 10px 10px;
+					a {display:inline-block; padding:0 0 0 29px;}
+				}
+				li.address {a {background:url(../img/icon1.png) no-repeat 0 5px;}}
+				li.phone { a {background:url(../img/icon2.png) no-repeat 0 50%;}}
+				li.fax {background:url(../img/icon3.png) no-repeat 0 50%; padding:0 0 0 29px;}
+				li.website {background:url(../img/icon4.png) no-repeat 0 50%;}
+			}
+			dl { overflow:hidden; margin:0 0 0 10px; line-height:24px; padding:0 8px 0 0;
+				dt {display:inline-block; vertical-align:top; width:48%; font-weight:normal; margin:0;
+					a {margin:0;}
+				}
+				dd {display:inline-block; vertical-align:top; margin:0; width:50%; text-align:right;}
+			}
+			.disclaimer-area {font:11px/15px "Antenna-Light"; margin:5px 0 0 10px;
+				.price {background:url(../../img/arrow3.png) no-repeat 100% 50%;}
+			}
+			&.last {margin:0 0 9px;}
+		}
+		.search-dealership {background: url("../img/icon5.png") no-repeat scroll 20px 50% #2495CF; color: #FFFFFF; display: block; margin: 0 10px 20px; padding: 10px 0 10px 60px; }
+		.calculate-service {margin:0 0 6px; padding:15px 10px 7px; background:#fff;
+			h4 {font:13px/18px "Antenna-Light"; margin:0 0 6px; color:$primary-blue; text-align:center; text-transform:uppercase;}
+			img {display:block; margin:0 auto;}
+		}
+		.sorting-area {overflow:hidden; padding:15px 20px 14px; border-bottom:1px solid #dadada; border-top:1px solid #dadada;
+			ul {margin:0; list-style:none; overflow:hidden; text-align:left;
+				li { display:inline-block; vertical-align:top; margin:0 0 0 13%;
+					a {color:#666;}
+					&:first-child {margin:0;}
+				}
+				li.active a {color:#2495CF;}
+				li.price {background:url(../img/arrow3.png) no-repeat 100% 50%;
+					a {padding:0 15px 0 0;}
+				}
+				li.price.downarrow {background:url(../img/arrow3down.png) no-repeat 100% 50%;}
+			}
+		}
+		.title {font:13px/18px "Antenna-Light"; display:block; margin:0 0 11px; color:$primary-blue;}
+		.latest-offers {overflow:hidden;
+			.single-offer {overflow:hidden; background:#fff; border-bottom:1px solid #dadada; padding:15px 0 18px; 
+				.holder {padding:0 10px; overflow:hidden;
+					.title {margin:0 0 11px 10px;}
+				}
+				.image-area { display:inline-block; vertical-align:middle; width:25%; margin:-20px 0 0;}
+				ul {margin:0 0 16px; list-style:none; display:inline-block; vertical-align:middle; width:73%;
+					li {display:inline-block; vertical-align:top; margin:0 0 0 9px; width:60px; text-align:center;
+						span {display:block; 
+							&:first-child {text-indent:-9999px; overflow:hidden; width:60px; height:60px; margin:0 auto 5px;}
+						}
+						.icon-ancap {background:url(../img/ancap-5-star.svg) no-repeat;}
+						.icon-sync {background:url(../img/sync.svg) no-repeat;}
+						.icon-bluetooth {background:url(../img/bluetooth.svg) no-repeat;}
+						.icon-active-park-assist {background:url(../img/active-park-assist.svg) no-repeat;}
+						.icon-power-start {background:url(../img/power-start.svg) no-repeat;}
+						.icon-rain-sensing-vipers {background:url(../img/rain-sensing-vipers.svg) no-repeat;}
+						.icon-usb {background:url(../img/usb.svg) no-repeat;}
+						.icon-rear-parking-sensor {background:url(../img/rear-parking-sensor.svg) no-repeat;}
+						.icon-reverse-camera {background:url(../img/reverse-camera.svg) no-repeat;}
+						.icon-cruise-control {background:url(../img/cruise-control.svg) no-repeat;}
+						.icon-ecoboost {background:url(../img/ecoboost.svg) no-repeat;}
+						.icon-hands-free {background:url(../img/hands-free.svg) no-repeat;}
+						.icon-1tonne-payload {background:url(../img/1tonne-payload.svg) no-repeat;}
+						.icon-18alloy-wheel {background:url(../img/18alloy-wheel.svg) no-repeat;}
+						.icon-19alloy-wheel {background:url(../img/19alloy-wheel.svg) no-repeat;}
+						.icon-diesel {background:url(../img/diesel.svg) no-repeat;}
+						.icon-6airbags {background:url(../img/6airbags.svg) no-repeat;}
+						.icon-torque {background:url(../img/torque.svg) no-repeat;}
+						.icon-front-parking {background:url(../img/front-parking.svg) no-repeat;}
+						.icon-torque-vectoring-control {background:url(../img/torque-vectoring-control.svg) no-repeat;}
+						.icon-adaptive-cruise-control {background:url(../img/adaptive-cruise-control.svg) no-repeat;}
+						.icon-sat-nav {background:url(../img/sat-nav.svg) no-repeat;}
+						.icon-eco-mode {background:url(../img/eco-mode.svg) no-repeat;}
+						.feature {display:block; font-size:8px;}
+						&:first-child {margin:0;}
+					}
+				}
+				&:last-child {margin:0; border:none;}
+				.text {display:block; margin:0 0 0 10px;}
+			}
+		}
+	}
+	.note {font-size:11px; line-height:13px; padding:0 15px; text-align:justify;}
+}
+.loadmask {display:block; background: url("../img/transparent-pixel.png") repeat; height: 100%; left: 0; position: fixed; top: 0; width: 100%; z-index: 999; 
+	.loadgif {background-image: url("../img/large-loader.gif"); border-radius: 5px; box-shadow: 0 0 3px #000; display: inline-block; height: 19px; margin: 0 0 0 -120px; position: absolute; width: 220px; left:50%; top:50%; }
+}
+.accordion-panel ul {margin:0; list-style:none;}
+.accordion-panel ul li.active .tab-area span{background:url(../img/arrow.png) no-repeat 91% 50%;}
+.filters.last-filter {margin:0; border:none;}
+.filters.price-range {border:none; margin:0; padding:0;}
+div label { display:inline-block; vertical-align:middle; margin:0; padding:5px 0; font: 13px/18px "Antenna-Light";}
+.filters {overflow:hidden; padding:0 0 0 14px; margin:0 0 15px; border-bottom:1px solid #dcdcdc;
+	ul {margin:0 0 15px;}
+	ul li {list-style:none; overflow:hidden;}
+	.range-holder {padding:20px 15px 0;}
+}
+.reveal-modal.video {overflow:hidden;
+	.title {display:block; font:30px/35px "Antenna-Extra-Light"; color:$primary-blue; margin:0 0 20px;}
+	.video-wrap {overflow:hidden;}
+	.video {float:left; width:70%;}
+	.text {float:right; width:30%;}
+}
+#disclaimerModal .title, #disclaimerModal1 .title, #disclaimerModal2 .title {display:block; font:30px/35px "Antenna-Extra-Light"; color:$primary-blue; margin:0 0 20px;}
+.watch-video {display:block; background:url(../img/icon11.png) no-repeat 0 50%; padding:0 0 0 25px;}
+.reveal-modal-bg {background:url(../img/bg-modal.png);}

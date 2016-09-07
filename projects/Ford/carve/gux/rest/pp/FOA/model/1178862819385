@@ -1,0 +1,11 @@
+{
+  "nameplate" : {
+    "name" : "FOCUS",
+    "year" : "2012",
+    "derivatives" : [ {
+      "id" : 1178864888916,
+      "name" : "Focus XR5 Turbo hatch",
+      "imageUrl" : "/servlet/Satellite?blobtable=DFYImage&blobcol=urlpicture&blobheadervalue1=max-age%253D1000&ssbinary=true&blobheadername1=Cache-Control&blobwhere=1137384217590&blobkey=id"
+    } ]
+  }
+}

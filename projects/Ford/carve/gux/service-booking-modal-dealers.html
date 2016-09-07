@@ -1,0 +1,83 @@
+<div class="service-booking-overlay">
+	<div class="row">
+	<div class="columns">
+		<div class="content-col">
+			<div class="preferred-dealer">
+				<script id="preferred-dealer-template" type="text/x-jquery-tmpl">
+			        <p class="alert-text">A service cannot be booked for this dealer online. <br />Use the contact details below to book a service. <br />Alternatively, you can search for other dealers in your area.</p>
+					<p class="large-text xtime">Your Preferred Dealer - Xtime Participant:</p>
+					<p class="large-text noxtime">Your Preferred Dealer - Not a Xtime Participant:</p>
+					<h3>${dealershipName}</h3>
+					{{if website}}<a href="http://${website}" target="_blank">${website}</a>{{/if}}
+					<ul class="icons-list">
+						{{if addressLine1}}<li><span class="icon locate-icon"></span>${addressLine1} ${city} ${state} ${postcode}</li>{{/if}}
+						{{if phoneNumber1}}<li><span class="icon phone-icon"></span><a href="tel:${phoneNumber1}">${phoneNumber1}</a></li>{{/if}}
+						{{if email}}<li><span class="icon mail-icon"></span><a href="mailto:${email}">${email}</a></li>{{/if}}
+					</ul>
+					<a href="#" class="btn request-service">Request a Service</a>
+					<hr />
+					<a href="#" class="btn change-dealer">Change Dealer</a>
+			    </script>
+
+			    <script id="dealer-template-error" type="text/x-jquery-tmpl">
+					<p>${error}</p>					        
+				</script>	
+			</div>
+			
+			<div class="dealer-search">
+				<p class="large-text">Find a Ford Dealer</p>
+				<p class="form-text">Location may be a city or postcode</p>
+				<p class="search-error">Please enter a valid Dealership Name or <br />Your Location</p>	
+				<form class="fbform" method="post">
+					<div class="group">
+						<div class="compact">
+							<label for="sb-dealername">Dealership Name</label>
+							<input type="text" id="sb-dealername" name="sb-dealername" />
+						</div>
+						<div class="compact">
+							<label for="sb-dealerlocation">Your Location (Postcode or City)</label>
+							<input type="text" id="sb-dealerlocation" name="sb-dealerlocation" />
+						</div>
+					</div>
+					<div class="group buttons">
+						<div>
+							<input id="dl_submit" name="dl_submit" type="hidden" value="true">
+							<input type="submit" value="Submit Dealer Search" title="Submit Dealer Search" class="btn" id="dealer-search-button">
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="search-results">
+				
+		        <p class="large-text">Dealer Search Results...</p>
+		        <div class="listing-details">
+					<p class="dealer-name">Dealership Name : <span></span></p>
+					<p class="your-location">Your Location : <span></span></p>
+					<p class="results"></p>
+				</div>
+
+				<div id="search-items">
+					<script id="search-template" type="text/x-jquery-tmpl">
+						<div class="item">
+							<h3>${dealershipName}</h3>
+							{{if website}}<a href="http://${website}" target="_blank">${website}</a>{{/if}}
+							<ul class="icons-list">
+								{{if addressLine1}}<li><span class="icon locate-icon"></span>${addressLine1} ${city} ${state} ${postcode}</li>{{/if}}
+								{{if phoneNumber1}}<li><span class="icon phone-icon"></span><a href="tel:${phoneNumber1}">${phoneNumber1}</a></li>{{/if}}
+								{{if email}}<li><span class="icon mail-icon"></span><a href="mailto:${email}">${email}</a></li>{{/if}}
+							</ul>
+							<p class="no-service">A service cannot be booked for this dealer online. <br />Use the contact details above to book a service.</p>
+							<a href="#" class="btn request-service">Request a Service</a>
+							<hr />
+						</div>
+					</script>
+				</div>
+
+				<div class="pagination"></div>
+
+			</div>
+		</div>
+	</div>
+</div>
+</div>

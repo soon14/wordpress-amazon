@@ -1,0 +1,42 @@
+.colorizer {margin-bottom:4em; text-align:center;
+	.color-name {margin-top:7px; text-transform:capitalize; color:$dark-blue; display:block;}
+	.color-palette {margin:0 10px 10px; text-align:center; overflow-x:scroll; white-space:nowrap;
+		ul {padding-bottom:9px; margin:0; list-style:none;
+			li {display:inline-block; width:60px; height:60px; margin:9px 3px 9px 2px;
+				a {float:left; display:block; height:100%; width:100%; text-indent:-9999px; overflow:hidden; position:relative; border-radius:50%; z-index:1;
+					.shade {display:block; position:absolute; left:17%; top:36%; width:121%; height:50%; background-color:rgba(0,0,0,0.08); @include single-transition; @include transform(rotate(-45deg));}
+					&:hover .shade {width: 150%;}
+				}
+				.active .icon {display:block; width:44px; height:43px; margin:-21px 0 0 -22px; position:absolute; left:50%; top:50%; background-position:-537px -578px; @include scale-element(0.9,0.9);}
+			}
+
+		}
+	}
+	.vehicle-image {margin:25px 0 12px 0;}
+	
+	.click-text {display:block; color:$text-gray;}
+
+	@media #{$large-up} {
+		.vehicle-image {margin:62px 0 12px 0;}
+		.color-palette {overflow-x:scroll; margin:0 0 33px; padding:0;
+			li {vertical-align:middle; margin:0 16px;
+				.item-name { left:-115px; width:300px; font-size:rem-calc(21); line-height:26px; min-height:30px;}
+			}
+		}
+		.color-name {display:inline;}
+	}
+
+	@media #{$xlarge-up} {
+		.color-palette {white-space:normal;
+			ul {
+				li {width:72px; height:72px;
+					.active .icon {@include scale-element(1,1);}
+				}
+			}
+		}
+	}
+
+	@media #{$xxlarge-up} {
+		.color-palette {overflow-x:hidden;}
+	}
+}

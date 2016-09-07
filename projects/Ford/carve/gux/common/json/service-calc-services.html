@@ -1,0 +1,26 @@
+<!--<script id="service-calc-services" type="text/x-json">
+{
+	"sc.allvehicles": "rest/tools/servicecalc/{site}/vehicles.js",
+	"sc.vehicleservices": "rest/tools/servicecalc/{site}/vehicle-services.js",
+	"sc.pdf": "http://10.3.104.31:9080/servlet/rest/servicecalculator/{site}/share/pdf-sc/ford-service-quote?vi={vehicleid}&in={intervalid}&ao={selectedoptions}&oo={otheroptions}&validitydate={currentdate}"
+}
+</script>-->
+
+<script id="service-calc-services" type="text/x-json">
+{
+	"sc.allvehicles": "http://10.3.104.31:9080/servlet/rest/servicecalculator/{site}/getallvehicles",
+	"sc.vehicleservices": "http://10.3.104.31:9080/servlet/rest/servicecalculator/{site}/getvehicleservices/",
+	"sc.pdf": "http://10.3.104.31:9080/servlet/rest/servicecalculator/{site}/share/pdf-sc/ford-service-quote?vi={vehicleid}&in={intervalid}&ao={selectedoptions}&oo={otheroptions}&validitydate={currentdate}"
+}
+</script>
+
+<script id="service-calc-text" type="text/x-json">
+{
+	"select.year.text": "Select a Year",
+	"select.model.text": "Select a Model",
+	"select.style.text": "Select Style",
+	"select.engine.text": "Select Engine",
+	"error.url.vehicles": "Error: Vehicles cannot be found. Please refresh the page or try again later.",
+	"error.url.services": "Error: Vehicle services cannot be found. Please select again."
+}
+</script>

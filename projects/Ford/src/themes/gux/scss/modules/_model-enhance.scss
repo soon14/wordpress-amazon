@@ -1,0 +1,164 @@
+.model-enhance {
+	.model-container{border:1px solid #fff;
+		&:last-child{
+			float: left;
+		}
+		.model-data {
+			cursor: default!important;
+			.model-select{
+				padding: 0 0 0 0!important;
+				h2{
+					display: block!important;
+					a{
+						width:100%;
+					}
+					.citation sup{font-weight:normal;}
+				}
+			}
+		}
+		&.end{
+			margin-bottom: 0!important;
+    		border-bottom: 0!important;
+		}
+		.close-vehicle{
+			display: none;
+			height: 30px;
+			width: 30px;
+			position: absolute;
+			right: 20px;
+			top: 25px;
+			background: url("../img/icons.png") no-repeat -365px -268px;
+		}
+		&.clone{z-index: 20024;
+				position: fixed;
+				left: 0;
+				top: 0;
+				background: white;
+				height: 100%;
+				width: 100%;
+				.close-vehicle{
+					display: block;
+				}
+				.model-data{
+				    top: 60px;
+					position: relative;
+					text-align: center;
+					.model-placeholder{min-height: 7.14286rem;
+						img{display:block !important;    margin-bottom: 20px;}
+						}
+					.model-select{text-align:left;border-bottom: 1px solid #dbdbdb;
+						h2{font-weight: bold;font-size: 1.14286rem;padding:15px 0;}
+						}
+					.model-content{text-align:left; padding:10px 0;
+					&.derivative-price .offers{display:none}
+					}
+					.model-cta {    padding: 10px 0;margin: 30px 0;
+						a{width:100%;
+						  &.btn-com{background-color: #fff;color: #2d96cd;border-color: #2d96cd;
+										&:hover {
+										color: #003478;
+										border-color: #003478;
+										}
+									}
+						  }
+					}
+					}
+				
+		}
+	}
+	.mw-content {
+
+		.model-cta{
+			margin: 10px 25px;
+			display: none;
+			.button{
+				width:100%;
+			}
+			.btn-com {
+				background-color: #fff;
+			    color: #2d96cd;
+			    border-color: #2d96cd;
+			&:hover {
+				    color: #003478;
+    				border-color: #003478;
+				}
+			}
+
+		}
+	}
+	.billboard{
+	 	.heading {
+	 		h1{
+	 			color: #616161;
+	 			text-shadow:none;
+	 		}
+	 	}
+	 }
+	 .attribute-bar {
+	 	a.offers{
+			&>span{display:none!important;}
+			display:block !important;
+			background-image: url("../img/view-offers.png");
+			width: 141px !important;
+			height: 64px !important;
+			position: relative;
+		}
+	 }
+	 .model-display{
+		.model-content {
+			a.view-offers{display:none;}
+			p{margin-bottom:0;}
+		}
+	 }
+
+
+    @media #{$large-up}{ 
+    	.model-container{margin-bottom:50px!important;
+    		transition: all 0.2s ease;
+			.model-data {margin:0 !important;
+				.model-select{padding: 0 0 0 30px!important;}
+				a.disabled:hover{cursor:default;}
+			}
+			.model-cta{border: 1px solid #2d96cd; border-top:none;display: none; position:absolute;left:0;z-index:1; width:100%;	margin:0; padding:10px 25px;background: #FFF;}
+			&:hover{
+				.model-data{border-top: 1px solid #2d96cd;border-left: 1px solid #2d96cd;border-right: 1px solid #2d96cd;
+					.model-cta {display: block; }
+				}
+			}
+
+		}
+    	.mw-header {border-bottom:0; padding:40px 100px; text-align:left; background:#FFF;
+			h1 {margin:0;}
+			p {margin:10px auto 0;font-size:rem-calc(16); color:$text-gray;}
+			.end {text-align:right;
+				p {margin-top:5px; font-size:rem-calc(12);}
+			}
+		}
+		.mw-content {
+			padding: 40px 100px;
+		}
+		.attribute-bar {
+			a.offers{
+				float: right;
+				top: -50px;
+			}
+			.price{
+				max-height:110px;
+				}
+		 }
+    }
+	@media #{$xlarge-up}{ 
+		.attribute-bar {
+			a.offers{
+				left: -80px;
+			}
+		 }
+	}
+	@media #{$xxlarge-up}{ 
+		.attribute-bar {
+			a.offers{
+				left: 170px;
+			}
+		 }
+	}
+}

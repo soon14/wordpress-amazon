@@ -1,0 +1,117 @@
+// @mixins
+
+// We use this to add shadow to texts
+@mixin text-shadow($h-shadow:1px, $v-shadow:1px, $blur:3px, $color:rgba(0,0,0,0.3)) {
+  text-shadow: $h-shadow $v-shadow $blur $color;
+}
+
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+// We use this to scale element
+@mixin scale-element($width, $height){
+	@include transform(scale($width, $height));
+}
+
+// We use this to translate elements in 3D
+@mixin translate3d($x:0, $y:0, $z:0, $important:no) {
+	@if $important == isImportant{
+	  transform: translate3d($x,$y,$z) !important;
+	  -ms-transform: translate3d($x,$y,$z) !important;
+	  -webkit-transform: translate3d($x,$y,$z) !important;
+	  -moz-transform: translate3d($x,$y,$z) !important;
+	}
+	@else{
+		transform: translate3d($x,$y,$z);
+	  	-ms-transform: translate3d($x,$y,$z);
+	  	-webkit-transform: translate3d($x,$y,$z);
+	  	-moz-transform: translate3d($x,$y,$z);
+	}
+		
+}
+
+// We user this to verticle align DIVs
+@mixin vertical-align {
+	position:relative;
+	top:50% !important;
+	@include transform(translateY(-50%));
+}
+
+// Min Size:20; sets the font-icon size together with the background
+@mixin icon-size($fontSize) {
+	font-size:rem-calc($fontSize) + !important;
+	width:$fontSize - 5 + px;
+	height:$fontSize - 2 + px;
+	&:before{
+		margin-left:-(($fontSize - ($fontSize - 6))/2)+px;
+	}
+}
+
+
+@mixin user-select($userSelect) {
+    -webkit-touch-callout: $userSelect;
+	-webkit-user-select: $userSelect;
+	-khtml-user-select: $userSelect;
+	-moz-user-select: $userSelect;
+	-ms-user-select: $userSelect;
+	user-select: $userSelect;
+}
+
+// Ole! gradients!
+@mixin gradient($top, $bottom) {
+	background: -moz-linear-gradient($top, $bottom);
+	background: -webkit-linear-gradient($top, $bottom);
+	background: -o-linear-gradient($top, $bottom);
+	background: -ms-linear-gradient($top, $bottom);
+	background: linear-gradient($top, $bottom);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#FF000000', endColorstr='#00000000');";
+	filter: 	progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#FF000000', endColorstr='#00000000');;
+	zoom: 		1;
+}
+
+// Opacity
+@mixin opacity($opacity) {
+	-webkit-opacity: $opacity;
+	-moz-opacity: $opacity;
+	-khtml-opacity: $opacity;
+	opacity: $opacity;
+}
+
+// Keyframe Animations
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}

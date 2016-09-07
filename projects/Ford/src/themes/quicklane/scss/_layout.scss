@@ -1,0 +1,36 @@
+.container{ max-width: 1290px; width: 100%; margin: 0 auto;}
+
+hr{ border-color: $primary-grey; border-width: 2px 0 0; margin: 30px 0 30px;}
+input{ font-family: $body-font-family;}
+
+.input-box{ padding: 5px; border: 1px solid $secondary-grey; display: inline-block; vertical-align: top;
+	input, select { margin: 0; border: 0; outline: 0; box-shadow: none;
+		&:focus{ border: 0; outline: 0; box-shadow: none; background: #FFF;}
+	}
+	.btn{ background: $primary-orange; color: #FFF; border-radius: 4px; text-transform: none; color: #FFF;}
+}
+
+article {
+	a{ color: $primary-orange; font-weight: 400;}
+	ol li{ margin: 10px 0;}
+}
+
+.link-list{ margin: 0; padding: 0;
+	li{ list-style-type: none;}
+}
+
+.cta-link{ color: $tertiary-orange; font-weight: bold;
+	&:hover{ color: $tertiary-orange;}
+}
+
+.fullwidth{ margin: 0; max-width: 100%;}
+
+
+.share-icon{ padding: 6px 2px 6px 2px; background: #0777b4; display: inline-block; vertical-align: middle;
+	div{ background: url("#{$img-path}/icons.png") -45px -233px; width: 19px; height: 12px;}
+}
+
+
+[class*="column"] + [class*="column"]:last-child{
+	float: left;
+}

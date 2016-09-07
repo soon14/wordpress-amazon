@@ -1,0 +1,95 @@
+/*Start of DMS*/
+p{
+	font-family: "Antenna-Extra-Light", Arial, Helvetica, sans-serif;
+}
+
+.row .columns > h2{
+	margin-top:0;
+}
+
+.content img.steps-car{
+	display: block;
+}
+
+#page-wrapper dl dt {
+	width: 100%;
+}
+
+#page-wrapper .accordion-panel .btn-section{
+	text-align: right;
+}
+
+#page-wrapper .accordion-panel .btn-section .right{
+	padding-left: 0;
+}
+
+#page-wrapper .content .legend.inline li{
+	display: inline-block;
+	float: right;
+	margin: 10px;
+}
+
+#page-wrapper .content .legend.inline li{
+	margin-left:5px;
+	margin-right:5px;
+}
+
+#page-wrapper .content .legend.inline li .number{
+	margin:0;
+}
+
+#page-wrapper .content .top-banner{
+	color:#616161;
+}
+
+#page-wrapper .content .vehicle-text p{
+	font-size: 12px;
+}
+
+#page-wrapper .content .top-banner p{
+	margin-bottom: 0;
+}
+
+
+
+#page-wrapper .content.confirmation .columns.welcome-intro{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+#page-wrapper .mobile-btns .video-btn, #page-wrapper .mobile-btns .info-btn{
+	float: none;
+}
+
+#page-wrapper .beyond-basics li {
+	font-family: "Antenna-Regular", Arial, Helvetica, sans-serif;
+}
+
+
+#page-wrapper form input:-ms-input-placeholder {
+	color: #bac3ca;
+}
+
+@media only screen and (min-width: 48em){
+	#page-wrapper dl dt {
+		width: 26%;
+	}
+
+	#page-wrapper .accordion-panel .btn-section{
+		padding:40px 0 0;
+	}
+
+	#page-wrapper .accordion-panel .last-step .btn-section{
+		margin-top: 0px;
+	}
+
+	#page-wrapper .beyond-basics li {
+		float: none;
+		display: inline-block;
+		vertical-align: top;		
+		width: 49%;
+	}
+}
+/*End of DMS*/

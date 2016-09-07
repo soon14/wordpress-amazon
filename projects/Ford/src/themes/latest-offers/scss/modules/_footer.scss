@@ -1,0 +1,58 @@
+// This is copied from FTD styles which is not in SASS style
+// This will be changed when new GUX header design is ready
+.rss-addthis {float:right; height:18px; padding-top:5px; position:relative;z-index:10;}
+.full-width .rss-addthis {float: none; margin: 0 auto;  width: 960px;}
+.rtl .rss-addthis {float:left;}
+.rss-addthis .fb-like {float:left; width:100px; margin-top:-3px;}
+.rss-addthis .rss {float:left; width:30px; padding: 0 15px 0 19px; background:transparent url('../../ftd/img/icons.png') no-repeat 0 -1700px}
+.rtl .rss-addthis .rss {float:right; padding: 0 19px 0 15px; background:transparent url('../../ftd/img/icons-rtl.png') no-repeat right -1700px}
+.rtl .rss-addthis .fb-like {float:right; width:100px; margin-top:-3px; margin-left:25px;}
+.rss-addthis .rss a {color:#757575; font-size:1.1em;}
+.rss-addthis .addthis {float:left; text-align:right;display:none}
+.rss-addthis .fb-like {height:21px;}
+.rtl .rss-addthis .addthis {float:right; text-align:left;}
+.js .rss-addthis .addthis{display:block}
+#footer span.fb_edge_comment_widget{display:none}
+
+#nav-footer {width:960px; padding:15px 0 40px; margin:0 auto;}
+#nav-footer h4 {padding:5px 14px; font-size:13px; color:#626262; border:1px solid #e1e1e1; background:#f8f8f8;}
+.full-width #nav-footer {float: none;margin: 0 auto;padding: 15px 0 40px;width: 960px;}
+.full-width #nav-footer, .rtl .full-width #nav-footer {float:none;}
+#nav-footer .nav-footer-col {width:184px;}
+#nav-footer .nav-footer-col {float:left; padding:0 0 0 10px;}
+.rtl #nav-footer .nav-footer-col {float:right; padding:0 10px 0 0;}
+#nav-footer .nav-footer-col:first-child {padding-left:0 !important;}
+.rtl #nav-footer .nav-footer-col:first-child {padding-right:0 !important;}
+#nav-footer .nav-footer-col-first {padding-left:0 !important;}
+.rtl #nav-footer .nav-footer-col-first {padding-right:0 !important;}
+#nav-footer h2 {padding:5px 14px; color:#626262; font-size:1.3em; border:1px solid #e1e1e1; background:#f8f8f8;}
+#nav-footer a {color:#757575;}
+#nav-footer ul {padding:8px 16px; margin:0; font-size:11px; list-style:none;}
+#nav-footer ul li {padding:0.33em 0; background:none;}
+
+#footer-wrapper {clear:both; background:#7f848a url('../../ftd/img/footer.gif') repeat-x}
+#footer {position:relative; min-height:125px; width:960px; padding:0 10px; margin:0 auto;}
+#footer .rss-addthis {position:absolute; margin-top:0; top:15px; padding:0;}
+#footer .rss-addthis {left:11px; right:auto;}
+.rtl #footer .rss-addthis {right:11px; left:auto;}
+#footer .rss-addthis .rss a {color:#fff;}
+#footer .rss-addthis .addthis {text-align:left;}
+.rtl #footer .rss-addthis .addthis {text-align:right;}
+#badge-footer {position:absolute; top:31px; width:200px; height:80px; right:10px;}
+.rtl #badge-footer {left:10px;width:116px;right:auto;}
+.rtl #badge-footer a {width:116px}
+#badge-footer a {display:block; width:200px; height:80px; text-indent:-999em; background:transparent none no-repeat right top; text-decoration:none;}
+.rtl #badge-footer a {overflow:hidden;}
+#badge-footer a:focus {outline:none;}
+#footer-links {position:absolute; top:64px; left:10px;}
+.rtl #footer-links {right:10px;}
+#footer-links a {color:#fff;}
+#footer-links p {font-size:10px; color:#fff; margin:0;}
+.rtl #footer-links p {clear:both;}
+#footer-links ul {padding:0 0 0.2em; font-size:10px; margin:0;}
+.rtl #footer-links ul {width:960px; float:right;}
+#footer-links ul li {display:inline; color:#fff; padding:0 11px 0 9px; background:transparent url('../../ftd/img/nav.gif') no-repeat right -200px;}
+.rtl #footer-links ul li {float:right; padding:0 9px 0 11px; background:transparent url('../../ftd/img/nav-rtl.gif') no-repeat 0 -200px;}
+#footer-links ul li.first {padding-left:0;}
+.rtl #footer-links ul li.first {padding-right:0; padding-left:11px;}
+#footer-links ul li.last {background:none;}

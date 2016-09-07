@@ -1,0 +1,328 @@
+/* price calculate */
+.calculator #body #content{padding:0;margin: auto;font-family:"ProximaNova-Reg-Roman",Arial,SimSun,宋体,STSong,"华文宋体",sans-serif;overflow:hidden;}
+.calculator a{text-decoration:none;}
+.calculator td, .calculator th{border:none;color:#000000;}
+
+#body .mobile-only{display:block;}
+#body .mobile-only:empty{display:none;}
+#body .mobile-hide{display:none;}
+
+.icon-pdf, .icon-share, .icon-save{display:inline-block;height: 28px;width: 30px;text-decoration:none;background: url("../../lincoln-common/img/tools_sprite.png") no-repeat;}
+
+.icon-pdf{background-position: -4px -111px;}
+.icon-save{background-position: -4px -168px;}
+.icon-share{background-position: -4px -229px;}
+
+.icon-bag{display: inline-block;color:#4f4c43;font-weight: bold;font-size: 14px;padding: 2px 4px;}
+.icon-bag:hover{color:#B45F1A;}
+.icon-bag-text{position: relative;top: -8px;}
+.icon-bag:hover > .icon-pdf{background-position: -110px -111px;}
+.icon-bag:hover > .icon-save{background-position: -110px -168px;}
+.icon-bag:hover > .icon-share{background-position: -110px -229px;}
+
+.icon-holder{text-align: right;padding-left: 0;margin-top:20px;}
+.icon-holder > li:last-child{margin-right:20px;}
+
+.cal-progress{height:50px;margin:40px auto 45px;position:relative;padding:0 68px;}
+.cal-progress .step{position:relative;float:left;height:30px;width:30px;}
+.cal-progress .step.step-2{z-index:1;}
+.cal-progress .step.step-1{z-index:2;}
+.cal-progress .step + .step{background:transparent url("../img/cal-step-line.png") repeat-x center 10px;width:50%;margin-left:-15px;}
+.cal-progress .step.active + .step{background:transparent url("../img/cal-step-line-active.png") repeat-x center 10px;}
+.cal-progress .step span{width:30px;background:transparent url("../img/cal-step-bg.png") no-repeat center top;color:#fff;font-family:"Miller-B-Roman",Times New Roman,SimSun,"宋体",STSong,"华文宋体",serif;font-size:17px;text-align:center;display:block;height:30px;line-height:30px;float:right;}
+.cal-progress .step.active span{background-position:center -70px;}
+.cal-progress .step h3{font-size:11px;font-family:"ProximaNova-Reg-Roman",Arial,SimSun,宋体,STSong,"华文宋体",sans-serif;position:absolute;top:35px;width:150px;right:-60px;text-align:center;}
+
+.cal-section{float:left;width:100%;}
+.cal-section > .head{border-bottom:1px solid #a9a9a9;border-top:1px solid #a9a9a9;display:block;padding:8px 5px;}
+.cal-section > .head h3{padding:0 20px 0 0;display:inline;}
+.cal-section > .head em{font-family:"Miller-B-Italic", Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif;}
+
+.cal-section .row{margin:16px auto 0;position:relative;}
+.cal-section .row img{width:100%;border:1px solid #a9a9a9;padding:4px;}
+.cal-section .row.series{margin:10px auto 0;}
+.cal-section .row .item{display:block;padding:0 0 40px;float:left;}
+.cal-section .row.series .item, .cal-section .row.model .item{width:100%;}
+.cal-section .row.series > div:last-child .item, .cal-section .row.model > .item:last-child{padding-bottom:0;} /* decrease padding of last model in series cars */
+.cal-section .row .item .info, .cal-section .row .item .controller{text-align:center;margin:auto;padding-bottom:10px;}
+.cal-section .row .item .controller{padding-bottom:10px;}
+.cal-section .row.model .item.selected .controller{margin-bottom:20px;}
+.cal-section .row.model .item.selected .info{margin-top: 10px;}
+.cal-section .row.model .item.selected .info, .cal-section .row.model .item.selected .controller{background:#4f4c43;color:#fff;margin-left:5px;margin-right:5px;}
+.cal-section .row.model .item.selected .info .title{border-bottom:1px solid #fff;}
+.cal-section .row.model .item.unselected{display:none;}
+.cal-section .row.model .item .info .title, .cal-section .row.series .item .info .title{font-size:18px;text-align:center;padding:15px 0 10px;font-family:"Miller-B-Roman",Times New Roman,SimSun,"宋体",STSong,"华文宋体",serif;margin:0 30px;border-bottom:1px solid #4f4c43;}
+.cal-section .row.model .item .info .price, .cal-section .row.series .item .info .price{font-size:20px;text-align:center;margin:0 30px;padding:10px 0 0;}
+.cal-section .row.model .item .info .price .symbol, .cal-section .row.series .item .info .price .symbol{font-size:10px;vertical-align:6px;padding-right:3px;}
+.cal-section .row.series.grid-4 .item .info .price .symbol{vertical-align:7px;}
+.cal-section .row.series .item .info .price .engine{padding-right:10px;font-size:12px;vertical-align:5px;}
+.cal-section .row.model .item .controller input, .cal-section .row.series .item .controller input{display:none;}
+.cal-section .row.model .item .controller label, .cal-section .row.series .item .controller label{background:url("../img/radio-bg.png") no-repeat scroll center -57px;display:block;height:24px;width:23px;margin:auto;cursor:pointer;}
+.cal-section .row.model .item .controller input.checked + label, .cal-section .row.series .item .controller input.checked + label{background:url("../img/radio-bg.png") no-repeat scroll center top;}
+
+.cal-section > .error{color:#ff0000;font-size:14px;line-height:14px;width:100%;padding-bottom: 0;}
+
+.cal-section .row.large{margin:8px auto 30px;padding:0;}
+.cal-section .row.large .price{background-color:#4f4c43;padding:4px 0;width:100%;color:#fff;line-height:35px;text-align:center;font-size:20px;}
+.cal-section .row.large .price .symbol{font-size:12px;}
+.cal-section .row.large .message{font-size:12px;margin-top:20px;color:#4f4c43;line-height:22px;padding:0;}
+.cal-section .message ul {padding-left:0;}
+
+#body .cal-section .row.large .message a{color:#b45f1a;text-decoration:underline;}
+#body .cal-section .row.large .change-vehicle{text-align: right;margin-top:15px;}
+#body .cal-section .row.large .change-vehicle a{color:#b45f1a;font-size:14px;text-decoration:underline;}
+#body .cal-section .row.large .message a:hover,#body .cal-section .row.large .change-vehicle a:hover{text-decoration:none;}
+
+.cal-section .row.summary{margin:0;}
+.cal-section .row.summary .column{float:left;width:100%;padding:0;}
+.cal-section .row.summary .column.sum{padding:0;}
+.cal-section .row.summary .column.sum .row p{margin:5px 0;}
+.cal-section .row.summary .column .row {margin:0 auto;}
+.cal-section .row.summary .column .row + .row{margin:30px auto 0;}
+.cal-section .row.summary .column .row .title{font-family:"Miller-B-Roman",Times New Roman,SimSun,"宋体",STSong,"华文宋体",serif;font-size:16px;line-height:24px;border-bottom:1px solid #a9a9a9;}
+.cal-section .row.summary .column .row .controller{margin-top:20px;float:left;position:relative;width:100%;}
+.cal-section .row.summary .column .row .controller .head{padding:0;float:left;border:none;background-color:#000;color:#fff;height:40px;/*width:70px;*/width:25%;font-size:18px;line-height:40px;text-align:center;}
+.cal-section .row.summary .column .row .controller .head.small{font-size:18px;line-height:18px;}
+.cal-section .row.summary .column .row .controller .head.small span{padding-top:3px;display:block;}
+.cal-section .row.summary .column .row .controller .head.small span.sub{font-size:14px;display:block;padding:0;}
+.cal-section .row.summary .column .row .controller label{font-family:"Miller-B-Roman",Times New Roman,SimSun,"宋体",STSong,"华文宋体",serif;float:left;margin-left:10px;margin-bottom:0;height:40px;background-color:#e5e5e5;font-size:20px;line-height:40px;text-align:center;}
+.cal-section .row.summary .column .row .controller label.price{/*width:300px;*/width:70%;}
+.cal-section .row.summary .column .row .controller label.rate{/*width:70px;*/width:20%;}
+.cal-section .row.summary .column .row .controller input[type='text'],
+.cal-section .row.summary .column .row .controller input[type='number']{margin-left:10px;margin-bottom:0;/*width:220px;*/width:47%;height:40px;float:left;padding:2px 15px 2px 5px;border:1px #e5e5e5 solid;color:#b45F1A;font-size:12px;}
+.cal-section .row.summary .column .row .controller input[type='number']{-moz-appearance:textfield;-webkit-appearance:none;}
+.cal-section .row.summary .column .row .controller input[type='number']::-webkit-outer-spin-button,
+.cal-section .row.summary .column .row .controller input[type='number']::-webkit-inner-spin-button{-webkit-appearance:none;}
+.cal-section .row.summary .column .row p{margin-top:20px;padding:0;font-size:14px;color:#000;float:left;width: 100%;}
+.cal-section .row.summary .column .row .error{font-size:12px;color:#ff0000;margin-top:5px;line-height:14px;}
+.cal-section .row.summary .column .row .controller .slide-block{float:left;width:70%;height:40px;margin-left:10px;position:relative;}
+.cal-section .row.summary .column .row .controller .slide{background-color:#fff;padding:0;float:left;width:100%;height:100%;border-left:1px solid #4f4c43;}
+.cal-section .row.summary .column .row .controller .slide .block{float:left;width:11.11%;height:100%;border-bottom:1px solid #4f4c43;border-right:1px solid #4f4c43;border-top:1px solid #4f4c43;text-indent:-999em;}
+.cal-section .row.summary.rco .column .row .controller .slide .block{width:50%;}
+.cal-section .row.summary .column .row .controller #slider{width:88.5%;position:absolute;box-sizing:content-box;border:none;background:none;height:100%;}
+.cal-section .row.summary.rco .column .row .controller #slider{width:49.8%;}
+.cal-section .row.summary .column .row .controller #slider .ui-slider-handle{background:url("../img/cal-payment-arrow.png") no-repeat scroll right center;height:40px;/*width:32px;*/width:12.5%;float:left;cursor:default;position:absolute;left:0;line-height:40px;color:#fff;font-size:14px;padding-left:5px;border:none;border-radius:0;}
+.cal-section .row.summary.rco .column .row .controller #slider .ui-slider-handle{text-align:right;padding:0 12px 0 0;}
+.cal-section .row.summary.rco .column .row .controller #slider .ui-slider-handle:after{content: ''; background-color: #4f4c43; position:absolute; display:block; width:50%; height:100%; top: 0;}
+.cal-section .row.summary.rco .column .row .controller #slider .ui-slider-handle{width:100%;}
+.cal-section .row.summary .column .row .controller #slider .ui-slider-range{display:inline-block;height:40px;background:#4f4c43;border:none;box-sizing:content-box;border-radius:0;}
+
+.cal-section .row.summary .column.sum .row{margin:0 auto 10px;float:left;width:100%;}
+.cal-section .row.summary .column.sum .row .title{border:none;margin:30px 0 20px 0;}
+.cal-section .row.summary .column.sum .row .content{border:1px solid #e5e5e5;padding:5px;float:left;width:100%;}
+.cal-section .row.summary .column.sum .row .content table{width:100%;background-color:#f3f3f3;float:left;}
+.cal-section .row.summary .column.sum .row .content table tbody{width:100%;padding:20px;display:block;float:left;}
+.cal-section .row.summary .column.sum .row .content table tr{display:table;width:100%;}
+.cal-section .row.summary .column.sum .row .content table tr td.title{/*width:160px;*/width:70%;padding:5px 0;/*color:#6c6c6c;*/font-size:16px;}
+.cal-section .row.summary .column.sum .row .content table tr td.value{/*width:88px;*/text-align:right;padding:5px 0;/*color:#6c6c6c;*/font-size:16px;vertical-align:bottom;white-space:nowrap;}
+.cal-section .row.summary .column.sum .row .content .price{float:left;background-color:#f3f3f3;width:100%;font-size:20px;height:40px;line-height:40px;text-align:center;}
+.cal-section .row.summary .column.sum .row .content .price .symbol{font-size:16px;}
+.cal-section .row.summary .column.sum > .icon{margin-top:-5px;text-align:right;float:right;}
+.cal-section .row.summary .column.sum > .icon .share-icon{display:inline-block;height:30px;text-decoration:none;font-size: 1.2em;color:#4f4c43;background: url("../../lincoln-common/img/tools_sprite.png") no-repeat -4px -228px;}
+.cal-section .row.summary .column.sum > .icon .share-icon:hover, .cal-section .row.summary .column.sum > .icon .share-icon.active{background-position:-110px -228px;color:#B45F1A;}
+.cal-section .row.summary .column.sum > .icon .share-icon .btn-icon-link{line-height:31px;padding-left:33px;white-space: nowrap;}
+
+.cal-section .row.disclaimer{border-top:1px solid #a9a9a9;padding:0;margin:0 auto 20px;}
+.cal-section .row.disclaimer .logo{margin:20px 0;}
+.cal-section .row.disclaimer .logo img{border:none;height:36px;width:auto;}
+.cal-section .row.disclaimer .article, .cal-section .row.disclaimer .article p{color:#4f4c43;font-size:12px;line-height:22px;padding:0;}
+.cal-section .row.disclaimer .article{padding-bottom:20px;}
+.cal-section .row.disclaimer .article h3{color:#4f4c43;font-size:14px;text-decoration:underline;}
+
+.cal-section .row.tab{margin:0;padding:0;}
+.cal-section .row.tab .tabs{padding:0;float:left;width:100%;}
+.cal-section .tabs > .standard-option-tab{background-position: 90% center !important;}
+.cal-section .row.tab .tabs li:first-child{padding-left:0;}
+.cal-section .row.tab .tabs li{float:left;position:relative;padding:0 20px;}
+.cal-section .row.tab .tabs li + li{border-left:1px solid #000;}
+.cal-section .row.tab .tabs li a{color:#000;font-size:16px;}
+.cal-section .row.tab .tabs li.active{}
+.cal-section .row.tab .tabs li.active a{color:#b45f1a;}
+.cal-section .row.tab .tabs li .arrow{display:none;background:url("../../lincoln-common/img/arrow_down.png") no-repeat scroll right center;width:10px;height:9px;position:absolute;left:50%;top:40px;margin-left:-5px;}
+.cal-section .row.tab .content{padding:20px 0;float:left;}
+.cal-section .row.tab .content p{font-family:"ProximaNova-Reg-Roman",Arial,SimSun,宋体,STSong,"华文宋体",sans-serif;font-size:15px;padding-bottom:0;}
+.cal-section .row.tab .content a{color:#b45f1a;text-decoration:underline;}
+
+.cal-section > .button-holder{margin: 25px 10px 0;}
+.cal-section .button{width:100%;text-align:right;margin:10px 0 35px;float:left;}
+.cal-section .button.mobile-only{margin-top:-30px;}
+.cal-section .button.button-continue .icon-featurebtn{padding: 10px 20px 10px 10px;}
+.cal-section .featurebtn{display: inline-block;padding-bottom: 2px;border-bottom: 2px solid #fff;}
+.cal-section .featurebtn:hover{border-bottom: 2px solid #b45f1a;}
+
+
+.cal-section .featurebtn .icon-featurebtn {min-width:130px;text-align:center; font-size: 16px; padding: 10px 40px 10px 25px; background: url("../../lincoln-common/img/triangle-arrow.png") no-repeat right center #4F4C43;color: #FFFFFF;display: inline-block;font-family:"Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif;box-sizing:content-box;line-height:20px;}
+
+.call-to-action{width:100%;border-top:2px solid #af6123;border-top: 2px solid #71635f;border-bottom:none;word-break: break-all; display: table; margin-bottom: 4px;clear:both;}
+.call-to-action .creative-button{margin: 40px auto;text-align:center;}
+.call-to-action .button{padding:5px 0;width: 149px;height: 149px;display:block;box-sizing:content-box;position:relative;left:50%;margin-left:-74px;}
+.call-to-action .button:first-child{padding-left:0;}
+.call-to-action .button a {display:block; width:149px; height:149px; background:transparent none no-repeat scroll 0 0;}
+.call-to-action .button a:hover {background-position:0 -150px;}
+
+.calculator #body hr{margin-bottom:5px;clear:both;border-width:1px 0 0;border-color:#c1c4bf;border-style:solid;}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+.loading-icon{background:url("../../lincoln-responsive/img/lincoln_loading.gif") no-repeat scroll center center rgba(0, 0, 0, 0);}
+
+#body .back-to-top{text-align:right;padding:17px 0;}
+#body .back-to-top a{font-size:17px;color:#4f4c43;}
+
+/* anchor bar */
+#footer{padding-bottom:46px;margin-top:0;}
+.anchor-bar{position: fixed;bottom: 0;left: 0;right: 0;height: 46px;background: #fff;border-top: 1px #000 solid;z-index: 9999;}
+.anchor-bar > .columns{text-align: center;padding: 3px 0;}
+.anchor-bar > .small-4 {width: auto; float: left !important;}
+.anchor-bar .anchor-btn {padding: 0 0 0 10px;}
+.anchor-bar .anchor-btn a {font-size: 14px; color: #4f4c43; line-height: 20px; margin-top: 10px; display: inline-block; text-decoration: none; font-family:"Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif;}
+.anchor-bar .anchor-btn .connect{border-bottom: 1px #b45f1a solid;}
+.anchor-bar .anchor-btn .icon-btn {padding:10px 0 10px 40px;margin:0;width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;position:relative;}
+.anchor-bar .anchor-btn span.icon-email{background:url("../../lincoln-tools/img/bnp-icons.png") left -100px;display:block;left:0;margin-top:-15px;position:absolute;top:50%;width:30px;height:30px;}
+.anchor-bar .anchor-btn .icon-btn:hover span.icon-email{background-position: right -100px;}
+
+/* alert box */
+.noscroll{overflow: hidden;}
+
+.rad-overlay-bg{position: fixed; height: 100%; background-color:rgba(0,0,0,0.7);top: 0;left: 0;right: 0;bottom: 0;z-index: 9999;overflow-y: scroll;overflow-x: hidden;}
+.nontransparent-overlay .rad-overlay-bg {background-color: #656261;}
+
+.rad-overlay-wrap{position: fixed;width: 100%; background-color: #ffffff; top: 50px;bottom: 50px;z-index: 9999;min-height: 300px;}
+.rad-overlay-wrap .close-btn{position: absolute; width: 40px; height: 40px; font-size: 0; line-height: 0; right: 0px;top: -40px;display: block;cursor: pointer;z-index: 1000; background: transparent url('../../lincoln-tools/img/bnp-icons.png') no-repeat 0px -300px;}
+.rad-overlay-wrap.auto-height-overlay {bottom: auto; left: auto;top: auto; right: auto; min-height: 150px; position: relative; margin: 40px auto 0px auto; }
+
+.rad-overlay-wrap.overall-review {bottom: auto; left: auto;top: auto; right: auto; min-height: 150px; position: relative; margin: 50px auto 50px auto; background-color: #ffffff;}
+.rad-overlay-wrap.overall-review .switch-btn {position: absolute; right: 10px; bottom: 10px; z-index: 1000; cursor: pointer; border-bottom: 2px #ffffff solid; padding: 0 0 2px 0; background-color: transparent;}
+.rad-overlay-wrap.overall-review .switch-btn:hover {border-bottom: 2px #b45f1a solid;}
+.rad-overlay-wrap.overall-review .switch-btn span {display: block; font-size: 14px; font-weight: normal; padding: 8px 15px; color: #fff; font-family: "Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif; background-color: #4f4c43; }
+.rad-overlay-wrap.overall-review .car-stage .pager {bottom: 60px;}
+
+.alertbox.rad-overlay-wrap {bottom: auto;}
+.alertbox .alert-info {position: relative; padding: 70px 10px 20px 10px;}
+.alertbox .alert-info .alert-icon {position: absolute; width: 41px; height: 41px; left: 50%; top: 20px; margin-left: -20px; background: transparent url('../../lincoln-tools/img/bnp-icons.png') no-repeat left -650px;}
+.alertbox .alert-info .message p {padding: 0 10px; font-size: 15px; line-height: 1.2em; margin: 10px 0;}
+.alertbox .alert-info .message p.highlight {color: #b45f1a;}
+.alertbox .alert-info .message p.large-text {font-size: 18px; font-family: "Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif; padding: 8px 10px; margin: 0;color:#000000;}
+.alertbox .alert-info .message p.border-bottom {border-bottom: 1px #d4d4d4 solid;}
+.alertbox .alert-info .message p.border-top {border-top: 1px #d4d4d4 solid;}
+.alertbox .alert-info .btns {padding: 15px 0; text-align: center;}
+#bp-conflict-detail {max-height: 150px; overflow-y: auto; }
+
+span.underline-btn {padding: 0 0 2px 0; display: inline-block; cursor: pointer; border-bottom: 1px #ffffff solid;}
+span.underline-btn span {display: inline-block; color: #ffffff; font-size: 12px; padding: 6px 15px; text-align: center; background-color: #4f4c43;}
+span.underline-btn:hover {border-bottom: 1px #b45f1a solid; }
+
+.lcn-btn {display:inline-block; cursor: pointer; border-bottom: 2px #ffffff solid; padding: 0 0 2px 0; text-decoration: none; background-color: transparent;}
+.lcn-btn:hover {border-bottom: 2px #b45f1a solid;}
+.lcn-btn span {display: block; font-size: 14px; font-weight: normal; padding: 8px 15px; color: #fff; font-family: "Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif; background-color: #4f4c43; }
+
+.alertbox .alert-info .btns span.underline-btn span {font-family: "Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif; font-weight: normal; font-size: 18px;}
+
+
+.alertbox.rad-overlay-wrap {width: 500px; left: 50%; top: 50px; margin-left: -250px;}
+#bp-conflict-detail {max-height: 450px; overflow-y: auto; }
+
+/* Styles for screens that understand media queries */
+@media only screen {
+
+}
+
+
+
+/* =========================================== Tablet screen size and UP ============================================ */
+/* Styles for screens that are at least 768px */
+@media only screen and (min-width: 48em) {
+
+    #body .mobile-only{display:none;}
+    #body .mobile-hide{display:block;}
+
+    .cal-progress{padding:0 80px;margin:20px auto 43px;}
+
+    .cal-section > .head{margin:0 10px;}
+	.cal-section > .head.arrow h3{background:url("../../lincoln-common/img/arrow_right.png") no-repeat scroll right center;}
+	.cal-section > .head.arrow.active h3{background:url("../../lincoln-common/img/arrow_down.png") no-repeat scroll right center;}
+
+    .cal-section .row{margin:10px auto 15px;position:relative;}
+    .cal-section .row .item{padding:0 10px;position:relative;}
+    .cal-section .row.series{padding:0 4px;margin:10px auto 20px;}
+    .cal-section .row.series .item{width:33.3%;padding:0 6px;}
+    .cal-section .row.model .item{width:50%;}
+    .cal-section .row.model .item .info .title{margin:0;}
+    .cal-section .row.grid-3 .item{width:33.3%;}
+    .cal-section .row.grid-4 .item{width:25%;}
+    .cal-section .row.grid-5 .item{width:20%;}
+    .cal-section .row .item .info {margin-top: 0;}
+    .cal-section .row .item .info, .cal-section .row .item .controller{width:70%;}
+    .cal-section .row.series .item .info, .cal-section .row.series .item .controller{width:85%;}
+    .cal-section .row.series .item .info .title{font-size:17px;margin:0;}
+    .cal-section .row.series.grid-4 .item .info .title, .cal-section .row.series.grid-5 .item .info .title{font-size:14px;}
+    .cal-section .row.series.grid-4 .item .info .price, .cal-section .row.series.grid-5 .item .info .price{font-size:14px; color:#000;}
+    .cal-section .row.series.grid-4 .item .info .price .tag{vertical-align: 4px;}
+    .cal-section .row.model .item .info .price, .cal-section .row.model .item.selected .info .price{padding:10px 0 0 0;}
+    .cal-section .row.model .item .info .price, .cal-section .row.series .item .price{margin:0;}
+    .cal-section .row.model .item.selected .info .title{border-bottom: 1px solid #4f4c43;}
+
+    .cal-section .row.model .item.selected .info, .cal-section .row.model .item.selected .controller{background:none;color:#000;margin: auto;}
+
+    .cal-section .row.model .item.unselected{display:block;}
+    .cal-section .row.series .item .controller{display:none;}
+    .cal-section .row.series .item .info .price{margin: 0;}
+    .cal-section .row.series .item .info .price .controller{width:auto;display:inline-block;padding:0 15px 0 0;vertical-align:sub;}
+
+    .cal-section > .error{padding:5px 15px;margin-top: 20px;}
+
+    .cal-section .row.large{margin:30px auto 20px;padding:0 80px;}
+
+    .cal-section .row.summary{margin:0;padding:0 80px;}
+    .cal-section .row.summary .column{padding:0 3.8% 0 0;width:50%;}
+    .cal-section .row.summary .column.sum{padding:0 0 0 3.8%;}
+    .cal-section .row.summary .column .row .controller #slider .ui-slider-handle{padding-left:3px;}
+    .cal-section .row.summary .column.sum .row .title{margin:0;}
+
+    .cal-section .row.tab{margin-bottom:10px;padding:0 80px;}
+    .cal-section .row.tab .tabs{padding:0;border-bottom:1px solid #a9a9a9;float:left;width:100%;}
+    .cal-section .row.tab .tabs li:first-child{padding-left:20px;}
+    .cal-section .row.tab .tabs li{min-width:260px;height:40px;float:left;padding:0 40px 0 20px;background:#cccccc url("../../lincoln-common/img/triangle-arrow-black.png") no-repeat scroll right center;position:relative;}
+    .cal-section .row.tab .tabs li a{color:#000;line-height:40px;font-family:"Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif;font-size:18px;}
+    .cal-section .row.tab .tabs li.active{background:#000000 url("../../lincoln-common/img/triangle-arrow-down.png") no-repeat scroll right center;}
+    .cal-section .row.tab .tabs li.active a{color:#fff;}
+    .cal-section .row.tab .tabs li .arrow{display:none;background:url("../../lincoln-common/img/arrow_down.png") no-repeat scroll right center;width:10px;height:9px;position:absolute;left:50%;top:40px;margin-left:-5px;}
+    .cal-section .row.tab .tabs li.active .arrow{display:block;}
+    .cal-section .row.tab .content{padding:26px 0;}
+
+    .cal-section .row.disclaimer{padding:0 80px;margin-top:20px;}
+
+	.call-to-action{border-bottom: 2px solid #c47428;}
+    .call-to-action .button{padding:0 0 0 45px;display:inline-block;box-sizing:content-box;left:auto;margin:0;}
+
+    .anchor-bar{display:none;}
+    #footer{padding:0;margin-top: 85px;}
+}
+
+/* =========================================== Desktop screen size and UP ============================================ */
+/* Styles for screens that are at least 977px (960px + 17px to cater for browsers adding the scrollbar to the pixel count) */
+
+@media only screen and (min-width: 62.1em) {
+    .cal-progress{margin:20px auto;}
+
+    .cal-section .row.summary .column .row .controller, .cal-section .row.summary .column .row > p{margin-left:80px;}
+
+    .cal-section .row.summary{margin:0 10px;padding:0;}
+    .cal-section .row.summary .column{padding:0 10px 0 0;}
+    .cal-section .row.summary .column.sum{padding:0 90px;}
+    .cal-section .row.summary .column .row .controller .head{width:17%;}
+    .cal-section .row.summary .column .row .controller label.price{width:64%;}
+    .cal-section .row.summary .column .row .controller label.rate{width:17%;}
+    .cal-section .row.summary .column .row .controller input[type='text'],
+    .cal-section .row.summary .column .row .controller input[type='number']{width:45%;}
+    .cal-section .row.summary .column .row .controller .slide-block{width:64%;}
+    .cal-section .row.summary .column .row .controller #slider .ui-slider-handle{padding-left:12px;}
+    .cal-section .row.summary .column .row .error{margin-left:80px;}
+
+    .cal-section .button.button-continue .icon-featurebtn{padding: 10px 54px 10px 34px;}
+
+    .cal-section .row.tab{margin:10px 10px 26px;padding:0 90px 0 0;}
+    .cal-section .row.tab .content{padding:26px 0 0;}
+
+}

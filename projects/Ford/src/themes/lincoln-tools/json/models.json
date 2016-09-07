@@ -1,0 +1,63 @@
+[
+  {
+    "id": "100",
+    "sequence": 1,
+    "brand": "Lincoln",
+    "modelName": "MKC",
+    "modelYear": "2014",
+    "images": [
+      {
+        "id": "image1",
+        "name": "Image.carousel",
+        "description": "MKC",
+        "sequence" : 1,
+        "src": "../../media/bnp/model01.jpg"
+      },
+      {
+        "id": "image2",
+        "name": "Image.carousel",
+        "description": "MKC",
+        "sequence" : 2,
+        "src": "../../media/bnp/model01-r.jpg"
+      }
+    ],
+
+    "prices": [
+      {
+        "name": "MinNettRetail",
+        "value": "250000.00",
+        "currency": "CNY"
+      }
+    ]
+  },
+  {
+    "id": "200",
+    "sequence": 2,
+    "brand": "Lincoln",
+    "modelName": "MKZ",
+    "modelYear": "2014",
+    "images": [
+        {
+            "id": "image1",
+            "name": "Image.carousel",
+            "description": "MKC",
+            "sequence" : 1,
+            "src": "../../media/bnp/model02.jpg"
+        },
+        {
+            "id": "image2",
+            "name": "Image.carousel",
+            "description": "MKC",
+            "sequence" : 2,
+            "src": "../../media/bnp/model02-r.jpg"
+        }
+    ],
+    "prices": [
+      {
+        "name": "MinNettRetail",
+        "value": "200000.00",
+        "currency": "CNY"
+      }
+    ]
+  }
+]

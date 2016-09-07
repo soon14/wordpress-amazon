@@ -1,0 +1,50 @@
+<div class="overlayimg">
+	<img
+		src="media/landing/UserMGTLanding.png"
+		title=""
+		width="961"
+		height="590"
+	/>
+	<div class="bg"></div>
+</div>
+<script type="text/javascript">
+if($.fn.rollOver){
+	$(".overlayimg").rollOver({
+		style:"display: block; position: absolute; z-index: 10; top: 492px; left: 676px; width: 237px; height: 55px;"
+		, href: "/servlet/Satellite?c=DFYArticle&cid=1248935381427&disableFiltering=true&locale=&pagename=FIPL%2Fcontroller&site=FIPL&view=feature-overlay-takeover"
+		, target:"_blank"
+	});
+}
+</script>
+
+<style type="text/css">
+/*buttons*/
+.overlay-box{
+    overflow:hidden;
+	background:none transparent;
+}
+.ltr .overlay-box DIV.close-button {
+	top: 19px;
+	right: 24px;
+	z-index:20;
+}
+.overlayimg{
+	position:relative;
+}
+.overlayimg img{
+	position:relative;
+	z-index:10;
+}
+.overlayimg .bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #333;
+	z-index: -1;
+	border-radius: 10px;
+	height: 100%;
+	width: 100%;
+	filter:alpha(opacity=20);
+	opacity:0.2;
+}
+</style>

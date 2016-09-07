@@ -1,0 +1,12 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# These files are concatenated in this order into live/dev.debug.js and then minified into live/prod.min.js
+#	- dev.debug.js is for Developer Debugging 
+#	- prod.min.js is for Production
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# motorcraft phase II
+../../gux/js/modules/revealModal.js
+../../motorcraft/js/modules/detectLocation.js
+../../motorcraft/js/modules/mcLocale.js
+../../motorcraft/js/modules/mcLanguageSelect.js
+../../motorcraft/js/modules/mcStickyFooter.js

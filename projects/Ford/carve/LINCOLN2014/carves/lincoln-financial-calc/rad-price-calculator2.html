@@ -1,0 +1,484 @@
+    <!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  	
+  	<title>Lincoln</title>
+
+
+   	<link rel="stylesheet" href="../../../../src/themes/lincoln-responsive/css/normalize.css" /> 
+   	<link rel="stylesheet" href="../../../../src/themes/lincoln-responsive/css/foundation.css" /> 
+   	<link rel="stylesheet" href="../../../../src/themes/lincoln-common/css/fonts.css" /> 
+   	<link rel="stylesheet" href="../../../../src/themes/lincoln-responsive/css/rad-global.css" /> 
+	<link type="text/css" rel="stylesheet" href="../../../../src/themes/lincoln-financial-calc/css/financial-calculator-new.css" media="screen, projection" />
+
+   	<!--[if IE 8]> 
+           <link rel="stylesheet" href="../../../../src/themes/lincoln-responsive/css/rad-global-ie8.css" /> 
+	       <link type="text/css" rel="stylesheet" href="../../../../src/themes/lincoln-financial-calc/css/financial-calculator-ie8.css" media="screen, projection" />
+    <![endif]-->
+
+	<script src="../../../../src/themes/lincoln-responsive/js/live/dev.debug.js"></script>
+    <script src="../../../../src/themes/ftd/js/jquery-ui-accordion.js"></script>
+    <script src="../../../../src/themes/ftd/js/lib/jquery.ui.slider.js"></script>
+    <script src="../../../../src/themes/lincoln-nonresponsive/js/price-calculator.js"></script>
+  	
+</head>
+
+<body class="ltr calculator">
+<noscript>
+	<div style="width:100%;padding:0">
+		<p style="margin:0px 0 8px;color:#5B6E7C;font-size: 1em; text-align:center; font-weight:bold; padding:5px 15px 10px 15px; background-color:#AE0000; color:#fff;">The page cannot be viewed correctly without enabling JavaScript in your brower setting.</p>
+	</div>
+</noscript>
+
+	<!-- Global Header START -->
+	<div id="header">
+		<div id="badge">
+			<a href="#">
+				<span class="logo-wide" style="background-image:url('../../media/lincoln_logo.png')">
+					Lincoln
+				</span>
+				<span class="logo-mobile" style="background-image:url('../../media/lincoln_logo_mobile.png')">
+
+				</span>
+			</a>
+			<img src="../../media/lincoln_logo.png" width="" height="" alt="Lincoln" />
+		</div>
+
+		<div class="menu-wrap">
+			<span class="menu-icon">menu</span>
+			<ul id="menu">
+				<li class="eyebown">
+					<ul id="toolbar">
+						<li class="menu-item">
+							<a href="#">
+								Sign in/Register
+								<span class="arrow"></span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">
+								中文
+								<span class="arrow"></span>
+							</a>
+						</li>
+						<li class="search-bar small-hide">
+							<form>
+								<input type="text" />
+								<input type="submit" value="search" />
+							</form>
+						</li>
+					</ul>
+				</li>
+				<li class="primary-nav">
+					<ul id="nav">
+						<li class="fat-menu-parent">
+							<a class="nav-item">
+								Vehicles
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu fat-menu">
+								<li>
+									<ul class="fat-col">
+										<li class="menu-item">
+											<a href="#">
+												<img src="../../media/brandsite/thumbs/vehthumb-MKC.jpg" title="" alt="" />
+												Lincoln MKC
+												<span class="arrow"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												MKC Story
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Build Your Own
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Gallery
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Features
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="fat-col">
+										<li class="menu-item">
+											<a href="#">
+												<img src="../../media/brandsite/thumbs/vehthumb-MKZ.jpg" title="" alt="" />
+												Lincoln MKZ
+												<span class="arrow"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												MKZ Story
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Build Your Own
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Gallery
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Features
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="nav-item">
+								Lincoln Story
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="menu-item">
+									<a href="#">
+										Lincoln Heritage
+										<span class="arrow"></span>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#">
+										Lincoln Campaign
+										<span class="arrow"></span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="nav-item">
+								Lincoln News
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="small-hide">
+									<a href="#">
+										Lincoln PR News
+									</a>
+								</li>
+								<li class="small-hide">
+									<a href="#">
+										Lincoln News 2
+									</a>
+								</li>
+								<li class="menu-item medium-hide">
+									<a href="#">
+										Lincoln News 4 Mobile
+										<span class="arrow"></span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="nav-item">
+								Shopping Tools
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="menu-item">
+									<a href="#">
+										Build Your Own
+										<span class="arrow"></span>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#">
+										Financial Services
+										<span class="arrow"></span>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="menu-bottom">
+					<ul>
+						<li>
+							<a href="#">Privacy</a>
+						</li>
+						<li>
+							<a href="#">Disclosure</a>
+						</li>
+						<li>
+							<a href="#">Terms &amp; Conditions</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="subnav-wrap">
+		<div id="subnav">
+			<h1>
+				Payment Estimator
+			</h1>
+		</div>
+	</div>
+	<!-- Global Header END -->
+	<div id="body">
+
+		<div id="content">
+                        <div class="cal-progress">
+                            <div class="step step-1 active">
+                                <span>1</span>
+                                <h3>Select</h3>
+                            </div>
+                            <div class="step step-2 active">
+                                <span>2</span>
+                                <h3>Calculate</h3>
+                            </div>
+                            <div class="step step-3">
+                                <span>3</span>
+                                <h3>Apply</h3>
+                            </div>
+                        </div>
+
+                        <div class="cal-section">
+                            <div class="head active">
+                                <h3>Select Model - <em>Select Series</em></h3>
+                            </div>   
+                            <div class="row large">
+                                <div class="image">
+                                    <img src="../../media/brandsite/banner01.jpg" />
+                                </div>                                
+                                <div class="price">
+                                    <span class="symbol">RMB</span>
+                                    400,000
+                                </div>
+                                <a href="rad-price-calculator1.html" class="change-vehicle">Change Vehicle</a>
+                                <div class="message">
+                                    <p>Something about going to see all the awesome features of the selected car, such as the MKZ Nameplate.
+                                    <a href="#">Click here</a>
+                                    to open the specs page to see the series differences.</p>
+                                </div>
+                            </div>                                              
+                        </div> 
+                        
+                        <div class="cal-section">
+                            <div class="row tab">
+                                <ul class="tabs">
+                                    <li class="">
+                                        <a href="rad-price-calculator3.html">Lincoln Red Carpet Option</a>
+                                        <span class="arrow"></span>
+                                    </li>
+                                    <li class="active">
+                                        <a href="#">Standard Option</a>
+                                        <span class="arrow"></span>
+                                    </li>
+                                </ul>
+                                <div class="content">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cal-section">
+                            <div class="row summary">
+                                <div class="column">
+                                    <div class="row">
+                                        <div class="title">Vehicle Price (MSRP)</div>
+                                        <div class="controller">
+                                            <div class="head"><span>RMB</span></div>
+                                            <label class="price">400,000</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="title">Down Payment</div>
+                                        <p>Minimun amount is pre-filled at 20% of total vehicle price.</p>
+                                        <div class="controller">
+                                            <div class="head">
+                                                <span>RMB</span>
+                                            </div>
+                                            <input type="text"/>
+                                            <label class="rate">20%</label>
+                                        </div>
+                                        <p class="error">The downpayment value must be no less than 20%. We have adjusted the downpayment value to an acceptable amount.</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="title">Monthly Payment</div>
+                                        <p>Estimated amount payable per month:</p>
+                                        <div class="controller">
+                                            <div class="head small">
+                                                <span>Terms</span>
+                                                <span class="sub">(Months)</span>
+                                            </div>   
+                                            <div class="slide-block">
+                                                <div class="slide">
+                                                    <div class="block">12</div>
+                                                    <div class="block">18</div>
+                                                    <div class="block">24</div>
+                                                    <div class="block">30</div>
+                                                    <div class="block">36</div>
+                                                    <div class="block">42</div>
+                                                    <div class="block">48</div>
+                                                    <div class="block">54</div>
+                                                    <div class="block">60</div>
+                                                </div>
+                                            </div>                                         
+                                            
+                                            <!--<div class="slide-arrow">
+                                                <div class="block"></div>
+                                                <div class="arrow"><span>12</span></div>
+                                            </div>-->
+                                        </div>
+                                        <p>Total payment per month:</p>
+                                        <div class="controller">
+                                            <div class="head"><span>RMB</span></div>
+                                            <label class="price">6,000</label>
+                                        </div>
+                                        <!--<p>Date validated 08/08/2014</p>-->
+                                    </div>
+                                </div>
+                                <div class="column sum">
+                                    <div class="row">
+                                        <div class="title">Summary</div>
+                                        <div class="content">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="title">Vehicle Price (MSRP)</td>
+                                                        <td class="value">400,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="title">Down Payment<br />20%</td>
+                                                        <td class="value">66,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="title">Terms</td>
+                                                        <td class="value">12 months</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p>Monthly Payments</p>
+                                            <div class="price">
+                                                <span class="symbol">RMB</span>
+                                                6,000
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="button">
+                                        <a class="featurebtn" href="#">
+                                            <span class="icon icon-featurebtn">Apply for Credit</span>
+                                        </a>
+                                    </div>
+                                    <div class="icon">
+                                        <a href="#" class="share-icon icon"> <span class="btn-icon-link">Print</span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cal-section">
+                            <div class="row disclaimer">
+                                <div class="logo">
+                                    <img src="../../media/lincoln_logo2.png" />
+                                </div>
+                                <div class="article">
+                                    <h3>Disclaimer:</h3>
+                                    <p>- The payment is calculated based on MSRP and the result is only for your reference. Please consult your dealer for actual vehicle price, payments,  and complete details.</p>
+                                    <p>- Minimum downpayment ratio is 20% of vehicle price. Actual downpayment amount and credit approval conditions are based on the credit decision of Lincoln Automotive Financial Services.</p>
+                                    <p>- The payment result shown in the payment estimator is a round-up number for your reference. The actual payment amount is subject to Lincoln Automotive Financial Services system result.</p>
+                                </div>
+                            </div>
+                        </div>
+
+					</div>
+
+                    <hr />
+                    <div class="call-to-action">		
+                        <!--<div class="tool-tip clearfix">
+							<div class="tool paragraph">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								</p>
+							</div>
+							<div class="btns">
+								<div class="btn-wrapper">
+									<a class="pdf-icon icon" href="#"> <span class="btn-icon-link">PDF</span> </a>
+								</div>
+								<div class="btn-wrapper">
+									<a class="share-icon icon" href="#"> <span class="btn-icon-link">Share</span> </a>
+								</div>
+								<div class="btn-wrapper">
+									<a class="save-icon icon" href="#"> <span class="btn-icon-link">Save</span> </a>
+								</div>
+							</div>
+						</div>	-->			
+						<div class="creative-button clearfix">
+							<div class="button">
+								<a style="background-image:url('../../media/brandsite/CTA_EN-create_an_account.png')" title="" href=""></a>
+							</div>
+							<div class="button">
+								<a style="background-image:url('../../media/brandsite/CTA_EN-keep_me_informed.png')" title="" href=""></a>
+							</div>
+							<div class="button">
+								<a style="background-image:url('../../media/brandsite/CTA_EN-build_your_own.png')" title="" href=""></a>
+							</div>
+						</div>
+					</div>
+	</div>
+
+	<!-- Global Footer START -->
+	<div id="footer">
+		<div id="nav-footer-wrapper">
+			<div id="footer-links">
+				<ul>
+					<li>
+						<a href="#" title=""> Contact Us</a>
+					</li>
+					<li>
+						<a href="#" title=""> Privacy</a>
+					</li>
+					<li>
+						<a href="#" title="">Terms &amp; Conditions</a>
+					</li>
+				</ul>
+				<p>
+					沪ICP备05031283号-2
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- Global Footer END --> 
+    <div class="anchor-bar row">
+        <div class="columns small-6" >
+            <div class="anchor-btn">
+	              <a class="connect" href="mailto:SERVIC20@lincoln.com">
+                      Contact us
+	              </a>
+	        </div>
+        </div>
+        <div class="columns small-6" >
+            <div class="anchor-btn">
+	              <a target="_blank" class="icon-btn " href="https://www.lincoln.com.cn/en/keep-me-informed">
+                      <span class="icon icon-email"></span>
+                      Keep Me Informed
+	              </a>
+	        </div>
+        </div>
+    </div>
+
+</body>
+</html>

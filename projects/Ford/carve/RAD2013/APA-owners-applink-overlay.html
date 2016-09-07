@@ -1,0 +1,116 @@
+<div class="applink-overlay">
+    <span class="loading"></span>
+	<div class="sidebar">
+		<div class="app-icon">
+			<img alt="" title="" src="">
+            <div class="title">
+                <h2></h2>
+            </div>
+			<p>Version <span class="versionname"></span></p>
+            <div class="store">
+
+            </div>
+            
+		</div>
+        <script id="store-icon-template" type="text/x-jquery-tmpl">
+            <!--<a class="store-icon ${type}" href="${url}" target="_blank"></a>-->
+            <a class="store-icon" href="${url}" target="_blank">
+                <img src="media/rad/app-store-icon.png" />
+            </a>
+        </script>
+		<div class="desc">
+			<h4>Description</h4>
+			<!--<p>
+				Spotify is now free on mobile and tablet. Listen to the right music, wherever you are.
+			</p>
+			<p>
+				With Spotify, you have access to a world of music.
+			</p>-->
+		</div>
+	</div>
+	<div class="section">
+		<div class="title">
+			<h2></h2>
+		</div>
+		<div class="article">
+			<div class="paragraph">
+				<h4>Starting &lt; <span class="appname"></span> &gt; Using Voice Commands</h4>
+				<ol>
+					<li>
+						Press the voice button on your audio system or steering wheel, and then say"&lt; <span class="appname"></span> &gt;" after the tone.
+					</li>
+					<li>
+						&lt; <span class="appname"></span> &gt;
+					</li>
+				</ol>
+				<p>
+					<span class="appspecific"></span>
+				</p>
+			</div>
+			<div class="paragraph">
+				<h4>Starting &lt; <span class="appname"></span> &gt; Using The Menu Controls</h4>
+				<ol>
+					<li>
+						Press the <strong>Menu</strong> button on your audio system.
+					</li>
+					<li>
+						Browse to <strong>SYNC Applications</strong> and then press OK to access the menu.
+					</li>
+					<li>
+						Scroll to Mobile Apps, press OK to confirm and access the <strong>Mobile Apps</strong> menu.
+					</li>
+					<li>
+						Scroll through the list of available applications and select &lt; <span class="appname"></span> &gt;. If &lt; <span class="appname"></span> &gt; is not listed, make sure it is running on the phone and the select: <strong>Find New Apps</strong> to discover it.
+					</li>
+				</ol>
+			</div>
+			<div class="paragraph ios-only">
+				<h4>iPhone users must also do the following:</h4>
+				<ol>
+					<li>
+						Make sure the phone is connected via the Apple-specific USB cable.
+					</li>
+					<li>
+						&lt; <span class="appname"></span> &gt; must be running on the phone.
+					</li>
+				</ol>
+			</div>
+		</div>
+
+		<div class="table">
+			<div class="element-wrap">
+				<div class="row">
+					<div class="columns small-1">
+					</div>
+					<div class="columns small-3">
+						Action
+					</div>
+					<div class="columns small-4">
+						Voice Commands
+					</div>
+					<div class="columns small-4">
+						Manual Commands
+					</div>
+				</div>                
+			</div>
+            <script id="voice-commands-item-template" type="text/x-jquery-tmpl">
+                <div class="row">
+				    <div class="columns small-1">
+					    ${index}
+				    </div>
+				    <div class="columns small-3">
+					    ${description}
+				    </div>
+				    <div class="columns small-4">
+					    <strong>${title}</strong>
+				    </div>
+				    <div class="columns small-4">
+					    ${type}
+				    </div>
+			    </div>
+            </script>
+
+		</div>
+
+	</div>
+</div>

@@ -1,0 +1,603 @@
+@charset "GBK";
+/* line 331, ../../../scss/foundation-components/foundation/components/_global.scss */
+meta.foundation-version {
+  font-family: "/5.2.3/";
+}
+
+/* line 335, ../../../scss/foundation-components/foundation/components/_global.scss */
+meta.foundation-mq-small {
+  font-family: "/only screen/";
+  width: 0em;
+}
+
+/* line 340, ../../../scss/foundation-components/foundation/components/_global.scss */
+meta.foundation-mq-medium {
+  font-family: "/only screen and (min-width:30.063em)/";
+  width: 30.063em;
+}
+
+/* line 345, ../../../scss/foundation-components/foundation/components/_global.scss */
+meta.foundation-mq-large {
+  font-family: "/only screen and (min-width:48em)/";
+  width: 48em;
+}
+
+/* line 350, ../../../scss/foundation-components/foundation/components/_global.scss */
+meta.foundation-mq-xlarge {
+  font-family: "/only screen and (min-width:62em)/";
+  width: 62em;
+}
+
+/* line 355, ../../../scss/foundation-components/foundation/components/_global.scss */
+meta.foundation-mq-xxlarge {
+  font-family: "/only screen and (min-width:75em)/";
+  width: 75em;
+}
+
+/* line 360, ../../../scss/foundation-components/foundation/components/_global.scss */
+meta.foundation-data-attribute-namespace {
+  font-family: false;
+}
+
+/* line 367, ../../../scss/foundation-components/foundation/components/_global.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 372, ../../../scss/foundation-components/foundation/components/_global.scss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 377, ../../../scss/foundation-components/foundation/components/_global.scss */
+html,
+body {
+  font-size: 14px;
+}
+
+/* line 380, ../../../scss/foundation-components/foundation/components/_global.scss */
+body {
+  background: white;
+  color: #1b394e;
+  padding: 0;
+  margin: 0;
+  font-family: "Antenna-Light", Arial, Helvetica, "Microsoft YaHei", "Î¢ÈíÑÅºÚ", "STXihei", "»ªÎÄÏ¸ºÚ", "SimSun", "ËÎÌå", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  position: relative;
+  cursor: default;
+}
+
+/* line 393, ../../../scss/foundation-components/foundation/components/_global.scss */
+a:hover {
+  cursor: pointer;
+}
+
+/* line 396, ../../../scss/foundation-components/foundation/components/_global.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 398, ../../../scss/foundation-components/foundation/components/_global.scss */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 404, ../../../scss/foundation-components/foundation/components/_global.scss */
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important;
+}
+
+/* line 409, ../../../scss/foundation-components/foundation/components/_global.scss */
+.left {
+  float: left !important;
+}
+
+/* line 410, ../../../scss/foundation-components/foundation/components/_global.scss */
+.right {
+  float: right !important;
+}
+
+/* line 183, ../../../scss/foundation-components/foundation/components/_global.scss */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+/* line 184, ../../../scss/foundation-components/foundation/components/_global.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 412, ../../../scss/foundation-components/foundation/components/_global.scss */
+.hide {
+  display: none;
+}
+
+/* line 418, ../../../scss/foundation-components/foundation/components/_global.scss */
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 421, ../../../scss/foundation-components/foundation/components/_global.scss */
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 431, ../../../scss/foundation-components/foundation/components/_global.scss */
+textarea {
+  height: auto;
+  min-height: 50px;
+}
+
+/* line 434, ../../../scss/foundation-components/foundation/components/_global.scss */
+select {
+  width: 100%;
+}
+
+/* line 11, ../../../scss/markets/cn/_cn-ie8.scss */
+.hotspots .header-text h1,
+.expandedfeatures .heading-text h1,
+.feature-detail .header-text h1,
+.gallery-trigger h1,
+.rotate-slider h1,
+.features-single .caption h1,
+.video-carousel .heading h1,
+.features article .heading h1,
+.reveal-slider .slider-intro h1,
+.colorizer h1,
+.you-might-also-like h1 {
+  font-size: 40px;
+}
+
+/* line 13, ../../../scss/markets/cn/_cn-ie8.scss */
+.image-carousel .carousel-fader .slides li .carousel-slide h1 {
+  font-size: 40px;
+}
+
+/* line 22, ../../../scss/markets/cn/_cn-ie8.scss */
+.hotspots .header-text,
+.expandedfeatures .heading-text,
+.feature-detail .header-text,
+.image-carousel .carousel-fader .slides li .carousel-slide,
+.performance-package .heading,
+.gallery-trigger h1,
+.feature-trigger .heading-text,
+.features article .heading h1 {
+  max-width: 90%;
+}
+
+/* line 29, ../../../scss/markets/cn/_cn-ie8.scss */
+.hotspots .header-text p,
+.expandedfeatures .heading-text p,
+.feature-detail .header-text p,
+.image-carousel .carousel-fader .slides li .carousel-slide .content,
+.performance-package .heading .title-content,
+.expandedfeatures .heading-text p {
+  max-width: 65%;
+}
+
+/* line 31, ../../../scss/markets/cn/_cn-ie8.scss */
+.top-space {
+  padding-top: 8em;
+}
+
+/* line 33, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .inner-popup {
+  top: 200px;
+}
+/* line 34, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container {
+  margin-top: 80px;
+}
+/* line 35, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .nameplate-holder {
+  padding-left: 80px;
+  background: white;
+}
+/* line 37, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .nameplate-holder .nameplate-content .change-model {
+  background: white;
+}
+/* line 38, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .nameplate-holder .nameplate-content .change-model .sort-area {
+  width: 80%;
+}
+/* line 39, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .nameplate-holder .nameplate-content .change-model .sort-area .sort-dropdown {
+  background: white;
+  font-size: 14px;
+  text-align: left;
+}
+/* line 40, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .nameplate-holder .nameplate-content .change-model .sort-area .sort-dropdown .dropdown-list {
+  background: white;
+  width: 100%;
+}
+/* line 41, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .nameplate-holder .nameplate-content .change-model .sort-area .sort-dropdown .dropdown-list a {
+  font-size: 14px;
+}
+/* line 43, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .nameplate-holder .nameplate-content .change-model .sort-area .sort-dropdown .dropdown-list li a {
+  padding: 10px 0;
+}
+/* line 46, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .nameplate-holder .nameplate-content .change-model .sort-area .sort-dropdown .context {
+  width: 80%;
+  text-align: left;
+  padding-top: 10px;
+}
+/* line 47, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .nameplate-holder .nameplate-content .change-model .sort-area .sort-dropdown .context a {
+  padding: 20px 0 0 0;
+}
+/* line 51, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .nameplate-holder .nameplate-content .change-model label {
+  font-size: 18px;
+}
+/* line 53, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .nameplate-holder .nameplate-content .model-title {
+  text-align: left;
+}
+/* line 54, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .nameplate-holder .nameplate-content .model-title h1 {
+  color: #616161;
+}
+/* line 56, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .nameplate-holder .nameplate-content .change-nameplate {
+  margin-top: 80px;
+  text-align: left;
+}
+/* line 57, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .nameplate-holder .nameplate-content .change-nameplate a {
+  background: white;
+}
+/* line 58, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .nameplate-holder .nameplate-content .change-nameplate .button {
+  border: 1px solid #2d96cd;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+  width: 145px;
+  height: 45px;
+  font-size: 15px;
+  padding-top: 10px;
+}
+/* line 62, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .model-image {
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+/* line 63, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .model-options {
+  background: white;
+}
+/* line 66, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .model-options ul li span.model-header {
+  font-size: 18px;
+}
+/* line 67, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-container .model-options ul li span.model-details {
+  font-size: 30px;
+}
+/* line 75, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-switch .tab-options .options {
+  min-height: 55px;
+}
+/* line 76, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-switch .tab-options .options .programs {
+  display: inline-block;
+  width: initial;
+}
+/* line 77, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-switch .tab-options .options .programs ul {
+  padding-top: 10px;
+}
+/* line 78, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-switch .tab-options .options .programs ul p {
+  color: #2d96cd;
+  font-size: 17px;
+  padding: 15px 30px 15px 30px;
+  -webkit-transition: -webkit-all 100ms ease-out;
+  -webkit-transition: all 100ms ease-out;
+  -moz-transition: all 100ms ease-out;
+  -ms-transition: all 100ms ease-out;
+  -o-transition: all 100ms ease-out;
+  transition: all 100ms ease-out;
+  display: inline-block;
+}
+/* line 79, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-switch .tab-options .options .programs ul p:hover, .gux-payment-presenter .tabs-wrap .tabs-switch .tab-options .options .programs ul p.active {
+  color: #1b394e;
+  display: inline-block;
+  border-bottom: 4px solid #1b394e;
+  cursor: pointer;
+}
+/* line 81, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-switch .tab-options .options .programs.active .icon {
+  display: none;
+}
+/* line 86, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-content {
+  padding-top: 15px;
+}
+/* line 89, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options .title {
+  padding: 0;
+}
+/* line 90, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options .title label, .gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options .title .error-msg, .gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options .title .icon-d-info {
+  font-size: 14px;
+}
+/* line 92, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options input {
+  font-size: 14px;
+  padding: 15px;
+  min-height: 0;
+}
+/* line 93, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options .left-column {
+  padding-left: 150px;
+  min-height: 100px;
+}
+/* line 94, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options .middle-column {
+  padding-left: 75px;
+  padding-right: 75px;
+  min-height: 100px;
+}
+/* line 95, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options .middle-column .percentage {
+  padding-left: 15px;
+}
+/* line 96, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options .middle-column .percentage > span {
+  font-size: 14px;
+  padding-left: 15px;
+}
+/* line 99, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options .right-column {
+  padding-right: 150px;
+  min-height: 100px;
+}
+/* line 100, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options .sort-area {
+  min-height: 60px;
+}
+/* line 101, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options .sort-area .sort-dropdown {
+  border: 1px solid #dbdbdb;
+  margin-left: 0;
+}
+/* line 102, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options .sort-area .sort-dropdown .text {
+  min-height: 60px;
+}
+/* line 103, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options .sort-area .sort-dropdown .text p {
+  font-size: 14px;
+  padding: 22px 0 8px 15px;
+}
+/* line 104, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options .sort-area .sort-dropdown .text span {
+  margin-top: 0;
+  height: 35px;
+}
+/* line 108, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .tabs-content .tab-content .financial-options .sort-area .sort-dropdown .dropdown-list li span {
+  font-size: 14px;
+  padding: 10px 15px;
+}
+/* line 119, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .pet-carousel .carousel-holder {
+  margin-left: 125px;
+  margin-right: 125px;
+}
+/* line 122, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .pet-carousel .carousel-holder ul li .item {
+  width: 340px;
+}
+/* line 124, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .pet-carousel .carousel-holder ul li .item .header span {
+  font-size: 20px;
+}
+/* line 126, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .pet-carousel .carousel-holder ul li .item .payment-terms, .gux-payment-presenter .tabs-wrap .pet-carousel .carousel-holder ul li .item .fix-rate {
+  min-width: 150px;
+}
+/* line 127, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .pet-carousel .carousel-holder ul li .item .payment-terms > span, .gux-payment-presenter .tabs-wrap .pet-carousel .carousel-holder ul li .item .fix-rate > span {
+  font-size: 14px;
+  padding: 0 0 0 15px;
+}
+/* line 128, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .pet-carousel .carousel-holder ul li .item .payment-terms > span.price, .gux-payment-presenter .tabs-wrap .pet-carousel .carousel-holder ul li .item .fix-rate > span.price {
+  font-size: 32px;
+  padding: 0 0 0 15px;
+}
+/* line 129, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .pet-carousel .carousel-holder ul li .item .payment-terms > span.price sup, .gux-payment-presenter .tabs-wrap .pet-carousel .carousel-holder ul li .item .fix-rate > span.price sup {
+  font-size: 10px;
+}
+/* line 133, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .pet-carousel .carousel-holder ul li .item .ewpackage {
+  font-size: 14px;
+}
+/* line 138, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .pet-carousel .flex-control-nav {
+  bottom: 10px;
+}
+/* line 139, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .pet-carousel .flex-viewport {
+  padding-bottom: 50px;
+}
+/* line 142, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .tabs-wrap .pet-carousel .flex-control-paging li a {
+  width: 18px;
+  height: 18px;
+}
+/* line 149, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .credits-accordion .tab-item .tab-nav {
+  font-size: 23px;
+  padding: 25px 6.597%;
+}
+/* line 151, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .credits-accordion .tab-item .tab-contents .content-holder {
+  padding: 0 50px;
+}
+/* line 153, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .credits-accordion .tab-item .tab-contents .content-holder .payment-details .price-holder {
+  font-size: 17px;
+}
+/* line 154, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .credits-accordion .tab-item .tab-contents .content-holder .payment-details .amount-holder {
+  font-size: 17px;
+}
+/* line 155, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .credits-accordion .tab-item .tab-contents .content-holder .payment-details ul {
+  margin-bottom: 20px;
+}
+/* line 156, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .credits-accordion .tab-item .tab-contents .content-holder .payment-details ul li {
+  padding: 20px 15px 0 40px;
+  font-size: 17px;
+}
+/* line 164, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-compare {
+  padding: 60px 15px 10px 15px;
+}
+/* line 165, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-compare .container {
+  padding: 10px;
+}
+/* line 166, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-compare .container .img {
+  min-height: 130px;
+  height: auto;
+  width: auto;
+}
+/* line 167, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-compare .container .head {
+  font-size: 19px;
+  padding: 10px;
+}
+/* line 170, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-compare .container .head > div > :first-child span:first-child {
+  font-size: 12px;
+}
+/* line 173, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-compare .container .head .configure {
+  font-size: 16px;
+}
+/* line 174, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-compare .container .head .add {
+  font-size: 23px;
+}
+/* line 176, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-compare .container .package {
+  font-size: 18px;
+  margin: 10px 30px;
+  min-height: 80px;
+  padding: 5px 5px 5px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 177, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-compare .container .package a {
+  font-size: 34px;
+}
+/* line 179, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-compare .container .content {
+  font-size: 13px;
+  min-height: 404px;
+  padding: 0 0 10px 35px;
+}
+/* line 180, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-compare .container .content .node {
+  padding: 10px 5px;
+}
+/* line 181, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-compare .container .content .node span {
+  line-height: 38px;
+  font-size: 22px;
+  margin: 0;
+}
+/* line 184, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-compare .container .remove-button {
+  padding: 0 0 0 60px;
+}
+/* line 185, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .model-compare .container .remove-button a {
+  font-size: 15px;
+}
+/* line 189, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .preserve-container {
+  padding: 0  15%;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  margin-left: 0;
+}
+/* line 190, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .preserve-container .action-holder {
+  text-align: center;
+}
+/* line 191, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .preserve-container .action-holder li {
+  display: inline-block;
+  border-right: 1px solid #dbdbdb;
+  padding: 0 100px;
+  margin: 20px 0;
+}
+/* line 192, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .preserve-container .action-holder li .font-icon {
+  height: auto;
+}
+/* line 193, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .preserve-container .action-holder li .font-icon [class^="icon-"] {
+  margin: 0 auto;
+  font-size: 4.28571rem!important;
+  width: 55px;
+  height: 58px;
+  padding: 5px;
+}
+/* line 50, ../../../scss/common/_mixins.scss */
+.gux-payment-presenter .preserve-container .action-holder li .font-icon [class^="icon-"]:before {
+  margin-left: -3px;
+}
+/* line 195, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .preserve-container .action-holder li:first-child {
+  border-bottom: none;
+  border-left: 1px solid #dbdbdb;
+}
+/* line 196, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .preserve-container .action-holder li h3 {
+  vertical-align: middle;
+  font-size: 16px;
+}
+/* line 201, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .ui-slider .ui-slider-handle {
+  width: 1.1em;
+  height: 1.1em;
+}
+/* line 205, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 200%;
+}
+/* line 209, ../../../scss/markets/cn/_cn-ie8.scss */
+.gux-payment-presenter .ui-slider-horizontal .ui-slider-handle {
+  top: -.5em;
+}

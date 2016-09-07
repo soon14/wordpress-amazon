@@ -1,0 +1,35 @@
+{
+  "derivative" : {
+    "model" : "FOCUS",
+    "year" : "2009",
+    "derivative" : "Focus XR5 Turbo hatch",
+    "configuration" : "A/T 5 Puertas",
+    "id" : 1178864888916,
+    "imageUrl" : "/servlet/Satellite?blobtable=DFYImage&blobcol=urlpicture&blobheadervalue1=max-age%253D1000&ssbinary=true&blobheadername1=Cache-Control&blobwhere=1137384217590&blobkey=id",
+    "price" : 190000.0,
+    "terms" : [ {
+      "term" : 12,
+      "downpayment" : 40000.0,
+      "downpayment_percent" : 15.0,
+      "standard" : {
+        "ppm" : 11000.0,
+        "rate" : 10.0,
+        "cat" : 11.0
+      },
+      "subvented" : {
+        "ppm" : 10800.0,
+        "rate" : 9.8,
+        "cat" : 10.8
+      }
+    }, {
+      "term" : 24,
+      "downpayment" : 40000.0,
+      "downpayment_percent" : 15.0,
+      "standard" : {
+        "ppm" : 10000.0,
+        "rate" : 9.55,
+        "cat" : 10.55
+      }
+    } ]
+  }
+}

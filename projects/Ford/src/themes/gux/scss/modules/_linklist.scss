@@ -1,0 +1,139 @@
+.link-list{padding:40px 6.597% 24px;
+	> div {
+		> div{}
+	}
+	.list-title{
+		h1{font-size:rem-calc(26); padding-bottom:10px; color:$text-gray;}
+		p{color:$text-gray;}
+	}
+
+	#faq{padding-bottom:40px;
+		.typeahead{margin-bottom:0; border:none; box-shadow:none; padding:14px 10px; font-size:rem-calc(14); height:100%; 
+			&::-ms-clear {display: none; width:0; height:0;}
+		}
+		.tt-dropdown-menu{position:relative; background-color:#FFF; width:100%; border:1px $border-gray solid; width:100%; margin-top:-1px; border-top:none;
+			> div { padding:0 10px;
+				.tt-suggest-topic{padding:20px 0; width:100%;
+					a{font-size:rem-calc(14);}
+				}
+			}
+			.tt-dataset-value{height:100%; padding:0;
+				.tt-suggestions{
+					.tt-suggestion{
+						&:nth-of-type(odd){background-color:$gray-back;}
+						padding:0 10px;
+						.tt-cursor{background-color:$gray-back;}
+					}
+				}
+			}
+		}
+		&.dealer-unaware {
+			.error{border-top:none; display:block;}
+		}
+
+	}
+
+
+	.list-content{
+		ul{ margin:0;
+			li{list-style-type:none;  margin-bottom:20px;
+				.content-holder{
+					h2{font-size:rem-calc(14); font-family:$font-family-RE;}
+					p{font-family:$font-family-light; padding-right:6.597%;}
+					.image-holder{width:100%;
+						img{width:100%; height:auto;}
+					}
+				}
+			}
+		}
+		
+	    >.button{display: block; width: 64%; margin: 20px auto; padding:14px 28px;}
+	    .back-btn{padding:20px; display:inline-block; padding-left:0; margin-left:-4px;
+			[class^="icon-"]{font-size:rem-calc(22); vertical-align:middle;}
+			.back-link{vertical-align:middle; margin-left:-8px;}
+	    }
+	}
+	.filter-count{ padding-bottom:18px; 
+		.count{font-size:rem-calc(22); color:$text-gray;
+			.query{font-family:$font-family-bold; }
+		}
+	}
+
+	.twitter-typeahead{
+	    width:100%;
+	}
+
+	@media #{$large-up} {padding: 74px 6.597% 44px;
+		#faq{
+			.typeahead{padding:14px 10px; height:100%;}
+		}
+		.list-content{ padding-top:20px;
+			ul{
+				li{padding-bottom:28px;
+					.content-holder{display:inline-block; width:69%;}
+					.image-holder{display:inline-block; width:29%; text-align:right; margin:-20px; max-height:118px;
+						img{width:auto;}
+					}
+				}	
+			}
+			>.button{display:inline-block; width:100%; max-width:270px; margin: 0 auto; padding:auto;}
+			.back-btn{display:block; margin-top:30px; margin-left:-6px;
+				[class^="icon-"]{font-size:rem-calc(24);}
+				.back-link{font-size:rem-calc(18);}
+		    }
+		}
+		.filter-count{padding-bottom:18px; padding-top:30px;}
+	}
+}
+
+.dropdown-topics{margin:0 6.597% 54px;
+	#topic-dropdowns{margin-left:-6.597%; margin-right:-6.597%;}
+	h1{padding:0 6.597%; font-size:rem-calc(16); padding-bottom:20px;}
+	.dropdown{border-left:0; border-right:0;}
+	.group{margin-bottom:30px;}
+	.button{display:block; margin:0 6.597%; padding:10px; margin-bottom:44px;}
+	@media #{$large-up} {margin:0 6.597% 54px;
+
+		#topic-dropdowns{margin-left:0; margin-right:0;}
+		h1{padding-left:0; font-size:rem-calc(26);}
+		.dropdown{border-left:1px solid $border-gray; border-right:1px solid $border-gray;}
+		form{width:100%; min-width:370px; max-width:600px;}	
+		.button{display:inline-block; margin:0 6.597%; padding:10px; margin:0; width:40%;}
+	}
+
+	.uniform {
+		.dropdown {
+			span{font-size:rem-calc(14);
+				&[disabled]{color:$border-gray;}
+			}
+		}
+	}
+}
+
+.top-list{border-top:1px solid $border-gray;
+	h1{padding-top:30px; font-size:rem-calc(16); color:$text-gray; padding-left:6.597%;}
+	ul{list-style:none; margin-left:0;
+		li{padding:10px 6.597%;
+			&:nth-of-type(odd){background-color:$gray-back;}
+		}
+	}
+	@media #{$large-up}{margin:40px 6.597%;
+		h1{padding-left:0; font-size:rem-calc(26); padding-bottom:20px;}
+		ul{ max-width:600px;
+			li{padding-left:30px;}
+		}
+	}
+}
+
+//Article Content Part of FAQs
+.article-content{padding:20px 6.597% 30px;
+	h1{padding-top:14px;}
+	.back-btn{
+		.back-link{vertical-align:middle; margin-left:-6px;}
+		.icon-chevron-thin-left{font-size:20px; vertical-align:middle; margin-left:-4px;}
+	}
+	@media #{$large-up}{width:70%;
+		h1{font-size:rem-calc(28);}
+		.back-btn{padding:20px 0;}
+	}
+}

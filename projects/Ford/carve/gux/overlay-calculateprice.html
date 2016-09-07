@@ -1,0 +1,44 @@
+<div class="calc-price-overlay">
+	<div class="header">
+		<h1><span class="icon"></span>Want to see the price?</h1>
+	</div>
+	<div class="body">
+		<p>
+			To provide you with an estimated drive away price, we'll need your postcode and intended usage.
+		</p>
+	
+		<form id="calc-price-user" class="calc-price-user" action="#">
+			<p class="error" style="display: none;"></p>
+			<p id="standard-error" style="display: none;">Please enter your postcode and select usage.</p>
+			<p class="loading" style="display: none;">Please wait...</p>
+			<div class="group">
+				<label class="lead" for="postcode">Enter Your Postcode</label>
+				<input class="pc-input" type="tel" id="postcode" name="postcode" placeholder="Please enter a valid postcode, e.g. 3000" />
+			</div>
+			<div class="group">
+				<label class="lead">Usage Type</label>
+				<div class="combo">
+					<input class="usage first replace-radio-btn" type="radio" id="usage-personal" name="usage" value="p" checked />
+					<label class="token first" for="usage-personal" title="Personal">
+						<a class="button">Personal</a>
+					</label>
+					<input class="usage replace-radio-btn" type="radio" id="usage-commercial" name="usage" value="b" />
+					<label class="token" for="usage-commercial" title="Commercial">
+						<a class="button">Commercial</a>
+					</label>
+				</div>
+			</div>
+			<div class="group final">
+				<button class="submit button" type="submit">Submit</button>
+				<a class="close-overlay" href="#">Cancel</a>
+			</div>
+		</form>
+
+	</div>
+
+	<div class="footer">
+		<p class="disc">
+			Placeholder footer text.
+		</p>
+	</div>
+</div>

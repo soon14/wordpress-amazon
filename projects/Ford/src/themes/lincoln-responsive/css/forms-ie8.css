@@ -1,0 +1,330 @@
+/****************************global setting****************************/
+
+
+/*edit profile css*/
+form input[type="submit"], form input[type="reset"]{background: url("../../lincoln-common/img/button.png") no-repeat right bottom;color: #FFFFFF;font-family:"Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif;font-size: 1.7em;width: auto;box-shadow: none;cursor: pointer;line-height:18px;}
+form input[type="submit"]:hover{border-bottom:2px solid #B45F1A;}
+body form .submit-col{text-align: center;}
+form input[readonly="readonly"]{border: none;box-shadow: none;background: none;background-color: transparent;text-align: left;}
+form input[readonly="readonly"]:focus{border: none !important;box-shadow: none;background: none;background-color: transparent;}
+.row.usertitle h2{text-align: center;color: #999999;font-size: 1.3em;font-weight: normal;padding: 0 0 50px;}
+.row DIV.row.usertitle{background: none;}
+.row .row.vehicletips h4{text-align: left;border-bottom: none;padding-bottom: 0px;font-size: 1em;}
+.content form .row.vehicletips p{font-size: 0.75em;}
+.content form .row.vehicletips img{padding: 10px 0 20px;}
+.preferences .row h5{width: auto;float: left;text-align: center;font-size: 0.875em;padding-left: 3.3%;padding-right: 3.3%;}
+.preferences .row input[type="checkbox"], .preferences .row .checkbox-image{margin: 0;float: none;margin-left: auto;margin-right: auto;}
+.preferences th, .preferences table{text-align: center;font-weight: normal;}
+.preferences td{text-align: left;vertical-align: top;padding: 0;}
+.preferences th{padding-bottom: 23px;padding-top: 15px;}
+.preferences td h2{font-size: 0.875em;margin-top: 0;margin-bottom: 0;}
+.preferences th{width: 14%;font-size: 0.875em;}
+.ie8 a.smallbtn, .ie9 a.smallbtn, a.smallbtn{float: left;}
+a.smallbtn, a.cancel-btn{float: left !important;}
+.user-vehicle .icon-remove, a.cancel-btn{font-size: 0.75em;color: #000;text-decoration: underline;margin: 7px 0 20px 0;padding: 6px 34px;text-transform: uppercase;}
+
+.userdetail .state-edit, .user-vehicle .state-edit{display: none;}
+.userdetail .state-readonly h5, .user-vehicle .state-readonly h5{font-size: 0.79em;margin-bottom: 30px;}
+.userdetail .state-readonly fieldset{margin-bottom: 20px;}
+.user-vehicle .icon-remove{background: none;width: auto;height: auto;padding: 0;color: #c50000;text-transform: none;font-size: 0.79em;}
+.preferences table{margin-bottom: 30px;}
+
+h5.savedtext{font-size: 0.79em;color: #279500;margin: 7px 0 20px 0;padding: 6px 34px;float: left;}
+.user-vehicle h5.savedtext{margin: 7px 0 0px 0;}
+.desktop .user-vehicle .vehicletips label{text-align: center;}
+
+.tablet.forms .user-vehicle .row.addvehicle, .desktop.forms .user-vehicle .row.addvehicle{padding-left: 55% !important;}
+.smobile.forms .user-vehicle .row.addvehicle{padding-left: 0px !important;}
+#deleteoverlay{display: block;position: fixed;width: 100%;height: 100%;top: 0;left: 0;right: 0;bottom: 0;background: url("../img/editovrlay.png");z-index: 999;}
+#deleteoverlay #bg{display: block;position: fixed;width: 39%;background: url("../img/editoverlaybg.png");margin-left: 30.5%;margin-right: 30.5%;top: 30%;padding: 8px;}
+.tablet #deleteoverlay #bg{width: 50%;margin-left: 25%;margin-right: 25%;}
+.smobile #deleteoverlay #bg{width: 80%;margin-left: 10%;margin-right: 10%;}
+#deleteoverlay #bg #content{background-color: #FFF;padding: 40px;text-align: center;}
+#deleteoverlay #bg #content img{margin-left: auto;margin-right: auto;margin-bottom: 30px;margin-top: 20px;display: block;clear: both;}
+#deleteoverlay #bg #content h3{color: #29629e;font-size: 0.85em;font-weight: normal;}
+#deleteoverlay #bg #content #btns{display: inline-block;}
+a.smallbtn.delete{background-color: #d84a38;margin-left: 30px;}
+a:hover.smallbtn.delete{background-color: #b53c2d;}
+.smobile a.smallbtn.delete{margin-left: 0;clear: both;}
+#deleteoverlay{display: none;}
+.ie8 a.next-btn, .ie8 a.smallbtn, .ie8 input.smallbtn{background-color: #48acdf;border-radius: 3px;color: #fff;float: right;font-size: 0.75em;margin: 7px 0 20px 0;padding: 6px 34px;text-transform: uppercase;}
+
+
+
+/*end edit profile css*/
+/*Form Builder Forms*/
+#badge .logo-wide{background-image: url("../img/formtoplogo.jpeg");}
+a:active{background-color: transparent;}
+
+.rtl.forms #badge{float: right;}
+.rtl .top-close{float: left;}
+
+.content-banner.large, .content-banner.large .content-banner-wrap{clear: both;display: block;height: 100%;padding: 0;text-align: center;}
+.smobile .content-banner.large, .smobile .content-banner.large .content-banner-wrap{}
+.smobile .content-banner.large{margin-top: -45px;}
+
+form fieldset{border: none;margin: 0;}
+fieldset legend{background: transparent;text-align: center;width: 100%;border-bottom: 1px solid #cdcccc;color: #333;padding-bottom: 8px;margin: 0 0 9px;padding: 0 0 8px;font-weight: bold;padding-top: 16px;}
+.content .row .columns p.title{padding: 5px 0 6px;}
+.content .row .columns p.label, p.label{line-height: 24px;margin-bottom: 4px;text-align: left;width: 100%;}
+input[type="checkbox"] + label{color: #000000;float: left;font-family: "ProximaNova-Reg-Roman",Arial,SimSun,宋体,STSong,"华文宋体",sans-serif;font-size: 1.2em;padding-top: 1px;}
+	.rtl input[type="checkbox"] + label{float: right;}
+.smobile input[type="checkbox"] + label{width: 82%;}
+form input[type="checkbox"]{width: 20px;margin: 0;display: none;}
+form select, .validate.fbform select{color: #2D2D2D;height:38px;font-size: 1.6em;margin: 0 0 1.2em;padding: 8px 0.8em 9px 0.6em;width: 100%;background: transparent;appearance: none;-moz-appearance: none;-webkit-appearance: none;text-indent: 0.01px;text-overflow: "";}
+input[type="checkbox"] + label a{color: #000;text-decoration: underline;}
+.styled-select{width: 100%;overflow: hidden;background: url(../img/sprite-forms.png) no-repeat 95% 13px;height: 36px;border: 1px solid #cdcccc;border-radius: 4px;margin-bottom: 3px;box-shadow: inset 0px 0px 5px 1px #eaeaea;}
+.ie9 .styled-select{background: none;}
+.rtl .styled-select{background-position: -90px 13px;}
+.styled-select.focus.nofocus{border: 1px solid #cdcccc;}
+.ie9 fieldset select:focus{outline: none !important;}
+form input[type="text"], form input[type="password"], form input[type="email"], form input[type="number"], .validate input[type="tel"], form input[type="tel"], form input{font-size: 1.6em;margin: 0 0 3px;padding: 9px 2.8em 9px .8em;width: 100%;border: 1px solid #CDCCCC;}
+.validate input[type="text"], .validate input[type="password"], .validate input[type="email"], .validate input[type="number"], .validate input[type="tel"]{width: 100%;}
+form .radio div{float: left;margin-bottom: 8px;}
+form input[type="radio"]{background: transparent none !important;box-shadow: none;cursor: pointer;margin: 0 0 20px;width: auto;height: auto;float: left;}
+.ie9 form input[type="radio"], .ie8 form input[type="radio"], form input[type="radio"]:focus{border: 0 !important;}
+form input[type="radio"] + label{width: auto;float: left;padding-right: 20px;margin: 0 0 14px 6px;color: #000000;font-size: 0.750em;}
+.content a.input-btn.btn{font-size: 0.875em;line-height: 36px;margin-top: 12px;}
+.content input.login-btn.btn{margin: 0 auto 13px;}
+
+.ie8 .content .row.radio{margin-bottom: 20px;}
+
+.nameplate .featurebtn {padding-bottom: 1px;}
+.nameplate .featurebtn:hover {border-bottom: 2px solid #B45F1A;}
+
+a.next-btn, a.smallbtn, input.smallbtn{background-color: #42a9df;border-radius: 3px;color: #fff;float: right;font-size: 0.75em;margin: 7px 0 20px 0;padding: 6px 34px;text-transform: uppercase;}
+a:hover.next-btn, a:hover.smallbtn, input:hover.smallbtn{background-color: #3594c5;color: #fff;}
+.hidden{position: absolute;top: -999px;left: -999px;}
+.rtl .hidden{left: 0;right: -999px;}
+
+.content .btn a{color: #fff}
+.buttons{clear: both;}
+
+/* error styling */
+.error-box span{transition: all 1s;}
+.error-box{border-radius: 3px 3px 3px 3px;margin: 0;overflow: hidden;vertical-align: middle;visibility: hidden;opacity: 0;top: -999em;line-height: 1em;width: 100%;text-align: right;}
+.error-box span, #captchaerror span, #captchasystemerror span{display: block;transform: translate(-100%, 1);color: #e11;font-size: 1.2em;min-height: 12px;text-align: left;padding: 5px 0;}
+	.rtl .error-box span, .rtl #captchaerror span, .rtl #captchasystemerror span{text-align: right;}
+fieldset input, fieldset select{-moz-transition: background-color 1s ease;-webkit-transition: background-color 1s ease;-o-transition: background-color 1s ease;transition: background-color 1s ease;}
+fieldset select{background-position: 92% 10px;cursor: pointer;}
+input[type=text].user-success, input[type=email].user-success, input[type=tel].user-success{background-position: right -168px !important;border: 1px solid #cdcccc !important;}
+input[type=text].user-error, input[type=email].user-error, input[type=tel].user-error, input[type=password].user-error{background-position: right -111px !important;outline: none;}
+input.user-error[type=radio]{background: transparent none !important;}
+select.user-error{background-position: 88% -111px !important;outline: none;}
+.smobile select.user-error{background-position: 91% -111px !important;outline: none;}
+.tablet select.user-error{background-position: 92% -111px !important;outline: none;}
+input.user-success{background-position: right -168px !important;border: 1px solid #57ba5f;}
+select.user-success{background-position: 88% -168px !important;/*border:1px solid #57ba5f;*/}
+.smobile select.user-success{background-position: 91% -168px !important;outline: none;}
+.tablet select.user-success{background-position: 92% -168px !important;outline: none;}
+.styled-select.ws-success{border: 1px solid #57ba5f !important;}
+input[type=text].user-error, input[type=email].user-error, input[type=tel].user-error, .styled-select.ws-invalid{border-color: #e46868;}
+input[type=text].user-error, input[type=email].user-error, input[type=tel].user-error, input[type=password].user-error, .styled-select.ws-invalid{border-color: #e46868 !important;}
+
+.user-error + .error-box, .ws-invalid ~ .error-box{visibility: visible;opacity: 1;transform: translate(0, 0);display: inline;top: 0;}
+.user-error + .error-box, .styled-select.ws-invalid + .error-box, .radio.row .ws-invalid + .error-box, .radio.ws-invalid + .error-box, .checkbox.ws-invalid .error-box{visibility: visible;opacity: 1;transform: translate(0, 0);top: 0;}
+.checkbox.ws-invalid .error-box{float: left;margin-left: 30px;width: 100%;top: 0px;text-align: left;}
+.ws-invalid #password1 + .error-box{margin-bottom: 18px;}
+.content form .row .columns p.hint{display: inline-block;font-size: 0.625em;position: relative;top: -24px;}
+.content form .row .columns p.hint a{color: #000;text-decoration: underline;}
+.content form .row .columns p.hint-content{display: none;}
+
+input[name=birth_date_m] + span.error-box {width: 68%;}
+
+/* sign up benefits - right col */
+.signup-benefits{margin-top: 10px;}
+.signup-benefits li{background: url(../img/sprite_reg-form-icons.png) 0 0 no-repeat;min-height: 72px;padding-left: 62px;}
+.signup-benefits li.control{background-position: 0 -150px;}
+.signup-benefits li.make-mark{background-position: 0 -300px;}
+.signup-benefits li.stay-know{background-position: 0 -450px;}
+.signup-benefits h4{border-bottom: 0;font-size: 1em;margin: 0 0 2px;padding: 0;text-align: left;}
+a.form-link{color: #40a8df;font-size: 0.75em;position: relative;top: -20px;}
+.forms .content .row .columns .columns:first-child, .desktop.forms .content .row .columns .columns{padding-top: 0;margin-top: 0;border-top: none;}
+
+/* Styles for screens that are in between 320px and 762px wide - min-width: 500px */
+.smobile select.user-error{background-position: 92% -111px !important;}
+.smobile select.user-success{background-position: 92% -168px !important;}
+
+/* Styles for screens that are at least 768px */
+#badge > span.logo-wide{display: block;height: 32px;width: 164px;font-size: 0;line-height: 0;background-repeat: no-repeat;}
+.large-6{position: relative;width: 100%;}
+.headings h2.large{font-size: 2.85em;padding: 36px 0 10px;margin: 0;color: #333;}
+.headings h3.large{font-size: 1.313em;padding: 0 50px 37px 50px;margin: 0;color: #999;}
+.action-btns{display: block;}
+
+/* Styles for screens that are at least 977px (960px + 17px to cater for FF/IE adding the scrolbar to the pixel count) */
+
+.large-6{position: relative;width: 50%;}
+.signup-benefits{margin-top: 3px;}
+a.next-btn, a.smallbtn, input.smallbtn{margin-bottom: 0;}
+
+
+/*IE8 Overrides*/
+/* sytle for KMI form */
+
+body.forms, .forms .content, .forms .content-banner{background-color: #fff;}
+body.forms form select {font-size: 1.2em; color: #2D2D2D;}
+body.forms form input[type="text"],
+body.forms form input[type="password"],
+body.forms form input[type="email"],
+body.forms form input[type="number"],
+body.forms form input[type="tel"],
+body.forms form input[type="tel"],
+body.forms form input{height: 35px; font-size: 1.2em; padding: 9px 2.8em 6px 0.8em;}
+	body.rtl.forms form input[type="text"],
+	body.rtl.forms form input[type="password"],
+	body.rtl.forms form input[type="email"],
+	body.rtl.forms form input[type="number"],
+	body.rtl.forms form input[type="tel"],
+	body.rtl.forms form input[type="tel"],
+	body.rtl.forms form input{padding: 9px 0.8em 6px 2.8em;}
+body.forms .valification-code{padding: 0;}
+body.forms .valification-code SPAN, body.forms .row P{line-height: 16px;}
+body.forms form .submit-col input[type="submit"]{font-size: 1.7em;margin-top: 15px;}
+
+.column, .columns{padding:0 5px;}
+.forms #footer-wrapper, .forms #badge{display: none;}
+.forms .columns > .row > p{padding-left: 5px;}
+	.rtl.forms .columns > .row > p{padding-right: 5px; padding-left: 0;}
+.forms .columns > .row > p.label{margin-top: 16px;}
+.forms .section{margin: 0px 5px;background: #fff;border-top: 1px solid #A9A9A9;border-bottom: 1px solid #A9A9A9;}
+.heading-description > .title{font-size: 1.8em;font-family:"Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif;}
+.top-close span{text-indent: -999em;}
+.column.large-centered, .columns.large-centered{float: none;margin-left: auto;margin-right: auto;position: relative;}
+.lcnforms { margin: 0 auto;padding: 16px 60px 0;}
+.lcnforms .large-one-col {width: 310px;}
+.lcnforms .error-info p {text-align: left; padding-left: 47px;}
+	.rtl .lcnforms .error-info p {padding-right: 47px; padding-left: 0; text-align: right;}
+.checkbox.ws-invalid .error-box{margin-left: 0;}
+.lcnforms .error-box span {line-height: 14px;margin-left: 12px;}
+	.rtl .lcnforms .error-box span {margin-right: 12px; margin-left: 0;}
+
+/*override foundation style to make large-10 to large-11. due to reused template, 'large-10' can not be changed to 'large-11 in carve'*/
+.forms .large-10{width: 91.6667%;}
+.forms .preferences .row.radio{padding-top: 10px;}
+.forms .preferences .row.radio{margin-top: 10px !important;}
+.forms .user-vehicle .state-edit > DIV.row, .forms .user-vehicle .state-readonly > DIV.row, .forms .user-vehicle .flexfield.grey.row{margin-bottom: 60px !important;}
+.forms .user-vehicle .icon-add{background: none;background-color: #48acdf;border-radius: 3px;color: #fff;float: left;font-size: 1.2em;margin: 7px 0 20px 0;padding: 6px 34px;text-transform: uppercase;height: 24px;line-height: 14px;font-weight: normal;}
+body.forms, .forms #position{min-width: 0;}
+body.thankyou div{text-align: center;}
+.forms #body{background: #FFFFFF;}
+.forms #page{width: 100%;}
+.forms #captchareload{color: #845F1A;font-size: 1.2em;}
+.forms #header{height: 100%;width: 100%;margin-bottom: 0;padding:0;}
+.actions{height: 52px;clear: both;}
+.checkbox{height: 20px;}
+.checkbox .description{color: #9C9C9C;font-size: 1.1em;}
+.checkbox-image, .radio-image{cursor: pointer;}
+.checkbox-image{float: left;background: url("../../lincoln-common/img/tools_sprite.png") no-repeat -47px -69px;width: 15px;height: 15px;margin-right: 5px;}
+.checkbox.checked .checkbox-image{background-position: -4px -69px;}
+.forms #content, .thankyou .block{padding: 0 5px;}
+form label,
+form .columns .row > div > p.label,
+form .columns .row:first-child P.label{color: #000000;display: block;font-size: 1.6em;cursor: pointer;font-family:"Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif;margin-bottom: 7px;line-height: 15px;}
+form .columns .row > div > p.label,
+form .columns .row:first-child P.label{padding: 0;}
+.forms .content-banner img{height: auto;border: 0;padding: 5px;}
+.forms .headings{line-height: 1.5em;background: #fff;padding: 9px 0 15px;}
+.forms .headings .title{color: #000000;}
+.forms .headings p{padding-top: 10px;padding-bottom: 0;}
+.forms .headings P:first-child{padding-top: 0;}
+.forms .section .form-bg, .forms .content-banner .description{padding: 17px 15px;}
+form .row .labelfield{margin-top: 20px;}
+form .row .ast, .headings .ast{color: #EE1111;font-size: 16px;line-height: 0;}
+form .valification-code p{color: #A9A9A9;}
+form .valification-code img{padding: 10px 5px 5px 0;border: 0;}
+form .valification-description{font-size: 0.75em;display: block;margin-top: 5px;}
+.thankyou H3, .thankyou P, .thankyou SPAN{font-size: 1.6em; color: #4F4C43; font-family: "Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif;}
+.thankyou H3{font-size: 2em;}
+.thankyou .arrow-btn SPAN{color: #FFFFFF;}
+.thankyou .arrow-btn.close span{padding-right: 20px; background: none repeat scroll 0 0 #4F4C43;}
+.forms.thankyou .section{border: none;padding: 15px 15px 0 15px;}
+.thankyou .block .section:last-child{padding: 0 15px 15px 15px;}
+.thankyou .row{text-align: center;}
+.thankyou .row p{padding: 20px 0;}
+.thankyou .content > .section:first-child > .row:first-child{margin: 30px 0;}
+.thankyou .section .logo img{width: 68px;height: 100px;border: none;display: block;margin: 0 auto;}
+.thankyou .img-btns .row{padding: 10px 0;}
+.thankyou .section .logo{height: auto;}
+.dealer .content > .row .large-centered{text-align: center;padding: 10px 0;background: #FFF;}
+.dealer .action-btns{background: #FFF;padding: 20px 15px 0 15px;line-height: normal;}
+.action-btns{display: none;}
+.action-btns{padding: 0 15px 15px 15px;}
+.action-btns .actions{float: left;clear: none;padding-right: 30px;}
+body.forms, .forms .content{background-color: #656261;}
+form.fbform{margin: 0;overflow: hidden;}
+.forms #captcha{margin-top:10px;}
+.forms #header{min-height: 40px;}
+.forms #badge{float: left;margin: 10px 0 0 0;padding: 0;border-bottom: 0;height: 34px;}
+#badge > span.logo-wide{display: none;}
+#badge > span.logo-mobile{display: block;width: 140px;height: 27px;font-size: 0;line-height: 0;background-repeat: no-repeat;}
+.forms .content{background: #FFFFFF;padding: 0;}
+.forms .large-6{position: relative;}
+.lcnforms > .row > .large-6 {padding: 0 50px;}
+.forms.content-page > .content{padding-bottom: 0;}
+.forms .headings .heading-description{padding: 0 15px;}
+.headings h2.centred, .headings h3.centred{text-align: center;}
+.headings h2.large{font-size: 1.875em;padding: 36px 0 10px;margin: 0;color: #333;}
+.headings h3.large{font-size: 0.9em;padding: 0 50px 35px 50px;margin: 0;color: #999;}
+.forms h4{background: transparent;text-align: center;width: 96%;border-bottom: 1px solid #cdcccc;color: #333;padding-bottom: 8px;margin: 0 0 9px;padding: 0 0 8px;font-weight: normal;}
+.forms .section:last-child{padding-bottom: 40px;}
+.arrow-down{position: relative;text-align: center;top: 16px;}
+.arrow-down p{color: #94a5a9;font-size: 0.75em;text-transform: uppercase;margin-bottom: 3px;text-align: center;}
+.arrow-down span{width: 0;height: 0;display: block;margin: 0 auto;}
+.arrow-down span.blue{border-left: 6px solid transparent;border-right: 6px solid transparent;border-top: 6px solid #3299CC;position: relative;top: 6px;z-index: 2;}
+.arrow-down span.white{border-left: 16px solid transparent;border-right: 16px solid transparent;border-top: 16px solid #FFFFFF;position: relative;z-index: 1;}
+.forms .content .row, .forms .content .row .columns, .forms .content .row .columns .row{background: none;}
+.forms .content .row{background: #fff;box-shadow: none;}
+.forms .content .row .row{padding: 0;margin: 0;}
+.forms .content .row.radio{margin-bottom: 0;}
+input::-webkit-input-placeholder{color: #845F1A;opacity: 0.9;}/* WebKit browsers */
+input:-moz-placeholder{color: #845F1A;opacity: 0.9;}/* Mozilla Firefox 4 to 18 */
+input::-moz-placeholder{color: #845F1A;opacity: 0.9;}/* Mozilla Firefox 19+ */
+input:-ms-input-placeholder{color: #845F1A;opacity: 0.9;}/* Internet Explorer 10+ */
+#captcha{margin: 0 auto 0px;display: block;}
+#captchaimage{width: 60%;}
+#captchaerror, #captchasystemerror{color: red;}
+.user-success + #captchaerror, .user-success + #captchaerror + #captchasystemerror{visibility: hidden}
+.forms #badge-footer{height: 69px;margin: 0 auto;position: static;right: 0;top: 0;width: 119px;display: block;}
+.forms #badge-footer a{background-size: auto auto;background-repeat: no-repeat;height: 69px;width: 119px;display: block;background-image: url("../img/formbottomlogo.jpeg");}
+.forms #footer-wrapper{background: no-repeat;padding-bottom: 30px}
+.forms #footer{background: #fff;max-width: 960px !important;min-height: 113px;padding: 0;}
+.ws-errorbox{display: none !important;}
+.ws-invalid .error-box, .ws-invalid #captchaerror SPAN, INPUT.cus-error + .error-box{visibility: visible;}
+INPUT.cus-error + .error-box SPAN {display: none;}
+INPUT.cus-error + .error-box SPAN.custom-msg {display: block;}
+body form .submit-col{text-align: right;}
+.forms form .submit-col{width: auto;float: right;}
+	.rtl.forms form .submit-col{float: left;}
+.forms form .submit-col INPUT[type="submit"]{border-bottom: 2px solid #FFFFFF;width: auto;padding: 0 40px 3px 20px;}
+.forms form .submit-col INPUT[type="submit"]:hover{border-bottom: 2px solid #B45F1A;}
+.forms .content .large-10{width: 91.6667%;}/*override foundation style to make large-10 to large-11. due to reused template, 'large-10' can not be changed to 'large-11 in carve'*/
+.forms #page{width: 660px;}
+.forms #header, .forms .content-banner, .forms .content, .forms .headings{width: 660px;margin: 0 auto;}
+form > .columns{padding-right: 20px;}
+form .form-bg .actions{float: right;}
+.action-btns{display: block;}
+
+.lcnforms .social-title {text-align: center;}
+.lcnforms .social-title .social-title-msg {display: none; text-align: center;}
+.lcnforms .social-title .landing-msg{text-decoration: underline; cursor: pointer; display: inline-block;}
+
+.forms-car-config{padding: 19px 8px;}
+.forms-car-config h2{margin-top: 6px;}
+.forms-car-config ul{margin: 0 -10px;}
+.forms-car-config ul li{position: relative; width: 25%; float: left; padding-left: 10px; padding-right: 10px;}
+	.rtl .forms-car-config ul li {float: right;}
+.forms-car-config ul li img{margin-bottom: 12px;}
+.forms-car-config ul li span{font-size: 1.167em}
+.forms-car-config .divide{margin: 0 -8px 18px;padding-bottom: 12px;}
+
+
+/*.forms .opt-radio-header {color: #A35254; font-size: 12px; font-weight: bold; font-family: ProximaNova-Reg-Roman, Arial, SimSun, 宋体, STSong, 华文宋体, sans-serif;}*/
+.forms .opt-radio-element {position: relative; left: -5px;}
+.forms .opt-radio-element > input {height: auto; margin: 0; display: none;}
+.forms .opt-radio-element {display: inline-block; width: auto; padding: 2px 0;}
+.forms .opt-radio-element > label {font-size: 18px; zoom: 0.7; height: 24px; font-family: ProximaNova-Reg-Roman, Arial, SimSun, 宋体, STSong, 华文宋体, sans-serif; }
+.forms .opt-radio-element > input[type="radio"] + label {line-height: 22px; background: url("../../lincoln-common/img/radio-bg.png") no-repeat 0 -57px; padding: 0 0 0 48px; background-size: 14px;}
+.forms .opt-radio-element > input[type="radio"].checked + label {background-position: 0 0;}
+
+

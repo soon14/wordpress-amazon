@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<title>Dealer Locator</title>
+		<link rel="stylesheet" href="../../src/themes/ftdmob/css/mobile.css?v=sds1"/>
+		<script type="text/javascript" src="../../src/themes/ftdmob/js/live/dev.debug.js"></script>
+	</head>
+	<body>
+		<div class="logo">
+			<img src="themes/ftdmob/img/logo.jpg" />
+		</div>
+		<div class="menusel">
+			<form name="menuSubmition" id="menuSubmition" action="#" method="get">
+				<select name="navurl" id="navurl">
+					<option value="" selected="selected">Menu</option>
+					<option value="home.html">Home</option>
+					<option value="newsroom.html">Newsroom</option>
+					<option value="buzz.html">Buzz</option>
+					<option value="gallery.html">Gallery</option>
+				</select>
+				<input type="submit" value="GO"/>
+			</form>
+		</div>
+		<ul class="menutop">
+			<li><a href="Dealer.html">Dealer Locator</a></li>
+			<li><a href="Showroom.html">Showroom</a></li>
+			<li><a href="Share.html">Share</a></li>
+			<li><a href="RoadsideAssistance.html">Roadside&nbsp;Assistance</a></li>
+		</ul>
+		<div class="black">DEALER LOCATOR</div>
+
+		<div class="form">
+			<form action="Dealer1.html" method="get">
+				<p>
+					Locate a dealer by filling in at leastone
+					of the search fields below
+				</p>
+				<b>Dealership Name:</b>
+				<input type="text" name="dealername" value="" />
+				<b>State:</b>
+				<select name="select-state" id="select-state">
+					<option value="">SELECT</option>
+				</select>
+				<b>City:</b>
+				<select name="select-city" id="select-city">
+					<option value="">SELECT</option>
+				</select>
+
+				<div class="cols2">
+					<p>
+						<span>Check 1</span>
+						<input type="checkbox" name="check1" id="check1" />
+					</p>
+					<p>
+						<span>Check 2</span>
+						<input type="checkbox" name="check2" id="check2" />
+					</p>
+					<p>
+						<span>Radial 1</span>
+						<input type="radio" name="radio" id="radio1" />
+					</p>
+					<p>
+						<span>Radial 2</span>
+						<input type="radio" name="radio" id="radio2" />
+					</p>
+				</div>
+
+				<input type="submit" value="LOCATE" />
+			</form>
+
+<script type="text/javascript">
+var cities={"list": [ { "name": "australia", "states": [ [ "ACT", { "name": "ACT", "cities": [ [ "PHILLIP", { "name": "PHILLIP" } ] ] } ], [ "NSW", { "name": "NSW", "cities": [ [ "ALBURY", { "name": "ALBURY" } ], [ "ARMIDALE", { "name": "ARMIDALE" } ], [ "ARNCLIFFE", { "name": "ARNCLIFFE" } ], [ "ARTARMON", { "name": "ARTARMON" } ], [ "BATHURST", { "name": "BATHURST" } ], [ "BAULKHAM HILLS", { "name": "BAULKHAM HILLS" } ], [ "BEGA", { "name": "BEGA" } ], [ "BELCONNEN", { "name": "BELCONNEN" } ], [ "BOMBALA", { "name": "BOMBALA" } ], [ "BROKEN HILL", { "name": "BROKEN HILL" } ], [ "BROOKVALE", { "name": "BROOKVALE" } ], [ "CAMDEN", { "name": "CAMDEN" } ], [ "CAMPBELLTOWN", { "name": "CAMPBELLTOWN" } ], [ "CARDIFF", { "name": "CARDIFF" } ], [ "CHULLORA", { "name": "CHULLORA" } ], [ "COBAR", { "name": "COBAR" } ], [ "COFFS HARBOUR", { "name": "COFFS HARBOUR" } ], [ "CONDOBOLIN", { "name": "CONDOBOLIN" } ], [ "COOMA", { "name": "COOMA" } ], [ "COOTAMUNDRA", { "name": "COOTAMUNDRA" } ], [ "COWRA", { "name": "COWRA" } ], [ "CULCAIRN", { "name": "CULCAIRN" } ], [ "DENILIQUIN", { "name": "DENILIQUIN" } ], [ "DORRIGO", { "name": "DORRIGO" } ], [ "DUNGOG", { "name": "DUNGOG" } ], [ "EDEN", { "name": "EDEN" } ], [ "FINLEY", { "name": "FINLEY" } ], [ "FORBES", { "name": "FORBES" } ], [ "FORSTER", { "name": "FORSTER" } ], [ "GLOUCESTER", { "name": "GLOUCESTER" } ], [ "GOULBURN", { "name": "GOULBURN" } ], [ "GREENACRE", { "name": "GREENACRE" } ], [ "GRIFFITH", { "name": "GRIFFITH" } ], [ "GUNNEDAH", { "name": "GUNNEDAH" } ], [ "INVERELL", { "name": "INVERELL" } ], [ "JUNEE", { "name": "JUNEE" } ], [ "KIRRAWEE", { "name": "KIRRAWEE" } ], [ "KYOGLE", { "name": "KYOGLE" } ], [ "LEETON", { "name": "LEETON" } ], [ "LITHGOW", { "name": "LITHGOW" } ], [ "LIVERPOOL", { "name": "LIVERPOOL" } ], [ "LOCKHART", { "name": "LOCKHART" } ], [ "MAITLAND", { "name": "MAITLAND" } ], [ "MCGRATHS HILL", { "name": "MCGRATHS HILL" } ], [ "MERRIWA", { "name": "MERRIWA" } ], [ "MITCHELL", { "name": "MITCHELL" } ], [ "MOREE", { "name": "MOREE" } ], [ "MUDGEE", { "name": "MUDGEE" } ], [ "MURWILLUMBAH", { "name": "MURWILLUMBAH" } ], [ "MUSWELLBROOK", { "name": "MUSWELLBROOK" } ], [ "NAMBUCCA HEADS", { "name": "NAMBUCCA HEADS" } ], [ "NARRABRI", { "name": "NARRABRI" } ], [ "NARROMINE", { "name": "NARROMINE" } ], [ "NORTH RYDE", { "name": "NORTH RYDE" } ], [ "NOWRA", { "name": "NOWRA" } ], [ "ORANGE", { "name": "ORANGE" } ], [ "PARKES", { "name": "PARKES" } ], [ "PARRAMATTA", { "name": "PARRAMATTA" } ], [ "PENRITH", { "name": "PENRITH" } ], [ "RAYMOND TERRACE", { "name": "RAYMOND TERRACE" } ], [ "ROCKDALE", { "name": "ROCKDALE" } ], [ "RYDE", { "name": "RYDE" } ], [ "SINGLETON", { "name": "SINGLETON" } ], [ "SMITHFIELD", { "name": "SMITHFIELD" } ], [ "SYDNEY", { "name": "SYDNEY" } ], [ "TAMWORTH", { "name": "TAMWORTH" } ], [ "TAREE", { "name": "TAREE" } ], [ "TEMORA", { "name": "TEMORA" } ], [ "TUGGERAH", { "name": "TUGGERAH" } ], [ "TWEED HEADS SOUTH", { "name": "TWEED HEADS SOUTH" } ], [ "URANA", { "name": "URANA" } ], [ "WAGGA WAGGA", { "name": "WAGGA WAGGA" } ], [ "WALGETT", { "name": "WALGETT" } ], [ "WEST WYALONG", { "name": "WEST WYALONG" } ], [ "WOLLONGONG", { "name": "WOLLONGONG" } ], [ "YALLAH", { "name": "YALLAH" } ], [ "YOUNG", { "name": "YOUNG" } ] ] } ], [ "NT", { "name": "NT", "cities": [ [ "BERRIMAH", { "name": "BERRIMAH" } ], [ "KATHERINE", { "name": "KATHERINE" } ] ] } ], [ "QLD", { "name": "QLD", "cities": [ [ "ATHERTON", { "name": "ATHERTON" } ], [ "AYR", { "name": "AYR" } ], [ "BEAUDESERT", { "name": "BEAUDESERT" } ], [ "BEENLEIGH", { "name": "BEENLEIGH" } ], [ "BILOELA", { "name": "BILOELA" } ], [ "BOWEN", { "name": "BOWEN" } ], [ "BROWNS PLAINS", { "name": "BROWNS PLAINS" } ], [ "BUNDABERG", { "name": "BUNDABERG" } ], [ "CABOOLTURE", { "name": "CABOOLTURE" } ], [ "CAIRNS", { "name": "CAIRNS" } ], [ "CAPALABA", { "name": "CAPALABA" } ], [ "CHARLEVILLE", { "name": "CHARLEVILLE" } ], [ "CHERMSIDE", { "name": "CHERMSIDE" } ], [ "CHINCHILLA", { "name": "CHINCHILLA" } ], [ "CURRIMUNDI", { "name": "CURRIMUNDI" } ], [ "DALBY", { "name": "DALBY" } ], [ "EAGLE FARM", { "name": "EAGLE FARM" } ], [ "FORTITUDE VALLEY", { "name": "FORTITUDE VALLEY" } ], [ "GATTON", { "name": "GATTON" } ], [ "GOONDIWINDI", { "name": "GOONDIWINDI" } ], [ "GYMPIE", { "name": "GYMPIE" } ], [ "HENDRA", { "name": "HENDRA" } ], [ "HERVEY BAY", { "name": "HERVEY BAY" } ], [ "JANDOWAE", { "name": "JANDOWAE" } ], [ "KEDRON", { "name": "KEDRON" } ], [ "KINGAROY", { "name": "KINGAROY" } ], [ "MACKAY", { "name": "MACKAY" } ], [ "MAREEBA", { "name": "MAREEBA" } ], [ "MAROOCHYDORE", { "name": "MAROOCHYDORE" } ], [ "MARYBOROUGH", { "name": "MARYBOROUGH" } ], [ "MOUNT ISA", { "name": "MOUNT ISA" } ], [ "MURGON", { "name": "MURGON" } ], [ "NANANGO", { "name": "NANANGO" } ], [ "NOOSAVILLE", { "name": "NOOSAVILLE" } ], [ "PROSERPINE", { "name": "PROSERPINE" } ], [ "ROCKHAMPTON NORTH", { "name": "ROCKHAMPTON NORTH" } ], [ "ROMA", { "name": "ROMA" } ], [ "SOUTHPORT", { "name": "SOUTHPORT" } ], [ "SPRINGWOOD", { "name": "SPRINGWOOD" } ], [ "STANTHORPE", { "name": "STANTHORPE" } ], [ "STRATHPINE", { "name": "STRATHPINE" } ], [ "TINGALPA", { "name": "TINGALPA" } ], [ "TOOWOOMBA CITY", { "name": "TOOWOOMBA CITY" } ], [ "TOWNSVILLE", { "name": "TOWNSVILLE" } ], [ "TULLY", { "name": "TULLY" } ], [ "UPPER MOUNT GRAVATT", { "name": "UPPER MOUNT GRAVATT" } ], [ "WARWICK", { "name": "WARWICK" } ], [ "WOOLLOONGABBA", { "name": "WOOLLOONGABBA" } ] ] } ], [ "SA", { "name": "SA", "cities": [ [ "BALAKLAVA", { "name": "BALAKLAVA" } ], [ "BERRI", { "name": "BERRI" } ], [ "BORDERTOWN", { "name": "BORDERTOWN" } ], [ "CHRISTIES BEACH", { "name": "CHRISTIES BEACH" } ], [ "CLARE", { "name": "CLARE" } ], [ "ELIZABETH", { "name": "ELIZABETH" } ], [ "HAMLEY BRIDGE", { "name": "HAMLEY BRIDGE" } ], [ "HILLCREST", { "name": "HILLCREST" } ], [ "HINDMARSH", { "name": "HINDMARSH" } ], [ "JAMESTOWN", { "name": "JAMESTOWN" } ], [ "KADINA", { "name": "KADINA" } ], [ "LOXTON", { "name": "LOXTON" } ], [ "MEDINDIE", { "name": "MEDINDIE" } ], [ "MILLICENT", { "name": "MILLICENT" } ], [ "MINLATON", { "name": "MINLATON" } ], [ "MOUNT BARKER", { "name": "MOUNT BARKER" } ], [ "MOUNT GAMBIER", { "name": "MOUNT GAMBIER" } ], [ "NARACOORTE", { "name": "NARACOORTE" } ], [ "PORT ADELAIDE", { "name": "PORT ADELAIDE" } ], [ "PORT AUGUSTA", { "name": "PORT AUGUSTA" } ], [ "PORT LINCOLN", { "name": "PORT LINCOLN" } ], [ "PORT PIRIE", { "name": "PORT PIRIE" } ], [ "REYNELLA", { "name": "REYNELLA" } ], [ "ST MARYS", { "name": "ST MARYS" } ], [ "TANUNDA", { "name": "TANUNDA" } ], [ "TRINITY GARDENS", { "name": "TRINITY GARDENS" } ], [ "WAIKERIE", { "name": "WAIKERIE" } ], [ "YORKETOWN", { "name": "YORKETOWN" } ] ] } ], [ "TAS", { "name": "TAS", "cities": [ [ "COOEE", { "name": "COOEE" } ], [ "DEVONPORT", { "name": "DEVONPORT" } ], [ "HOBART", { "name": "HOBART" } ], [ "LAUNCESTON", { "name": "LAUNCESTON" } ] ] } ], [ "VIC", { "name": "VIC", "cities": [ [ "ARARAT", { "name": "ARARAT" } ], [ "BAIRNSDALE", { "name": "BAIRNSDALE" } ], [ "BAYSWATER", { "name": "BAYSWATER" } ], [ "BENALLA", { "name": "BENALLA" } ], [ "BENDIGO", { "name": "BENDIGO" } ], [ "BERWICK", { "name": "BERWICK" } ], [ "BRAESIDE", { "name": "BRAESIDE" } ], [ "BUNDOORA", { "name": "BUNDOORA" } ], [ "BURWOOD", { "name": "BURWOOD" } ], [ "CAMPBELLFIELD", { "name": "CAMPBELLFIELD" } ], [ "CAULFIELD EAST", { "name": "CAULFIELD EAST" } ], [ "CLAYTON NORTH", { "name": "CLAYTON NORTH" } ], [ "COBRAM", { "name": "COBRAM" } ], [ "COBURG", { "name": "COBURG" } ], [ "COHUNA", { "name": "COHUNA" } ], [ "COLAC", { "name": "COLAC" } ], [ "CRANBOURNE", { "name": "CRANBOURNE" } ], [ "DANDENONG", { "name": "DANDENONG" } ], [ "DEER PARK", { "name": "DEER PARK" } ], [ "DONALD", { "name": "DONALD" } ], [ "DONCASTER", { "name": "DONCASTER" } ], [ "ECHUCA", { "name": "ECHUCA" } ], [ "ELSTERNWICK", { "name": "ELSTERNWICK" } ], [ "EPPING", { "name": "EPPING" } ], [ "ESSENDON NORTH", { "name": "ESSENDON NORTH" } ], [ "FERNTREE GULLY", { "name": "FERNTREE GULLY" } ], [ "FRANKSTON", { "name": "FRANKSTON" } ], [ "GEELONG", { "name": "GEELONG" } ], [ "HALLAM", { "name": "HALLAM" } ], [ "HAMILTON", { "name": "HAMILTON" } ], [ "HASTINGS", { "name": "HASTINGS" } ], [ "HEIDELBERG", { "name": "HEIDELBERG" } ], [ "HOPPERS CROSSING", { "name": "HOPPERS CROSSING" } ], [ "HORSHAM", { "name": "HORSHAM" } ], [ "KERANG", { "name": "KERANG" } ], [ "KILMORE", { "name": "KILMORE" } ], [ "KYABRAM", { "name": "KYABRAM" } ], [ "LEONGATHA", { "name": "LEONGATHA" } ], [ "LILYDALE", { "name": "LILYDALE" } ], [ "MAFFRA", { "name": "MAFFRA" } ], [ "MANSFIELD", { "name": "MANSFIELD" } ], [ "MENTONE", { "name": "MENTONE" } ], [ "MILDURA", { "name": "MILDURA" } ], [ "MOE", { "name": "MOE" } ], [ "MORNINGTON", { "name": "MORNINGTON" } ], [ "NOBLE PARK", { "name": "NOBLE PARK" } ], [ "OAKLEIGH", { "name": "OAKLEIGH" } ], [ "PAKENHAM", { "name": "PAKENHAM" } ], [ "PORTLAND", { "name": "PORTLAND" } ], [ "RINGWOOD", { "name": "RINGWOOD" } ], [ "ROBINVALE", { "name": "ROBINVALE" } ], [ "ROSEBUD", { "name": "ROSEBUD" } ], [ "SALE", { "name": "SALE" } ], [ "SEBASTOPOL", { "name": "SEBASTOPOL" } ], [ "SHEPPARTON", { "name": "SHEPPARTON" } ], [ "ST ARNAUD", { "name": "ST ARNAUD" } ], [ "STANHOPE", { "name": "STANHOPE" } ], [ "STAWELL", { "name": "STAWELL" } ], [ "SWAN HILL", { "name": "SWAN HILL" } ], [ "TRARALGON", { "name": "TRARALGON" } ], [ "WANGARATTA", { "name": "WANGARATTA" } ], [ "WARRACKNABEAL", { "name": "WARRACKNABEAL" } ], [ "WARRNAMBOOL", { "name": "WARRNAMBOOL" } ], [ "WODONGA", { "name": "WODONGA" } ], [ "WONTHAGGI", { "name": "WONTHAGGI" } ], [ "YARRAWONGA", { "name": "YARRAWONGA" } ] ] } ], [ "WA", { "name": "WA", "cities": [ [ "ALBANY", { "name": "ALBANY" } ], [ "BELMONT", { "name": "BELMONT" } ], [ "BENTLEY", { "name": "BENTLEY" } ], [ "BROOME", { "name": "BROOME" } ], [ "BUNBURY", { "name": "BUNBURY" } ], [ "BUSSELTON", { "name": "BUSSELTON" } ], [ "CLARKSON", { "name": "CLARKSON" } ], [ "CUNDERDIN", { "name": "CUNDERDIN" } ], [ "DALWALLINU", { "name": "DALWALLINU" } ], [ "ESPERANCE", { "name": "ESPERANCE" } ], [ "GERALDTON", { "name": "GERALDTON" } ], [ "GOOMALLING", { "name": "GOOMALLING" } ], [ "KALGOORLIE", { "name": "KALGOORLIE" } ], [ "KARRATHA", { "name": "KARRATHA" } ], [ "KATANNING", { "name": "KATANNING" } ], [ "LAKE GRACE", { "name": "LAKE GRACE" } ], [ "MADDINGTON", { "name": "MADDINGTON" } ], [ "MANDURAH", { "name": "MANDURAH" } ], [ "MANJIMUP", { "name": "MANJIMUP" } ], [ "MELVILLE", { "name": "MELVILLE" } ], [ "MERREDIN", { "name": "MERREDIN" } ], [ "MIDLAND", { "name": "MIDLAND" } ], [ "MOORA", { "name": "MOORA" } ], [ "MORLEY", { "name": "MORLEY" } ], [ "NARROGIN", { "name": "NARROGIN" } ], [ "NORTHAM", { "name": "NORTHAM" } ], [ "OSBORNE PARK", { "name": "OSBORNE PARK" } ], [ "PERTH", { "name": "PERTH" } ], [ "QUAIRADING", { "name": "QUAIRADING" } ], [ "ROCKINGHAM", { "name": "ROCKINGHAM" } ], [ "WANGARA", { "name": "WANGARA" } ], [ "WONGAN HILLS", { "name": "WONGAN HILLS" } ] ] } ] ] } ]};
+</script>
+
+		</div>
+
+		<div class="back">
+			<a href="javascript:history.go(-1)">Go Back ...</a>
+		</div>
+		<div class="menu">
+			<div class="dark">MENU</div>
+			<ul>
+				<li><a href="Home.html">Home</a></li>
+				<li><a href="Showroom.html">Showroom</a></li>
+				<li><a href="Dealer.html">Dealer Locator</a></li>
+				<li><a href="Promotions.html">Promotions</a></li>
+				<li><a href="RoadsideAssistance.html">Roadside Assistance</a></li>
+				<li><a href="Newsroom.html">Newsroom</a></li>
+				<li><a href="FormTestDrive.html">Test Drive</a></li>
+				<li><a href="#">Brochure</a></li>
+			</ul>
+		</div>
+		<div class="copy">
+			<div class="dark">
+				&copy; 2011 Ford Motor Company
+				<br/>
+				of Australia Limited 
+			</div>
+			<ul>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
+				<li><a href="#">Disclaimer</a></li>
+			</ul>
+			<center>
+				<p><a href="">Change language: Language option</a></p>
+				<p><a href="#">Full site</a></p>
+			</center>
+		</div>
+	</body>
+</html>

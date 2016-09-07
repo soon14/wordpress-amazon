@@ -1,0 +1,49 @@
+.landing-header{ background: $tertiary-orange; padding: 10px 0; text-align: center;}
+
+.landing-content{ padding: 20px; position: relative; overflow: hidden;
+	.select-country-bg{ position: absolute; top: 10%; left: 0;}
+	h1{ display: none; color: $quaternary-orange; font-weight: 500;}
+	h2{ font-size: rem-calc(14px); font-family: $font-gotham; font-weight: 500;}
+	.choose-country{ position: relative; z-index: 2;}
+	.locations{ list-style: none; list-style-position: outside; margin: 0; padding: 0;
+		li{ margin: 5px 0;}
+		a{ color: #000; font-size: rem-calc(14px);}
+	}
+	
+}
+
+.landing-footer{ position: relative;
+	.secondary{ height: 30px; background: $light-blue;}
+	.primary{ height: 40px; background: $dark-blue;}
+	.logo{ position: absolute; width:205px; height: 42px; left: 50%; top: 50%; margin-top: -24px; margin-left: -103px;}
+	.trademark{ display: none;}
+}
+
+
+
+@media #{$medium-up}{
+	.landing-header{ text-align: left; padding: 5px 0;
+		.container{ padding: 0 10px 0 10px;}
+	}
+	
+	.landing-content{ min-height: 400px; padding: 0px;
+		h1{ display: block;}
+		.locations li{ margin: 0;}
+		.container{ padding: 10px;}
+	}
+
+	.landing-footer{ 
+		.container{ position: relative; margin: 0 10px 0 10px;}
+		.trademark{ display: block; font-size: rem-calc(10px); font-weight: 300; margin: 0;}
+		.logo{ left: initial; right: 20px; top: 50%; margin-top: 17px;}
+	}
+}
+
+@media #{$large-up}{
+	.landing-content{ min-height: 550px;}
+	.landing-footer{ 
+		.container{ position: relative; margin: 0 10px 0 10px;}
+		.trademark{ display: block; font-size: rem-calc(10px); font-weight: 300; margin: 0;}
+		.logo{ right: 0; top: 50%; margin-top: 17px;}
+	}
+}

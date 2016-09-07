@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>GUI</title>
+	
+	<script type="text/javascript" src="../themes/ftd/js/lib/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="../themes/ftd/js/lib/es5-shim-parts.js"></script>
+	<!-- script type="text/javascript" src="content/mock-applet.js"></script -->
+	<script type="text/javascript" src="../themes/sync/js/transfer.js"></script>
+	<script type="text/javascript">
+
+//	var FAPMockTransferApplet = $.extend({}, document.TransferApplet);
+	
+	$(function(){
+		
+		var syncTransferManager = Object.create( FAP.syncTransfer.manager );
+		
+		/*
+		 * Example using getDriveList
+		 */
+		$(document).on('click', "#drives-button", function() {
+			
+			var drives = syncTransferManager.getDriveList();
+			
+			var items = [];
+			var guid = 10000;
+			$.each( ['used','writable','readonly'], function(x, item) {
+				$.each( drives[item], function(i, drive) {
+					guid++;
+					items.push('<input '+ (item === 'readonly'? 'readonly="readonly" disabled="disabled"':'')+' type="radio" name="drivename" value="'+drive.name+'" id="'+guid+'" />');
+					items.push('<label for="'+guid+'">' + item + ' - ' + drive.description + '</label>');
+					items.push('<br />' );
+				});			
+			});
+			
+			$('#drives').empty().append( items.join('') );
+		});
+		
+		/*
+		 * Example using downloadPackage
+		 */
+		$(document).on('click', "#download-button", function() {
+			
+			var progress = syncTransferManager.downloadPackage( $('input[name=drivename]:checked').val() );
+
+			var percent = $('#download-percent').empty();
+			var status = $('#download-status').empty();
+
+			progress.on('status', function(e, data) {
+				
+				if( data.error ) {
+					status.text( 'A error error occurred during the install package download' );
+				} else {
+					percent.text( (data.ratio * 100) + '% downloaded');
+				}
+			});
+			
+			progress.on('end', function(e, data) {
+
+				if( data.error ) {
+					status.text( 'A error error occurred finalising the install package download' );
+				} else {
+					status.text( 'Done' );
+				}
+
+			});
+			
+			progress.start();
+			
+		});
+		
+		/*
+		 * Example using downloadPackage
+		 */
+		$(document).on('click', "#loglist-button", function() {
+			
+			var logfiles = syncTransferManager.getLogFileList();
+			
+			var items = [];
+			var guid = 20000;			
+			$.each( logfiles.logs, function(i, log) {
+				guid++;
+				items.push('<input type="radio" name="logfile" value="'+log.filepage+'" id="'+guid+'" />');
+				items.push('<label for="'+guid+'">' + log.filename + '</label>');
+				items.push('<br />' );
+			});			
+			
+			$('#logs').empty().append( items.join('') );
+			
+		});
+	
+		/*
+		 * Example using uploadLogFile
+		 */
+		$(document).on('click', "#upload-button", function() {
+			
+			var progress = syncTransferManager.uploadLogFile( $('input[name=logfile]:checked').val() );
+			
+			var percent = $('#upload-percent').empty();
+			var status = $('#upload-status').empty();
+			
+			progress.on('status', function(e, data) {
+				
+				if( data.error ) {
+					status.text( 'A error error occurred during the log file upload' );
+				} else {
+					percent.text( (data.ratio * 100) + '% uploaded');
+				}
+			});
+			
+			progress.on('end', function(e, data) {
+
+				if( data.error ) {
+					status.text( 'A error error occurred finalising the log file upload' );
+				} else {
+					status.text( 'Done' );
+				}
+
+			});
+			
+			progress.start();
+			
+		});
+		
+		
+		
+		/*
+		 * Helper for Mock and Real Applet
+		 */
+		$(document).on('click', "#applet-button", function() {
+			$('applet').remove();
+			$(this).remove();
+			//syncTransferManager.setApplet( FAPMockTransferApplet );
+		});
+
+	});
+	</script>
+	
+</head>
+<body> 
+	<!-- Session -->
+	<img style="position:absolute; left:-9999px; top:0px;"  src="http://localhost:5000/Own/X.MGMVehicleInfoHandler.aspx" />
+	
+	<!-- Applet -->
+	<!-- APPLET style="position:absolute; left:-9999px; top:0px;" id="TransferApplet" codebase="." archive="applets/TransferApplet.jar" code="com/ford/ipp/applet/TransferApplet.class" height="50" width="200"></APPLET -->
+	<!-- ActiveX -->
+	<!-- OBJECT style="background:gray" ID="TransferApplet" WIDTH=192 HEIGHT=192  CLASSID="CLSID:90EA49B3-039A-4F02-A34E-3EBA417BE44C"  CODEBASE="../themes/sync/plugin/sync.cab#version=1,2,0,0" DATA="DATA:application/x-oleobject;BASE64,ANox229Px0yGJ8WhQuH8fAAIAADYEwAA2BMAAA=="></OBJECT -->
+	<OBJECT style="background:gray" ID="TransferApplet" WIDTH=192 HEIGHT=192  CLASSID="CLSID:16f67783-7e72-4c39-99c4-4780a8335484"  CODEBASE="../themes/sync/plugin/sync.cab#version=1,2,0,0" DATA="DATA:application/x-oleobject;BASE64,ANox229Px0yGJ8WhQuH8fAAIAADYEwAA2BMAAA=="></OBJECT>
+	
+	<!-- button id="applet-button">Swap to Mock Applet (Pure JS)</button -->	
+	
+	<hr />
+	
+		<h1>getDriveList</h1>
+		<button id="drives-button">Drives</button>	
+		<div id="drives"></div>
+	
+	<hr />
+	
+		<h1>downloadPackage</h1>
+		<button id="download-button">Download</button>
+		<p id="download-percent"></p>
+		<p id="download-status"></p>
+		
+	<hr />
+	
+		<h1>getLogFileList</h1>
+		<button id="loglist-button">Logs</button>
+		<div id="logs"></div>
+	
+	<hr />
+
+		<h1>uploadLogFile</h1>
+		<button id="upload-button">Upload</button>
+		<p id="upload-percent"></p>
+		<p id="upload-status"></p>
+	
+	
+</body>
+</html>

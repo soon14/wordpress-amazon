@@ -1,0 +1,13 @@
+.sidenav{
+	ul{ margin: 0; padding: 0; list-style: none;
+		li{  display: block; border: $secondary-grey solid 1px; border-top: none;
+			a{ padding: 15px 16px; display: block; @include single-transition(background-color, 0.2s,ease-in); color: $text-blue;
+				&:hover{ background-color: $hover-gray;}
+			}
+			&:first-child{ border-top: $secondary-grey solid 1px; }
+			&.active{ 
+				a{ background-color: $secondary-orange; color: #FFF;}
+			}
+		}
+	}	
+}

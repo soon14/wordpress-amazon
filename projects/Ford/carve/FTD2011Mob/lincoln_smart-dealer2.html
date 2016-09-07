@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<title>Ford</title>
+		<!-- Framework and library -->
+		<link rel="stylesheet" href="themes/ftdsmob/css/jquery.mobile-1.0.min.css" />
+		<script type="text/javascript" src="themes/ftdsmob/js/lib/jquery-1.6.4.min.js"></script>
+		<!-- Site css and js -->
+		<link rel="stylesheet" href="themes/ftdsmob/css/smobile.css?v=1"/>
+		<link rel="stylesheet" href="themes/ftdsmob/css/lincolnmobile.css" />
+		<script type="text/javascript" src="themes/ftdsmob/js/live/dev.debug.js"></script>
+		<!--
+		<script type="text/javascript" src="themes/ftdsmob/js/live/prod.min.js?v=1"></script>
+		-->
+	</head>
+	<body>
+		<div data-role="header" data-theme="c" data-position="inline">
+			<a data-icon="back-btn"
+				data-role="button"
+				class="back">
+				Back
+			</a>
+			<h1>
+				<img src="themes/ftdsmob/img/lincoln/logo.png" />
+			</h1>
+			<a data-inline="true"
+				data-role="button"
+				data-theme="c"
+				data-rel="dialog"
+				href="lincoln_smart-menu.html">
+				Menu
+			</a>
+		</div>
+		<div data-role="header">
+			<div data-role="controlgroup" data-type="horizontal" >
+				<a href="lincoln_smart-dealer.html" data-role="button" data-theme="b">
+					<span class="icon-dealer"></span>
+					Locate A Dealer
+				</a>
+				<a href="lincoln_smart-showroom.html" data-role="button" data-theme="b">
+					<span class="icon-showroom"></span>
+					Model Showroom
+				</a>
+				<a href="lincoln_smart-assistance.html" data-role="button" data-theme="b">
+					<span class="icon-assist"></span>
+					Roadside Assistance
+				</a>
+				<a href="lincoln_smart-benefits.html" data-role="button" data-theme="b">
+					<span class="icon-benefits"></span>
+					Lincoln Benefits
+				</a>
+			</div>
+		</div>
+		
+		<div data-role="main">
+			<div class="black">Dealer Locator</div>
+			
+			<div class="dealerinfo">
+				<h3>J.R.Saeley Pty Ltd</h3>
+				<p>28 William Street Condobolin 2877</p>
+			</div>
+
+			<!-- Bing map-->
+			<div class="map">
+				<script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+				<script type="text/javascript">
+				var mapConfig = {container:"#bingMap", credentials:"Apx6y95iVfQDnvwOkxYigNefxJXnHPWylpvm5ZeCyJL02uQF7o2VbeSvjdANdIq0", zoom:"4", lat:"-25.244696", lng:"133.769531"};
+				</script>
+				<div id='bingMap'></div>
+				<a class="close" data-role="button" data-icon="delete" data-iconpos="notext">Delete</a>
+			</div>
+
+			<!--
+			<div class="navbtns">
+				<a class="close" href="smart_showroom.html" data-role="button" data-theme="a" data-icon="arrow-l" data-iconpos="left">
+					Back
+				</a>
+			</div>
+			 -->
+
+
+			<div class="dealerinfo">
+				<p>
+					<span class="icon-tel"></span>
+					<span class="tel">02-6895 2209</span>
+				</p>
+				<p>
+					<span class="icon-web"></span>
+					<a href="#">http://www.jrsealey.com</a>
+				</p>
+				<p>
+					<span class="icon-mail"></span>
+					<a href="#">jrsealey@autogrid.com.au</a>
+				</p>
+				
+				<br />
+				<p>
+					<b>Fax</b> 02-6895 2036
+				</p>
+				<p>
+					<b>Mobile</b>
+					<span class="tel">02-6895 2036</span>
+				</p>
+				<p>
+					<b>ABN</b>
+					83-000-155-576
+				</p>
+				<p>
+					<b>Service</b>
+					New Vehicles, Parts, Service, Used Vehicles
+				</p>
+			</div>
+
+			<div class="btn">
+				<a href="#" data-role="button" data-ajax="false" rel="external" data-theme="b">View a larger map</a>
+			</div>
+		</div>
+
+		<div data-role="footer" data-theme="c">	
+			<div class="dark">&copy; 2012 Ford Motor Company</div>
+			<ul>
+				<li><a href="smart_home.html">Home</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Disclaimer</a></li>
+			</ul>
+			<p><a href="#">Full site</a></p>
+			<img src="themes/ftdsmob/img/lincoln/footer-logo.png" />
+		</div>
+	</body>
+</html>

@@ -1,0 +1,529 @@
+/****************************************
+
+	Lincoln 2014 Mobile site
+
+****************************************/
+*,*:before,*:after{-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+/** * BxSlider v4.0 - Fully loaded, responsive content slider * http: //bxslider.com * * Written by: Steven Wanderski, 2012 * http: //stevenwanderski.com * (while drinking Belgian ales and listening to jazz) * * CEO and founder of bxCreative, LTD * http: //bxcreative.com*/
+/** RESET AND LAYOUT ===================================*/
+.bx-wrapper{position: relative;margin: 0 0 60px;padding: 0;*zoom: 1;}
+.bx-wrapper img{width: 100%;display: block;}
+/** THEME ===================================*/
+.bx-wrapper .bx-viewport{-moz-box-shadow: 0 0 5px #ccc;-webkit-box-shadow: 0 0 5px #ccc;box-shadow: 0 0 5px #ccc;border: solid #fff 5px;left: -5px;background: #fff;}
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto{position: absolute;bottom: -30px;width: 100%;}
+/* LOADER*/
+.bx-wrapper .bx-loading{min-height: 50px;background: url(../img/lincoln/bx_loader.gif) center center no-repeat #fff;height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
+
+/* loading icon */
+.ui-loader-default {width: 68px; height: 100px; opacity: 1; margin-left: -34px; margin-top: -50px; filter: Alpha(Opacity=100);}
+.ui-icon-loading {background: transparent url("../img/lincoln/20_loading-GIF.gif") no-repeat 0 0; background-size: 68px 100px; border-radius: 0;}
+.ui-loader .ui-icon {background-color: transparent; width: 68px; height: 100px; border-radius: 0; -webkit-border-radius: 0;}
+
+/* PAGER*/
+.bx-wrapper .bx-pager{text-align: center;font-size: .85em;font-family:"ProximaNova-Reg-Roman",Arial,SimSun,"宋体",STSong,"华文宋体",sans-serif;font-weight: bold;color: #666;padding-top: 20px;}
+.bx-wrapper .bx-pager .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item{display: inline-block;*zoom: 1;*display: inline;}
+.bx-wrapper .bx-pager.bx-default-pager a{background: #666;text-indent: -9999px;display: block;width: 10px;height: 12px;margin: 0 5px;outline: 0;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active{background: #FFF;}
+/* DIRECTION CONTROLS (NEXT / PREV)*/
+.bx-wrapper .bx-prev{left: 10px;background: url("../img/lincoln/controls.png") no-repeat 0 -32px;}
+.bx-wrapper .bx-next{right: 10px;background: url("../img/lincoln/controls.png") no-repeat -43px -32px;}
+.bx-wrapper .bx-prev: hover{background-position: 0 0;}
+.bx-wrapper .bx-next: hover{background-position: -43px 0;}
+.bx-wrapper .bx-controls-direction a{position: absolute;top: 50%;margin-top: -16px;outline: 0;width: 32px;height: 32px;text-indent: -9999px;z-index: 9999;}
+.bx-wrapper .bx-controls-direction a.disabled{display: none;}
+/* AUTO CONTROLS (START / STOP)*/
+.bx-wrapper .bx-controls-auto{text-align: center;}
+.bx-wrapper .bx-controls-auto .bx-start{display: block;text-indent: -9999px;width: 10px;height: 11px;outline: 0;background: url("../img/lincoln/controls.png") -86px -11px no-repeat;margin: 0 3px;}
+.bx-wrapper .bx-controls-auto .bx-start: hover, .bx-wrapper .bx-controls-auto .bx-start.active{background-position: -86px 0;}
+.bx-wrapper .bx-controls-auto .bx-stop{display: block;text-indent: -9999px;width: 9px;height: 11px;outline: 0;background: url("../img/lincoln/controls.png") -86px -44px no-repeat;margin: 0 3px;}
+.bx-wrapper .bx-controls-auto .bx-stop: hover, .bx-wrapper .bx-controls-auto .bx-stop.active{background-position: -86px -33px;}
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT*/
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager{text-align: left;width: 80%;}
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto{right: 0;width: 35px;}
+/* IMAGE CAPTIONS*/
+.bx-wrapper .bx-caption{position: absolute;bottom: 0;left: 0;background: #666\9;background: rgba(80, 80, 80, 0.75);width: 100%;}
+.bx-wrapper .bx-caption span{color: #fff;font-family:"ProximaNova-Reg-Roman",Arial,SimSun,"宋体",STSong,"华文宋体",sans-serif;display: block;font-size: .85em;padding: 10px;}
+
+/* global setting */
+
+/* override jQuery mobile fonts, use custom fonts */
+body,.ui-btn-up-c, .ui-btn-hover-c, .ui-btn-down-c,
+.ui-body-c, .ui-body-c input, .ui-body-c select,
+.ui-body-c textarea, .ui-body-c button,
+.ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a,
+.ui-bar-c, .ui-bar-c input, .ui-bar-c select,
+.ui-bar-c textarea, .ui-bar-c button,
+.ui-bar-d, .ui-bar-d input, .ui-bar-d select,
+.ui-bar-d textarea, .ui-bar-d button, .ui-body-d,
+.section H4 {font-family: "ProximaNova-Reg-Roman",Arial,SimSun,"宋体",STSong,"华文宋体",sans-serif; font-weight: normal;}
+
+.ui-body-c .ui-collapsible-content .ui-link, .ui-body-d .ui-collapsible-content .ui-link{
+    color:#000;
+    font-size:16px;
+    font-weight: normal;
+}
+
+.ui-body-c .ui-link:visited, .ui-body-d .ui-link:visited {
+    color: #B45F1A;
+}
+
+.navbtns .ui-btn-text,
+.page-title.ui-header .ui-title,
+.page-title.ui-header .ui-navbar .ui-btn-inner,
+H1,H2,H3,H4,H5,.select-menu a, .pager SPAN,
+.select-menu .ui-btn, .kmi-icon, .share-mobile > A SPAN, .share-mobile > A.ui-link,
+.ui-popup-container .ui-selectmenu .ui-li .ui-btn-inner a.ui-link-inherit {font-family:"Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif; font-weight: normal;}
+H1 {font-size:20px;}
+H2 {font-size:18px;}
+H3 {font-size:15px;}
+H4 {font-size:14px;}
+H5 {font-size:13px;}
+H6 {font-size:12px;}
+A {text-decoration: none;}
+A.emptylink.ui-btn[href="#"] {cursor: default;}
+
+/* clear float*/
+.clearfix:before, .clearfix:after {content: "."; display: block; height: 0; visibility: hidden;}
+.clearfix:after {clear:both;}
+.clearfix {*zoom:1;} /* IE < 8 */
+
+.ui-header, .ui-content, .ui-footer, .ui-btn {text-shadow: none;} /* remove default text-shadow */
+.ui-header.ui-bar-c.badge {margin: 13px 0 17px;}
+.ui-btn-active {text-shadow: none; background: none repeat scroll 0 0 #f7efd5;}
+.ui-navbar UL {margin: 0 10px; border-bottom: 1px solid #a9a9a9;}
+.ui-navbar .dropdown-navbar{margin:0 10px; border-bottom: 1px solid #a9a9a9;}
+.ui-navbar .dropdown-navbar .ui-select{width: 100%;}
+.ui-navbar .dropdown-navbar .ui-select .ui-btn-corner-all{border: none; border-radius:0;}
+.ui-navbar .ui-field-contain, .ui-navbar fieldset.ui-field-contain {padding: 0;}
+.nav-dropdown-icon{background-image:url("../img/lincoln/tools_sprite.png");background-position: -4px -346px;border-radius:0px;height:1.2em;width:1.2em;position:absolute;right:15px;top:.6em;}
+.page-title.ui-header.sub-header .ui-navbar .dropdown-navbar .ui-select .ui-btn-corner-all .ui-btn-text{border-right:none;}
+.mob-ast{color: #EE1111;font-size: 16px; line-height:0;}
+
+
+	.rtl .ui-block-a, .rtl .ui-block-b, .rtl .ui-block-c, .rtl .ui-block-d, .rtl .ui-block-e {float: right;}
+	.rtl .ui-grid-a > *:nth-child(n) {margin-left: -0.5px; margin-right: 0;}
+
+/* icons */
+.navbtns .btn-wrapper A.icon {font-weight: normal;}
+.btn-wrapper .active SPAN.btn-icon-link {color: #B45F1A;}
+.pdf-icon{background: url("../img/lincoln/tools_sprite.png") no-repeat -4px -110px;}
+.pdf-icon.active{background-position:-110px -110px;}
+.save-icon{background: url("../img/lincoln/tools_sprite.png") no-repeat -4px -167px;}
+.save-icon.active{background-position:-110px -167px;}
+.share-icon{background: url("../img/lincoln/tools_sprite.png") no-repeat -4px -228px;}
+	.rtl .share-icon{background: url("../img/lincoln/tools_sprite-rtl.png") no-repeat -183px -228px;}
+.share-icon.active{background-position:-110px -228px;}
+	.rtl .share-icon.active{background-position:-77px -228px;}
+.kmi-icon{background: url("../img/lincoln/tools_sprite.png") no-repeat -5px -291px;}
+	.rtl .kmi-icon{background: url("../img/lincoln/tools_sprite.png") no-repeat 111px -291px;}
+.kmi-icon.active{background-position: -216px -291px;}
+	.rtl .kmi-icon.active{background-position: -100px -291px;}
+.pdf-icon,.share-icon,.save-icon,.kmi-icon{display: inline-block; height: 30px; text-decoration: none; font-size: 12px;}
+.kmi-icon {font-size: 14px;}
+.btn-icon-link {line-height: 31px; padding-left: 33px; white-space: nowrap;}
+	.rtl .btn-icon-link {padding-right: 33px; padding-left: 0;}
+.btn-wrapper {margin: 20px 0;}
+.social-icon {margin: 2px 4px 0 0;position: relative;top: 2px;}
+.main .ui-btn-active {border-color: #A9A9A9; background: none;}
+.navbtns .ui-btn-active {border: none; text-shadow: none;}
+.navbtns .ui-btn-text,
+.page-title.ui-header .ui-title{font-size: 20px;}
+.light-brown.ui-link {color: #B45F1A;}
+.ui-body-d, .ui-body-d .ui-link .btn-icon-link{color: #4F4C43;}
+.ui-body-d .ui-link:hover{color: #B45F1A;}
+.ui-bar-f {background-color:#FFFFFF;}/*custom theme, add data-theme="f" when use*/
+
+/* buttons */
+.ui-focus , .ui-btn:focus {box-shadow: none;}
+.ui-btn-text {color: #000000;}
+.navbtns {width: auto; margin:0 10px 20px 10px;}
+.navbtns .ui-btn {margin:0; border-radius:0; border-bottom: 1px solid #a9a9a9;}
+.navbtns .ui-btn:first-child{border-top:1px solid #a9a9a9;}
+.navbtns .ui-collapsible .ui-btn{border-top:none;}
+.navbtns .ui-collapsible:first-child .ui-btn{border-top:1px solid #a9a9a9;}
+.ui-navbar .ui-btn.ui-btn-active:focus,
+.ui-navbar .ui-btn.ui-btn-active:active {background:#c57429;}
+.ui-navbar .ui-btn:focus .ui-btn-text,
+.ui-navbar .ui-btn:active .ui-btn-text {color:#ffffff;}
+.ui-navbar .dropdown-navbar .ui-btn:focus .ui-btn-text,
+.ui-navbar .dropdown-navbar .ui-btn:active .ui-btn-text {color:#000;}
+.navbtns .ui-btn-up-a .ui-btn-inner,
+.navbtns .ui-btn-hover-a .ui-btn-inner {text-indent: inherit;}
+.navbtns .ui-btn.black-theme {border-radius: 0.4em; border: none;}
+.navbtns .ui-btn-inner {border-radius: 0;line-height: 29px;}
+.navbtns .ui-fullsize .ui-btn-inner {border-radius: 0;padding-left:20px;}
+.navbtns .ui-btn.custom-brown {border: none;}
+.navbtns .ui-btn.custom-brown.active {border-bottom: 2px solid #B45F1A;}
+.navbtns .ui-icon {background:url("../img/lincoln/tools_sprite.png") no-repeat -4px -412px;}
+	.rtl .navbtns .ui-icon {background:url("../img/lincoln/tools_sprite-rtl.png") no-repeat -229px -412px;}
+.navbtns .ui-icon-minus{background:url("../img/lincoln/tools_sprite.png") no-repeat -4px -350px;}
+.rtl .navbtns .ui-icon-minus {background:url("../img/lincoln/tools_sprite-rtl.png") no-repeat -229px -412px;}
+.navbtns .ui-collapsible-inset{margin:0;}
+.navbtns .ui-collapsible-content{padding-bottom:20px;padding-top:11.6px;}
+.navbtns .ui-collapsible-content > li {padding-left:.3em;margin-top:14px;list-style:none;}
+.navbtns .ui-collapsible-content > li:first-child {margin-top:0px;}
+.navbtns .visited-black .ui-link:visited {color: #000;}
+.navbtns .navborder {border-bottom:1px solid #a9a9a9;border-radius:0;}
+.navbtns .ui-collapsible-heading a{border:none; background:none;}
+.ui-header .ui-btn-right {box-shadow: none}
+.video-gallery li a{position:relative;display:block;}
+
+.player-icon{position:absolute;top:48%;left:48%;background:url("../img/lincoln/tools_sprite.png") no-repeat scroll -215px -1972px;width:35px;height:35px;z-index:999;}
+.imgbtn .videolink{position:relative;}
+.imgbtn .videolink .ui-btn-text{position:static;}
+/*.imgbtn .videolink .player-icon{top:50%;left:50%;margin-left:-17px;margin-top:-17px;}*/
+.imgbtn .videolink .player-icon{background:url("../img/lincoln/play-icon.png") no-repeat scroll 0 0;width:66px;height:66px;top:50%;left:50%;margin-left:-33px;margin-top:-33px;}
+.imgbtn .videolink.noborder img{border:none;padding:0;}
+@media screen and (max-width: 420px){
+    .player-icon{top:40%;left:40%;}
+}
+@media screen and (max-width: 1024px) and (min-width:420px){
+    .player-icon{top:46%;left:46%;}
+}
+
+.custom-brown {height: 38px; width: 100%; display: inline-block; padding: 0 0 2px;}
+.custom-brown .ui-btn-inner {text-align: left; padding: 0;}
+.custom-brown .ui-btn-text SPAN{float: none; margin: 0 auto; text-align: center;}
+	.rtl .custom-brown .ui-btn-text SPAN{float: none; margin: 0 auto; text-align: center;}
+.custom-brown .custom-brown-bg {width: 100%; display: block; background-color: #4F4A43;}
+.custom-brown .custom-brown-text {color: #FFFFFF; display: inline-block; font-size: 16px; padding: 2px 40px 2px 20px; background: url("../img/lincoln/triangle-arrow.png") no-repeat scroll right center;}
+	.rtl .custom-brown .custom-brown-text {padding: 2px 20px 2px 40px; background: url("../img/lincoln/triangle-arrow-rtl.png") no-repeat scroll left center;}
+.custom-brown.right {float: right;}
+.custom-brown.left .ui-btn-inner {text-align: right;}
+.custom-brown.left .custom-brown-text {padding-right: 25px; padding-left: 40px; background: url("../img/lincoln/triangle-arrow-left.png") no-repeat scroll left center #4F4C43;}
+	.rtl .custom-brown.left .custom-brown-text {padding-right: 40px; padding-left: 25px; background: url("../img/lincoln/triangle-arrow-right.png") no-repeat scroll right center #4F4C43;}
+.custom-brown.right .custom-brown-text {background-color: #4F4C43;}
+.section-wrap .navbtns {overflow: hidden; margin-left: 0; margin-right: 0;}
+.section-wrap .article .ui-btn-up-d{border:1px solid #cdcccc;background:none;}
+.section-wrap .article .ui-btn-hover-d{background:none;}
+.section-wrap .article .ui-select .ui-btn-text{color:#2D2D2D; font-weight:normal;text-align:left;}
+
+/* header */
+.badge H1 IMG,
+.badge H2 IMG {width: 100px;}
+
+.ui-dialog .ui-header:first-child {padding: 15px 0;}
+.ui-dialog .ui-header:first-child .ui-btn-right {margin: 15px 10px;}
+.ui-header .ui-title {margin: 0 10px; text-align: left;}
+	.rtl .ui-header .ui-title {text-align: right;}
+.menu-icon {border: none; right: 0px; background: none;}
+.menu-icon > span {width: 46px; height: 32px; margin-top: -1px; background: transparent url("../img/lincoln/menu-icon.png") no-repeat 0 0;}
+	.rtl .menu-icon > span {background: transparent url("../img/lincoln/menu-icon-rtl.png") no-repeat 0 0;}
+.menu-icon .ui-btn-text {font-size: 0; line-height: 0;}
+
+.page-title.ui-header .ui-title,
+.page-title.ui-header .ui-navbar .ui-btn-inner {text-align: center; padding: 10px 0; border-top: 1px #a9a9a9 solid; border-bottom: 1px #a9a9a9 solid; color: #000000;}
+.page-title.ui-header .ui-title A {color: #000000; font-weight: normal;}
+.page-title.ui-header .sub-title, .page-title.ui-header.sub-header .ui-btn-inner{border-top: none;}
+.page-title.ui-header.sub-header .ui-navbar .ui-btn-text {border-right: 1px solid #a9a9a9;display: block;padding:0 10px;overflow: hidden;text-overflow:ellipsis;}
+	.rtl .page-title.ui-header.sub-header .ui-navbar .ui-btn-text {border-left: 1px solid #a9a9a9; border-right: 0;}
+/*.page-title.ui-header.sub-header .ui-navbar .sub-title {margin-right: 0;}*/
+.page-title.ui-header.sub-header .ui-navbar .sub-title {border:none;}
+.ui-header .ui-navbar li:last-child .ui-btn .ui-btn-text {border-right:none;}
+	.rtl .ui-header .ui-navbar li:last-child .ui-btn .ui-btn-text {border-left:none;}
+.page-title.ui-header .ui-navbar SPAN.ui-btn-inner{border-bottom: none;}
+.page-title.ui-header .ui-navbar .ui-btn-inner {padding: 9px 0; font-size: 18px;}
+.page-title.ui-header .ui-navbar .ui-btn:active .ui-btn-inner,
+.page-title.ui-header .ui-navbar .ui-btn:focus .ui-btn-inner {color:#fff;}
+/*.sub-header .ui-btn-inner{white-space: normal;}problem*/
+
+.ui-navbar A {text-decoration: none;}
+
+/* footer */
+.lincoln-footer {margin: 0px 10px 0 10px; padding-top: 2px; border-top: 1px #a9a9a9 solid; border-bottom: none;}
+.ui-dialog .lincoln-footer {padding: 1px 0 0 0; margin: 0 10px;}
+.lincoln-footer > div {min-height: 40px; border-top: 1px #5e514d solid; padding: 8px 0 15px;}
+.ui-footer .ui-btn-right {right: 10px;}
+.ui-footer .ui-btn-left {left: 10px;}
+.ui-footer a.ui-link {font-weight: normal;}
+.ui-footer a.ui-link,
+.ui-footer a.ui-link:visited,
+.ui-footer a.ui-link:hover {color: #4F4C43;}
+.ui-footer a.ui-link,
+.ui-footer a.ui-link:visited{display: inline;}
+.imglink {padding: 0 10px;}
+.imglink img {padding: 4px; width: 100%; border: 1px solid #a9a9a9; }
+.imgbtn a img {padding: 4px; width: 100%; border: 1px solid #a9a9a9; }
+span.icon-arrow {background: transparent url('../img/lincoln/bnp-icons.png') no-repeat 1px -50px;display: block;width: 6px;height: 6px;position: absolute;z-index: 200;top: 50%; right:30px; margin-top: -3px;}
+.ui-footer ul {border-bottom: 0; margin: 0 auto; padding: 0 0 7px; text-align: center;}
+	.rtl .ui-footer ul {margin: 0 auto;}
+.ui-footer li {display: inline; font-size: 12px; padding: 0 3%; width: auto;}
+	.rtl .ui-footer li {float: none; width: auto;}
+
+/* view list with thumbnails */
+.main .section-wrap > .navbtns .ui-btn {width: auto;} /*css added for publish structure change*/
+.main .article .navbtns .ui-btn {width: auto; margin-bottom: 5px;}
+.main .article .navbtns .custom-brown.left {margin-right: 5px;}
+	.rtl .main .article .navbtns .custom-brown.left {margin-left: 5px; margin-right: 0;}
+.main .article .navbtns .custom-brown.right {float: right; margin-left: 5px;}
+	.rtl .main .article .navbtns .custom-brown.right {float: left; margin-right: 5px; margin-left: 0;}
+.thumbnail-list .ui-li {border-width: 0;}
+.thumbnail-list > li.ui-li.ui-btn {border-width: 1px; border-color: #A9A9A9; margin-bottom: 10px; }
+.thumbnail-list > li.ui-li.ui-btn.ui-btn-active {border: 1px solid #A9A9A9;}
+.thumbnail-list > li.ui-li.ui-btn:last-child {margin-bottom: 20px;}
+.thumbnail-list .paragraph {min-height: 55px; display: block;}
+.thumbnail-list .ui-li-thumb {max-width: inherit; max-height: inherit; left: 4px;}
+.thumbnail-list .ui-li-heading {margin-top: 0px; font-weight: normal;}
+.thumbnail-list.ui-listview a.ui-link-inherit {height: 100px; min-height: 0; padding: 25px 15px 15px 113px; color: #4F4C43; margin: 4px; text-shadow: none; background-color: #A9A9A9;}
+	.rtl .thumbnail-list.ui-listview a.ui-link-inherit {padding: 25px 113px 15px 115px; text-align: right;}
+.thumbnail-list.ui-listview p.date.ui-li-desc {padding-bottom: 15px; border-bottom: 1px #4F4C43 solid; margin-bottom: 14px;}
+.nameplate .thumbnail-list .ui-li-thumb {position: static; float: none; margin-right: 0; vertical-align: middle;}
+.nameplate .thumbnail-list .ui-li-heading {display: inline;}
+.nameplate .thumbnail-list.ui-listview a.ui-link-inherit {height: auto; padding: 0; overflow: visible; text-overflow: clip;background-color: #A9A9A9; color: #4F4C43;}
+.nameplate .thumbnail-list.ui-listview a.ui-link-inherit SPAN {width: 50%; padding: 0 10px; vertical-align: middle; display: inline-block; text-align: center;  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+/* article */
+.ui-body-d H3 {color: #000000;}
+.section-wrap {margin: 20px 10px 0 10px; border-bottom: 2px #B45F1A solid;}
+.section-wrap .disc {font-size: 12px;}
+.no-subMenu .section-wrap:first-child {margin-top: 0;}
+.article {margin: -3px 10px 0 10px;}
+.article.full-width {margin-left: 0; margin-right: 0;}
+.article P, .article B{font-size: 15px;}
+.article P, .article UL LI {line-height: 18px;}
+.article P {margin: 12px 0;}
+.article .article-title {font-size: 18px;}
+.article .back {display: inline-block;}
+.article .date {font-size: 13px;}
+
+.ui-content {display: block;}
+.main .thumbnail-list{margin: 0;}
+.main .thumbnail-list H3{color: #4F4C43;}
+.main .article H3{margin-bottom: -3px; font-size: 18px; font-weight: normal;}
+.main .article H3 a {color: #000000; font-weight: normal;}
+.main .ui-li-heading {font-size: 14px;}
+.main .image {margin: 14px 0;}
+.main .image img {width: 100%; padding: 4px; border: 1px #a9a9a9 solid;}
+.imgbtn .ui-btn {margin: 0 0 15px 0;}
+.nameplate .imgbtn {margin-bottom: 15px;}
+
+.nameplate .imgbtn .ui-btn {margin: 0 auto;}
+.nameplate .ui-btn-text A.ui-link-inherit {height: 60px;}
+.nameplate .article .paragraph {border-top: 1px solid #A9A9A9;}
+.nameplate .article .paragraph P:first-child {margin-top: 14px;}
+.nameplate .article H3 {margin-bottom: 14px;}
+.article .finance-info {border-top: 1px #A9A9A9 solid; border-bottom: 1px #A9A9A9 solid; padding: 10px 0;}
+
+/* gallery */
+.gallery {margin: 20px 0; overflow: hidden; padding: 2px 0 0 2px; border: 1px #a9a9a9 solid;}
+.gallery li {width:25%;}
+.video-gallery li{width: 50%;}
+.gallery li img {width:100%; margin: 0; padding: 0 2px 2px 0;}
+.imgnav {margin: 20px 0; padding: 4px; border: 1px #a9a9a9 solid;}
+.imgnav img {display: block; width: 100%;}
+.imgnav .prev, .imgnav .next {background: url('../img/lincoln/carousel_arrow.png') 0 0 no-repeat; top: 40%; height: 36px; width: 36px;}
+.bx-wrapper .bx-controls .bx-prev, .bx-wrapper .bx-controls .bx-next {background: url('../img/lincoln/carousel_arrow.png') 10px 0px no-repeat; left: 4px;}
+.bx-wrapper .bx-controls .bx-next {background-position: -10px -36px; left: auto; right: 4px;}
+.imgnav .prev {left: 4px;background-position:10px 0;}
+	.rtl .imgnav .prev {right: 4px; left: auto; background-position: -64px 0;}
+.imgnav .next {right: 4px; background-position: -10px -36px;}
+	.rtl .imgnav .next {left: 4px; right: auto; background-position: -0 0;}
+.pager {margin: 20px 10px; text-align: center;}
+	.rtl .pager {text-align: center;}
+.pager SPAN {font-size: 20px;}
+.gallery-subnav ul{display: table;width: 100%;padding:0;border-bottom:1px #908156 solid;margin:0px;}
+.gallery-subnav li{list-style-type:none; display:table-cell;width:50%;}
+.gallery-subnav li:active{background: #F7EFD8;}
+.gallery-subnav li:first-child a{border-left:none;}
+.gallery-subnav li:hover{background-color: #C87338;}
+.gallery-subnav li:hover a{color: #ffffff;}
+.gallery-subnav li > a{display:block;font-size:18px;color:#000;border-left:1px #908156 solid;text-align:center;padding:3px 5px; margin: 9px 0;text-decoration: none; font-family: "Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif;}
+
+/* specifications */
+.select-menu .ui-shadow {-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;}
+.select-menu .ui-focus, .select-menu .ui-btn:focus {-moz-box-shadow: none; -webkit-box-shadow: none ;box-shadow: none;}
+.select-menu .ui-btn-corner-all {-webkit-border-radius: 0; border-radius: 0;}
+.select-menu .ui-btn-up-c, .select-menu .ui-btn-hover-c {border: 0; font-weight: 400; text-shadow: none; color: #040707;}
+.select-menu a {background: #f5efcc;}
+.select-menu .ui-btn-inner {font-size: 20px; padding: 8px 20px 9px; font-weight: normal;}
+.select-menu .ui-select .ui-btn-up-d , .select-menu .ui-btn-corner-all {border: none;}
+.select-menu .ui-select .ui-btn-up-d , .select-menu .ui-select .ui-btn-hover-d {background: #F5EFCC;}
+.select-menu .ui-btn-hover-c:visited, .select-menu .ui-btn-hover-c:hover, .select-menu .ui-btn-hover-c a.ui-link-inherit {color: #040707;}
+.select-menu .ui-select .ui-btn-icon-right .ui-btn-inner, .select-menu .ui-select .ui-li-has-count .ui-btn-inner {padding-right: 20px;}
+.select-menu .ui-icon{box-shadow: none; background: url("../img/lincoln/arrow_down.png") no-repeat scroll right 4px;}
+
+.ui-popup-container {left: 50% !important; margin-left: -45%; width: 90% !important;}
+.ui-popup-container .ui-selectmenu {padding: 0;}
+.ui-popup-container .ui-overlay-shadow, .ui-popup-container .ui-selectmenu .ui-focus, .ui-popup-container .ui-selectmenu .ui-btn:focus {-moz-box-shadow: none);-webkit-box-shadow: none; box-shadow: none;}
+.ui-popup-container .ui-selectmenu.ui-body-a {border-radius: 0; border-top:none; border-bottom:none; border-left: 1px solid #a9a9a9; border-right: 1px solid #a9a9a9;}
+.ui-popup-container .ui-selectmenu .ui-btn-up-c {background: #fff; border-top: 1px solid #a9a9a9; font-weight: 400;}
+.ui-popup-container .ui-selectmenu .ui-btn-hover-c {background: #f5efcc; font-weight: 400;}
+.ui-popup-container .ui-selectmenu .ui-btn-up-d,
+.ui-popup-container .ui-selectmenu .ui-btn-hover-d {background: #F7EFD5;}
+.ui-popup-container .ui-selectmenu .ui-btn-active {border-top: 1px solid #a9a9a9; border-bottom: 0;font-weight: 400; text-shadow: none;}
+.ui-popup-container .ui-selectmenu .ui-btn-active:last-child {border-bottom: 1px solid #a9a9a9;}
+.ui-popup-container .ui-selectmenu .ui-btn-active.ui-li .ui-btn-inner a.ui-link-inherit {color: #B45F1A;}
+.ui-popup-container .ui-selectmenu .ui-li .ui-btn-inner a.ui-link-inherit {font-weight: normal; color: #040707; padding: 11px 12px; text-shadow: none;}
+.ui-popup-container .ui-selectmenu .ui-btn-inner {border-top: 0; font-size: 18px;}
+	.rtl .ui-popup-container .ui-selectmenu .ui-btn-inner {text-align: right;}
+
+.section .row .head {border-bottom: 1px solid #A9A9A9; cursor: pointer;}
+.section .row .head H4 {color: #000000; font-size: 14px; font-weight: 700; display: inline-block; margin: 0; padding: 11px 25px 11px 6px; background: url("../img/lincoln/tools_sprite.png") no-repeat scroll right -464px;}
+	.rtl .section .row .head H4 {padding: 11px 6px 11px 25px; background: url("../img/lincoln/tools_sprite-rtl.png") no-repeat scroll left -464px;}
+.section .row.active {border-bottom: 1px solid #A9A9A9;}
+.section .row.active:last-child {border-bottom: none;}
+.section .row.active .head H4 {color: #B45F1A; background-position: right -401px;}
+	.rtl .section .row.active .head H4 {background-position: left -401px;}
+.section .row TABLE {width: 100%; padding: 14px 0 10px 25px; margin: 0;}
+	.rtl .section .row TABLE {padding: 14px 25px 10px 0;}
+.section .row TABLE COL {width: 50%;}
+.section .row TABLE TH {text-align: left;}
+	.rtl .section .row TABLE TH {text-align: right;}
+.section .row TABLE TD {padding-left: 10px; text-align: center;}
+	.rtl .section .row TABLE TD {padding-right: 10px; padding-left: 0; text-align: center;}
+.section .row TABLE TH,
+.section .row TABLE TD {color: #514e45; list-style: none; font-weight: normal; vertical-align: top; padding-bottom: 6px; font-size: 14px; line-height: 20px;}
+.section .row TABLE TD .banned-link {color: #514e45; cursor: text; font-weight: normal;}
+
+/* Welcome Bar */
+.welcome-bar {background: #3b3b3b; border-bottom: 1px solid #a93f05; display: none; overflow: hidden; padding: 9px 0; font-size: 10px; margin-bottom: 10px;}
+.welcome-bar ul {float: right; font-size: 1.8em; list-style: none; overflow: hidden; padding: 0; margin: 0 6px;}
+	.rtl .welcome-bar ul {float: left;}
+.welcome-bar ul li {background: url("../img/lincoln/welcome-bar-divide-mobile.png") left 2px no-repeat; -ms-word-break: break-all; word-break: break-all; word-break: break-word; padding: 0 5px 0 12px; color: #fff; float: left; font-family: "Miller-B-Roman", "Times New Roman", SimHei, "黑体", STHeiti, "华文黑体", serif; text-align: right; text-shadow: none; line-height: 21px;}
+	.rtl .welcome-bar ul li {float: right; padding: 0 12px 0 5px; text-align: left; background: url("../img/lincoln/welcome-bar-divide-mobile-rtl.png") right 2px no-repeat}
+.welcome-bar ul li:first-child {background: none; padding: 0 5px 0 0;}
+	.rtl .welcome-bar ul li:first-child {padding: 0 0 0 5px;}
+.welcome-bar ul li a {color: #fff; font-size: 14px;}
+.welcome-bar ul li a.ui-link {color: #fff; font-family: "Miller-B-Roman", "Times New Roman", SimHei, "黑体", STHeiti, "华文黑体", serif; text-decoration: none; font-weight: 400;}
+.welcome-bar ul li a.ui-link:hover, .welcome-bar ul li a.ui-link:focus {color: #d3d3d3;}
+.welcome-bar .welcome-bar-inner {margin: 0 auto;}
+
+/* rotating banner */
+.main .bx-wrapper img{border: 0; padding: 0;}
+.main .image UL.slideritemwrap {list-style: none; padding: 0;}
+.bx-wrapper {border: 1px solid #A9A9A9; margin: 0; padding:4px;}
+.bx-wrapper .slideritemwrap {margin: 0;}
+.bx-wrapper .bx-viewport {border: 0; box-shadow: none; left: 0;}
+.bx-wrapper .bx-prev{background: url("../img/lincoln/tools_sprite.png") no-repeat 0 -1025px; left: 4px;}
+.bx-wrapper .bx-next{background: url("../img/lincoln/tools_sprite.png") no-repeat -215px -1025px; right: 4px;}
+.bx-wrapper .bx-controls-direction a{width: 36px;height: 36px;}
+.slideritemwrap .slider-desc p {margin: 5px 0;}
+.slideritemwrap .slider-desc a {color: #4F4C43; font-weight: normal;}
+.slideritemwrap .slider-desc a:hover {color: #4F4C43;}
+
+.image .slideritemwrap li {min-height: 1px; min-width: 1px;}
+
+/* mobile overlay */
+.mobile-overlay-wrap .article {margin: 0;}
+.mobile-overlay-wrap .body {padding: 10px 20px;}
+.mobile-overlay-wrap .ui-page{padding: 20px; background: url("../img/lincoln/mask.png");}
+.mobile-overlay-wrap .ui-header {right: -5px; top: -7px;}
+	.rtl.mobile-overlay-wrap .ui-header, .rtl .mobile-overlay-wrap .ui-header {left: -5px; right: auto;}
+.mobile-overlay-wrap .ui-header .ui-btn-right {border-radius: 0; margin-top: 0;}
+.mobile-overlay-wrap .content {padding: 5px; position: relative; top:36px; text-shadow: none;}
+.mobile-overlay-wrap .content .overlay-article P {font-size: 12px; margin: 0;}
+.mobile-overlay-wrap .content .overlay-article .title {color: #000000; padding-left: 20px;}
+	.rtl.mobile-overlay-wrap .content .overlay-article .title, .rtl .mobile-overlay-wrap .content .overlay-article .title {padding-right: 20px; padding-left: 0;}
+.mobile-overlay-wrap .menu-icon > SPAN {height: 40px; width: 40px; background: url("../img/lincoln/close.jpg") no-repeat;}
+.mobile-overlay-wrap .heading {background-color: #625D55;padding: 2px 17px;}
+.mobile-overlay-wrap .heading H1 {color: #FFFFFF;  padding: 0; margin: 0; font-family: "Miller-B-Roman", "Times New Roman", SimHei, "黑体", STHeiti, "华文黑体", serif;}
+
+/*Override jQuery Mobile*/
+.ui-btn-up-c, .ui-btn-hover-c:visited, .ui-btn-hover-c:hover, .ui-btn-hover-c a.ui-link-inherit {background: none}
+
+/*CTA Buttons*/
+.cta {display: block; height: 163px; width: 163px; text-indent: -99em; overflow: hidden; margin: 15px auto; background-size: 350px 163px;}
+.cta:hover, .cta:focus {background-position: -187px 0; background-repeat: no-repeat;}
+
+/* jQuery Mobile error overlay */
+.ui-loader.ui-loader-verbose {-webkit-border-radius: 0; border-radius: 0; background: #fff; opacity: 1; border: 2px solid #B45F1A; font-family: "ProximaNova-Reg-Roman", Arial, SimSun, "宋体", STSong, "华文宋体", sans-serif; color: #B45F1A; width: 290px; margin-left: -145px;}
+
+/*jia this*/
+.share-mobile > A, .share-mobile A SPAN {display: block;}
+.share-mobile > A {height: 40px; padding: 4px 12px 4px 52px; color: #000000; line-height: 32px; font-size: 20px; cursor: pointer; border-bottom: 1px solid #A9A9A9; background: url("../img/lincoln/tools_sprite.png") no-repeat;}
+	.rtl .share-mobile > A {padding: 4px 52px 4px 12px; background: url("../img/lincoln/share-btns-rtl.png") left 0 no-repeat;}
+.share-mobile > A:first-child {border-top: 1px solid #A9A9A9;}
+.share-mobile > A SPAN {height: 32px; color: #000000; background: url("../img/lincoln/tools_sprite.png") no-repeat scroll right -468px;}
+	.rtl .share-mobile > A SPAN {background: url("../img/lincoln/tools_sprite-rtl.png") no-repeat scroll left -468px;}
+.share-mobile .jiathis_button_tsina {background-position: -204px -1181px;}
+	.rtl .share-mobile .jiathis_button_tsina {background-position: right -36px;}
+.share-mobile .jiathis_button_tqq {background-position: -204px -1221px;}
+	.rtl .share-mobile .jiathis_button_tqq {background-position: right -76px;}
+.share-mobile .jiathis_button_renren {background-position: -204px -1261px;}
+	.rtl .share-mobile .jiathis_button_renren {background-position: right -116px;}
+.share-mobile .jiathis_button_douban {background-position: -204px -1301px;}
+	.rtl .share-mobile .jiathis_button_douban {background-position: right -156px;}
+.share-mobile .jiathis_button_weixin{background-position: -204px -1131px;}
+	.rtl .share-mobile .jiathis_button_weixin{background-position: right 3px;}
+.share-mobile .facebook-icon,
+.share-mobile .jiathis_button_fb {background-position: -204px -1700px;}
+	.rtl .share-mobile .facebook-icon,
+	.rtl .share-mobile .jiathis_button_fb {background-position: right -236px;}
+.share-mobile .twitter-icon,
+.share-mobile .jiathis_button_twitter {background-position: -204px -1902px;}
+	.rtl .share-mobile .twitter-icon,
+	.rtl .share-mobile .jiathis_button_twitter {background-position: right -276px;}
+
+.share-mobile .youtube-icon {background-position: -204px -1800px;}
+	.rtl .share-mobile .youtube-icon {background-position: right -316px;}
+
+.share-mobile a.ui-link,
+.share-mobile a.ui-link:hover {color: #000;}
+
+	.rtl #lincoln-accordion > ul > li .tab-area .part-one {padding: 0 15px 0 0;}
+	.rtl #lincoln-accordion > ul > li .tab-area .part-two {background: url("../img/lincoln/arrow_left.png") no-repeat scroll left center rgba(0, 0, 0, 0); float: left; margin: 0 0 0 10px; padding: 0 0 0 15px; text-align: left;}
+	.rtl #lincoln-accordion > ul > li.active .tab-area .part-two {background: url("../img/lincoln/arrow_down.png") no-repeat scroll left center rgba(0, 0, 0, 0);}
+
+
+
+/* landing page */
+.landing .ui-header .ui-btn-right, .landing .ui-header.ui-bar-a, .landing .ui-header .ui-btn-left {display: none;}
+.landing .ui-header.ui-bar-c.badge {margin: 13px 0 14px;}
+.landing h2 {text-align: center; font-size: 1.25em; font-weight: 400; margin: 14px 0 12px; font-family: "ProximaNova-Reg-Roman",Arial,SimSun,"宋体",STSong,"华文宋体",sans-serif;}
+.landing .landing-map {padding: 0 25px 5px;}
+.landing .locale .ui-field-contain label {color: #333; margin: 0 0 6px; float: left; font-size: 1.286em;}
+.landing .locale .ui-field-contain label.rtl-label {direction: rtl; float: right;}
+.landing .locale .ui-field-contain .ui-btn-inner {padding: 0.9em;}
+
+.landing .locale .ui-br {margin: 14px 0 30px;}
+.landing .ui-select .ui-btn-inner {font-weight: 400; font-size: 0.857em;}
+.landing .ui-select .ui-btn-text {color: #bf8166; font-size: 1.333em;}
+.landing .locale .submit {margin: 2.5em auto 4.2em; width: 80%;}
+.landing .locale div.ui-select {clear: both;}
+.landing .locale {position: relative;}
+.landing p.error {position: absolute; bottom: -24px; padding: 0; width: 100%; text-align: center;}
+.landing p.error.rtl {bottom: -44px;}
+.landing .locale .submit .ui-btn-inner .ui-btn-text {color: #fff; font-size: 1.25em; font-family: "Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif; font-weight: 400;}
+.landing .locale .submit .ui-btn-inner {background: #000; border-radius: 0; border-top: 0;}
+.landing .locale .ui-btn {border-radius: 0;}
+.landing .locale .ui-shadow {box-shadow: none;}
+.landing .locale .ui-btn-active {border: 1px solid #bbb;}
+.landing .locale .ui-btn-hover-c {background: transparent none;}
+.landing .locale .ui-select .ui-icon {box-shadow: none; background: url("../img/lincoln/arrow_down.png") no-repeat scroll right 4px;}
+.landing .locale .ui-btn-up-b, .landing .locale .ui-btn-down-b, .landing .locale .ui-btn-hover-b {border: 1px solid #000;}
+
+/* color picker */
+.notify {color: #4F4C43;}
+
+/*dealer*/
+.dealer .ui-btn-up-c, .dealer .ui-btn-hover-c:visited, .dealer .ui-btn-hover-c:hover, .dealer .ui-btn-hover-c a.ui-link-inherit{border:1px solid #ccc;background:none repeat scroll 0 0 rgba(0, 0, 0, 0);}
+.dealer .ui-btn-up-d, .dealer .ui-btn-hover-d:visited, .dealer .ui-btn-hover-d:hover, .dealer .ui-btn-hover-d a.ui-link-inherit{border:1px solid #ccc;background:none repeat scroll 0 0 rgba(0, 0, 0, 0);}
+.dealer .submit {margin: 2.5em auto 4.2em; width: 80%;}
+.dealer .submit .ui-btn-inner .ui-btn-text {color: #fff; font-size: 1.25em; font-family: "Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif; font-weight: 400;}
+.dealer .submit .ui-btn-inner {background: #000; border-radius: 0; border-top: 0;}
+.dealer .ui-select .ui-btn-inner {font-weight: 400; font-size: 0.857em;}
+.dealer .ui-select .ui-btn-text {color: #bf8166; font-size: 1.333em;}
+.dealer  div.ui-select {clear: both;}
+.dealer .ui-btn {border-radius: 0;}
+.dealer .ui-shadow {box-shadow: none;}
+.dealer .ui-btn-active {border: 1px solid #bbb;}
+.dealer .ui-btn-hover-c,.dealer .ui-btn-hover-d {background: transparent none;}
+.dealer .ui-select .ui-icon {box-shadow: none; background: url("../img/lincoln/arrow_down.png") no-repeat scroll right 4px;}
+.dealer .ui-field-contain label {color: #333; margin: 0 0 6px; float: left; font-size: 1.286em;}
+.dealer .ui-field-contain label.rtl-label {direction: rtl; float: right;}
+.dealer .ui-field-contain .ui-btn-inner {padding: 0.9em;}
+.dealerlist .alcenter .ui-btn-text{font-weight:bold;}
+.dealerlist .alcenter {margin: 2.5em auto 4.2em; width: 80%;}
+.dealerlist .alcenter .ui-btn-inner .ui-btn-text {color: #fff; font-size: 1.25em; font-family: "Miller-B-Roman",Times New Roman,SimHei,"黑体",STHeiti,"华文黑体",serif; font-weight: 400;}
+.dealerlist .alcenter .ui-btn-inner {background: #000; border-radius: 0; border-top: 0;}
+
+/*dealer result*/
+.locator-result .dealerlist a.dl-convertToNativeMapUrl{color: #B45F1A;}
+.locator-result .dealerlist .tel a{color: #B45F1A;}
+.locator-result .dealerlist .fax a{color: #B45F1A;}
+.locator-result .dealerlist .email a{color: #B45F1A;}
+/* Retina/hi-res-specific stuff here */
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) {
+
+}

@@ -1,0 +1,49 @@
+{
+  "derivative" : {
+    "model" : "FIESTA",
+    "year" : "2015",
+    "derivative" : "Fiesta CL 5 Door",
+    "configuration" : "M/T 4 Puertas",
+    "id" : 1178856483605,
+    "imageUrl" : "/servlet/Satellite?blobtable=DFYImage&blobcol=urlpicture&blobheadervalue1=max-age%253D1000&ssbinary=true&blobheadername1=Cache-Control&blobwhere=1178856510725&blobkey=id",
+    "price" : 182200.0,
+    "terms" : [ {
+      "term" : 12,
+      "downpayment" : 36000.0,
+      "downpayment_percent" : 16.0,
+      "standard" : {
+        "ppm" : 10000.0,
+        "rate" : 9.0,
+        "cat" : 10.0
+      }
+    }, {
+      "term" : 18,
+      "downpayment" : 36000.0,
+      "downpayment_percent" : 16.0,
+      "standard" : {
+        "ppm" : 9000.0,
+        "rate" : 9.1,
+        "cat" : 10.1
+      },
+      "subvented" : {
+        "ppm" : 8500.0,
+        "rate" : 9.0,
+        "cat" : 10.0
+      }
+    }, {
+      "term" : 24,
+      "downpayment" : 36000.0,
+      "downpayment_percent" : 16.0,
+      "standard" : {
+        "ppm" : 8000.0,
+        "rate" : 9.2,
+        "cat" : 10.2
+      },
+      "subvented" : {
+        "ppm" : 7500.0,
+        "rate" : 9.1,
+        "cat" : 10.1
+      }
+    } ]
+  }
+}

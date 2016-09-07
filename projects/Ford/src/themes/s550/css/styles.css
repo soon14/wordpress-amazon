@@ -1,0 +1,3776 @@
+/* GWS Version v3.14 */
+
+/*-------- font-regular --------*/
+/*!
+This CSS resource incorporates links to font software which is the valuable copyrighted property of WebType LLC,
+The Font Bureau, Monotype Imaging and/or their suppliers. You may not attempt to copy, install, redistribute,
+convert, modify or reverse engineer this font software. Please contact WebType with any questions:
+http://www.webtype.com
+*/
+
+@font-face {  
+	font-family: 'fordngbs-antenna';
+	src: url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/regular.eot ); /* IE */
+	src: local(â˜º), /* non-IE */  
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/regular.woff ) format("woff"), 
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/regular.ttf ) format("truetype"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/regular.svg#webfont3RmT6iw4) format("svg");
+}
+
+/* REMOVED @font-face declaration
+ * IE *sometimes* overwrites the original 'fordngbs-antenna' font-family with this italicized one
+ * which produces inconsistent rendering issues. Please use the 'fordngbs-antenna-italic'
+ * font-family for the italicized version */
+/* @font-face {  
+	font-family: 'fordngbs-antenna';
+	font-style: italic;
+	src: url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/italic.eot ); / IE /
+	src: local(â˜º), / non-IE /
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/italic.woff ) format("woff"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/italic.ttf ) format("truetype"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/italic.svg#webfontWdmQOeRu ) format("svg");
+} */
+
+@font-face {  /* DEPRECATED: use font-family: fordngbs-antenna-bold; font-style: italic; */
+	font-family: 'fordngbs-antenna-bold-italic';
+	src: url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/bolditalic.eot ); /* IE */
+	src: local(â˜º), /* non-IE */
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/bolditalic.woff ) format("woff"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/bolditalic.ttf ) format("truetype"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/bolditalic.svg#webfontnRgXoHU6 ) format("svg");
+}
+
+@font-face {  
+	font-family: 'fordngbs-antenna-bold';
+	src: url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/bold.eot ); /* IE */
+	src: local(â˜º), /* non-IE */
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/bold.woff ) format("woff"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/bold.ttf ) format("truetype"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/bold.svg#webfontEgJeXWMS) format("svg");
+}
+
+@font-face {  
+	font-family: 'fordngbs-antenna-bold';
+	font-style: italic;
+	src: url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/bolditalic.eot ); /* IE */
+	src: local(â˜º), /* non-IE */
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/bolditalic.woff ) format("woff"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/bolditalic.ttf ) format("truetype"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/bolditalic.svg#webfontnRgXoHU6 ) format("svg");
+}
+
+@font-face {
+	/* THIS IS A STAND-IN FOR SEMIBOLD, TO BE REPLACED LATER WITH THE ACTUAL FONT */
+	font-family: 'fordngbs-antenna-semibold';
+	src: url( http://www.ford.com/global/2015mustang/fonts/Antenna/small/bold.eot ); /* IE */
+	src: local(â˜º), /* non-IE */
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/small/bold.woff ) format("woff"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/small/bold.ttf ) format("truetype"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/small/bold.svg#webfontEgJeXWMS) format("svg");
+}
+
+@font-face {  
+	/* THIS IS A STAND-IN FOR SEMIBOLD, TO BE REPLACED LATER WITH THE ACTUAL FONT */
+	font-family: 'fordngbs-antenna-semibold';
+	font-style: italic;
+	src: url( http://www.ford.com/global/2015mustang/fonts/Antenna/small/bolditalic.eot ); /* IE */
+	src: local(â˜º), /* non-IE */
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/small/bolditalic.woff ) format("woff"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/small/bolditalic.ttf ) format("truetype"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/small/bolditalic.svg#webfontnRgXoHU6 ) format("svg");
+}
+
+@font-face {  /* DEPRECATED: use font-family: fordngbs-antenna; font-style: italic; */
+	font-family: 'fordngbs-antenna-italic';
+	src: url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/italic.eot ); /* IE */
+	src: local(â˜º), /* non-IE */
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/italic.woff ) format("woff"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/italic.ttf ) format("truetype"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/regular/italic.svg#webfontWdmQOeRu ) format("svg");
+}
+
+@font-face {
+	font-family: 'fordngbs-antenna-light';
+	src: url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/light.eot); /* IE */  
+	src: local(â˜º), /* non-IE */
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/light.woff) format("woff"),
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/light.ttf) format("truetype"),
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/light.svg#web) format("svg");
+}
+
+@font-face {
+	font-family: 'fordngbs-antenna-light';
+	font-style: italic;
+	src: url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/lightitalic.eot); /* IE */  
+	src: local(â˜º), /* non-IE */
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/lightitalic.woff) format("woff"),
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/lightitalic.ttf) format("truetype"),
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/lightitalic.svg#web) format("svg");
+}
+
+@font-face {
+	font-family: 'fordngbs-antenna-extra-light';
+	src: url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/extralight.eot); /* IE */  
+	src: local(â˜º), /* non-IE */
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/extralight.woff) format("woff"),
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/extralight.ttf) format("truetype"),
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/extralight.svg#web) format("svg");
+}
+
+@font-face {
+	font-family: 'fordngbs-antenna-extra-light';
+	font-style: italic;
+	src: url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/extralightitalic.eot); /* IE */  
+	src: local(â˜º), /* non-IE */
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/extralightitalic.woff) format("woff"),
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/extralightitalic.ttf) format("truetype"),
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/extralightitalic.svg#web) format("svg");
+}
+
+@font-face {
+	font-family: 'fordngbs-antenna-medium';
+	src: url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/medium.eot); /* IE */  
+	src: local(â˜º), /* non-IE */
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/medium.woff) format("woff"),
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/medium.ttf) format("truetype"),
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/medium.svg#web) format("svg");
+}
+
+@font-face {
+	font-family: 'fordngbs-antenna-medium';
+	font-style: italic;
+	src: url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/mediumitalic.eot); /* IE */  
+	src: local(â˜º), /* non-IE */
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/mediumitalic.woff) format("woff"),
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/mediumitalic.ttf) format("truetype"),
+		url(http://www.ford.com/global/2015mustang/fonts/Antenna/regular/mediumitalic.svg#web) format("svg");
+}
+/*-------- font-condensed --------*/
+/*!
+This CSS resource incorporates links to font software which is the valuable copyrighted property of WebType LLC,
+The Font Bureau, Monotype Imaging and/or their suppliers. You may not attempt to copy, install, redistribute,
+convert, modify or reverse engineer this font software. Please contact WebType with any questions:
+http://www.webtype.com
+*/
+
+@font-face {
+	font-family: 'fordngbs-antenna-cond-thin'; /* Names need to be less than 32 characters to work in IE */
+	src: url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/thin.eot ); /* IE */
+	src: local(â˜º), /* non-IE */ 
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/thin.woff ) format("woff"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/thin.ttf ) format("truetype"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/thin.svg#web ) format("svg");
+}
+
+@font-face {
+	font-family: 'fordngbs-antenna-cond-thin'; /* Names need to be less than 32 characters to work in IE */
+	font-style: italic;
+	src: url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/thinitalic.eot ); /* IE */
+	src: local(â˜º), /* non-IE */ 
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/thinitalic.woff ) format("woff"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/thinitalic.ttf ) format("truetype"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/thinitalic.svg#web ) format("svg");
+}
+
+@font-face {
+	font-family: 'fordngbs-antenna-cond'; /* Names need to be less than 32 characters to work in IE */
+	src: url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/regular.eot ); /* IE */
+	src: local(â˜º), /* non-IE */ 
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/regular.woff ) format("woff"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/regular.ttf ) format("truetype"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/regular.svg#web ) format("svg");
+}
+
+@font-face {
+	font-family: 'fordngbs-antenna-cond'; /* Names need to be less than 32 characters to work in IE */
+	font-style: italic;
+	src: url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/regularitalic.eot ); /* IE */
+	src: local(â˜º), /* non-IE */ 
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/regularitalic.woff ) format("woff"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/regularitalic.ttf ) format("truetype"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/regularitalic.svg#web ) format("svg");
+}
+
+@font-face {
+	font-family: 'fordngbs-antenna-cond-bold'; /* Names need to be less than 32 characters to work in IE */
+	src: url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/bold.eot ); /* IE */
+	src: local(â˜º), /* non-IE */ 
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/bold.woff ) format("woff"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/bold.ttf ) format("truetype"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/bold.svg#web ) format("svg");
+}
+
+@font-face {
+	font-family: 'fordngbs-antenna-cond-bold'; /* Names need to be less than 32 characters to work in IE */
+	font-style: italic;
+	src: url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/bolditalic.eot ); /* IE */
+	src: local(â˜º), /* non-IE */ 
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/bolditalic.woff ) format("woff"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/bolditalic.ttf ) format("truetype"),
+		url( http://www.ford.com/global/2015mustang/fonts/Antenna/condensed/bolditalic.svg#web ) format("svg");
+}
+/*-------- mustangreveal --------*/
+/* reset rules for global with awfull reset.css */
+
+/* Widgets overrides */
+.carousel-slider-list,
+.gallery-slider .gallery-wrapper {
+    width: 200%;
+}
+
+.carousel-item + .carousel-item {
+    display: block;
+}
+
+/* Mustang */
+
+#page {
+    max-width: 100%;
+    min-width: 320px;
+}
+
+#s550-container h1, h2, h3, h4, h5, p, a, span {
+	font-style: normal;
+}
+
+ #view {
+    width: 100%;
+}
+
+ .view-bd {
+    margin: 0px !important;
+}
+
+.mobile-only {
+    display: none !important;
+}
+
+.desktop-only {
+    display: block;
+}
+
+#s550-container {
+    position: relative;
+}
+
+.ui-mobile #s550-container {
+    width: 100% !important;
+}
+
+.s550-bounds {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+}
+
+.s550-section.hidden {
+    visibility: hidden;
+}
+
+.s550-section img {
+    max-width: 100%;
+}
+
+.s550-section .clear {
+    clear: both;
+}
+
+.s550-section .first {
+    margin-left: 0 !important;
+}
+
+.s550-section .last {
+    margin-right: 0 !important;
+}
+
+.s550-section .disclaimer {
+    font-size: 0.8em;
+    display: block;
+    margin-top: 10px;
+}
+
+.s550-section sup {
+	font-style: normal;
+    font-size: 70%;
+    vertical-align: text-top;
+    line-height: 84%;
+}
+
+.s550-section br {
+    line-height: 1em;
+}
+
+.s550-section,
+#s550-view360,
+#s550-getupdates {
+    position: relative;
+	padding-top: 80px;
+}
+
+.s550-section .collapsible {
+    /*padding: 0 0 60px*/
+}
+
+.s550-section .heading,
+#s550-features .feature-heading {
+    font-family: fordngbs-antenna-extra-light,Helvetica,Arial,sans-serif;
+    font-size: 42px;
+    color: #7a7a7a;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.s550-section .heading {
+    margin-bottom: 80px;
+}
+
+#s550-gallery {
+    overflow: hidden;
+}
+
+#s550-features .feature-heading {
+    margin-bottom: 10px;
+}
+
+.s550-section .body-text {
+	font-family: fordngbs-antenna-light,Helvetica,Arial,sans-serif;
+	font-size: 13px;
+	color: #707070;
+	line-height: 1.5em;
+}
+
+.autofill-stickynav .get-updates-link,
+#s550-getupdates .get-updates-link {
+	font-family: fordngbs-antenna-extra-light,Helvetica,Arial,sans-serif;
+    padding: 7px 10px;
+	border-radius: 4px;
+	background-color: #0165A0;
+	font-size: 13px !important;
+	text-transform: uppercase;
+	color: #fff !important;
+    text-decoration: none;
+}
+
+.getupdates-button.last {
+	float: right;
+}
+
+.autofill-stickynav .get-updates-link:hover,
+#s550-getupdates .get-updates-link:hover {
+	background-color: #0081CE;
+}
+
+/* billboard */
+#s550-billboard {
+    padding-top: 0px !important;
+}
+
+#s550-billboard .carousel-text {
+	margin-left: -100%;
+}
+
+#s550-billboard .carousel-disclaimer {
+	bottom: 3%;
+	font-family: fordngbs-antenna-light,Helvetica,Arial,sans-serif;
+	font-size: 11px;
+	color: #ccc;
+    text-align: center;
+}
+
+#s550-billboard .carousel-text {
+	font-family: fordngbs-antenna-light,Helvetica,Arial,sans-serif;
+	text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+}
+
+#s550-billboard .carousel-heading {
+	font-family: fordngbs-antenna-medium,Helvetica,Arial,sans-serif;
+    line-height: 1em;
+    text-align: center;
+    color: #fff;
+}
+
+#s550-billboard .carousel-slider,
+#s550-billboard .carousel-item {
+	width: 100%;
+}
+
+#s550-billboard .carousel-item + .carousel-item {
+	display: none;
+}
+
+#s550-billboard .carousel-enabled .carousel-item + .carousel-item {
+	display: block;
+}
+
+/* view360 */
+
+
+.view360 {
+	overflow: hidden;
+}
+.view360-player-container {
+	margin-top: -2px;
+}
+
+.view360 .picker-label,
+.view360 .view360-modifier-label {
+	display: none !important;
+}
+
+.view360-trims img {
+	height: 40px;
+}
+
+#s550-view360-view .view360-color-picker li.active {
+    background: url(http://www.ford.com/global/2015mustang/img/view360/active.png) no-repeat 6px 6px;
+}
+
+#s550-view360-view .view360-color-picker li.light.active {
+	background-image: url(http://www.ford.com/global/2015mustang/img/view360/gray_active.png);
+}
+
+.view360-color-picker .tooltip-title {
+	margin-left: 0 !important;
+
+	text-shadow: none;
+	font-family: fordngbs-antenna-light,Helvetica,Arial,sans-serif;
+	color: #aaa;
+}
+
+.view360-modifier li span {
+	visibility: hidden;
+
+	font-family: fordngbs-antenna-light,Helvetica,Arial,sans-serif;
+	color: #aaa;
+}
+
+.view360-modifier li.active span {
+	visibility: visible;
+}
+
+.view360 .view360-modifier li.active img {
+	opacity: 1;
+}
+
+.view360 .view360-backgrounds {
+	display: none !important;
+}
+
+.view360 .view360-disclaimer {
+	font-family: fordngbs-antenna,Helvetica,Arial,sans-serif;
+}
+
+.view360 .view360-arrow-left,
+.view360 .view360-arrow-right {
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+	background: url(http://www.ford.com/global/2015mustang/img/view360/arrows.png) no-repeat 0 0;
+}
+
+.view360 .view360-arrow-right {
+	background-position: -30px 0;
+}
+
+/* view360 */
+
+
+
+
+
+
+/* features */
+#s550-features .parallax-container {
+	width: 100%;
+}
+#s550-features .features-plate {
+	position: relative;
+	padding-bottom: 80px;
+}
+
+#s550-features .features-plate.last {
+	padding-bottom: 0;
+}
+
+#s550-features .feature-text {
+	margin: 0 auto 80px;
+	text-align: center;
+}
+
+#s550-features .feature-image {
+	width: 100%;
+	display: block;
+}
+
+#s550-features .feature-text.hidden {
+	display: none;
+}
+
+#s550-features .feature-caption {
+	width: 43%;
+	margin: 0px auto 50px auto;
+}
+
+#s550-features .feature-list {
+	width: 70%;
+	margin: 0 auto;
+	display: none;
+	font-family: fordngbs-antenna-light,Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	text-align: left;
+	line-height: 22px;
+	color: #858585;
+}
+#s550-features .feature-item {
+	width: 46%;
+	padding: 0 2%;
+	margin: 0 0 50px;
+	line-height: 22px;
+	text-align: left;
+	float: left;
+}
+
+	.rtl #s550-features .feature-item {
+    	text-align: right;
+    	float: right;
+	}
+
+	.ui-mobile .rtl #s550-features .feature-item {
+    	text-align: center;
+    	float: none;
+	}
+
+#s550-features .feature-item .item-title {
+	font-family: fordngbs-antenna-bold,Helvetica,Arial,sans-serif;
+	font-weight: normal !important;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+#s550-features .feature-item p {
+    font-size: 13px;
+}
+
+#s550-features .feature-buttons {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    clear: both;
+}
+
+#s550-features .feature-buttons:hover {
+	opacity: 0.75;
+}
+
+#s550-features .feature-buttons span {
+	display: inline-block;
+	font-family: fordngbs-antenna-bold,Helvetica,Arial,sans-serif;
+	font-size: 13px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #707070;
+	border-radius: 3px;
+	border: 1px solid #707070;
+	cursor: pointer;
+    padding: 0 30px;
+}
+
+#s550-features .feature-clear {
+    width: 100%;
+    clear: both;
+}
+
+/* text accordion */
+#s550-features .feature-buttons .button-close {
+	text-indent: 16px;
+	background: url(http://www.ford.com/global/2015mustang/img/reveal-feature-close.png) 30px 9px  no-repeat;
+}
+
+#s550-features .feature-buttons.open .button-close,
+#s550-features .feature-buttons .button-open {
+	display: none;
+}
+
+#s550-features .feature-buttons.open .button-open,
+#s550-features .feature-buttons .button-close {
+	display: inline-block;
+}
+/* text accordion */
+
+.reveal-slider .limit-border {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 100%;
+	margin: -2px; /* magic to center inside border 2px */
+
+	border: 2px solid #aaa;
+	border-radius: 3px;
+}
+
+
+/* features */
+
+
+/* buzz */
+
+.carousel-slider-list {
+	height: 380px;
+}
+#s550-buzz .carousel-navigation {
+	display: none;
+}
+
+#s550-buzz .carousel-prev,
+#s550-buzz .carousel-next,
+#s550-social-feed .carousel-prev,
+#s550-social-feed .carousel-next {
+	background: url('http://www.ford.com/global/2015mustang/img/carousel-arrows.png') 0px 0px;
+	width: 46px;
+	height: 46px;
+	margin-top: -18px;
+}
+
+#s550-buzz .carousel-prev,
+#s550-social-feed .carousel-prev {
+    left: 20px;
+}
+
+#s550-buzz .carousel-next,
+#s550-social-feed .carousel-next {
+	background-position: -45px 0px;
+    right: 20px;
+}
+
+#s550-buzz-slider .carousel-item {
+	width: 470px;
+	height: 380px;
+}
+
+.buzz-item {
+	display: block;
+	width: 350px;
+	height: 100%;
+	float: left;
+	padding: 40px 60px 0;
+	background: url(http://www.ford.com/global/2015mustang/img/buzz/buzz-gray-box.jpg);
+	font-family: fordngbs-antenna,Helvetica,Arial,sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+    border-left: 1px solid #fff;
+}
+
+.buzz-item small {
+	font-size: 10px;
+}
+
+.buzz-item h2 {
+	margin-top: 20px;
+	margin-bottom: 6px;
+
+	font-family: fordngbs-antenna-bold;
+	font-size: 23px;
+	line-height: 19px;
+	text-transform: capitalize;
+}
+
+.buzz-item h3 {
+	margin-top: 16px;
+	margin-bottom: 8px;
+
+	font-size: 16px;
+}
+
+.buzz-item p {
+	margin-bottom: 30px;
+	overflow: hidden;
+	max-height: 110px;
+
+	font-family: fordngbs-antenna-light;
+	line-height: 18px;
+}
+
+#s550-billboard-slider .carousel-cta {
+	position: absolute;
+	width: 100%;
+	bottom: 12%;
+}
+
+.buzz-item a {
+	padding: 4px 20px;
+	border-radius: 4px;
+	border: 1px solid #fff;
+
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+/* social feed */
+#s550-social-feed .carousel-navigation {
+	display: none;
+}
+
+#s550-social-feed {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 0px !important;
+    border-top: 1px solid #fff;
+}
+#s550-social-feed ul .carousel-item {
+    width: 340px;
+    height: 340px;
+    float: left;
+}
+#s550-social-feed ul .carousel-item a:hover {
+    text-decoration: underline;
+}
+#s550-social-feed ul .carousel-item div {
+    color: white;
+    padding: 60px 40px;
+    font-size: 13px;
+    height: 220px;
+    width: 259px;
+    border-left: 1px solid #fff;
+    text-align: left;
+    line-height: 1.5em;
+}
+#s550-social-feed ul .carousel-item.tw div {
+    background: #0084B4;
+}
+#s550-social-feed ul .carousel-item.tw iframe {
+   margin: 0px !important;
+}
+#s550-social-feed ul .carousel-item.tw iframe .follow-button {
+   display: none !important;
+}
+#s550-social-feed ul .carousel-item.fb div {
+    background: #3b5998;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+#s550-social-feed ul .carousel-item .social-icon {
+    display: inline-block;
+    width: 19px;
+    height: 18px;
+    float: left;
+}
+#s550-social-feed ul .carousel-item.fb .social-icon {
+    background: url(http://www.ford.com/global/2015mustang/img/facebook_icon_white.png)
+}
+#s550-social-feed ul .carousel-item.tw .social-icon {
+    background: url(http://www.ford.com/global/2015mustang/img/twitter_icon_white.png)
+}
+#s550-social-feed ul .carousel-item .social-user {
+    font-family: fordngbs-antenna;
+    font-size: 14px;
+    display: inline-block;
+    color: #fff;
+    width: 180px;
+    margin-left: 10px;
+}
+#s550-social-feed ul .carousel-item .social-text {
+    font-family: fordngbs-antenna-light;
+    color: #fff;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+#s550-social-feed .disclaimer {
+    width: 700px;
+    margin: 30px auto;
+    text-align: center;
+    font-family: fordngbs-antenna-light,Helvetica,Arial,sans-serif;
+    color: #7a7a7a;
+}
+#s550-social-feed .disclaimer a {
+    color: #7a7a7a;
+    font-weight: bold;
+}
+#s550-social-feed .social-buttons {
+    width: 100%;
+    text-align: center;
+}
+#s550-social-feed .social-buttons li {
+    display: inline-block;
+    margin: 0 1%;
+}
+#s550-social-feed .social-buttons li .social-button {
+    width: 156px;
+    height: 34px;
+    display: block;
+    margin: 0 auto;
+}
+#s550-social-feed .social-buttons li .social-button.fb {
+    background: url(http://www.ford.com/global/2015mustang/img/facebook_button.png);
+}
+#s550-social-feed .social-buttons li .social-button.tw {
+    background: url(http://www.ford.com/global/2015mustang/img/twitter_button.png);
+}
+
+/* need for speed */
+
+#s550-inamustang {
+	padding-top: 15px !important;
+}
+
+#s550-inamustang .media-container,
+#s550-nfsr .media-container {
+	position: relative;
+}
+
+#s550-inamustang .inamustang-content,
+#s550-nfsr .nfsr-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+#s550-inamustang .inamustang-content-centered,
+#s550-nfsr .nfsr-content-centered {
+	margin: 0 auto;
+	color: #fff;
+	width: 660px;
+	text-align: center;
+	margin-top: 13%;
+}
+
+#s550-inamustang .inamustang-content-centered {
+	margin-top: 26%;
+}
+
+#s550-inamustang .inamustang-heading,
+#s550-nfsr .nfsr-heading {
+	font-family: fordngbs-antenna-medium,Helvetica,Arial,sans-serif;
+	font-size: 42px;
+	line-height: 40px;
+}
+
+#s550-inamustang .inamustang-caption,
+#s550-nfsr .nfsr-caption {
+	font-family: fordngbs-antenna,Helvetica,Arial,sans-serif;
+	font-size: 16px;
+	width: 500px;
+	display: inline-block;
+	line-height: 25px;
+	margin-top: 3%;
+	margin-bottom: 8%;
+}
+
+#s550-inamustang .inamustang-caption {
+	margin-top: 4%;
+	margin-bottom: 0;
+}
+
+#s550-inamustang .inamustang-caption em,
+#s550-nfsr .nfsr-caption em {
+	font-style: italic;
+	font-weight: normal;
+}
+
+#s550-inamustang .inamustang-caption em sup,
+#s550-nfsr .nfsr-caption em sup {
+	font-style: italic !important;
+}
+
+#s550-inamustang .inamustang-cta,
+#s550-nfsr .nfsr-cta {
+	font-family: fordngbs-antenna,Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	color: #fff;
+	border: 1px solid #fff;
+	display: inline-block;
+	padding: 10px;
+	text-transform: uppercase;
+	margin: 4% auto 0 auto;
+}
+
+#s550-inamustang .inamustang-cta {
+	margin-top: 2%;
+}
+
+#s550-inamustang .media-container img,
+#s550-nfsr .media-container img {
+	width: 100%;
+}
+
+
+/* wall/mustanginspires */
+
+.s550-wall {
+	/*display: none;*/
+	position: relative;
+	text-align: center;
+}
+
+.wall-container {
+	position: relative;
+}
+
+.wall-container .mustang-badge {
+	margin: 0 auto 5px auto;
+}
+
+.wall-background-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #e10010;
+	opacity: .8;
+
+	display: none;
+}
+
+.wall-background-image {
+	width: 100%;
+}
+
+
+.wall-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    margin-top: 12%;
+	z-index: 10;
+}
+
+.wall-content .heading {
+	margin-bottom: 0px;
+	font-family: fordngbs-antenna-medium,Helvetica,Arial,sans-serif;
+	color: #fff;
+    line-height: 40px;
+}
+
+.wall-content a {
+	color: #fff;
+}
+
+.wall-content .wall-cta {
+    margin-top: 10%;
+}
+
+#s550-billboard-slider .carousel-cta a,
+.wall-content .wall-cta a {
+	display: inline-block;
+    color: #fff;
+    padding: 0 12px;
+    font-family: fordngbs-antenna,Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    line-height: 27px;
+    border: 1px solid #fff;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.wall-content .wall-content-centered {
+	margin: 0 auto;
+	max-width: 740px;
+}
+
+.wall-content .body-text {
+    color: #fff;
+    width: 675px;
+    margin: 25px auto 0 auto;
+}
+
+.wall-content .body-text a {
+    color: #fff;
+}
+
+#s550-CTA .collapsible {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+/* get updates */
+#s550-getupdates .get-updates-container {
+	position: relative;
+}
+
+#s550-getupdates .getupdates-content {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width:  100%;
+	margin-top: -10%;
+
+	text-align: center;
+	color: #fff;
+}
+
+#s550-getupdates .getupdates-heading {
+	font-family: fordngbs-antenna-medium,Helvetica,Arial,sans-serif;
+	font-size: 45px;
+	line-height: 45px;
+	text-transform: uppercase;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+}
+
+.getupdates-mobile-headers .heading {
+	margin: 20px 0;
+}
+
+.getupdates-mobile-headers .body-text {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+#s550-getupdates .getupdates-subheading {
+	font-family: fordngbs-antenna,Helvetica,Arial,sans-serif;
+	font-size: 22px;
+	margin: 20px 0 50px;
+    color: #fff;
+}
+
+#s550-getupdates .getupdates-social {
+	margin: 70px 0;
+	text-transform: uppercase;
+	font-family: fordngbs-antenna-light,Helvetica,Arial,sans-serif;
+	font-size: 15px;
+}
+
+#s550-getupdates .getupdates-title {
+	display: none;
+}
+
+#s550-getupdates .getupdates-background {
+	width: 100%;
+}
+
+#s550-getupdates .getupdates-social-list {
+	width: 40%;
+	margin: 0 auto;
+    text-align: center;
+}
+
+#s550-getupdates .getupdates-social-list li {
+    display: inline-block;
+    margin-left: 5%;
+    position: relative;
+}
+
+#s550-getupdates .getupdates-social-list li.first {
+    margin-left: 0 !important;
+}
+
+*[dir="rtl"] #s550-getupdates .getupdates-social-list li,
+.rtl #s550-getupdates .getupdates-social-list li {
+    margin-right: 10%;
+    margin-left: 0;
+}
+
+*[dir="rtl"] #s550-getupdates .getupdates-social-list li.first,
+.rtl #s550-getupdates .getupdates-social-list li.first {
+	margin-right: 0 !important;
+}
+
+#s550-getupdates .getupdates-social-list a {
+	display: block;
+	width: 46px;
+	height: 46px;
+	margin: 0 auto;
+
+	background-image: url(http://www.ford.com/global/2015mustang/img/share_icons.png);
+	background-repeat: no-repeat;
+	background-size: auto 45px;
+	font-size: 0;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+#s550-getupdates .getupdates-social-list a:hover {
+	opacity: 0.55;
+}
+
+#s550-getupdates .share-twitter {background-position: -50px 0;}
+#s550-getupdates .share-google {background-position: -100px 0;}
+#s550-getupdates .share-by-email {background-position: -150px 0;}
+#s550-getupdates .share-by-weibo {background-position: -198px 0;}
+#s550-getupdates .share-odnoklassnik {background-position: -247px 0;}
+#s550-getupdates .share-vkontakte {background-position: -298px 0;}
+#s550-getupdates .getupdates-social-list a.share-by-wechat {background-image: url(../img/share_icons.png); background-position: -349px 0;}
+#s550-getupdates .wechat-qrcode {background: url(../img/s550-wechat-qr.png) no-repeat; height: 100px; position: absolute; right: -27px; top: 55px; width: 100px; text-indent: -999px; overflow: hidden; display: none;}
+#s550-getupdates .wechat-qrcode.show {display: block;}
+
+/* MOBILE collapser of every section */
+.section-collapser {
+    display: none;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+
+    text-indent: 16px;
+}
+
+*[dir="rtl"] .collapser-status,
+.rtl .collapser-status {
+    right: inherit;
+    left: 12px;
+}
+
+
+/*
+
+	IE Hacks
+
+*/
+
+.ie6 #mustangreveal-getupdates .get-updates-container {
+	/* IE6 hasLayout */
+	height: 0;
+	he\ight: auto;
+	zoom: 1;
+}
+
+.ie7 .view360 .view360-modifier li {
+	*display: inline;
+	zoom: 1;
+}
+
+.ie7  img,
+.ie8  img {
+	-ms-interpolation-mode: bicubic;
+}
+
+/* IEs without media queries support */
+.ie6 .collapsible, .ie7 .collapsible, .ie8 .collapsible {
+	display: block !important;
+}
+
+.ie6 #s550-container li.carousel-meatball,
+.ie7 #s550-container li.carousel-meatball,
+.ie8 #s550-container li.carousel-meatball {
+	background: url(http://www.ford.com/global/2015mustang/img/sp.gif) repeat;
+}
+
+.ie7 #s550-features .feature-item {
+	width: 45%;
+}
+
+@media all and (min-width: 1024px) {
+	#s550-container {
+		width: 100% !important;
+	}
+}
+
+@media all and (min-width: 641px) {
+	.s550-section .collapsible {
+		display: block !important; /* avoid section collapser "display: none" on wired */
+	}
+}
+
+/* Retina display */
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+	#s550-getupdates .getupdates-social-list a {
+		background-image: url(http://www.ford.com/global/2015mustang/img/share_icons@2x.png);
+		background-size: cover;
+		width: 47px;
+	}
+	#s550-getupdates .share-twitter {
+		background-position: -51px 0;
+	}
+	#s550-getupdates .share-google {
+		background-position: -102px 0;
+	}
+	#s550-getupdates .share-by-email {
+		background-position: -153px 0;
+	}
+	#s550-getupdates .share-vkontakte {
+		background-position: -305px 0;
+	}
+	#s550-getupdates .share-odnoklassnik {
+		background-position: -253px 0;
+	}
+}
+
+/* Tablets styles */
+@media all and (min-width: 569px) and (max-width: 1024px) {
+	.body-text,
+    #s550-features .feature-list,
+    #s550-features .feature-list .feature-item,
+    #s550-getupdates .getupdates-subheading {
+        font-size: 0.8em !important;
+        line-height: 1.5em !important;
+    }
+
+    .rtl #content {
+    	direction: ltr;
+    }
+
+    .autofill-stickynav .nav-content {
+        margin: 0px 5px;
+    }
+
+    .s550-section .heading,
+    .carousel-slider .carousel-heading,
+    #s550-features .feature-heading {
+        font-size: 32px;
+    }
+
+    .carousel-caption {
+        font-size: 15px;
+    }
+
+    .carousel-text {
+        top: 15% !important;
+        height: 85% !important;
+    }
+
+    #s550-features .feature-caption {
+        width: 65%;
+    }
+
+    #s550-features .reveal-scroller {
+    	top: 15%;
+    }
+
+    #s550-social-feed .disclaimer {
+        width: 90%;
+    }
+
+    .wall-content .heading,
+    #s550-getupdates .getupdates-heading,
+    #s550-inamustang .inamustang-heading,
+    #s550-nfsr .nfsr-heading {
+        font-size: 30px;
+        line-height: 28px;
+    }
+
+    .wall-content .heading {
+        width: 450px;
+        margin: 0 auto;
+    }
+
+    .wall-content .body-text {
+        line-height: 15px !important;
+        width: 535px;
+        margin: 3% auto 0 auto;
+    }
+
+    .wall-container .mustang-badge {
+        margin-top: 20px;
+    }
+
+    .wall-content .wall-cta {
+        margin-top: 3%;
+    }
+
+    .wall-content .wall-cta a {
+        font-size: 0.8em;
+    }
+
+    #s550-getupdates .getupdates-social {
+        margin-top: 40px;
+    }
+
+    #s550-getupdates .getupdates-social-list {
+        width: 60%;
+    }
+
+	#s550-inamustang .inamustang-content-centered,
+	#s550-nfsr .nfsr-content-centered {
+		width: 480px;
+		margin-top: 25%;
+	}
+
+	#s550-inamustang .inamustang-caption,
+	#s550-nfsr .nfsr-caption {
+		font-size: 14px;
+		margin-top: 2%;
+		margin-bottom: 4%;
+		line-height: 12px;
+		width: 400px;
+	}
+	
+	#s550-inamustang .inamustang-caption {
+		margin-top: 4%;
+		margin-bottom: 2%;
+	}
+
+	#s550-inamustang .inamustang-logo img,
+	#s550-nfsr .nfsr-logo img {
+		width: 150px;
+	}
+
+	#s550-nfsr .nfsr-cta {
+		font-size: 12px;
+		margin-top: 2%;
+		padding: 8px;
+	}
+
+
+}
+
+@media all and (min-width: 569px) and (max-width: 776px) {
+    .view360-trims {
+        margin-top: 10px;
+        display: block !important;
+    }
+}
+
+/* Mobiles styles */
+/*
+	Viewport width:
+		iPhone: 				320px
+		iPhone 5 landscape: 	568px
+		Samsung S4 :  			540px
+		Samsung S4 landscape: 	640px
+*/
+@media all and (max-width: 568px), all and (max-width: 640px) and (orientation: landscape) {
+
+	.mobile-only {
+		display: block !important;
+	}
+
+	.desktop-only {
+		display: none !important;
+	}
+
+	.collapsible {
+		padding: 16px 0 60px;
+	}
+
+	.nav-content {
+		display: none;
+	}
+
+	.body-text {
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	.s550-section {
+		padding-top: 0 !important;
+	}
+
+    #s550-social-feed .disclaimer {
+        width: 90%;
+    }
+
+	#s550-gallery, #s550-wall, #s550-getupdates {
+		padding-top: 20px !important;
+	}
+
+	#s550-billboard-slider .carousel-heading {
+		font-size: 27px;
+	}
+
+	.s550-section .heading {
+		margin-bottom: 30px;
+	}
+
+	#s550-billboard .carousel-text {
+		top: 5% !important;
+	}
+
+	#s550-billboard .carousel-text-centered {
+		bottom: 10%;
+	}
+
+	#s550-billboard-slider .carousel-cta {
+		bottom: 8%;
+	}
+
+    .gallery-slider .gallery-container .gallery-scroller {
+        display: none !important;
+    }
+
+    .gallery-slider .gallery-photo {
+        cursor: default !important;
+    }
+
+	#s550-gallery .heading,
+	#s550-view360 .heading {
+		font-size: 19px;
+		margin-bottom: 20px;
+	}
+
+	#s550-buzz .heading,
+	#s550-CTA .heading {
+		font-size: 27px;
+		margin-bottom: 20px;
+	}
+
+	#s550-buzz .collapsible,
+	#s550-view360 .collapsible {
+		padding-bottom: 0;
+	}
+
+	.view360 .picker-label,
+	.view360 .view360-modifier-label {
+		display: block;
+		background: #555;
+		color: #fff;
+		font-family: fordngbs-antenna-bold,Helvetica,Arial,sans-serif;
+		font-size: 12px;
+		text-align: center;
+		text-shadow: 1px 1px #000;
+		text-transform: uppercase;
+		line-height: 30px;
+		letter-spacing: 1px;
+	}
+
+	.view360-exterior {
+		width: 100%;
+	}
+
+	#s550-view360-view .view360-color-picker li.active {
+		background-position: 50% 50% !important;
+	}
+
+	.view360 .view360-color-picker {
+		margin: 0;
+	}
+
+	#s550-view360 .view360-color-picker li {
+		width: 20%;
+		height: 65px;
+		margin: 0;
+        float: left;
+	}
+
+	.view360-modifier li img {
+		height: 30px;
+	}
+
+	.view360-arrows {
+		display: none;
+	}
+
+	.view360-color-picker .tooltip-title,
+	.view360-modifier li span {
+		display: none !important;
+	}
+
+	.view360-trims .view360-modifier img {
+		padding: 20px 0;
+	}
+
+	#s550-view360 .view360-trims {
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+
+		background-color: #d6d6d6;
+	}
+
+	#s550-features .feature-heading {
+		font-size: 30px;
+		margin-bottom: 10px;
+	}
+
+    #s550-buzz-slider .carousel-item {
+        width: 320px;
+        height: 320px;
+    }
+
+    #s550-buzz-slider .carousel-item .buzz-item {
+        padding: 35px 15px 0;
+        width: auto;
+    }
+
+    #s550-buzz-slider .carousel-item .buzz-item h2 {
+        margin-top: 6px;
+    }
+
+    #s550-buzz-slider .carousel-item .buzz-item h3 {
+    	margin-top: 12px;
+    	margin-bottom: 6px;
+    }
+
+    #s550-buzz-slider .carousel-item .buzz-item p {
+        line-height: 17px;
+        margin-bottom: 20px;
+    }
+
+	.wall-content {
+		position: static;
+        margin-top: 0;
+	}
+
+	.wall-content .heading {
+		font-family: fordngbs-antenna-light,Helvetica,Arial,sans-serif;
+		color: #7a7a7a;
+	}
+
+    .wall-content .body-text {
+        color: #707070
+    }
+
+    .wall-content .body-text a {
+        color: #005d90;
+        display: block;
+    }
+
+	.wall-content .body-text a:hover {
+		text-decoration: none;
+	}
+
+    .wall-content .wall-cta {
+        display: none;
+    }
+
+    #s550-wall .wall-copy {
+        position: absolute;
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    #s550-wall .wall-copy a {
+        color: #fff;
+        font-family: fordngbs-antenna-light,Helvetica,Arial,sans-serif;
+        font-size: 22px;
+        line-height: 1.1em;
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
+
+	#s550-wall .wall-copy .wall-icon {
+        background: url(http://www.ford.com/global/2015mustang/img/inspires/inspires_cam_icon.png) center no-repeat;
+        height: 44px;
+        display: block;
+        margin-bottom: 10px;
+	}
+
+	#s550-features .feature-text {
+		margin-bottom: 20px;
+	}
+
+	#s550-features .features-plate {
+		padding-bottom: 20px;
+	}
+
+	#s550-features .feature-caption {
+		width: 90%;
+		margin-bottom: 0;
+	}
+
+	#s550-features .feature-list {
+		display: block !important;
+		margin-top: 10px;
+		width: 100%;
+	}
+
+	#s550-features .feature-item {
+		width: 85%;
+		margin: 0 auto 10px;
+		line-height: 18px;
+		font-size: 13px;
+		text-align: center;
+		float: none;
+	}
+
+	#s550-features .feature-item h1 {
+		font-family: fordngbs-antenna-bold,Helvetica,Arial,sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	#s550-features .feature-buttons {
+		display: none;
+	}
+
+	.reveal-slider {
+		background: #3e3e3e;
+	}
+	.reveal-scroller {
+		position: static;
+		padding: 10px 0 40px;
+	}
+
+    .reveal-scroller-container {
+        position: relative;
+        width: 90%;
+        left: 5%;
+        padding-bottom: 30px;
+    }
+
+	*[dir="rtl"] .reveal-scroller-container,
+	.rtl .reveal-scroller-container {
+		left: 0;
+        right: 5%;
+	}
+
+	#s550-buzz-slider {
+		background: url(http://www.ford.com/global/2015mustang/img/buzz/buzz-gray-box.jpg) no-repeat;
+	}
+
+	.buzz-item {
+		padding: 7%;
+		padding: 20px;
+		font-size: 12px;
+	}
+
+	.buzz-item p {
+		max-height: 105px;
+		overflow: hidden;
+	}
+
+    #s550-social-feed ul .carousel-item {
+        height: 300px;
+    }
+
+	#s550-social-feed ul .carousel-item div {
+	    padding: 12%;
+	}
+
+	#s550-social-feed ul .carousel-item .social-user {
+	    width: 150px;
+	}
+
+	#s550-social-feed .social-buttons li {
+		display: block;
+		margin-top: 4px;
+
+		text-align: center;
+	}
+
+	#s550-features .collapsible {
+		padding-bottom: 0;
+	}
+
+	.s550-wall .body-text {
+		margin: 0 20px 40px;
+        width: 90%;
+	}
+
+	#s550-inamustang .desktop-only,
+	.wall-content .wall-desktop-only {
+		display: none;
+	}
+
+	.wall-content .wall-cta-link {
+		color: #025c91;
+	}
+
+	#s550-getupdates .getupdates-content {
+		margin-top: -18%;
+	}
+
+	#s550-getupdates .getupdates-heading {
+		display: none;
+	}
+
+	#s550-getupdates .getupdates-subheading {
+		display: none;
+	}
+
+	.getupdates-mobile-headers .body-text {
+		margin-bottom: 35px;
+	}
+
+	.getupdates-button {
+		display: inline-block;
+		border-radius: 0;
+		margin: 20px 0 0;
+	}
+
+    #s550-getupdates .getupdates-social-list {
+        width: 100%;
+    }
+
+	.section-collapser {
+		display: block;
+	}
+
+	.back-to-top-button {
+		display: none;
+	}
+
+	#s550-inamustang .inamustang-content,
+	#s550-nfsr .nfsr-content {
+		position: static;
+	}
+
+	#s550-inamustang .inamustang-content-centered,
+	#s550-nfsr .nfsr-content-centered {
+		width: 80%;
+		margin-top: 8%;
+	}
+	
+	#s550-inamustang .inamustang-content-centered {
+		margin-bottom: 5%;
+	}
+
+	#s550-inamustang .inamustang-heading,
+	#s550-nfsr .nfsr-heading {
+		font-family: fordngbs-antenna-light,Helvetica,Arial,sans-serif;
+		color: #707070;
+		font-size: 27px;
+	}
+
+	#s550-inamustang .inamustang-caption,
+	#s550-nfsr .nfsr-caption {
+		font-size: 13px;
+		color: #707070;
+		line-height: 1.5em;
+		width: 90%;
+	}
+
+	#s550-nfsr .nfsr-logo {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		margin: 8% auto;
+		z-index: 1;
+		display: block;
+	}
+	
+	#s550-nfsr .nfsr-logo img {
+		width: 120px;
+	}
+
+	#s550-inamustang .inamustang-cta,
+	#s550-nfsr .nfsr-cta {
+		font-size: 22px;
+		margin-top: 30%;
+		padding: 0;
+		border: none;
+		font-family: fordngbs-antenna-light,Helvetica,Arial,sans-serif;
+		text-decoration: underline;
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		left: 0;
+	}
+}
+
+@media all and (min-width: 569px) and (max-width: 760px) {
+    .wall-content .wall-content-centered {
+        margin-top: 5%;
+    }
+}
+
+@media all and (min-width: 761px) and (max-width: 960px) {
+    .wall-content .wall-content-centered {
+        margin-top: 10%;
+    }
+    .wall-content {
+    	margin-top: 0;
+	}
+	#s550-getupdates .getupdates-content {
+		top: 30%;
+	}
+}
+
+@media all and (max-width: 568px), (max-width: 640px) and (orientation: portrait) {
+	#s550-billboard-slider .carousel-heading {
+		font-size: 17px;
+		line-height: 20px;
+	}
+	#s550-billboard-slider .carousel-cta {
+		bottom: 17%;
+	}
+	#s550-billboard .carousel-text-centered {
+		bottom: 12%;
+	}
+	#s550-inamustang .inamustang-cta {
+		margin-top: 23%;
+	}
+}
+/*-------- reset --------*/
+html {
+  color: #000;
+  background: #FFF;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+del,
+ins {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before,
+q:after {
+  content: '';
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: baseline;
+}
+
+sub {
+  vertical-align: baseline;
+}
+
+/*because legend doesn't inherit in IE */
+legend {
+  color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+/*@purpose To enable resizing for IE */
+/*@branch For IE6-Win, IE7-Win */
+input,
+button,
+textarea,
+select {
+  *font-size: 100%;
+}
+
+
+/*-------- picture-loader --------*/
+.picture-loader {
+	display: inline !important;
+}
+
+.picture-loader img {
+	vertical-align: bottom; /* fixes gap below image */
+}
+/*-------- autofill-stickynav --------*/
+.autofill-stickynav {
+	background-image: url(http://www.ford.com/global/2015mustang/img/sticky_line.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	position: absolute;
+	z-index: 39;
+	text-align: center;
+	width: 100%;
+	left: 0;
+}
+
+.autofill-stickynav strong {
+	font-family: fordngbs-antenna-light,Helvetica,Arial,sans-serif;
+	font-weight: normal;
+}
+
+.autofill-stickynav.sticky {
+	background-color: rgba(255, 255, 255, 0.9);
+	background-image: url(http://www.ford.com/global/2015mustang/img/opac_09.png);
+	background-repeat: repeat;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+.autofill-stickynav .nav-content {
+	color: #fff;
+	overflow: hidden;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 auto;
+	max-width: 960px;
+}
+
+.autofill-stickynav.sticky .nav-content {
+	background-image: none;
+}
+
+.autofill-stickynav .nav-content li {
+	float: left;
+	margin-right: 14%;
+}
+
+.autofill-stickynav .nav-content li.disabled {
+	display: none;
+}
+
+*[dir="rtl"] .autofill-stickynav .nav-content li,
+.rtl .nav-content li {
+	float: right;
+	margin-left: 14%;
+	margin-right: 0 !important;
+}
+
+.autofill-stickynav .nav-content li.last {
+	margin-right: 0;
+	float: right;
+}
+
+*[dir="rtl"] .autofill-stickynav .nav-content li.last,
+.rtl .nav-content li.last {
+	margin-left: 0;
+	float: left;
+}
+
+.autofill-stickynav .nav-content a {
+	font-family: fordngbs-antenna-extra-light,Helvetica,Arial,sans-serif;
+	color: #fff;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.autofill-stickynav .nav-content a:hover,
+.autofill-stickynav .nav-content .active a {
+	text-decoration: underline !important;
+}
+
+.autofill-stickynav.sticky .nav-content,
+.autofill-stickynav.sticky .nav-content a {
+	color: #706d6d;
+}
+.autofill-stickynav .nav-content .getupdates-button a:hover,
+.autofill-stickynav .nav-content .getupdates-button.active a {
+	text-decoration: none !important;
+}
+
+@media all and (min-width: 569px) and (max-width: 630px) {
+	.autofill-stickynav .nav-content li  {
+		margin-right: 8%;
+	}
+
+	.autofill-stickynav .nav-content li.grouped {
+		margin-right: 5%;
+	}
+
+	*[dir="rtl"] .autofill-stickynav .nav-content li,
+	.rtl .autofill-stickynav .nav-content li  {
+		margin-left: 8%;
+		margin-right: 0;
+	}
+
+	*[dir="rtl"] .autofill-stickynav .nav-content li.grouped,
+	.rtl .autofill-stickynav .nav-content li.grouped {
+		margin-left: 5%;
+		margin-right: 0;
+	}
+}
+
+@media all and (min-width: 631px) and (max-width: 690px) {
+	.autofill-stickynav .nav-content li  {
+		margin-right: 12%;
+	}
+
+	.autofill-stickynav .nav-content li.grouped {
+		margin-right: 6%;
+	}
+
+	*[dir="rtl"] .autofill-stickynav .nav-content li,
+	.rtl .autofill-stickynav .nav-content li  {
+		margin-left: 12%;
+		margin-right: 0;
+	}
+
+	*[dir="rtl"] .autofill-stickynav .nav-content li.grouped,
+	.rtl .autofill-stickynav .nav-content li.grouped {
+		margin-left: 6%;
+		margin-right: 0;
+	}
+}
+
+@media all and (min-width: 691px) and (max-width: 780px) {
+	.autofill-stickynav .nav-content li.grouped {
+		margin-right: 7%;
+	}
+
+	*[dir="rtl"] .autofill-stickynav .nav-content li.grouped,
+	.rtl .autofill-stickynav .nav-content li.grouped {
+		margin-left: 7%;
+		margin-right: 0;
+	}
+}
+
+@media all and (min-width: 781px) and (max-width: 890px) {
+	.autofill-stickynav .nav-content li.grouped {
+		margin-right: 10%;
+	}
+
+	*[dir="rtl"] .autofill-stickynav .nav-content li.grouped,
+	.rtl .autofill-stickynav .nav-content li.grouped {
+		margin-left: 10%;
+		margin-right: 0;
+	}
+}
+
+@media all and (min-width: 891px) {
+	.autofill-stickynav .nav-content li.grouped {
+		margin-right: 11%;
+	}
+
+	*[dir="rtl"] .autofill-stickynav .nav-content li.grouped,
+	.rtl .autofill-stickynav .nav-content li.grouped {
+		margin-left: 11%;
+		margin-right: 0;
+	}
+}
+
+
+/*-------- carousel-slider --------*/
+.carousel-item + .carousel-item {
+	display: none;
+}
+
+.carousel-enabled .carousel-item + .carousel-item {
+	display: block;
+}
+
+.carousel-text-centered {
+	position: absolute;
+	bottom: 6%;
+	width: 100%;
+	height: 20px;
+	text-align: center !important;
+}
+
+
+.carousel-slider .carousel-item {
+	height: 100%;
+	float: left;
+	position: relative;
+	overflow: hidden;
+
+	vertical-align: top;
+	font-size: 0;
+	text-align: center;
+}
+
+.carousel-slider .carousel-item.fit-width {
+	width: 100%;
+}
+
+
+.carousel-widget {
+	overflow: hidden;
+	position: relative;
+}
+
+.carousel-slider,
+.carousel-slider-list {
+	display: block;
+	overflow: hidden;
+	font-size: 16px;
+}
+
+.carousel-navigation {
+	display: inline-block;
+	position: relative;
+	margin: 0 auto;
+
+	z-index: 20;
+}
+
+.carousel-navigation img {
+	width: 10px !important;
+	height: 11px;
+	float: left;
+}
+
+.carousel-navigation .carousel-meatball {
+	width: 22px;
+	height: 12px;
+	margin: 0 6px;
+	float: left;
+
+	border-radius: 3px;
+	border: 1px solid #fff;
+	cursor: pointer;
+	overflow: hidden;
+	background: url(http://www.ford.com/global/2015mustang/img/sp.gif) repeat !important;
+}
+
+.carousel-navigation .carousel-meatball.active {
+	background: #fff !important;
+	cursor: default;
+}
+
+.carousel-prev, .carousel-next {
+	position: absolute;
+	top: 50%;
+	z-index: 20;
+
+	width: 42px;
+	height: 78px;
+	margin-top: -39px;
+
+	overflow: hidden;
+
+	background: #111;
+	background: rgba(32, 32, 32, 0.3);
+	cursor: pointer;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+	background-color: #101010;
+	background-color: rgba(32, 32, 32, 0.5);
+}
+
+
+.carousel-prev {left: 0}
+.carousel-next {right: 0; background-position: -18px 25px}
+
+.carousel-disclaimer {
+	position: absolute;
+	width: 100%;
+	bottom: 1%;
+
+	text-align: center;
+	font-size: 12px;
+}
+
+
+
+.carousel-text {
+	position: absolute;
+	top: 10%;
+	left: 0;
+	width: 100%;
+	height: 90%;
+
+	font-size: 46px;
+	color: #fff;
+}
+
+.carousel-background {
+	width: 100%;
+	display: block;
+}
+
+.carousel-heading {
+	font-size: 42px;
+}
+
+body.ltr .carousel-caption, body.rtl .carousel-caption {
+	font-size: 20px;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.carousel-caption p{
+	color: #fff;
+}
+
+.ie6 .carousel-navigation {
+	/* IE6 hasLayout */
+	height: 0;
+	he\ight: auto;
+	zoom: 1;
+}
+
+.ie7 .carousel-navigation {
+	/* IE7 hack */
+	*display: inline;
+	zoom: 1;
+}
+
+.ie9 .carousel-meatball {
+	background: rgba(0, 0, 0, 0.01) !important;
+}
+
+*[dir="rtl"] .carousel-widget h2,
+*[dir="rtl"] .carousel-widget h3,
+*[dir="rtl"] .carousel-widget h4,
+*[dir="rtl"] .carousel-widget p,
+*[dir="rtl"] .carousel-widget a,
+.rtl .carousel-widget h2,
+.rtl .carousel-widget h3,
+.rtl .carousel-widget h4,
+.rtl .carousel-widget p,
+.rtl .carousel-widget a {
+	direction: rtl;
+}
+
+/* mobile styles carousel */
+@media all and (max-width: 568px) {
+	.carousel-text {
+		top: 6%;
+		font-size: 22px;
+	}
+
+	.carousel-caption {
+		font-size: 13px;
+	}
+
+	.carousel-heading {
+		font-size: 20px;
+	}
+
+	.carousel-navigation .carousel-meatball {
+		width: 24px;
+		height: 14px;
+	}
+}
+
+@media all and (min-width: 568px) and (max-width: 768px) {
+
+}
+
+/*-------- gallery-slider --------*/
+.gallery-slider {
+    position: relative;
+    color: #fff;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery-slider * {
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.gallery-slider .gallery-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gallery-slider.gallery-enabled .gallery-container .gallery-arrows .arrow {
+    background: url('http://www.ford.com/global/2015mustang/img/carousel-arrows.png') 0px 0px;
+    width: 46px;
+    height: 47px;
+    position: absolute;
+    top: 45%;
+    z-index: 1;
+    cursor: pointer;
+    display: block;
+}
+
+.gallery-slider .gallery-container .gallery-arrows .arrow {
+    display: none;
+}
+
+.gallery-slider .gallery-container .gallery-arrows .arrow.prev {
+    left: 1%;
+}
+
+.gallery-slider .gallery-container .gallery-arrows .arrow.next {
+    background-position: -45px 0px;
+    right: 1%;
+}
+
+.gallery-slider .gallery-container .gallery-arrows .arrow.disabled {
+    display: none;
+}
+
+.gallery-slider .gallery-wrapper {
+    height: 540px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-slider.gallery-enabled .gallery-wrapper .gallery-photo.zoomable {
+    cursor: url(http://www.ford.com/global/2015mustang/img/gallery/zoom-icon.gif) 17 17, pointer;
+    left: 0px;
+}
+
+.gallery-slider .gallery-wrapper .gallery-photo {
+    position: relative;
+    height: 100%;
+    float: left;
+}
+
+.gallery-slider .gallery-wrapper .gallery-photo img {
+    height: 100%;
+    border: none;
+}
+
+.gallery-slider .gallery-wrapper .gallery-photo.zoomable .zoom-overlay {
+    background: url(http://www.ford.com/global/2015mustang/img/opac_03.png);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+/*.gallery-slider.gallery-enabled .gallery-wrapper .gallery-photo.zoomable:hover .zoom-overlay {
+    display: block;
+}*/
+
+.gallery-slider.gallery-enabled .gallery-container .gallery-scroller {
+    position: relative;
+    height: 20px;
+    margin-top: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: #cacaca;
+    cursor: pointer;
+    visibility: visible;
+}
+
+.gallery-slider .gallery-container .gallery-scroller {
+    visibility: hidden;
+}
+
+.gallery-slider .gallery-container .gallery-scroller .wheel {
+    background: #a5a5a5;
+    width: 80px;
+    height: 100%;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    position: absolute;
+}
+
+@media all and (max-width: 568px) {
+    .gallery-slider .gallery-wrapper {
+        height: 210px;
+    }
+}
+
+@media all and (min-width: 569px) and (max-width: 960px) {
+    .gallery-slider .gallery-wrapper {
+        height: 426px;
+    }
+
+}
+/*-------- zoom-fullscreen --------*/
+.zoom-fullscreen {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 110000;
+    display: none;
+}
+
+.zoom-fullscreen .zoom-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.zoom-fullscreen.active {
+	display: block;
+}
+
+.zoom-fullscreen .zoom-close-wrapper {
+    background: url('http://www.ford.com/global/2015mustang/img/gallery/gallery_icons.png') -417px -13px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2000;
+    height: 47px;
+    width: 47px;
+}
+
+.zoom-fullscreen .zoom-close {
+	background: url('http://www.ford.com/global/2015mustang/img/gallery/gallery_icons.png') -426px -22px;
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	z-index: 2000;
+	height: 23px;
+	width: 28px;
+	padding-top: 3px;
+	font-size: 15px;
+	color: #d3d3d3;
+	cursor: pointer;
+    webkit-tap-highlight-color
+}
+
+.zoom-fullscreen #zoom-overviewmap {
+    position: absolute;
+    bottom: 8%;
+    right: 2%;
+    z-index: 1000;
+    border: 1px solid #fff;
+}
+
+.zoom-fullscreen #zoom-overviewmap .olTileImage {
+	left: 0px !important;
+}
+
+.zoom-fullscreen .zoom-arrow { 
+    background: url('http://www.ford.com/global/2015mustang/img/carousel-arrows.png') 0px 0px;
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    top: 45%;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.zoom-fullscreen .zoom-arrow.disabled { 
+    display: none; 
+}
+
+.zoom-fullscreen .zoom-arrow.prev { 
+    left: 20px;
+}
+
+.zoom-fullscreen .zoom-arrow.next { 
+    background-position: -45px 0px;
+    right: 20px; 
+}
+
+.zoom-fullscreen .zoom-controlbar {
+    position: absolute;
+    bottom: 0px;
+    background-color: #282b30;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    z-index: 999;
+    -moz-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.zoom-fullscreen .zoom-controlbar li.control {
+    background: url('http://www.ford.com/global/2015mustang/img/gallery/gallery_icons.png');
+    display: inline-block;
+    width: 60px;
+    position: relative;
+    height: 70%;
+    top: 15%;
+    border-right: 1px solid #515459;
+    cursor: pointer;
+    padding: 0;
+}
+
+*[dir="rtl"] .zoom-fullscreen .zoom-controlbar li.control,
+.rtl .zoom-fullscreen .zoom-controlbar li.control {
+    border-left: 1px solid #515459; 
+    border-right: none;
+}
+
+.zoom-fullscreen .zoom-controlbar li.control.first {
+    border-left: 1px solid #515459;
+}
+
+*[dir="rtl"] .zoom-fullscreen .zoom-controlbar li.control.first,
+.rtl .zoom-fullscreen .zoom-controlbar li.control.first {
+    border-right: 1px solid #515459;
+}
+
+.zoom-fullscreen .zoom-controlbar li#zoomin { background-position: -2px -21px; }
+.zoom-fullscreen .zoom-controlbar li#zoomout { background-position: -58px -21px; }
+.zoom-fullscreen .zoom-controlbar li.share { background-position: -108px -18px; }
+.zoom-fullscreen .zoom-controlbar li.save { background-position: -308px -18px; }
+
+
+.zoom-fullscreen .zoom-controlbar li.share .share-popup,
+.zoom-fullscreen .zoom-controlbar li.save .save-popup { 
+    background: url(http://www.ford.com/global/2015mustang/img/social_popup_arrow.png) center bottom no-repeat;
+    position: absolute;
+    width: 298px;
+    height: 68px;
+    left: -120px;
+    bottom: 50px;
+    text-align: center;
+    display: none;
+}
+
+.zoom-fullscreen .zoom-controlbar li.share .share-popup.active,
+.zoom-fullscreen .zoom-controlbar li.save .save-popup.active { 
+    display: block;
+}
+
+.zoom-fullscreen .zoom-controlbar .share-popup li,
+.zoom-fullscreen .zoom-controlbar .save-popup li { 
+    display: inline-block;
+    padding: 7px;
+    background-color: #282b30;
+    margin: 0 -3px;
+}
+
+.zoom-fullscreen .zoom-controlbar .save-popup li { 
+    width: 46px;
+    height: 46px;
+}
+
+.zoom-fullscreen .zoom-controlbar .share-popup li a { 
+    display: block;
+    width: 46px;
+    height: 46px;
+    background: url(http://www.ford.com/global/2015mustang/img/share_icons.png) center no-repeat;
+    font-size: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.zoom-fullscreen .zoom-controlbar .share-popup li a.share-facebook {background-position: 0 0;}
+.zoom-fullscreen .zoom-controlbar .share-popup li a.share-twitter {background-position: -50px 0;}
+.zoom-fullscreen .zoom-controlbar .share-popup li a.share-google {background-position: -100px 0;}
+.zoom-fullscreen .zoom-controlbar .share-popup li a.share-by-email {background-position: -150px 0;}
+.zoom-fullscreen .zoom-controlbar .share-popup li a.share-weibo {background-position: -198px 0;}
+.zoom-fullscreen .zoom-controlbar .share-popup li a.share-odnoklassnik {background-position: -247px 0;}
+.zoom-fullscreen .zoom-controlbar .share-popup li a.share-vkontakte {background-position: -298px 0;}
+
+.zoom-fullscreen .zoom-controlbar .share-popup li a:hover { 
+    opacity: 0.55;
+}
+
+.zoom-fullscreen .zoom-controlbar li.save a { 
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* default */
+div.olMap {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    cursor: default;
+}
+
+div.olMapViewport {
+    text-align: left;
+    -ms-touch-action: none;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    background-color: #000;
+}
+
+div.olLayerDiv {
+   -moz-user-select: none;
+   -khtml-user-select: none;
+}
+
+.olLayerGoogleCopyright {
+    left: 2px;
+    bottom: 2px;
+}
+.olLayerGoogleV3.olLayerGoogleCopyright {
+    right: auto !important;
+}
+.olLayerGooglePoweredBy {
+    left: 2px;
+    bottom: 15px;
+}
+.olLayerGoogleV3.olLayerGooglePoweredBy {
+    bottom: 15px !important;
+}
+/* GMaps should not set styles on its container */
+.olForeignContainer {
+    opacity: 1 !important;
+}
+.olControlAttribution {
+    font-size: smaller;
+    right: 3px;
+    bottom: 4.5em;
+    position: absolute;
+    display: block;
+}
+.olControlScale {
+    right: 3px;
+    bottom: 3em;
+    display: block;
+    position: absolute;
+    font-size: smaller;
+}
+.olControlScaleLine {
+   display: block;
+   position: absolute;
+   left: 10px;
+   bottom: 15px;
+   font-size: xx-small;
+}
+.olControlScaleLineBottom {
+   border: solid 2px black;
+   border-bottom: none;
+   margin-top:-2px;
+   text-align: center;
+}
+.olControlScaleLineTop {
+   border: solid 2px black;
+   border-top: none;
+   text-align: center;
+}
+
+.olControlPermalink {
+    right: 3px;
+    bottom: 1.5em;
+    display: block;
+    position: absolute;
+    font-size: smaller;
+}
+
+div.olControlMousePosition {
+    bottom: 0;
+    right: 3px;
+    display: block;
+    position: absolute;
+    font-family: Arial;
+    font-size: smaller;
+}
+
+.olControlOverviewMapContainer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.olControlOverviewMapElement {
+	background-color: #999;
+}
+
+.olControlOverviewMapMinimizeButton,
+.olControlOverviewMapMaximizeButton {
+    height: 18px;
+    width: 18px;
+    right: 0;
+    bottom: 80px;
+    cursor: pointer;
+}
+
+.olControlOverviewMapExtentRectangle {
+    overflow: hidden;
+    background-image: url('http://www.ford.com/global/2015mustang/img/sp.gif');
+    cursor: move;
+   	border: 1px solid #f00;
+}
+.olControlOverviewMapRectReplacement {
+    overflow: hidden;
+    cursor: move;
+    background-image: url("http://www.ford.com/global/2015mustang/img/overview_replacement.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.olLayerGeoRSSDescription {
+    float:left;
+    width:100%;
+    overflow:auto;
+    font-size:1.0em;
+}
+.olLayerGeoRSSClose {
+    float:right;
+    color:gray;
+    font-size:1.2em;
+    margin-right:6px;
+    font-family:sans-serif;
+}
+.olLayerGeoRSSTitle {
+    float:left;font-size:1.2em;
+}
+
+.olPopupContent {
+    padding:5px;
+    overflow: auto;
+}
+
+.olControlNavigationHistory {
+   background-image: url("img/navigation_history.png");
+   background-repeat: no-repeat;
+   width:  24px;
+   height: 24px;
+
+}
+.olControlNavigationHistoryPreviousItemActive {
+  background-position: 0 0;
+}
+.olControlNavigationHistoryPreviousItemInactive {
+   background-position: 0 -24px;
+}
+.olControlNavigationHistoryNextItemActive {
+   background-position: -24px 0;
+}
+.olControlNavigationHistoryNextItemInactive {
+   background-position: -24px -24px;
+}
+
+div.olControlSaveFeaturesItemActive {
+    background-repeat: no-repeat;
+    background-position: 0 1px;
+}
+div.olControlSaveFeaturesItemInactive {
+    background-repeat: no-repeat;
+    background-position: 0 1px;
+}
+
+.olHandlerBoxZoomBox {
+    border: 2px solid red;
+    position: absolute;
+    background-color: white;
+    opacity: 0.50;
+    font-size: 1px;
+    filter: alpha(opacity=50);
+}
+.olHandlerBoxSelectFeature {
+    border: 2px solid blue;
+    position: absolute;
+    background-color: white;
+    opacity: 0.50;
+    font-size: 1px;
+    filter: alpha(opacity=50);
+}
+
+.olControlPanPanel {
+    top: 10px;
+    left: 5px;
+}
+
+.olControlPanPanel div {
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.olControlPanPanel .olControlPanNorthItemInactive {
+    top: 0;
+    left: 9px;
+    background-position: 0 0;
+}
+.olControlPanPanel .olControlPanSouthItemInactive {
+    top: 36px;
+    left: 9px;
+    background-position: 18px 0;
+}
+.olControlPanPanel .olControlPanWestItemInactive {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    background-position: 0 18px;
+}
+.olControlPanPanel .olControlPanEastItemInactive {
+    top: 18px;
+    left: 18px;
+    background-position: 18px 18px;
+}
+
+.olControlZoomPanel {
+    top: 71px;
+    left: 14px;
+}
+
+.olControlZoomPanel div {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+}
+
+.olControlZoomPanel .olControlZoomInItemInactive {
+    top: 0;
+    left: 0;
+    background-position: 0 0;
+}
+
+.olControlZoomPanel .olControlZoomToMaxExtentItemInactive {
+    top: 18px;
+    left: 0;
+    background-position: 0 -18px;
+}
+
+.olControlZoomPanel .olControlZoomOutItemInactive {
+    top: 36px;
+    left: 0;
+    background-position: 0 18px;
+}
+
+/*
+ * When a potential text is bigger than the image it move the image
+ * with some headers (closes #3154)
+ */
+.olControlPanZoomBar div {
+    font-size: 1px;
+}
+
+.olPopupCloseBox {
+  background: url("img/close.gif") no-repeat;
+  cursor: pointer;
+}
+
+.olFramedCloudPopupContent {
+    padding: 5px;
+    overflow: auto;
+}
+
+.olImageLoadError {
+    background-color: pink;
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* IE */
+}
+
+/**
+ * Cursor styles
+ */
+
+.olCursorWait {
+    cursor: wait;
+}
+.olDragDown {
+    cursor: move;
+}
+.olDrawBox {
+    cursor: crosshair;
+}
+.olControlDragFeatureOver {
+    cursor: move;
+}
+.olControlDragFeatureActive.olControlDragFeatureOver.olDragDown {
+    cursor: -moz-grabbing;
+}
+
+/**
+ * Layer switcher
+ */
+.olControlLayerSwitcher {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 20em;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+    font-size: smaller;
+    color: white;
+    background-color: transparent;
+}
+
+.olControlLayerSwitcher .layersDiv {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    background-color: darkblue;
+}
+
+.olControlLayerSwitcher .layersDiv .baseLbl,
+.olControlLayerSwitcher .layersDiv .dataLbl {
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+}
+
+.olControlLayerSwitcher .layersDiv .baseLayersDiv,
+.olControlLayerSwitcher .layersDiv .dataLayersDiv {
+    padding-left: 10px;
+}
+
+.olControlLayerSwitcher .maximizeDiv,
+.olControlLayerSwitcher .minimizeDiv {
+    width: 18px;
+    height: 18px;
+    top: 5px;
+    right: 0;
+    cursor: pointer;
+}
+
+.olBingAttribution {
+    color: #DDD;
+}
+.olBingAttribution.road {
+    color: #333;
+}
+
+.olGoogleAttribution.hybrid, .olGoogleAttribution.satellite {
+    color: #EEE;
+}
+.olGoogleAttribution {
+    color: #333;
+}
+span.olGoogleAttribution a {
+    color: #77C;
+}
+span.olGoogleAttribution.hybrid a, span.olGoogleAttribution.satellite a {
+    color: #EEE;
+}
+
+/**
+ * Editing and navigation icons.
+ * (using the editing_tool_bar.png sprint image)
+ */
+.olControlNavToolbar ,
+.olControlEditingToolbar {
+    margin: 5px 5px 0 0;
+}
+.olControlNavToolbar div,
+.olControlEditingToolbar div {
+    background-repeat: no-repeat;
+    margin: 0 0 5px 5px;
+    width: 24px;
+    height: 22px;
+    cursor: pointer
+}
+/* positions */
+.olControlEditingToolbar {
+    right: 0;
+    top: 0;
+}
+.olControlNavToolbar {
+    top: 295px;
+    left: 9px;
+}
+/* layouts */
+.olControlEditingToolbar div {
+    float: right;
+}
+/* individual controls */
+.olControlNavToolbar .olControlNavigationItemInactive,
+.olControlEditingToolbar .olControlNavigationItemInactive {
+    background-position: -103px -1px;
+}
+.olControlNavToolbar .olControlNavigationItemActive ,
+.olControlEditingToolbar .olControlNavigationItemActive  {
+    background-position: -103px -24px;
+}
+.olControlNavToolbar .olControlZoomBoxItemInactive,
+.olControlEditingToolbar .olControlZoomBoxItemInactive  {
+    background-position: -128px -1px;
+}
+.olControlNavToolbar .olControlZoomBoxItemActive,  
+.olControlEditingToolbar .olControlZoomBoxItemActive  {
+    background-position: -128px -24px;
+}
+.olControlEditingToolbar .olControlDrawFeaturePointItemInactive {
+    background-position: -77px -1px;
+}
+.olControlEditingToolbar .olControlDrawFeaturePointItemActive {
+    background-position: -77px -24px;
+}
+.olControlEditingToolbar .olControlDrawFeaturePathItemInactive {
+    background-position: -51px -1px;
+}
+.olControlEditingToolbar .olControlDrawFeaturePathItemActive {
+    background-position: -51px -24px;
+}
+.olControlEditingToolbar .olControlDrawFeaturePolygonItemInactive{
+    background-position: -26px -1px;
+}
+.olControlEditingToolbar .olControlDrawFeaturePolygonItemActive {
+    background-position: -26px -24px;
+}
+
+/**
+ * TextButtonPanel
+ */
+
+div.olControlTextButtonPanel .olButton {
+    float: left;
+    padding: 4px;
+}
+
+div.olControlTextButtonPanel.vertical .olButton {
+    float: none;
+}
+div.olControlTextButtonPanel .olButton:first-child {
+    border-radius: 4px 0 0 4px;
+}
+div.olControlTextButtonPanel .olButton:last-child {
+    border-radius: 0 4px 4px 0;
+}
+div.olControlTextButtonPanel.vertical .olButton:first-child {
+    border-radius: 4px 4px 0 0
+}
+div.olControlTextButtonPanel.vertical .olButton:last-child {
+    border-radius: 0 0 4px 4px;
+}
+
+
+/**
+ * Animations
+ */
+
+.olLayerGrid .olTileImage {
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    -o-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+}
+
+/* Turn on GPU support where available */
+.olTileImage {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+}
+
+/* when replacing tiles, do not show tile and backbuffer at the same time */
+.olTileReplacing {
+    display: none;
+}
+
+/* override any max-width image settings (e.g. bootstrap.css) */
+img.olTileImage {
+    max-width: none;
+}
+/* default */
+/*-------- view360 --------*/
+.view360 {
+	position: relative;
+}
+
+.view360 * {
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+.view360 .360view-container {
+	position: relative;
+}
+
+.view360 .view360-player .spritespin-stage {
+	cursor: move;
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+}
+
+.view360 .view360-player.playing .spritespin-stage {
+	cursor: -webkit-grabbing;
+	cursor: -moz-grabbing;
+}
+.view360 .view360-player-container {
+	position: relative;
+}
+/*
+.view360 .view360-components {
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+	left: 0px;
+}*/
+
+.view360 .view360-arrow-left,
+.view360 .view360-arrow-right {
+	width: 38px;
+	height: 38px;
+	background: url(http://www.ford.com/global/2015mustang/img/360-arrow-sprite.png) no-repeat;
+
+	font-size: 0;
+	text-indent: -99999px;
+	cursor: pointer;
+
+	margin: 0 6%;
+	position: absolute;
+	margin-top: -19px;
+	top: 50%;
+}
+
+.view360 .view360-arrow-left {
+	left: 0;
+}
+
+.view360 .view360-arrow-right {
+	right: 0;
+	background-position: -38px 0;
+}
+
+.view360 .view360-controls {
+	text-align: center;
+	color: #fff;
+}
+
+.view360 .light .view360-arrow-left,
+.view360 .light .view360-arrow-right {
+	z-index: 11;
+}
+
+.view360 .view360-controls > div {
+	height: 68px;
+	padding: 0;
+
+	color: #5e5c5d;
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 0;
+	font-weight: bold;
+
+	background: #fff;
+	border-radius: 3px;
+}
+
+.view360 .view360-controls div {
+	display: inline-block;
+	vertical-align: top;
+
+	*display: inline;
+	zoom: 1;
+}
+
+.view360 .view360-exterior {
+    margin-right: 20px;
+}
+
+*[dir="rtl"] .view360 .view360-exterior,
+.rtl .view360 .view360-exterior {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.view360 .view360-color-picker {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+.view360 .view360-color-picker li {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	margin-right: -4px;
+
+	cursor: pointer;
+	-webkit-box-shadow: inset 0 0 29px rgba(0,0,0,0.2), -5px 0px 5px rgba(0,0,0,0.2);
+	-moz-box-shadow: inset 0 0 29px rgba(0,0,0,0.2), -5px 0px 5px rgba(0,0,0,0.2);
+	box-shadow: inset 0 0 29px rgba(0,0,0,0.2), -5px 0px 5px rgba(0,0,0,0.2);
+
+
+}
+.view360 .view360-controls li.active .picker-title {
+	display: block;
+}
+
+.view360 .view360-controls .picker-title {
+    display: none;
+    position: absolute;
+    width: 205%;
+    top: 100%;
+    margin-left: -50%;
+    margin-top: 6px;
+    font-size: 9px;
+    line-height: 10px;
+    vertical-align: middle;
+    font-family: fordngbs-antenna-medium,Helvetica,Arial,sans-serif;
+    text-align: center;
+}
+
+*[dir="rtl"] .view360 .view360-controls .picker-title,
+.rtl .view360 .view360-controls .picker-title {
+    margin-left: 0;
+	margin-right: -50%;
+}
+
+.view360 .view360-disclaimer {
+    font-family: fordngbs-antenna,Helvetica,Arial,sans-serif; 
+    position: absolute;
+    width: 100%;
+    bottom: 6%;
+    z-index: 11;
+    text-align: center;
+    font-size: 11px;
+    color: #999;
+    pointer-events: none;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
+
+
+.view360 .view360-preloader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background-size: 100%;
+	z-index: 20;
+}
+
+.view360 .view360-spinner-container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -35px;
+	margin-top: -35px;
+	width: 70px;
+	height: 70px;
+	line-height: 0;
+	text-align: center;
+	background: rgb(175, 175, 175) url(http://www.ford.com/global/2015mustang/img/ajax-loader.gif) center center no-repeat;
+	background: rgba(236, 236, 236, .3) url(http://www.ford.com/global/2015mustang/img/ajax-loader.gif) center center no-repeat;
+	border-radius: 70px;
+}
+
+.view360 .view360-preview {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.view360 .view360-trims,
+.view360 .view360-backgrounds {
+	position: relative;
+}
+.view360 .view360-modifier {
+	display: block;
+}
+
+.view360 .view360-modifier li {
+	position: relative;
+	display: inline-block;
+	width: 42px;
+	height: 40px;
+	margin: 0 20px;
+	border-radius: 2px;
+    cursor: pointer;
+}
+
+.view360 .view360-modifier li a {
+	color: #fff;
+}
+
+.view360 .view360-modifier li.active a {
+	display: block;
+	background: #000;
+	color: #999;
+}
+.view360 .view360-modifier li:hover img {
+	opacity: 0.8;
+}
+
+.view360 .view360-modifier li.active img {
+	opacity: 0.5;
+}
+
+.view360-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgb(60, 60, 60);
+	background: rgba(2, 2, 2, 0.8);
+	top: 0;
+	left: 0;
+	z-index: 100010;
+}
+
+.ie7 .view360-controls div,
+.ie7 .view360-color-picker li,
+.ie7 .view360-color-picker {
+	*display: inline;
+	zoom: 1;
+}
+
+
+.ie6 .view360 .view360-preloader,
+.ie7 .view360 .view360-preloader,
+.ie8 .view360 .view360-preloader {
+	background-image: none;
+}
+
+
+.s550-section .view360 .view360-player.light {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  z-index: 10;
+}
+.s550-section .view360 .view360-player.light .draggable{
+  z-index: 10;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: grabber;
+}
+.s550-section .view360 .view360-player.light img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 9;
+  max-width: none;
+}
+
+.rtl ul > li , .ltr ul > li {
+	background: none;
+}
+
+#content {
+	margin-bottom: 30px;
+}
+
+.cms .button-white {
+    display: none;
+}
+
+.rtl #s550-features .feature-buttons .button-close {
+	background-position: 82px 8px;
+}
+
+#position .rss-addthis {
+    margin-bottom: 15px;
+}
+
+.ltr .rss-addthis.has-fb-like > div {
+    float: right;
+}
+.rtl .rss-addthis.has-fb-like > div {
+	float: left;
+}
+
+.rtl .rss-addthis {
+	float: none;	
+}
+
+/* mobile styles carousel */
+@media all and (max-width: 568px) {
+
+	.view360 .view360-modifier li {
+		width: 25%;
+		height: 70px;
+		margin: 0;
+		padding: 0;
+		float: left;
+		text-align: center;
+	}
+
+	.view360 .view360-controls div {
+		line-height: 0;
+	}
+
+	.view360 .view360-controls {
+		width: 100%;
+		text-align: left;
+	}
+
+    .view360 .view360-color-picker {
+        display: block;
+        width: 100%;
+    }
+
+	.view360 .view360-color-picker .picker-title {
+		display: none !important;
+	}
+
+	.view360 .view360-controls > div {
+		width: 100%;
+		height: auto;
+	}
+
+	.view360 .view360-disclaimer {
+		bottom: 2%;
+		font-size: 8px;
+		color: #FFF;
+		padding: 0 14px;
+		width: auto;
+	}
+
+	.view360 .view360-spinner-container {
+		margin-left: -25px;
+		margin-top: -25px;
+		width: 50px;
+		height: 50px;
+	}
+
+	.view360 .view360-components .view360-modifier-label,
+	.view360 .view360-components .picker-label {
+		height: 50px;
+		background: #444;
+		color: white;
+		display: block !important;
+		clear: both;
+		position: relative;
+		line-height: 50px;
+	}
+
+}
+
+@media all and (min-width: 568px) and (max-width: 768px) {
+
+}
+
+/*-------- reveal-slider --------*/
+.reveal-scroller-container {
+	display: none;
+}
+
+.reveal-slider-enabled .reveal-scroller-container {
+	display: block;
+}
+
+.reveal-slider {
+	position: relative;
+	overflow: hidden;
+}
+
+.reveal-slider * {
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+.reveal-slider .reveal-scroller {
+	width: 40%;
+	height: 72px;
+	position: absolute;
+	left: 30%;
+	top: 25%;
+	z-index: 3;
+}
+
+.reveal-slider .reveal-scroller .scroller-bar {
+	position: relative;
+	top: 50%;
+	margin-top: -1px;
+	border-bottom: 2px solid #a0aaac;
+}
+
+.reveal-slider .reveal-scroller .scroller-dragger {
+	background: url(http://www.ford.com/global/2015mustang/img/revealer/dragger.png) center no-repeat;
+	position: absolute;
+	width: 72px;
+	height: 72px;
+	cursor: move;
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+	cursor: grab;
+}
+
+.reveal-slider .reveal-scroller .scroller-dragger.active {
+	cursor: -webkit-grabbing;
+	cursor: -moz-grabbing;
+	cursor: grabbing;
+}
+
+.reveal-slider .reveal-scroller .scroller-limit {
+	position: absolute;
+	width: 72px;
+	height: 68px;
+	font-family: fordngbs-antenna,Helvetica,Arial,sans-serif;
+	font-size: 12px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #aaa;
+	white-space: nowrap;
+	top: 3px;
+}
+
+.reveal-slider .reveal-scroller .scroller-limit span {
+	position: absolute;
+	bottom: -26px;
+	left: 0;
+	width: 100%;
+}
+
+.reveal-slider .reveal-scroller .scroller-limit.left {
+	background: url(http://www.ford.com/global/2015mustang/img/revealer/arrow-left.png) center no-repeat;
+	left: -74px;
+}
+
+.reveal-slider .reveal-scroller .scroller-limit.right {
+	background: url(http://www.ford.com/global/2015mustang/img/revealer/arrow-right.png) center no-repeat;
+	right: -74px;
+}
+
+.reveal-slider .reveal-target, .reveal-slider .reveal-img {
+	width: 100%;
+}
+
+.reveal-slider .reveal-target.front, .reveal-slider .reveal-img.front {
+	position: relative;
+	top: 0;
+	left: 0;
+
+	display: block;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.reveal-slider .reveal-target img, .reveal-slider .reveal-img img {
+	width: 100%;
+	max-width: 100%;
+	display: block;
+}
+
+.reveal-slider .reveal-target.front *, .reveal-slider .reveal-img.front * {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.reveal-slider .reveal-target.back, .reveal-slider .reveal-img.back {
+	position: absolute;
+	top: 0px;
+}
+
+/* Mobiles styles */
+@media all and (max-width: 568px), all and (max-width: 640px) and (orientation: landscape) {
+	.reveal-slider .reveal-scroller {
+		position: relative;
+		left: 0;
+		width: 100%;
+		padding-bottom: 10px;
+	}
+
+	.reveal-slider .reveal-scroller .scroller-bar {
+		width: 56%;
+		left: 22%;
+	}
+
+	.rtl .reveal-slider .reveal-scroller .scroller-bar {
+		left: auto;
+		right: 22%;
+	}
+
+	*[dir="rtl"] .reveal-slider .reveal-scroller .scroller-bar {
+		left: 0;
+		right: 22%;
+	}
+
+	.reveal-slider .reveal-scroller .scroller-limit {
+		top: 12px;
+		height: 72px;
+	}
+
+	.reveal-slider .reveal-scroller .scroller-limit.left {
+		left: 0px;
+	}
+	.reveal-slider .reveal-scroller .scroller-limit.right {
+		right: 0px;
+	}
+	.reveal-slider .reveal-scroller .scroller-dragger {
+		margin-top: 1px;
+	}
+
+}
+/*-------- back-to-top --------*/
+.back-to-top-button {
+	position: absolute;
+	width: 100%;
+	bottom: 20px;
+	z-index: 100;
+}
+
+.back-to-top-button .btt-container {
+	max-width: 960px;
+	margin: 0 auto;
+	text-align: right;
+}
+
+.back-to-top-button .btt-button {
+	background: url(http://www.ford.com/global/2015mustang/img/back-to-top.png) top center no-repeat;
+	margin: 0 auto;
+	padding-top: 40px;
+	display: inline-block;
+	cursor: pointer;
+	float: right;
+}
+
+.back-to-top-button .btt-button span {
+	font-family: fordngbs-antenna-bold,Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	color: #fff;
+	text-transform: uppercase;
+}
+/*-------- parallax --------*/
+/*
+	Parallax
+*/
+.parallax-container {
+	height: 100%;
+	overflow: hidden;
+
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.parallax-target {
+	position: relative;
+	visibility: hidden;
+	opacity: 0;
+}
+
+@media print {
+	.parallax-container * {
+		top: 0 !important;
+	}
+}
+/*-------- smooth-scrolling --------*/
+.body {}
+/*-------- section-collapser --------*/
+.section-collapser {
+	height: 50px;
+	position: relative;
+
+	background: #28A0DD;
+	color: #fff;
+	font-family: fordngbs-antenna,Helvetica,Arial,sans-serif;
+	font-size: 21px;
+	line-height: 50px;
+	cursor: pointer;
+}
+
+.collapser-status {
+	position: absolute;
+	top: 14px;
+	right: 12px;
+
+	background: url(http://www.ford.com/global/2015mustang/img/collapser-arrows.png) 0 0 no-repeat;
+	width: 36px;
+	height: 18px;
+}
+
+.section-collapser.collapsed .collapser-status {
+	background-position: 0 -18px;
+}
+/*-------- GWS --------*/
+#s550-container ul {
+    padding: 0;         
+}
+#s550-container ul > li  {
+	background: none;
+	padding: 0;         
+}
+
+#s550-view360 .view360 .view360-dropdown-label, #s550-view360 .view360 .picker-label {
+	/*line-height: 5px !important;*/
+	display: none;
+}
+
+.autofill-stickynav .nav-content {
+ 	max-width: 940px;
+ 	padding: 0 10px !important;
+}
+
+#s550-container a {
+    text-decoration: none;
+}
+
+.rtl {
+	direction: right;
+}
+
+.ui-body-c #s550-container .ui-link {
+	font-weight: normal;
+}
+
+.zoom-controlbar .share {
+	border-radius: 0 0 0 0.4em;
+	box-shadow: none;
+}
+
+.ui-body-c, .ui-overlay-c {
+	text-shadow: none;
+}
+
+.colors {
+	margin: 0;
+}
+
+.colors li {
+	float: none;
+	margin: 0;
+}
+
+.rtl .colors li {
+	float: none;
+	margin: 0 0 0 -4px;
+}
+
+
+@media all and (max-width: 768px) and (orientation: portrait) {
+	html, body {
+		position: relative;
+		overflow-x: hidden;
+	}
+}
+
+/* fix touch rtl issue */
+.touch .rtl #content {direction: rtl;}
+.touch .rtl .autofill-stickynav.sticky {left: -216px;}
+.touch .rtl .rss-addthis {float: left;}

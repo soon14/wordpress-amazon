@@ -1,0 +1,96 @@
+/**model-walk accordion**/
+.tabular{
+	.tab-item{
+		&:first-child{
+			.tab-nav{border-top:none;}
+		}
+		.tab-nav{color:$cta-blue; font-family:$header-font-family; font-size:rem-calc(16); margin:0; padding:30px 20px; background-color:$gray-back; cursor:pointer; border-top:1px solid $border-gray;@include single-transition(background,0.6s,ease);
+
+			.icon-acc-arrow{float:right; @include single-transition(transform,0.2s,ease); margin-top:10px;}
+		}
+
+
+		.tab-contents{max-height:0; overflow:hidden; @include single-transition(max-height,0.6s,ease);
+			
+			.tab-data{@include opacity(0); @include single-transition(opacity,0.6s,ease);
+				.option{padding:18px 20px;
+					label{display:inline-block; font-family:$font-family-light;}
+					.checked{
+						+ label{font-weight:bold; font-family:$font-family-RE;}
+					}
+				}
+				.column-holder{border-top:1px solid $border-gray; padding:30px 10px; clear:both;
+					.title-holder{
+						.title-text{margin: 0 10px; padding-bottom:20px; color:$text-gray;}
+					}
+					.table-holder{
+						table{border:none; border-spacing:0; width:100%; margin:0;
+							tr{
+								td{width:50%; padding:15px;
+									p{margin:0; font-size:rem-calc(12); color:$text-gray;
+										.opt{font-weight:bold;}
+									}
+								}
+							}
+						}
+					}
+				}
+				
+			}
+		}
+
+		.open{background-color:#fff;
+			+ .tab-contents{max-height:4000px;
+				.tab-data{@include opacity(1);}
+			}
+
+			.icon-acc-arrow{@include transform(rotate(-180deg));}
+		}
+
+
+	}
+
+	@media #{$large-up}{
+		.tab-item{
+			.tab-nav{padding:20px 6.5972222%;}
+			.tab-contents{
+				.tab-data{margin:0 6.597%;
+					.option{text-align:right;}
+					.column-holder{padding-left:0; padding-right:0;
+						.title-holder{
+							.title-text{margin-left:0; margin-right:0; font-size:rem-calc(24); @include single-transition(all,0.2s,ease);}
+						}
+						.table-holder{
+							table{
+								tr{
+									td{padding:0; border-left:1px solid $border-gray;
+										&:first-child{border-left:none;}
+										p{padding:15px 30px; font-size:rem-calc(14); line-height: 19.6px;}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media #{$xlarge-up}{
+		.tab-item{
+			.tab-nav{font-size:rem-calc(24);
+				.icon-acc-arrow{background-position: 100% 22%; width: 19px; height: 10px; margin-top:14px;}
+			}
+			.tab-contents{
+				.tab-data{
+					.column-holder{
+						.title-holder{
+							.title-text{font-size:rem-calc(36);}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}

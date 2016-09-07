@@ -1,0 +1,26 @@
+.inner-popup {
+  .close-popup {display: block; height: 30px; width: 30px; position: absolute; right: 20px; top: 25px; background: url('#{$img-path}/icons.png') no-repeat -243px -237px;}
+  .content {line-height:1.6;}
+  ul {margin: 0;}
+  li {list-style: none;}
+  h5 {font-size: rem-calc(28); width:90%;}
+}
+.inner-popup.clone {display: none; width: 100%; height: 100%; position: fixed; top: 0; overflow-y: auto; text-align: left; padding: 40px 20px 20px; z-index: 20025; background-color: $body-bg;
+  &:hover {cursor: default;}
+  .close-popup {background-position: -365px -268px;}
+}
+.citation {
+  sup {color: $cta-blue; cursor: pointer; font-size: rem-calc(14);}
+  > .text {display: none !important;}
+}
+sup {padding-left: 4px; font-family: $font-family-light; line-height: 0;}
+.inner-popup {display: none; position: absolute; z-index: 1001; word-wrap: break-word; padding: 20px; color: $text-gray; text-align: left; background-color: $body-bg;
+  &.active {display: block;}
+}
+
+@media #{$large-up} {
+    .inner-popup {top: 0; min-height: 190px; width: 300px; border: 1px solid $border-gray; box-shadow: 0 3px 4px 0 $box-shadow;}
+}
+@media #{$xlarge-up} {
+    .inner-popup {width: 340px;}
+}

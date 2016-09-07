@@ -1,0 +1,895 @@
+    <!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+  	<title>Lincoln</title>
+
+
+   	<link rel="stylesheet" href="../../../../src/themes/lincoln-responsive/css/normalize.css" />
+   	<link rel="stylesheet" href="../../../../src/themes/lincoln-responsive/css/foundation.css" />
+   	<link rel="stylesheet" href="../../../../src/themes/lincoln-common/css/fonts.css" />
+   	<link rel="stylesheet" href="../../../../src/themes/lincoln-responsive/css/rad-global.css" />
+	<link type="text/css" rel="stylesheet" href="../../../../src/themes/lincoln-financial-calc/css/financial-calculator.css" media="screen, projection" />
+
+   	<!--[if IE 8]>
+           <link rel="stylesheet" href="../../../../src/themes/lincoln-responsive/css/rad-global-ie8.css" />
+	       <link type="text/css" rel="stylesheet" href="../../../../src/themes/lincoln-financial-calc/css/financial-calculator-ie8.css" media="screen, projection" />
+    <![endif]-->
+
+	<script type="text/javascript">
+    var cat=window.setInterval(function(){
+    	if (document.getElementById('financial-calculator-config')){
+    		window.clearInterval(cat);
+    		document.getElementById('financial-calculator-config').innerHTML=document.getElementById('financial-calculator-config').innerHTML.slice(0,document.getElementById('financial-calculator-config').innerHTML.lastIndexOf('}')) + ',"gforceCatalogId_navigator":["2016_TB5_1007_WSPAD_C_DFYS_NULL","2016_TB5_1007_WSPAD_C_DFYP_NULL"]}';
+    	}
+    },1);
+    </script>
+
+    <script src="../../../../src/themes/lincoln-financial-calc/js/live/dev.debug.js"></script>
+
+    <script type="text/javascript">
+        var _da = _da || {};
+        _da.om = {};
+        _da.sync = {};
+        _da.skipTracking = false;
+        _da.om.acc = "fapacnlincprod";
+        _da.om.client = "lincoln-china";
+        _da.om.lang = "eng";
+        _da.om.site = "lincoln-brand";
+        _da.pname = "finance:payment estimator";
+        _da.hier = "company:finance";
+        _da.funnel = { name: 'company' };
+        _da.om.linkTrackVars = "events,channel,hier1,prop1,eVar1,prop2,eVar2,prop3,eVar3,prop4,eVar4,prop5,eVar5,prop6,eVar6,prop7,eVar7,prop8,eVar8,prop9,eVar9,prop10,eVar10,prop11,eVar11,prop12,eVar12,prop13,eVar13,prop14,eVar14,prop15,eVar15,prop16,eVar16,prop17,eVar17,prop18,eVar18,prop19,eVar19,prop20,eVar20,prop21,eVar21,prop22,eVar22,prop23,eVar23,prop24,eVar24,prop25,eVar25,prop26,eVar26,prop27,eVar27,prop28,eVar28,prop29,eVar29,prop30,eVar30,prop31,eVar31,prop32,eVar32,prop33,eVar33,prop34,eVar34,prop35,eVar35,prop36,eVar36,prop37,eVar37,prop38,eVar38,prop39,eVar39,prop40,eVar40,prop41,eVar41,prop42,eVar42,prop43,eVar43,prop44,eVar44,prop45,eVar45,prop46,eVar46,prop47,eVar47,prop48,eVar48,prop49,eVar49,prop50,eVar50,prop51,eVar51,prop52,eVar52,prop53,eVar53,prop54,eVar54,prop55,eVar55,prop56,eVar56,prop57,eVar57,prop58,eVar58,prop59,eVar59,prop60,eVar60,prop61,eVar61,prop62,eVar62,prop63,eVar63,prop64,eVar64,prop65,eVar65,prop66,eVar66,prop67,eVar67,prop68,eVar68,prop69,eVar69,prop70,eVar70,prop71,eVar71,prop72,eVar72,prop73,eVar73,prop74,eVar74,prop75,eVar75,prop76,eVar76,prop77,eVar77,prop78,eVar78,prop79,eVar79,prop80,eVar80";
+        _da.om.linkTrackEvents = "event1,event2,event3,event4,event5,event6,event7,event8,event9,event10,event11,event12,event13,event14,event15,event16,event17,event18,event19,event20,event21,event22,event23,event24,event25,event26,event27,event28,event29,event30,event31,event32,event33,event34,event35,event36,event37,event38,event39,event40,event41,event42,event43,event44,event45,event46,event47,event48,event49,event50,event51,event52,event53,event54,event55,event56,event57,event58,event59,event60,event61,event62,event63,event64,event65,event66,event67,event68,event69,event70,event71,event72,event73,event74,event75,event76,event77,event78,event79,event80";
+        omni_filters = "javascript:,www.lincoln.com.cn,touch.origin.lincoln.com.cn,touch.lincoln.com.cn,www.origin.lincoln.com.cn," + document.location.host;
+        s_account = _da.om.acc;
+        _da.fpsEnabled = false;
+	</script>
+    <script type="text/javascript">
+        var _da = window._da || {};
+        if (typeof _da.om !== 'undefined') {
+            _da.om.singlePageApp = true;
+        }
+    </script>
+    <script type="text/javascript">
+        // fix for issues cause by the back buttons 'back-forward cache' issue found on the iPad
+        // reloads this page when the user navigates from another page using the back button
+        // http://stackoverflow.com/questions/11979156/mobile-safari-back-button
+        window.onpageshow = function (event) {
+            if (event.persisted) {
+                window.location.reload()
+            }
+        };
+	</script>
+</head>
+
+<body class="ltr calculator">
+<noscript>
+	<div style="width:100%;padding:0">
+		<p style="margin:0px 0 8px;color:#5B6E7C;font-size: 1em; text-align:center; font-weight:bold; padding:5px 15px 10px 15px; background-color:#AE0000; color:#fff;">The page cannot be viewed correctly without enabling JavaScript in your brower setting.</p>
+	</div>
+</noscript>
+
+	<!-- Global Header START -->
+	<div id="header">
+		<div id="badge">
+			<a href="#">
+				<span class="logo-wide" style="background-image:url('../../media/lincoln_logo.png')">
+					Lincoln
+				</span>
+				<span class="logo-mobile" style="background-image:url('../../media/lincoln_logo_mobile.png')">
+
+				</span>
+			</a>
+			<img src="../../media/lincoln_logo.png" width="" height="" alt="Lincoln" />
+		</div>
+
+		<div class="menu-wrap">
+			<span class="menu-icon">menu</span>
+			<ul id="menu">
+				<li class="eyebown">
+					<ul id="toolbar">
+						<li class="menu-item">
+							<a href="#">
+								Sign in/Register
+								<span class="arrow"></span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">
+								中文
+								<span class="arrow"></span>
+							</a>
+						</li>
+						<li class="search-bar small-hide">
+							<form>
+								<input type="text" />
+								<input type="submit" value="search" />
+							</form>
+						</li>
+					</ul>
+				</li>
+				<li class="primary-nav">
+					<ul id="nav">
+						<li class="fat-menu-parent">
+							<a class="nav-item">
+								Vehicles
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu fat-menu">
+								<li>
+									<ul class="fat-col">
+										<li class="menu-item">
+											<a href="#">
+												<img src="../../media/brandsite/thumbs/vehthumb-MKC.jpg" title="" alt="" />
+												Lincoln MKC
+												<span class="arrow"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												MKC Story
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Build Your Own
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Gallery
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Features
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="fat-col">
+										<li class="menu-item">
+											<a href="#">
+												<img src="../../media/brandsite/thumbs/vehthumb-MKZ.jpg" title="" alt="" />
+												Lincoln MKZ
+												<span class="arrow"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												MKZ Story
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Build Your Own
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Gallery
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Features
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="nav-item">
+								Lincoln Story
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="menu-item">
+									<a href="#">
+										Lincoln Heritage
+										<span class="arrow"></span>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#">
+										Lincoln Campaign
+										<span class="arrow"></span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="nav-item">
+								Lincoln News
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="small-hide">
+									<a href="#">
+										Lincoln PR News
+									</a>
+								</li>
+								<li class="small-hide">
+									<a href="#">
+										Lincoln News 2
+									</a>
+								</li>
+								<li class="menu-item medium-hide">
+									<a href="#">
+										Lincoln News 4 Mobile
+										<span class="arrow"></span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="nav-item">
+								Shopping Tools
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="menu-item">
+									<a href="#">
+										Build Your Own
+										<span class="arrow"></span>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#">
+										Financial Services
+										<span class="arrow"></span>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="menu-bottom">
+					<ul>
+						<li>
+							<a href="#">Privacy</a>
+						</li>
+						<li>
+							<a href="#">Disclosure</a>
+						</li>
+						<li>
+							<a href="#">Terms &amp; Conditions</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="subnav-wrap">
+		<div id="subnav">
+			<h1>
+				Payment Estimator
+			</h1>
+		</div>
+	</div>
+	<!-- Global Header END -->
+	<div id="body">
+
+		<div id="content" data-ng-view></div>
+
+        <div class="call-to-action">
+            <div class="creative-button clearfix">
+				<div class="button">
+					<a style="background-image:url('../../media/brandsite/CTA_EN-create_an_account.png')" title="" href=""></a>
+				</div>
+				<div class="button">
+					<a style="background-image:url('../../media/brandsite/CTA_EN-keep_me_informed.png')" title="" href=""></a>
+				</div>
+				<div class="button">
+					<a style="background-image:url('../../media/brandsite/CTA_EN-build_your_own.png')" title="" href=""></a>
+				</div>
+			</div>
+		</div>
+        <!--<div class="back-to-top mobile-only">
+            <a href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 300);return false;"><span>Back to Top</span></a>
+        </div>-->
+	</div>
+
+	<!-- Global Footer START -->
+	<div id="footer">
+		<div id="nav-footer-wrapper">
+			<div id="footer-links">
+				<ul>
+					<li>
+						<a href="#" title=""> Contact Us</a>
+					</li>
+					<li>
+						<a href="#" title=""> Privacy</a>
+					</li>
+					<li>
+						<a href="#" title="">Terms &amp; Conditions</a>
+					</li>
+				</ul>
+				<p>
+					沪ICP备05031283号-2
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- Global Footer END -->
+
+    <div class="anchor-bar row">
+        <div class="columns small-6" >
+            <div class="anchor-btn">
+	              <a class="connect" href="mailto:SERVIC20@lincoln.com">
+                      Contact us
+	              </a>
+	        </div>
+        </div>
+        <div class="columns small-6" >
+            <div class="anchor-btn">
+	              <a target="_blank" class="icon-btn " href="https://www.lincoln.com.cn/en/keep-me-informed">
+                      <span class="icon icon-email"></span>
+                      Keep Me Informed
+	              </a>
+	        </div>
+        </div>
+    </div>
+    <div id="content-modal" class="reveal-modal">
+    	<div class="content"></div>
+    	<a class="close-reveal-modal" href="#"></a>
+    </div>
+    <div class="reveal-modal-bg"></div>
+
+    <script type="text/ng-template" id="lfc-model-series-template">
+        <div>
+            <div lfc-user-progress="" data-ng-cloak></div>
+
+            <div class="cal-section">
+                <div class="head arrow active">
+                    <h3>Select Model</h3>
+                </div>
+                <div class="row model" data-ng-show="appValue.models != null" data-ng-class="{'grid-3':(appValue.models != null && appValue.models.length%3==0) , 'grid-4':(appValue.models != null && appValue.models.length%4==0), 'grid-extra':(appValue.models != null && appValue.models.length==5)}" data-ng-cloak>
+                    <div class="item" data-ng-repeat="model in appValue.models" data-ng-class="{'selected': (appValue.selectedModel != null && appValue.selectedModel.id === model.id),'unselected':(appValue.selectedModel != null && appValue.selectedModel.id !== model.id),'extra': (appValue.models != null && appValue.models.length==5 && $index>=3)}">
+                        <div class="image" data-ng-click="selectModel(model)">
+                            <img data-ng-src="{{model.financialCalculatorImageUrl}}" data-ng-cloak/>
+                        </div>
+                        <div class="info">
+                            <div class="title">{{model.name}}</div>
+                            <div class="price"><span class="symbol">RMB</span>
+                            <span class="tag" data-ng-bind-html="getVehiclePrice(model.price)"></span></div>
+                        </div>
+                        <div class="controller" data-ng-click="selectModel(model)">
+                            <input type="radio" name="model" data-ng-class="{'checked': appValue.selectedModel != null && appValue.selectedModel.id === model.id}" data-ng-model="selectedModel" id="{{model.id}}"/>
+                            <label for="{{model.id}}"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cal-section" >
+
+                <div class="head arrow mobile-only"
+                     data-ng-show="appValue.series != null && appValue.series.length > 0"
+                     data-ng-class="{'active' : (appValue.series != null && appValue.series.length > 0)}">
+                    <h3>Select a Series</h3>
+                </div>
+
+                <div class="head arrow mobile-hide"
+                     data-ng-show="appValue.series != null && appValue.series.length > 0"
+                     data-ng-class="{'active' : (appValue.series != null && appValue.series.length > 0)}">
+                    <h3>Select a Series</h3>
+                </div>
+
+                <div class="row series mobile-hide"
+                     data-ng-class="{'grid-4':(appValue.series != null && appValue.series.length==4),'grid-5':(appValue.series != null && appValue.series.length==5)}"
+                     data-ng-show="(appValue.series != null && appValue.series.length > 0)"
+                     data-ng-cloak>
+
+                    <div class="item" data-ng-repeat="derivative in appValue.series">
+                        <div class="image" data-ng-click="selectDerivative(derivative)">
+                            <img data-ng-src="{{derivative.financialCalculatorImageUrl}}" data-ng-cloak/>
+                        </div>
+                        <div class="info">
+                            <div class="title">{{derivative.name}}</div>
+                            <div class="price" data-ng-repeat="engine in derivative.engineTransmissions">
+                                <div class="controller" data-ng-click="selectDerivative(derivative,engine,$event)">
+                                    <input id="{{derivative.id}}
+                                           type="radio"
+                                           name="series"
+                                           data-ng-class="{'checked': appValue.selectedDerivative != null &&
+                                                                      appValue.selectedDerivative.id === derivative.id &&
+                                                                      appValue.selectedEngine !== null &&
+                                                                      appValue.selectedEngine.id === engine.id}"
+                                           data-ng-model="selectedDerivative"/>
+                                    <label for="{{derivative.id}}"></label>
+                                </div>
+                                <span class="engine" data-ng-show="derivative.engineTransmissions.length>1">{{engine.name}}</span>
+                                <div class="amount">
+                                	<span class="symbol">RMB</span>
+                                	<span class="tag" data-ng-bind-html="getVehiclePrice(engine.price)"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row series mobile-only"
+                    data-ng-show="appValue.series"
+                    data-ng-cloak>
+                    <div data-ng-repeat="derivative in appValue.series">
+                        <div class="item" data-ng-repeat="engine in derivative.engineTransmissions">
+                            <div class="image" data-ng-click="selectDerivative(derivative,engine,$event)">
+                                <img data-ng-src="{{derivative.financialCalculatorImageUrl}}" data-ng-cloak/>
+                            </div>
+                            <div class="info">
+                                <div class="title">{{derivative.name}} {{engine.name}}</div>
+                                <div class="price">
+                                    <span class="symbol">RMB</span>
+                                    <span class="tag" data-ng-bind-html="getVehiclePrice(engine.price)"></span>
+                                </div>
+                            </div>
+                            <div class="controller" data-ng-click="selectDerivative(derivative,engine,$event)">
+                                <input type="radio" name="series" data-ng-class="{'checked': appValue.selectedDerivative != null && appValue.selectedDerivative.id === derivative.id  && appValue.selectedEngine !==null && appValue.selectedEngine.id === engine.id}" data-ng-model="selectedDerivative" id="{{derivative.id}}"/>
+                                <label for="{{derivative.id}}"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="error" data-ng-show="continueButtonDisabled" data-ng-cloak>
+                    Sorry. You need to select both your model and series for us
+                    to customize your financial plan for you.
+                </p>
+
+                <div class="button-holder clearfix">
+                    <div class="button mobile-only"
+                         data-ng-show="appValue.selectedModel != null">
+                        <a class="featurebtn"
+                            data-ng-class="{disabled: appValue.selectedDerivative == null}"
+                            data-ng-href=""
+                            data-ng-click="resetModels()">
+                            <span class="icon icon-featurebtn">CHANGE MODEL</span>
+                        </a>
+                    </div>
+
+                    <div class="button button-continue">
+                        <a class="featurebtn"
+                            data-ng-class="{disabled: appValue.selectedDerivative == null}"
+                            data-ng-href="" data-ng-click="goToCalculatePage()">
+                            <span class="icon icon-featurebtn">CONTINUE</span>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="lfc-calculate-template">
+        <div lfc-user-progress="" data-ng-cloak></div>
+
+        <div class="cal-section">
+            <div class="head active">
+                <h3>Lincoln - <em>{{appValue.selectedDerivative.name}}</em></h3>
+            </div>
+            <div class="row large">
+                <div class="image">
+                    <img data-ng-src="{{appValue.selectedDerivative.financialCalculatorImageUrl}}" data-ng-cloak/>
+                </div>
+                <div class="price" data-ng-cloak>
+					<span class="symbol">RMB</span>
+					<span data-ng-bind-html="getVehiclePrice()"></span>
+                </div>
+                <div class="change-vehicle">
+                   <a href="#"
+                      data-ng-show="!removeChangeVehicle"
+                      data-ng-click="changeModel($event)">Change model</a>
+                </div>
+                <div class="message mobile-hide" data-ng-bind-html="trustedSummary" data-ng-cloak></div>
+                <div class="button-holder clearfix hide">
+	                <div class="model-button mobile-only">
+	                	<a class="featurebtn" data-ng-href="{{DerivativeURL}}"><span class="comparebtn icon-featurebtn">Compare Vehicle</span></a>
+	                </div>
+	                <div class="model-button mobile-only">
+	                	<a class="featurebtn" href="#" data-ng-show="!removeChangeVehicle" data-ng-click="changeModel($event)"><span class="changebtn icon-featurebtn">Change Vehicle</span></a>
+	                </div>
+	             </div>
+            </div>
+        </div>
+
+        <div class="cal-section">
+            <div class="row tab">
+            	<div class="options">
+	            	<span class="option-selected mobile-only" data-ng-click="toggleOption($event)">Standard  Option</span>
+	                <ul class="tabs">
+	                    <li class="standard-option-tab" data-ng-class="{'active':isStandardState()}">
+	                        <a href="#" data-ng-click="changeState('standard',$event)">Standard Option</a>
+	                        <span class="arrow"></span>
+	                    </li>
+	                    <li data-ng-show="appValue.ewProducts" data-ng-class="{'active':!isStandardState()&&appValue.calState === 'ew'}">
+	                        <a href="#" data-ng-click="changeState('ew',$event)">EW-Contained</a>
+	                        <span class="arrow"></span>
+	                    </li>
+	                    <li data-ng-show="appValue.rcoProduct" data-ng-class="{'active':!isStandardState()&&appValue.calState === 'rco'}">
+	                        <a href="#" data-ng-click="changeState('rco',$event)">Red Carpet Option</a>
+	                        <span class="arrow"></span>
+	                    </li>
+	                    <li data-ng-show="appValue.halfProduct" data-ng-class="{'active':!isStandardState()&&appValue.calState === 'half'}">
+	                        <a href="#" data-ng-click="changeState('half',$event)">50 - 50 Option</a>
+	                        <span class="arrow"></span>
+	                    </li>
+	                </ul>
+	            </div>
+                <div class="content" >
+                	<p data-ng-show="!isStandardState()&&appValue.calState === 'half'">
+                        The 50-50 Eget ut, pellentesque tortor hendrerit ac sagittis aliqua,  purus loborties feugiat risus, justo dolor quis, Inparturient interdum nibh lacus justo. Consequuntur sit 
+                        gravida trupis, parturient ridiculus quis monthes nulla, tempus morbi sit egestas, velit ac proin, pellentesque velit consequat. In cum ipsum.
+                        <a href="#">Click here</a> to learn more.
+                    </p>
+                    <p data-ng-show="!isStandardState()&&appValue.calState === 'rco'">
+                        The Red Carpet Option (RCO) product is a brand new specialized retail financing product, which enabled you to enjoy the most affordable way of drving your new Lincoln vehicle with peace of mind.
+                        More importantly, one of the product uniqueness is that it offers you a Guaranteed Minimum Future Value (GMFV) of the vehicle which is the balloon amount at the end of contract term.
+                        <a href="#">Click here</a> to learn more.
+                    </p>
+                    <p data-ng-show="!isStandardState()&&appValue.calState === 'ew'">
+                        for you. Through this program, Lincoln offers the customer flexibility on their financing needs, money management, vehicle extended warranty, and a pearce of mind.<a href="#">Click here</a> to learn more.
+                    </p>
+                	<p data-ng-show="isStandardState()">
+                        Something about going to see all the awsome features of the selected car, such as the MKZ Namplate.<br>
+                        <a href="#">Click here</a> to open the specs page to see the series differences.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cal-section">
+            <div class="row summary" data-ng-class="{'rco' : !isStandardState()&&appValue.calState === 'rco'}">
+                <div class="column">
+                    <div class="row">
+                        <div class="title">Vehicle Price (MSRP)</div>
+	                        <p ng-show="isReferrerLincolnBnP()">
+	                           The payment estimator is based on MSRP which does not include additional configuration fee,
+                               thus the result is only for your reference.
+                               Please consult your dealer for actual vehicle price, payments, and complete details.</p>
+
+                        <div class="controller">
+                            <div class="head"><span>RMB</span></div>
+                            <label class="price" data-ng-bind-html="getVehiclePrice()" data-ng-cloak></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="title">Down Payment</div>
+                        <p data-ng-show="!isStandardState()&&appValue.calState === 'half'">The down payment amount is pre-filled to 50% of the total vehicle price and it is fixed.</p>
+			            <p data-ng-show="isStandardState() || appValue.calState !== 'half'">The down payment amount is pre-filled to 20% of the total vehicle price. If you’d like, you may enter a larger amount below.</p>
+			            <form name="lfcInputForm" data-ng-show="vehiclePrice!==undefined">
+                        	<div class="controller inputform">
+                            	<div class="head">
+                                	<span>RMB</span>
+                            	</div>
+					            <input type="number" name="lfcDownPayment"
+                                        maxlength="6"
+                                        data-ng-model="appValue.downPayment"
+                                        data-ng-change="calculateDownPaymentPercentage()"
+                                        data-ng-pattern="/([0-9]+)/i"
+                                        data-required="true"
+                                        data-ng-show="isStandardState() || appValue.calState !== 'half'"/>
+                                 <label class="price ballon" data-ng-show="!isStandardState()&&appValue.calState === 'half'" data-ng-bind-html="getDownPayment()"></label>
+			    		        <label class="rate">{{appValue.downPaymentPercentage | lfcRoundDown}}%</label>
+                        	</div>
+			                <p class="error" ng-if="lfcInputForm.lfcDownPayment.$invalid">The down payment amount is pre-filled to 20% of the total vehicle price. If you’d like, you may enter a larger amount below.</p>
+                        	<p class="error" ng-if="vehiclePrice-appValue.downPayment < 40000 && vehiclePrice-appValue.downPayment >= 0">{{'The calculation of Amount Financed should be more than RMB 40,000.' }}</p>
+                        	<p class="error" ng-if="vehiclePrice-appValue.downPayment >= 40000 && appValue.downPayment < vehiclePrice*0.2">{{'The down payment value must be no less than 20% of MSRP (RMB %1). ' | lfcReplaceWithParam : appValue.minDownPayment}}</p>
+                        	<p class="error" ng-if="appValue.downPayment > vehiclePrice">{{'The down payment value must be no more than 100% of MSRP (RMB %1). ' | lfcReplaceWithParam : appValue.maxDownPayment}}</p>
+			            </form>
+                    </div>
+                    <div class="row" data-ng-show="isStandardState() || appValue.calState !== 'half'">
+                        <div class="title">Monthly Payment</div>
+                        <p data-ng-show="isStandardState()&&isStandardProduct()">Drag the bar to select payment terms</p>
+                        <p data-ng-show="isStandardState()&&!isStandardProduct()">Low Rate is at {{appValue.selectedTermRate}}%</p>
+                        <div class="row tab ew-packages" data-ng-show="!isStandardState()&&appValue.calState === 'ew' ">
+                        	<p>Select a package</p>
+			                <ul class="tabs">
+			                    <li data-ng-class="{'active':appValue.ewProduct&&appValue.ewProduct['package-type'].toUpperCase()=='DRIVELINE'}" data-ng-show="appValue.packageDrive">
+			                        <a href="#" data-ng-click="changePackage('DRIVELINE',$event)">Driveline</a>
+			                    </li>
+			                    <li data-ng-class="{'active':appValue.ewProduct&&appValue.ewProduct['package-type'].toUpperCase()=='BUMPER_TO_BUMPER'}" data-ng-show="appValue.packageBump">
+			                        <a href="#" data-ng-click="changePackage('BUMPER_TO_BUMPER',$event)">Bumper-Bumper</a>
+			                    </li>
+			                </ul>
+			            </div>
+			            <div class="row package-feature mobile-only" data-ng-show="!isStandardState()&&appValue.calState === 'ew' ">
+					    	<div class="column" data-ng-show="appValue.ewProduct&&appValue.ewProduct['package-type'].toUpperCase()=='DRIVELINE'">
+					    		<ul class="content">
+					    			<li><span class="subject">Pellentesque Tortor Hendrerit aliquam</span>
+					    				<span>purus lobortls feugiat risus, justo dolor quls. Inparturlent nterdum nibh lacus justo. Consequuntur sit gravida turpis.</span>
+					    			</li>
+					    			<li><span class="subject">Hae sagittis aliquam</span>
+					    				<span>purus lobortis feugiat risus, justo dolor quis, lnparturient interdum nibh lacus justo. Consequuntur sit gravida turpis</span>
+					    			</li>
+					    			<li><span class="subject">Tortor hendrerit ae sagittis aliquam</span>
+					    				<span>purus lobortls feugiat risus, justo dolor quls. Inparturlent nterdum nibh lacus justo. Consequuntur sit gravida turpis.</span>
+					    			</li>
+					    		</ul>
+					    	</div>
+					    	<div class="column" data-ng-show="appValue.ewProduct&&appValue.ewProduct['package-type'].toUpperCase()=='BUMPER_TO_BUMPER'">
+					    		<ul class="content">
+					    			<li><span class="subject">Pellentesque Tortor Hendrerit aliquam</span>
+					    				<span>purus lobortls feugiat risus, justo dolor quls. Inparturlent nterdum nibh lacus justo. Consequuntur sit gravida turpis.</span>
+					    			</li>
+					    			<li><span class="subject">Hae sagittis aliquam</span>
+					    				<span>purus lobortis feugiat risus, justo dolor quis, lnparturient interdum nibh lacus justo. Consequuntur sit gravida turpis</span>
+					    			</li>
+					    			<li><span class="subject">Tortor hendrerit ae sagittis aliquam</span>
+					    				<span>purus lobortls feugiat risus, justo dolor quls. Inparturlent nterdum nibh lacus justo. Consequuntur sit gravida turpis.</span>
+					    			</li>
+					    		</ul>
+					    	</div>
+					    </div>
+                        <p data-ng-show="!isStandardState()" class="bar_ins">click the bar to select payment terms</p>
+                        <div class="controller">
+                            <div class="head small">
+                                <span>Term </span>
+                                <span class="sub">(Months)</span>
+                            </div>
+                            <div lfc-slider=""
+                            	data-ng-model="appValue.sliderValue"
+                            	data-ng-change="calculateSelectedTerm()"></div>
+                        </div>
+
+                        
+                        <div class="controller payment">
+                            <div class="head"><span>RMB</span></div>
+                            <label class="price" data-ng-class="{'payment':!isStandardState()&&appValue.calState === 'rco'}" data-ng-bind-html="getTotalMonthlyPayment()"></label>
+                        </div>
+
+                        <div class="title" data-ng-show="!isStandardState()&&appValue.calState === 'rco'">Balloon Payment</div>
+                        <p data-ng-show="!isStandardState() && appValue.calState === 'rco'">The GMFV amount is pre-filled to 20% of the total vehicle price. If you’d like, you may enter a larger amount below.</p>
+                        <div class="controller balloon" data-ng-show="!isStandardState()&&appValue.calState === 'rco'">
+                            <div class="head"><span>RMB</span></div>
+                            <label class="price" data-ng-bind-html="getTotalGMFV()"></label>
+                        </div>
+
+						<p class="error" ng-if="!isStandardState() && !gmfvValid2() &&appValue.calState === 'rco'">Down Payment ratio + GMFV ratio have to lower than 100% (cannot equal to 100%).</p>
+                        <p class="error" ng-if="!isStandardState() && !gmfvValid1() &&appValue.calState === 'rco'">Amount financed should be greater than GMFV</p>
+
+                    </div>
+                    <div class="row" data-ng-show="!isStandardState()&&appValue.calState === 'half'">
+                    	<div class="title" >Balloon Payment</div>
+                    	 <p>The balloon payment amount is 50% of the total vehicle price, and is paid after 12 months</p>
+                        <div class="controller balloon" >
+                            <div class="head"><span>RMB</span></div>
+                            <label class="price ballon" data-ng-bind-html="getBallonPayment()"></label>
+                            <label class="rate">{{100-appValue.downPaymentPercentage | lfcRoundDown}}%</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="column sum">
+			        <div class="row">
+				        <div class="title">Summary</div>
+				        <div class="content">
+					        <table>
+						        <tbody>
+							        <tr>
+								        <td class="title">Vehicle Price (MSRP)</td>
+								        <td class="value">
+									        <span>¥</span>
+									        <span data-ng-bind-html="getVehiclePrice()"></span>
+								        </td>
+							        </tr>
+							        <tr>
+								        <td class="title">Down Payment<br />{{appValue.downPaymentPercentage | lfcRoundDown}}%</td>
+								        <td class="value" data-bottom-aligned="true">
+									        <span>¥</span>
+									        <span data-ng-bind-html="getDownPayment()"></span>
+								        </td>
+							        </tr>
+							        <tr>
+								        <td class="title">Term (Months)</td>
+								        <td class="value">{{appValue.selectedTerm}}</td>
+							        </tr>
+                                    <tr data-ng-show="!isStandardState()&&appValue.calState === 'rco'">
+                                        <td class="title">Balloon Payment/GMFV</td>
+                                        <td class="value">
+                                            <span>¥</span>
+                                            <span data-ng-bind-html="getTotalGMFV()"></span>
+                                        </td>
+                                    </tr>
+                                    <tr data-ng-show="!isStandardState()&&appValue.calState === 'ew' ">
+                                        <td class="title" data-ng-show="appValue.ewProduct&&appValue.ewProduct['package-type'].toUpperCase()=='DRIVELINE'">Driveline</td>
+                                        <td class="title" data-ng-show="appValue.ewProduct&&appValue.ewProduct['package-type'].toUpperCase()=='BUMPER_TO_BUMPER'">Bumper-Bumper</td>
+                                        <td class="value">
+                                            <span>¥</span>
+                                            <span data-ng-bind-html="getPackageAmount()"></span>
+                                        </td>
+                                    </tr>
+						        </tbody>
+					        </table>
+					        <p data-ng-show="isStandardState() || appValue.calState !== 'half'">Monthly Payment</p>
+					        <p data-ng-show="!isStandardState()&&appValue.calState === 'half'">Balloon Payment</p>
+					        <div class="price" data-ng-show="isStandardState() || appValue.calState !== 'half'">
+					        		<span class="symbol">¥</span>&nbsp;<span class="symbol" data-ng-bind-html="getTotalMonthlyPayment()"></span>
+						    </div>
+					        <div class="price" data-ng-show="!isStandardState()&&appValue.calState === 'half'">
+					        		<span class="symbol">¥</span>&nbsp;<span class="symbol" data-ng-bind-html="getBallonPayment()"></span>
+					        </div>
+                        </div>
+				    </div>
+				    <div class="button">
+                        <p data-ng-show="!isStandardState()&&appValue.calState === 'half'"> No Extra Cost, 0% Interest.</p>
+                    	<a target="_blank" class="featurebtn" href="https://www.lincoln.com.cn/en/apply-for-credit?ctx=m:{{appValue.selectedModel.id}};d:{{appValue.selectedDerivative.id}}">
+                            <span class="icon icon-featurebtn">Apply for Credit</span>
+                        </a>
+                    </div>
+                    <div class="row mobile-only">
+	                    <a href="#" class="reveal-content-modal">Disclaimer</a>
+	                    <a href="#" class="top-back" data-ng-click="topBack($event)">Back to Top</a>
+	                </div>
+
+
+
+                    <a target="_blank" class="icon-bag right mobile-hide"
+                        track-link
+                        data-ng-href="/servlet/rest/tools/LCNEN2014/share/pdf-fc/Financial%20Calculator%20-%20Lincoln?mid={{appValue.selectedModel.id}}&did={{appValue.selectedDerivative.id}}&p={{vehiclePrice}}&dp={{appValue.downPayment}}&dpp={{appValue.downPaymentPercentage}}&t={{appValue.selectedTerm}}&mp={{appValue.totalMonthlyPayment}}{{appValue.pdfOption}}">
+                        <span class="icon-pdf"></span>
+                        <span class="icon-bag-text">Print</span>
+                    </a>
+			    </div>
+
+
+            </div>
+
+			    <div class="row package-feature mobile-hide" data-ng-show="!isStandardState()&&appValue.calState === 'ew' ">
+			    	<div class="column" data-ng-show="appValue.ewProduct&&appValue.ewProduct['package-type'].toUpperCase()=='DRIVELINE'">
+			    		<div class="title">
+			    			<p> Driveline Features</p>
+			    		</div>
+			    		<ul class="content">
+			    			<li><span class="subject">Pellentesque Tortor Hendrerit aliquam</span>
+			    				<span>purus lobortls feugiat risus, justo dolor quls. Inparturlent nterdum nibh lacus justo. Consequuntur sit gravida turpis.</span>
+			    			</li>
+			    			<li><span class="subject">Hae sagittis aliquam</span>
+			    				<span>purus lobortis feugiat risus, justo dolor quis, lnparturient interdum nibh lacus justo. Consequuntur sit gravida turpis</span>
+			    			</li>
+			    			<li><span class="subject">Tortor hendrerit ae sagittis aliquam</span>
+			    				<span>purus lobortls feugiat risus, justo dolor quls. Inparturlent nterdum nibh lacus justo. Consequuntur sit gravida turpis.</span>
+			    			</li>
+			    		</ul>
+			    	</div>
+			    	<div class="column" data-ng-show="appValue.ewProduct&&appValue.ewProduct['package-type'].toUpperCase()=='BUMPER_TO_BUMPER'">
+			    		<div class="title">
+			    			<p> Bumper-Bumper Features</p>
+			    		</div>
+			    		<ul class="content">
+			    			<li><span class="subject">Pellentesque Tortor Hendrerit aliquam</span>
+			    				<span>purus lobortls feugiat risus, justo dolor quls. Inparturlent nterdum nibh lacus justo. Consequuntur sit gravida turpis.</span>
+			    			</li>
+			    			<li><span class="subject">Hae sagittis aliquam</span>
+			    				<span>purus lobortis feugiat risus, justo dolor quis, lnparturient interdum nibh lacus justo. Consequuntur sit gravida turpis</span>
+			    			</li>
+			    			<li><span class="subject">Tortor hendrerit ae sagittis aliquam</span>
+			    				<span>purus lobortls feugiat risus, justo dolor quls. Inparturlent nterdum nibh lacus justo. Consequuntur sit gravida turpis.</span>
+			    			</li>
+			    		</ul>
+			    	</div>
+			    </div>
+        </div>
+
+        <div class="cal-section">
+            <div class="row disclaimer mobile-hide">
+                <div class="logo">
+                    <img src="http://www.lincoln.com.cn/servlet/Satellite?blobcol=urlthumbnail&blobheader=image%2Fjpeg&blobheadername1=Cache-Control&blobheadername2=Content-Disposition&blobheadername3=Content-Length&blobheadervalue1=max-age%3D1000&blobheadervalue2=inline%3B+filename%3D1249128739117.jpeg&blobheadervalue3=5909&blobkey=id&blobtable=DFYImage&blobwhere=1249128739117&ssbinary=true"/>
+                </div>
+                <div class="article">
+                    <h3>Disclaimer:</h3>
+                    <p>- The payment estimator is based on MSRP and the result is only for your reference. Please consult your dealer for actual vehicle price, payments, and complete details.</p>
+                    <p>- Minimum down payment ratio is 20% of vehicle price. Actual down payment amount and credit approval conditions are based on the credit decision of Lincoln Automotive Financial Services.</p>
+                    <p>- This payment estimator is a tool to help you estimate your monthly payments and does not make any representation as to actual payment amounts. The payments calculated using this tool are ESTIMATES ONLY. The information that you enter to use this payment estimator tool are for your estimation and comparison purposes only. ACTUAL PRICES AND PAYMENTS MAY BE DIFFERENT due to local rebates, specials, fees and credit qualifications.</p>
+                </div>
+
+                <ul class="icon-holder mobile-only">
+                    <li>
+                        <a target="_blank" class="icon-bag"
+                            data-ng-class="{'icon-disabled': !gmfvValid2()}"
+                            track-link
+                            data-ng-href="/servlet/rest/tools/LCNEN2014/share/pdf-fc/Financial%20Calculator%20-%20Lincoln?mid={{appValue.selectedModel.id}}&did={{appValue.selectedDerivative.id}}&p={{vehiclePrice}}&dp={{appValue.downPayment}}&dpp={{appValue.downPaymentPercentage}}&t={{appValue.selectedTerm}}&mp={{appValue.totalMonthlyPayment}}{{appValue.pdfOption}}">
+                            <span class="icon-pdf"></span>
+                            <span class="icon-bag-text">Print</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="lfc-user-progress-template">
+        <div class="cal-progress">
+            <div class="step"
+                ng-repeat="step in appValue.steps"
+                ng-class="{
+                    'active': (appValue.currentStep >= $index),
+                    'step-1':(step.label === 'select'),
+                    'step-2':(step.label === 'calculate'),
+                    'step-3':(step.label === 'apply')}">
+                <span>{{$index + 1}}</span>
+                <h3 data-ng-show="step.label === 'select'">Select</h3>
+				<h3 data-ng-show="step.label === 'calculate'">Calculate</h3>
+				<h3 data-ng-show="step.label === 'apply'">Apply</h3>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="lfc-slider-template">
+        <div>
+            <div class="slide-block" data-ng-show="isStandardState()&&isStandardProduct()">
+	            <div class="slide">
+	            	<div ng-repeat="term in appValue.standardProduct['term-rates']" data-value={{term.term}} class="block" data-slider-on-finish-render>{{term.term}}</div>               
+                 </div>
+                <div id='slider'></div>
+            </div>
+            
+            
+            <div class="arrow-block" data-ng-if="isStandardState()&&!isStandardProduct()">
+            	<div class="block-row">
+            		<div ng-repeat="term in appValue.standardProduct['term-rates']" data-value={{term.term}} class="block" data-ng-click="setFlagValue($index,$event)" data-flag-on-render>{{term.term}}</div>
+            	</div>
+            </div>
+           
+             <div class="arrow-block" data-ng-if="!isStandardState()&&appValue.calState ==='rco'&&isRCOProduct()">
+            	<div class="block-row">
+            		<div ng-repeat="term in appValue.rcoProduct['term-rates']" data-value={{term.term}} class="block" data-ng-click="setFlagValue($index,$event)" data-flag-on-render>{{term.term}}</div>
+            	</div>
+            </div>
+
+             <div class="arrow-block" data-ng-if="!isStandardState()&&appValue.calState ==='ew'">
+            	<div class="block-row">
+            		<div ng-repeat="term in appValue.ewProduct['term-rates']" data-value={{term.term}} class="block" data-ng-click="setFlagValue($index,$event)" data-flag-on-render>{{term.term}}</div>
+            	</div>
+            </div>
+        </div>
+    </script>
+    <script type="text/ng-template" id="lfc-error-overlay-template">
+            <div class="rad-overlay-wrap alertbox">
+                <div class="alert-info">
+                    <span class="alert-icon"></span>
+                    <div class="message">
+                        <p class="large-text border-bottom">
+                        </p>
+                    </div>
+                    <div class="btns">
+                        <span class="lfc-yes underline-btn">
+                            <span>
+                            </span>
+                        </span>
+                        <span class="lfc-no underline-btn">
+                            <span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+    </script>
+    <script type="text/ng-template" id="financial-calculator-config">
+        {
+            "modelsUrl": "../../rest/financialcalc/models.json",
+            "derivativesUrl": "../../rest/financialcalc/derivatives.json?model=:model",
+            "gmfvPriceUrl":"../../rest/financialcalc/gmfv.json?model={modelID}&series={seriesID}&userselectedids={userselectedIDs}",
+            "priceFormatterConfig" : {
+                "priceFormat" :  "true,0",
+                "currencySymbol":  "%1",
+                "monetaryDecimalSeparator": ".",
+                "groupingSeparator": ","
+            }
+        }
+    </script>
+    
+
+
+</body>
+</html>

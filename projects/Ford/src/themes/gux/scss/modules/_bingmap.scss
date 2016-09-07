@@ -1,0 +1,43 @@
+.MicrosoftMap .OverlaysTL {right:0; left:auto !important; border-bottom:none !important; background:none !important;}
+.NavBar_compassControlContainer {right:0; top:5px; background:none !important;
+	.NavBar_compassFlat {height:49px !important; background:transparent url('#{$img-path}/bingmap-controller.png') no-repeat scroll 0 -77px !important;}
+	.NavBar_compass {color:$text-gray !important; line-height:47px !important; font-size:rem-calc(13) !important; font-family:$font-family-bold !important;}
+}
+.NavBar_zoomControlContainer {width:70px !important; top:15px !important; right:108px; left:auto !important; background:none !important;
+	.NavBar_zoomDrop {left:10px !important;}
+	.NavBar_zoomIn {width:30px !important; height:30px !important; margin-left:10px !important; background:transparent url('#{$img-path}/bingmap-controller.png') no-repeat scroll 0 -327px !important;}
+	.NavBar_zoomOut {width:30px !important; height:30px !important; background:transparent url('#{$img-path}/bingmap-controller.png') no-repeat scroll 0 -360px !important;}
+}
+
+.MicrosoftMap .MapPushpinBase {width:35px !important; height:46px !important; background:transparent url('#{$img-path}/bingmap-controller.png') no-repeat scroll 0 -439px;
+	> div {top:10% !important; font-family:$font-family-RE !important; font-size:rem-calc(15) !important; line-height:28px !important;}
+	&:first-child {background-position:0 -550px;}
+}
+
+.MicrosoftMap .infobox {position:relative; width:340px;
+	.content {background:#fff; border:1px solid #ccc; padding:20px; margin-left:10px; min-height:240px; 
+		p {margin:0; color:$text-gray; font-size:rem-calc(13);}
+		.dealer-name {font-size:rem-calc(18); line-height:1.1; margin-top:2px;}
+		.hours {font-size:rem-calc(11); margin-top:3px;}
+		.address {line-height:1.35; margin-top:10px;}
+		.phone {background:transparent url('#{$img-path}/bingmap-controller.png') 6px -662px no-repeat; padding-left:27px; margin-top:11px;}
+		.website {margin-top:12px;
+			a {background:transparent url('#{$img-path}/bingmap-controller.png') right -735px no-repeat; padding-right:17px;}
+		}
+		.directions {margin-top:13px;
+			a {background:transparent url('#{$img-path}/bingmap-controller.png') 0 -771px no-repeat; padding:4px 0 6px 39px;
+				&:hover {background-position:0 -840px;}
+			}
+		}
+	}
+	.beak {background:transparent url('#{$img-path}/bingmap-beak.png'); width:11px; height:17px; position:absolute; top:37px;}
+}
+
+.MicrosoftMap {
+	.LogoContainer.Active {background-color:#4c5357 !important; margin-bottom:0 !important; padding-top:5px !important; min-width:226px !important;
+			#bingLogo {background-position:0 -67px !important; height:29px !important; width:62px !important;}		
+	}
+	.LogoSearchContainer {bottom:5px !important;
+		#LogoSearchInput {box-shadow:none !important; height:19px !important; line-height:16px !important; font-size:rem-calc(13) !important;}
+	}
+}

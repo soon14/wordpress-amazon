@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+  	
+  	<title>Ford Motorcraft</title>
+
+  	<!--[if IE 9]>
+		<link rel="stylesheet" type="text/css" href="../../src/themes/rad/css/ie9-fonts.css" />
+  	<![endif]-->
+  	<link type="text/css" rel="stylesheet" href="../../src/themes/rad/css/fonts.css" media="screen, projection" />
+   	<link type="text/css" rel="stylesheet" href="../../src/themes/rad/css/normalize.css" media="screen, projection" /> 
+   	<link type="text/css" rel="stylesheet" href="../../src/themes/rad/css/foundation.css" media="screen, projection" /> 
+   	
+   	<link type="text/css" rel="stylesheet" href="../../src/themes/rad/css/rad.css" media="screen, projection" /> 
+
+   	<link type="text/css" rel="stylesheet" href="../../src/themes/rad-alt/css/rad-sync.css" media="screen, projection" />
+   	<link type="text/css" rel="stylesheet" href="../../src/themes/rad/css/motorcraft.css" media="screen, projection" /> 
+
+   	<link type="text/css" rel="stylesheet" href="../../src/themes/gux/css/foundation.css" media="screen, projection" /> 
+   	<link type="text/css" rel="stylesheet" href="../../src/themes/rad/css/motorcraft-dealer-locator.css" media="screen, projection" /> 
+   	
+   	<!--[if IE 8]>
+		<link rel="stylesheet" type="text/css" href="../../src/themes/rad/css/motorcraft-ie8.css" />
+		<link rel="stylesheet" type="text/css" href="../../src/themes/rad/css/motorcraft-ie8-dealer-locator.css" />
+  	<![endif]-->
+
+   	<!-- JS Plugin for IE8's lack of media query support 
+   	<script type="text/javascript" src="../../src/themes/rad/js/lib/respond.min.js"></script>
+	-->
+
+   	<script type="text/javascript">
+		var _da = _da || {};
+		_da.om = {};
+		_da.sync = {};
+		_da.skipTracking=false;
+		_da.om.acc="Omn Analytics Account";
+		_da.om.client="ford-australia";
+		_da.om.lang="eng";
+		_da.om.site="ford-brand";
+		_da.pname="home";
+		_da.hier="home";
+		_da.funnel = {name: 'home'};
+		_da.om.linkTrackVars="events,channel,hier1,prop1,eVar1,prop2,eVar2,prop3,eVar3,prop4,eVar4,prop5,eVar5,prop6,eVar6,prop7,eVar7,prop8,eVar8,prop9,eVar9,prop10,eVar10,prop11,eVar11,prop12,eVar12,prop13,eVar13,prop14,eVar14,prop15,eVar15,prop16,eVar16,prop17,eVar17,prop18,eVar18,prop19,eVar19,prop20,eVar20,prop21,eVar21,prop22,eVar22,prop23,eVar23,prop24,eVar24,prop25,eVar25,prop26,eVar26,prop27,eVar27,prop28,eVar28,prop29,eVar29,prop30,eVar30,prop31,eVar31,prop32,eVar32,prop33,eVar33,prop34,eVar34,prop35,eVar35,prop36,eVar36,prop37,eVar37,prop38,eVar38,prop39,eVar39,prop40,eVar40,prop41,eVar41,prop42,eVar42,prop43,eVar43,prop44,eVar44,prop45,eVar45,prop46,eVar46,prop47,eVar47,prop48,eVar48,prop49,eVar49,prop50,eVar50,prop51,eVar51,prop52,eVar52,prop53,eVar53,prop54,eVar54,prop55,eVar55,prop56,eVar56,prop57,eVar57,prop58,eVar58,prop59,eVar59,prop60,eVar60,prop61,eVar61,prop62,eVar62,prop63,eVar63,prop64,eVar64,prop65,eVar65,prop66,eVar66,prop67,eVar67,prop68,eVar68,prop69,eVar69,prop70,eVar70,prop71,eVar71,prop72,eVar72,prop73,eVar73,prop74,eVar74,prop75,eVar75,prop76,eVar76,prop77,eVar77,prop78,eVar78,prop79,eVar79,prop80,eVar80";
+		_da.om.linkTrackEvents="event1,event2,event3,event4,event5,event6,event7,event8,event9,event10,event11,event12,event13,event14,event15,event16,event17,event18,event19,event20,event21,event22,event23,event24,event25,event26,event27,event28,event29,event30,event31,event32,event33,event34,event35,event36,event37,event38,event39,event40,event41,event42,event43,event44,event45,event46,event47,event48,event49,event50,event51,event52,event53,event54,event55,event56,event57,event58,event59,event60,event61,event62,event63,event64,event65,event66,event67,event68,event69,event70,event71,event72,event73,event74,event75,event76,event77,event78,event79,event80";
+		
+		omni_filters ="javascript:,foa.nddev.corp.nextdigital.com,foa-alias.ndprod.corp.nextdigital.com,touch.foa.nddev.corp.nextdigital.com,m.foa.nddev.corp.nextdigital.com," + document.location.host;
+		s_account = _da.om.acc;
+	</script>
+	<script type="text/javascript" src="../FTD2010/../../src/themes/ftd/js/localconf.js"></script>
+	<script type="text/javascript" src="../../src/themes/rad/js/lib/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../../src/themes/rad/js/live/dev.debug.js"></script>
+	<!-- <script type="text/javascript" src="../../src/themes/rad/js/live/prod.min.js"></script> -->
+
+	<script type="text/javascript">
+		// fix for issues cause by the back buttons 'back-forward cache' issue found on the iPad
+		// reloads this page when the user navigates from another page using the back button
+		// http://stackoverflow.com/questions/11979156/mobile-safari-back-button
+		window.onpageshow = function(event) {
+	    	if (event.persisted) {
+	        	window.location.reload() 
+	    	}
+		};
+	</script>
+  	
+</head>
+
+<body class="content-page light ltr">
+<noscript>
+	<div style="width:100%;padding:0">
+		<p style="margin:0px 0 8px;color:#5B6E7C;font-size: 1em; text-align:center; font-weight:bold; padding:5px 15px 10px 15px; background-color:#AE0000; color:#fff;">The page cannot be viewed correctly without enabling JavaScript in your brower setting.</p>
+	</div>
+</noscript>
+
+	<!-- Global Header START -->
+	<div id="header">
+		<div id="badge">
+			<a href="http://www.ford.com.au/" data-moblink="touch.html" data-link="http://www.ford.com.au/" title="Ford Motorcraft Home"><span class="logo-wide" style="background-image:url('media/rad/motorcraft/logo_motorcraft.png');">Ford Motorcraft</span></a>
+		</div>
+
+		<ul id="toolbar" class="icon-text">
+			<li>
+				<a href="#" class="wtb-wrap">Where to buy</a>
+			</li>
+			<li>
+				<div class="language-wrap list-items">
+					<span class="js-reveal">Language</span>
+					<ul>
+						<li><a href="#">English</a></li>
+						<li class="last"><a href="#">中文（简体中文）‎</a></li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+			</li>
+			<li>
+				<div class="search-wrap list-items">
+					<span class="js-reveal">Search</span>
+					<ul>
+						<li>
+							<input type="text" id="searchbox" class="clearme" title="Search" value="Search" />
+							<input type="submit" value="Go" id="search-btn" />
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div class="top-level-menu list-items">
+					<span class="js-reveal">Menu</span>
+					<ul id="nav">
+						<li>
+							<a title="Home" href="#" class="nav-item">
+								<span>Home</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Our Products" class="nav-item">
+								<span>Our Products</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Our Brands" class="nav-item">
+								<span>Our Brands</span>
+							</a>
+						</li>
+						<li class="last">
+							<a href="#" title="Technical Resources" class="nav-item">
+								<span>Technical Resources</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+	<!-- Global Header END -->
+		<!-- Content START -->
+		
+		<div>
+			<!-- Start of Mini Dealer -->
+			<section class="dealer-locator alt-theme optional">
+				<div class="row fullwidth">
+					<div class="large-5 columns search-info-column">
+						<article class="dealer-unaware">
+							<div class="wrap">
+								<h1>Dealer Locator</h1>
+								<form action="" method="GET" class="search-panel">
+									<div class="text-panel">
+									<p></p>
+									</div>
+									<div class="input-panel">
+										<input type="text" name="location" autocomplete="off" placeholder="Enter Postal Code, City/State or Dealer" class="keyword-field" data-role="none" />
+										<input type="submit" value="Search Dealer" class="btn-search icon" data-role="none" />
+										<span class="loading"></span>
+									</div>
+									<div class="dealer-disambiguation">
+										<p class="label">Did You Mean...</p>
+										<ul>
+										</ul>
+									</div>
+									<p class="error">
+										<span class="text"></span>
+										<span class="icon-error"></span>
+									</p>
+									<!-- locations template -->
+									<script id="dealer-disambiguation" type="text/template">
+										<@ _.each(suggestions, function(item, i) { @>
+										<li>
+											<a href="#"><@= item @></a>
+										</li>
+										<@ }); @>
+									</script>
+								</form>
+							</div>
+						</article>
+
+					</div>
+				</div>
+
+				<div class="row fullwidth">
+					<div class="large-12 columns">
+						<article class="dealer-map-container">
+							<div class="dealer-map-field">
+								
+							</div>
+							<div class="dealer-map-landing hide">
+								<div class="dealer-landing show-for-large-up"><img src="media/rad/motorcraft/firstVisitDealer.jpg" /></div>
+							</div>
+						</article>
+						<!-- MAPS FOR MOBILE -->
+						<script id="infobox-template" type="text/template">
+					   		<div class="content">
+						      	<p class="dealer-name"><a href="<@= dealershipURL @>" target="_blank"><@= DealerName @></a></p>
+
+						      	<p class="hours"><@= scheduleType @><@= schedule @></p>
+						     	<p class="address"><@= address @></p>
+						     	<p class="phone"><@= PrimaryPhone @></p>
+						     	<@ if (!!PrimaryURL) { @><p class="website"><a href="<@= PrimaryURL @>" target="_blank">Visit Dealer&#39;s Website</a></p><@ } @>
+						     	<p class="directions"><a href="<@= mapURL @>" target="_blank"><span class="icon icon-direction"></span> DIRECTIONS</a></p>
+					     	</div>
+					     	<div class="beak"></div>
+						</script>
+					</div>
+				</div>
+
+				<!-- <div class="row fullwidth"> -->
+					<!-- <div class="large-12 columns"> -->
+						<article class="dealer-result-container">
+							<div class="dealer-filter-bar">
+								<div class="filter-header">
+									<div class="filter-count">
+										<p class="count">
+											<span class="num"></span>
+											<span class="msg"></span>
+										</p>
+										<a class="view-all-dealers" href="dealer-result.html" data-role="none">&lt; View All Dealers</a>
+										<a class="show-list">&lt; View All Dealers</a>
+									</div>
+								</div>
+								<form action="" method="GET" class="filter-accordion accordion uniform" data-accordion>
+									<div class="filter-services group accordion-navigations active">
+										<a class="control" data-role="none">Services <span class="collapse-btn"></span></a>
+										<div class="control-content">
+											<div class="content-toolbar clearfix">
+												<a class="filter-clear" data-role="none">Clear All</a>
+												<h3>Filter By:</h3>
+											</div>
+
+											<ul class="group-list">
+											</ul>
+											<script id="services-template" type="text/template">
+												<@ if (services) { _.each(services, function(service, key) { var field_name = service.key @>
+												<li>
+													<label for="<@= field_name @>">
+														<input type="checkbox" name="<@= field_name @>" value="1" id="<@= field_name @>" <@ if (filters.indexOf(field_name) >= 0) { @>checked="checked"<@ } @> data-role="none">
+														<@= service.name @>
+													</label>
+													<a href="#<@= field_name @>" class="view-details"></a>
+													<div class="popover">
+														<span class="popover-arrow border"></span>
+														<span class="popover-arrow"></span>
+													
+														<h3 class="popover-title"><@= service.name @></h3>
+														<div class="popover-content">
+															<@ if (service.description) { @><@= service.description @><@ } else { @>No Description provided<@ } @>
+														</div>
+														<a href="#close-info" class="close-info">Close</a>
+													</div>
+												</li>
+												<@ }); } @>
+											</script>
+										</div>
+									</div>
+									<input type="submit" class="submit" value="Submit" data-role="none">
+									<a class="viewSaved">VIEW SAVED DEALER <span></span></a>
+								</form>
+							</div>
+
+							
+							<div class="result-list">
+								<ul>
+								</ul>
+								<div class="dealer-view-more">
+									<a class="button" target="_blank" href="#">
+										<span>
+											<span class="icon icon-link"></span>
+											<span class="label-link">More Dealers</span>
+										</span>
+									</a>
+								</div>
+								<script id="dealer-results" type="text/template">
+
+									<li class="dealer-result <@ if (is_preferred) { @>preferred<@ } @>" data-dealer-postcode="<@= PostCode @>">
+										<div class="dealer-icon">
+											<a class="dealer-num"> <span class="icon-number"><@= index @></span> </a>
+											<@ if (distance) { @><span class="distance"><@= (distance/1000).toFixed(2) @> km</span><@ } @>
+											<a class="save-dealer-btn saved" data-dealer-id="<@= DealerID @>"><span></span></a>
+										</div>
+
+										<div class="dealer-heading">
+											<a class="dealer-heading-name" href="<@= dealershipURL @>" target="_blank"><@= DealerName @></a>
+										</div>
+										<div class="dealer-details">
+											<p class="dealer-hours">
+												<@= scheduleType @>
+												<@= schedule @>
+											</p>
+											<p><@= address @></p>
+											<@ if (PrimaryPhone) { @>
+											<p class="dealer-phone contact-icon">
+												<a <@ if (is_mobile) { @>href="tel:<@= PrimaryPhone @>"<@ } @>> <span class="phone-icon icon"></span> <@= PrimaryPhone @> </a>
+											</p>
+											<@ } @>
+										</div>
+										<div class="dealer-contact">
+											<@ if (PrimaryPhone) { @>
+											<div class="item call">
+												<p>
+													<a <@ if (is_mobile) { @>href="tel:<@= PrimaryPhone @>"<@ } @>> <span class="icon icon-phone"></span> <span class="label-link">CALL</span> </a>
+												</p>
+											</div>
+											<@ } @>
+											<div class="item">
+												<p>
+													<a href="<@= mapURL @>" class="show-directions" itemprop="maps" target="_blank"> <span class="icon icon-direction"></span> <span class="label-link">DIRECTIONS</span> </a>
+												</p>
+											</div>
+											<div class="item">
+												<p>
+													<a href="<@= dealershipURL @>" class="details"> <span class="icon icon-details"></span> <span class="label-link">DETAILS</span> </a>
+												</p>
+											</div>
+										</div>
+									</li>
+								</script>
+							</div>
+
+							<div class="result-list selected">
+								<div class="dealer-result active" itemscope itemtype="http://schema.org/AutoDealer">
+								</div>
+								
+								<div class="dealer-view-more">
+									<div class="multi-buttons">
+										<a class="button" target="_blank" href="#">
+											<span>
+												<span class="icon icon-link"></span>
+												<span class="label-link">Request a Quote</span>
+											</span>
+										</a>
+										<a class="button" target="_blank" href="#">
+											<span>
+												<span class="icon icon-link"></span>
+												<span class="label-link">Request Test Drive</span>
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<script id="dealer-detail" type="text/template">
+								<div class="dealer-icon">
+									<a class="dealer-num"> <span class="icon-number"><@= index @></span> </a>
+									<@ if (distance) { @><span class="distance"><@= (distance/1000).toFixed(2) @> km</span><@ } @>
+								</div>
+
+								<div class="dealer-heading">
+									<span class="dealer-heading-name" itemprop="name"><@= DealerName @></span>
+								</div>
+								<div class="dealer-details">
+									<p class="dealer-hours" itemprop="description">
+										<@= scheduleType @>
+										<@= schedule @>
+									</p>
+
+									<div class="save-dealer">
+							            	You have successfully saved this dealer
+							        </div>
+									<p itemprop="address"><@= address @></p>
+									<@ if (PrimaryPhone) { @>
+									<p class="dealer-phone contact-icon" itemprop="telephone">
+										<a <@ if (is_mobile) { @>href="tel:<@= PrimaryPhone @>"<@ } @>> <span class="phone-icon icon"></span> <@= PrimaryPhone @> </a>
+									</p>
+									<@ } @>
+									
+									<@ if (Fax) { @>
+									<p class="dealer-fax contact-icon" itemprop="fax">
+										<a href="tel:<@= Fax @>"> <span class="fax-icon icon"></span> <@= Fax @> </a>
+									</p>
+									<@ } @>
+								</div>
+								<div class="dealer-contact">
+									<@ if (PrimaryPhone) { @>
+									<div class="item call">
+										<p>
+											<a <@ if (is_mobile) { @>href="tel:<@= PrimaryPhone @>"<@ } @>> <span class="icon icon-phone"></span> <span class="label-link">CALL</span> </a>
+										</p>
+									</div>
+									<@ } @>
+									<div class="item">
+										<p>
+											<a href="<@= mapURL @>" class="show-directions" itemprop="maps" target="_blank"> <span class="icon icon-direction"></span> <span class="label-link">DIRECTIONS</span> </a>
+										</p>
+									</div>
+									<div class="item">
+										<p>
+											<a class="disabled"> <span class="icon icon-details"></span> <span class="label-link">DETAILS</span> </a>
+										</p>
+									</div>
+								</div>
+								<div class="dealer-reveal">
+									<@ if (PrimaryEmail) { @><p class="email" itemprop="email"><a href="mailto:<@= PrimaryEmail @>"> <@= PrimaryEmail @> </a></p><@ } @>
+									<@ if (PrimaryURL) { @><p class="website"><a href="<@= PrimaryURL @>" itemprop="url" target="_blank">Visit Dealer&#39;s Website <span></span></a></p><@ } @>
+									<@ if (ServiceURL) { @><p class="website"><a href="<@= ServiceURL @>" target="_blank">Visit Dealer&#39;s Service Website <span></span></a></p><@ } @>
+									<@ if (GovtTaxID) { @><p class="bn contact-icon" itemprop="Business Number"><@= govtTaxIDName+GovtTaxID @></p><@ } @>
+								</div>
+								<div class="dealer-accordion accordion">
+									
+									<@ if (hours && !guxApp.tools.isEmpty(hours)) { @>
+									<div class="cell">
+										<span class="control">Hours <a class="collapse-btn"></a></span>
+										<div class="cell-inner cell-hours uniform">
+											<@if (_.size(hours) > 1) { @>
+											<select placeholder="Departments" class="select-dept">
+												<@ for (var dept in hours) { var dept_name = hours[dept].name @>
+												<option value="<@= dept @>"><@= dept_name.charAt(0).toUpperCase()+dept_name.slice(1) @></option>
+												<@ }; @>
+											</select>
+											<@ } else if (_.size(hours) == 1) { var dept_name = hours[_.keys(hours)[0]].name.toString() @>
+												<p class="select-dept"><@= dept_name.charAt(0).toUpperCase()+dept_name.slice(1) @></p>
+											<@ } @>
+
+											<div class="hours-wrap">
+												<@ for (var dept in hours) {var deptName = dept.charAt(0).toUpperCase()+dept.slice(1), sched = hours[dept] @>
+												<div class="sched <@= dept @>">
+													<ul id="<@= dept @>">
+														<@ _.each(day_str, function(day, i) { @>
+															<@ if ( !((!sched[deptName+day+'OpenTime'] || !sched[deptName+day+'CloseTime']) && (!!parseInt(sched[deptName+day+'Open']) || sched[deptName+day+'Open'] === "Y")) ) { @>
+															<li>
+																<time itemprop="openingHours" datetime="Su <@= sched[deptName+day+'OpenTime'] @>">
+																	<span class="date"><@= day_str_translated[i] @></span>
+																	<span class="hour">
+																		<@ if (sched[deptName+day+'Open'] === "1" || sched[deptName+day+'Open'] === "Y") { @>
+																			<@ if (sched[deptName+day+'OpenTime'] || sched[deptName+day+'CloseTime']) { @><@= sched[deptName+day+'OpenTime'] + " - " + sched[deptName+day+'CloseTime'] @><@ } @>
+																		<@ } else { @>
+																			Closed
+																		<@ } @>
+																	</span>
+																</time>
+															</li>
+															<@ } @>
+														<@ }); @>
+														<@ if (sched[deptName+'OpeningTimeComments']) { @><li><p class="comments">&#42; <em><@= sched[deptName+'OpeningTimeComments'] @></em></p></li><@ } @>
+													</ul>
+													
+													<@ 
+													var phoneType = PrimaryPhone;
+													if (dept=="service") { 
+														phoneType = ServicePhone;
+													} else if (dept=="parts"){
+														phoneType = PartsPhone;
+													}if (phoneType) { @>
+													<p class="sales-phone dealer-phone contact-icon">
+														<a <@ if (is_mobile) { @>href="tel:<@= phoneType @>"<@ } @>> <span class="phone-icon icon"></span> <span class="phone-info"><@= sched.name.charAt(0).toUpperCase()+sched.name.slice(1) @>: <@= phoneType @></span> </a>
+													</p>
+													
+													<p class="call-sales-cta show-for-small-only">
+														<a href="tel:<@= PrimaryPhone @>">
+															<span class="icon icon-phone"></span>
+															<span class="label-link">CALL SALES</span>
+														</a>
+													</p>
+													<@ } @>
+													
+												</div>	
+													
+													
+												<@ }; @>
+											</div>
+
+											<p class="discliamer text-small">
+												Holiday ipsum dolor sit amet, consectetur adipiscing elit. Cur abitur et sodales leo. Duis rutrum, urna eu pharetra consectetur, ipsum magna mattis metus, vitae lacinia tellus augue ut ipsum. Praesent porta ipsum eu euismod consectetur. Pellentesque elementum molestie mauris, et scelerisque lectus viverra at.
+											</p>
+										</div>
+									</div>
+									<@ } @>
+									
+
+									<@ if (services) { @>
+									<div class="cell">
+										<span class="control">Services  <a class="collapse-btn"></a></span>
+										<div class="cell-inner cell-service">
+											<@  _.each(services, function(service) { @>
+												<p><@= service.name @></p>
+											<@ }); @>
+										</div>
+									</div>
+									<@ } @>
+									<div class="cell">
+										<span class="control">Promotions  <a class="collapse-btn"></a></span>
+										
+										<div class="cell-inner cell-pro text">
+											<header>
+												<h1><a href="#">Choose Value <span></span></a></h1>
+												<p>Across The Whole Ford Range</p>
+											</header>
+
+											<div class="promo">
+												<p><strong>&#36; 1,000</strong> Factory Cashback</p>
+												<p><strong class="small">Or</strong></p>
+												<p>up to <strong>3 Years</strong> Free Scheduled Servicing</p>
+												<p><strong class="small">Must End June 30</strong></p>
+											</div>
+											<p class="pro-cta">
+												<a href="#">OFFER DETAILS
+												<span></span>
+												</a>
+											</p>
+											<p class="text-small">Available for new and qualifying demonstrator vehicles delivered between 19 and 30 June, 2014 unless withdrawn earlier or extended. Private and Blue, Silver and Gold Business Fleet customers only. Recommended offer at participating Dealers only. Eligible customers can select: (a) Three standard scheduled services (15,000km/12 month, 30,000km/12 month and 45,000km/12 month as specified in the Customer Assistance, Warranty and Service Guide) to be provided free subject to the customer complying with scheduled servicing intervals; or (b) $1000 (incl GST) Factory Cash back in the form of a reduction in purchase price charged at the Dealer or refund of part of the purchase price from the Dealer. Customers will be required to sign a form acknowledging their selection.</p>
+										</div>
+									</div>
+								</div>
+							</script>
+						</article>
+					<!-- </div> -->
+				<!-- </div> -->
+			</section>
+			<!-- End of Dealer -->
+			
+			<!-- MAP configurations -->
+			
+			<!--#include file="common/json/locator-config.html" -->
+			
+			<!--#include file="common/json/services-config.html" -->
+			
+			<!--#include file="common/json/common-config.html" -->
+			
+			<!--#include file="common/json/mocked-api.html" -->
+			
+			<script id="cityDropdownData" type="text/x-json">
+			{"list":[{"states":[["ACT",{"name":"ACT","cities":[["Belconnen",{"name":"Belconnen"}],["Mitchell",{"name":"Mitchell"}],["Phillip",{"name":"Phillip"}]]}],["NSW",{"name":"NSW","cities":[["Albury",{"name":"Albury"}],["Armidale",{"name":"Armidale"}],["Arncliffe",{"name":"Arncliffe"}],["Batemans Bay",{"name":"Batemans Bay"}],["Bathurst",{"name":"Bathurst"}],["Bega",{"name":"Bega"}],["Blacktown",{"name":"Blacktown"}],["Bombala",{"name":"Bombala"}],["Broken Hill",{"name":"Broken Hill"}],["Brookvale",{"name":"Brookvale"}],["Campbelltown",{"name":"Campbelltown"}],["Cardiff",{"name":"Cardiff"}],["Castle Hill",{"name":"Castle Hill"}],["Cessnock",{"name":"Cessnock"}],["Chullora",{"name":"Chullora"}],["Cobar",{"name":"Cobar"}],["Coffs Harbour",{"name":"Coffs Harbour"}],["Condobolin",{"name":"Condobolin"}],["Cooma",{"name":"Cooma"}],["Cootamundra",{"name":"Cootamundra"}],["Cowra",{"name":"Cowra"}],["Culcairn",{"name":"Culcairn"}],["Deniliquin",{"name":"Deniliquin"}],["Dorrigo",{"name":"Dorrigo"}],["Dubbo",{"name":"Dubbo"}],["Dungog",{"name":"Dungog"}],["Eden",{"name":"Eden"}],["Forbes",{"name":"Forbes"}],["Forster",{"name":"Forster"}],["Gloucester",{"name":"Gloucester"}],["Goulburn",{"name":"Goulburn"}],["Greenacre",{"name":"Greenacre"}],["Griffith",{"name":"Griffith"}],["Gunnedah",{"name":"Gunnedah"}],["Hamilton",{"name":"Hamilton"}],["Inverell",{"name":"Inverell"}],["Junee",{"name":"Junee"}],["Kingswood",{"name":"Kingswood"}],["Kirrawee",{"name":"Kirrawee"}],["Kyogle",{"name":"Kyogle"}],["Leeton",{"name":"Leeton"}],["Lismore",{"name":"Lismore"}],["Lithgow",{"name":"Lithgow"}],["Liverpool",{"name":"Liverpool"}],["Maitland",{"name":"Maitland"}],["Moree",{"name":"Moree"}],["Mudgee",{"name":"Mudgee"}],["Murwillumbah",{"name":"Murwillumbah"}],["Muswellbrook",{"name":"Muswellbrook"}],["Nambucca Heads",{"name":"Nambucca Heads"}],["Narellan",{"name":"Narellan"}],["Narrabri",{"name":"Narrabri"}],["Narromine",{"name":"Narromine"}],["Nowra",{"name":"Nowra"}],["Orange",{"name":"Orange"}],["Parkes",{"name":"Parkes"}],["Parramatta",{"name":"Parramatta"}],["Port Macquarie",{"name":"Port Macquarie"}],["Raymond Terrace",{"name":"Raymond Terrace"}],["Rockdale",{"name":"Rockdale"}],["Ryde",{"name":"Ryde"}],["Smithfield",{"name":"Smithfield"}],["South Tweed Heads",{"name":"South Tweed Heads"}],["South Windsor",{"name":"South Windsor"}],["Tamworth",{"name":"Tamworth"}],["Taree North",{"name":"Taree North"}],["Temora",{"name":"Temora"}],["Tuggerah",{"name":"Tuggerah"}],["Wagga Wagga",{"name":"Wagga Wagga"}],["Walgett",{"name":"Walgett"}],["West Ballina",{"name":"West Ballina"}],["West Gosford",{"name":"West Gosford"}],["West Wyalong",{"name":"West Wyalong"}],["Wollongong",{"name":"Wollongong"}],["Yallah",{"name":"Yallah"}],["Young",{"name":"Young"}],["Zetland",{"name":"Zetland"}]]}],["NT",{"name":"NT","cities":[["Alice Springs",{"name":"Alice Springs"}],["Berrimah",{"name":"Berrimah"}],["Nhulunbuy",{"name":"Nhulunbuy"}]]}],["QLD",{"name":"QLD","cities":[["Atherton",{"name":"Atherton"}],["Ayr",{"name":"Ayr"}],["Beaudesert",{"name":"Beaudesert"}],["Beenleigh",{"name":"Beenleigh"}],["Biloela",{"name":"Biloela"}],["Bundaberg",{"name":"Bundaberg"}],["Caboolture",{"name":"Caboolture"}],["Cairns",{"name":"Cairns"}],["Charleville",{"name":"Charleville"}],["Chinchilla",{"name":"Chinchilla"}],["Currimundi",{"name":"Currimundi"}],["Dalby",{"name":"Dalby"}],["Dysart",{"name":"Dysart"}],["Eagle Farm",{"name":"Eagle Farm"}],["Ebbw Vale",{"name":"Ebbw Vale"}],["Emerald",{"name":"Emerald"}],["Gatton",{"name":"Gatton"}],["Geebung",{"name":"Geebung"}],["Goondiwindi",{"name":"Goondiwindi"}],["Gympie",{"name":"Gympie"}],["Hervey Bay",{"name":"Hervey Bay"}],["Kedron",{"name":"Kedron"}],["Kingaroy",{"name":"Kingaroy"}],["Mackay",{"name":"Mackay"}],["Mansfield",{"name":"Mansfield"}],["Mareeba",{"name":"Mareeba"}],["Maroochydore",{"name":"Maroochydore"}],["Maryborough",{"name":"Maryborough"}],["MOOROOKA",{"name":"MOOROOKA"}],["Mt Isa",{"name":"Mt Isa"}],["Newstead",{"name":"Newstead"}],["Noosaville",{"name":"Noosaville"}],["North Lakes",{"name":"North Lakes"}],["Nth Rockhampton",{"name":"Nth Rockhampton"}],["Proserpine",{"name":"Proserpine"}],["Roma",{"name":"Roma"}],["South Gladstone",{"name":"South Gladstone"}],["Southport",{"name":"Southport"}],["Springwood",{"name":"Springwood"}],["Stanthorpe",{"name":"Stanthorpe"}],["Strathpine",{"name":"Strathpine"}],["Tingalpa",{"name":"Tingalpa"}],["Toowoomba",{"name":"Toowoomba"}],["Townsville",{"name":"Townsville"}],["Tully",{"name":"Tully"}],["Warwick",{"name":"Warwick"}],["Woolloongabba",{"name":"Woolloongabba"}]]}],["SA",{"name":"SA","cities":[["Balaklava",{"name":"Balaklava"}],["Berri",{"name":"Berri"}],["Bordertown",{"name":"Bordertown"}],["Christies Beach",{"name":"Christies Beach"}],["Clare",{"name":"Clare"}],["Elizabeth",{"name":"Elizabeth"}],["Hamley Bridge",{"name":"Hamley Bridge"}],["Hillcrest",{"name":"Hillcrest"}],["Hindmarsh",{"name":"Hindmarsh"}],["Jamestown",{"name":"Jamestown"}],["Keswick",{"name":"Keswick"}],["Loxton",{"name":"Loxton"}],["Medindie",{"name":"Medindie"}],["Millicent",{"name":"Millicent"}],["Mt Barker",{"name":"Mt Barker"}],["Mt. Gambier",{"name":"Mt. Gambier"}],["Naracoorte",{"name":"Naracoorte"}],["Olympic Dam",{"name":"Olympic Dam"}],["Port Adelaide",{"name":"Port Adelaide"}],["Port Augusta",{"name":"Port Augusta"}],["Port Lincoln",{"name":"Port Lincoln"}],["Port Pirie",{"name":"Port Pirie"}],["Regency Park",{"name":"Regency Park"}],["Reynella",{"name":"Reynella"}],["St. Mary's",{"name":"St. Mary's"}],["Tanunda",{"name":"Tanunda"}],["Trinity Gardens",{"name":"Trinity Gardens"}],["Waikerie",{"name":"Waikerie"}],["Yorketown",{"name":"Yorketown"}]]}],["TAS",{"name":"TAS","cities":[["BURNIE",{"name":"BURNIE"}],["Devonport",{"name":"Devonport"}],["Hobart",{"name":"Hobart"}],["Launceston",{"name":"Launceston"}]]}],["VIC",{"name":"VIC","cities":[["Ararat",{"name":"Ararat"}],["Bairnsdale",{"name":"Bairnsdale"}],["Benalla",{"name":"Benalla"}],["Berwick",{"name":"Berwick"}],["Bundoora",{"name":"Bundoora"}],["Campbellfield",{"name":"Campbellfield"}],["Clayton North",{"name":"Clayton North"}],["Cobram",{"name":"Cobram"}],["Coburg",{"name":"Coburg"}],["Cohuna",{"name":"Cohuna"}],["Colac West",{"name":"Colac West"}],["Cranbourne",{"name":"Cranbourne"}],["Dandenong",{"name":"Dandenong"}],["Deer Park",{"name":"Deer Park"}],["Donald",{"name":"Donald"}],["Echuca",{"name":"Echuca"}],["Elsternwick",{"name":"Elsternwick"}],["Epping",{"name":"Epping"}],["Epsom",{"name":"Epsom"}],["Essendon Fields",{"name":"Essendon Fields"}],["Ferntree Gully",{"name":"Ferntree Gully"}],["Footscray",{"name":"Footscray"}],["Frankston",{"name":"Frankston"}],["Geelong South",{"name":"Geelong South"}],["Hallam",{"name":"Hallam"}],["Hastings",{"name":"Hastings"}],["Heidelberg",{"name":"Heidelberg"}],["Hoppers Crossing",{"name":"Hoppers Crossing"}],["Horsham",{"name":"Horsham"}],["Kerang",{"name":"Kerang"}],["Kilmore",{"name":"Kilmore"}],["Kyabram",{"name":"Kyabram"}],["Laverton North",{"name":"Laverton North"}],["Leongatha",{"name":"Leongatha"}],["Lilydale",{"name":"Lilydale"}],["Maffra",{"name":"Maffra"}],["Melbourne",{"name":"Melbourne"}],["Melton",{"name":"Melton"}],["Mentone",{"name":"Mentone"}],["Mildura",{"name":"Mildura"}],["Moe",{"name":"Moe"}],["Mornington",{"name":"Mornington"}],["Oakleigh",{"name":"Oakleigh"}],["Pakenham",{"name":"Pakenham"}],["Ringwood",{"name":"Ringwood"}],["Robinvale",{"name":"Robinvale"}],["Rosebud",{"name":"Rosebud"}],["Sale",{"name":"Sale"}],["Sebastapol",{"name":"Sebastapol"}],["Shepparton",{"name":"Shepparton"}],["South Dandenong",{"name":"South Dandenong"}],["Stanhope",{"name":"Stanhope"}],["Stawell",{"name":"Stawell"}],["Sunbury",{"name":"Sunbury"}],["Swan Hill",{"name":"Swan Hill"}],["Traralgon",{"name":"Traralgon"}],["Wangaratta",{"name":"Wangaratta"}],["Warragul",{"name":"Warragul"}],["Warrnambool",{"name":"Warrnambool"}],["West Heidelberg",{"name":"West Heidelberg"}],["Wodonga",{"name":"Wodonga"}],["Wonthaggi",{"name":"Wonthaggi"}]]}],["WA",{"name":"WA","cities":[["Albany",{"name":"Albany"}],["Broome",{"name":"Broome"}],["Bunbury",{"name":"Bunbury"}],["Busselton",{"name":"Busselton"}],["Clarkson",{"name":"Clarkson"}],["Cunderdin",{"name":"Cunderdin"}],["Dalwallinu",{"name":"Dalwallinu"}],["East Victoria Park",{"name":"East Victoria Park"}],["Esperance",{"name":"Esperance"}],["Geraldton",{"name":"Geraldton"}],["Goomalling",{"name":"Goomalling"}],["Kalgoorlie",{"name":"Kalgoorlie"}],["Lake Grace",{"name":"Lake Grace"}],["Maddington",{"name":"Maddington"}],["Mandurah",{"name":"Mandurah"}],["Manjimup",{"name":"Manjimup"}],["Melville",{"name":"Melville"}],["Merredin",{"name":"Merredin"}],["Midland",{"name":"Midland"}],["Moora",{"name":"Moora"}],["Morley",{"name":"Morley"}],["Narrogin",{"name":"Narrogin"}],["Newman",{"name":"Newman"}],["Northam",{"name":"Northam"}],["Osborne Park",{"name":"Osborne Park"}],["Rockingham",{"name":"Rockingham"}],["Victoria Park",{"name":"Victoria Park"}],["Wangara",{"name":"Wangara"}],["Wedgefield",{"name":"Wedgefield"}],["Wongan Hills",{"name":"Wongan Hills"}]]}]]}]}
+			</script>
+		</div>
+		
+	
+		<!-- Content END -->
+	<!-- Fat Footer START -->
+	<div id="fat-footer">
+		<div>
+			<div class="fat-footer-col fat-footer-col-first">
+				<h4><a href="#" title="Our Products">Our Products</a></h4>
+			</div>
+			<div class="fat-footer-col">
+				<h4><a href="#" title="Our Brands">Our Brands</a></h4>
+				<ul>
+					<li class="last">
+						<a href="#" title="Where to Buy">Where to Buy</a>
+					</li>
+				</ul>
+			</div>
+			<div class="fat-footer-col">
+				<h4><a href="#" title="Technical Resources">Technical Resources</a></h4>
+			</div>
+			<div class="fat-footer-col">
+				<h4><a href="#" title="Social Links">Social Links</a></h4>
+				<ul>
+					<li>
+						<a href="#">Facebook</a>
+					</li>
+					<li>
+						<a href="#">Twitter</a>
+					</li>
+					<li class="last">
+						<a href="#">YouTube</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- Fat Footer END --> 
+
+	<!-- Global Footer START -->
+	<div id="footer-wrapper">
+	
+		<div id="footer">
+						
+			<!--<div class="rss-addthis">
+				<div class="rss">
+					<a href="#" title="RSS feed">RSS</a></div>
+				<div class="addthis">
+					<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;username=xa-4c7c570106642ec6">
+						<img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border:0"/></a>
+					<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4c7c570106642ec6"></script>
+				</div>
+			</div>-->
+					
+			<div id="footer-links">
+				<ul>
+					<li class="first">
+						<a href="#">
+							Sitemap</a></li>
+					<li>
+						<a href="#">
+							FAQ</a></li>
+					<li class="last">
+						<a href="#" title="">
+							Privacy</a></li>
+				</ul>
+				<p>&copy; 2013 Ford</p>
+			</div>
+				
+			<div id="badge-footer">
+				<a href="#" title="Ford Motorcraft Home" style="background-image:url('media/rad/motorcraft/logo_motorcraft-footer.png');">Ford Motorcraft</a></div>
+		</div>
+		
+	</div>
+	<!-- Global Footer END -->	
+
+</body>
+</html>

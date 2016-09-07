@@ -1,0 +1,168 @@
+{
+  "model" : {
+    "vehicleAssetId" : 1234567890144,
+    "nameplateName" : "MUSTANG",
+    "modelName" : "MUSTANG V8 GT",
+    "year" : 2012,
+    "price" : 758000.0,
+    "programs" : [ {
+      "name" : "Standard APR Program",
+      "type" : 1,
+      "products" : [ {
+        "name" : "Equal",
+        "type" : 1,
+        "terms" : [ {
+          "term" : 12,
+          "isDefault" : true,
+          "productCode" : "RN2",
+          "customerRate" : 11.99,
+          "baseRate" : 11.99,
+          "oemSubvention" : 0.0
+        }, {
+          "term" : 18,
+          "isDefault" : false,
+          "productCode" : "RN2",
+          "customerRate" : 11.99,
+          "baseRate" : 11.99,
+          "oemSubvention" : 0.0
+        }, {
+          "term" : 24,
+          "isDefault" : false,
+          "productCode" : "RN2",
+          "customerRate" : 11.99,
+          "baseRate" : 11.99,
+          "oemSubvention" : 0.0
+        }, {
+          "term" : 30,
+          "isDefault" : false,
+          "productCode" : "RN2",
+          "customerRate" : 11.99,
+          "baseRate" : 11.99,
+          "oemSubvention" : 0.0
+        }, {
+          "term" : 36,
+          "isDefault" : false,
+          "productCode" : "RN2",
+          "customerRate" : 11.99,
+          "baseRate" : 11.99,
+          "oemSubvention" : 0.0
+        }, {
+          "term" : 42,
+          "isDefault" : false,
+          "productCode" : "RN2",
+          "customerRate" : 11.99,
+          "baseRate" : 11.99,
+          "oemSubvention" : 0.0
+        }, {
+          "term" : 48,
+          "isDefault" : false,
+          "productCode" : "RN2",
+          "customerRate" : 12.49,
+          "baseRate" : 12.49,
+          "oemSubvention" : 0.0
+        }, {
+          "term" : 54,
+          "isDefault" : false,
+          "productCode" : "RN2",
+          "customerRate" : 12.49,
+          "baseRate" : 12.49,
+          "oemSubvention" : 0.0
+        }, {
+          "term" : 60,
+          "isDefault" : false,
+          "productCode" : "RN2",
+          "customerRate" : 12.49,
+          "baseRate" : 12.49,
+          "oemSubvention" : 0.0
+        } ]
+      }, {
+        "name" : "EW-Bundled",
+        "type" : 3,
+        "terms" : [ {
+          "term" : 24,
+          "isDefault" : true,
+          "productCode" : "R54",
+          "customerRate" : 13.49,
+          "baseRate" : 13.49,
+          "oemSubvention" : 0.0,
+          "ewPackage" :  {
+            "id" : 4884,
+            "name" : "Package 1",
+            "price" : 8888.0
+          } 
+        }, {
+          "term" : 36,
+          "isDefault" : false,
+          "productCode" : "R54",
+          "customerRate" : 13.49,
+          "baseRate" : 13.49,
+          "oemSubvention" : 0.0,
+          "ewPackage" : {
+            "id" : 4885,
+            "name" : "Package 1",
+            "price" : 8888.0
+          } 
+        }, {
+          "term" : 60,
+          "isDefault" : false,
+          "productCode" : "R54",
+          "customerRate" : 13.99,
+          "baseRate" : 13.99,
+          "oemSubvention" : 0.0,
+          "ewPackage" :  {
+            "id" : 4887,
+            "name" : "Package 1",
+            "price" : 8888.0
+          } 
+        }, {
+          "term" : 36,
+          "isDefault" : false,
+          "productCode" : "R55",
+          "customerRate" : 13.99,
+          "baseRate" : 13.99,
+          "oemSubvention" : 0.0,
+          "ewPackage" :  {
+            "id" : 4889,
+            "name" : "Package 2",
+            "price" : 14888.0
+          } 
+        }, {
+          "term" : 48,
+          "isDefault" : false,
+          "productCode" : "R55",
+          "customerRate" : 14.49,
+          "baseRate" : 14.49,
+          "oemSubvention" : 0.0,
+          "ewPackage" :  {
+            "id" : 4890,
+            "name" : "Package 2",
+            "price" : 14888.0
+          } 
+        }, {
+          "term" : 60,
+          "isDefault" : false,
+          "productCode" : "R55",
+          "customerRate" : 14.49,
+          "baseRate" : 14.49,
+          "oemSubvention" : 0.0,
+          "ewPackage" :  {
+            "id" : 4891,
+            "name" : "Package 2",
+            "price" : 14888.0
+          } 
+        } ]
+      }, {
+        "name" : "50-50",
+        "type" : 2,
+        "terms" : [ {
+          "term" : 12,
+          "isDefault" : true,
+          "productCode" : "HU1",
+          "customerRate" : 11.99,
+          "baseRate" : 11.99,
+          "oemSubvention" : 0.0
+        } ]
+      } ]
+    } ]
+  }
+}

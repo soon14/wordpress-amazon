@@ -1,0 +1,13 @@
+p {line-height:1.5; margin: 0 0 20px 0; font-family:$font-gotham;}
+sup {line-height:0;}
+a:hover, a:active, a:focus {outline:none;}
+// For fixing active color when tap on mobile devices
+a {-webkit-tap-highlight-color: rgba(0,0,0,0); }
+
+h1 {font-size:rem-calc(24); font-weight: 800;}
+h2 {font-size:rem-calc(24); font-family: $font-serifa-roman;}
+h3 {font-size:rem-calc(20); font-weight: 800;}
+h4 {font-size:rem-calc(18); font-weight: 700;}
+h5 {font-size:rem-calc(18);}
+h6 {font-size:rem-calc(18);}
+

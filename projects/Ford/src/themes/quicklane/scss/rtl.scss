@@ -1,0 +1,178 @@
+@import "common/common";
+
+.rtl{ direction:rtl;
+	//General Styles
+	.column, .columns{float:right;}
+
+	//Module Specific Styles
+	.content {
+		.share-icon-wrapper{left:0; right:auto;}
+		.article {
+			.share-icon-wrapper{left:10px; right:auto;}
+		}
+		.side-content{
+			h1{text-align:right;}
+		}
+		ol, ul{margin-left:0;}
+	}
+
+	.landing-header{overflow:hidden;
+		img{float:right;}
+	}
+
+	.image-wrapper{text-align: right;
+		img{margin:0 0 10px 10px;}
+	}
+
+	#header {
+		.header-wrapper {
+			.burger-menu-wrapper{float:right; padding:0;}
+			.user-action-links{float:left;
+				li{float:right;}
+				.search-box{
+					.input{padding:9px 9px 9px 35px; }
+					.btn{right: auto; left: 5px;}
+				}
+			}
+
+			.row{
+				>.small-10{text-align: center;
+					h1{float: none; margin-top:10px;}
+				}
+			}
+		}
+
+		.user
+		nav ul{ 
+			li{border-left:none; border-right:1px solid #c68338;}
+		}
+
+		nav{left: auto; right: 0;
+			ul{
+				.language-selector{
+					>a{
+						.arrow-icon{right: auto; left: 20px; background: url("#{$img-path}/rtl-arrows.png") 6px -24px no-repeat $primary-orange;}
+					}
+				}
+			}
+		}
+	}
+
+
+	.carousel{direction:ltr;
+		.rtl .flex-control-nav {
+		    direction: ltr; 
+		}
+	}
+
+
+
+	.store-locator-widget{
+		.small-10{float:right;}
+	}
+
+	.search-results{
+		.container{
+			.columns{float:right;}
+		}
+	}
+
+	.content{
+		.figure-layout{
+			.figure{text-align: right;
+				&:last-child{float:right;}
+			}
+		}
+	}
+
+	// prevent left and right = 50% for RTL
+	.large-pull-6 {
+		    right: auto;
+	}
+	.large-push-6 {
+		    left: auto;
+	}
+
+	@media #{$large-up}{
+
+		#header{
+			nav{
+				ul{
+					li{float:right;}
+					.nav-panel .store-locator-form .btn {
+						left : 5px;
+					}
+					a {
+						white-space: nowrap;
+					}
+	
+
+				}
+			}
+
+			.header-wrapper{
+				.row{
+					>.small-10{
+						h1{float: right;}
+					}
+				}
+			}
+		}
+
+		.content{
+			.three-column{
+				li{margin:0 0 0 50px;}
+			}
+		} 
+	}
+
+	.dealer-locator{
+		.title{ padding: 0 20px 0 20px !important; text-align: right!important;}
+		.dealer-unaware{float: left; width: 100%;}
+		.dropdown{ text-align: right;
+			&:after{left: 15px; right: auto; width: 16px;}
+		}
+	
+		.dealer-result-container{
+			.filter-header{padding-right:20px;
+				.filter-count{width:100%;
+					.count{ direction: ltr; text-align: right;}
+				}
+			}
+			.collapse-btn{left: 20px; right: auto;}
+			.result-list{width:100%;
+				.dealer-heading-name{ float:right; direction: ltr; width:100%; text-align: right;}
+				.dealer-accordion{
+					.hours-wrap{
+						li{ width:100%; float: left;
+							.date{ float: right;}
+							.hour{ float: left;}
+						}
+					}
+				}
+			}
+			.dealer-result{
+				.dealer-contact{ padding-right: 30px;
+					p{ text-align: right;}
+					.item{float: right;
+						.icon-direction{left: 10px;}
+						.icon-details{left: 40px;}
+					}
+				}
+				.dealer-phone{
+					.phone-icon{width:23px; margin-right:0;}
+				}
+			}
+		}
+		.info-window{
+			.dealer-name{ direction: ltr; text-align: right;}
+			.phone{ background-position:  273px -664px; padding-right: 20px;}
+			.beak{left: 0;} 
+			.directions {
+				a{ padding-right: 20px;
+					.icon-direction{ right: -8px; left: auto;}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# These files are concatenated in this order into live/dev.debug.js and then minified into live/prod.min.js
+#	- dev.debug.js is for Developer Debugging 
+#	- prod.min.js is for Production
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+
+sliders.js
+account.js
+apa-recalls.js
+apa-manuals.js
+apa-dealer.js
+apa-dealerMap.js
+
+avatar-mobile.js
+sync-update.js
+#responsiveFeatureGrid.js
+global.js
+
+#device redirection
+../../ftd/js/deviceRedirect.js
+../../ftd/js/lib/date.js
+../../ftd/js/overlay-fullscreen.js
+
+apa-cappedPrice.js
+apa-overlays-init.js
+apa-sync-support.js
+apa-support-video.js

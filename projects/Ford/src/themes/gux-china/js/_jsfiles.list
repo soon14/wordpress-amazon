@@ -1,0 +1,28 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# These files are concatenated in this order into live/dev.debug.js and then minified into live/prod.min.js
+#       - dev.debug.js is for Developer Debugging 
+#       - prod.min.js is for Production
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+lib/AutoNavi.js
+
+##### Modules ####
+modules/deallocator/autonaviMapController.js
+
+##### Angular Modules ####
+../../gux/js/lib/angular.min.js
+../../gux/js/lib/angular-route.min.js
+../../gux/js/lib/jquery-ui.js
+#../../ftd/js/lib/jquery.ui.touch-punch.min
+#lib/angular-resource.min.js
+#modules/paymentestimator/jquery.ui.touch-punch.js
+modules/paymentestimator/paymentEstimator.js
+modules/paymentestimator/paymentEstimatorConstant.js
+modules/paymentestimator/paymentEstimatorValue.js
+modules/paymentestimator/paymentEstimatorService.js
+modules/paymentestimator/paymentEstimatorController.js
+modules/paymentestimator/paymentEstimatorDirective.js
+modules/paymentestimator/paymentEstimatorFilter.js
+modules/paymentestimator/paymentEstimatorConfig.js
+modules/paymentestimator/paymentEstimatorBootstrap.js
+
