@@ -1,9 +1,0 @@
-#header,#badge,#badge a,#badge a > span.logo-wide{
-
-	display: block;
-}
-
-.breadcrumb,.subnav-level2,.subnav-wrap,.dealer-route,#fat-footer,#footer-wrapper,#toolbar,.social-share{
-
-	display: none;
-}

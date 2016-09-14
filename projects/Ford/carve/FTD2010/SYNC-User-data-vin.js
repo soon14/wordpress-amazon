@@ -1,1 +1,0 @@
-{"valid":false, "message" : "VIN is not an sync device."}
