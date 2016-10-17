@@ -1,0 +1,828 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <title>TWG Tea</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/dev.css"  rel="stylesheet">
+	<link href="vendor/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body onunload="myUnloadEvent()">
+<!-- Promo Message -->
+<!-- //Promo Message -->
+<div class="site-container">
+    <div class="header-container">
+        <!--    XS header-->
+        <header class="header-xs visible-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="menu">
+                            <a href="#" class="toggle-button"><img src="images/mobile-toggle-menu.png"   alt=""></a>
+                            <div class="body x-scroll" data-scroll-x="false">
+                                <ul class="menu-top list-unstyled">
+                                    <li class="clearfix">
+                                        <div class="pull-left">
+                                            <div class="sign-in-register-nav">
+                                                <a href="#" >Sign In</a> | <a href="#" >Register</a>
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="pull-left bg-music-control music-control">&nbsp;</a>
+                                        <div class="pull-right">
+                                            <a href="#"  class="favorite"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <form class="form-search" method="GET" action="#">
+                                            <div class="input-group">
+                                                <input type="search" name="q" value="" class="form-control" placeholder="Search">
+                                        <span class="input-group-btn">
+                                            <button class="btn" type="submit"></button>
+                                        </span>
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li><a href="#" >Find a Tea</a></li>
+                                    <li><a href="#" >Find a Gift</a></li>
+                                    <li><a href="#" >For The Tea Table</a></li>
+                                    <li><a href="#" >About TWG Tea</a></li>
+                                    <li><a href="#" >Trends & News</a></li>
+                                    <li><a href="#" >Locations</a></li>
+                                </ul>
+                                <ul class="menu-bottom list-unstyled">
+                                    <li><em class="color-white">Find us on</em></li>
+                                    <li><a target="_blank" >Facebook</a></li>
+                                    <li><a target="_blank" >Twitter</a></li>
+                                    <li><a target="_blank" >YouTube</a></li>
+                                    <li><a target="_blank" >Instagram</a></li>
+                                    <li><a target="_blank" >Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="text-center">
+                            <a href="#" "><img class="logo" src="images/logo.svg"  alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-3" style="padding-left: 0">
+                        <div class="text-right">
+                            <a href="#"  class="cart-indicator">
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--    Non XS header-->
+        <header class="header hidden-xs">
+            <div class="top-nav clearfix">
+                <div class="pull-left">
+                        <div class="sign-in-register-nav">
+                            <a href="#" >Sign In</a> | <a href="#" >Register</a>
+                        </div>
+                </div>
+                <a href="#" class="pull-left bg-music-control music-control">&nbsp;</a>
+                <div class="pull-right">
+                    <table>
+                        <tr>
+                            <td>
+                                <form class="form-search" method="GET" action="#">
+                                    <div class="input-group">
+                                        <input type="search" name="q" value="" class="form-control" placeholder="Search">
+                                        <span class="input-group-btn">
+                                            <button class="btn" type="submit"></button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                                <a href="#"  class="favorite"></a>
+                            </td>
+                            <td>
+                                <a href="#" class="cart-indicator">
+                                    <span class="count">0</span>
+                                    <div class="add-to-bag-notifier tooltip bottom in" role="tooltip">
+                                        <div class="tooltip-arrow"></div>
+                                        <div class="tooltip-inner">
+                                            <em class="text-title">Added to bag</em>
+                                        </div>
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="container container-sm">
+                <div class="main-nav">
+                    <div class="row">
+                        <div class="col-sm-5">
+
+                            <table class="left-nav">
+                                <tr>
+                                        <td class="text-center">
+                                            <a href="#" 
+                                               class="pull-left sub-nav-toggle "
+                                               data-target=".find-a-tea-sub-nav"                                                >Find a Tea</a>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="#" 
+                                               class=" "
+                                                                                               >Find a Gift</a>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="#" 
+                                               class="pull-right sub-nav-toggle "
+                                               data-target=".for-the-tea-table-sub-nav"                                                >For the Tea Table</a>
+                                        </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="logo-container">
+                                <a href="#"  style="padding: 0"><img src="images/logo.svg"  alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <table class="right-nav">
+                                <tr>
+                                        <td class="text-center">
+                                            <a href="#"  class="pull-left ">About TWG Tea</a>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="#"  class=" ">Trends & News</a>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="#"  class="pull-right ">Locations</a>
+                                        </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+
+<div class="">
+
+<!--    Main content-->
+    <div class="content-container">
+        <div class="home-carousel masthead">
+    <div class="carousel" data-slides-to-show="1" data-slides-to-scroll="1" data-dots="1" data-fade="1" data-arrows="1" data-auto-play="0">
+      <div class="slide">
+          <a href="#" >
+              <img src="images/home-carousel/race-day-tea-set.jpg" alt="">
+          </a>
+          <div class="intro">
+              <h3>
+                  <em class="text-title">The thrill of the chase!</em>
+                  <div class="text-highlight hidden-xs">Experience the exhilaration of the grandest race in town</div>
+              </h3>
+              <a class="action-link-highlight hidden-xs" href="#" ><em>Learn more</em></a>
+          </div>
+      </div>
+      <div class="slide">
+          <a href="#" >
+              <img src="images/home-carousel/secret-tea-tins.jpg"  alt="">
+          </a>
+          <div class="intro">
+              <h3>
+                  <em class="text-title">Secret Tea Tins</em>
+                  <div class="text-highlight hidden-xs">Capturing hundreds of years of tea tales, stories and secrets.</div>
+              </h3>
+              <a class="action-link-highlight hidden-xs" href="#" ><em>Learn more</em></a>
+          </div>
+      </div>
+      <div class="slide">
+          <a href="#" >
+              <img src="images/home-carousel/gyokuro-harvests-single.jpg"  alt="">
+          </a>
+          <div class="intro">
+              <h3>
+                  <em class="text-title">New Gyokuro Harvests</em>
+                  <div class="text-highlight hidden-xs">Exceptional teas in limited quantity reserved for privileged tea lovers</div>
+              </h3>
+              <a class="action-link-highlight hidden-xs" href="#" ><em>Learn more</em></a>
+          </div>
+      </div>
+    </div>
+</div>
+
+<div class="site-container">
+    <div class="product-carousel">
+        <div class="heading text-center">
+            <h4><em class="text-title">TWG Tea</em></h4>
+            <h3 class="title text-highlight text-upper">Haute Couture Tea Collection</h3>
+        </div>
+        <hr class="divider">
+
+        <div class="container">
+            <div class="noncarousel" data-slides-to-show="3" data-slides-to-scroll="1" data-arrows="1" data-responsive="true">
+
+                
+                    <div class="slide">
+                        <a href="#"  alt="">
+                            <img src="images/haute-couture-teas/052015-Red-Balloon-Tea.jpg" >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#" >Red Balloon Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"  alt="">
+                            <img src="images/haute-couture-teas/Moroccan_Sahara_HC.jpg" >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#" >Moroccan Sahara Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"  alt="">
+                            <img src="images/haute-couture-teas/052015-Golden-Earl-Grey.jpg" >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#" >Golden Earl Grey</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"  alt="">
+                            <img src="images/haute-couture-teas/1837-Black-Tea-.png" >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#" >1837 Black Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"  alt="">
+                            <img src="images/haute-couture-teas/Alexandria-Tea-.png" >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#" >Alexandria Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/Earl-Grey-Gentleman-.png"  >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >Earl Grey Gentleman</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/Follow-Me-Tea-.png"  >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >Follow Me Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/French-Earl-Grey-.png"  >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >French Earl Grey</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/Geisha-Blossom-Tea-.png"  >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >Geisha Blossom Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/Maharajah-Darjeeling-.png"  >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >Maharajah Darjeeling</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/Moroccan-Mint-Tea.png"  >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >Moroccan Mint Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/Napoleon-Tea-.png"  >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >Napoleon Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/New-York-Breakfast-Tea-.png" >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >New York Breakfast Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/Oud-Night-Tea-.png" >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >Oud Night Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/Place-Vend-me-Tea-.png"  >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >Place Vendôme Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/Red-of-Africa-Tea-.png"  >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >Red of Africa Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/Royal-Moroccan-Tea-.png"  >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >Royal Moroccan Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/Silver-Moon-Tea-.png"  >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >Silver Moon Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/Singapore-Breakfast-Tea-.png"  >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >Singapore Breakfast Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/Tea-Party-Tea-.png"  >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >Tea Party Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+                    <div class="slide">
+                        <a href="#"   alt="">
+                            <img src="images/haute-couture-teas/White-House-Tea-.png"  >
+                        </a>
+                        <div class="caption">
+                            <h4><a class="title text-1p" href="#"  >White House Tea</a></h4>
+                            <br>
+                        </div>
+                    </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="mod-tones">
+        <div class="container">
+            
+						        	            <div class="block block-1">
+	                <img class="img-responsive" src="images/Homepage/TWG-Tea-101/bg.jpg"   alt="SEO">
+	                <div class="text">
+	                    <div class="top">
+	                        <span class="number ">42</span>
+	                    </div>
+	                    <div class="bottom">
+	                        <p class="span-block">TWG Tea is currently distributed in 42 countries.</p>
+	                    </div>
+	                </div>
+	            </div>
+            				                    <div class="block block-2">
+                <div class="titleblock"> all about tea </div>
+                <img class="img-responsive" src="images/Homepage/All-About-Tea/03-YellowGold.png.jpg"   alt="SEO">
+                <div class="text">
+                    <span class="span-block">Yellow tea is only harvested once a year and was reserved exclusively for the emperor of China.</span>
+                </div>
+            </div>
+            				                    <div class="block block-3">
+                <div class="titleblock"> tea & wellbeing </div>
+                <img class="img-responsive" src="images/Homepage/Wellbeing/02-Safe-Tanned-Hue.jpg"   alt="SEO">
+                <div class="text">
+                    <p class="yellow">For a Safe Tanned Hue</p>
+                    <p class="span-block">Apply a tea infusion to your skin with a cotton swab and dry before rinsing. Maintain a healthy glow all year round and avoid the damaging effects of the sun.</p>
+                </div>
+            </div>
+                        <div class="clearfix"></div>
+        </div>
+    </div>
+
+</div>
+<div class="news-carousel">
+    <div class="container container-sm">
+        <div class="heading text-center color-2 text-2p">TRENDS & NEWS</div>
+        <hr class="divider">
+
+        <div class="noncarousel" data-slides-to-show="4" data-slides-to-scroll="1" data-arrows="1" data-responsive="[2, 1]">
+
+                            <div class=" slide">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <a href="#"  >
+                                <img src="http://twgtea.biz/images/news_images/manual_upload/rsz_parisian_tn72.jpg"   alt="">
+                            </a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="#"   class="title text-title text-upper" style="display: block">TWG Tea Opening</a>
+                            <p class="summary">
+                                <a href="#"  >Tea WG Launches in Place Vend?me at The Parisian Macau</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                            <div class=" slide">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <a href="#"  >
+                                <img src="http://twgtea.biz/images/news_images/manual_upload/Tends&News-BabyTin.jpg"    alt="">
+                            </a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="#"   class="title text-title text-upper" style="display: block">What’s in Trend</a>
+                            <p class="summary">
+                                <a href="#"  >TWG Tea Turns Eight! </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                            <div class=" slide">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <a href="#"  >
+                                <img src="http://twgtea.biz/images/news_images/manual_upload/TN-SecretTeaTins.jpg"    alt="">
+                            </a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="#"   class="title text-title text-upper" style="display: block">New Product Launch</a>
+                            <p class="summary">
+                                <a href="#"  >TWG Tea launches the Secret Tea Tin Collection</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                            <div class=" slide">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <a href="#"  >
+                                <img src="http://twgtea.biz/images/news_images/manual_upload/Best-Actor-Ye-Liu.jpg"    alt="">
+                            </a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="#"   class="title text-title text-upper" style="display: block">Event Coverage</a>
+                            <p class="summary">
+                                <a href="#"  >The 19th International Shanghai Film Festival</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                            <div class=" slide">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <a href="#"  >
+                                <img src="http://twgtea.biz/images/news_images/manual_upload/Mr Donnie Yen and his wife Ms Cissy Wang tasting the Grand Fine Harvest Tea36.jpg"    alt="">
+                            </a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="#"   class="title text-title text-upper" style="display: block">Event Coverage</a>
+                            <p class="summary">
+                                <a href="#"  >A Grand Fine Time Hong Kong : The Highlights</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            
+        </div>
+
+        <br>
+
+        <div class="text-center">
+            <a href="#"   class="text-highlight"><em>More</em></a>
+            <div class="divider-2"></div>
+        </div>
+
+        <br>
+    </div>
+</div>
+    </div>
+</div>
+
+<!--Find a Tea subnav-->
+<div class="sub-nav find-a-tea-sub-nav">
+    <div class="container container-sm">
+        <div class="row">
+                            <div class="col-sm-4">
+                    <a href="#"  class="item">
+                        <img src="images/sub-nav/loose-teas.png"  alt="">
+                        <span class="title text-upper text-highlight"></span>
+                    </a>
+                </div>
+                            <div class="col-sm-4">
+                    <a href="#"   class="item">
+                        <img src="images/sub-nav/packaged-teas.png"   alt="">
+                        <span class="title text-upper text-highlight"></span>
+                    </a>
+                </div>
+                            <div class="col-sm-4">
+                    <a href="#"  class="item">
+                        <img src="images/sub-nav/teabags.png" alt="">
+                        <span class="title text-upper text-highlight"></span>
+                    </a>
+                </div>
+                            <div class="col-sm-4">
+                    <a href="#"  class="item">
+                        <img src="images/sub-nav/iced-teabags.png"  alt="">
+                        <span class="title text-upper text-highlight"></span>
+                    </a>
+                </div>
+                            <div class="col-sm-4">
+                    <a href="#"  class="item">
+                        <img src="images/sub-nav/hc-collections.png"  alt="">
+                        <span class="title text-upper text-highlight"></span>
+                    </a>
+                </div>
+                            <div class="col-sm-4">
+                    <a href="#"  class="item">
+                        <img src="images/sub-nav/other-tea-collections.png"  alt="">
+                        <span class="title text-upper text-highlight"></span>
+                    </a>
+                </div>
+                    </div>
+    </div>
+</div>
+
+<!--For the tea table subnav-->
+<div class="sub-nav for-the-tea-table-sub-nav">
+    <div class="container container-sm">
+                <div class="row">
+                            <div class="col-sm-4">
+                    <a href="#"  class="item">
+                        <img src="images/for-the-tea-table/for-the-tea-table-01-acc.png"  alt=""> 
+                    </a>
+                </div>
+                            <div class="col-sm-4">
+                    <a href="#"  class="item">
+                        <img src="images/for-the-tea-table/for-the-tea-table-02-perfume.png"  alt=""> 
+                    </a>
+                </div>
+                            <div class="col-sm-4">
+                    <a href="#"   class="item">
+                        <img src="images/for-the-tea-table/for-the-tea-table-03-gourmet.png"   alt=""> 
+                    </a>
+                </div>
+            </div>
+    </div>
+</div>
+
+<!--Breadcrumb-->
+
+<!--Footer-->
+<footer class="footer">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="hidden-xs">
+                <div class="col-md-6 col-sm-5">
+                    <div class="heading"><em class="highlight-1">Explore the Website</em></div>
+                    <div class="short-dash"></div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled nav-list">
+                            <li><a href="#" >Find a Tea</a></li>
+                            <li><a href="#" >Find a Gift</a></li>
+                            <li><a href="#" >For the Tea Table</a></li>
+                            <li><a href="#" >About TWG Tea</a></li>
+                            <li><a href="#" >Trends & News</a></li>
+                            <li><a href="#" >Locations</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled nav-list"> 
+                            <li><a href="#" >Catalogues</a></li>
+                            <li><a href="#" >My Account</a></li>
+                            <li><a href="#" >My Favourites</a></li>
+                            <li><a href="#" >Careers</a></li>
+                            <li><a href="#" >For Professionals</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="heading"><em class="highlight-1">Customer Service</em></div>
+                    <div class="short-dash"></div>
+                    <ul class="list-unstyled nav-list">
+                        <li><a href="#" >Contact Us</a></li>
+                        <li><a href="#" >Conditions of Sale</a></li>
+                        <li><a href="#" >Privacy Policy</a></li>
+                        <li><a href="#" >Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="visible-xs">
+                <div class="col-md-6 col-sm-5">
+                    <div class="heading">
+                        <a class="collapse-toggle color-white collapsed" data-toggle="collapse" href="#explore-nav-list">
+                            <em>Explore the Website</em>
+                            <div class="pull-right">
+                                <i class="arrow arrow-down fa fa-chevron-down"></i>
+                                <i class="arrow arrow-up fa fa-chevron-up"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <ul id="explore-nav-list" class="list-unstyled nav-list collapse">
+                        <li><a href="#" >Find a Tea</a></li>
+                        <li><a href="#" >Find a Gift</a></li>
+                        <li><a href="#" >For the Tea Table</a></li>
+                        <li><a href="#" >About TWG Tea</a></li>
+                        <li><a href="#" >Trends & News</a></li> 
+                        <li><a href="#" >Catalogues</a></li>
+                        <li><a href="#" >Locations</a></li>
+                        <li><a href="#" >My Account</a></li>
+                        <li><a href="#" >My Favourites</a></li>
+                        <li><a href="#" >Careers</a></li>
+                        <li><a href="#" >For Professionals</a></li>
+                    </ul>
+                    <br>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="heading">
+                        <a class="collapse-toggle color-white collapsed" data-toggle="collapse" href="#customer-service-nav-list">
+                            <em>Customer Service</em>
+                            <div class="pull-right">
+                                <i class="arrow arrow-down fa fa-chevron-down"></i>
+                                <i class="arrow arrow-up fa fa-chevron-up"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <ul id="customer-service-nav-list" class="list-unstyled nav-list collapse">
+                        <li><a href="#" >Contact Us</a></li>
+                        <li><a href="#" >Conditions of Sale</a></li>
+                        <li><a href="#" >Privacy Policy</a></li>
+                        <li><a href="#" >Terms of Use</a></li>
+                    </ul>
+                </div>
+                <hr class="hl-default" style="margin-top: 40px">
+            </div>
+
+            <div class="col-md-3 col-sm-4">
+                <div>
+                    <div><a class="text-highlight text-upper text-2p" href="#"  >TWG Tea Mobile App</a></div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <p><a href="#"   class="highlight-1">Download now to enjoy free shipping in Singapore</a></p>
+ 
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="#"  >
+                                <img src="images/phone.png"  alt="">
+                            </a>
+                        </div>
+                        <div class="col-xs-12"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row hidden-xs">
+            <hr class="hl1">
+            <div class="col-xs-6">
+                <div>
+                  <a target="_blank" href="#" ><img src="images/social-icons/fb.png"  alt="Facebook"></a>
+                  <a target="_blank" href="#" ><img src="images/social-icons/twit.png"  alt="Twitter"></a>
+                  <a target="_blank" href="#" ><img src="images/social-icons/instgrm.png"  alt="Instagram"></a>
+                  <a target="_blank" href="#" ><img src="images/social-icons/youtube.png"  alt="Youtube"></a>
+                  <a target="_blank" href="#" ><img src="images/social-icons/linkedin.png"  alt="Linkedin"></a>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="text-right"><a href="#" ><em>Sign up</em> for TWG Tea news updates</a></div>
+            </div>
+        </div>
+
+        <hr class="hl1">
+
+        <div class="text-center copy">
+            <p>TWG Tea Company Pte Ltd. Copyright & Trademark Notices © 2016. All Rights Reserved.</p>
+        </div>
+    </div>
+
+</footer>
+<!-- autoplay -->
+    <div class="bg-audio-wrapper">
+        <audio id="bg-audio" controls loop preload>
+            <source src="./media/bg-music.mp3"  type="audio/mpeg">
+            <source src="./media/bg-music.ogg"  type="audio/ogg">
+        </audio>
+    </div>
+    <input type="hidden" id="autoplay" name="autoplay" value="1"/>
+
+<script src="vendor/jquery.min.js" ></script> 
+<script src="vendor/bootstrap/js/bootstrap.min.js" ></script> 
+<script src="vendor/customselect/jquery.customSelect.min.js" ></script>
+<script src="vendor/jquery.cookie-1.4.1.min.js" ></script>
+<script src="vendor/slick/slick/slick.min.js" ></script> 
+<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js" ></script>
+<script src="vendor/jquery.smartbanner-1.0.0/jquery.smartbanner.min.js" ></script>  
+<script src="vendor/video-js/video.js" ></script>
+<script src="js/application.js" ></script> 
+</body>
+</html>
