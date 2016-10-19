@@ -1,0 +1,1201 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Find a Tea - Packaged Teas</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link href="vendor/video-js/video-js.min.css"  rel="stylesheet">
+	<link href="css/dev.css" rel="stylesheet">
+	<link href="vendor/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> 
+
+    
+</head>
+<body onunload="myUnloadEvent()">
+<!-- Promo Message -->
+<!-- //Promo Message -->
+<div class="site-container">
+    <div class="header-container">
+        <!--    XS header-->
+        <header class="header-xs visible-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="menu">
+                            <a href="#" class="toggle-button"><img src="images/mobile-toggle-menu.png"   alt=""></a>
+                            <div class="body x-scroll" data-scroll-x="false">
+                                <ul class="menu-top list-unstyled">
+                                    <li class="clearfix">
+                                        <div class="pull-left">
+                                            <div class="sign-in-register-nav">
+                                                <a href="#" >Sign In</a> | <a href="#" >Register</a>
+                                            </div>
+                                        </div> 
+                                        <div class="pull-right">
+                                            <a href="#"  class="favorite"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <form class="form-search" method="GET" action="#">
+                                            <div class="input-group">
+                                                <input type="search" name="q" value="" class="form-control" placeholder="Search">
+                                        <span class="input-group-btn">
+                                            <button class="btn" type="submit"></button>
+                                        </span>
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li><a href="#" >Find a Tea</a></li>
+                                    <li><a href="#" >Find a Gift</a></li>
+                                    <li><a href="#" >For The Tea Table</a></li>
+                                    <li><a href="#" >About TWG Tea</a></li>
+                                    <li><a href="#" >Trends & News</a></li>
+                                    <li><a href="#" >Locations</a></li>
+                                </ul>
+                                <ul class="menu-bottom list-unstyled">
+                                    <li><em class="color-white">Find us on</em></li>
+                                    <li><a target="_blank" >Facebook</a></li>
+                                    <li><a target="_blank" >Twitter</a></li>
+                                    <li><a target="_blank" >YouTube</a></li>
+                                    <li><a target="_blank" >Instagram</a></li>
+                                    <li><a target="_blank" >Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="text-center">
+                            <a href="index.htm" "><img class="logo" src="images/logo.svg"  alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-3" style="padding-left: 0">
+                        <div class="text-right">
+                            <a href="#"  class="cart-indicator">
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--    Non XS header-->
+        <header class="header hidden-xs">
+            <div class="top-nav clearfix">
+                <div class="pull-left">
+                        <div class="sign-in-register-nav">
+                            <a href="#" >Sign In</a> | <a href="#" >Register</a>
+                        </div>
+                </div> 
+                <div class="pull-right">
+                    <table>
+                        <tr>
+                            <td>
+                                <form class="form-search" method="GET" action="#">
+                                    <div class="input-group">
+                                        <input type="search" name="q" value="" class="form-control" placeholder="Search">
+                                        <span class="input-group-btn">
+                                            <button class="btn" type="submit"></button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                                <a href="#"  class="favorite"></a>
+                            </td>
+                            <td>
+                                <a href="#" class="cart-indicator">
+                                    <span class="count">0</span>
+                                    <div class="add-to-bag-notifier tooltip bottom in" role="tooltip">
+                                        <div class="tooltip-arrow"></div>
+                                        <div class="tooltip-inner">
+                                            <em class="text-title">Added to bag</em>
+                                        </div>
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="container container-sm">
+                <div class="main-nav">
+                    <div class="row">
+                        <div class="col-sm-5">
+
+                            <table class="left-nav">
+                                <tr>
+                                        <td class="text-center">
+                                            <a href="find-a-tea.htm" 
+                                               class="pull-left sub-nav-toggle  active"
+                                               data-target=".find-a-tea-sub-nav"                                                >Find a Tea</a>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="#" 
+                                               class=" "
+                                                                                               >Find a Gift</a>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="#" 
+                                               class="pull-right sub-nav-toggle "
+                                               data-target=".for-the-tea-table-sub-nav"                                                >For the Tea Table</a>
+                                        </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="logo-container">
+                                <a href="index.htm"  style="padding: 0"><img src="images/logo.svg"  alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <table class="right-nav">
+                                <tr>
+                                        <td class="text-center">
+                                            <a href="#"  class="pull-left ">About TWG Tea</a>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="#"  class=" ">Trends & News</a>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="#"  class="pull-right ">Locations</a>
+                                        </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+
+<div class="">
+
+<!--    Main content-->
+    <div class="content-container">
+        
+<div class="masthead masthead-default">
+    <div class="body text-center">
+        <div class="container container-sm"> 
+            <div style="position: relative">
+                <h3 class="text-upper text-highlight">
+                    <span>Packaged Teas</span>
+                </h3>
+                <div class="hidden-xs" style="position: absolute; right: 0; top: 0">
+                    
+<div class="dropdown dropdown-default text-1p" style="margin: auto">
+    <button class="btn dropdown-toggle btn-block text-center" type="button" data-toggle="dropdown" style="position: relative">
+        View A-Z        <span class="arrow" style="position: absolute; right: 10px"><i class="fa fa-angle-down"></i></span>
+    </button>
+    <ul class="dropdown-menu">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" >New Arrivals</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" >View A-Z</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" >Price low to high</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" >Price high to low</a></li>
+            </ul>
+</div>                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+
+
+<div class="visible-xs">
+    
+<div class="dropdown dropdown-default text-1p" style="margin: auto">
+    <button class="btn dropdown-toggle btn-block text-center" type="button" data-toggle="dropdown" style="position: relative">
+        View A-Z        <span class="arrow" style="position: absolute; right: 10px"><i class="fa fa-angle-down"></i></span>
+    </button>
+    <ul class="dropdown-menu">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" >New Arrivals</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" >View A-Z</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" >Price low to high</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" >Price high to low</a></li>
+            </ul>
+</div>    <br>
+    <br>
+</div>
+
+    <div class="refine-divider"></div>
+
+    <div class="refine-result-form-container" style="margin-top: -10px">
+        <form action="#" method="GET">
+            <input type="hidden" name="category" value="Packet Tea">
+            <fieldset class="refine-results">
+                <legend>
+                    <a href="#refine-results-panel" data-toggle="collapse"><em>Refine Results</em> <i class="fa fa-angle-down"></i></a>
+                </legend>
+                <div id="refine-results-panel" class="refine-results-panel collapse collapse-contains-carousel">
+                    <div class="container container-sm">
+                        <div class="row">
+                                                                                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="color-2"><em>Varieties of Tea</em></div>
+                                    <br>
+                                    <div class="short-dash"></div>
+                                    <br>
+                                    <div class="checkbox-group x-scroll" data-scroll-x="false">
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="1"> White Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="93"> Solo Tea Blends</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="14"> Rare &amp; Limited Harvest Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="13"> Decaffeinated &amp; Theine-Free Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="12"> Exclusive Tea Blends</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="11"> Grand Classic Tea Blends</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="10"> Maté</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="9"> Tea Flowers</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="8"> Red Teas (Rooibos)</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="7"> Matured Teas (Pu-Erh)</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="5"> Black Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="4"> Blue Teas (Oolong)</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="3"> Green Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="2"> Yellow Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="94"> White Tea Blends</label></div>
+                                                                            </div>
+                                </div>
+                            
+                                                                                                
+
+                                                                                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="color-2"><em>Teas for Every Time of the Day</em></div>
+                                    <br>
+                                    <div class="short-dash"></div>
+                                    <br>
+                                    <div class="checkbox-group x-scroll" data-scroll-x="false">
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="15"> Teas for the Morning</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="16"> Teas for the Afternoon</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="17"> Teas for the Evening</label></div>
+                                                                            </div>
+                                </div>
+                            
+                                                                                                <div class="clearfix visible-xs"></div>
+
+                                                                                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="color-2"><em>Teas for Every Occasion</em></div>
+                                    <br>
+                                    <div class="short-dash"></div>
+                                    <br>
+                                    <div class="checkbox-group x-scroll" data-scroll-x="false">
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="18"> New Year&#039;s Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="19"> Chinese New Year Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="20"> Valentine&#039;s Day Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="21"> Ramadan Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="22"> Summer Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="23"> Autumn Festival Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="24"> Christmas Teas</label></div>
+                                                                            </div>
+                                </div>
+                            
+                                                                <div class="clearfix visible-sm"></div>                                
+
+                                                                                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="color-2"><em>Seasonal Harvest Teas</em></div>
+                                    <br>
+                                    <div class="short-dash"></div>
+                                    <br>
+                                    <div class="checkbox-group x-scroll" data-scroll-x="false">
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="25"> Darjeeling First Flush Harvests</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="26"> Darjeeling Second Flush Teas</label></div>
+                                                                            </div>
+                                </div>
+                            
+                                <div class="clearfix hidden-sm hidden-xs"></div>                                                                <div class="clearfix visible-xs"></div>
+
+                                                                                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="color-2"><em>Predominant Flavours</em></div>
+                                    <br>
+                                    <div class="short-dash"></div>
+                                    <br>
+                                    <div class="checkbox-group x-scroll" data-scroll-x="false">
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="27"> Earl Grey</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="37"> Nutty Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="36"> Malty Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="35"> Smoky Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="34"> Spiced Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="33"> Vanilla Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="32"> Citrus Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="31"> Mint Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="30"> Fruity Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="29"> Floral Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="28"> Jasmine Teas</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="38"> Chocolate Teas</label></div>
+                                                                            </div>
+                                </div>
+                            
+                                                                                                
+
+                                                                                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="color-2"><em>Country of Origin</em></div>
+                                    <br>
+                                    <div class="short-dash"></div>
+                                    <br>
+                                    <div class="checkbox-group x-scroll" data-scroll-x="false">
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="39"> India, Himalayas &amp; Nepal</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="40"> China</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="41"> Ceylon</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="42"> Formosa</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="43"> Japan</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="44"> Korea, Thailand, Vietnam &amp; Laos</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="95"> Bangladesh, Malaysia, Indonesia &amp; Burma</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="101"> Australia, New Zealand,  Papua New Guinea &amp; Hawaii</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="47"> Persia, Georgia &amp; Turkey</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="48"> Brazil &amp; Argentina</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="49"> Kenya, Rwanda &amp; Cameroon</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="50"> Tanzania, Malawi, Mozambique &amp; Zimbabwe</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="51"> South Africa</label></div>
+                                                                            </div>
+                                </div>
+                            
+                                                                <div class="clearfix visible-sm"></div>                                <div class="clearfix visible-xs"></div>
+
+                                                                                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="color-2"><em>TWG Tea Collections</em></div>
+                                    <br>
+                                    <div class="short-dash"></div>
+                                    <br>
+                                    <div class="checkbox-group x-scroll" data-scroll-x="false">
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="52"> Haute Couture Tea Collection</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="53"> Caviar Tin Tea Collection</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="54"> Keepsake Tea Collection</label></div>
+                                                                                    <div class="checkbox"><label><input type="checkbox" name="categoryIds[]" value="96"> Weekend Tea Collection</label></div>
+                                                                            </div>
+                                </div>
+                            
+                                                                                                
+
+                                                    </div>
+
+                        <hr class="hl-default">
+                        <div class="row">
+                            <div class="col-xs-6 text-left">
+                                <button type="reset" class="btn-link btn-link-default">CLEAR ALL</button>
+                            </div>
+                            <div class="col-xs-6 text-right">
+                                <button type="submit" class="btn-link btn-link-default">DONE</button>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <br>
+
+<br>
+
+<div class="container container-sm">
+    <ul class="row thumbnail-list ">
+        
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/140603359.jpg" ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG6033">
+                        <img src="images/icons/favourites-off.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm"  >
+                        <img src="images/icons/info.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG6033"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG6033">
+                        <img src="images/icons/add-to-cart.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"   class="color-white name">1837 Black Tea</a></div>
+            <div class="price">S$40.00</div>
+        </div>
+    </li>
+
+            
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/1709001.jpg" ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG9021">
+                        <img src="images/icons/favourites-off.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm" >
+                        <img src="images/icons/info.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG9021"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG9021">
+                        <img src="images/icons/add-to-cart.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"  class="color-white name">Afternoon Tea Set</a></div>
+            <div class="price">S$70.00</div>
+        </div>
+    </li>
+
+            <div class="clearfix visible-xs"></div>
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/1406009.jpg" ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG6009">
+                        <img src="images/icons/favourites-off.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm" >
+                        <img src="images/icons/info.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG6009"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG6009">
+                        <img src="images/icons/add-to-cart.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"  class="color-white name">Alexandria Tea</a></div>
+            <div class="price">S$40.00</div>
+        </div>
+    </li>
+
+        <div class="clearfix visible-sm"></div>    
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/1106028-293.jpg" ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG6028">
+                        <img src="images/icons/favourites-off.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm" >
+                        <img src="images/icons/info.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG6028"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG6028">
+                        <img src="images/icons/add-to-cart.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"  class="color-white name">Amour de Thé</a></div>
+            <div class="price">S$40.00</div>
+        </div>
+    </li>
+
+    <div class="clearfix hidden-xs hidden-sm"></div>        <div class="clearfix visible-xs"></div>
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/1909006[s].jpg" ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG9077">
+                        <img src="images/icons/favourites-off.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm" >
+                        <img src="images/icons/info.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG9077"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG9077">
+                        <img src="images/icons/add-to-cart.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"  class="color-white name">Aurora Tea Set </a></div>
+            <div class="price">S$95.00</div>
+        </div>
+    </li>
+
+            
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/1909002.jpg"  ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG9034">
+                        <img src="images/icons/favourites-off.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm" >
+                        <img src="images/icons/info.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG9034"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG9034">
+                        <img src="images/icons/add-to-cart.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"  class="color-white name">Black Magic Set</a></div>
+            <div class="price">S$140.00</div>
+        </div>
+    </li>
+
+        <div class="clearfix visible-sm"></div>    <div class="clearfix visible-xs"></div>
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/TWG-Tea-Hamper-(5)88.jpg"  ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TWG10">
+                        <img src="images/icons/favourites-off.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm"  >
+                        <img src="images/icons/info.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TWG10"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TWG10">
+                        <img src="images/icons/add-to-cart.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"   class="color-white name">Celebration Tea Hamper</a></div>
+            <div class="price">S$746.00</div>
+        </div>
+    </li>
+
+            
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/1209001.jpg"  ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG9008">
+                        <img src="images/icons/favourites-off.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm"  >
+                        <img src="images/icons/info.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG9008"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG9008">
+                        <img src="images/icons/add-to-cart.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"   class="color-white name">Chic Tea Set</a></div>
+            <div class="price">S$70.00</div>
+        </div>
+    </li>
+
+    <div class="clearfix hidden-xs hidden-sm"></div>        <div class="clearfix visible-xs"></div>
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/1103013.jpg"  ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG3013">
+                        <img src="images/icons/favourites-off.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm"  >
+                        <img src="images/icons/info.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG3013"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG3013">
+                        <img src="images/icons/add-to-cart.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"   class="color-white name">Chocolate Earl Grey</a></div>
+            <div class="price">S$40.00</div>
+        </div>
+    </li>
+
+        <div class="clearfix visible-sm"></div>    
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/TWG-Tea-Hamper-(6).jpg"  ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TWG11">
+                        <img src="images/icons/favourites-off.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm"  >
+                        <img src="images/icons/info.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TWG11"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TWG11">
+                        <img src="images/icons/add-to-cart.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"   class="color-white name">Classic Tea Hamper</a></div>
+            <div class="price">S$260.00</div>
+        </div>
+    </li>
+
+            <div class="clearfix visible-xs"></div>
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/1503001.jpg"  ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="ARTCTWG3001">
+                        <img src="images/icons/favourites-off.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm"  >
+                        <img src="images/icons/info.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=ARTCTWG3001"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="ARTCTWG3001">
+                        <img src="images/icons/add-to-cart.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"  class="color-white name">Earl Grey Fortune</a></div>
+            <div class="price">S$58.00</div>
+        </div>
+    </li>
+
+            
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/1403003.jpg"  ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG3003">
+                        <img src="images/icons/favourites-off.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm"  >
+                        <img src="images/icons/info.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG3003"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG3003">
+                        <img src="images/icons/add-to-cart.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"   class="color-white name">Earl Grey Gentleman</a></div>
+            <div class="price">S$40.00</div>
+        </div>
+    </li>
+
+    <div class="clearfix hidden-xs hidden-sm"></div>    <div class="clearfix visible-sm"></div>    <div class="clearfix visible-xs"></div>
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/English-Breakfast-Tea-(290x230).jpg"  ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG4007">
+                        <img src="images/icons/favourites-off.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm"  >
+                        <img src="images/icons/info.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG4007"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG4007">
+                        <img src="images/icons/add-to-cart.svg" alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"  class="color-white name">English Breakfast Tea</a></div>
+            <div class="price">S$40.00</div>
+        </div>
+    </li>
+
+            
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/1709002.jpg"  ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG9022">
+                        <img src="images/icons/favourites-off.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm" >
+                        <img src="images/icons/info.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG9022"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG9022">
+                        <img src="images/icons/add-to-cart.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"   class="color-white name">Evening Tea Set</a></div>
+            <div class="price">S$70.00</div>
+        </div>
+    </li>
+
+            <div class="clearfix visible-xs"></div>
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/1406161.jpg"  ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG6161">
+                        <img src="images/icons/favourites-off.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm"  >
+                        <img src="images/icons/info.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG6161"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG6161">
+                        <img src="images/icons/add-to-cart.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"   class="color-white name">Follow Me Tea</a></div>
+            <div class="price">S$40.00</div>
+        </div>
+    </li>
+
+        <div class="clearfix visible-sm"></div>    
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/1403005.jpg"  ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG3005">
+                        <img src="images/icons/favourites-off.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm" >
+                        <img src="images/icons/info.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG3005"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG3005">
+                        <img src="images/icons/add-to-cart.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"   class="color-white name">French Earl Grey</a></div>
+            <div class="price">S$40.00</div>
+        </div>
+    </li>
+
+    <div class="clearfix hidden-xs hidden-sm"></div>        <div class="clearfix visible-xs"></div>
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/1506048.jpg"  ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="ARTCTWG6048">
+                        <img src="images/icons/favourites-off.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm"  >
+                        <img src="images/icons/info.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=ARTCTWG6048"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="ARTCTWG6048">
+                        <img src="images/icons/add-to-cart.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"   class="color-white name">Fruit Mountain Tea</a></div>
+            <div class="price">S$58.00</div>
+        </div>
+    </li>
+
+            
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/1406013.jpg"  ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG6013">
+                        <img src="images/icons/favourites-off.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm"  >
+                        <img src="images/icons/info.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG6013"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG6013">
+                        <img src="images/icons/add-to-cart.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"   class="color-white name">Geisha Blossom Tea</a></div>
+            <div class="price">S$40.00</div>
+        </div>
+    </li>
+
+        <div class="clearfix visible-sm"></div>    <div class="clearfix visible-xs"></div>
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/1403014 small.jpg"  ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG3014">
+                        <img src="images/icons/favourites-off.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm"  >
+                        <img src="images/icons/info.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG3014"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG3014">
+                        <img src="images/icons/add-to-cart.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/details-code=TCTWG3014.htm"  class="color-white name">Golden Earl Grey</a></div>
+            <div class="price">S$40.00</div>
+        </div>
+    </li>
+
+            
+    <li class="col-md-3 col-sm-4 col-xs-6">
+        <div class="thumb-container">
+            <a href="product/detail.htm"><img src="images/Grand-Ceylon-(290x230)46.jpg" ></a>
+            <div class="tools hidden-xs">
+                <div class="row">
+                    <a class="item col-xs-4 add-to-favourites" href="#" data-product-code="TCTWG9064">
+                        <img src="images/icons/favourites-off.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">ADD AS<br>FAVOURITE</span>
+                    </a>
+                    <a class="item col-xs-4" href="product/detail.htm" >
+                        <img src="images/icons/info.svg"  alt="" style="height: 32px"><br>
+                        <span class="text">VIEW<br>DETAILS</span>
+                    </a>
+                    <!--  <a class="item col-xs-4 add-to-bag" href="/shopping-bag/add?code=TCTWG9064"> -->
+                            <a class="item col-xs-4 add-to-bag" href="#" data-product-code="TCTWG9064">
+                        <img src="images/icons/add-to-cart.svg"   alt="" style="height: 32px"><br>
+                        <span class="text">ADD TO<br>BAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <div><a href="product/detail.htm"   class="color-white name">Grand Ceylon</a></div>
+            <div class="price">S$100.00</div>
+        </div>
+    </li>
+
+    <div class="clearfix hidden-xs hidden-sm"></div>        <div class="clearfix visible-xs"></div>
+    </ul>
+</div>
+
+<div class="text-center">
+    <button class="btn-link preloader hidden">
+        <img class="fa-spin" src="images/preloader/ring.png"   alt="">
+    </button>
+</div>
+
+<br>
+<br>
+<br>
+<br>    </div>
+</div>
+
+<!--Find a Tea subnav-->
+<div class="sub-nav find-a-tea-sub-nav">
+    <div class="container container-sm">
+        <div class="row">
+                            <div class="col-sm-4">
+                    <a href="#"  class="item">
+                        <img src="images/sub-nav/loose-teas.png"  alt="">
+                        <span class="title text-upper text-highlight"></span>
+                    </a>
+                </div>
+                            <div class="col-sm-4">
+                    <a href="#"   class="item">
+                        <img src="images/sub-nav/packaged-teas.png"   alt="">
+                        <span class="title text-upper text-highlight"></span>
+                    </a>
+                </div>
+                            <div class="col-sm-4">
+                    <a href="#"  class="item">
+                        <img src="images/sub-nav/teabags.png" alt="">
+                        <span class="title text-upper text-highlight"></span>
+                    </a>
+                </div>
+                            <div class="col-sm-4">
+                    <a href="#"  class="item">
+                        <img src="images/sub-nav/iced-teabags.png"  alt="">
+                        <span class="title text-upper text-highlight"></span>
+                    </a>
+                </div>
+                            <div class="col-sm-4">
+                    <a href="#"  class="item">
+                        <img src="images/sub-nav/hc-collections.png"  alt="">
+                        <span class="title text-upper text-highlight"></span>
+                    </a>
+                </div>
+                            <div class="col-sm-4">
+                    <a href="#"  class="item">
+                        <img src="images/sub-nav/other-tea-collections.png"  alt="">
+                        <span class="title text-upper text-highlight"></span>
+                    </a>
+                </div>
+                    </div>
+    </div>
+</div>
+
+<!--For the tea table subnav-->
+<div class="sub-nav for-the-tea-table-sub-nav">
+    <div class="container container-sm">
+                <div class="row">
+                            <div class="col-sm-4">
+                    <a href="#"  class="item">
+                        <img src="images/for-the-tea-table/for-the-tea-table-01-acc.png"  alt=""> 
+                    </a>
+                </div>
+                            <div class="col-sm-4">
+                    <a href="#"  class="item">
+                        <img src="images/for-the-tea-table/for-the-tea-table-02-perfume.png"  alt=""> 
+                    </a>
+                </div>
+                            <div class="col-sm-4">
+                    <a href="#"   class="item">
+                        <img src="images/for-the-tea-table/for-the-tea-table-03-gourmet.png"   alt=""> 
+                    </a>
+                </div>
+            </div>
+    </div>
+</div>
+
+<!--Breadcrumb-->
+<div class="container">
+    <div class="hl-default"></div>
+    <div class="breadcrumb-container">
+        <div class="row">
+            <div class="col-xs-7">
+                <ul class="breadcrumb"><li><a href="index.htm" >Home</a></li>
+<li><a href="#" >Find a Tea</a></li>
+<li class="active">Packaged Teas</li>
+</ul>            </div>
+            <div class="col-xs-5">
+                <div class="text-right"><a href="#" class="back-to-top" style="white-space: nowrap">Back to top <i class="fa fa-angle-up"></i></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Footer-->
+<footer class="footer">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="hidden-xs">
+                <div class="col-md-6 col-sm-5">
+                    <div class="heading"><em class="highlight-1">Explore the Website</em></div>
+                    <div class="short-dash"></div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled nav-list">
+                            <li><a href="#" >Find a Tea</a></li>
+                            <li><a href="#" >Find a Gift</a></li>
+                            <li><a href="#" >For the Tea Table</a></li>
+                            <li><a href="#" >About TWG Tea</a></li>
+                            <li><a href="#" >Trends & News</a></li>
+                            <li><a href="#" >Locations</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled nav-list"> 
+                            <li><a href="#" >Catalogues</a></li>
+                            <li><a href="#" >My Account</a></li>
+                            <li><a href="#" >My Favourites</a></li>
+                            <li><a href="#" >Careers</a></li>
+                            <li><a href="#" >For Professionals</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="heading"><em class="highlight-1">Customer Service</em></div>
+                    <div class="short-dash"></div>
+                    <ul class="list-unstyled nav-list">
+                        <li><a href="#" >Contact Us</a></li>
+                        <li><a href="#" >Conditions of Sale</a></li>
+                        <li><a href="#" >Privacy Policy</a></li>
+                        <li><a href="#" >Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="visible-xs">
+                <div class="col-md-6 col-sm-5">
+                    <div class="heading">
+                        <a class="collapse-toggle color-white collapsed" data-toggle="collapse" href="#explore-nav-list">
+                            <em>Explore the Website</em>
+                            <div class="pull-right">
+                                <i class="arrow arrow-down fa fa-chevron-down"></i>
+                                <i class="arrow arrow-up fa fa-chevron-up"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <ul id="explore-nav-list" class="list-unstyled nav-list collapse">
+                        <li><a href="#" >Find a Tea</a></li>
+                        <li><a href="#" >Find a Gift</a></li>
+                        <li><a href="#" >For the Tea Table</a></li>
+                        <li><a href="#" >About TWG Tea</a></li>
+                        <li><a href="#" >Trends & News</a></li> 
+                        <li><a href="#" >Catalogues</a></li>
+                        <li><a href="#" >Locations</a></li>
+                        <li><a href="#" >My Account</a></li>
+                        <li><a href="#" >My Favourites</a></li>
+                        <li><a href="#" >Careers</a></li>
+                        <li><a href="#" >For Professionals</a></li>
+                    </ul>
+                    <br>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="heading">
+                        <a class="collapse-toggle color-white collapsed" data-toggle="collapse" href="#customer-service-nav-list">
+                            <em>Customer Service</em>
+                            <div class="pull-right">
+                                <i class="arrow arrow-down fa fa-chevron-down"></i>
+                                <i class="arrow arrow-up fa fa-chevron-up"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <ul id="customer-service-nav-list" class="list-unstyled nav-list collapse">
+                        <li><a href="#" >Contact Us</a></li>
+                        <li><a href="#" >Conditions of Sale</a></li>
+                        <li><a href="#" >Privacy Policy</a></li>
+                        <li><a href="#" >Terms of Use</a></li>
+                    </ul>
+                </div>
+                <hr class="hl-default" style="margin-top: 40px">
+            </div>
+
+            <div class="col-md-3 col-sm-4">
+                <div>
+                    <div><a class="text-highlight text-upper text-2p" href="#"  >TWG Tea Mobile App</a></div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <p><a href="#"   class="highlight-1">Download now to enjoy free shipping in Singapore</a></p>
+ 
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="#"  >
+                                <img src="images/phone.png"  alt="">
+                            </a>
+                        </div>
+                        <div class="col-xs-12"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row hidden-xs">
+            <hr class="hl1">
+            <div class="col-xs-6">
+                <div>
+                  <a target="_blank" href="#" ><img src="images/social-icons/fb.png"  alt="Facebook"></a>
+                  <a target="_blank" href="#" ><img src="images/social-icons/twit.png"  alt="Twitter"></a>
+                  <a target="_blank" href="#" ><img src="images/social-icons/instgrm.png"  alt="Instagram"></a>
+                  <a target="_blank" href="#" ><img src="images/social-icons/youtube.png"  alt="Youtube"></a>
+                  <a target="_blank" href="#" ><img src="images/social-icons/linkedin.png"  alt="Linkedin"></a>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="text-right"><a href="#" ><em>Sign up</em> for TWG Tea news updates</a></div>
+            </div>
+        </div>
+
+        <hr class="hl1">
+
+        <div class="text-center copy">
+            <p>TWG Tea Company Pte Ltd. Copyright & Trademark Notices © 2016. All Rights Reserved.</p>
+        </div>
+    </div>
+
+</footer>
+<!-- autoplay -->
+
+<script src="vendor/jquery.min.js" ></script> 
+<script src="vendor/bootstrap/js/bootstrap.min.js" ></script>
+<script src="vendor/customselect/jquery.customSelect.min.js" ></script>
+<script src="vendor/jquery.cookie-1.4.1.min.js" ></script>
+<script src="vendor/slick/slick/slick.min.js" ></script>
+<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js" ></script>
+<script src="vendor/elevatezoom/jquery.elevateZoom-2.2.3.min.js" ></script> 
+<script src="vendor/jquery.smartbanner-1.0.0/jquery.smartbanner.min.js" ></script>
+<script src="vendor/video-js/video.js" ></script> 
+<script src="js/application.js" ></script> 
+</body>
+</html>
