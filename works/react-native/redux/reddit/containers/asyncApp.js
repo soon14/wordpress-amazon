@@ -7,17 +7,23 @@ import {
 import Pickers from './pickers'
 import Posts from './posts'
 import { connect } from 'react-redux'
-import { selectSubreddit } from '../actions'
+import { selectSubreddit,requestPosts } from '../actions'
 class AsyncApp extends Component {
   constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
   }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.selectedSubreddit !== this.props.selectedSubreddit) {
+      const { dispatch, selectedSubreddit } = nextProps
+      dispatch(requestPosts(selectedSubreddit))
+    }
+  }
   handleChange(nextSubreddit) {
     this.props.dispatch(selectSubreddit(nextSubreddit))
   }
   render() {
-    const {posts } = this.props
+    const { selectedSubreddit,posts } = this.props
     return (
       // <View style={styles.container}>
       //   <Text style={styles.welcome}>
@@ -32,14 +38,17 @@ class AsyncApp extends Component {
       //   </Text>
       // </View>
       <View>
-      <Pickers onChange={this.handleChange} options={[ 'reactjs', 'frontend' ]}/>
+      <Pickers value={selectedSubreddit} onChange={this.handleChange} options={[ 'reactjs', 'frontend' ]}/>
       <Posts posts={posts}/>
       </View>
     );
   }
 }
-function mapStateToProps(state) {return {
-    posts:state.posts
+function mapStateToProps(state) {
+  const { selectedSubreddit, requestPosts } = state
+  return {
+    selectedSubreddit,
+    posts:requestPosts.posts
   }
 }
 // const styles = StyleSheet.create({
