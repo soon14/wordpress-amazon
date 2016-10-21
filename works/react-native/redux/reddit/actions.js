@@ -6,13 +6,32 @@ export const selectSubreddit = subreddit =>  ({
 	subreddit
 })
 
-const receivePosts =  json => ({
+const receivePosts =  (subreddit,json) => ({
   type: REQUEST_POSTS,
+    subreddit,
   posts: json.data.children.map(child => child.data)
 })
 
-export const requestPosts = subreddit => dispatch => {
-return fetch(`https://www.reddit.com/r/${subreddit}.json`)
-    .then(response => response.json())
-    .then(json => dispatch(receivePosts( json)))
+const fetchPosts = subreddit => dispatch => {
+	console.log('fetch')
+	return fetch(`https://www.reddit.com/r/${subreddit}.json`)
+	    .then(response => response.json())
+	    .then(json => dispatch(receivePosts(subreddit, json)))
+}
+
+const shouldFetchPosts = (state,subreddit) => {
+	console.log('------'+subreddit+'-------')
+	console.log('------'+state.requestPosts[subreddit]+'-------')
+	const posts=state.requestPosts[subreddit]
+	if (!posts) {
+		return true
+	}
+	else {
+		return false
+	}
+}
+export const fetchPostsIfNeeded = subreddit => (dispatch,getState) => {
+	if (shouldFetchPosts(getState(),subreddit)) {
+		return dispatch(fetchPosts(subreddit))
+	} 
 }

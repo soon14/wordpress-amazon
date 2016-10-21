@@ -12,11 +12,14 @@ import {
       return state
   }
 }
- const requestPosts = (state ={posts:[{title:'aaa'},{title:'bbb'}]}, action) => {
+ const requestPosts = (state ={}, action) => {
+ 	
+    console.log('====='+action.type+'=====')
+    console.log('====='+action.subreddit+'=====')
   switch (action.type) {
     case REQUEST_POSTS:
       return Object.assign({}, state, {
-        posts: action.posts
+        [action.subreddit]:{item:action.posts}
       })
     default:
       return state
