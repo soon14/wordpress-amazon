@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:lockable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-09-06T10:19:17.849Z"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/wcm/core/templates/designpage"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="mywebsite"
+        sling:resourceType="wcm/core/components/designer">
+        <contentpage jcr:primaryType="nt:unstructured">
+            <logo
+                jcr:lastModified="{Date}2018-09-06T08:52:06.449Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="mywebsite/components/logo">
+                <image/>
+            </logo>
+            <par
+                jcr:lastModified="{Date}2018-09-06T10:19:17.842Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="group:MyWebsite">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par>
+        </contentpage>
+    </jcr:content>
+    <_x002e_DS_Store/>
+    <_x002e__.DS_Store/>
+    <images/>
+    <_x002e__images/>
+    <static.css/>
+    <_x002e__static.css/>
+</jcr:root>

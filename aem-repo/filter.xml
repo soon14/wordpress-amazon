@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/mywebsite" />
+    <filter root="/content/mywebsite"/>
+    <filter root="/etc/designs/mywebsite"/>
+</workspaceFilter>
