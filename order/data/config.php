@@ -5,7 +5,7 @@ $config = array();
 
 $config['db']['host'] = 'localhost';
 $config['db']['username'] = 'root';
-$config['db']['password'] = 'root';
+$config['db']['password'] = '5418none';
 $config['db']['port'] = '3306';
 $config['db']['database'] = 'waimai';
 $config['db']['charset'] = 'utf8';
