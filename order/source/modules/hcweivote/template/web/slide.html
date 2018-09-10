@@ -1,0 +1,153 @@
+{template 'common/header'}
+<ul class="nav nav-tabs">
+    <li class="active"><a>幻灯片管理</a></li>
+</ul>
+
+<link type="text/css" rel="stylesheet" href="./resource/script/kindeditor/themes/default/default.css" />
+<script type="text/javascript" src="./resource/script/kindeditor/kindeditor-min.js"></script>
+<script type="text/javascript" src="./resource/script/kindeditor/lang/zh_CN.js"></script>
+<script type="text/javascript">
+{if $album['type'] == 1}
+	$(function(){
+		var i = 0;
+		var a;
+		$('#selectimage').click(function() {
+			a = $(".photo_list .alert").length;
+			a = 7 - a;
+			if(a < 0) a = 0;
+			if(a != 0) {
+				var editor = KindEditor.editor({
+					allowFileManager : false,
+					imageUploadLimit : a,
+					imageSizeLimit : '30MB',
+					uploadJson : './index.php?act=attachment&do=upload'
+				});
+			}
+			editor.loadPlugin('multiimage', function() {
+				editor.plugin.multiImageDialog({
+					clickFn : function(list) {
+						if (list && list.length > 0) {
+							for (i in list) {
+								if (list[i]) {
+									var html = '<div class="alert alert-block alert-new">' +
+											'<input type="hidden" name="slide-new[]" value="'+list[i]['filename']+'" />'+
+											'<span class="pull-right"><a href="javascript:;" onclick="var $this = this;if (confirm(\'删除操作不可恢复，确定码？\')){ajaxopen(\'site.php?act=hcweivote&do=delete&type=photo&attachment='+list[i]['filename']+'\', function(s) {$($this).parent().parent().remove();})}; return false;">删除</a></span>' +
+											'<div class="photo_preview pull-left"><label class="radio inline"><img src="'+list[i]['url']+'"></label></div>' +
+											'<table class="pull-left">' +
+											'<tr><th>排序</th><td><select class="span5" name="listorder-new[]"><option value="0">前</option><option value="1">右</option><option value="2">后</option><option value="3">左</option><option value="4">上</option><option value="5">下</option></select></td></tr>' +
+											'<tr><th>标题</th><td><input type="text" name="title-new[]" value="" class="span5"></td></tr>' +
+                                            '<tr><th>链接</th><td><input type="text" name="url-new[]" value="" class="span5"></td></tr>' +
+                                            '<tr><th>是否显示</th><td><label for="isshow1" class="radio inline"><input type="radio" name="status-new[]" value="1" id="isshow1" checked="true" /> 显示</label><label for="isshow2" class="radio inline"><input type="radio" name="status-new[]" value="0" id="isshow2" /> 不显示</label></td></tr>' +
+											'</table></div>';
+									$('#listimage').append(html);
+									i++;
+								}
+							}
+							editor.hideDialog();
+							$(".photo_list .alert").each(function(b) {
+								$(this).find('select option[value="'+(b-1)+'"]').attr("selected", true);
+							});
+						} else {
+							alert('请先选择要上传的图片！');
+						}
+					}
+				});
+			});
+		});
+	});
+{else}
+	$(function(){
+		var i = 0;
+		$('#selectimage').click(function() {
+			var editor = KindEditor.editor({
+				allowFileManager : false,
+				imageSizeLimit : '30MB',
+				uploadJson : './index.php?act=attachment&do=upload'
+			});
+			editor.loadPlugin('multiimage', function() {
+				editor.plugin.multiImageDialog({
+					clickFn : function(list) {
+						if (list && list.length > 0) {
+							for (i in list) {
+								if (list[i]) {
+									html = '<div class="alert alert-block alert-new">' +
+											'<input type="hidden" name="slide-new[]" value="'+list[i]['filename']+'" />'+
+											'<span class="pull-right"><a href="javascript:;" onclick="var $this = this;if (confirm(\'删除操作不可恢复，确定码？\')){ajaxopen(\'site.php?act=hcweivote&do=slide&op=delete&attachment='+list[i]['filename']+'\', function(s) {$($this).parent().parent().remove();})}; return false;">删除</a></span>' +
+											'<div class="photo_preview pull-left"><label class="radio inline"><img src="'+list[i]['url']+'"></label></div>' +
+											'<table class="pull-left">' +
+											'<tr><th>排序</th><td><input type="text" name="listorder-new[]" value="" class="span5"></td></tr>' +
+                                            '<tr><th>链接</th><td><input type="text" name="url-new[]" value="" class="span5"></td></tr>' +
+                                            '<tr><th>是否显示</th><td><label for="isshow1" class="radio inline"><input type="radio" name="isshow-new[]" value="1" id="isshow1" checked="true" /> 显示</label><label for="isshow2" class="radio inline"><input type="radio" name="isshow-new[]" value="0" id="isshow2" /> 不显示</label></td></tr>' +
+											'</table></div>';
+									$('#listimage').append(html);
+									i++;
+								}
+							}
+							editor.hideDialog();
+						} else {
+							alert('请先选择要上传的图片！');
+						}
+					}
+				});
+			});
+		});
+	});
+{/if}
+</script>
+<style>
+.photo_list{padding:15px 0;}
+.photo_list .alert{width:auto; margin-top:10px; overflow:hidden;}
+.photo_list .photo_preview{width:130px;}
+.photo_list .photo_preview img{width:130px; margin-bottom:5px;}
+.photo_list .photo_preview label{padding:0;}
+.photo_list .photo_preview input[type="radio"]{margin-left:0; margin-right:10px;}
+.photo_list table{margin-left:40px;}
+.photo_list table th,.photo_list table td{padding-bottom:5px;}
+.photo_list table th{width:60px; font-size:14px;}
+.photo_list table input,.photo_list table select{margin-bottom:0;}
+</style>
+<div class="main">
+	<div class="photo_list">
+	<form method="post" class="form">
+	<input name="token" type="hidden" value="{$_W['token']}" />
+	<input name="albumid" type="hidden" value="{$album['id']}" />
+	<span id="selectimage" class="btn btn-primary"><i class="icon-plus"></i> 上传幻灯片</span>
+	<input type="submit" name="submit" id="selectimage" class="btn" value="保存" /> <span style="color:red;">上传幻灯片后，请保存数据！</span>
+	{if $album['type'] == 0}<div id="listimage"></div>{/if}
+	{loop $photos $item}
+	<div class="alert alert-block alert-new">
+		<input type="hidden" value="{$item['slide']}" name="attachment[{$item['id']}]">
+		<span class="pull-right"><a class="delete" onclick="return confirm('删除操作不可恢复，确定码？'); return false;" href="{php echo $this->createWebUrl('slide', array('op' => 'delete', 'id' => $item['id']))}">删除</a></span>
+		<div class="photo_preview pull-left">
+			<label class="radio inline">
+				<img src="{$_W['attachurl']}{$item['slide']}">
+			</label>
+		</div>
+		<table class="pull-left">
+			<tr>
+				<th>排序</th>
+				<td>
+				    <input type="text" class="span5" value="{$item['listorder']}" name="listorder[{$item['id']}]">
+				</td>
+			</tr>
+            <tr>
+                <th>链接</th>
+                <td>
+					<input type="text" class="span5" value="{$item['url']}" name="url[{$item['id']}]">
+				</td>
+            </tr>
+            <tr>
+                <th><label for="">状态</label></th>
+                <td>
+                    <label for="isshow1" class="radio inline"><input type="radio" name="isshow[{$item['id']}]" value="1" id="isshow1" {if empty($item) || $item['isshow'] == 1}checked="true"{/if} /> 显示</label>
+                    <label for="isshow3" class="radio inline"><input type="radio" name="isshow[{$item['id']}]" value="0" id="isshow3"  {if !empty($item) && $item['isshow'] == 0}checked="true"{/if} /> 不显示</label>
+                    <span class="help-block"></span>
+                </td>
+            </tr>
+		</table>
+	</div>
+	{/loop}
+	</form>
+	</div>
+</div>
+{template 'common/footer'}

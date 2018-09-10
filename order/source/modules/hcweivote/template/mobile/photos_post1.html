@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{$rule['title']}</title>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <link rel="stylesheet" type="text/css" href="../source/modules/hcweivote/style/css/global.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../source/modules/hcweivote/style/css/activiyview.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../source/modules/hcweivote/style/css/activiylist.css" media="all" />
+	<script type="text/javascript" src="../source/modules/hcweivote/style/js/jquery-2.1.0.min.js"></script>
+</head>
+
+<body>
+<img style="position:fixed; z-index:-999; top:0; left:0; width:100%; height:100%;" src='../source/modules/hcweivote/style/images/123.jpg' />
+    <div style="position: relative; overflow: hidden;">
+        <div class="activiy_view">
+            <div class="toptu">
+                <h2 class="omiss">{$member['title']}</h2>
+            </div>
+            <form method="post" action="{php echo $this->createMobileUrl('photos', array('op'=>'post'));}" onsubmit="return validate();">
+            <div class="dom_box dom_horizontal_box activity_view">
+                <div>
+                    <p class="rb-row">
+						<input type="file" id="file" name="file" accept="image/*">
+						<input type='hidden' id='pic_url' name='photo' value="{$active['photo']}"/><br/>
+						<label for="headUpload"><span id="aaa"></span><img style="position: relative; left:30%; width:40%;" id="fileimg" src="../source/modules/hcweivote/style/images/home.png" class="hl-bdrs-16 fileimg"></label>
+					</p>
+					<div class="msg" style="margin-top:0; margin-bottom:0; text-align:center; color:red;">
+						宽:高为3:4的图片
+					</div>
+                </div>
+                <div class="dom_flex_box">
+                    <p>&nbsp;</p><br/>
+                    <p><input id="title" name="title" placeholder="作品说明" style="width:100px;"/></p>
+                    <p>已上传数：<span onclick="window.location = '{php echo $this->createMobileUrl('photos', array('id'=>$mid, 'op'=>'myproducts'))}';">{$pnum}</span></p>
+                    <div style="width:102px;"><input style="position:relative; width:100%; opacity:0; z-index:999;" name="submit" type="submit" value="上传作品" /><span style="position: relative; top:-31px; z-index:998;">上传作品</span></div>
+                </div>
+				<input type="hidden" name="id" value="{$mid}" />
+				<input type="hidden" name="token" value="{$_W['token']}" />
+            </div>
+			</form>
+        </div>
+		<div class="fixshowed"></div>
+		<div class="activity_foot">
+			<ul>
+				<li><span class="dom_flex_box">首页</span></li>
+				<li><a href="{php echo $this->createMobileUrl('rule');}" class="dom_flex_box">活动规则</a></li>
+				<li><a href="{php echo $this->createMobileUrl('join');}" class="dom_flex_box">我要参赛</a></li>
+				<li><a href="{php echo $this->createMobileUrl('home');}" class="dom_flex_box">个人中心</a></li>
+			</ul>
+		</div>
+		<div class="popwindow">
+			<div>
+				<div class="homeflexbox vpop">
+					<ul>
+						<li><a href="{php echo $this->createMobileUrl('index');}" class="dom_flex_box">活动首页</a></li>
+						<li><a href="{php echo $this->createMobileUrl('index', array('op'=>'phb'));}" class="dom_flex_box">排行榜</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+<script type="text/javascript">
+$(function () {
+	$(".popwindow > div > div").each(function () {
+		$(this).css({ bottom: -$(this).height() });
+	});
+	$(".activity_foot > ul > li").bind("click",
+	function () {
+		var _nth = $("div.popwindow > div > div").index($("div.popwindow > div > div:not(.vpop)"));
+		var nth = $("div.activity_foot > ul > li").index($(this));
+		if (_nth == nth) {
+			if (!$("div.popwindow > div > div:nth-child(" + (nth + 1) + ")").hasClass("vpop")) {
+				$("div.popwindow > div > div:nth-child(" + (nth + 1) + ")").animate({ bottom: -$("div.popwindow > div > div:nth-child(" + (nth + 1) + ")").height() }, "fast", function () {
+					$(this).addClass("vpop");
+				});
+			}
+		}
+		else {
+			$("div.popwindow > div > div:nth-child(" + (_nth + 1) + ")").css({ bottom: -$("div.popwindow > div > div:nth-child(" + (_nth + 1) + ")").height() });
+			$("div.popwindow > div > div:nth-child(" + (_nth + 1) + ")").addClass("vpop");
+		}
+		//更改
+		$("div.popwindow > div > div:nth-child(" + (nth + 1) + ")").removeClass("vpop");
+		$("div.popwindow > div > div:nth-child(" + (nth + 1) + ")").animate({ bottom: '60px' }, "fast");
+	});
+});
+
+function agencyImg(othis, imageurl){
+	var _imageurl = "{$_W['attachurl']}"+ imageurl;
+	othis.src = _imageurl;
+	othis.onerror = null; //控制不要一直跳动 
+}
+</script>
+</div>
+<script type="text/javascript" src="../source/modules/hcweivote/style/js/zepto.form.js"></script>
+<script type="text/javascript">		
+	//图片上传
+
+	var btn = $("body");
+
+	$("#file").wrap('<form method="post" id="formUpload" action="{php echo $this->createMobileUrl('uploadimage');}" enctype="multipart/form-data"></form>');			
+	$("#file").change(function(){
+		document.getElementById('fileimg').style.display = 'none';
+		document.getElementById('aaa').innerHTML = '正在上传，请耐心等候...';
+		$("#formUpload").ajaxSubmit({
+			dataType:  'json',
+			beforeSend: function() {
+			
+			},
+			uploadProgress: function(event, position, total, percentComplete) {
+		
+			},
+			success: function(data) {
+				
+				if(data.error==1) {
+					
+				}else{
+					var pic_url = data.filename;
+					$('.fileimg').attr('src','{$_W['attachurl']}'+pic_url);
+					$('#pic_url').attr('value',pic_url);
+					document.getElementById('fileimg').style.display = 'block';
+					document.getElementById('aaa').innerHTML = '';
+					//window.location.href='cut?path='+data;
+				}
+			},
+			error:function(xhr){
+				btn.html("上传失败了！");
+			}
+		});
+	});
+</script>
+<script>
+function validate(){
+	var photo = document.getElementById('pic_url').value;
+	var title = document.getElementById('title').value;
+	if(photo==''){
+		alert('请上传作品');
+		return false;
+	}
+	if(title==''){
+		alert('请填写作品说明');
+		return false;
+	}
+	return true;
+}
+
+	var imgUrl = "{$_W['attachurl']}{$member['thumb']}";
+	var lineLink = "{$_W['siteroot']}{php echo $this->createMobileurl('photos', array('op'=>'post'))}";
+	var shareTitle = '{$member['title']}';
+	var descContent = '{$rule['sharecontent']}';
+	var appid = '';
+	function shareFriend() {
+		WeixinJSBridge.invoke('sendAppMessage',{
+			"appid": appid,
+			"img_url": imgUrl,
+			"img_width": "200",
+			"img_height": "200",
+			"link": lineLink,
+			"desc": descContent,
+			"title": shareTitle
+		}, function(res) {
+		})
+	}
+
+	function shareTimeline() {
+		WeixinJSBridge.invoke('shareTimeline',{
+			"img_url": imgUrl,
+			"img_width": "200",
+			"img_height": "200",
+			"link": lineLink,
+			"desc": descContent,
+			"title": shareTitle
+		}, function(res) {
+		});
+	}
+
+	function shareWeibo() {
+		WeixinJSBridge.invoke('shareWeibo',{
+			"content": descContent,
+			"url": lineLink,
+		}, function(res) {
+		});
+	}
+	// 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+	document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+		// 发送给好友
+		WeixinJSBridge.on('menu:share:appmessage', function(argv){
+			shareFriend();
+		});
+		// 分享到朋友圈
+		WeixinJSBridge.on('menu:share:timeline', function(argv){
+			shareTimeline();
+		});
+		// 分享到微博
+		WeixinJSBridge.on('menu:share:weibo', function(argv){
+			shareWeibo();
+		});
+	}, false);
+</script>
+</body>
+</html>

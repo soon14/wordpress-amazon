@@ -1,0 +1,111 @@
+{template 'common/header'}
+
+<div class="main">
+	<form action="" method="post" class="form-horizontal form" enctype="multipart/form-data" onsubmit="return validate(this);">
+		<h4>规则设置</h4>
+		<table class="tb">
+			<tr>
+				<th><label for="">关注链接</label></th>
+				<td>
+					<input type="text" name="gzurl" class="span7" value="{$theone['gzurl']}" />
+					<div class="help-block">指引粉丝关注的链接</div>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="">活动主题</label></th>
+				<td>
+					<input type="text" name="title" class="span7" value="{$theone['title']}" />
+					<div class="help-block">前端显示活动的标题</div>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="">分享说明</label></th>
+				<td>
+					<textarea style="height:150px;" name="sharecontent" class="span7" cols="60">{$theone['sharecontent']}</textarea>
+					<div class="help-block">分享的相关说明</div>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="">活动规则</label></th>
+				<td>
+					<textarea id="rule" style="height:150px;" name="rule" class="span7" cols="60">{$theone['rule']}</textarea>
+					<div class="help-block">活动的相关说明</div>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="">签到积分</label></th>
+				<td>
+					<input type="text" name="credit1" class="span1" value="{$theone['credit1']}" />~
+					<input type="text" name="credit2" class="span1" value="{$theone['credit2']}" />
+					<div class="help-block">每天签到所获得的积分，为两个整数之间的随机数</div>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="">每天投票数</label></th>
+				<td>
+					<input type="text" name="voting" class="span3" value="{$theone['voting']}" />
+					<div class="help-block">限制每人每天的投票数，默认为0</div>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="">首页浏览量</label></th>
+				<td>
+					<input type="text" name="visit" class="span3" value="{$theone['visit']}" />
+					<div class="help-block">活动首页的浏览量，默认为0</div>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="">首页分享量</label></th>
+				<td>
+					<input type="text" name="share" class="span3" value="{$theone['share']}" />
+					<div class="help-block">活动首页的分享量，默认为0</div>
+				</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>
+					<input type="hidden" name="id" value="{$theone['id']}" />
+					<input type="hidden" name="token" value="{$_W['token']}" />
+					<input name="submit" type="submit" value="提交" class="btn btn-primary span3">
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<script>
+kindeditor($('#rule'));
+</script>
+<script>
+function validate(){
+	if($.trim($(':text[name="title"]').val()) == '') {
+		message('必须填写主题名称！', '', 'error');
+		return false;
+	}
+	if($.trim($(':text[name="gzurl"]').val()) == '') {
+		message('必须填写关注链接！', '', 'error');
+		return false;
+	}
+	if(isNaN($.trim($(':text[name="credit1"]').val()))) {
+		message('请输入合法积分数！', '', 'error');
+		return false;
+	}
+	if(isNaN($.trim($(':text[name="credit2"]').val()))) {
+		message('请输入合法积分数！', '', 'error');
+		return false;
+	}
+	if(isNaN($.trim($(':text[name="voting"]').val()))) {
+		message('请输入合法投票数！', '', 'error');
+		return false;
+	}
+	if(isNaN($.trim($(':text[name="visit"]').val()))) {
+		message('请输入合法浏览数！', '', 'error');
+		return false;
+	}
+	if(isNaN($.trim($(':text[name="share"]').val()))) {
+		message('请输入合法转发数！', '', 'error');
+		return false;
+	}
+	return true;
+}
+</script>
+{template 'common/footer'}

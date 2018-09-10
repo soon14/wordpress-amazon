@@ -1,0 +1,189 @@
+{template 'common/header'}
+<ul class="nav nav-tabs">
+	<li class="active"><a href="{php echo create_url('index/welcome/' . $do);}">后台管理</a></li>
+	{if $_W['isfounder']}<li><a href="{php echo create_url('index/sysinfo/');}">系统信息</a></li>{/if}
+</ul>
+<div class="main">
+	<div style="padding:15px 15px 0 15px;">
+		<div class="welcome">
+			<h4><i class="icon-user"></i> 公众号信息</h4>
+			<div class="item">
+				<img class="img-polaroid pull-left" style="margin-right:20px" src="{$_W[attachurl]}/headimg_{$_W['weid']}.jpg?weid={$_W['account']['weid']}" width="85" onerror="$(this).remove();" />
+				<div class="pull-left">
+					<p><b style="font-size:16px;">{$_W['account']['name']}</b></p>
+					<p><span style="width:80px;display:inline-block;">接口地址：</span>{$_W['siteroot']}api.php?hash={$_W['account']['hash']}</p>
+					<p><span style="width:80px;display:inline-block;">Token：</span>{$_W['account']['token']}</p>
+				</div>
+			</div>
+			<h4><i class="icon-plane"></i> 快捷操作</h4>
+			<div class="item fast-set">
+				
+				<!---->
+				<a href="/rule.php?act=system&"><img class="img-rounded" src="/img/1.png"><span>关注回复</span></a>
+				<a href="/rule.php?act=display&module=basic"><img class="img-rounded" src="/img/2.png"><span>文字回复</span></a>
+				<a href="/rule.php?act=display&module=news"><img class="img-rounded" src="/img/3.png"><span>图文回复</span></a>
+                <a href="/account.php?act=payment&id=current"><img class="img-rounded" src="/img/4.png"><span>支付参数</span></a>
+                <a href="/site.php?act=style&"><img class="img-rounded" src="/img/5.png"><span>微信官网</span></a>
+                <a href="/rule.php?act=cover&eid=16"><img class="img-rounded" src="/img/6.png"><span>微餐饮入口</span></a>
+                <a href="/site.php?act=entry&eid=17"><img class="img-rounded" src="/img/7.png"><span>店铺设置</span></a>
+                <a href="/site.php?act=module&name=shopping3&do=mailset&weid={$_W['weid']}"><img class="img-rounded" src="/img/8.png"><span>邮件设置</span></a>
+                <a href="/site.php?act=module&name=shopping3&do=printset&weid={$_W['weid']}"><img class="img-rounded" src="/img/9.png"><span>打印机设置</span></a>
+                <a href="/site.php?act=module&name=shopping3&do=smsset&weid={$_W['weid']}"><img class="img-rounded" src="/img/10.png"><span>短信设置</span></a>
+                <a href="/site.php?act=module&name=shopping3&do=ordertype&weid={$_W['weid']} "><img class="img-rounded" src="/img/11.png"><span>店铺类型</span></a>
+                <a href="/site.php?act=entry&eid=18"><img class="img-rounded" src="/img/12.png"><span>订单管理</span></a>
+                <a href="/site.php?act=entry&eid=20"><img class="img-rounded" src="/img/13.png"><span>商品分类</span></a>
+                <a href="/site.php?act=entry&eid=19"><img class="img-rounded" src="/img/14.png"><span>商品管理</span></a>
+                <a href="/site.php?act=entry&eid=21"><img class="img-rounded" src="/img/15.png"><span>智能推荐</span></a>
+                <a href="/rule.php?act=display&module=wcha"><img class="img-rounded" src="/img/16.png"><span>微信查单</span></a>
+                <a href="/site.php?act=entry&eid=319"><img class="img-rounded" src="/img/17.png"><span>优惠券</span></a>
+                <a href="/site.php?act=entry&eid=11"><img class="img-rounded" src="/img/18.png"><span>会员管理</span></a>
+                <a href="/site.php?act=entry&eid=26"><img class="img-rounded" src="/img/19.png"><span>刮刮卡</span></a>
+                <a href="/site.php?act=entry&eid=75"><img class="img-rounded" src="/img/20.png"><span>大转盘</span></a>
+                <a href="/site.php?act=entry&eid=112"><img class="img-rounded" src="/img/21.png"><span>砸金蛋</span></a>
+                
+				
+			</div>
+		</div>
+		<!--<table class="table">
+			<tr><th colspan="2" class="alert alert-info">可用模块</th></tr>
+			 {loop $modules $module}
+			<tr>
+				<th style="width:250px;">
+					<p>{$_W['modules'][$module['name']]['title']}</p>
+					{if !empty($_W['modules'][$module['name']]['isrulefields'])}
+					<p><a href="{php echo create_url('rule/post', array('module' => $module['name']))}">添加规则</a></p>
+					{/if}
+				</th>
+				<td>
+					{if empty($_W['modules'][$module['name']]['isrulefields'])}
+					此模块无规则
+					{else}
+					<p>规则数：{$module['rule']}</p>
+					<p>当日触发数：{$module['response']['today']}</p>
+					<p>当月触发数：{$module['response']['month']}</p>
+					{/if}
+				</td>
+			</tr>
+			{/loop} 
+		</table>-->
+<style>
+	.account-stat{overflow:hidden; color:#666;}
+	.account-stat .account-stat-btn{width:100%; overflow:hidden;}
+	.account-stat .account-stat-btn > div{text-align:center; margin-bottom:5px;margin-right:2%; float:left;width:20%; height:80px; padding-top:10px;font-size:16px; border-left:1px #DDD solid;}
+	.account-stat .account-stat-btn > div:first-child{border-left:0;}
+	.account-stat .account-stat-btn > div span{display:block; font-size:30px; font-weight:bold}
+</style>
+		<div class="page-header">
+			<h4><i class="fa fa-android"></i> 基本回复统计情况</h4>
+		</div>
+		<div class="panel panel-default" style="padding:1em;">
+			<nav role="navigation" class="navbar navbar-default navbar-static-top" id="clear" style="margin: -1em -1em 1em -1em;">
+				<div class="container-fluid">
+					<ul class="nav navbar-nav nav-btns">
+						<li class="active" id="basic"><a href="javascript:;">文字回复</a></li>
+						<li id="news"><a href="javascript:;">图文回复</a></li>
+						<li id="music"><a href="javascript:;">音乐回复</a></li>
+						<li id="userapi"><a href="javascript:;">自定义接口回复</a></li>
+						<li id="images"><a href="javascript:;">图片回复</a></li>
+						<li id="voice"><a href="javascript:;">语音回复</a></li>
+						<li id="video"><a href="javascript:;">视频回复</a></li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">其他模块 <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+							{loop $modules_other $other}
+								{if $other['isrulefields']}
+									<li id="{$other['name']}"><a href="javascript:;">{$other['title']}</a></li>
+								{/if}
+							{/loop}
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			
+			<div class="account-stat">
+				<div class="account-stat-btn">
+					<div>总回复规则数<span id="rule">{$add_num}</span></div>
+					<div>今日命中次数<span id="today">{$cancel_num}</span></div>
+					<div>本月命中次数<span id="month">{$jing_num}</span></div>
+					<!-- <div>
+						<a href="" id="show"  style="display:block; margin:5px 0;"><i class="fa fa-search"></i> 查看回复规则</a>
+						<a href="" id="add" style="display:block;"><i class="fa fa-plus"></i> 新增回复规则</a>
+					</div> -->
+				</div>
+			</div>
+			<div style="margin-top:20px;">
+				<canvas id="myChart" height="80"></canvas>
+			</div>
+		</div>
+</div>
+<script>
+　　require.config({
+　　　　paths: {
+　　　　　　"jquery": "./resource/script/jquery-1.7.2.min",
+　　　　　　"chart": "./resource/script/chart.min",
+　　　　}
+　　});
+	require(['chart', 'jquery'], function(c, $) {	
+		$('.dropdown').click(function(){
+			$('.nav.nav-btns>li').removeClass('active');
+			$(this).toggleClass('active');
+		});
+		
+		var myLine = new Chart(document.getElementById("myChart").getContext("2d"));
+		var datasets = '';
+		var label = '';
+		var day_num = 30;
+		var lineChartData = null;
+		var obj = null;
+		var data = null;
+		$.post(location.href, {'m_name' : 'basic'}, function(data){
+			data = $.parseJSON(data);
+			
+			$("#rule").html(data.stat.rule);
+			$("#today").html(data.stat.today);
+			$("#month").html(data.stat.month);
+			/*$('#show').attr('href', show_url + data.stat.m_name);
+			$('#add').attr('href', add_url + data.stat.m_name);*/
+
+			 lineChartData = {
+					labels : data.key,
+					datasets : [
+						{
+							fillColor : "rgba(36,165,222,0.1)",
+							strokeColor : "rgba(36,165,222,1)",
+							pointColor : "rgba(36,165,222,1)",
+							pointStrokeColor : "#fff",
+							pointHighlightFill : "#fff",
+							pointHighlightStroke : "rgba(36,165,222,1)",
+							data : data.value
+						}
+					]
+			}
+			 obj = myLine.Line(lineChartData, {responsive: true});
+		});
+		
+		$('.nav.nav-btns li[class!="dropdown"]').on('click', function(){
+			$('.nav.nav-btns li').removeClass('active');
+			$(this).toggleClass('active');
+			var m_name = $(this).attr('id');
+			
+			$.post(location.href, {'m_name' : m_name}, function(data){
+				data = $.parseJSON(data);
+				
+				$("#rule").html(data.stat.rule);
+				$("#today").html(data.stat.today);
+				$("#month").html(data.stat.month);
+				
+				/*$('#show').attr('href', show_url + data.stat.m_name);
+				$('#add').attr('href', add_url + data.stat.m_name);*/
+
+ 				 for(var i = 0; i <= day_num; i++) {
+ 					obj.datasets[0].points[i].value = data.value[i];
+				 }
+ 				obj.update();
+			});
+		});
+ 	});
+</script>
+{template 'common/footer'}

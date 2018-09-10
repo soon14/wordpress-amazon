@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://www.we7.cc" versionCode="0.51,0.52">
+	<application setting="false">
+		<name><![CDATA[一味签]]></name>
+		<identifie><![CDATA[cgt_ywq]]></identifie>
+		<version><![CDATA[1.1]]></version>
+		<type><![CDATA[services]]></type>
+		<ability><![CDATA[新年签]]></ability>
+		<description><![CDATA[新年签]]></description>
+		<author><![CDATA[幸福晚点名 qq:1302789105]]></author>
+		<url><![CDATA[www.weixfu.cn]]></url>
+	</application>
+	<platform>
+		<subscribes>
+		</subscribes>
+		<handles>
+			<message type="text" />
+		</handles>
+		<rule embed="true" />
+	</platform>
+	<bindings>
+		<menu>
+			<entry title="一味签设置" do="ywqset" direct="false" />
+			</menu>
+	</bindings>
+	<install><![CDATA[
+	CREATE TABLE IF NOT EXISTS `ims_qimoqian` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `weid` varchar(200)  NOT NULL,
+  `pic`  varchar(200) NOT NULL,
+  `url` varchar(200) NOT NULL,
+  `title`  varchar(200) NOT NULL,
+   `desc`  varchar(200) NOT NULL,
+    `createtime`  int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8  AUTO_INCREMENT=1 ;
+	
+	
+	
+	
+	]]></install>
+	<uninstall><![CDATA[]]></uninstall>
+	<upgrade><![CDATA[]]></upgrade>
+</manifest>

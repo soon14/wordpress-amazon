@@ -1,0 +1,10 @@
+登陆界面文件：\themes\web\m_style\member\login.html
+
+左上角logo：\img\logo.png
+
+头尾部版权：\themes\web\m_style\common\footer.html     header.html
+
+上部自定义网址：\themes\web\m_style\home\frame.html
+
+微餐饮文件位置：\source\modules\shopping3
+

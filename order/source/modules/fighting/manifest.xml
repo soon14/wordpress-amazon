@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://www.we7.cc" versionCode="0.52">
+	<application setting="true">
+		<name><![CDATA[一战到底]]></name>
+		<identifie><![CDATA[fighting]]></identifie>
+		<version><![CDATA[1.95]]></version>
+		<type><![CDATA[activity]]></type>
+		<ability><![CDATA[一战到底是一档形式新颖，趣味十足，在挑战中挖掘个性，又充满悬念的全新益智攻擂游戏。]]></ability>
+		<description><![CDATA[一战到底是一档形式新颖，趣味十足，在挑战中挖掘个性，又充满悬念的全新益智攻擂游戏。]]></description>
+		<author><![CDATA[Zombieszy qq:214983937]]></author>
+		<url><![CDATA[http://500nuu.com]]></url>
+	</application>
+	<platform>
+		<subscribes>
+		</subscribes>
+		<handles>
+			<message type="text" />
+		</handles>
+		<rule embed="true" />
+	</platform>
+	<bindings>
+		<menu>
+			<entry title="一战到底" do="ShowPlay" state="" direct="false" />
+		</menu>
+	</bindings>
+	<install><![CDATA[CREATE TABLE IF NOT EXISTS `ims_fighting` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `weid` int(10) unsigned NOT NULL,
+  `rid` int(10) unsigned NOT NULL,
+  `fid` int(10) unsigned NOT NULL,
+  `from_user` varchar(30) NOT NULL,
+  `nickname` varchar(100) NOT NULL,
+  `lasttime` int(10) unsigned NOT NULL,
+  `answerNum` int(10) unsigned NOT NULL ,
+  `lastcredit` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `ims_fighting_setting` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `rid` int(10) unsigned NOT NULL,
+  `weid` int(10) unsigned NOT NULL,
+  `parentid` int(10) unsigned NOT NULL DEFAULT '0',
+  `title` varchar(20) NOT NULL COMMENT '活动标题',
+  `description` longtext NOT NULL COMMENT '活动介绍',
+  `tiao` tinyint(1) unsigned NOT NULL COMMENT '1允许跳过0不允许',
+  `status_fighting` tinyint(1) unsigned NOT NULL COMMENT '0正常1暂停2结束',
+  `answertime` int(10) unsigned NOT NULL COMMENT '答题时间',
+  `start` int(10) unsigned NOT NULL DEFAULT '1383235200' COMMENT '开始时间',
+  `end` int(10) unsigned NOT NULL DEFAULT '1383235200' COMMENT '结束时间',
+  `shareurl` varchar( 255 ) NOT NULL comment '活动网址',
+  `is_shared` tinyint(1) unsigned NOT NULL COMMENT '是否强制才能查看排名分享0否1是',
+  `qnum` int(11) unsigned NOT NULL COMMENT '题目数量',
+  `picture` varchar(100) NOT NULL COMMENT '活动图片',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `ims_fighting_question_bank` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `weid` int(10) unsigned NOT NULL,
+  `figure` varchar(30) NOT NULL,
+  `question` varchar(100) NOT NULL,
+  `option_num` int(10) unsigned NOT NULL,
+  `optionA` varchar(100) NOT NULL,
+  `optionB` varchar(100) NOT NULL,
+  `optionC` varchar(100) NOT NULL,
+  `optionD` varchar(100) NOT NULL,
+  `optionE` varchar(100) NOT NULL,
+  `optionF` varchar(100) NOT NULL,
+  `answer` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `ims_fighting_question_worng` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `weid` int(10) unsigned NOT NULL,
+  `fightingid` int(10) unsigned NOT NULL,
+  `qname` varchar(100) NOT NULL,
+  `answer` varchar(100) NOT NULL,
+  `optionA` varchar(100) NOT NULL,
+  `optionB` varchar(100) NOT NULL,
+  `optionC` varchar(100) NOT NULL,
+  `optionD` varchar(100) NOT NULL,
+  `optionE` varchar(100) NOT NULL,
+  `optionF` varchar(100) NOT NULL,
+  `wornganswer` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+]]></install>
+	<uninstall><![CDATA[
+	    drop table if exists ims_fighting;
+        drop table if exists ims_fighting_setting;
+		drop table if exists ims_fighting_question_bank;
+	 ]]></uninstall>
+	<upgrade><![CDATA[upgrade.php]]></upgrade>
+</manifest>

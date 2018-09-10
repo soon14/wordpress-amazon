@@ -1,0 +1,123 @@
+{template 'common/header'}
+{template 'common'}
+<div class="main">
+  <style>
+    .redfont {
+      color:red;
+    }
+  </style>
+    <form action="" method="post" class="form-horizontal form">
+        <h4>提醒设置</h4>
+        <table class="tb">
+            <tr>
+                <th>提醒接收邮箱</th>
+                <td>
+                    <input type="text" name="noticeemail" class="span5" value="{$settings['noticeemail']}" />
+                </td>
+            </tr>
+        </table>
+
+        <h4>认证服务号高级接口借用</h4>
+        <table class="tb">
+              <tr>
+								<th>公众号AppId</th>
+								<td>
+									<input type="text" name="key" class="span6" value="{$settings['key']}" autocomplete="off"/>
+									<div class="help-block">请填写微信公众平台后台的AppId</div>
+								</td>
+							</tr>
+              <tr>
+								<th>公众号AppSecret</th>
+								<td>
+									<input type="text" name="secret" class="span6" value="{$settings['secret']}" autocomplete="off"/>
+                  <span class="help-block">请填写微信公众平台后台的AppSecret, 只有填写这两项才能<i class="redfont">彻底防止盗刷</i>。</span>
+                  <span class="help-block">注意：填写本项并不能让未关注公众号的用户下单。如果您希望未关注者也能下单购买商品，请前往菜单【基本设置】-【基础功能】-【当前公众号设置】-公众号接口权限，选择认证服务号，并填入您的认证服务号的AppID和Secret。保存后，用户即可任意下单，无需关注公众号。<i class="redfont">但是, 该操作适合刚开始运营的用户。对于已经积累了大量用户数据在微擎中的用户，使用本方法将会导致用户数据错乱</i>
+                   </span>
+								</td>
+							</tr>
+              <tr>
+								<th>获取杀价者昵称</th>
+								<td>
+                  <input type="checkbox" id="getnick" name="getnick" value="1" {if $settings['getnick']==1}checked{/if} /><lable for="getnick">&nbsp;开启</label>
+                  <span class="help-block">勾选此项，可以获得杀价者昵称。</span>
+                  <span class="help-block">注意：勾选此项后，如果杀价者没有关注本微信号，则会弹出微信绿色认证窗口。</span>
+								</td>
+							</tr>
+              <tr>
+								<th>首页开启排行榜</th>
+								<td>
+                  <input type="checkbox" id="enable_top_user" name="enable_top_user" value="1" {if $settings['enable_top_user']==1}checked{/if} /><lable for="enable_top_user">&nbsp;开启</label>
+                  <span class="help-block">勾选此项，可以在商城首页显示杀价排行榜。</span>
+								</td>
+							</tr>
+        </table>
+
+        <h4>关注引导页</h4>
+        <table class="tb">
+              <tr>
+								<th>页面地址</th>
+								<td>
+									<input type="text" name="followurl" class="span6" value="{$settings['followurl']}" autocomplete="off"/>
+									<div class="help-block">提示未关注微信号的用户关注后下单购买。</div>
+									<div class="help-block">认证服务号无需填写本栏。</div>
+								</td>
+							</tr>
+        </table>
+
+
+        <h4>商城信息</h4>
+        <table class="tb">
+            <tr>
+                <th>品牌名称</th>
+                <td>
+                    <input type="text" name="shopname" class="span5" value="{$settings['shopname']}" />
+                </td>
+            </tr>
+
+            <tr>
+                <th><label for="">官方网址</label></th>
+                <td>
+                    <input type="text" name="officialweb" class="span6" value="{$settings['officialweb']}" />
+                </td>
+            </tr>				
+            <tr>
+                <th>品牌图片</th>
+                <td>
+                    {php echo tpl_form_field_image('logo', $settings['logo']);}
+                </td>
+            </tr>				
+           	
+               <tr>
+                <th>联系电话：</th>
+                <td><input type="text" id="phone" name="phone"  class="span7" value="{$settings['phone']}"> </td>
+            </tr>
+            <tr>
+                <th>所在地址：</th>
+                <td><input type="text" id="address" name="address"  class="span7" value="{$settings['address']}"> </td>
+            </tr>
+          
+               <tr>
+                <th>品牌介绍：</th>
+                <td>
+                    <textarea style="height:200px;" id="description" name="description" class="span7 description" cols="60">{$settings['description']}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <input name="submit" type="submit" value="提交" class="btn btn-primary span3" />
+                    <input type="hidden" name="token" value="{$_W['token']}" />
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+<link type="text/css" rel="stylesheet" href="./resource/script/kindeditor/themes/default/default.css" />
+<script type="text/javascript" src="./resource/script/kindeditor/kindeditor-min.js"></script>
+<script type="text/javascript" src="./resource/script/kindeditor/lang/zh_CN.js"></script>
+ 
+<script type="text/javascript">
+    kindeditor($(".description"));
+    </script>
+{template 'common/footer'}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/main.css" media="all">
+	<link rel="stylesheet" type="text/css" href="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/dialog.css" media="all">
+	<script type="text/javascript" src="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/jquery_min.js"></script>
+	<script type="text/javascript" src="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/mymain.js"></script>
+	<script type="text/javascript" src="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/dialog_min.js"></script>
+	<script type="text/javascript" src="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/main.js"></script>
+<title>{$coupons['name']}</title>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<!-- Mobile Devices Support @begin -->
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<!-- Mobile Devices Support @end -->
+</head>
+<body onselectstart="return true;" ondragstart="return false;">
+<script>
+	function getCoupon(id){
+		$.ajax({
+			url: "{php echo $this->createMobileUrl('fans')}",
+			type:"POST",
+			data:{coupon_id:id,from_user:'{$_W['fans']['from_user']}'},
+			dataType:"json",
+			success: function(html){
+				if (html.status == 1) {
+					alert(html.msg,1500);
+					setTimeout("location.reload()",1000);
+				} else {
+					alert(html.msg,1500);
+					setTimeout("location.reload()",1000);
+				}
+			}
+		});
+	}
+	function getMore(id){
+		//window.location.href="{php echo $this->createMobileUrl('detail')}"+"&id="+id;
+	}
+</script>
+	<div class="container coupon">
+		<header>
+			<nav id="nav_1" class="p_10">
+				<ul class="box" style="width:300px;">
+					<li><a href="{php echo $this->createMobileUrl('index')}" class="on">现金券</a></li>
+					<li><a href="{php echo $this->createMobileUrl('mycoupon')}">我的现金券</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="body">
+			<ul class="list_coupon_ul">
+			{loop $list $c}
+				<li>
+					<a class="on" href="javascript:;">
+						<!-- 看下能不能改 -->
+						<p onclick="getMore({$c['id']})"><span>{$c['discount_money']}</span>元</p>
+						<p onclick="getMore({$c['id']})">★满{$c['total_money']}元抵{$c['discount_money']}元</p>
+						<p onclick="getMore({$c['id']})">有效期至{php echo date("Y年m月d日",$c['end_time'])}</p>
+						<p style="margin-left:2px;">剩余{$c['surplus_num']}张</p>
+						{if $c['status']==1}<p onclick="getCoupon({$c['id']})">领取</p>
+						{elseif $c['status']==-1}<p>领完</p>
+						{elseif $c['status']==-2}<p>次日领</p>
+						{elseif $c['status']==-3}<p>已领</p>
+						{elseif $c['status']==-4}<p>次日领</p>
+						{elseif $c['status']==0}<p>过期</p>{/if}
+					</a>
+				</li>
+			{/loop}
+			</ul>
+		</div>	
+	</div>
+<script type="text/javascript" src="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/share_channel.js"></script>
+<script type="text/javascript" src="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/base64.js"></script>
+<script type="text/javascript" src="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/st.js"></script>
+</body>
+</html>

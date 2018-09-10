@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>{$reply[title]}</title>
+<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<link href="./source/modules/hlmoon/template/images/activity-style.css?ver=55e4" rel="stylesheet" type="text/css">
+<link href="./source/modules/hlmoon/template/images/style.css?ver=55e4" rel="stylesheet" type="text/css">
+
+</head>
+<body >
+	<ul class="tab" style="margin-top:10px;">
+		<li class="current" style="width:33.3%" onclick="showTab(this,'tab',3)" id="tab1"><a href="javascript:void(0)">活动详情</a></li>
+		<li style="border-left:1px solid RGB(241,111,145)"></li>
+		<li></li>
+		<li style="width:32.4%" onclick="showTab(this,'tab',3)" id="tab2"><a href="javascript:void(0)">我的好友</a></li> 
+		<li style="border-left:1px solid RGB(241,111,145)"></li>
+		<li></li>
+		<li style="width:33.3%" onclick="showTab(this,'tab',3)" id="tab3"><a href="javascript:void(0)">排行榜</a></li> 
+	</ul>	
+ 	<div class="zi" ><img src="./source/modules/hlmoon/template/images/zi2.jpg"></div>
+	<div id="tabCont1" class="tabContent" style="display:block">
+		
+	<div class="wx boxs">
+			<div class="b" style="margin-left:20px;margin-right:20px; margin-top:-30px; line-height: 20px;text-align: -webkit-match-parent;">
+				<ul>
+					
+					<p>点击下面红色按钮！马上邀请好友送你月饼吧!</p>
+				</ul>
+			</div>
+		</div>
+		<div class="zi" ><img src="{$imgurl}" alt=""></div>
+       <div class="wx boxs">
+			<div class="bb" style="margin-left:20px;margin-right:20px; margin-top:0px; line-height: 20px;text-align: -webkit-match-parent;">
+			{if $zhongjiang_s==1}<span><b>恭喜，您已经达到兑换该奖品的月饼数量！</b> </span><br>{/if}		
+				{if $ztotal==0}您的朋友还未送您月饼，点击下面红色按钮邀请朋友送月饼！{else}您好友已经送您 <span><b>{$ztotal}</b> </span>个月饼！赶快点击下面按钮邀请好友！{/if}	
+			</div>
+
+		</div>
+{if $statbargaintitle==''}
+        {if $weiguanzhu==''}
+		<div class="frameBtn clearfix">
+           
+			
+				<span class="b1">
+					<i class="icon icon-mail-forward"></i>
+					{if $profile_s==1}
+						{$profile['realname']} ,点击这里立即喊人来
+					{else}
+						注册下面的信息后再点击这里立即喊人来
+					{/if}
+				</span>
+				
+        </div>
+		{/if}	
+		{if $profile_s==0}
+		{if $weiguanzhu!=''}
+			<div class="wx boxs">
+				<div class="b" style="line-height: 24px;text-align: -webkit-match-parent;">
+					<ul>
+						<p>{$weiguanzhu}</p>
+					</ul>
+				</div>
+			</div>
+			   
+			{else}
+		<div class="turnBox rule reg">
+			<div class="content">
+			
+                <div id="txt">亲！请提交您的姓名或昵称以及手机号码便于中奖后联系到您</div>
+                <form id="form1" action="javascript:;" method="post">
+					<p><input type="hidden" name="rid" value="{$rid}">
+						<input name="realname"  class="px" type="text" placeholder="请输入您的真实姓名" value="{$profile['realname']}">
+					</p>
+					<p>
+						<input name="mobile"  class="px" type="tel" placeholder="请输入您的手机号码" value="{$profile['mobile']}">
+					</p>
+					<a href="javascript:submit1();" class="txtbtn">注册转发</a> 
+				</form>
+			
+            </div>            
+        </div>{/if}
+		{/if}
+	{else}
+		<div class="nmdz">
+		    <div id="zshutext"><span id="zshu">{$statbargaintitle}</span></div>
+		</div>
+	{/if} 
+		
+		
+		
+		
+	
+		<div class="wx boxs">
+			<div class="b" style="line-height: 24px;text-align: -webkit-match-parent;">
+				<ul>
+					<p style="font-size:18px;margin-bottom:5px">【奖品获取规则】</p>
+					<p>{php echo htmlspecialchars_decode($reply['content']);}</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+		
+	<div id="tabCont2" class="tabContent">
+        <div class="turnBox rank">
+            <h2>看看都有谁给你送月饼?</h2>
+            <div class="boxCon">
+                <div class="rankMe">{if $ztotal==0}想要获取大奖!快去转发叫朋友们送你月饼吧！{else}亲！您当前已收到 <span class="rankNUM">{$ztotal}</span> 个月饼！{/if}</div>				
+				{if $zhongjiang_s==1}<div class="rankMe2">恭喜，您已经达到兑换该奖品的月饼数量！</div>{/if}				
+            </div>
+			<div class="rankList">
+				{if $moon_imgtext==0}
+				{loop $list $row}
+				 <img src="{php echo $row['avatar'] = empty($row['avatar']) ? './source/modules/hlmoon/template/images/wuavtar.gif' : $row['avatar'];}" class="avatar">
+				{/loop}
+				{else}
+				{loop $list $row}
+				 <span class="avatartext">{$row['realname']}</span>
+				{/loop}
+				{/if}
+            </div>
+        </div>
+		
+		{if $weiguanzhu==''}<div class="frameBtn clearfix">
+           
+			
+				<span class="b1">
+					<i class="icon icon-mail-forward"></i>
+					{if $profile_s==1}
+						{$profile['realname']} ,点击这里立即喊人来
+					{else}
+						注册下面的信息后再喊人来
+					{/if}
+				</span>
+				
+        </div>
+		{/if}
+	</div>
+		
+	<div id="tabCont3" class="tabContent">
+		{if $moon_rankshow==0}
+		<div class="turnBox rank">
+		
+	
+            <h2>只有选择该奖品的用户才会出现在下方</h2><span class="shuaxin"><a href="javascript:location.reload()">&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+            
+			
+			
+			<div class="ranking-list" >
+			<div class="tr">
+				<div class="th th1">排名<span class="arrow arrow-bottom"></span></div>
+				<div class="th th2">姓名<span class="arrow arrow-bottom"></span></div>
+				<div class="th th3">月饼数<span class="arrow arrow-bottom"></span></div>
+			</div>
+
+			 {php $i=1;}
+								{loop $listshare $row}
+			
+			<div class="tr">
+			
+				<div class="td td1 r">{$i}</div>
+				
+				<div class="td td2">
+				
+				<div class="user-head ellipsis">
+					<span class="week-crown">
+					
+					
+					</span>
+					{$row['realname']}
+				</div>
+				</div>
+				<div class="td td3">{$row['moonnum']}</div>
+			</div>
+			<div class="tr">
+				<div class="td"></div>
+				<div class="td"></div>
+				<div class="td"></div>
+			</div>
+			{php $i++;}
+								{/loop}
+			
+			
+		</div>
+		
+			<div class="boxCon">
+               
+				{if $listtotal!=0}共有 <b>{$listtotal}</b> 人参与抢该款奖品!{/if}	
+				
+            </div>
+		
+		
+		
+        </div>
+		{/if}
+
+		
+    </div>
+
+<div id="mcover" onClick="document.getElementById('mcover').style.display='';"><img src="./source/modules/hlmoon/template/images/121.png"></div>
+{if empty($footer_off)}<div id="footer">&copy;{$_W['account']['name']}&nbsp;&nbsp;{$_W['setting']['copyright']['statcode']}</div>{/if}
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".b1").click(function(){
+		var states = "1";
+		if(states=="0"){
+			$(".window").slideDown(500);
+		}else{
+			document.getElementById('mcover').style.display='block';
+		}
+	});
+	$(".close").click(function(){	
+		$(".window").slideUp(500);
+	});
+	
+})
+
+function trimwb(str){   
+    return str.replace(/^(\s|\u00A0)+/,'').replace(/(\s|\u00A0)+$/,'');   
+}  
+function submit1(){
+	          
+	        	var form1 = document.getElementById("form1");	        	
+	        	var realname = trimwb(form1.realname.value);				
+	        	var mobile = form1.mobile.value;
+				var rid = form1.rid.value;	
+	        	if(realname.length == 0){
+	        		alert("请输入您的真实姓名");
+	        		return;
+	        	}				
+	        	if(mobile.length == 0){
+	        		alert("请输入正确的手机号码！");
+	        		return;
+	        	}
+				if(!mobile.match(/^1\d{10}$/g)){
+	        		alert("请输入正确的手机号码！");
+	        		return;
+	        	}				
+	        	$.post('{$regurl}',{mobile:mobile,realname:realname,rid:rid},function(m){
+	        			alert(m);
+	        			location.reload(true);
+	        			form1.reset();
+						$("#overlay_ul").removeClass("on");
+	        	},"html");	
+				
+}
+
+
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+	window.shareData = {
+		"imgUrl": "{$imgurl}",
+		"timeLineLink": "{$staturl}",
+		"sendFriendLink": "{$staturl}",
+		"weiboLink": "{$staturl}",
+		"tTitle": "{$profile['realname']}要抢{$reply['title']}",
+		"tContent": "邀请好友送月饼抢礼品! {$reply['description']}-!",
+		"fTitle": "{$profile['realname']}参加抢{$reply['title']}活动",
+		"fContent": "邀请你送他月饼帮忙抢礼品了，赶快点击一起玩吧!{$reply['description']}",
+		"wContent": "邀请你送他月饼帮忙抢礼品了，赶快点击一起玩吧!{$reply['description']}"
+	};
+
+	// 发送给好友
+	WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+		WeixinJSBridge.invoke('sendAppMessage', {
+			"img_url": window.shareData.imgUrl,
+			"img_width": "640",
+			"img_height": "640",
+			"link": window.shareData.sendFriendLink,
+			"desc": window.shareData.fContent,
+			"title": window.shareData.fTitle
+		}, function (res) {
+			_report('send_msg', res.err_msg);
+		})
+	});
+
+	// 分享到朋友圈
+	WeixinJSBridge.on('menu:share:timeline', function (argv) {
+		WeixinJSBridge.invoke('shareTimeline', {
+			"img_url": window.shareData.imgUrl,
+			"img_width": "640",
+			"img_height": "640",
+			"link": window.shareData.timeLineLink,
+			"desc": window.shareData.tContent,
+			"title": window.shareData.tTitle
+		}, function (res) {
+			_report('timeline', res.err_msg);
+		});
+	});
+
+	// 分享到微博
+	WeixinJSBridge.on('menu:share:weibo', function (argv) {
+		WeixinJSBridge.invoke('shareWeibo', {
+			"content": window.shareData.wContent,
+			"url": window.shareData.weiboLink
+		}, function (res) {
+			_report('weibo', res.err_msg);
+		});
+	});
+}, false);
+
+function showTab(o, tab, count) {
+    o.className = "current";
+    var j;
+    var id;
+    var e;
+    for (var i = 1; i <= count; i++) {
+        id = tab + i;
+        j = document.getElementById(id);
+        e = document.getElementById(tab + "Cont" + i);
+        if (id != o.id) {
+            j.className = "";
+            e.style.display = "none";
+        } else {
+            e.style.display = "block";
+        }
+    }
+}
+</script>
+</body>
+</html>

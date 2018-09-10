@@ -1,0 +1,52 @@
+{template 'common/header'}
+
+<div class="main">
+	<form action="" method="post" class="form-horizontal form" enctype="multipart/form-data">
+		<input type="hidden" name="id" value="{$item['id']}" />
+		<h4>名称</h4>
+		<table class="tb">
+		<tr>
+			<th>新年签标题</th>
+
+				<td>
+
+					<input type="text" name="title" class="span5" value="{$item['title']}" /> 
+				</td>
+				</tr>
+				
+				<tr>
+			<th>新年签标题</th>
+	<td>
+				<textarea style="height:100px;"  class="span7" 
+				name="desc" cols="70" id="reply-add-text">{$item['desc']}</textarea>
+					</td>
+				</tr>
+	
+		<tr class="type2">
+			<th><label for="">新年签图文</label></th>
+			<td>
+				{php echo tpl_form_field_image('pic', $item['pic']);}
+				<span class="help-block"></span>
+			</td>
+		</tr>
+		
+			<tr>
+			<th>新年签链接</th>
+
+				<td>
+
+					<input type="text" name="url" class="span5" value="{$item['url']}" /> 
+				</td>
+				</tr>
+			<tr>
+			<th></th>
+			<td>
+				<input name="submit" type="submit" value="提交" class="btn btn-primary span3">
+				<input type="hidden" name="token" value="{$_W['token']}" />
+			</td>
+		</tr>
+		</table>
+	</form>
+</div>
+
+{template 'common/footer'}

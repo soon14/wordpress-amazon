@@ -1,0 +1,415 @@
+
+
+
+
+
+{template 'header'}
+ <script src="./source/modules/scratchcard/template/images/wScratchPad.js" type="text/javascript"></script>
+<style>
+body{background:#F9F9F9;}
+.cover{
+	width: 310px;
+	max-width: 480px;
+	margin: 0 auto;
+	position: relative;
+	margin-top:10px;
+}
+.cover img{
+	width: 310px;
+}
+#scratchpad, #prize {
+    font-size: 20px;
+    font-weight: bold;
+    height: 43px;
+    line-height: 43px;
+    position: absolute;
+    right: 53px;
+    text-align: center;
+    top: 130px;
+    width: 196px;
+}
+.myaward {
+	max-height: 178px;
+	overflow-y: scroll;
+}
+
+
+/****************弹出层样式**********/
+.popWindow{
+	display:none;
+}
+.popWindow.on{
+	display:block;
+}
+.pop_window{
+	position:fixed;
+	z-index: 1000;
+	width:260px;
+	height:240px;
+	background:#fff;
+	border:1px solid red;
+	top:50%;
+	left:50%;
+	margin-left:-130px;
+	margin-top:-120px;
+	border:2px solid #fff;
+	border-radius:5px;
+	background: linear-gradient(#FBFBFB, #EEEEEE) repeat scroll 0 0 #FFF9DF;
+
+	-webkit-animation-name: append;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation-fill-mode:both;
+}
+
+@-webkit-keyframes append {
+    0% {opacity:0;-webkit-transform:translate3d(0, -60px, 0) scale(0.6);}
+    100% {opacity:1;-webkit-transform:translate3d(0, 0, 0) scale(1);}
+}
+.pop_cover{
+	position: fixed;
+	z-index: 900;
+	background:rgba(0,0,0,0.1);
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+}
+
+.pop_window header>div{
+	background:#666;
+	line-height:35px;
+	color:#fff;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	overflow:hidden;
+}
+.pop_window header>div>label{
+	text-indent:10px;
+	display:inline-block;
+}
+.pop_window header>div>span{
+	display:inline-block;
+	width:35px;
+	height:35px;
+	float:right;
+	background:url(../../../img/circle/close.png) no-repeat center center;
+}
+.pop_window>div{
+	padding:5px;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.pop_window>div input{
+	display:block;
+	width:80%;
+	margin:5px auto;
+	height:35px;
+	padding:7px 3px;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	border:1px solid #ccc;
+	border-radius:3px;
+}
+
+.pop_window footer a{
+   float:left;
+   
+	width:40%;
+	margin:-5px 10px;
+	line-height:35px;
+	text-align:center;
+	border: 1px solid #CCCCCC;
+	border-bottom: 1px solid #B4B4B4;
+	color: #555555;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #FFFFFF;
+	border-radius: 0.6em 0.6em 0.6em 0.6em;
+
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #ffffff ), to( #cccccc ));
+}
+
+</style>
+{if $scratchcard['maxlottery'] && $total < $scratchcard['maxlottery']}
+<div class="cover">
+	<img src="./source/modules/scratchcard/template/images/bg.png">
+	<div id="prize"></div>
+	<div id="scratchpad"></div>
+</div>
+{else}
+<div class="alert-error alert mobile-alert">
+	<h4>{$message}</h4>
+</div>
+{/if}
+<div class="mobile-div img-rounded" id="myaward">
+	<div class="mobile-hd"><i class="icon-sort pull-right"></i>我的奖品</div>
+	<div class="myaward">
+		{if !empty($myaward) || ($mycredit > 0)}
+		<div class="mobile-li alert-error"><span class="pull-right">{$mycredit}</span><span class="text-error">奖励积分</span></div>
+		{loop $myaward $v}
+		<div class="mobile-li" id="{$v['id']}" data-toggle="collapse" data-target="#myaward-{$v['id']}"><i class="icon-hand-up pull-right"></i><span class="pull-right myaward-status {if $v['status']==0}text-success">点击输入{else}text-error">已领取{/if}</span>{$v['award']}</div>
+		<div class="collapse" id="myaward-{$v['id']}"><div class="mobile-content">{$v['description']}</div></div>
+		{/loop}
+		{else}
+		<div class="mobile-li alert-error"><span class="text-error">暂未中奖</span></div>
+		{/if}
+	</div>
+</div>
+<div class="mobile-div img-rounded">
+	<div class="mobile-hd">活动说明</div>
+	<div class="mobile-content">
+		{$scratchcard['rule']}
+	</div>
+</div>
+<div class="mobile-div img-rounded">
+	<div class="mobile-hd" style="border-bottom:0;">奖项设置</div>
+	{if !empty($allaward)}
+	{loop $allaward $v}
+	<span class="mobile-li" data-toggle="collapse" data-target="#content-{$v['id']}">
+		<i class="icon-hand-up pull-right"></i>
+		{$v['title']}
+	</span>
+	<div class="collapse" id="content-{$v['id']}">
+		<div class="mobile-content">
+			<p>奖品名：{$v['title']}</p>
+			<p>{$v['description']}</p>
+		</div>
+	</div>
+	{/loop}
+	{/if}
+	{if !empty($scratchcard['hitcredit'])}
+	<span class="mobile-li" data-toggle="collapse" data-target="#content-hitcredit">
+		<i class="icon-hand-up pull-right"></i>
+		中奖积分：{$scratchcard['hitcredit']}
+	</span>
+	<div class="collapse" id="content-hitcredit">
+		<div class="mobile-content">
+			<p>当用户未中奖时给予的积分</p>
+		</div>
+	</div>
+	{/if}
+	{if !empty($scratchcard['misscredit'])}
+	<span class="mobile-li" data-toggle="collapse" data-target="#content-misscredit">
+		<i class="icon-hand-up pull-right"></i>
+		未中奖积分：{$scratchcard['misscredit']}
+	</span>
+	<div class="collapse" id="content-misscredit">
+		<div class="mobile-content">
+			<p>当用户未中奖时给予的积分</p>
+		</div>
+	</div>
+	{/if}
+</div>
+{if $scratchcard['maxlottery'] && $total < $scratchcard['maxlottery']}
+<script type="text/javascript">
+var zjl = true;
+var num = 0;
+var goon = true;
+$(function(){
+	var useragent = window.navigator.userAgent.toLowerCase();
+	var statu="enable";
+	$("#scratchpad").wScratchPad({
+		width : 187,
+		height : 43,
+		color : "#a9a9a7",
+		scratchMove : function(){
+			if(statu=="enable"){
+				statu="diaable";
+			}
+
+			if (useragent.indexOf("android 4") > 0) {
+				if ($("#scratchpad").css("color").indexOf("51") > 0) {
+					$("#scratchpad").css("color", "rgb(50,50,50)");
+				} else if($("#scratchpad").css("color").indexOf("50") > 0) {
+					$("#scratchpad").css("color", "rgb(51,51,51)");
+				}
+			}
+
+			num++;
+			if (num == 2) {
+				$.getJSON("{php echo $this->createMobileUrl('getaward', array('id' => $id))}&r="+new Date().getTime(),function(res){
+					if(res.message.status == 0) {
+						$("#prize").html('<span style="color:red;">中奖了</span>');
+					}
+					if(res.message.status == -1) {
+						$("#prize").html('<span style="">未中奖</span>');
+					}
+					var myaward = '';
+					for(i=0; i<res.message.myaward.length; i++) {
+						var a = '';
+						if(res.message.myaward[i].status == 0) {
+							a = '<span class="pull-right text-success myaward-status";">未领取</span>';
+						} else {
+							a = '<span class="pull-right text-error myaward-status">已领取</span>';
+						}
+						myaward += '<div id="'+res.message.myaward[i].id+'" class="mobile-li" data-toggle="collapse" data-target="#content-js'+i+'"><i class="icon-hand-up pull-right"></i>'+ a + res.message.myaward[i].award+'</div>';
+						myaward += '<div class="collapse" id="content-js'+i+'"><div class="mobile-content">'+res.message.myaward[i].description+'</div></div>';
+					}
+					$("#myaward .myaward").html(myaward);
+					$("#myaward .myaward").prepend('<div class="mobile-li alert-error"><span class="pull-right">'+res.message.credit+'</span><span class="text-error">奖励积分</span></div>');
+				});
+			}
+			if(zjl&&num>100&&goon){
+				//alert('刮完了！');
+			}
+		}
+	});
+	$("#myaward").delegate(".mobile-li", "click", function(){
+		var a = $(this).find('.myaward-status');
+		var b = $(this).attr('id');
+		if (a.length>0 && a.html() != '已领取') {
+			/*if (confirm('是否确定领取使用？')) {
+				$.getJSON("{php echo $this->createMobileUrl('setstatus', array('id' => $id))}&awardid="+b+"&r="+new Date().getTime(),function(res){
+					a.removeClass('text-success').addClass('text-error');
+					a.html('已领取');
+				});
+				return true;
+			} else {
+				return false;
+			}*/			$("#awardid").val(b);
+						openWin();
+		} else {
+			return true;
+		}
+		return false;
+	});
+});
+</script>
+{/if}
+
+<!--
+<link rel="stylesheet" type="text/css" href="./resource/style/css/vvalues_crm.css" media="all" />
+-->
+
+ <section id="popWindow" class="popWindow">
+     <div class="pop_window">
+         <header>
+             <div>
+                 <label>个人信息</label>
+                 <span class="close" onclick="$('#popWindow').toggleClass('on');"></span>
+             </div>
+         </header>
+         <div>
+             <div>请输入个人资料</div>
+            <form id="form1" action="javascript:;" method="POST">
+                  <table style="width:100%;">
+                     <tr>
+                         <td>
+                         	<input type="hidden" id="awardid" value="">
+                  
+                         	    <input type="text" name="realname" id="realname"  value="{$profile['realname']}" placeholder="请输入用户名"   maxlength="20" />
+                         	       <input type="text" name="mobile" id="mobile"  value="{$profile['mobile']}"  placeholder="请输入电话"   maxlength="20" />
+                             <input type="password" name="secret" style="display:none"  id="secret" placeholder="请输入商家兑奖密码" maxlength="20" />
+                         </td>
+                     </tr>
+                 </table>
+             </form>
+         </div>
+         <footer>
+             <div>
+                 <a href="javascript:setStatus();">确定</a>
+                      <a href="javascript:void();"  onclick="$('#popWindow').toggleClass('on');">取消</a>
+             </div>
+         </footer>
+     </div>
+     <div class="pop_cover"></div>
+ </section>
+<script type="text/javascript">
+function openWin(){
+	var mobile=$("#mobile").val();
+	var realname=$("#realname").val();
+	if(mobile==null||mobile=="" || realname==null||realname==""){
+		
+	} else {
+		return;
+	}
+	
+
+	$('#popWindow').toggleClass('on');
+}
+function setStatus(){
+	var b=$("#awardid").val();
+	var mobile=$("#mobile").val();
+	var realname=$("#realname").val();
+	
+	if(mobile==null||mobile==""){
+		alert("请输入手机号"); 
+		return ;
+	}
+	
+	if(realname==null||realname==""){
+		alert("请输入姓名"); 
+		return ;
+	}
+	
+	$.post("{php echo $this->createMobileUrl('setstatus', array('id' => $id))}&awardid="+b, 
+		{realname:realname,mobile:mobile}, function(res){
+		if(res.type=="error"){
+			alert(res.message);
+			return ;
+		}else if(res.type=="ajax"&&res.message.status=="2"){
+			location.reload();
+		}
+	},'json');
+}
+  {if !empty($scratchcard['shareurl'])}
+ document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        shareurl="{$scratchcard['shareurl']}";
+	    window.shareData = {  
+            "imgUrl": "{$_W["attachurl"]}{$scratchcard['picture']}", 
+            "timeLineLink": shareurl,
+            "sendFriendLink": shareurl,
+            "tTitle":  "{$scratchcard['description']}",
+            "tContent": "{$scratchcard['description']}",
+            "fTitle":  "{$scratchcard['description']}",
+            "fContent": "{$scratchcard['description']}",
+            "wContent": "{$scratchcard['description']}",
+        };
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', { 
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.sendFriendLink,
+                "desc": window.shareData.fContent,
+                "title": window.shareData.fTitle
+            }, function (res) {
+                _report('send_msg', res.err_msg);
+            })
+        });
+
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function (res) {
+                _report('timeline', res.err_msg);
+            });
+        });
+
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": window.shareData.wContent,
+                "url": window.shareData.weiboLink,
+            }, function (res) {
+                _report('weibo', res.err_msg);
+            });
+        });
+        }, false)
+ 
+ {/if} 
+
+</script>

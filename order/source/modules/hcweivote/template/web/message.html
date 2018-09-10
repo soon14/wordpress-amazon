@@ -1,0 +1,112 @@
+{template 'common/header'}
+<ul class="nav nav-tabs">
+	<li {if $op == 'post'}class="active"{/if}><a href="{php echo $this->createWebUrl('message', array('op' => 'post', 'mid'=>$mid))}">添加留言</a></li>
+	<li {if $op == 'display'}class="active"{/if}><a href="{php echo $this->createWebUrl('message', array('op' => 'display', 'mid'=>$mid))}">管理留言</a></li>
+</ul>
+{if $op == 'post'}
+<div class="main">
+    <div style="padding-top: 15px;">
+	<form action="" method="post" class="form-horizontal form" enctype="multipart/form-data">
+		<input type="hidden" name="id" value="{$item['id']}" />
+		<table class="tb">
+			<tr>
+				<th><label for="">电话</label></th>
+				<td>
+					<input type="text" name="mobile" class="span7" value="{$item['mobile']}" />
+				</td>
+			</tr>
+            <tr>
+                <th><label for="">留言</label></th>
+                <td>
+                    <textarea name="message" class="span7">{$item['message']}</textarea>
+                </td>
+            </tr>
+            <tr>
+				<th><label for="">留言时间</label></th>
+				<td>
+					{php echo tpl_form_field_date('createtime', date('Y-m-d H:m:s',empty($item['createtime'])?time():$item['createtime']), true)}
+				</td>
+			</tr>
+            <tr>
+                <th><label for="">状态</label></th>
+                <td>
+                    <label for="isshow1" class="radio inline"><input type="radio" name="isopen" value="1" id="isshow1" {if empty($item) || $item['isopen'] == 1}checked="true"{/if} /> 显示</label>
+                    <label for="isshow3" class="radio inline"><input type="radio" name="isopen" value="0" id="isshow3"  {if !empty($item) && $item['isopen'] == 0}checked="true"{/if} /> 不显示</label>
+                    <span class="help-block"></span>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <input type="button" onclick="history.go(-1);" value="返回" class="btn btn-primary span3">
+                    <input name="submit" type="submit" value="提交" class="btn btn-primary span3">
+                    <input type="hidden" name="token" value="{$_W['token']}" />
+                </td>
+            </tr>
+		</table>
+	</form>
+    </div>
+</div>
+{elseif $op == 'display'}
+<div class="main">
+	<form action="">
+		<input type="hidden" name="act" value="module" />
+		<input type="hidden" name="name" value="hcweivote" />
+		<input type="hidden" name="do" value="message" />
+		<input type="hidden" name="op" value="sort" />
+		<input type="hidden" name="mid" value="{$mid}" />
+		<table class="table sub-search">
+		<table class="table sub-search">
+			<tbody>
+				<tr>
+					<th style="width:100px;">手机号码</th>
+					<td>
+						<input name="mobile" type="text" value="{$sort['mobile']}" />
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<input type="submit" name="" value="搜索" class="btn btn-primary">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+    <form action="" method="post" class="form-horizontal form" onsubmit="return formcheck(this)">
+	<div style="padding-top: 15px;">
+        <table class="table table-hover">
+            <thead class="navbar-inner">
+            <tr>
+                <th style="width:120px; text-align:center;">电话</th>
+                <th style="width:120px; text-align:center;">时间</th>
+                <th style="width:120px; text-align:center;">属性</th>
+                <th style="width:120px; text-align:center;">操作</th>
+            </tr>
+            </thead>
+            <tbody id="level-list">
+            {loop $list $item}
+            <tr>
+                <td style="text-align:center;">{$item['mobile']}</td>
+				<td style="text-align:center;">{php echo date('Y-m-d',$item['createtime'])}</td>
+                <td style="text-align:center;">
+                    {if $item['isopen']==1}
+                    <span class="label" style="background:#56af45;">显示</span>
+                    {else}
+                    <span class="label">不显示</span>
+                    {/if}
+                </td>
+                <td style="text-align:center;">
+                    <a class="btn" href="{php echo create_url('site/module', array('do' => 'message', 'name' => 'hcweivote', 'id' => $item['id'], 'mid' => $mid, 'op' => 'post'))}" title="编辑"><i class="icon-edit"></i></a>
+                    <a class="btn" onclick="return confirm('确认删除吗？');return false;" href="{php echo create_url('site/module', array('do' => 'message', 'name' => 'hcweivote', 'mid'=>$mid, 'id' => $item['id'], 'op' => 'delete'))}" title="删除"><i class="icon-remove"></i></a>
+                </td>
+            </tr>
+            {/loop}
+            </tbody>
+        </table>
+		{$pager}
+	</div>
+    </form>
+</div>
+{/if}
+{template 'common/footer'}

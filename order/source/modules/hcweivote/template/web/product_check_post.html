@@ -1,0 +1,86 @@
+{template 'common/header'}
+<link rel="stylesheet" type="text/css" href="../source/modules/hcweivote/style/css/uploadify_t.css" />
+<ul class="nav nav-tabs">
+	<li><a href="{php echo $this->createWebUrl('product',array('op'=>'post'));}">添加作品</a></li>
+	<li><a href="{php echo $this->createWebUrl('product');}">作品管理</a></li>
+	<li class="active"><a href="{php echo $this->createWebUrl('product',array('op'=>'checklist'));}">审核作品</a></li>
+</ul>
+	<div class="main">
+		<form action="" method="post" class="form-horizontal form" enctype="multipart/form-data">
+			<h4>审核作品</h4>
+			<table class="tb">
+				<tr>
+					<th><label for="">名称</label></th>
+					<td>
+						{$theone['title']}
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">电话</label></th>
+					<td>
+						{$theone['mobile']}
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">封面</label></th>
+					<td>
+						<img src="{$_W['attachurl']}{$theone['cover']}" width="120px" />
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">照片</label></th>
+					<td>
+						<div>
+							
+							<ul class="ipost-list ui-sortable">
+								{if empty($photos)}
+								无照片
+								{else}
+								{loop $photos $p}
+									<li class="imgbox">
+										<input type="hidden" value="{$p['photo']}" name="photos[]">
+										<span class="item_box"><img src="{$_W['attachurl']}{$p['photo']}"></span>
+									</li>
+								{/loop}
+								{/if}
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">参赛时间</label></th>
+					<td>
+						{php echo date('Y-m-d h:i:s', $theone['jointime'])}
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">添加时间</label></th>
+					<td>
+						{php echo date('Y-m-d h:i:s', $theone['createtime'])}
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">备注</label></th>
+					<td>
+						<textarea name="content" class="span6">{$theone['content']}</textarea>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">是否审核</label></th>
+					<td>
+						<label for="ischeck1" class="radio inline"><input type="radio" name="ischeck" value="1" id="ischeck1" {if $theone['ischeck']==1} checked="true" {/if}>是</label>&nbsp;&nbsp;&nbsp;
+						<label for="ischeck0" class="radio inline"><input type="radio" name="ischeck" value="0" id="ischeck0" {if $theone['ischeck']==0} checked="true" {/if}>否</label>
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<input type="hidden" name="id" value="{$theone['id']}" />
+						<input type="hidden" name="token" value="{$_W['token']}" />
+						<input name="submit" type="submit" value="提交" class="btn btn-primary span3">
+					</td>
+				</tr>
+			</table>
+		</form>
+    </div>
+{template 'common/footer'}

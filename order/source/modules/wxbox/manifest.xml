@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://www.we7.cc" versionCode="0.51,0.52">
+	<application setting="false">
+		<name><![CDATA[微盒消息通知]]></name>
+		<identifie><![CDATA[wxbox]]></identifie>
+		<version><![CDATA[0.11]]></version>
+		<type><![CDATA[customer]]></type>
+		<ability><![CDATA[微盒消息通知]]></ability>
+		<description><![CDATA[微盒消息通知]]></description>
+		<author><![CDATA[微盒]]></author>
+		<url><![CDATA[]]></url>
+	</application>
+	<platform>
+		<subscribes>
+		</subscribes>
+		<handles>
+			<message type="text" />
+		</handles>
+		<rule embed="true" />
+	</platform>
+	<bindings>
+		<menu>
+			<entry title="绑定列表" do="list" state="" direct="false" />
+		</menu>
+	</bindings>
+	<install><![CDATA[]]></install>
+	<uninstall><![CDATA[]]></uninstall>
+	<upgrade><![CDATA[]]></upgrade>
+</manifest>

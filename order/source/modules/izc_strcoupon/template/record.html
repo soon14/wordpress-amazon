@@ -1,0 +1,77 @@
+{template 'common/header'}
+<script language='javascript' src='./source/modules/izcmoney/template/style/jquery.gcjs.js'></script>
+<script language='javascript' src='./source/modules/izcmoney/template/style/jquery.form.js'></script>
+<script language='javascript' src='./source/modules/izcmoney/template/style/tooltipbox.js'></script>
+<link href="./source/modules/izcmoney/template/style/common.css" rel="stylesheet"/>
+<div class="main">
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="javascript:;">使用记录</a></li>
+	</ul>
+	<div class="search">
+		<form action="site.php" method="get">
+		<input type="hidden" name="act" value="entry" />
+		<input type="hidden" name="do" value="manage" />
+		<input type="hidden" name="eid" value="{$_GPC['eid']}" />
+		<table class="table table-bordered tb">
+			<tbody>
+				<tr>
+					<th>模块标识</th>
+					<td>
+						<input class="span6" name="keywords" id="" type="text" value="{$_GPC['keywords']}">
+					</td>
+				</tr>
+				<tr>
+					<th>订单号</th>
+					<td>
+						<input class="span6" name="keywords1" id="" type="text" value="{$_GPC['keywords1']}">
+					</td>
+				</tr>
+				<tr>
+				 <tr class="search-submit">
+					<td colspan="2"><button class="btn btn-primary pull-left span2" style='margin-left:95px;'><i class="icon-search icon-large"></i> 搜索</button></td>
+				 </tr>
+			</tbody>
+		</table>
+		</form>
+	</div>
+	<div style="padding:15px;">
+		<table class="table table-hover">
+			<thead class="navbar-inner">
+				<tr>
+					<th style="width:200px;">用户id</th>
+					<th style="width:200px;">使用时间</th>
+					<th style="">优惠券名称</th>
+					<th style="">抵用金额</th>
+					<th>订单号</th>
+					<th>模块标识</th>
+					<th style="min-width:60px;">状态</th>
+				</tr>
+			</thead>
+			<tbody>
+				{loop $list $row}
+				<tr>
+					<td>{$row['from_user']} </td>
+					<td>{php echo date('Y-m-d H:i:s',$row['create_time'])}</td>
+					<td>{$row['coupon_name']}</td>
+					<td>{$row['discount_money']}</td>
+					<td>{$row['order_sn']}</td>
+					<td>{$row['module_name']}</td>
+					<td >
+						{if $row['isused']==1}<span class="label label-success">使用成功</span>{elseif $row['isused']==2}<span class="label label-error">使用失败</span>{elseif $row['isused']==0}<span class="label label-info">使用中</span>
+						{/if}
+					</td>
+				</tr>
+				{/loop}
+					<tr>
+ 				<td colspan="7">
+
+</td>
+			</tr>
+			</tbody>
+		</table>
+		{$pager}
+	</div>
+
+</div>
+
+{template 'common/footer'}

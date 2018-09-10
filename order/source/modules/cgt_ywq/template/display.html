@@ -1,0 +1,132 @@
+{template 'common/header'}
+<style>
+.box{width:300px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}   
+</style>
+   	<ul class="nav nav-tabs">
+		<li class="active"><a href="site.php?act=module&name=cgt_ywq&do=ywqset&weid={$_W['weid']}">新年签管理</a></li>
+<li><a href="site.php?act=module&name=cgt_ywq&do=ywqadd&weid={$_W['weid']}">添加新年签</a></li>
+	</ul>
+	
+		<div class="search">
+		<form action="site.php" method="get">
+		<input type="hidden" name="act" value="entry" />
+		<input type="hidden" name="do" value="manage" />
+		<input type="hidden" name="eid" value="16" />
+		<table class="table table-bordered tb">
+			<tbody>
+				<tr>
+					<th>关键字</th>
+					<td>
+						<input class="span6" name="keywords" id="" type="text" value="">
+					</td>
+				</tr>
+				<tr>
+				 <tr class="search-submit">
+					<td colspan="2"><button class="btn btn-primary pull-left span2" style='margin-left:95px;'><i class="icon-search icon-large"></i> 搜索</button></td>
+				 </tr>
+			</tbody>
+		</table>
+		</form>
+	</div>
+		<div class="sub-item" id="table-list">
+					<form action="" method="post" onsubmit="">
+					<div class="sub-content">
+						<table class="table table-hover">
+							<thead class="navbar-inner">
+								<tr>
+									<th style="width:40px;" class="row-first">选择</td>
+									<th style="width:100px;" class="row-hover">标题<i></i></th>
+									<th style="width:100px;">图片封面<i></i></th>
+										<th style="width:300px;">描述<i></i></th>
+										<th style="max-width:100px;">超链接<i></i></th>
+									<th style="width:100px;">创建时间<i></i></th>
+										<th style="min-width:80px;">操作</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								{loop $qimoqianlist $row}
+								<tr>
+									<td class="row-first"><input type="checkbox" name="select[]" value="{$row['id']}" /></td>
+									<td class="row-hover">{$row['title']}</td>
+				
+									<td ><img src="{$_W['attachurl']}{$row['pic']}" style="height:100px;"/></td>
+									<td>{$row['desc']}</td>
+									<td >
+									<a href="{$row['url']}"  class="box"
+								    title="{$row['url']}"
+									target=_blank>{$row['url']}</td>
+						
+									<td style="font-size:12px; color:#666;">
+										{php echo date('Y-m-d h:i:s', $row['createtime']);}
+									</td>
+									<td>
+									
+
+                    <a class="btn" href="{php echo $this->createWebUrl('ywqadd', array('id' => $row['id']))}"><i class="icon-edit"></i></a>
+                    <a class="btn" onclick="return confirm('确认删除吗？');return false;" href="{php echo $this->createWebUrl('ywqset', array('op'=>'delete','id' => $row['id']))}"><i class="icon-remove"></i></a>
+									
+									</td>
+								
+									
+								
+								</tr>
+								{/loop}
+							</tbody>
+						</table>
+						<table class="table">
+							<tr>
+								<td  style="width:40px;display:none" class="row-first"><input type="checkbox" onclick="selectall(this, 'select');" /></td>
+								<td>
+									<input type="submit" name="delete" value="删除" class="btn btn-primary" />
+									<input type="hidden" name="token" value="{$_W['token']}" />
+								</td>
+							</tr>
+						</table>
+					</div>
+				</form>
+				{$pager}
+				</div>
+<script>
+$(function(){
+   
+    $(".check_all").click(function(){
+       var checked = $(this).get(0).checked;
+       $("input[type=checkbox]").attr("checked",checked);
+    });
+	$("input[name=deleteall]").click(function(){
+ 
+		var check = $("input:checked");
+		if(check.length<1){
+			err('请选择要删除的记录!');
+			return false;
+		}
+        if( confirm("确认要删除选择的记录?")){
+		var id = new Array();
+		check.each(function(i){
+			id[i] = $(this).val();
+		});
+		$.post('site.php?act=module&do=deleteAll&name=bigwheel', {idArr:id},function(data){
+			if (data.errno ==0)
+			{
+				location.reload();
+			} else {
+				alert(data.error);
+			}
+
+
+		},'json');
+		}
+
+	});
+});
+</script>
+<script>
+function drop_confirm(msg, url){
+    if(confirm(msg)){
+        window.location = url;
+    }
+}
+</script>
+
+{template 'common/footer'}

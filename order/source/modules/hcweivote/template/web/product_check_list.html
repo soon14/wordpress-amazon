@@ -1,0 +1,79 @@
+{template 'common/header'}
+<ul class="nav nav-tabs">
+	<li><a href="{php echo $this->createWebUrl('product',array('op'=>'post'));}">添加作品</a></li>
+	<li><a href="{php echo $this->createWebUrl('product');}">作品管理</a></li>
+	<li class="active"><a href="{php echo $this->createWebUrl('product',array('op'=>'checklist'));}">审核作品</a></li>
+</ul>
+	<div class="main">
+		<form action="">
+		<input type="hidden" name="act" value="module" />
+		<input type="hidden" name="name" value="hcweivote" />
+		<input type="hidden" name="do" value="product" />
+		<input type="hidden" name="op" value="checklist" />
+		<input type="hidden" name="opp" value="sort" />
+		<table class="table sub-search">
+		<table class="table sub-search">
+			<tbody>
+				<tr>
+					<th style="width:100px;">活动名称</th>
+					<td>
+						<input name="title" type="text" value="{$sort['title']}" />
+					</td>
+				</tr>
+				<tr>
+					<th style="width:100px;">手机号码</th>
+					<td>
+						<input name="mobile" type="text" value="{$sort['mobile']}" />
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<input type="submit" name="submit" value="搜索" class="btn btn-primary">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+    <div class="category">
+    <form action="" method="post" class="form-horizontal form">
+        <table class="table table-hover">
+            <thead class="navbar-inner">
+				<tr>
+					<th>封面缩略图</th>
+					<th>活动名称</th>
+					<th>电话号码</th>
+					<th>添加时间</th>
+					<th>参赛时间</th>
+					<th>作品数量</th>
+					<th style="width:80px;">操作</th>
+				</tr>
+            </thead>
+            <tbody id="level-list">
+				{loop $list $row}
+					<tr>
+						<td>{if $row['thumb']}<img src="{$_W['attachurl']}{$row['cover']}" width="50"/>{/if}</td>
+						<td>{$row['title']}</td>
+						<td>{$row['mobile']}</td>
+						<td>{php echo date('Y-m-d', $row['createtime'])}</td>
+						<td>{php echo date('Y-m-d', $row['jointime'])}</td>
+						<td>&nbsp;&nbsp;&nbsp;
+							{if empty($photo[$row['id']])}
+								0
+							{else}
+								{$photo[$row['id']]}
+							{/if}
+						</td>
+						<td>
+							<a class="btn" href="{php echo $this->createWebUrl('product', array('op' => 'checkpost', 'id' => $row['id']))}" title="编辑"><i class="icon-edit"></i></a>
+							<a class="btn" onclick="return confirm('确认删除吗？');return false;" href="{php echo $this->createWebUrl('product', array('op' => 'checkdelete', 'id' => $row['id']))}" title="删除"><i class="icon-remove"></i></a>
+						</td>
+					</tr>
+				{/loop}
+            </tbody>
+        </table>
+    </form>
+		{$pager}
+    </div>
+</div>
+{template 'common/footer'}

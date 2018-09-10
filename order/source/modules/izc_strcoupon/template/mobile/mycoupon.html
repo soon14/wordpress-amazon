@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/main.css" media="all">
+	<link rel="stylesheet" type="text/css" href="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/dialog.css" media="all">
+	<script type="text/javascript" src="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/jquery_min.js"></script>
+	<script type="text/javascript" src="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/mymain.js"></script>
+	<script type="text/javascript" src="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/dialog_min.js"></script>
+	<script type="text/javascript" src="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/main.js"></script>
+<title>{$coupons['name']}</title>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<!-- Mobile Devices Support @begin -->
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<!-- Mobile Devices Support @end -->
+</head>
+<body onselectstart="return true;" ondragstart="return false;">
+	<div class="container coupon">
+		<header>
+			<nav id="nav_1" class="p_10">
+				<ul class="box" style="width:300px;">
+					<li><a href="{php echo $this->createMobileUrl('index')}">现金券</a></li>
+					<li><a href="{php echo $this->createMobileUrl('mycoupon')}" class="on">我的现金券</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="body">
+			<ul class="list_coupon_ul">
+			{loop $list $l}
+				<li>
+					<a class="on" href="javascript:;">
+						<p><span>{$l['discount_money']}</span>元</p>
+						<p>★满{$l['total_money']}元抵{$l['discount_money']}元</p>
+						<p>有效期至{php echo date("Y年m月d日",$l['end_time'])}</p>
+						<p style="margin-left:13px;">{php echo $l['num']-$l['used_num']}张</p>
+							
+						{if $l['status']==1}<p>可用</p>
+						{elseif $l['status']==0}<p>过期</p>
+						{elseif $l['status']==-1}<p>成功</p>{/if}
+															
+					</a>
+				</li>
+			{/loop}
+			</ul>
+		</div>	
+	</div>
+<script type="text/javascript" src="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/share_channel.js"></script>
+<script type="text/javascript" src="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/base64.js"></script>
+<script type="text/javascript" src="{$_W['siteroot']}source/modules/izc_strcoupon/template/mobile/style/st.js"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+如果有缺字段，请在数据库执行本语句。
+ALTER TABLE `ims_wechats` ADD `groups` varchar(2000) NOT NULL COMMENT '粉丝分组';

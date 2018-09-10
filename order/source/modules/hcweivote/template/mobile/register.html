@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+<title>{$rule['title']}</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../source/modules/hcweivote/style/css/style.css?r=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+<meta name="mobileOptimized" content="width" />
+<meta name="handheldFriendly" content="true" />
+<meta http-equiv="Cache-Control" content="max-age=0" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="stylesheet" href="../source/modules/hcweivote/style/css/spinningwheel.css"/>
+<script charset="utf-8" src="../source/modules/hcweivote/style/js/spinningwheel-min.js"></script>
+</head>
+<body>
+	
+<section class="main animated fadeInDown">
+	<div class="main-box">
+		<img style="margin-left:20%; width:60%;" src="../source/modules/hcweivote/style/images/register-logo.png">
+		<p class="rb-row"><input type="text" id="title" placeholder="主题说明" class="input" /></p>
+		<p class="rb-row"><input type="tel" id="mobile" placeholder="手机号码" class="input" /></p>
+		<p class="rb-row"><input type="text" id="jointime" placeholder="参赛时间" class="input" value="" readonly /></p>
+		<p class="rb-row">
+			<input type="file" id="file" name="file" accept="image/*"><br/>
+			<input type='hidden' id='pic_url' name='cover' value="{$active['cover']}"/>
+			<label for="headUpload"><span id="aaa"></span><img id="fileimg" style="position:relative; left:30%;" src="../source/modules/hcweivote/style/images/home.png" width="40%;" class="hl-bdrs-16 fileimg"></label>
+		</p>
+		<div class="msg" style="margin-top:0; margin-bottom:0; text-align:center; color:red;">
+			封面图建议上传宽:高为3:4的图片
+		</div>
+		<div class="rb-row registerRuleBox border-box">
+			<div class="recommend-tips">
+				<h6>提示</h6>
+				<p>请输入正确的电话，否则可能无法核对。</p>
+			</div>
+			<p class="rb-submit"><input type="button" value="注册" class="btn" id="J_submitReg"/></p>
+			<hr>
+		</div>
+</section>
+
+<script src="http://libs.baidu.com/jquery/1.7.1/jquery.min.js"></script>
+<script src="../source/modules/hcweivote/style/js/com.js"></script>
+<script>
+//添加经纪人信息
+$("#J_submitReg").live("click", function () {
+	var reg = /^1[3458]\d{9}$/;
+
+	n = $("#title").val();
+	p = $("#mobile").val();
+	j = $("#jointime").val();
+	t = $("#pic_url").val();
+	if (n == "") {
+		TopBox.alert("姓名不能为空!");
+		return;
+	} else if (!reg.test(p)) {
+		TopBox.alert("手机格式不正确!");
+		return;
+	} else if(j == ''){
+		TopBox.alert("请填写参赛时间!");
+		return;
+	} else if(t == ''){
+		TopBox.alert("请上传图片!");
+		return;
+	} else {
+		$.ajax({
+			type: "POST",
+			url: "{php echo $this->createMobileurl('register',array('op'=>'add'))}",
+			data: { title: n, mobile: p, cover: t, jointime: j },
+			dataType: "text",
+			
+			success: function (d) {
+				if (d == "1") {
+					$("#agree").hide();
+					TopBox.alert("注册成功！", function () { window.location.href = '{php echo $this->createMobileurl('home')}'; });
+				} else if (d == "0") {
+					TopBox.alert("注册失败！");
+				} else if (d == "-2") {
+					$("#agree").hide();
+					TopBox.alert("请勿重复注册！");
+				} else {
+					TopBox.alert("信息填写不正确.");
+				}
+			},
+			
+			error: function (xml, text, thrown) {
+				TopBox.alert("出错啦!");
+			}
+		});
+
+	}
+});
+</script>
+<script type="text/javascript" src="../source/modules/hcweivote/style/js/zepto.form.js"></script>
+	<script type="text/javascript">		
+		//图片上传
+
+		var btn = $("body");
+	
+		$("#file").wrap('<form method="post" id="formUpload" action="{php echo $this->createMobileUrl('uploadimage');}" enctype="multipart/form-data"></form>');			
+		$("#file").change(function(){
+			document.getElementById('fileimg').style.display = 'none';
+			document.getElementById('aaa').innerHTML = '正在上传，请耐心等候...';
+			$("#formUpload").ajaxSubmit({
+				dataType:  'json',
+				beforeSend: function() {
+				
+		
+				},
+				uploadProgress: function(event, position, total, percentComplete) {
+			
+				},
+				success: function(data) {
+					
+					if(data.error==1) {
+						
+					}else{
+						var pic_url = data.filename;
+						$('.fileimg').attr('src','{$_W['attachurl']}'+pic_url);
+						$('#pic_url').attr('value',pic_url);
+						document.getElementById('fileimg').style.display = 'block';
+						document.getElementById('aaa').innerHTML = '';
+						//window.location.href='cut?path='+data;
+					}
+				},
+				error:function(xhr){
+					btn.html("上传失败3");
+				}
+			});
+		});
+</script>
+<script>
+    $(function () {
+        var ifShow = false;
+        var $box = $("#jointime");
+        var $time = $("#jointime");
+        var $text = $("#jointime");
+        $box.on('click', function () {
+            if (ifShow) {
+                return;
+            }
+            ifShow = true;
+            var now = new Date();
+            var days = {};
+            var years = {};
+            var months = { 1: '1月', 2: '2月', 3: '3月', 4: '4月', 5: '5月', 6: '6月', 7: '7月', 8: '8月', 9: '9月', 10: '10月', 11: '11月', 12: '12月' };
+            var hours = {};
+            var minute = {}
+
+            for (var i = 0; i < 24; i++) {
+            }
+
+            for (var i = 0; i < 60; i++) {
+                minute[i.length == 1 ? '0' + i : i] = i.length == 1 ? '0' + i : i;
+                if (i < 24) {
+                    hours[i] = i;
+                }
+                if (i < 31) {
+                    days[i + 1] = i + 1;
+                }
+            }
+
+
+            for (i = now.getFullYear(); i < now.getFullYear() + 20; i++) {
+                years[i] = i;
+            }
+
+            SpinningWheel.addSlot(years, 'right', now.getFullYear());
+            SpinningWheel.addSlot(months, 'right', now.getMonth() + 1);
+            SpinningWheel.addSlot(days, 'right', now.getDate());
+            SpinningWheel.addSlot(hours, 'right', now.getHours());
+            SpinningWheel.addSlot(minute, 'right', now.getMinutes());
+
+            SpinningWheel.setCancelAction(function () {
+                ifShow = false;
+            });
+            SpinningWheel.setDoneAction(function () {
+                var results = SpinningWheel.getSelectedValues();
+                var times = results.keys.toString().split(',');
+                $text.html();
+                $time.val(times[0] + '-' + times[1] + "-" + times[2] + ' ' + times[3] + ':' + times[4]);
+                ifShow = false;
+            });
+
+            SpinningWheel.open();
+        });
+    })
+</script>
+<script>
+	var imgUrl = "{$_W['siteroot']}source/modules/hcweivote/icon.jpg";
+	var lineLink = "{$_W['siteroot']}{php echo $this->createMobileurl('register')}";
+	var shareTitle = '{$rule['title']}';
+	var descContent = '{$rule['sharecontent']}';
+	var appid = '';
+	function shareFriend() {
+		WeixinJSBridge.invoke('sendAppMessage',{
+			"appid": appid,
+			"img_url": imgUrl,
+			"img_width": "200",
+			"img_height": "200",
+			"link": lineLink,
+			"desc": descContent,
+			"title": shareTitle
+		}, function(res) {
+		})
+	}
+
+	function shareTimeline() {
+		WeixinJSBridge.invoke('shareTimeline',{
+			"img_url": imgUrl,
+			"img_width": "200",
+			"img_height": "200",
+			"link": lineLink,
+			"desc": descContent,
+			"title": shareTitle
+		}, function(res) {
+		});
+	}
+
+	function shareWeibo() {
+		WeixinJSBridge.invoke('shareWeibo',{
+			"content": descContent,
+			"url": lineLink,
+		}, function(res) {
+		});
+	}
+	// 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+	document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+		// 发送给好友
+		WeixinJSBridge.on('menu:share:appmessage', function(argv){
+			shareFriend();
+		});
+		// 分享到朋友圈
+		WeixinJSBridge.on('menu:share:timeline', function(argv){
+			shareTimeline();
+		});
+		// 分享到微博
+		WeixinJSBridge.on('menu:share:weibo', function(argv){
+			shareWeibo();
+		});
+	}, false);
+</script>
+</body>
+</html>

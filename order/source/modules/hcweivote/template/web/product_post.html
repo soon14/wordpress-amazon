@@ -1,0 +1,171 @@
+{template 'common/header'}
+<link rel="stylesheet" type="text/css" href="../source/modules/hcweivote/style/css/uploadify_t.css" />
+<ul class="nav nav-tabs">
+	<li class="active"><a href="{php echo $this->createWebUrl('product',array('op'=>'post'));}">添加作品</a></li>
+	<li><a href="{php echo $this->createWebUrl('product');}">作品管理</a></li>
+	<li><a href="{php echo $this->createWebUrl('product',array('op'=>'checklist'));}">审核作品</a></li>
+</ul>
+	<div class="main">
+		<form action="" method="post" class="form-horizontal form" enctype="multipart/form-data" onsubmit="return validate(this);">
+			<h4>添加作品</h4>
+			<table class="tb">
+				<tr>
+					<th><label for="">排序</label></th>
+					<td>
+						<input type="text" name="listorder" class="span6" value="{$theone['listorder']}" />
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">名称</label></th>
+					<td>
+						<input type="text" name="title" class="span6" value="{$theone['title']}" />
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">电话</label></th>
+					<td>
+						<input type="text" name="mobile" class="span6" value="{$theone['mobile']}" />
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">封面</label></th>
+					<td>
+						{php echo tpl_form_field_image('cover', $theone['cover']);}
+						<input type="hidden" name="cover1" value="{$theone['cover']}" />
+						<span class="help-block">建议上传宽:高为3:4的图片</span>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">上传照片</label></th>
+					<td>
+						<div id="upimg_main">
+							<div id="file_upload" class="uploadify">
+								<span class="btn btn-file"><span class="fileupload-new" id="file_upload-button">选择图片</span></span>
+							</div>		
+							<ul class="ipost-list ui-sortable" id="fileList">
+								{loop $photos $p}
+									<li class="imgbox"><a class="thumb_close" onclick="deletepic(this, {$p['id']});" title="删除"></a>  
+										<input type="hidden" value="{$p['photo']}" name="photos[]">
+										<span class="item_box"><img src="{$_W['attachurl']}{$p['photo']}"></span>
+									</li>
+								{/loop}
+							</ul>
+							<div id="file_upload_queue" class="uploadifyQueue"></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">内定投票数</label></th>
+					<td>
+						<input type="text" name="vote" class="span3" placeholder="内定投票数，默认为0" value="{$theone['vote']}"/>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">内定转发数</label></th>
+					<td>
+						<input type="text" name="share" class="span3" placeholder="内定转发数，默认为0" value="{$theone['share']}"/>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">内定浏览数</label></th>
+					<td>
+						<input type="text" name="visit" class="span3" placeholder="内定浏览数，默认为0" value="{$theone['visit']}"/>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">参赛时间</label></th>
+					<td>
+						{php echo tpl_form_field_date('jointime', date('Y-m-d H:m:s',empty($theone['jointime'])?time():$theone['jointime']), true)}
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">备注</label></th>
+					<td>
+						<textarea name="content" class="span6">{$theone['content']}</textarea>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="">是否显示</label></th>
+					<td>
+						<label for="isshow1" class="radio inline"><input type="radio" name="status" value="1" id="isshow1" {if $theone['status']==1} checked="true" {/if}>是</label>&nbsp;&nbsp;&nbsp;
+						<label for="isshow0" class="radio inline"><input type="radio" name="status" value="0" id="isshow0" {if $theone['status']==0} checked="true" {/if}>否</label>
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<input type="hidden" name="id" value="{$theone['id']}" />
+						<input type="hidden" name="token" value="{$_W['token']}" />
+						<input name="submit" type="submit" value="提交" class="btn btn-primary span3">
+					</td>
+				</tr>
+			</table>
+		</form>
+    </div>
+
+<script text="text/javascript">
+function validate() {
+	if($.trim($(':text[name="title"]').val()) == '') {
+		message('必须填写名称！', '', 'error');
+		return false;
+	}
+	if($.trim($(':text[name="cover"]').val()) == '') {
+		message('必须添加封面！', '', 'error');
+		return false;
+	}
+	if(isNaN($.trim($(':text[name="vote"]').val()))) {
+		message('请输入合法投票数！', '', 'error');
+		return false;
+	}
+	if(isNaN($.trim($(':text[name="share"]').val()))) {
+		message('请输入合法转发数！', '', 'error');
+		return false;
+	}
+	if(isNaN($.trim($(':text[name="visit"]').val()))) {
+		message('请输入合法浏览数！', '', 'error');
+		return false;
+	}
+	return true;
+}
+
+KindEditor.ready(function(K) {
+	var editor = KindEditor.editor({
+		allowFileManager : true,
+		uploadJson : "./index.php?act=attachment&do=upload",
+		fileManagerJson : "./index.php?act=attachment&do=manager",
+ 
+	});
+	$("#file_upload-button").click(function() {
+		editor.loadPlugin("multiimage", function() {
+			editor.plugin.multiImageDialog({
+				imageUrl : $("#upload-image-url-logo").val(),
+				clickFn : function(urlList) {
+					var div =$('#fileList');
+					K.each(urlList, function(i, data) {
+						html='<li class="imgbox"><a class="thumb_close" onclick="deletepic(this, 0);" title="删除"></a><input type="hidden" value="'+data.filename+'" name="photos[]"><span class="item_box"><img src="'+data.url+'"></span></li>';
+						div.append(html);
+					});
+					editor.hideDialog();
+				}
+			});
+		});
+	});
+});	
+
+function deletepic(obj, id){
+	if (confirm("确认要删除？")) {
+		var $thisob=$(obj);
+		var $liobj=$thisob.parent();
+		var picurl=$liobj.children('input').val();
+		$.post('{php echo $this->createMobileUrl('ajaxdelete')}',{ pic:picurl, id:id},function(m){
+			if(m=='1') {
+				$thisob.parent().remove();
+			} else {
+				alert("删除失败");
+			}
+		},"html");	
+	}
+}
+	
+</script>
+{template 'common/footer'}

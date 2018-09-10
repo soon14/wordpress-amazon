@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>{$rule['title']}</title>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <link rel="stylesheet" type="text/css" href="../source/modules/hcweivote/style/css/global.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../source/modules/hcweivote/style/css/activiylist.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../source/modules/hcweivote/style/css/unslider.css" media="screen" />
+    <script type="text/javascript" src="../source/modules/hcweivote/style/js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../source/modules/hcweivote/style/js/unslider.js"></script>
+    <script type="text/javascript" src="../source/modules/hcweivote/style/js/wx.js"></script>
+	<style>
+		a{
+			-webkit-border-radius: 4px 0 4px 0;
+			border-radius: 5px 5px 5px 5px;
+		}
+		.pagination li{
+			margin-left:7px;
+			background-color: #f8611b;
+			display: inline-block;
+			padding: 0 5px;
+			border-radius: 5px;
+			width:22%;
+			text-align:center;
+		}
+		.pagination li .pager-nav{
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+<img style="position:fixed; z-index:-999; top:0; left:0; width:100%; height:100%;" src='../source/modules/hcweivote/style/images/123.jpg' />
+	<div style="width:100%;height:0; padding-bottom:41.87%; overflow:hidden;">
+		<div class="activity_ad banner">
+			<ul>
+				{loop $slides $s}
+					<li>
+						<a href="{$s['url']}">
+							<img src="{$_W['attachurl']}{$s['slide']}" alt="" />
+						</a>
+					</li>
+				{/loop}
+			</ul>
+		</div>
+	</div>
+	<div class="liulan"><span>浏览量：{$rule['visit']}</span><span>分享量：<font id="shared">{$rule['share']}</font></span></div>
+    <div class="activity_auto activity_search">
+        <form method="post" action="{php echo $this->createMobileUrl('index', array('op'=>'sort'))}">
+    	    <input name="sort" style="width:88%;" placeholder="输入编号或作品名称搜索" type="text" value="{$sort}"/>
+			<input class="activitybtn" type="submit" value="">
+        </form>
+    </div>
+    <ul id="content" class="activity_auto activity_list clearfix"> 
+        {loop $products $p}
+			<li>
+				<a href="{php echo $this->createMobileUrl('photos', array('id'=>$p['id']));}">
+					<table cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img onerror="agencyImg(this,'../source/modules/hcweivote/style/images/home.png');" src="{$_W['attachurl']}{$p['thumb']}" /></td>
+						</tr>
+					</table>
+					<h2 class="omiss">{$p['id']}号作品</h2>
+					<span>{$p['vote']}票</span>
+				</a>
+			</li>
+        {/loop} 
+    </ul>
+	<br/>
+	<div>{$pager}</div>
+	<div class="fixshowed"></div>
+    <div class="activity_foot">
+    	<ul>
+            <li><span class="dom_flex_box">首页</span></li>
+            <li><a href="{php echo $this->createMobileUrl('rule');}" class="dom_flex_box">活动规则</a></li>
+            <li><a href="{php echo $this->createMobileUrl('join');}" class="dom_flex_box">我要参赛</a></li>
+            <li><a href="{php echo $this->createMobileUrl('home');}" class="dom_flex_box">个人中心</a></li>
+		</ul>
+    </div>
+    <div class="popwindow">
+        <div>
+            <div class="homeflexbox vpop">
+                <ul>
+                    <li><a href="{php echo $this->createMobileUrl('index');}" class="dom_flex_box">活动首页</a></li>
+                    <li><a href="{php echo $this->createMobileUrl('index', array('op'=>'phb'));}" class="dom_flex_box">排行榜</a></li>
+                  <li><a href="{php echo $this->createMobileUrl('index', array('op'=>'lll'));}" class="dom_flex_box">浏览量排行</a></li>
+                    {if (!empty($cfg['url1']))}
+                        <li><a href="{$cfg['url1']}" class="dom_flex_box">{$cfg['urltitle1']}</a></li>
+                     
+                    
+                    {/if}
+                       {if (!empty($cfg['url2']))}
+                        <li><a href="{$cfg['url2']}" class="dom_flex_box">{$cfg['urltitle2']}</a></li>
+                    {/if}
+     
+                </ul>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+window.onload = function(){
+	if('{$_GPC['op']}'!='sort'){
+		$.ajax({
+			type: "POST",
+			url: "{php echo $this->createMobileurl('index', array('op'=>'log', 'opp'=>'visit'))}",
+			data: {},
+			dataType: "text",
+			
+			success: function (d) {
+			},
+			
+			error: function (xml, text, thrown){
+			}
+		});
+	}
+}
+
+	$(function () {
+		$(".popwindow > div > div").each(function () {
+			$(this).css({ bottom: -$(this).height() });
+		});
+		$(".activity_foot > ul > li").bind("click",
+		function () {
+			var _nth = $("div.popwindow > div > div").index($("div.popwindow > div > div:not(.vpop)"));
+			var nth = $("div.activity_foot > ul > li").index($(this));
+			if (_nth == nth) {
+				if (!$("div.popwindow > div > div:nth-child(" + (nth + 1) + ")").hasClass("vpop")) {
+					$("div.popwindow > div > div:nth-child(" + (nth + 1) + ")").animate({ bottom: -$("div.popwindow > div > div:nth-child(" + (nth + 1) + ")").height() }, "fast", function () {
+						$(this).addClass("vpop");
+					});
+				}
+			}
+			else {
+				$("div.popwindow > div > div:nth-child(" + (_nth + 1) + ")").css({ bottom: -$("div.popwindow > div > div:nth-child(" + (_nth + 1) + ")").height() });
+				$("div.popwindow > div > div:nth-child(" + (_nth + 1) + ")").addClass("vpop");
+			}
+			//更改
+			$("div.popwindow > div > div:nth-child(" + (nth + 1) + ")").removeClass("vpop");
+			$("div.popwindow > div > div:nth-child(" + (nth + 1) + ")").animate({ bottom: '60px' }, "fast");
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function () {
+		$("#content > li > a").each(function(){
+			$(this).attr("href",$(this).attr("href")+"&rnd="+Math.random());
+		});
+		
+		$('.banner').unslider({
+			fluid: true,
+			dots: true
+		});
+		var slides = jQuery('.banner 〉ul > li'),
+			active = slides.filter('.active'),
+			i = slides.index(active);
+		slides.on('swipeleft', function (e) {
+			if (i === slides.length - 1) { return; }
+			slides.eq(i + 1).trigger('activate');
+		}).on('swiperight', function (e) {
+			if (i === 0) { return; }
+			slides.eq(i - 1).trigger('activate');
+		}).on('activate', function (e) {
+			slides.eq(i).removeClass('active');
+			jQuery(e.target).addClass('active');
+			i = slides.index(e.target);
+		});
+	});
+	
+	function agencyImg(othis, imageurl){
+		var _imageurl = "{$_W['siteroot']}"+ imageurl;
+		othis.src = _imageurl;
+		othis.onerror = null; //控制不要一直跳动 
+	}
+	
+
+	WeixinApi.ready(function(Api) {
+		Api.showOptionMenu();
+		var wxData = {
+			"imgUrl" : '{$_W['siteroot']}source/modules/hcweivote/icon.jpg',
+			"link" : '{php echo $_W['siteroot'].$this->createMobileUrl('index')}',
+			"title" : '{$rule['title']}',
+			"desc" : '{$rule['sharecontent']}'
+		};
+		 // 分享的回调
+		var wxCallbacks = {
+			// 分享被用户自动取消
+			cancel : function(resp) {
+				//alert("分享后获得积分,还有可能得到佣金哦!不要错过发大财的机会!");
+			},
+			// 分享失败了
+			fail : function(resp) {
+				alert("分享失败，可能是网络问题，一会儿再试试？");
+			},
+			// 分享成功
+			confirm : function(resp) {
+				$.getJSON("{php echo $this->createMobileUrl('index', array('op'=>'log', 'opp'=>'share'))}&r="+new Date().getTime(),function(res){
+					document.getElementById('shared').innerHTML = res;
+				});
+			},
+		};
+		Api.shareToFriend(wxData,wxCallbacks);
+		Api.shareToTimeline(wxData,wxCallbacks);
+		Api.shareToWeibo(wxData,wxCallbacks);
+	});
+</script>
+</body>
+</html>
