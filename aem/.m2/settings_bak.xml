@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd"
+    xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <servers>
+        <server>
+            <username>admin</username>
+            <password>AP2E15xCkDbhfw1teJZp3zc1Mpi</password>
+            <id>central</id>
+        </server>
+        <server>
+            <username>admin</username>
+            <password>AP2E15xCkDbhfw1teJZp3zc1Mpi</password>
+            <id>snapshots</id>
+        </server>
+        <server>
+            <username>admin</username>
+            <password>AP2E15xCkDbhfw1teJZp3zc1Mpi</password>
+            <id>remote-repos</id>
+        </server>
+    </servers>
+    <mirrors>
+        <mirror>
+            <mirrorOf>*</mirrorOf>
+            <name>remote-repos</name>
+            <url>http://120.55.166.72:8081/artifactory/remote-repos</url>
+            <id>remote-repos</id>
+        </mirror>
+    </mirrors>
+    <pluginGroups>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+    <profiles>
+         <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+                <sonar.host.url>
+                  http://localhost:9000
+                </sonar.host.url>
+            </properties>
+        </profile>
+        <profile>
+            <repositories>
+                <repository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>libs-release</name>
+                    <url>http://47.88.188.52:8081/artifactory/libs-release</url>
+                </repository>
+                <repository>
+                    <snapshots />
+                    <id>snapshots</id>
+                    <name>libs-snapshot</name>
+                    <url>http://47.88.188.52:8081/artifactory/libs-snapshot</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>plugins-release</name>
+                    <url>http://47.88.188.52:8081/artifactory/plugins-release</url>
+                </pluginRepository>
+                <pluginRepository>
+                    <snapshots />
+                    <id>snapshots</id>
+                    <name>plugins-snapshot</name>
+                    <url>http://47.88.188.52:8081/artifactory/plugins-snapshot</url>
+                </pluginRepository>
+            </pluginRepositories>
+            <id>artifactory</id>
+        </profile>
+        <profile>
+    <id>adobe-public</id>
+ 
+    <activation>
+        <activeByDefault>false</activeByDefault>
+    </activation>
+ 
+    <properties>
+ 
+        <releaseRepository-Id>adobe-public-releases</releaseRepository-Id>
+        <releaseRepository-Name>Adobe Public
+            Releases</releaseRepository-Name>
+ 
+        <releaseRepository-URL>http://repo.adobe.com/nexus/content/groups/public</releaseRepository-URL>
+    </properties>
+ 
+    <repositories>
+        <repository>
+            <id>adobe-public-releases</id>
+            <name>Adobe Basel Public Repository</name>
+            <url>http://repo.adobe.com/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+ 
+    <pluginRepositories>
+        <pluginRepository>
+            <id>adobe-public-releases</id>
+            <name>Adobe Basel Public Repository</name>
+            <url>http://repo.adobe.com/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+</profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>artifactory</activeProfile>
+    </activeProfiles>
+</settings>

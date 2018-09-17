@@ -1,0 +1,93 @@
+<!--
+  ADOBE CONFIDENTIAL
+  ___________________
+
+  Copyright 2012 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ====================================================================== -->
+    <!-- P R O J E C T  D E S C R I P T I O N                                   -->
+    <!-- ====================================================================== -->
+    <groupId>com.day.jcr.vault</groupId>
+    <artifactId>simple-content-package-archetype</artifactId>
+    <version>1.0.2</version>
+    <packaging>maven-archetype</packaging>
+    
+    <name>Simple Content Package Archetype</name>
+    <description>Maven archetype for a creating a simple Content Package.</description>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <!-- ====================================================================== -->
+    <!-- S C M  D E F I N I T I O N                                             -->
+    <!-- ====================================================================== -->
+    <scm>
+         <connection>scm:git:git:@git.corp.adobe.com:Granite/simple-content-package-archetype.git</connection>
+         <developerConnection>scm:git:git:@git.corp.adobe.com:Granite/simple-content-package-archetype.git</developerConnection>
+    </scm>
+
+      <!-- ====================================================================== -->
+      <!-- B U I L D   D E F I N I T I O N                                        -->
+      <!-- ====================================================================== -->
+      <build>
+          <extensions>
+              <extension>
+                  <groupId>org.apache.maven.archetype</groupId>
+                  <artifactId>archetype-packaging</artifactId>
+                  <version>2.2</version>
+              </extension>
+          </extensions>
+          <plugins>
+              <plugin>
+                  <artifactId>maven-archetype-plugin</artifactId>
+                  <version>2.2</version>
+                  <extensions>true</extensions>
+              </plugin>
+
+              <!-- ====================================================================== -->
+              <!-- R E L E A S E   P L U G I N                                            -->
+              <!-- ====================================================================== -->
+              <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-release-plugin</artifactId>
+                  <configuration>
+                      <useReleaseProfile>false</useReleaseProfile>
+                      <scmCommentPrefix>#4208 - [maven-scm] :</scmCommentPrefix>
+                      <goals>deploy</goals>
+                  </configuration>
+              </plugin>
+          </plugins>
+      </build>
+      
+      <!-- ====================================================================== -->
+      <!-- D I S T R I B U T I O N                                                -->
+      <!-- ====================================================================== -->
+      <distributionManagement>
+          <repository>
+              <id>${releaseRepository-Id}</id>
+              <name>${releaseRepository-Name}</name>
+              <url>${releaseRepository-URL}</url>
+          </repository>
+          <snapshotRepository>
+              <id>${snapshotRepository-Id}</id>
+              <name>${snapshotRepository-Name}</name>
+              <url>${snapshotRepository-URL}</url>
+              <uniqueVersion>false</uniqueVersion>
+          </snapshotRepository>
+      </distributionManagement>
+</project>

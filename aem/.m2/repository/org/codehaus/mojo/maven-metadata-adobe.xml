@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <plugins>
+    <plugin>
+      <name>Animal Sniffer Maven Plugin</name>
+      <prefix>animal-sniffer</prefix>
+      <artifactId>animal-sniffer-maven-plugin</artifactId>
+    </plugin>
+  </plugins>
+</metadata>
