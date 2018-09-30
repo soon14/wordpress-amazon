@@ -93,3 +93,7 @@ $siteurl='http://'.$_SERVER['HTTP_HOST'].'/blog';
 define('WP_HOME',$home);
 
 define('WP_SITEURL',$siteurl);
+
+define("FS_METHOD", "direct");
+define("FS_CHMOD_DIR", 0777);
+define("FS_CHMOD_FILE", 0777);
