@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Page">
-    <put_your_resources_here.txt/>
     <jcr:content
-        cq:lastModified="{Date}2018-10-21T07:58:38.580Z"
+        cq:lastModified="{Date}2018-10-25T06:44:36.183Z"
         cq:lastModifiedBy="admin"
-        cq:template="/libs/wcm/core/templates/designpage"
+        cq:template="/apps/myproject/templates/contentpage"
         jcr:primaryType="cq:PageContent"
-        jcr:title="myproject"
-        sling:resourceType="wcm/core/components/designer"/>
-    <static.css/>
-    <images/>
+        jcr:title="Services"
+        sling:resourceType="myproject/components/contentpage"/>
 </jcr:root>
