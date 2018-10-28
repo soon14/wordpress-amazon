@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2018-10-25T06:43:01.400Z"
+        cq:designPath="/etc/designs/myproject"
+        cq:lastModified="{Date}2018-10-26T10:23:12.446Z"
         cq:lastModifiedBy="admin"
         cq:template="/apps/myproject/templates/contentpage"
         jcr:isCheckedOut="{Boolean}true"
@@ -10,5 +11,11 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Products"
         jcr:uuid="b185ccf2-07c4-47c5-bb08-9d2b3d64134c"
-        sling:resourceType="myproject/components/contentpage"/>
+        sling:resourceType="myproject/components/contentpage">
+        <image
+            jcr:lastModified="{Date}2018-10-26T10:23:12.428Z"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
 </jcr:root>
