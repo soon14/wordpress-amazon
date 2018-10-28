@@ -19,7 +19,7 @@ for d in ${DEPLOY_ROOT}*; do
     [[ -e $f && "$f" != $(cat ${DEPLOY_INSTRUCTIONS}${d##*/}_last_successful_install) ]] || continue
     if [[ $f == ${DEPLOY_ROOT}* ]]
     then
-      $(rm -rf $f)
+      $(sudo rm -rf $f)
     fi  
     done
 done
