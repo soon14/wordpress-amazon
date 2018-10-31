@@ -1,7 +1,7 @@
 <%@include file="/libs/foundation/global.jsp"%><%
 %><body>
 <div id="CQ">
-<div class="topnav">topnav</div>
+<cq:include path="topnav" resourceType="mywebsite/components/topnav" />
 <div class="content">
 <cq:include script="left.jsp" />
 <cq:include script="center.jsp" />

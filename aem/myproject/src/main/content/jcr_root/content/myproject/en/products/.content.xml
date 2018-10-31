@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:designPath="/etc/designs/myproject"
-        cq:lastModified="{Date}2018-10-26T10:23:12.446Z"
+        cq:lastModified="{Date}2018-10-29T10:08:22.169Z"
         cq:lastModifiedBy="admin"
         cq:template="/apps/myproject/templates/contentpage"
         jcr:isCheckedOut="{Boolean}true"
@@ -11,11 +11,20 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Products"
         jcr:uuid="b185ccf2-07c4-47c5-bb08-9d2b3d64134c"
-        sling:resourceType="myproject/components/contentpage">
+        sling:resourceType="myproject/components/contentpage"
+        subtitle="what we do">
         <image
-            jcr:lastModified="{Date}2018-10-26T10:23:12.428Z"
+            jcr:lastModified="{Date}2018-10-29T03:49:39.284Z"
             jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
             imageRotate="0"/>
+        <newslist
+            jcr:lastModified="{Date}2018-10-29T10:08:22.168Z"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="myproject/components/listchildren"
+            listroot="/content/myproject/en"/>
     </jcr:content>
+    <product1/>
+    <product2/>
 </jcr:root>

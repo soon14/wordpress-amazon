@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2018-10-25T06:44:36.183Z"
+        cq:lastModified="{Date}2018-10-29T03:50:06.226Z"
         cq:lastModifiedBy="admin"
         cq:template="/apps/myproject/templates/contentpage"
         jcr:primaryType="cq:PageContent"
         jcr:title="Services"
-        sling:resourceType="myproject/components/contentpage"/>
+        sling:resourceType="myproject/components/contentpage"
+        subtitle="about our services">
+        <image
+            jcr:lastModified="{Date}2018-10-29T03:50:06.219Z"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
 </jcr:root>
