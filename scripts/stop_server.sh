@@ -26,7 +26,7 @@ done
 
 #Maintaining the Repository
 #https://docs.adobe.com/content/docs/en/aem/6-1/deploy/platform/storage-elements-in-aem-6.html#Maintaining%20the%20Repository
-/home/ec2-user
+cd /home/ec2-user
 java -jar oak-run-1.2.2.jar checkpoints /home/ec2-user/AEM/author/crx-quickstart/repository/segmentstore
 java -jar oak-run-1.2.2.jar checkpoints  /home/ec2-user/AEM/author/crx-quickstart/repository/segmentstore rm-unreferenced
 java -jar oak-run-1.2.2.jar compact /home/ec2-user/AEM/author/crx-quickstart/repository/segmentstore
